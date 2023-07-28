@@ -8,8 +8,8 @@ class Header(models.Model):
     company_name = models.CharField(max_length=80, unique=True)
     company_slogan = models.CharField(max_length=80, blank=True)
     company_description = models.TextField(max_length=200, blank=True)
-    logo_main = models.FileField(upload_to='logo_main/', null=True)
-    logo_head = models.FileField(upload_to='logo_head/', null=True)
+    logo_main = models.FileField(upload_to='', null=True)
+    logo_head = models.FileField(upload_to='', null=True)
 
     def __str__(self):
         return self.sku
