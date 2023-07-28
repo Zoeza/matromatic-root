@@ -15,6 +15,17 @@ class Header(models.Model):
         return self.sku
 
 
+class Body(models.Model):
+    sku = models.CharField(max_length=50, blank=True)
+    why_us_raison1 = models.CharField(max_length=200, blank=True)
+    why_us_raison2 = models.CharField(max_length=200, blank=True)
+    why_us_photo = models.CharField(max_length=200, blank=True)
+    why_us_video = models.FileField(upload_to='why_us_video/', blank=True)
+
+    def __str__(self):
+        return self.sku
+
+
 class SocialMedia(models.Model):
     name = models.CharField(max_length=70, blank=True)
     link = models.CharField(max_length=100, blank=True)

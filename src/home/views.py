@@ -1,6 +1,6 @@
 from django.http import Http404
 from django.shortcuts import render
-from .models import Header, SocialMedia, BackgroundImage
+from .models import Header, SocialMedia, BackgroundImage, Body
 
 
 def home(request):
@@ -13,6 +13,11 @@ def home(request):
 
     except Header.DoesNotExist:
         raise Http404("Top page does not exist")
+
+    try:
+        body = Body.objects.all()
+    except Header.DoesNotExist:
+        raise Http404("Social media do not exist")
     try:
         socials_media = SocialMedia.objects.all()
     except Header.DoesNotExist:
@@ -21,10 +26,11 @@ def home(request):
     try:
         background_images = BackgroundImage.objects.all()
     except Header.DoesNotExist:
-        raise Http404("Background images do not exist")
+        raise Http404("Body informations images do not exist")
 
     context = {
         'profile': profile,
+        'body': body,
         'socials_media': socials_media,
         'background_images': background_images,
 
