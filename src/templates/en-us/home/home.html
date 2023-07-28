@@ -54,8 +54,7 @@
           <li class="fancynav-item" data-one-page="data-one-page"><a class="fancynav-link" href="#defaultWhyUs"><span class="fancynav-link-content">why us</span></a></li>
           <li class="fancynav-item" data-one-page="data-one-page"><a class="fancynav-link" href="#defaultServices"><span class="fancynav-link-content">services</span></a></li>
           <li class="fancynav-item" data-one-page="data-one-page"><a class="fancynav-link" href="#defaultProgressbar"><span class="fancynav-link-content">performance</span></a></li>
-          <li class="fancynav-item" data-one-page="data-one-page"><a class="fancynav-link" href="#defaultPricingPlan"><span class="fancynav-link-content">pricing</span></a></li>
-          <li class="fancynav-item" data-one-page="data-one-page"><a class="fancynav-link" href="#defaultMembers"><span class="fancynav-link-content">crews</span></a></li>
+          <li class="fancynav-item" data-one-page="data-one-page"><a class="fancynav-link" href="#defaultMembers"><span class="fancynav-link-content">partners</span></a></li>
           <li class="fancynav-item" data-one-page="data-one-page"><a class="fancynav-link" href="#defaultGallery"><span class="fancynav-link-content">gallery</span></a></li>
           <li class="fancynav-item" data-one-page="data-one-page"><a class="fancynav-link" href="./contact.html"><span class="fancynav-link-content">contact</span></a></li>
         </ul>
@@ -114,26 +113,31 @@
             <div class="col-lg-6 bg-white py-7 py-md-8">
               <div class="row flex-center h-100">
                 <div class="col-lg-10 text-black text-center text-lg-start" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+
                   <div class="overflow-hidden">
                     <h4 class="text-uppercase fw-normal ls text-white bg-dark p-1 rounded d-inline-block" data-zanim-xs='{"delay":0.1}'>{{ profile.company_slogan}}</h4>
                   </div>
+
                   <div class="overflow-hidden">
                     <h1 class="display-3 fs-5 fs-sm-6" id="sc" data-zanim-xs='{"delay":0.2}'><span class="text-decoration-underline">{{ profile.company_name }}</span><br /></h1>
                   </div>
+
                   <div class="overflow-hidden">
                     <p class="text-900 fs-0 mt-3 mt-md-5" data-zanim-xs='{"delay":0.3}'>{{ profile.company_description }}</p>
                   </div>
+
                   <div class="overflow-hidden">
                     <div class="d-lg-flex align-items-center fw-bold ls mt-3 mt-md-5 text-uppercase" data-zanim-xs='{"delay":0.4}'>
                       <h6 class="mb-lg-0">Follow Us:</h6>
                       <div class="overflow-hidden">
                         {% for social_media in socials_media %}
-                        <a class="me-1" href="{{ social_media.link }}"><span class="{{ social_media.icon }}"></span></a>
+                            <a class="me-1" href="{{ social_media.link }}"><span class="{{ social_media.icon }}"></span></a>
                         {% endfor %}
                       </div>
                     </div>
                   </div>
                 </div>
+
               </div>
             </div>
           </div>
@@ -440,76 +444,7 @@
 
 
       <!-- ============================================-->
-      <!-- <section> begin ============================-->
-      <section id="defaultPricingPlan">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-6 mb-7 text-center">
-              <h2 class="fs-3 fs-sm-4 text-decoration-underline mb-3">find the right plan</h2>
-              <p class="text-500 fst-italic">Sparrow gives you the best output at the lowest investment and fills all your needs. Choose from the pricing plans that suits you best.</p>
-            </div>
-          </div>
-          <div class="row justify-content-center justify-content-md-start text-center text-md-start">
-            <div class="col-10 col-md-6 col-lg-4 pe-md-4 pe-lg-6" data-zanim-timeline="{}" data-zanim-trigger="scroll"><img class="mb-3" src="../assets/img/icons/package1.svg" alt="" width="120" height="120" />
-              <div class="overflow-hidden">
-                <h2 data-zanim-xs='{"delay":0.1}'>personal</h2>
-              </div>
-              <div class="overflow-hidden">
-                <h4 class="font-base fw-light fst-italic mb-0 text-600" data-zanim-xs='{"delay":0.2}'>forever</h4>
-              </div>
-              <div class="overflow-hidden">
-                <h4 class="mb-4" data-zanim-xs='{"delay":0.3}'>free</h4>
-              </div>
-              <div class="overflow-hidden">
-                <p data-zanim-xs='{"delay":0.4}'>Create beautiful, professional campaigns for free—no design or coding experience necessary. It's so easy, you can start sending today.</p>
-              </div>
-              <div class="overflow-hidden">
-                <div data-zanim-xs='{"delay":0.5}'><a class="btn btn-link ps-md-0 text-black fw-black" href="#!">join now<span class="d-inline-block">&xrarr;</span></a></div>
-              </div>
-            </div>
-            <div class="col-10 col-md-6 col-lg-4 px-lg-4 mt-6 mt-md-0" data-zanim-timeline="{}" data-zanim-trigger="scroll"><img class="mb-3" src="../assets/img/icons/package2.svg" alt="" width="120" height="120" />
-              <div class="overflow-hidden">
-                <h2 data-zanim-xs='{"delay":0.1}'>business</h2>
-              </div>
-              <div class="overflow-hidden">
-                <h4 class="font-base fw-light fst-italic mb-0 text-600" data-zanim-xs='{"delay":0.2}'>starting at</h4>
-              </div>
-              <div class="overflow-hidden">
-                <h4 class="mb-4 d-flex align-items-center" data-zanim-xs='{"delay":0.3}'><span>$10 per month</span><span class="border border-danger text-danger fw-semi-bold px-1 fs--1 rounded ms-2">Save 50%</span></h4>
-              </div>
-              <div class="overflow-hidden">
-                <ul class="style-check ps-0" data-zanim-xs='{"delay":0.4}'>
-                  <li class="d-inline-block d-md-block">Level up with automation</li>
-                  <li class="d-inline-block d-md-block">Workflows, e-commerce-focused</li>
-                  <li class="d-inline-block d-md-block">Features, and more tools that</li>
-                  <li class="d-inline-block d-md-block">Refine your marketing strategy</li>
-                </ul>
-              </div>
-              <div class="overflow-hidden">
-                <div data-zanim-xs='{"delay":0.5}'><a class="btn btn-link ps-md-0 text-black fw-black" href="#!">learn more<span class="d-inline-block">&xrarr;</span></a></div>
-              </div>
-            </div>
-            <div class="col-10 col-md-6 col-lg-4 ps-lg-6 mt-6 mt-lg-0" data-zanim-timeline="{}" data-zanim-trigger="scroll"><img class="mb-3" src="../assets/img/icons/package3.svg" alt="" width="120" height="120" />
-              <div class="overflow-hidden">
-                <h2 data-zanim-xs='{"delay":0.1}'>enterprise</h2>
-              </div>
-              <div class="overflow-hidden">
-                <h4 class="font-base fw-light fst-italic mb-0 text-600" data-zanim-xs='{"delay":0.2}'>additional</h4>
-              </div>
-              <div class="overflow-hidden">
-                <h4 class="mb-4" data-zanim-xs='{"delay":0.3}'>$199 per year</h4>
-              </div>
-              <div class="overflow-hidden">
-                <p data-zanim-xs='{"delay":0.4}'>Improve performance with enterprise-level features for high-volume senders like multivariate testing and much more features.</p>
-              </div>
-              <div class="overflow-hidden">
-                <div data-zanim-xs='{"delay":0.5}'><a class="btn btn-link ps-md-0 text-black fw-black" href="#!">contact sales<span class="d-inline-block">&xrarr;</span></a></div>
-              </div>
-            </div>
-          </div>
-        </div><!-- end of .container-->
-      </section><!-- <section> close ============================-->
-      <!-- ============================================-->
+
 
 
 

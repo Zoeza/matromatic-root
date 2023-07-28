@@ -10,9 +10,13 @@ def home(request, ):
     url = direction + "/home/home.html"
     try:
         profile = Header.objects.get(sku='en')
-        socials_media = SocialMedia.objects.all()
+
     except Header.DoesNotExist:
         raise Http404("Top page does not exist")
+    try:
+        socials_media = SocialMedia.objects.all()
+    except Header.DoesNotExist:
+        raise Http404("Social media do not exist")
     context = {
         'profile': profile,
         'socials_media': socials_media,
