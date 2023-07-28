@@ -1,0 +1,123 @@
+{% extends "en-us/manager/base.html" %}
+{% load static %}
+
+{% block title %}
+	<title>Matromatic Manager| Home manager</title>
+{% endblock %}
+
+
+{% block content %}
+    <main class="content">
+        <div class="container-fluid p-0">
+
+            <h1 class="h3 mb-3">Home manager</h1>
+            <div class="row">
+                <div class="col-12 col-md-12">
+                    <div class="tab tab-vertical">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link active" href="#header" data-bs-toggle="tab" role="tab" aria-selected="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home align-middle">
+                                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" href="#body" data-bs-toggle="tab" role="tab" aria-selected="false" tabindex="-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings align-middle"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                              </a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" href="#footer" data-bs-toggle="tab" role="tab" aria-selected="false" tabindex="-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square align-middle"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                                </a>
+                            </li>
+								</ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active show" id="header" role="tabpanel">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="card-title mb-0">Header information</h5>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <form>
+                                            <div class="row">
+                                                <div class="col-md-8">
+                                                    <div class="mb-3">
+                                                        <label >Company Logo</label>
+
+                                                    </div>
+                                                    <div class="avatar-upload">
+                                                        <div class="avatar-edit">
+
+                                                            <input type='file'  class="form-control d-none" id="imageUpload" accept=".png, .jpg, .jpeg" />
+                                                        </div>
+                                                        <label class="form-label" for="imageUpload">
+                                                             <div class="avatar-preview">
+                                                                <div id="imagePreview" style="background-image: url({% static 'manager/img/avatars/images.png' %});">
+                                                                </div>
+                                                            </div>
+
+                                                        </label>
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-8">
+                                                    <div class="mb-3">
+                                                        <label for="inputUsername" class="form-label">Company Name</label>
+                                                        <input type="text" class="form-control" id="inputUsername" placeholder="company name">
+                                                    </div>
+
+                                                    <div class="mb-3">
+                                                        <label for="inputSlogan" class="form-label">Slogan</label>
+                                                        <input type="text" class="form-control" id="inputSlogan" placeholder="Your Slogan">
+                                                    </div>
+
+                                                    <div class="mb-3">
+                                                        <label for="inputUsername" class="form-label">Description</label>
+                                                        <textarea rows="2" class="form-control" id="inputDescription" placeholder="Tell something about yourself"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-8">
+                                                    <div class="mb-3">
+                                                        <label for="inputPhotos" class="form-label">Main Photos</label>
+                                                        <input type="text" class="form-control" id="inputphotos" placeholder="Input your photos">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn btn-secondary">Save changes</button>
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="body" role="tabpanel">
+                                <h4 class="tab-title">Navigation bar</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor tellus eget condimentum rhoncus. Aenean massa. Cum sociis natoque
+                                    penatibus et magnis neque dis parturient montes, nascetur ridiculus mus. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+                                <p>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate
+                                    eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+                            </div>
+                            <div class="tab-pane" id="footer" role="tabpanel">
+                                <h4 class="tab-title">Body</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor tellus eget condimentum rhoncus. Aenean massa. Cum sociis natoque
+                                    penatibus et magnis neque dis parturient montes, nascetur ridiculus mus. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+                                <p>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate
+                                    eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+{% endblock %}
+
