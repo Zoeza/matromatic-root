@@ -18,6 +18,7 @@ class Header(models.Model):
 class SocialMedia(models.Model):
     name = models.CharField(max_length=70, blank=True)
     link = models.CharField(max_length=100, blank=True)
+    icon = models.CharField(max_length=70, blank=True)
 
     def __str__(self):
         return self.name
