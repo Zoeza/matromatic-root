@@ -15,7 +15,11 @@
     <!-- ===============================================-->
     <!--    Favicons-->
     <!-- ===============================================-->
-    
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'home/assets/img/favicons/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'home/assets/assets/img/favicons/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'home/assets/assets/img/favicons/favicon-16x16.png' %}">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'home/assets/assets/img/favicons/favicon.ico' %}">
+    <link rel="manifest" href="{% static 'home/assets/assets/img/favicons/manifest.json' %}">
     <meta name="msapplication-TileImage" content="{% static 'home/assets/assets/img/favicons/mstile-150x150.png' %}">
     <meta name="theme-color" content="#ffffff">
 
@@ -122,7 +126,11 @@
                   <div class="overflow-hidden">
                     <div class="d-lg-flex align-items-center fw-bold ls mt-3 mt-md-5 text-uppercase" data-zanim-xs='{"delay":0.4}'>
                       <h6 class="mb-lg-0">Follow Us:</h6>
-                      <div class="overflow-hidden"><a class="me-1" href="#!"><span class="fab fa-facebook text-dark me-2 ms-3 fs-0"></span></a><a class="me-1" href="#!"><span class="fab fa-twitter text-dark me-2 fs-0"></span></a><a class="me-1" href="#!"><span class="fab fa-google-plus-g text-dark fs-0"></span></a></div>
+                      <div class="overflow-hidden">
+                        <a class="me-1" href="#!"><span> <img src="{% static 'home/assets/img/favicons/apple-touch-icon.png' %}"></span></a>
+                        <a class="me-1" href="#!"><span class="fab fa-twitter text-dark me-2 fs-0"></span></a>
+                        <a class="me-1" href="#!"><span class="fab fa-google-plus-g text-dark fs-0"></span></a>
+                      </div>
                     </div>
                   </div>
                 </div>
