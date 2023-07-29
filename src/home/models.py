@@ -15,7 +15,7 @@ class Header(models.Model):
         return self.sku
 
 
-class Body(models.Model):
+class Main(models.Model):
     sku = models.CharField(max_length=50, blank=True)
     why_us_raison1 = models.TextField(max_length=200, blank=True)
     why_us_raison2 = models.TextField(max_length=200, blank=True)
@@ -23,10 +23,24 @@ class Body(models.Model):
     why_us_video_src = models.CharField(max_length=50, blank=True)
     our_process_intro = models.TextField(max_length=200, blank=True)
     partners_intro = models.TextField(max_length=200, blank=True)
+    client_number = models.CharField(max_length=50, blank=True)
     background_image = models.ImageField(upload_to='body/background_image', null=True, blank=True)
 
     class Meta:
-        verbose_name = "bodie"
+        verbose_name = "bodies"
+
+    def __str__(self):
+        return self.sku
+
+
+class Footer(models.Model):
+    sku = models.CharField(max_length=50, blank=True)
+    copyright = models.CharField(max_length=80, blank=True)
+    made_by = models.CharField(max_length=80, blank=True)
+    made_by_link = models.CharField(max_length=100, blank=True)
+
+    class Meta:
+        verbose_name = "footer"
 
     def __str__(self):
         return self.sku
