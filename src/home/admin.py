@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Header,  Main,Footer, Service, OurProcess, Partner, SocialMedia, BackgroundImage, Client
+from .models import Header, Main, Footer, Service, OurProcess, Partner, SocialMedia, BackgroundImage, Client
 
 # Register your models here.
 admin.site.register(Header)

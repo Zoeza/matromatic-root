@@ -27,7 +27,7 @@ class Main(models.Model):
     background_image = models.ImageField(upload_to='body/background_image', null=True, blank=True)
 
     class Meta:
-        verbose_name = "bodies"
+        verbose_name = "main"
 
     def __str__(self):
         return self.sku
