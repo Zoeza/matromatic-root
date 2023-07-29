@@ -77,7 +77,25 @@
               <div class="container-fluid">
                 <div class="row h-100 border-bottom">
                   <div class="col-lg-6 px-0 order-lg-2" data-zanim-lg='{"animation":"slide-left","delay":0.4}' data-zanim-trigger="scroll">
-                      <div class="bg-holder" style="background-image:url({% get_media_prefix %}{{ body.background_image}});"></div>
+                    <div class="swiper-container theme-slider swiper-theme" data-swiper='{"autoplay":{"delay":5000,"disableOnInteraction":false},"loop":true,"effect":"fade","pagination":{"el":".swiper-pagination","clickable":true,"type":"bullets"}}' data-zanim-lg='{"animation":"zoom-out","delay":0}' data-zanim-trigger="scroll">
+                      <div class="swiper-wrapper">
+
+                        {% for image in background_images%}
+
+                        <div class="swiper-slide min-vh-lg-100 py-9">
+                          <div class="bg-holder" style="background-image:url({% get_media_prefix %}{{ image.img}});"></div>
+
+                          <!--/.bg-holder-->
+                        </div>
+                        {% endfor %}
+
+                      </div>
+                      <div class="swiper-pagination"></div>
+                      <div class="swiper-nav">
+                        <div class="swiper-button-next me-md-3"></div>
+                        <div class="swiper-button-prev ms-md-3"> </div>
+                      </div>
+                    </div>
                   </div>
                   <div class="col-lg-6 bg-white py-7 py-md-8">
                     <div class="row flex-center h-100">
