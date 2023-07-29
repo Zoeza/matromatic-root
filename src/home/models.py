@@ -20,7 +20,7 @@ class Body(models.Model):
     why_us_raison1 = models.TextField(max_length=200, blank=True)
     why_us_raison2 = models.TextField(max_length=200, blank=True)
     why_us_photo = models.ImageField(upload_to='body/why_us_photo', blank=True)
-    why_us_video = models.FileField(upload_to='body/why_us_video', blank=True)
+    why_us_video_src = models.CharField(max_length=50, blank=True)
     our_process_intro = models.TextField(max_length=200, blank=True)
     partners_intro = models.TextField(max_length=200, blank=True)
     background_image = models.ImageField(upload_to='body/background_image', null=True, blank=True)
