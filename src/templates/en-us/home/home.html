@@ -8,7 +8,7 @@
     <!-- ===============================================-->
     {% block title %}
 
-         <title>{{ profile.head_title }} |  {{ profile.head_text }}</title>
+         <title>{{ header.head_title }} |  {{ header.head_text }}</title>
 
     {% endblock %}
 
@@ -19,7 +19,7 @@
           <nav class="fancynavbar fancynavbar-expand-lg" data-zanim-lg='{"from":{"opacity":1,"x":70},"to":{"opacity":1,"x":0},"ease":"CubicBezier","duration":0.8,"delay":0.3}' data-zanim-xs='{"from":{"opacity":1,"y":-37},"to":{"opacity":1,"y":0},"ease":"CubicBezier","duration":0.8,"delay":0.3}' data-zanim-trigger="scroll" data-exclusive="true">
             <div class="fancynavbar-togglerbar" data-onscroll-fade-in="data-onscroll-fade-in">
                 <a class="fancynavbar-brand" href=#>
-                    <img class="fancynavbar-brand-img" src="{% get_media_prefix %}{{ profile.logo_main }}"  alt="" width="100" height="100" data-zanim-lg='{"from":{"opacity":0,"x":45},"to":{"opacity":1,"x":0},"ease":"CubicBezier","duration":0.8,"delay":0.4}' data-zanim-trigger="scroll"/>
+                    <img class="fancynavbar-brand-img" src="{% get_media_prefix %}{{ header.logo_main }}"  alt="" width="100" height="100" data-zanim-lg='{"from":{"opacity":0,"x":45},"to":{"opacity":1,"x":0},"ease":"CubicBezier","duration":0.8,"delay":0.4}' data-zanim-trigger="scroll"/>
 
                </a>
               <div class="fancynavbar-toggler">
@@ -102,15 +102,15 @@
                       <div class="col-lg-10 text-black text-center text-lg-start" data-zanim-timeline="{}" data-zanim-trigger="scroll">
 
                         <div class="overflow-hidden">
-                          <h4 class="text-uppercase fw-normal ls text-white bg-dark p-1 rounded d-inline-block" data-zanim-xs='{"delay":0.1}'>{{ profile.company_slogan}}</h4>
+                          <h4 class="text-uppercase fw-normal ls text-white bg-dark p-1 rounded d-inline-block" data-zanim-xs='{"delay":0.1}'>{{ header.company_slogan}}</h4>
                         </div>
 
                         <div class="overflow-hidden">
-                          <h1 class="display-3 fs-5 fs-sm-6" id="sc" data-zanim-xs='{"delay":0.2}'><span class="text-decoration-underline">{{ profile.company_name }}</span><br /></h1>
+                          <h1 class="display-3 fs-5 fs-sm-6" id="sc" data-zanim-xs='{"delay":0.2}'><span class="text-decoration-underline">{{ header.company_name }}</span><br /></h1>
                         </div>
 
                         <div class="overflow-hidden">
-                          <p class="text-900 fs-0 mt-3 mt-md-5" data-zanim-xs='{"delay":0.3}'>{{ profile.company_description }}</p>
+                          <p class="text-900 fs-0 mt-3 mt-md-5" data-zanim-xs='{"delay":0.3}'>{{ header.company_description }}</p>
                         </div>
 
                         <div class="overflow-hidden">
@@ -170,7 +170,8 @@
             <section class="text-center py-8 py-md-11 overflow-hidden" id="defaultVideo">
               <div class="bg-holder" style="background-image:url(../assets/img/headers/header-27.jpg);" data-parallax="" data-rellax-percentage="0.5" data-rellax-speed="-3"></div>
               <!--/.bg-holder-->
-              <div class="container-fluid"><a class="text-white" href="#!" data-bigpicture='{"ytSrc":"kAphgHhlteM"}'><svg class="mx-auto d-block" width="100" height="100" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 274.19 274.19" data-zanim-svg='{"duration":2,"ease":"CubicBezier"}' data-zanim-svg-trigger="scroll">
+              <div class="container-fluid"><a class="text-white" href="#!" data-bigpicture='{"ytSrc":"kAphgHhlteM"}'>
+                <svg class="mx-auto d-block" width="100" height="100" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 274.19 274.19" data-zanim-svg='{"duration":2,"ease":"CubicBezier"}' data-zanim-svg-trigger="scroll">
                     <defs>
                       <style>
                         .play-path {
@@ -185,127 +186,72 @@
                     <g>
                       <path class="play-path" d="M208.31,29.4A129.12,129.12,0,1,1,137.1,8m-1.48,170.53L199.94,137,104.07,79.46v113"></path>
                     </g>
-                  </svg><span class="h4 mt-3 text-white" data-zanim-xs='{"from":{"letter-spacing":"0.2em","opacity":0},"to":{"letter-spacing":0,"opacity":1},"delay":0.8}' data-zanim-trigger="scroll">watch the reel</span></a></div><!-- end of .container-->
-            </section><!-- <section> close ============================-->
-            <!-- ============================================-->
-
-
-
-            <!-- ============================================-->
-            <!-- <section> begin ============================-->
-            <section id="defaultServices">
-              <div class="container">
-                <div class="row justify-content-center gy-4 gx-lg-4">
-                  <div class="col-12 mb-3 mb-md-5 text-center">
-                    <h2 class="fs-3 fs-sm-4"><span class="text-decoration-underline">powerful inside.</span></h2>
-                  </div>
-                  <div class="col-lg-5">
-                    <div class="d-flex" id="bootstrap5" data-zanim-trigger="scroll" data-zanim-timeline="{}">
-                      <div class="overflow-hidden"><img class="me-3 me-sm-4" src="{% static 'home/assets/img/icons/bootstrap.svg' %}" width="50" alt="" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}' /></div>
-                      <div class="flex-1">
-                        <div class="overflow-hidden">
-                          <h4 class="mb-2" data-zanim-xs='{"delay":0.1,"animation":"slide-right"}'>bootstrap 5</h4>
-                        </div>
-                        <div class="overflow-hidden">
-                          <p data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'>Build responsive, mobile-first projects on the web with the world's most popular front-end component library.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-5">
-                    <div class="d-flex" id="responsiveCSShelperclasses" data-zanim-trigger="scroll" data-zanim-timeline="{}">
-                      <div class="overflow-hidden"><img class="me-3 me-sm-4" src=" {% static 'home/assets/img/icons/icon-target.svg' %}" width="50" alt="" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}' /></div>
-                      <div class="flex-1">
-                        <div class="overflow-hidden">
-                          <h4 class="mb-2" data-zanim-xs='{"delay":0.1,"animation":"slide-right"}'>responsive CSS helper classes</h4>
-                        </div>
-                        <div class="overflow-hidden">
-                          <p data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'>Toggle styles on any element, across any breakpoint according to Bootstrap grid system, using Sparrow's CSS helper classes.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-5">
-                    <div class="d-flex" id="32setsofelements" data-zanim-trigger="scroll" data-zanim-timeline="{}">
-                      <div class="overflow-hidden"><img class="me-3 me-sm-4" src="{% static 'home/assets/img/icons/favorites-button.svg' %}" width="50" alt="" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}' /></div>
-                      <div class="flex-1">
-                        <div class="overflow-hidden">
-                          <h4 class="mb-2" data-zanim-xs='{"delay":0.1,"animation":"slide-right"}'>32 sets of elements</h4>
-                        </div>
-                        <div class="overflow-hidden">
-                          <p data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'>Elegantly redesigned popular plugins including touch sliders, typed text, parallax, video background and more.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-5">
-                    <div class="d-flex" id="butterysmoothanimation" data-zanim-trigger="scroll" data-zanim-timeline="{}">
-                      <div class="overflow-hidden"><img class="me-3 me-sm-4" src="{% static 'home/assets/img/icons/icon-line-chart.svg' %}" width="50" alt="" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}' /></div>
-                      <div class="flex-1">
-                        <div class="overflow-hidden">
-                          <h4 class="mb-2" data-zanim-xs='{"delay":0.1,"animation":"slide-right"}'>buttery smooth animation</h4>
-                        </div>
-                        <div class="overflow-hidden">
-                          <p data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'>Crazy fast, responsive, efficient and freakishly robust GSAP; giving you the new standard for HTML5 and javascript animation.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-5">
-                    <div class="d-flex" id="modular&amp;amp;multipurpose" data-zanim-trigger="scroll" data-zanim-timeline="{}">
-                      <div class="overflow-hidden"><img class="me-3 me-sm-4" src="{% static 'home/assets/img/icons/multi-purpose.svg' %}" width="50" alt="" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}' /></div>
-                      <div class="flex-1">
-                        <div class="overflow-hidden">
-                          <h4 class="mb-2" data-zanim-xs='{"delay":0.1,"animation":"slide-right"}'>modular &amp; multipurpose</h4>
-                        </div>
-                        <div class="overflow-hidden">
-                          <p data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'>Create rich UI and style with sparrow's array of ready-made modular sections - carefully designed for wide range of purposes.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-5">
-                    <div class="d-flex" id="familiarmarkup" data-zanim-trigger="scroll" data-zanim-timeline="{}">
-                      <div class="overflow-hidden"><img class="me-3 me-sm-4" src="{% static 'home/assets/img/icons/icon-coding.svg' %}" width="50" alt="" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}' /></div>
-                      <div class="flex-1">
-                        <div class="overflow-hidden">
-                          <h4 class="mb-2" data-zanim-xs='{"delay":0.1,"animation":"slide-right"}'>familiar markup</h4>
-                        </div>
-                        <div class="overflow-hidden">
-                          <p data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'>Based on the Bootstrap 4 code base, sparrow's code is instantly familiar, easy to understand and a straightforward to extend.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                  </svg>
+                <span class="h4 mt-3 text-white" data-zanim-xs='{"from":{"letter-spacing":"0.2em","opacity":0},"to":{"letter-spacing":0,"opacity":1},"delay":0.8}' data-zanim-trigger="scroll">watch the reel</span>
+              </a>
               </div><!-- end of .container-->
             </section><!-- <section> close ============================-->
             <!-- ============================================-->
 
 
 
+            <!-- our services begin-->
+            <section id="defaultServices">
+              <div class="container">
+                <div class="row justify-content-center gy-4 gx-lg-4">
+                  <div class="col-12 mb-3 mb-md-5 text-center">
+                    <h2 class="fs-3 fs-sm-4">
+                      <span class="text-decoration-underline">powerful inside.</span>
+                    </h2>
+                  </div>
+                  {% for service in services%}
+                      <div class="col-lg-5">
+                           <div class="d-flex" id="bootstrap5" data-zanim-trigger="scroll" data-zanim-timeline="{}">
+                              <div class="overflow-hidden">
+                                <img class="me-3 me-sm-4" src="{% get_media_prefix %}{{ service.icon }}" width="50" alt="" data-zanim-xs='{"delay":0.2,"animation":"slide-right"}' /></div>
+                              <div class="flex-1">
+                                <div class="overflow-hidden">
+                                  <h4 class="mb-2" data-zanim-xs='{"delay":0.1,"animation":"slide-right"}'>{{service.service_title}}</h4>
+                                </div>
+                                <div class="overflow-hidden">
+                                  <p data-zanim-xs='{"delay":0.2,"animation":"slide-right"}'>{{service.service_description}}</p>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                  {% endfor %}
+
+                </div>
+              </div><!-- end of .container-->
+            </section>
+            <!--our services end-->
+
+
+
             <!-- ============================================-->
-            <!-- <section> begin ============================-->
+            <!-- our process begin-->
             <section class="border-top" id="defaultProcess">
               <div class="container">
                 <div class="row justify-content-center text-center mb-6">
                   <div class="col-lg-6">
                     <h2 class="fs-3 fs-sm-4 text-decoration-underline mb-3">our process</h2>
-                    <p class="text-500 fst-italic">Our process is a flexible framework that adapts, evolves and responds to your needs. It is the streamlined result of two decades of website design and marketing for hundreds of clients.</p>
+                    <p class="text-500 fst-italic">{{body.our_process_intro}}</p>
                     <hr class="hr-short mt-5" />
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-12 ps-lg-7">
-                    <div class="row align-items-end">
-                      <div class="col-lg-6 order-lg-2 text-center"><img class="img-fluid" src="../assets/img/illustration/process-01.svg" alt="" width="400" /></div>
-                      <div class="col-lg-6 border-lg-start border-lg-bottom pb-lg-8 mt-4 mt-lg-0 mb-8 mb-lg-0">
-                        <div class="process-item ms-6 ms-sm-8 ms-lg-6"><span class="process-item-number">01</span>
-                          <h3>plan</h3>
-                          <p>We set priorities, organize content, and understand the buyer’s journey that your audience takes as they navigate your website. At the end of strategy, you will have a Blueprint for your website project, a comprehensive strategic plan for your website design, content, and functionality.</p>
+                      <div class="row align-items-end">
+                        <div class="col-lg-6 order-lg-2 text-center">
+                          <img class="img-fluid" src="../assets/img/illustration/process-01.svg" alt="" width="400" />
                         </div>
-                      </div>
-                    </div>
+                        <div class="col-lg-6 border-lg-start border-lg-bottom pb-lg-8 mt-4 mt-lg-0 mb-8 mb-lg-0">
+                          <div class="process-item ms-6 ms-sm-8 ms-lg-6"><span class="process-item-number">01</span>
+                            <h3>plan</h3>
+                            <p>We set priorities, organize content, and understand the buyer’s journey that your audience takes as they navigate your website. At the end of strategy, you will have a Blueprint for your website project, a comprehensive strategic plan for your website design, content, and functionality.</p>
+                          </div>
+                        </div>
+                     </div>
                     <div class="row">
                       <div class="col-lg-6 border-lg-end border-lg-bottom text-center py-lg-8"><img class="img-fluid" src="../assets/img/illustration/process-02.svg" alt="" width="400" /></div>
                       <div class="col-lg-6 mt-4 mb-8 my-lg-8">
@@ -429,154 +375,35 @@
             <!-- ============================================-->
 
 
-
-            <!-- ============================================-->
-
-
-
-
-            <!-- ============================================-->
-            <!-- <section> begin ============================-->
-            <section class="py-0" id="defaultCta3">
-              <div class="container">
-                <div class="row flex-center bg-dark rounded py-6 text-center">
-                  <div class="col-lg-7 text-lg-start ps-lg-5">
-                    <h3 class="mb-0 text-white">start your next big project with sparrow!</h3>
-                  </div>
-                  <div class="col-lg-auto pe-lg-5 mt-4 mt-lg-0"><a class="btn btn-light" href="#!">get started</a></div>
-                </div>
-              </div><!-- end of .container-->
-            </section><!-- <section> close ============================-->
-            <!-- ============================================-->
-
-
-
-            <!-- ============================================-->
+            <!-- Our partners begin -->
             <!-- <section> begin ============================-->
             <section class="text-center" id="defaultMembers">
               <div class="container">
                 <div class="row flex-center">
                   <div class="col-lg-7 col-xl-6">
-                    <h2 class="fs-3 fs-sm-4 text-decoration-underline mb-3">meet the crews</h2>
-                    <p class="text-500 fst-italic">A passionate group of experienced designers, developers and programmers motivated to continually reach goals and tackle new challenges</p>
+                    <h2 class="fs-3 fs-sm-4 text-decoration-underline mb-3">our partners</h2>
+                    <p class="text-500 fst-italic">{{body.partners_intro}}</p>
                   </div>
                   <div class="w-100"></div>
-                  <div class="col-lg-6 pt-5 pt-xl-7" data-zanim-timeline='{"delay":0}' data-zanim-trigger="scroll">
-                    <div class="hoverbox"><img class="rounded img-fluid" src="../assets/img/team/9.jpg" alt="" data-zanim-xs='{"animation":"zoom-in","delay":0.1}' />
-                      <div class="hoverbox-content p-3 d-flex align-items-end justify-content-end"><a class="text-white" href="#!"><span class="fs-1 ms-2 fab fa-twitter"></span></a></div>
-                    </div>
-                    <div class="overflow-hidden"><a href="../pages/profile.html">
-                        <h5 class="fs-0 fw-bold mt-3 mb-1" data-zanim-xs='{"from":{"y":45},"delay":0.2}'>Elizabeth Swan</h5>
-                      </a></div>
-                    <div class="overflow-hidden">
-                      <h6 class="text-700 fw-normal text-uppercase ls" data-zanim-xs='{"from":{"y":22},"delay":0.3}'>The Lady</h6>
-                    </div>
-                  </div>
-                  <div class="col-lg-6 pt-5 pt-xl-7" data-zanim-timeline='{"delay":0.1}' data-zanim-trigger="scroll">
-                    <div class="hoverbox"><img class="rounded img-fluid" src="../assets/img/team/0.jpg" alt="" data-zanim-xs='{"animation":"zoom-in","delay":0.1}' />
-                      <div class="hoverbox-content p-3 d-flex align-items-end justify-content-end"><a class="text-white" href="#!"><span class="fs-1 ms-2 fab fa-twitter"></span></a></div>
-                    </div>
-                    <div class="overflow-hidden"><a href="../pages/profile.html">
-                        <h5 class="fs-0 fw-bold mt-3 mb-1" data-zanim-xs='{"from":{"y":45},"delay":0.2}'>Jack Sparrow</h5>
-                      </a></div>
-                    <div class="overflow-hidden">
-                      <h6 class="text-700 fw-normal text-uppercase ls" data-zanim-xs='{"from":{"y":22},"delay":0.3}'>The Man</h6>
-                    </div>
-                  </div>
-                  <div class="w-100"></div>
-                  <div class="col-sm-6 col-lg-3 pt-5 pt-xl-7" data-zanim-timeline='{"delay":0.2}' data-zanim-trigger="scroll">
-                    <div class="hoverbox"><img class="rounded img-fluid" src="../assets/img/team/1.jpg" alt="" data-zanim-xs='{"animation":"zoom-in","delay":0.1}' />
-                      <div class="hoverbox-content p-3 d-flex align-items-end justify-content-end"><a class="text-white" href="#!"><span class="fs-1 ms-2 fab fa-twitter"></span></a><a class="text-white" href="#!"><span class="fs-1 ms-2 fab fa-facebook"></span></a></div>
-                    </div>
-                    <div class="overflow-hidden"><a href="../pages/profile.html">
-                        <h5 class="fs-0 fw-bold mt-3 mb-1" data-zanim-xs='{"from":{"y":45},"delay":0.2}'>Hector Barbossa</h5>
-                      </a></div>
-                    <div class="overflow-hidden">
-                      <h6 class="text-700 fw-normal text-uppercase ls" data-zanim-xs='{"from":{"y":22},"delay":0.3}'>The Beta</h6>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-3 pt-5 pt-xl-7" data-zanim-timeline='{"delay":0.3}' data-zanim-trigger="scroll">
-                    <div class="hoverbox"><img class="rounded img-fluid" src="../assets/img/team/2.jpg" alt="" data-zanim-xs='{"animation":"zoom-in","delay":0.1}' />
-                      <div class="hoverbox-content p-3 d-flex align-items-end justify-content-end"><a class="text-white" href="#!"><span class="fs-1 ms-2 fab fa-instagram"></span></a></div>
-                    </div>
-                    <div class="overflow-hidden"><a href="../pages/profile.html">
-                        <h5 class="fs-0 fw-bold mt-3 mb-1" data-zanim-xs='{"from":{"y":45},"delay":0.2}'>Tia Dalma</h5>
-                      </a></div>
-                    <div class="overflow-hidden">
-                      <h6 class="text-700 fw-normal text-uppercase ls" data-zanim-xs='{"from":{"y":22},"delay":0.3}'>The Gama</h6>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-3 pt-5 pt-xl-7" data-zanim-timeline='{"delay":0.4}' data-zanim-trigger="scroll">
-                    <div class="hoverbox"><img class="rounded img-fluid" src="../assets/img/team/3.jpg" alt="" data-zanim-xs='{"animation":"zoom-in","delay":0.1}' />
-                      <div class="hoverbox-content p-3 d-flex align-items-end justify-content-end"><a class="text-white" href="#!"><span class="fs-1 ms-2 fab fa-linkedin"></span></a></div>
-                    </div>
-                    <div class="overflow-hidden"><a href="../pages/profile.html">
-                        <h5 class="fs-0 fw-bold mt-3 mb-1" data-zanim-xs='{"from":{"y":45},"delay":0.2}'>Angelica Syrena</h5>
-                      </a></div>
-                    <div class="overflow-hidden">
-                      <h6 class="text-700 fw-normal text-uppercase ls" data-zanim-xs='{"from":{"y":22},"delay":0.3}'>The Ohm</h6>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-3 pt-5 pt-xl-7" data-zanim-timeline='{"delay":0.5}' data-zanim-trigger="scroll">
-                    <div class="hoverbox"><img class="rounded img-fluid" src="../assets/img/team/4.jpg" alt="" data-zanim-xs='{"animation":"zoom-in","delay":0.1}' />
-                      <div class="hoverbox-content p-3 d-flex align-items-end justify-content-end"><a class="text-white" href="#!"><span class="fs-1 ms-2 fab fa-instagram"></span></a></div>
-                    </div>
-                    <div class="overflow-hidden"><a href="../pages/profile.html">
-                        <h5 class="fs-0 fw-bold mt-3 mb-1" data-zanim-xs='{"from":{"y":45},"delay":0.2}'>Joshame Gibbs</h5>
-                      </a></div>
-                    <div class="overflow-hidden">
-                      <h6 class="text-700 fw-normal text-uppercase ls" data-zanim-xs='{"from":{"y":22},"delay":0.3}'>The Pi</h6>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-3 pt-5 pt-xl-7" data-zanim-timeline='{"delay":0.6}' data-zanim-trigger="scroll">
-                    <div class="hoverbox"><img class="rounded img-fluid" src="../assets/img/team/5.jpg" alt="" data-zanim-xs='{"animation":"zoom-in","delay":0.1}' />
-                      <div class="hoverbox-content p-3 d-flex align-items-end justify-content-end"><a class="text-white" href="#!"><span class="fs-1 ms-2 fab fa-facebook"></span></a></div>
-                    </div>
-                    <div class="overflow-hidden"><a href="../pages/profile.html">
-                        <h5 class="fs-0 fw-bold mt-3 mb-1" data-zanim-xs='{"from":{"y":45},"delay":0.2}'>Carina Smyth</h5>
-                      </a></div>
-                    <div class="overflow-hidden">
-                      <h6 class="text-700 fw-normal text-uppercase ls" data-zanim-xs='{"from":{"y":22},"delay":0.3}'>The Delta</h6>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-3 pt-5 pt-xl-7" data-zanim-timeline='{"delay":0.7}' data-zanim-trigger="scroll">
-                    <div class="hoverbox"><img class="rounded img-fluid" src="../assets/img/team/6.jpg" alt="" data-zanim-xs='{"animation":"zoom-in","delay":0.1}' />
-                      <div class="hoverbox-content p-3 d-flex align-items-end justify-content-end"><a class="text-white" href="#!"><span class="fs-1 ms-2 fab fa-twitter"></span></a>
-                        <a class="text-white" href="#!">
-                          <span class="fs-1 ms-2 fab fa-instagram"></span>
+
+                  {% for partner in partners %}
+                      <div class="col-sm-6 col-lg-3 pt-5 pt-xl-7" data-zanim-timeline='{"delay":0.2}' data-zanim-trigger="scroll">
+                        <div class="hoverbox">
+                          <img class="rounded img-fluid" src="{% get_media_prefix %} {{partner.partner_logo}}" alt="" data-zanim-xs='{"animation":"zoom-in","delay":0.1}' />
+                        </div>
+                      </div>
+                      <div class="overflow-hidden">
+                        <a href="../pages/profile.html">
+                          <h5 class="fs-0 fw-bold mt-3 mb-1" data-zanim-xs='{"from":{"y":45},"delay":0.2}'>{{partner.name}}</h5>
                         </a>
                       </div>
-                    </div>
-                    <div class="overflow-hidden"><a href="../pages/profile.html">
-                        <h5 class="fs-0 fw-bold mt-3 mb-1" data-zanim-xs='{"from":{"y":45},"delay":0.2}'>Black Beard</h5>
-                      </a></div>
-                    <div class="overflow-hidden">
-                      <h6 class="text-700 fw-normal text-uppercase ls" data-zanim-xs='{"from":{"y":22},"delay":0.3}'>The Fi</h6>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-3 pt-5 pt-xl-7" data-zanim-timeline='{"delay":0.8}' data-zanim-trigger="scroll">
-                    <div class="hoverbox"><img class="rounded img-fluid" src="../assets/img/team/7.jpg" alt="" data-zanim-xs='{"animation":"zoom-in","delay":0.1}' />
-                      <div class="hoverbox-content p-3 d-flex align-items-end justify-content-end"><a class="text-white" href="#!"><span class="fs-1 ms-2 fab fa-twitter"></span></a><a class="text-white" href="#!"><span class="fs-1 ms-2 fab fa-linkedin"></span></a></div>
-                    </div>
-                    <div class="overflow-hidden"><a href="../pages/profile.html">
-                        <h5 class="fs-0 fw-bold mt-3 mb-1" data-zanim-xs='{"from":{"y":45},"delay":0.2}'>Davy Jones</h5>
-                      </a></div>
-                    <div class="overflow-hidden">
-                      <h6 class="text-700 fw-normal text-uppercase ls" data-zanim-xs='{"from":{"y":22},"delay":0.3}'>The Zita</h6>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-3 pt-5 pt-xl-7" data-zanim-timeline='{"delay":0.9}' data-zanim-trigger="scroll"><img class="rounded img-fluid" src="../assets/img/team/8.jpg" alt="" data-zanim-xs='{"animation":"zoom-in","delay":0.1}' />
-                    <div class="overflow-hidden">
-                      <h5 class="fs-0 fw-bold mt-3 mb-1" data-zanim-xs='{"delay":0.2}'>Pintel &amp; Ragetti</h5>
-                    </div>
-                    <div class="overflow-hidden">
-                      <h6 class="text-700 fw-normal text-uppercase ls" data-zanim-xs='{"delay":0.3}'>Entertainers</h6>
-                    </div>
-                  </div>
+                  {% endfor %}
+
+
                 </div>
               </div><!-- end of .container-->
             </section><!-- <section> close ============================-->
-            <!-- ============================================-->
+            <!-- Our partners end -->
 
 
 

@@ -21,9 +21,50 @@ class Body(models.Model):
     why_us_raison2 = models.TextField(max_length=200, blank=True)
     why_us_photo = models.ImageField(upload_to='why_us_photo/', blank=True)
     why_us_video = models.FileField(upload_to='why_us_video/', blank=True)
+    our_process_intro = models.TextField(max_length=200, blank=True)
+    partners_intro = models.TextField(max_length=200, blank=True)
+
+    class Meta:
+        verbose_name = "bodie"
 
     def __str__(self):
         return self.sku
+
+
+class Service(models.Model):
+    service_title = models.CharField(max_length=70, blank=True)
+    service_description = models.TextField(max_length=200, blank=True)
+    icon = models.ImageField(upload_to='service/', height_field=None, width_field=None, max_length=100)
+
+    class Meta:
+        verbose_name = "service"
+
+    def __str__(self):
+        return self.service_title
+
+
+class OurProcess(models.Model):
+    process_number = models.IntegerField(blank=True)
+    process_title = models.CharField(max_length=70, blank=True)
+    process_description = models.TextField(max_length=200, blank=True)
+    photo = models.ImageField(upload_to='our_process/', height_field=None, width_field=None, max_length=100)
+
+    class Meta:
+        verbose_name = "processe"
+
+    def __str__(self):
+        return self.process_title
+
+
+class Partner(models.Model):
+    partner_name = models.CharField(max_length=50, unique=True)
+    partner_logo = models.ImageField(upload_to='partner/', height_field=None, width_field=None, max_length=100)
+
+    class Meta:
+        verbose_name = "partner"
+
+    def __str__(self):
+        return self.partner_name
 
 
 class SocialMedia(models.Model):
