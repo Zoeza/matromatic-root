@@ -36,5 +36,5 @@ def home(request):
         'background_images': background_images,
 
     }
-    
+
     return render(request, url, context)
