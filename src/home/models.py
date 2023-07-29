@@ -17,9 +17,9 @@ class Header(models.Model):
 
 class Body(models.Model):
     sku = models.CharField(max_length=50, blank=True)
-    why_us_raison1 = models.CharField(max_length=200, blank=True)
-    why_us_raison2 = models.CharField(max_length=200, blank=True)
-    why_us_photo = models.CharField(max_length=200, blank=True)
+    why_us_raison1 = models.TextField(max_length=200, blank=True)
+    why_us_raison2 = models.TextField(max_length=200, blank=True)
+    why_us_photo = models.ImageField(upload_to='why_us_photo/', blank=True)
     why_us_video = models.FileField(upload_to='why_us_video/', blank=True)
 
     def __str__(self):

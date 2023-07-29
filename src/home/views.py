@@ -8,16 +8,17 @@ def home(request):
         request.session['language'] = 'en-us'
     direction = request.session.get('language')
     url = direction + "/home/home.html"
+
     try:
         profile = Header.objects.get(sku='en')
-
     except Header.DoesNotExist:
         raise Http404("Top page does not exist")
 
     try:
-        body = Body.objects.all()
+        body = Body.objects.get(sku='en')
     except Header.DoesNotExist:
-        raise Http404("Social media do not exist")
+        raise Http404("Body informations do not exist")
+
     try:
         socials_media = SocialMedia.objects.all()
     except Header.DoesNotExist:
@@ -26,7 +27,7 @@ def home(request):
     try:
         background_images = BackgroundImage.objects.all()
     except Header.DoesNotExist:
-        raise Http404("Body informations images do not exist")
+        raise Http404("Background images do not exist")
 
     context = {
         'profile': profile,
@@ -35,5 +36,5 @@ def home(request):
         'background_images': background_images,
 
     }
-
+    
     return render(request, url, context)
