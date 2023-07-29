@@ -19,10 +19,11 @@ class Body(models.Model):
     sku = models.CharField(max_length=50, blank=True)
     why_us_raison1 = models.TextField(max_length=200, blank=True)
     why_us_raison2 = models.TextField(max_length=200, blank=True)
-    why_us_photo = models.ImageField(upload_to='why_us_photo/', blank=True)
-    why_us_video = models.FileField(upload_to='why_us_video/', blank=True)
+    why_us_photo = models.ImageField(upload_to='body/why_us_photo', blank=True)
+    why_us_video = models.FileField(upload_to='body/why_us_video', blank=True)
     our_process_intro = models.TextField(max_length=200, blank=True)
     partners_intro = models.TextField(max_length=200, blank=True)
+    background_image = models.ImageField(upload_to='body/background_image', null=True, blank=True)
 
     class Meta:
         verbose_name = "bodie"
@@ -34,7 +35,7 @@ class Body(models.Model):
 class Service(models.Model):
     service_title = models.CharField(max_length=70, blank=True)
     service_description = models.TextField(max_length=200, blank=True)
-    icon = models.ImageField(upload_to='service/', height_field=None, width_field=None, max_length=100)
+    icon = models.ImageField(upload_to='service/', blank=True)
 
     class Meta:
         verbose_name = "service"
@@ -65,6 +66,18 @@ class Partner(models.Model):
 
     def __str__(self):
         return self.partner_name
+
+
+class Client(models.Model):
+    client_name = models.CharField(max_length=50, unique=True)
+    client_logo = models.ImageField(upload_to='clients/client_logo', null=True, blank=True)
+    client_comment = models.TextField(max_length=300, blank=True)
+
+    class Meta:
+        verbose_name = "client"
+
+    def __str__(self):
+        return self.client_name
 
 
 class SocialMedia(models.Model):
