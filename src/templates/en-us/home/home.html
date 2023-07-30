@@ -342,8 +342,9 @@
                   </div>
 
                   <div class="col-md-6 ps-md-7 text-start mt-8 mt-md-0">
-                    <div class="progress-line me-4 mt-4" data-progress-line='{"progress":96,"subText":"Pingdom Page Speed"}'></div>
-                    <div class="progress-line me-4 mt-4" data-progress-line='{"progress":90,"subText":"Sparrow Performance Matrix"}'></div>
+                    {% for performance in performances%}
+                    <div class="progress-line me-4 mt-4" data-progress-line='{"progress":{{performance.percentage}},"subText":"{{performance.domain}}"}'></div>
+                    {% endfor %}
                   </div>
                 </div>
               </div>
