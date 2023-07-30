@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class Header(models.Model):
+class TopPage(models.Model):
     sku = models.CharField(max_length=50, blank=True)
     head_title = models.CharField(max_length=50, blank=True)
     head_text = models.CharField(max_length=80, blank=True)
@@ -15,19 +15,19 @@ class Header(models.Model):
         return self.sku
 
 
-class Main(models.Model):
+class Content(models.Model):
     sku = models.CharField(max_length=50, blank=True)
     why_us_raison1 = models.TextField(max_length=300, blank=True)
     why_us_raison2 = models.TextField(max_length=300, blank=True)
-    why_us_photo = models.ImageField(upload_to='body/why_us_photo', blank=True)
+    why_us_photo = models.ImageField(upload_to='content/why_us_photo', blank=True)
     why_us_video_src = models.CharField(max_length=50, blank=True)
     our_process_intro = models.TextField(max_length=200, blank=True)
     partners_intro = models.TextField(max_length=200, blank=True)
-    client_number = models.CharField(max_length=50, blank=True)
-    background_image = models.ImageField(upload_to='body/background_image', blank=True)
+    client_count = models.CharField(max_length=50, blank=True)
+    main_background_image = models.ImageField(upload_to='content/main_background_image', blank=True)
 
     class Meta:
-        verbose_name = "main"
+        verbose_name = "content"
 
     def __str__(self):
         return self.sku
@@ -114,9 +114,9 @@ class SocialMedia(models.Model):
         return self.name
 
 
-class BackgroundImage(models.Model):
+class TopBackgroundImage(models.Model):
     name = models.CharField(max_length=70, blank=True)
-    img = models.ImageField(upload_to='background_img/', null=True, blank=True)
+    img = models.ImageField(upload_to='top_background_img/', null=True, blank=True)
 
     def __str__(self):
         return self.name

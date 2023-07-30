@@ -1,6 +1,7 @@
 from django.http import Http404
 from django.shortcuts import render
-from .models import Header, Main, Service, OurProcess, Partner, SocialMedia, BackgroundImage, Footer, Client, Project
+from .models import TopPage, Content, Service, OurProcess, Partner, SocialMedia, \
+    TopBackgroundImage, Footer, Client, Project
 
 
 def home(request):
@@ -10,14 +11,14 @@ def home(request):
     url = direction + "/home/home.html"
 
     try:
-        header = Header.objects.get(sku='en')
-    except Header.DoesNotExist:
+        top_page = TopPage.objects.get(sku='en')
+    except TopPage.DoesNotExist:
         raise Http404("Top page does not exist")
 
     try:
-        main = Main.objects.get(sku='en')
-    except Main.DoesNotExist:
-        raise Http404("Main informations do not exist")
+        content = Content.objects.get(sku='en')
+    except Content.DoesNotExist:
+        raise Http404("Content does not exist")
 
     try:
         footer = Footer.objects.get(sku='en')
@@ -55,13 +56,13 @@ def home(request):
         raise Http404("Socials media do not exist")
 
     try:
-        background_images = BackgroundImage.objects.all()
-    except BackgroundImage.DoesNotExist:
-        raise Http404("Background images do not exist")
+        top_background_images = TopBackgroundImage.objects.all()
+    except TopBackgroundImage.DoesNotExist:
+        raise Http404("Top Background images do not exist")
 
     context = {
-        'header': header,
-        'main': main,
+        'top_page': top_page,
+        'content': content,
         'footer': footer,
         'services': services,
         'processes': processes,
@@ -69,7 +70,7 @@ def home(request):
         'clients': clients,
         'projects': projects,
         'socials_media': socials_media,
-        'background_images': background_images,
+        'top_background_images': top_background_images,
 
     }
 
