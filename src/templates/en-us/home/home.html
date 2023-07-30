@@ -444,7 +444,7 @@
                         <p>Since 2021, we have realized tow of biggest projects in Algeria and in Africa .</p>
                       </div>
                     <div class="col-lg-12 mb-4 mb-lg-0">
-                      <div class="swiper-container theme-slider" data-swiper='{"spaceBetween":5,"loop":true,"loopedSlides":{{ projects.count}},"thumb":{"spaceBetween":5,"slidesPerView":5,"loop":true,"freeMode":true,"grabCursor":true,"loopedSlides":{{ projects.count}},"centeredSlides":true,"slideToClickedSlide":true,"watchSlidesVisibility":true,"watchSlidesProgress":true},"slideToClickedSlide":true}'>
+                      <div class="swiper-container theme-slider" data-swiper='{"spaceBetween":5,"loop":true,"loopedSlides":{{ projects.count}},"thumb":{"spaceBetween":5,"slidesPerView":{{ projects.count}},"loop":true,"freeMode":true,"grabCursor":true,"loopedSlides":{{ projects.count}},"centeredSlides":true,"slideToClickedSlide":true,"watchSlidesVisibility":true,"watchSlidesProgress":true},"slideToClickedSlide":true}'>
                         <div class="swiper-wrapper">
                           {% for project in projects%}
                           <div class="swiper-slide"><img class="img-fluid" src=" {% get_media_prefix %}{{ project.project_photo}}" alt="" /></div>
