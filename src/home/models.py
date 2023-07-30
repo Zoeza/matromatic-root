@@ -94,6 +94,17 @@ class Client(models.Model):
         return self.client_name
 
 
+class Project(models.Model):
+    project_name = models.CharField(max_length=50, unique=True)
+    project_photo = models.ImageField(upload_to='projects/project_photo', null=True, blank=True)
+
+    class Meta:
+        verbose_name = "project"
+
+    def __str__(self):
+        return self.project_name
+
+
 class SocialMedia(models.Model):
     name = models.CharField(max_length=70, blank=True)
     link = models.CharField(max_length=100, blank=True)

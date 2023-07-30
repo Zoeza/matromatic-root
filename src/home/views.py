@@ -1,6 +1,6 @@
 from django.http import Http404
 from django.shortcuts import render
-from .models import Header, Main, Service, OurProcess, Partner, SocialMedia, BackgroundImage, Footer, Client
+from .models import Header, Main, Service, OurProcess, Partner, SocialMedia, BackgroundImage, Footer, Client, Project
 
 
 def home(request):
@@ -45,6 +45,11 @@ def home(request):
         raise Http404("Clients informations do not exist")
 
     try:
+        projects = Project.objects.all()
+    except Project.DoesNotExist:
+        raise Http404("Projects informations do not exist")
+
+    try:
         socials_media = SocialMedia.objects.all()
     except SocialMedia.DoesNotExist:
         raise Http404("Socials media do not exist")
@@ -62,6 +67,7 @@ def home(request):
         'processes': processes,
         'partners': partners,
         'clients': clients,
+        'projects': projects,
         'socials_media': socials_media,
         'background_images': background_images,
 

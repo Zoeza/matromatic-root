@@ -444,12 +444,13 @@
                       <p>Since 2021, we have realized tow of biggest projects in Algeria and in Africa .</p>
                     </div>
                   </div>
-                  
+                  {% for project in projects%}
                   <div class="col-6 col-lg-4">
-                    <a href="#!" data-bp="../assets/img/gallery/13-f.jpg" data-bigpicture='{"gallery":"#home-gallery"}' data-caption="your caption">
-                    <img class="rounded img-fluid" src="../assets/img/gallery/13.jpg" alt="" data-zanim-xs='{"animation":"zoom-in","delay":0.1}' data-zanim-trigger="scroll" />
+                    <a href="#!" data-bp=" {% get_media_prefix %}{{ project.project_photo}}" data-bigpicture='{"gallery":"#home-gallery"}' data-caption="your caption">
+                    <img class="rounded img-fluid" src=" {% get_media_prefix %}{{ project.project_photo}}" alt="" data-zanim-xs='{"animation":"zoom-in","delay":0.1}' data-zanim-trigger="scroll" />
                     </a>
                   </div>
+                  {% endfor %}
                 </div>
               </div>
               <!-- end of .container-->
