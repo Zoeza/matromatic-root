@@ -105,8 +105,17 @@
                           <h4 class="text-uppercase fw-normal ls text-white bg-dark p-1 rounded d-inline-block" data-zanim-xs='{"delay":0.1}'>{{ header.company_slogan}}</h4>
                         </div>
 
+                        <div class="overflow-hidden mt-4">
+                          <h1 class="display-3 fs-5 fs-sm-6" id="sc" data-zanim-xs='{"delay":0.2}'>
+                            <span class="text-decoration-underline" data-typed-text='["{{ header.company_name }}"]'></span>
+                            <span class="typed-cursor" aria-hidden="true"></span>
+                          </h1>
+                        </div>
 
-                        <h1 class="overflow-hidden " data-typed-text='["{{ header.company_name }}",]'></h1>
+                        <h1 class="overflow-hidden mt-4">welcome to <br class="d-sm-none">
+                          <span class="typed-text fst-italic font-base fw-light" data-typed-text='["{{ header.company_name }}"]'></span>
+                          <span class="typed-cursor" aria-hidden="true"></span>
+                        </h1>
 
                         <div class="overflow-hidden">
                           <p class="text-900 fs-0 mt-3 mt-md-5" data-zanim-xs='{"delay":0.3}'>{{ header.company_description }}</p>
