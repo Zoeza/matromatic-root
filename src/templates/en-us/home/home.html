@@ -81,10 +81,8 @@
                       <div class="swiper-wrapper">
 
                         {% for image in top_background_images%}
-
                         <div class="swiper-slide min-vh-lg-100 py-9">
                           <div class="bg-holder" style="background-image:url({% get_media_prefix %}{{ image.img}});"></div>
-
                           <!--/.bg-holder-->
                         </div>
                         {% endfor %}
@@ -333,20 +331,20 @@
                 <div class="row justify-content-center">
                   <div class="col-md-6">
                     <h2 class="fs-3 fs-sm-4 text-decoration-underline mb-3">performance?</h2>
-                    <p class="text-500 fst-italic">Be surprised seeing the final outcome of your creation with sparrow and want more, no matter the task.</p>
+                    <p class="text-500 fst-italic">{{content.performance_intro}}</p>
                   </div>
                 </div>
                 <div class="row align-items-center mt-6">
+
                   <div class="col-md-6 position-relative">
-                    <div class="progress-circle mb-4" data-progress-circle='{"progress":88,"subText":"<span class=&#39;text-700 pt-2&#39;>More Power behind<br/>every pixel</span>"}'> </div>
+                    <div class="progress-circle mb-4" data-progress-circle='{"progress":{{content.performance_record_breaking}},"subText":"<span class=&#39;text-700 pt-2&#39;>"{{content.performance_record_description}}"</span>"}'> </div>
                     <h4>Record Breaking in History</h4>
-                    <p class="px-4">Creating with sparrow is an easier, faster way to get things done. And it makes development even more effortless.</p>
                   </div>
+
                   <div class="col-md-6 ps-md-7 text-start mt-8 mt-md-0">
-                    <div class="progress-line me-4" data-progress-line='{"progress":93,"subText":"Google Page Speed"}'></div>
-                    <div class="progress-line me-4 mt-4" data-progress-line='{"progress":96,"subText":"Pingdom Page Speed"}'></div>
-                    <div class="progress-line me-4 mt-4" data-progress-line='{"progress":90,"subText":"Sparrow Performance Matrix"}'></div>
-                    <p class="mt-4">Combined with the power of bootstrap, sparrow can provide helpful elements to make web design easier and make your website load faster than ever.</p><a class="btn btn-outline-dark px-5 mt-5" href="#!">see comparison</a>
+                    {% for performance in performances %}
+                    <div class="progress-line me-4" data-progress-line='{"progress":{{performance.percentage}},"subText":"{{performance.domain}}"}'></div>
+                    {% endfor %}
                   </div>
                 </div>
               </div>
@@ -359,7 +357,6 @@
 
 
             <!-- Our clients begin -->
-
             <!-- ============================================-->
             <!-- <section> begin ============================-->
             <section class="overflow-hidden py-0" id="defaultCta2">
@@ -450,7 +447,7 @@
                   </div>
                   <div class="row justify-content-center">
                     <div class="col-lg-7">
-                        <p>Since 2021, we have realized tow of  the biggest projects in Algeria and Africa .</p>
+                        <p>{{content.project_intro}}</p>
                       </div>
                     <div class="col-lg-12 mb-4 mb-lg-0">
                       <div class="swiper-container theme-slider" data-swiper='{"spaceBetween":5,"loop":true,"loopedSlides":{{ projects.count}},"thumb":{"spaceBetween":5,"slidesPerView":{{ projects.count}},"loop":true,"freeMode":true,"grabCursor":true,"loopedSlides":{{ projects.count}},"centeredSlides":true,"slideToClickedSlide":true,"watchSlidesVisibility":true,"watchSlidesProgress":true},"slideToClickedSlide":true}'>

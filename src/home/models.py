@@ -1,4 +1,8 @@
+from _pydecimal import Decimal
 from django.db import models
+from django.core.validators import MinValueValidator, MaxValueValidator
+
+PERCENTAGE_VALIDATOR = [MinValueValidator(0), MaxValueValidator(100)]
 
 
 class TopPage(models.Model):
@@ -24,9 +28,14 @@ class Content(models.Model):
 
     our_process_intro = models.TextField(max_length=200, blank=True)
     partners_intro = models.TextField(max_length=200, blank=True)
+    projects_intro = models.TextField(max_length=200, blank=True)
     client_count = models.CharField(max_length=50, blank=True)
-
     main_background_image = models.ImageField(upload_to='content/main_background_image', blank=True)
+
+    performance_intro = models.TextField(max_length=200, blank=True)
+    performance_record_description = models.TextField(max_length=200, blank=True)
+    performance_record_breaking = models.DecimalField(max_digits=3, decimal_places=0, default=Decimal(0),
+                                                      validators=PERCENTAGE_VALIDATOR)
 
     class Meta:
         verbose_name = "content"
@@ -112,13 +121,31 @@ class SocialMedia(models.Model):
     link = models.CharField(max_length=100, blank=True)
     icon = models.CharField(max_length=70, blank=True)
 
+    class Meta:
+        verbose_name = "social media"
+
     def __str__(self):
         return self.name
+
+
+class Performance(models.Model):
+    domain = models.CharField(max_length=100, blank=True)
+    percentage = models.DecimalField(max_digits=3, decimal_places=0, default=Decimal(0),
+                                     validators=PERCENTAGE_VALIDATOR)
+
+    class Meta:
+        verbose_name = "performance"
+
+    def __str__(self):
+        return self.domain
 
 
 class TopBackgroundImage(models.Model):
     name = models.CharField(max_length=70, blank=True)
     img = models.ImageField(upload_to='top_background_img/', null=True, blank=True)
+
+    class Meta:
+        verbose_name = "top background image"
 
     def __str__(self):
         return self.name
