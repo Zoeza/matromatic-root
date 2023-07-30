@@ -400,22 +400,57 @@
                   </div>
                   <div class="w-100"></div>
 
-                 
-
                   {% for partner in partners %}
+                      <div class="col-sm-6 col-lg-3 pt-5 pt-xl-7" data-zanim-timeline='{"delay":0.2}' data-zanim-trigger="scroll">
 
-                  <div class="col-6 col-md-4 col-lg-3 d-flex flex-center mt-4 mt-md-0">
-                    <div class="bg-light p-4 p-sm-6 h-100 rounded">
-                      <img class="logo-grid" src="{% get_media_prefix %}{{ partner.partner_logo}}" alt="" data-zanim-xs='{"delay";:0.3,"animation";:"zoom-in"}' style="filter: blur(0px); opacity: 1; transform: translate(0px, 0px);"></div>
-                    </div>
-                  </div>
-                {% endfor %}
+                        <div class="hoverbox">
+                            <img class="rounded img-fluid" src=" {% get_media_prefix %}{{ partner.partner_logo}}" alt="" data-zanim-xs='{"animation":"zoom-in""delay":0.1}'>
+                          </div>
+
+                          <div class="overflow-hidden">
+                            <a href="../pages/profile.html">
+                              <h5 class="fs-0 fw-bold mt-3 mb-1" data-zanim-xs='{"from":{"y":45},"delay":0.2}'>{{ partner.partner_name}}</h5>
+                            </a>
+                          </div>
+
+                          <div class="overflow-hidden">
+                            <h6 class="text-700 fw-normal text-uppercase ls" data-zanim-xs='{"from":{"y":22},"delay":0.3}'>The Beta</h6>
+                          </div>
+
+                      </div>
+                  {% endfor %}
+
+
 
               </div>
               <!-- end of .container-->
             </section>
             <!-- <section> close ============================-->
             <!-- Our partners end -->
+
+
+            <section class="text-center font-sans-serif" id="digitalPartners">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-7">
+              <h3 class="mb-2">proud to be working with</h3>
+              <p>Since 2009, we have forged close relationships with over 100 brands allowing us to gain a wide experience marketing vastly different product types and services from various industries, locally, regionally and globally.</p>
+            </div>
+          </div>
+          <div class="row justify-content-center mt-6">
+            {% for partner in partners %}
+              <div class="col-6 col-md-4 col-lg-3 d-flex flex-center">
+              <div class="bg-light p-4 p-sm-6 h-100 rounded"><img class="logo-grid" src=" {% get_media_prefix %}{{ partner.partner_logo}}" alt="" data-zanim-xs="{&quot;delay&quot;:0.1,&quot;animation&quot;:&quot;zoom-in&quot;}" style="filter: blur(0px); opacity: 1; transform: translate(0px, 0px);"></div>
+            </div>
+            {% endfor %}
+
+
+          </div>
+          <div class="row mt-6 text-center">
+            <div class="col"><a class="btn btn-danger" href="#!">Let's work</a></div>
+          </div>
+        </div><!-- end of .container-->
+      </section>
 
 
 
