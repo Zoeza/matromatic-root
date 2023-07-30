@@ -1,4 +1,3 @@
-from _pydecimal import Decimal
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
 
@@ -34,7 +33,7 @@ class Content(models.Model):
 
     performance_intro = models.TextField(max_length=200, blank=True)
     performance_record_description = models.TextField(max_length=200, blank=True)
-    performance_record_breaking = models.DecimalField(max_digits=3, decimal_places=0, default=Decimal(0),
+    performance_record_breaking = models.DecimalField(max_digits=3, decimal_places=0, default=0,
                                                       validators=PERCENTAGE_VALIDATOR)
 
     class Meta:
@@ -130,7 +129,7 @@ class SocialMedia(models.Model):
 
 class Performance(models.Model):
     domain = models.CharField(max_length=100, blank=True)
-    percentage = models.DecimalField(max_digits=3, decimal_places=0, default=Decimal(0),
+    percentage = models.DecimalField(max_digits=3, decimal_places=0, default=0,
                                      validators=PERCENTAGE_VALIDATOR)
 
     class Meta:
