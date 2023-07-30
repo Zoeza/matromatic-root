@@ -102,13 +102,12 @@
                       <div class="col-lg-10 text-black text-center text-lg-start" data-zanim-timeline="{}" data-zanim-trigger="scroll">
 
                         <div class="overflow-hidden">
-                          <h4 class="text-uppercase fw-normal ls text-white bg-dark p-1 rounded d-inline-block" data-zanim-xs='{"delay":0.1}' data-typed-text='["{{ header.company_slogan }}"]'></h4>
+                          <h4 class="text-uppercase fw-normal ls text-white bg-dark p-1 rounded d-inline-block" data-zanim-xs='{"delay":0.1}'  >{{ header.company_slogan}}</h4>
                         </div>
 
 
 
-                        <h1 class="overflow-hidden ">{{ header.company_name }} <br class="d-sm-none">
-                        </h1>
+                        <h1 class="overflow-hidden " data-typed-text='["{{ header.company_name }}"]'></h1>
 
                         <div class="overflow-hidden">
                           <p class="text-900 fs-0 mt-3 mt-md-5" data-zanim-xs='{"delay":0.3}'>{{ header.company_description }}</p>
