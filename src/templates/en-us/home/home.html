@@ -400,25 +400,7 @@
                   </div>
                   <div class="w-100"></div>
 
-                  {% for partner in partners %}
-                      <div class="col-sm-6 col-lg-3 pt-5 pt-xl-7" data-zanim-timeline='{"delay":0.2}' data-zanim-trigger="scroll">
-
-                        <div class="hoverbox">
-                            <img class="rounded img-fluid" src=" {% get_media_prefix %}{{ partner.partner_logo}}" alt="" data-zanim-xs='{"animation":"zoom-in""delay":0.1}'>
-                          </div>
-
-                          <div class="overflow-hidden">
-                            <a href="../pages/profile.html">
-                              <h5 class="fs-0 fw-bold mt-3 mb-1" data-zanim-xs='{"from":{"y":45},"delay":0.2}'>{{ partner.partner_name}}</h5>
-                            </a>
-                          </div>
-
-                          <div class="overflow-hidden">
-                            <h6 class="text-700 fw-normal text-uppercase ls" data-zanim-xs='{"from":{"y":22},"delay":0.3}'>The Beta</h6>
-                          </div>
-
-                      </div>
-                  {% endfor %}
+                 
 
                   {% for partner in partners %}
 
