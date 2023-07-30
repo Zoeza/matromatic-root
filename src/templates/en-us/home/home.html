@@ -358,23 +358,20 @@
                 </div>
                 <div class="row flex-center text-center py-8">
                   <div class="col-lg position-relative">
-                    <h1 class="mb-0 text-white">2 million</h1>
+                    <h1 class="mb-0 text-white">{{main.client_num}}</h1>
                     <h6 class="text-300 fs-0">happy customers &amp; counting</h6>
                   </div>
 
                   <div class="col-lg-7 px-lg-8 mt-6 mt-lg-0 position-relative">
                     <div class="swiper-container theme-slider position-static" data-swiper='{"autoplay":{"delay":3000},"loop":true,"effect":"slide"}'>
                       <div class="swiper-wrapper">
+                        {% for client in clients %}
                         <div class="swiper-slide">
-                          <h4 class="font-base fw-light text-white fst-italic fs-1 fs-sm-2 mb-4">"Sparrow ensures that I sleep like a little baby every single night"</h4>
-                          <h6 class="fs-0 mb-0 text-white fw-black">Mane Dumas</h6>
+                          <h4 class="font-base fw-light text-white fst-italic fs-1 fs-sm-2 mb-4">{{client.client_comment}}</h4>
+                          <h6 class="fs-0 mb-0 text-white fw-black">{{client.client_name}}</h6>
                           <h6 class="fs-0 mb-0 fw-normal text-400">web designer</h6>
                         </div>
-                        <div class="swiper-slide">
-                          <h4 class="font-base fw-light text-white fst-italic fs-1 fs-sm-2 mb-4">"With no writing of any CSS code &mdash; customize almost everything"</h4>
-                          <h6 class="fs-0 mb-0 text-white fw-black">Jane Dumas</h6>
-                          <h6 class="fs-0 mb-0 fw-normal text-400">developer</h6>
-                        </div>
+                        {% endfor %}
                       </div>
                       <div class="swiper-nav">
                         <div class="swiper-button-next me-md-5"></div>
