@@ -80,7 +80,7 @@
                     <div class="swiper-container theme-slider swiper-theme" data-swiper='{"autoplay":{"delay":5000,"disableOnInteraction":false},"loop":true,"effect":"fade","pagination":{"el":".swiper-pagination","clickable":true,"type":"bullets"}}' data-zanim-lg='{"animation":"zoom-out","delay":0}' data-zanim-trigger="scroll">
                       <div class="swiper-wrapper">
 
-                        {% for image in background_images%}
+                        {% for image in top_background_images%}
 
                         <div class="swiper-slide min-vh-lg-100 py-9">
                           <div class="bg-holder" style="background-image:url({% get_media_prefix %}{{ image.img}});"></div>
