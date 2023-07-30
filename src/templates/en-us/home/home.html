@@ -337,14 +337,15 @@
                 <div class="row align-items-center mt-6">
 
                   <div class="col-md-6 position-relative">
-                    <div class="progress-circle mb-4" data-progress-circle='{"progress":{{content.performance_record_breaking}},"subText":"<span class=&#39;text-700 pt-2&#39;>"{{content.performance_record_description}}"</span>"}'> </div>
+                    <div class="progress-circle mb-4" data-progress-circle='{"progress":{{content.performance_record_breaking}},"subText":"<span class=&#39;text-700 pt-2&#39;>{{content.performance_record_description}}</span>"}'> </div>
                     <h4>Record Breaking in History</h4>
                   </div>
 
                   <div class="col-md-6 ps-md-7 text-start mt-8 mt-md-0">
-                    {% for performance in performances %}
-                    <div class="progress-line me-4" data-progress-line='{"progress":{{performance.percentage}},"subText":"{{performance.domain}}"}'></div>
-                    {% endfor %}
+                    <div class="progress-line me-4" data-progress-line='{"progress":93,"subText":"Google Page Speed"}'></div>
+                    <div class="progress-line me-4 mt-4" data-progress-line='{"progress":96,"subText":"Pingdom Page Speed"}'></div>
+                    <div class="progress-line me-4 mt-4" data-progress-line='{"progress":90,"subText":"Sparrow Performance Matrix"}'></div>
+                    <p class="mt-4">Combined with the power of bootstrap, sparrow can provide helpful elements to make web design easier and make your website load faster than ever.</p><a class="btn btn-outline-dark px-5 mt-5" href="#!">see comparison</a>
                   </div>
                 </div>
               </div>
