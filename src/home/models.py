@@ -37,7 +37,7 @@ class Content(models.Model):
                                                       validators=PERCENTAGE_VALIDATOR)
 
     service = models.ForeignKey(
-        'home.Service', on_delete=models.CASCADE, null=True)
+        'home.Performance', on_delete=models.CASCADE, null=True)
 
     class Meta:
         verbose_name = "content"
