@@ -36,6 +36,9 @@ class Content(models.Model):
     performance_record_breaking = models.DecimalField(max_digits=3, decimal_places=0, default=0,
                                                       validators=PERCENTAGE_VALIDATOR)
 
+    service = models.ForeignKey(
+        'home.Service', on_delete=models.CASCADE, null=True)
+
     class Meta:
         verbose_name = "content"
 
