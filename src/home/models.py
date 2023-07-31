@@ -4,6 +4,8 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 PERCENTAGE_VALIDATOR = [MinValueValidator(0), MaxValueValidator(100)]
 
 
+# ------------------------------ Top page ----------------------------- #
+
 class TopPage(models.Model):
     sku = models.CharField(max_length=50, blank=True)
     head_title = models.CharField(max_length=50, blank=True)
@@ -17,6 +19,9 @@ class TopPage(models.Model):
     def __str__(self):
         return self.sku
 
+
+# ---------------------------------------------------------------------- #
+# ------------------------------ Content ------------------------------- #
 
 class Content(models.Model):
     sku = models.CharField(max_length=50, blank=True)
@@ -46,6 +51,10 @@ class Content(models.Model):
         return self.sku
 
 
+# ---------------------------------------------------------------------- #
+
+# ------------------------------ Footer -------------------------------- #
+
 class Footer(models.Model):
     sku = models.CharField(max_length=50, blank=True)
     copyright = models.CharField(max_length=80, blank=True)
@@ -59,6 +68,10 @@ class Footer(models.Model):
         return self.sku
 
 
+# ---------------------------------------------------------------------- #
+
+# ------------------------------ Services ------------------------------ #
+
 class Service(models.Model):
     service_title = models.CharField(max_length=70, blank=True)
     service_description = models.TextField(max_length=200, blank=True)
@@ -71,6 +84,9 @@ class Service(models.Model):
         return self.service_title
 
 
+# ---------------------------------------------------------------------- #
+# ------------------------------ Processes ------------------------------- #
+
 class OurProcess(models.Model):
     process_number = models.IntegerField(blank=True)
     process_title = models.CharField(max_length=70, blank=True)
@@ -78,11 +94,15 @@ class OurProcess(models.Model):
     photo = models.ImageField(upload_to='our_process/', height_field=None, width_field=None, max_length=100)
 
     class Meta:
-        verbose_name = "processe"
+        verbose_name = "process"
 
     def __str__(self):
         return self.process_title
 
+
+# ---------------------------------------------------------------------- #
+
+# ------------------------------ Partners ----------------------------- #
 
 class Partner(models.Model):
     partner_name = models.CharField(max_length=50, unique=True)
@@ -94,6 +114,10 @@ class Partner(models.Model):
     def __str__(self):
         return self.partner_name
 
+
+# ---------------------------------------------------------------------- #
+
+# ------------------------------ Clients ----------------------------- #
 
 class Client(models.Model):
     client_name = models.CharField(max_length=50, unique=True)
@@ -107,6 +131,10 @@ class Client(models.Model):
         return self.client_name
 
 
+# ---------------------------------------------------------------------- #
+
+# ------------------------------ Projects ----------------------------- #
+
 class Project(models.Model):
     project_name = models.CharField(max_length=50, unique=True)
     project_photo = models.ImageField(upload_to='projects/project_photo', null=True, blank=True)
@@ -117,6 +145,10 @@ class Project(models.Model):
     def __str__(self):
         return self.project_name
 
+
+# ---------------------------------------------------------------------- #
+
+# ------------------------------ Social Media ------------------------- #
 
 class SocialMedia(models.Model):
     name = models.CharField(max_length=70, blank=True)
@@ -130,6 +162,10 @@ class SocialMedia(models.Model):
         return self.name
 
 
+# ---------------------------------------------------------------------- #
+
+# --------------------------- Performances ----------------------------- #
+
 class Performance(models.Model):
     domain = models.CharField(max_length=100, blank=True)
     percentage = models.DecimalField(max_digits=3, decimal_places=0, default=0,
@@ -142,6 +178,10 @@ class Performance(models.Model):
         return self.domain
 
 
+# ---------------------------------------------------------------------- #
+
+# ---------------------- Top Background Image -------------------------- #
+
 class TopBackgroundImage(models.Model):
     name = models.CharField(max_length=70, blank=True)
     img = models.ImageField(upload_to='top_background_img/', null=True, blank=True)
@@ -151,3 +191,5 @@ class TopBackgroundImage(models.Model):
 
     def __str__(self):
         return self.name
+
+# ---------------------------------------------------------------------- #
