@@ -435,9 +435,12 @@
               <div class="container">
                 <h3 class="mb-6">Trusted Since 1849</h3>
                 <div class="row align-items-center">
-                  {% for partner in partners %}
-                      <div class="rounded img-fluid"><img class="logo-grid" src=" {% get_media_prefix %}{{ partner.partner_logo}}" alt=""></div>
-                  {% endfor %}
+                  <div class="overflow-hidden">
+
+                    {% for partner in partners %}
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2"><img class="logo-grid" src=" {% get_media_prefix %}{{ partner.partner_logo}}" alt=""></div>
+                    {% endfor %}
+                  </div>
 
                 </div>
               </div><!-- end of .container-->
