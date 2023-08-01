@@ -1,7 +1,7 @@
 from django.http import Http404
 from django.shortcuts import render
 from .models import TopPage, Content, Service, OurProcess, Partner, SocialMedia, \
-    TopBackgroundImage, Footer, Client, Project, Performance
+ Footer, Client, Project, Performance
 
 
 def home(request):
@@ -55,10 +55,7 @@ def home(request):
     except SocialMedia.DoesNotExist:
         raise Http404("Socials media do not exist")
 
-    try:
-        top_background_images = TopBackgroundImage.objects.all()
-    except TopBackgroundImage.DoesNotExist:
-        raise Http404("Top Background images do not exist")
+
 
     try:
         performances = Performance.objects.all()
@@ -75,7 +72,6 @@ def home(request):
         'clients': clients,
         'projects': projects,
         'socials_media': socials_media,
-        'top_background_images': top_background_images,
         'performances': performances,
 
     }

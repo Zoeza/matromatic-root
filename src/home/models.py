@@ -15,6 +15,12 @@ class TopPage(models.Model):
     company_description = models.TextField(max_length=200, blank=True)
     logo_main = models.FileField(upload_to='logo_main/', null=True)
     logo_head = models.FileField(upload_to='logo_head/', null=True)
+    iphone_image = models.FileField(upload_to='iphone_image/', null=True)
+    macbook_image = models.FileField(upload_to='macbook_image/', null=True)
+    ipad_image = models.FileField(upload_to='ipad_image/', null=True)
+
+    class Meta:
+        verbose_name = "top page"
 
     def __str__(self):
         return self.sku
@@ -176,20 +182,5 @@ class Performance(models.Model):
 
     def __str__(self):
         return self.domain
-
-
-# ---------------------------------------------------------------------- #
-
-# ---------------------- Top Background Image -------------------------- #
-
-class TopBackgroundImage(models.Model):
-    name = models.CharField(max_length=70, blank=True)
-    img = models.ImageField(upload_to='top_background_img/', null=True, blank=True)
-
-    class Meta:
-        verbose_name = "top background image"
-
-    def __str__(self):
-        return self.name
 
 # ---------------------------------------------------------------------- #
