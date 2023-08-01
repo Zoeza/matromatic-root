@@ -73,65 +73,32 @@
 
             <!-- ============================================-->
             <!-- <section> begin ============================-->
-            <section class="py-0">
-              <div class="container-fluid">
-                <div class="row h-100 border-bottom">
-                  <div class="col-lg-6 px-0 order-lg-2" data-zanim-lg='{"animation":"slide-left","delay":0.4}' data-zanim-trigger="scroll">
-                    <div class="swiper-container theme-slider swiper-theme" data-swiper='{"autoplay":{"delay":5000,"disableOnInteraction":false},"loop":true,"effect":"fade","pagination":{"el":".swiper-pagination","clickable":true,"type":"bullets"}}' data-zanim-lg='{"animation":"zoom-out","delay":0}' data-zanim-trigger="scroll">
-                      <div class="swiper-wrapper">
-
-                        {% for image in top_background_images%}
-                        <div class="swiper-slide min-vh-lg-100 py-9">
-                          <div class="bg-holder" style="background-image:url({% get_media_prefix %}{{ image.img}});"></div>
-                          <!--/.bg-holder-->
-                        </div>
-                        {% endfor %}
-
-                      </div>
-                      <div class="swiper-pagination"></div>
-                      <div class="swiper-nav">
-                        <div class="swiper-button-next me-md-3"></div>
-                        <div class="swiper-button-prev ms-md-3"> </div>
-                      </div>
-                    </div>
+            <section class="py-0 overflow-hidden bg-white" data-zanim-timeline="{&quot;delay&quot;:0.4}">
+            <div class="container-fluid">
+              <div class="devices-wrapper">
+                <div class="macbook-1" data-zanim-xs="{&quot;delay&quot;:0.5,&quot;animation&quot;:&quot;slide-left&quot;,&quot;duration&quot;:1.5}" style="transform: translate(0px, 0px); opacity: 1;"><img class="device" data-parallax="data-parallax" data-rellax-speed="3" src="{% get_media_prefix %}{{ content.main_background_image }}" alt="" style="transform: translate3d(0px, 0px, 0px);"></div>
+                <div class="ipad--l-1" data-zanim-xs="{&quot;delay&quot;:0.5,&quot;animation&quot;:&quot;slide-left&quot;,&quot;duration&quot;:1.5}" style="transform: translate(0px, 0px); opacity: 1;"><img class="device" data-parallax="data-parallax" data-rellax-speed="3.8" src="{% get_media_prefix %}{{ content.main_background_image }}" alt="" style="transform: translate3d(0px, 0px, 0px);"></div>
+                <div class="iphone-1" data-zanim-xs="{&quot;delay&quot;:0.4,&quot;animation&quot;:&quot;slide-left&quot;,&quot;duration&quot;:1.5}" style="transform: translate(0px, 0px); opacity: 1;"><img class="device" data-parallax="data-parallax" data-rellax-speed="4.8" src="{% get_media_prefix %}{{ content.main_background_image }}" alt="" style="transform: translate3d(0px, 0px, 0px);"></div>
+                <div class="ipad--l-2" data-zanim-xs="{&quot;delay&quot;:0.3,&quot;animation&quot;:&quot;slide-left&quot;,&quot;duration&quot;:1.5}" style="transform: translate(0px, 0px); opacity: 1;"><img class="device" data-parallax="data-parallax" data-rellax-speed="3.4" src="{% get_media_prefix %}{{ content.main_background_image }}" alt="" style="transform: translate3d(0px, 0px, 0px);"></div>
+                <div class="iphone-2" data-zanim-xs="{&quot;delay&quot;:0.2,&quot;animation&quot;:&quot;slide-left&quot;,&quot;duration&quot;:1.5}" style="transform: translate(0px, 0px); opacity: 1;"><img class="device" data-parallax="data-parallax" data-rellax-speed="4" src="{% get_media_prefix %}{{ content.main_background_image }}" alt="" style="transform: translate3d(0px, 0px, 0px);"></div>
+                <div class="macbook-2" data-zanim-xs="{&quot;delay&quot;:0.4,&quot;animation&quot;:&quot;slide-left&quot;,&quot;duration&quot;:1.5}" style="transform: translate(0px, 0px); opacity: 1;"><img class="device" data-parallax="data-parallax" data-rellax-speed="5" src="{% get_media_prefix %}{{ content.main_background_image }}" alt="" style="transform: translate3d(0px, 0px, 0px);"></div>
+                <div class="ipad--l-3" data-zanim-xs="{&quot;delay&quot;:0.5,&quot;animation&quot;:&quot;slide-left&quot;,&quot;duration&quot;:1.5}" style="transform: translate(0px, 0px); opacity: 1;"><img class="device" data-parallax="data-parallax" data-rellax-speed="3.7" src="{% get_media_prefix %}{{ content.main_background_image }}" alt="" style="transform: translate3d(0px, 0px, 0px);"></div>
+                <div class="ipad--p-1" data-zanim-xs="{&quot;delay&quot;:0.5,&quot;animation&quot;:&quot;slide-left&quot;,&quot;duration&quot;:1.5}" style="transform: translate(0px, 0px); opacity: 1;"><img class="device" data-parallax="data-parallax" data-rellax-speed="4.8" src="{% get_media_prefix %}{{ content.main_background_image }}" alt="" style="transform: translate3d(0px, 0px, 0px);"></div>
+                <div class="iphone-3" data-zanim-xs="{&quot;delay&quot;:0.3,&quot;animation&quot;:&quot;slide-left&quot;,&quot;duration&quot;:1.5}" style="transform: translate(0px, 0px); opacity: 1;"><img class="device" data-parallax="data-parallax" data-rellax-speed="3" src="{% get_media_prefix %}{{ content.main_background_image }}" alt="" style="transform: translate3d(0px, 0px, 0px);"></div>
+                <div class="iphone-4" data-zanim-xs="{&quot;delay&quot;:0.2,&quot;animation&quot;:&quot;slide-left&quot;,&quot;duration&quot;:1.5}" style="transform: translate(0px, 0px); opacity: 1;"><img class="device" data-parallax="data-parallax" data-rellax-speed="3" src="{% get_media_prefix %}{{ content.main_background_image }}" alt="" style="transform: translate3d(0px, 0px, 0px);"></div>
+                <div class="iphone--l-1" data-zanim-xs="{&quot;delay&quot;:0.5,&quot;animation&quot;:&quot;slide-left&quot;,&quot;duration&quot;:1.5}" style="transform: translate(0px, 0px); opacity: 1;"><img class="device" data-parallax="data-parallax" data-rellax-speed="2" src="{% get_media_prefix %}{{ content.main_background_image }}" alt="" style="transform: translate3d(0px, 0px, 0px);"></div>
+              </div>
+              <div class="row py-8 min-vh-100 align-items-center">
+                <div class="col-md-auto px-md-4 ps-md-8">
+                  <h1 class="display-4 fs-2 fs-sm-4 fs-md-5"><span class="overflow-hidden d-inline-block"><span class="d-inline-block" data-zanim-xs="{&quot;delay&quot;:1}" style="transform: translate(0px, 0px); opacity: 1;">look like an <span class="font-base fst-italic fw-normal">expert</span></span></span><br><span class="overflow-hidden d-inline-block pb-2"><span class="d-inline-block" data-zanim-xs="{&quot;delay&quot;:1.1}" style="transform: translate(0px, 0px); opacity: 1;">right from the start</span></span></h1>
+                  <div class="overflow-hidden">
+                    <p class="mt-3 mt-sm-4 font-sans-serif lead" data-zanim-xs="{&quot;delay&quot;:1.2}" style="transform: translate(0px, 0px); opacity: 1;">Head start your stylish website with a gorgeous template</p>
                   </div>
-                  <div class="col-lg-6 bg-white py-7 py-md-8">
-                    <div class="row flex-center h-100">
-                      <div class="col-lg-10 text-black text-center text-lg-start" data-zanim-timeline="{}" data-zanim-trigger="scroll">
-                        <div class="overflow-hidden">
-                          <h4 class="text-uppercase fw-normal ls text-white bg-dark p-1 rounded d-inline-block" data-zanim-xs='{"delay":0.1}'>{{ top_page.company_slogan}}</h4>
-                        </div>
-
-                        <div class="overflow-hidden mt-4">
-                          <h1 class="display-3 fs-5 fs-sm-6" id="sc" data-zanim-xs='{"delay":0.2}'>
-                            <span>{{ top_page.company_name }}</span>
-                            <br />
-                          </h1>
-                        </div>
-
-
-                        <div class="overflow-hidden">
-                          <p class="text-900 fs-0 mt-3 mt-md-5" data-zanim-xs='{"delay":0.3}'>{{ top_page.company_description }}</p>
-                        </div>
-
-                        <div class="overflow-hidden">
-                          <div class="d-lg-flex align-items-center fw-bold ls mt-3 mt-md-5 text-uppercase" data-zanim-xs='{"delay":0.4}'>
-                            <h6 class="mb-lg-0">Follow Us:</h6>
-                            <div class="overflow-hidden">
-                              {% for social_media in socials_media %}
-                                  <a class="me-1" href="{{ social_media.link }}"><span class="{{ social_media.icon }}"></span></a>
-                              {% endfor %}
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                    </div>
-                  </div>
+                  <div class="mt-3 mt-sm-5"><a class="btn btn-dark btn-sm me-2 my-2" href="#demoes" data-offset="60" data-zanim-xs="{&quot;delay&quot;:1.3}" style="transform: translate(0px, 0px); opacity: 1;">Explore Demos</a><a class="btn btn-outline-dark btn-sm my-2" href="https://themes.getbootstrap.com/product/sparrow-simple-seamless-alive/" target="_blank" data-zanim-xs="{&quot;delay&quot;:1.3}" style="transform: translate(0px, 0px); opacity: 1;">Purchase Sparrow ⟶</a></div>
                 </div>
               </div>
-              <!-- end of .container-->
-            </section>
+            </div><!-- end of .container-->
+          </section>
             <!-- <section> close ============================-->
             <!-- ============================================-->
 
