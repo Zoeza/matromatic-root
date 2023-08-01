@@ -10,7 +10,50 @@
 
 
 <!-- Navbar Vertical -->
+<!-- Content -->
+<% block navbar_content%>
+	<div class="navbar-vertical-content">
+            <div id="navbarVerticalMenu" class="nav nav-pills nav-vertical card-navbar-nav">
+              <!-- Collapse -->
+              <div class="nav-item">
+                <a class="nav-link dropdown-toggle active" href="#navbarVerticalMenuDashboards" role="button" data-bs-toggle="collapse" data-bs-target="#navbarVerticalMenuDashboards" aria-expanded="true" aria-controls="navbarVerticalMenuDashboards">
+                  <i class="bi-house-door nav-icon"></i>
+                  <span class="nav-link-title">Home Manager</span>
+                </a>
+              </div>
+              <!-- End Collapse -->
 
+              <span class="dropdown-header mt-4">Pages</span>
+              <small class="bi-three-dots nav-subtitle-replacer"></small>
+
+              <!-- Collapse -->
+              <div class="navbar-nav nav-compact">
+
+              </div>
+              <div id="navbarVerticalMenuPagesMenu">
+                <!-- Collapse -->
+                <div class="nav-item">
+                  <a class="nav-link dropdown-toggle " href="#navbarVerticalMenuPagesUsersMenu" role="button" data-bs-toggle="collapse" data-bs-target="#navbarVerticalMenuPagesUsersMenu" aria-expanded="false" aria-controls="navbarVerticalMenuPagesUsersMenu">
+                    <i class="bi-people nav-icon"></i>
+                    <span class="nav-link-title">wallet</span>
+                  </a>
+
+                  <div id="navbarVerticalMenuPagesUsersMenu" class="nav-collapse collapse " data-bs-parent="#navbarVerticalMenuPagesMenu">
+                    <a class="nav-link " href="./users.html">Overview</a>
+                    <a class="nav-link " href="./users-leaderboard.html">Leaderboard</a>
+                    <a class="nav-link " href="./users-add-user.html">Add User <span class="badge bg-info rounded-pill ms-1">Hot</span></a>
+                  </div>
+                </div>
+                <!-- End Collapse -->
+
+              </div>
+              <!-- End Collapse -->
+
+            </div>
+
+          </div>
+<% endblock %>
+<!-- End Content -->
 <!-- End Navbar Vertical -->
 
 
