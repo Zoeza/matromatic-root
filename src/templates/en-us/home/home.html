@@ -99,16 +99,15 @@
                         <span class="d-inline-block" data-zanim-xs='{"delay":1.1}' style="transform: translate(0px, 0px); opacity: 1;">{{top_page.company_name}}</span>
                       </span>
                     </h1>
-
                     <div class="overflow-hidden">
-                      <p class="text-900 fs-0 mt-3 mt-md-5" data-zanim-xs='{"delay":0.3}'>{{ top_page.company_description }}</p>
+                      <p class="mt-3 mt-sm-4 font-sans-serif lead" data-zanim-xs="{&quot;delay&quot;:1.2}" style="transform: translate(0px, 0px); opacity: 1;">{{ top_page.company_description}}</p>
                     </div>
+
+
                   </div>
                 </div>
 
-                <div class="overflow-hidden">
-                      <p class="mt-3 mt-sm-4 font-sans-serif lead" data-zanim-xs="{&quot;delay&quot;:1.2}" style="transform: translate(0px, 0px); opacity: 1;">{{ top_page.company_description}}</p>
-                    </div>
+
                 <div class="overflow-hidden">
                     <div class="d-lg-flex align-items-center fw-bold ls mt-3 mt-md-5 text-uppercase" data-zanim-xs='{"delay":0.4}'>
                         <h6 class="mb-lg-0">Follow Us:</h6>
@@ -116,7 +115,7 @@
                          {% for social_media in socials_media %}
                               <a class="me-1" href="{{ social_media.link }}"><span class="{{ social_media.icon }}"></span></a>
                         {% endfor %}
-                        
+
                       </div>
 
 
