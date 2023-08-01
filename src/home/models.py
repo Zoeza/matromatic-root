@@ -31,7 +31,7 @@ class TopPage(models.Model):
 class Content(models.Model):
     sku = models.CharField(max_length=50, blank=True)
     company_description = models.TextField(max_length=200, blank=True)
-    why_us_raison2 = models.TextField(max_length=300, blank=True)
+    why_us_raison1 = models.TextField(max_length=300, blank=True)
     why_us_photo = models.ImageField(upload_to='content/why_us_photo', blank=True)
     why_us_video_src = models.CharField(max_length=50, blank=True)
 
