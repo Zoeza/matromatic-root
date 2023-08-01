@@ -12,7 +12,6 @@ class TopPage(models.Model):
     head_text = models.CharField(max_length=80, blank=True)
     company_name = models.CharField(max_length=80, unique=True)
     company_slogan = models.CharField(max_length=80, blank=True)
-    company_description = models.TextField(max_length=200, blank=True)
     logo_main = models.FileField(upload_to='logo_main/', null=True)
     logo_head = models.FileField(upload_to='logo_head/', null=True)
     iphone_image = models.FileField(upload_to='iphone_image/', null=True)
@@ -31,7 +30,7 @@ class TopPage(models.Model):
 
 class Content(models.Model):
     sku = models.CharField(max_length=50, blank=True)
-    why_us_raison1 = models.TextField(max_length=300, blank=True)
+    company_description = models.TextField(max_length=200, blank=True)
     why_us_raison2 = models.TextField(max_length=300, blank=True)
     why_us_photo = models.ImageField(upload_to='content/why_us_photo', blank=True)
     why_us_video_src = models.CharField(max_length=50, blank=True)
