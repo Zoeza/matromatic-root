@@ -1,123 +1,223 @@
 {% extends "en-us/manager/base.html" %}
-{% load static %}
 
-{% block title %}
-	<title>Matromatic Manager| Home manager</title>
-{% endblock %}
+<!-- begin title -->
 
-
-{% block content %}
-    <main class="content">
-        <div class="container-fluid p-0">
-
-            <h1 class="h3 mb-3">Home manager</h1>
-            <div class="row">
-                <div class="col-12 col-md-12">
-                    <div class="tab tab-vertical">
-                        <ul class="nav nav-tabs" role="tablist">
-                            <li class="nav-item" role="presentation">
-                                <a class="nav-link active" href="#header" data-bs-toggle="tab" role="tab" aria-selected="true">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home align-middle">
-                                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <a class="nav-link" href="#body" data-bs-toggle="tab" role="tab" aria-selected="false" tabindex="-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings align-middle"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-                              </a>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <a class="nav-link" href="#footer" data-bs-toggle="tab" role="tab" aria-selected="false" tabindex="-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square align-middle"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-                                </a>
-                            </li>
-								</ul>
-                        <div class="tab-content">
-                            <div class="tab-pane active show" id="header" role="tabpanel">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h5 class="card-title mb-0">Header information</h5>
-                                    </div>
-
-                                    <div class="card-body">
-                                        <form>
-                                            <div class="row">
-                                                <div class="col-md-8">
-                                                    <div class="mb-3">
-                                                        <label >Company Logo</label>
-
-                                                    </div>
-                                                    <div class="avatar-upload">
-                                                        <div class="avatar-edit">
-
-                                                            <input type='file'  class="form-control d-none" id="imageUpload" accept=".png, .jpg, .jpeg" />
-                                                        </div>
-                                                        <label class="form-label" for="imageUpload">
-                                                             <div class="avatar-preview">
-                                                                <div id="imagePreview" style="background-image: url({% static 'manager/img/avatars/images.png' %});">
-                                                                </div>
-                                                            </div>
-
-                                                        </label>
+    {% block title %}
+      <title> Matro manger | Home Manager </title>
+    {% endblock %}
+<!-- end title -->
 
 
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-8">
-                                                    <div class="mb-3">
-                                                        <label for="inputUsername" class="form-label">Company Name</label>
-                                                        <input type="text" class="form-control" id="inputUsername" placeholder="company name">
-                                                    </div>
 
-                                                    <div class="mb-3">
-                                                        <label for="inputSlogan" class="form-label">Slogan</label>
-                                                        <input type="text" class="form-control" id="inputSlogan" placeholder="Your Slogan">
-                                                    </div>
+<!-- Navbar Vertical -->
+  {% block navbar %}
+    <aside class="js-navbar-vertical-aside navbar navbar-vertical-aside navbar-vertical navbar-vertical-fixed navbar-expand-xl navbar-light bg-light">
+      <div class="navbar-vertical-container">
+        <div class="navbar-vertical-footer-offset">
+          <!-- Logo -->
 
-                                                    <div class="mb-3">
-                                                        <label for="inputUsername" class="form-label">Description</label>
-                                                        <textarea rows="2" class="form-control" id="inputDescription" placeholder="Tell something about yourself"></textarea>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-8">
-                                                    <div class="mb-3">
-                                                        <label for="inputPhotos" class="form-label">Main Photos</label>
-                                                        <input type="text" class="form-control" id="inputphotos" placeholder="Input your photos">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <button type="submit" class="btn btn-secondary">Save changes</button>
-                                        </form>
+          <a class="navbar-brand" href="./index.html" aria-label="Front">
+            <img class="navbar-brand-logo" src="./assets/svg/logos/logo.svg" alt="Logo" data-hs-theme-appearance="default">
+            <img class="navbar-brand-logo" src="./assets/svg/logos-light/logo.svg" alt="Logo" data-hs-theme-appearance="dark">
+            <img class="navbar-brand-logo-mini" src="./assets/svg/logos/logo-short.svg" alt="Logo" data-hs-theme-appearance="default">
+            <img class="navbar-brand-logo-mini" src="./assets/svg/logos-light/logo-short.svg" alt="Logo" data-hs-theme-appearance="dark">
+          </a>
 
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane" id="body" role="tabpanel">
-                                <h4 class="tab-title">Navigation bar</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor tellus eget condimentum rhoncus. Aenean massa. Cum sociis natoque
-                                    penatibus et magnis neque dis parturient montes, nascetur ridiculus mus. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
-                                <p>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate
-                                    eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
-                            </div>
-                            <div class="tab-pane" id="footer" role="tabpanel">
-                                <h4 class="tab-title">Body</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor tellus eget condimentum rhoncus. Aenean massa. Cum sociis natoque
-                                    penatibus et magnis neque dis parturient montes, nascetur ridiculus mus. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
-                                <p>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate
-                                    eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
-                            </div>
-                        </div>
-                    </div>
+          <!-- End Logo -->
+
+          <!-- Navbar Vertical Toggle -->
+          <button type="button" class="js-navbar-vertical-aside-toggle-invoker navbar-aside-toggler">
+            <i class="bi-arrow-bar-left navbar-toggler-short-align" data-bs-template='<div class="tooltip d-none d-md-block" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>' data-bs-toggle="tooltip" data-bs-placement="right" title="Collapse"></i>
+            <i class="bi-arrow-bar-right navbar-toggler-full-align" data-bs-template='<div class="tooltip d-none d-md-block" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>' data-bs-toggle="tooltip" data-bs-placement="right" title="Expand"></i>
+          </button>
+
+          <!-- End Navbar Vertical Toggle -->
+
+          <!-- Content -->
+          <div class="navbar-vertical-content">
+            <div id="navbarVerticalMenu" class="nav nav-pills nav-vertical card-navbar-nav">
+              <!-- Collapse -->
+              <div class="nav-item">
+                <a class="nav-link dropdown-toggle active" href="#navbarVerticalMenuDashboards" role="button" data-bs-toggle="collapse" data-bs-target="#navbarVerticalMenuDashboards" aria-expanded="true" aria-controls="navbarVerticalMenuDashboards">
+                  <i class="bi-house-door nav-icon"></i>
+                  <span class="nav-link-title">Dashboards</span>
+                </a>
+
+                <div id="navbarVerticalMenuDashboards" class="nav-collapse collapse show" data-bs-parent="#navbarVerticalMenu">
+                  <a class="nav-link active" href="./index.html">Default</a>
+                  <a class="nav-link " href="./dashboard-alternative.html">Alternative</a>
                 </div>
+              </div>
+              <!-- End Collapse -->
+
+              <span class="dropdown-header mt-4">Pages</span>
+              <small class="bi-three-dots nav-subtitle-replacer"></small>
+
+              <!-- Collapse -->
+              <div class="navbar-nav nav-compact">
+
+              </div>
+              <div id="navbarVerticalMenuPagesMenu">
+                <!-- Collapse -->
+                <div class="nav-item">
+                  <a class="nav-link dropdown-toggle " href="#navbarVerticalMenuPagesUsersMenu" role="button" data-bs-toggle="collapse" data-bs-target="#navbarVerticalMenuPagesUsersMenu" aria-expanded="false" aria-controls="navbarVerticalMenuPagesUsersMenu">
+                    <i class="bi-people nav-icon"></i>
+                    <span class="nav-link-title">Home Manger</span>
+                  </a>
+
+                  <div id="navbarVerticalMenuPagesUsersMenu" class="nav-collapse collapse " data-bs-parent="#navbarVerticalMenuPagesMenu">
+                    <a class="nav-link " href="./users.html">Overview</a>
+                    <a class="nav-link " href="./users-leaderboard.html">Leaderboard</a>
+                    <a class="nav-link " href="./users-add-user.html">Add User <span class="badge bg-info rounded-pill ms-1">Hot</span></a>
+                  </div>
+                </div>
+                <!-- End Collapse -->
+
+              </div>
+              <!-- End Collapse -->
+
             </div>
 
-        </div>
-    </main>
-{% endblock %}
+          </div>
+          <!-- End Content -->
 
+          <!-- Footer -->
+          <div class="navbar-vertical-footer">
+            <ul class="navbar-vertical-footer-list">
+              <li class="navbar-vertical-footer-list-item">
+                <!-- Style Switcher -->
+                <div class="dropdown dropup">
+                  <button type="button" class="btn btn-ghost-secondary btn-icon rounded-circle" id="selectThemeDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-bs-dropdown-animation>
+
+                  </button>
+
+                  <div class="dropdown-menu navbar-dropdown-menu navbar-dropdown-menu-borderless" aria-labelledby="selectThemeDropdown">
+                    <a class="dropdown-item" href="#" data-icon="bi-moon-stars" data-value="auto">
+                      <i class="bi-moon-stars me-2"></i>
+                      <span class="text-truncate" title="Auto (system default)">Auto (system default)</span>
+                    </a>
+                    <a class="dropdown-item" href="#" data-icon="bi-brightness-high" data-value="default">
+                      <i class="bi-brightness-high me-2"></i>
+                      <span class="text-truncate" title="Default (light mode)">Default (light mode)</span>
+                    </a>
+                    <a class="dropdown-item active" href="#" data-icon="bi-moon" data-value="dark">
+                      <i class="bi-moon me-2"></i>
+                      <span class="text-truncate" title="Dark">Dark</span>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- End Style Switcher -->
+              </li>
+              <li class="navbar-vertical-footer-list-item">
+                <!-- Other Links -->
+                <div class="dropdown dropup">
+                  <button type="button" class="btn btn-ghost-secondary btn-icon rounded-circle" id="otherLinksDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-bs-dropdown-animation>
+                    <i class="bi-info-circle"></i>
+                  </button>
+
+                  <div class="dropdown-menu navbar-dropdown-menu-borderless" aria-labelledby="otherLinksDropdown">
+                    <span class="dropdown-header">Help</span>
+                    <a class="dropdown-item" href="#">
+                      <i class="bi-journals dropdown-item-icon"></i>
+                      <span class="text-truncate" title="Resources &amp; tutorials">Resources &amp; tutorials</span>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                      <i class="bi-command dropdown-item-icon"></i>
+                      <span class="text-truncate" title="Keyboard shortcuts">Keyboard shortcuts</span>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                      <i class="bi-alt dropdown-item-icon"></i>
+                      <span class="text-truncate" title="Connect other apps">Connect other apps</span>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                      <i class="bi-gift dropdown-item-icon"></i>
+                      <span class="text-truncate" title="What's new?">What's new?</span>
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <span class="dropdown-header">Contacts</span>
+                    <a class="dropdown-item" href="#">
+                      <i class="bi-chat-left-dots dropdown-item-icon"></i>
+                      <span class="text-truncate" title="Contact support">Contact support</span>
+                    </a>
+                  </div>
+                </div>
+                <!-- End Other Links -->
+              </li>
+
+              <li class="navbar-vertical-footer-list-item">
+                <!-- Language -->
+                <div class="dropdown dropup">
+                  <button type="button" class="btn btn-ghost-secondary btn-icon rounded-circle" id="selectLanguageDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-bs-dropdown-animation>
+                    <img class="avatar avatar-xss avatar-circle" src="./assets/vendor/flag-icon-css/flags/1x1/us.svg" alt="United States Flag">
+                  </button>
+
+                  <div class="dropdown-menu navbar-dropdown-menu-borderless" aria-labelledby="selectLanguageDropdown">
+                    <span class="dropdown-header">Select language</span>
+                    <a class="dropdown-item" href="#">
+                      <img class="avatar avatar-xss avatar-circle me-2" src="./assets/vendor/flag-icon-css/flags/1x1/us.svg" alt="Flag">
+                      <span class="text-truncate" title="English">English (US)</span>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                      <img class="avatar avatar-xss avatar-circle me-2" src="./assets/vendor/flag-icon-css/flags/1x1/gb.svg" alt="Flag">
+                      <span class="text-truncate" title="English">English (UK)</span>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                      <img class="avatar avatar-xss avatar-circle me-2" src="./assets/vendor/flag-icon-css/flags/1x1/de.svg" alt="Flag">
+                      <span class="text-truncate" title="Deutsch">Deutsch</span>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                      <img class="avatar avatar-xss avatar-circle me-2" src="./assets/vendor/flag-icon-css/flags/1x1/dk.svg" alt="Flag">
+                      <span class="text-truncate" title="Dansk">Dansk</span>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                      <img class="avatar avatar-xss avatar-circle me-2" src="./assets/vendor/flag-icon-css/flags/1x1/it.svg" alt="Flag">
+                      <span class="text-truncate" title="Italiano">Italiano</span>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                      <img class="avatar avatar-xss avatar-circle me-2" src="./assets/vendor/flag-icon-css/flags/1x1/cn.svg" alt="Flag">
+                      <span class="text-truncate" title="中文 (繁體)">中文 (繁體)</span>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- End Language -->
+              </li>
+            </ul>
+          </div>
+          <!-- End Footer -->
+        </div>
+      </div>
+    </aside>
+  {% endblock %}
+<!-- End Navbar Vertical -->
+
+
+<!-- begin content -->
+
+  {% block content %}
+    <div class="content container-fluid">
+      <!-- Page Header -->
+      <div class="page-header">
+        <div class="row align-items-center">
+          <div class="col-sm mb-2 mb-sm-0">
+            <h1 class="page-header-title">Home Manager</h1>
+          </div>
+          <!-- End Col -->
+
+          <div class="col-sm-auto">
+            <a class="btn btn-primary" href="javascript:;" data-bs-toggle="modal" data-bs-target="#inviteUserModal">
+              <i class="bi-person-plus-fill me-1"></i> View website
+            </a>
+          </div>
+          <!-- End Col -->
+        </div>
+        <!-- End Row -->
+      </div>
+      <!-- End Page Header -->
+
+
+
+    </div>
+  {% endblock %}
+<!-- end content -->
