@@ -44,75 +44,71 @@
         <!-- End Nav -->
 
         <!-- Tab Content -->
-<div class="card">
-            <div class="tab-content">
+    <div class="card">
+        <div class="tab-content">
+            <div class="tab-pane fade show active" id="nav-one-eg1" role="tabpanel" aria-labelledby="nav-one-eg1-tab">
 
+                  <div class="card-header">
 
-                <div class="tab-pane fade show active" id="nav-one-eg1" role="tabpanel" aria-labelledby="nav-one-eg1-tab">
+                      Top page information
+                  </div>
+                  <div class="card-body">
+                      <!-- Form -->
+                      <div class="row mb-4">
+                        <label class="col-sm-3 col-form-label form-label">Main Logo </label>
 
-                              <div class="card-header">
+                        <div class="col-sm-9">
+                          <div class="d-flex align-items-center">
+                            <!-- Avatar -->
+                            <label class="avatar avatar-xl avatar-circle avatar-uploader me-5" for="avatarUploader">
+                              <img id="avatarImg" class="avatar-img" src="./assets/img/160x160/img1.jpg" alt="Image Description">
 
-                                  Top page information
-                              </div>
-                              <div class="card-body">
-                                  <!-- Form -->
-                                  <div class="row mb-4">
-                                    <label class="col-sm-3 col-form-label form-label">Main Logo </label>
+                              <input type="file" class="js-file-attach avatar-uploader-input" id="avatarUploader" data-hs-file-attach-options="{
+                                        &quot;textTarget&quot;: &quot;#avatarImg&quot;,
+                                        &quot;mode&quot;: &quot;image&quot;,
+                                        &quot;targetAttr&quot;: &quot;src&quot;,
+                                        &quot;resetTarget&quot;: &quot;.js-file-attach-reset-img&quot;,
+                                        &quot;resetImg&quot;: &quot;./assets/img/160x160/img1.jpg&quot;,
+                                        &quot;allowTypes&quot;: [&quot;.png&quot;, &quot;.jpeg&quot;, &quot;.jpg&quot;]
+                                     }">
 
-                                    <div class="col-sm-9">
-                                      <div class="d-flex align-items-center">
-                                        <!-- Avatar -->
-                                        <label class="avatar avatar-xl avatar-circle avatar-uploader me-5" for="avatarUploader">
-                                          <img id="avatarImg" class="avatar-img" src="./assets/img/160x160/img1.jpg" alt="Image Description">
+                              <span class="avatar-uploader-trigger">
+                                <i class="bi-pencil avatar-uploader-icon shadow-sm"></i>
+                              </span>
+                            </label>
+                            <!-- End Avatar -->
 
-                                          <input type="file" class="js-file-attach avatar-uploader-input" id="avatarUploader" data-hs-file-attach-options="{
-                                                    &quot;textTarget&quot;: &quot;#avatarImg&quot;,
-                                                    &quot;mode&quot;: &quot;image&quot;,
-                                                    &quot;targetAttr&quot;: &quot;src&quot;,
-                                                    &quot;resetTarget&quot;: &quot;.js-file-attach-reset-img&quot;,
-                                                    &quot;resetImg&quot;: &quot;./assets/img/160x160/img1.jpg&quot;,
-                                                    &quot;allowTypes&quot;: [&quot;.png&quot;, &quot;.jpeg&quot;, &quot;.jpg&quot;]
-                                                 }">
-
-                                          <span class="avatar-uploader-trigger">
-                                            <i class="bi-pencil avatar-uploader-icon shadow-sm"></i>
-                                          </span>
-                                        </label>
-                                        <!-- End Avatar -->
-
-                                        <button type="button" class="js-file-attach-reset-img btn btn-white">Delete</button>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <!-- End Form -->
-
-                                  <!-- Form -->
-                                  <!-- Form -->
-                                  <div class="row mb-4">
-                                    <label for="emailLabel" class="col-sm-3 col-form-label form-label">Email</label>
-
-                                    <div class="col-sm-9">
-                                      <input type="email" class="form-control" name="email" id="emailLabel" placeholder="clarice@site.com" aria-label="clarice@site.com">
-                                    </div>
-                                  </div>
-                                  <!-- End Form -->
-
-                                </div>
+                            <button type="button" class="js-file-attach-reset-img btn btn-white">Delete</button>
                           </div>
+                        </div>
+                      </div>
+                      <!-- End Form -->
 
+                      <!-- Form -->
+                      <!-- Form -->
+                      <div class="row mb-4">
+                        <label for="companyname" class="col-sm-3 col-form-label form-label">Company name</label>
 
+                        <div class="col-sm-9"
+                        <input class="form-control" type="text" id="companyname" placeholder="put your company name">>
+                        </div>
+                      </div>
+                      <!-- End Form -->
+
+                    </div>
             </div>
+        </div>
 
-          <div class="tab-pane fade" id="nav-two-eg1" role="tabpanel" aria-labelledby="nav-two-eg1-tab">
+        <div class="tab-pane fade" id="nav-two-eg1" role="tabpanel" aria-labelledby="nav-two-eg1-tab">
             <p>Second tab content...</p>
-          </div>
+        </div>
 
-          <div class="tab-pane fade" id="nav-three-eg1" role="tabpanel" aria-labelledby="nav-three-eg1-tab">
+        <div class="tab-pane fade" id="nav-three-eg1" role="tabpanel" aria-labelledby="nav-three-eg1-tab">
             <p>Third tab content...</p>
-          </div>
+        </div>
 
 
-</div>
+    </div>
         <!-- End Tab Content -->
 
     {% endblock %}
