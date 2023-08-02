@@ -102,31 +102,9 @@
                       <div class="d-grid gap-3 gap-lg-5">
                         <!-- Card -->
                         <div class="card">
-                          <!-- Profile Cover -->
-                          <div class="profile-cover">
-                            <div class="profile-cover-img-wrapper">
-                              <img id="profileCoverImg" class="profile-cover-img" src="./assets/img/1920x400/img2.jpg" alt="Image Description">
-
-                              <!-- Custom File Cover -->
-                              <div class="profile-cover-content profile-cover-uploader p-3">
-                                <input type="file" class="js-file-attach profile-cover-uploader-input" id="profileCoverUplaoder" data-hs-file-attach-options='{
-                                            "textTarget": "#profileCoverImg",
-                                            "mode": "image",
-                                            "targetAttr": "src",
-                                            "allowTypes": [".png", ".jpeg", ".jpg"]
-                                         }'>
-                                <label class="profile-cover-uploader-label btn btn-sm btn-white" for="profileCoverUplaoder">
-                                  <i class="bi-camera-fill"></i>
-                                  <span class="d-none d-sm-inline-block ms-1">Upload header</span>
-                                </label>
-                              </div>
-                              <!-- End Custom File Cover -->
-                            </div>
-                          </div>
-                          <!-- End Profile Cover -->
 
                           <!-- Avatar -->
-                          <label class="avatar avatar-xxl avatar-circle avatar-uploader profile-cover-avatar" for="editAvatarUploaderModal">
+                          <label class="avatar avatar-xl avatar-circle avatar-uploader profile-cover-avatar" for="editAvatarUploaderModal">
                             <img id="editAvatarImgModal" class="avatar-img" src="./assets/img/160x160/img6.jpg" alt="Image Description">
 
                             <input type="file" class="js-file-attach avatar-uploader-input" id="editAvatarUploaderModal" data-hs-file-attach-options='{
@@ -173,6 +151,36 @@
                           <div class="card-header">
                             <h2 class="card-title h4">Basic information</h2>
                           </div>
+                            <!-- begin main logo -->
+
+                            <div class="col-md-6">
+                              <label class="col-sm-3 col-form-label form-label"> Logo Main</label>
+                              <div class="col-sm-9">
+                                <div class="d-flex align-items-center">
+                                  <!-- Avatar -->
+                                  <label class="avatar avatar-xl  avatar-uploader me-5" for="logomainUploader">
+                                    <img id="logomain" class="avatar-img" src="./assets/img/160x160/img1.jpg" alt="">
+
+                                    <input type="file" class="js-file-attach avatar-uploader-input" id="logomainUploader" data-hs-file-attach-options=' {
+                                              "textTarget": "#avatarImg",
+                                              "mode": "image",
+                                              "targetAttr": "src",
+                                              "resetTarget": ".js-file-attach-reset-img",
+                                              "resetImg":"./assets/img/160x160/img1.jpg",
+                                              "allowTypes": ".png",".jpeg", ".jpg"}'>
+
+                                    <span class="avatar-uploader-trigger">
+                                      <i class="bi-pencil avatar-uploader-icon shadow-sm"></i>
+                                    </span>
+                                  </label>
+                                  <!-- End Avatar -->
+
+                                  <button type="button" class="js-file-attach-reset-img btn btn-white">Delete</button>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- end main logo -->
+
 
                           <!-- Body -->
                           <div class="card-body">
