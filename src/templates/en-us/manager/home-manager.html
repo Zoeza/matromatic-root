@@ -55,7 +55,7 @@
                   <div class="card-body">
                       <!-- Form -->
                       <form class="row g-3">
-                          <div class="row mb-4">
+                          <div class="col-md-6">
                             <label class="col-sm-3 col-form-label form-label">Main Logo </label>
                             <div class="col-sm-9">
                               <div class="d-flex align-items-center">
@@ -72,7 +72,34 @@
                                             "allowTypes": ".png",".jpeg", ".jpg"}'>
 
                                   <span class="avatar-uploader-trigger">
-                                    <i class="bi-plus avatar-uploader-icon shadow-sm"></i>
+                                    <i class="bi-pencil avatar-uploader-icon shadow-sm"></i>
+                                  </span>
+                                </label>
+                                <!-- End Avatar -->
+
+                                <button type="button" class="js-file-attach-reset-img btn btn-white">Delete</button>
+                              </div>
+                            </div>
+                          </div>
+
+                           <div class="col-md-6">
+                            <label class="col-sm-3 col-form-label form-label">Main Logo </label>
+                            <div class="col-sm-9">
+                              <div class="d-flex align-items-center">
+                                <!-- Avatar -->
+                                <label class="avatar avatar-xl avatar-circle avatar-uploader me-5" for="avatarUploader">
+                                  <img id="avatarImg" class="avatar-img" src="./assets/img/160x160/img1.jpg" alt="Image Description">
+
+                                  <input type="file" class="js-file-attach avatar-uploader-input" id="avatarUploader" data-hs-file-attach-options=' {
+                                            "textTarget": "#avatarImg",
+                                            "mode": "image",
+                                            "targetAttr": "src",
+                                            "resetTarget": ".js-file-attach-reset-img",
+                                            "resetImg":"./assets/img/160x160/img1.jpg",
+                                            "allowTypes": ".png",".jpeg", ".jpg"}'>
+
+                                  <span class="avatar-uploader-trigger">
+                                    <i class="bi-pencil avatar-uploader-icon shadow-sm"></i>
                                   </span>
                                 </label>
                                 <!-- End Avatar -->
