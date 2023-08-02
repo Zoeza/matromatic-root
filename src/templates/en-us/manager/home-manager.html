@@ -7,24 +7,20 @@
     {% endblock %}
 <!-- end title -->
 
+{% block header_page %}
+	<div class="row mb-2 mb-xl-3">
+		<div class="col-auto d-none d-sm-block">
+			<h3>Home Manager</h3>
+		</div>
 
-  {% block header_page %}
-          <!-- Page Header -->
-        <div class="row align-items-center">
-          <div class="col-sm mb-2 mb-sm-0">
-            <h1 class="page-header-title">Home Manager</h1>
-          </div>
-          <!-- End Col -->
-          <div class="col-sm-auto">
+        <div class="col-sm-auto">
              <a class="btn btn-light" href="{% url 'home' %}">
-              <i class="bi-eye-fill me-1"></i> View
-            </a>
+              <i class="bi-eye-fill me-1"></i> View</a>
           </div>
           <!-- End Col -->
-        </div>
-      <!-- End Page Header -->
+	</div>
+{% endblock %}
 
-  {% endblock %}
 
 
 
