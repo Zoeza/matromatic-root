@@ -63,14 +63,13 @@
                                 <label class="avatar avatar-xl avatar-circle avatar-uploader me-5" for="avatarUploader">
                                   <img id="avatarImg" class="avatar-img" src="./assets/img/160x160/img1.jpg" alt="Image Description">
 
-                                  <input type="file" class="js-file-attach avatar-uploader-input" id="avatarUploader" data-hs-file-attach-options="{
-                                            &quot;textTarget&quot;: &quot;#avatarImg&quot;,
-                                            &quot;mode&quot;: &quot;image&quot;,
-                                            &quot;targetAttr&quot;: &quot;src&quot;,
-                                            &quot;resetTarget&quot;: &quot;.js-file-attach-reset-img&quot;,
-                                            &quot;resetImg&quot;: &quot;./assets/img/160x160/img1.jpg&quot;,
-                                            &quot;allowTypes&quot;: [&quot;.png&quot;, &quot;.jpeg&quot;, &quot;.jpg&quot;]
-                                         }">
+                                  <input type="file" class="js-file-attach avatar-uploader-input" id="avatarUploader" data-hs-file-attach-options=' {
+                                           "textTarget": "#avatarImg",
+                                           "mode": "image",
+                                           "targetAttr": "src",
+                                           "resetTarget": ".js-file-attach-reset-img",
+                                           "resetImg":"./assets/img/160x160/img1.jpg",
+                                           "allowTypes": {".png", ".jpeg", ".jpg"}'>
 
                                   <span class="avatar-uploader-trigger">
                                     <i class="bi-pencil avatar-uploader-icon shadow-sm"></i>
