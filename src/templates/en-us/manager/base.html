@@ -770,7 +770,6 @@
 
   <!-- ========== MAIN CONTENT ========== -->
 <!-- Navbar Vertical -->
-
     <aside class="js-navbar-vertical-aside navbar navbar-vertical-aside navbar-vertical navbar-vertical-fixed navbar-expand-xl navbar-light bg-light">
       <div class="navbar-vertical-container">
         <div class="navbar-vertical-footer-offset">
@@ -795,7 +794,7 @@
             <div id="navbarVerticalMenu" class="nav nav-pills nav-vertical card-navbar-nav">
               <!-- Admin Home -->
               <div class="nav-item mb-8">
-                  <a class="nav-link  active " href="{% url 'home-manager' 'home' %}?init=True" data-placement="left">
+                  <a class="nav-link {% if nav_side == 'home' %} active {% endif %}" href="{% url 'home-manager' 'main' %}?init=True" data-placement="left">
                     <i class="fa fa-house nav-icon"></i>
                     <span class="nav-link-title">Home</span>
                   </a>
@@ -921,7 +920,6 @@
         <div class="page-header">
           {% block page_header %}{% endblock %}
         </div>
-
 
       <!-- content -->
       {% block content %}{% endblock %}
