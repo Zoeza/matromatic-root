@@ -1,475 +1,104 @@
 {% extends "en-us/manager/base.html" %}
+{% load static %}
 
-<!-- begin title -->
-
-    {% block title %}
-      <title> Matron manger | Matromatic Admin </title>
-    {% endblock %}
-<!-- end title -->
+{% block title %}
+	<title> Matromatic | Admin</title>
+{% endblock %}
 
 
 
-<!-- Navbar Vertical -->
-  {% block navbar %}
-    <aside class="js-navbar-vertical-aside navbar navbar-vertical-aside navbar-vertical navbar-vertical-fixed navbar-expand-xl navbar-light bg-light">
-      <div class="navbar-vertical-container">
-        <div class="navbar-vertical-footer-offset">
-          <!-- Logo -->
-
-          <a class="navbar-brand" href="./index.html" aria-label="Front">
-            <img class="navbar-brand-logo" src="./assets/svg/logos/logo.svg" alt="Logo" data-hs-theme-appearance="default">
-            <img class="navbar-brand-logo" src="./assets/svg/logos-light/logo.svg" alt="Logo" data-hs-theme-appearance="dark">
-            <img class="navbar-brand-logo-mini" src="./assets/svg/logos/logo-short.svg" alt="Logo" data-hs-theme-appearance="default">
-            <img class="navbar-brand-logo-mini" src="./assets/svg/logos-light/logo-short.svg" alt="Logo" data-hs-theme-appearance="dark">
-          </a>
-
-          <!-- End Logo -->
-
-          <!-- Navbar Vertical Toggle -->
-          <button type="button" class="js-navbar-vertical-aside-toggle-invoker navbar-aside-toggler">
-            <i class="bi-arrow-bar-left navbar-toggler-short-align" data-bs-template='<div class="tooltip d-none d-md-block" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>' data-bs-toggle="tooltip" data-bs-placement="right" title="Collapse"></i>
-            <i class="bi-arrow-bar-right navbar-toggler-full-align" data-bs-template='<div class="tooltip d-none d-md-block" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>' data-bs-toggle="tooltip" data-bs-placement="right" title="Expand"></i>
-          </button>
-
-          <!-- End Navbar Vertical Toggle -->
-
-          <!-- Content -->
-          <div class="navbar-vertical-content">
-            <div id="navbarVerticalMenu" class="nav nav-pills nav-vertical card-navbar-nav">
-              <!-- Collapse -->
-              <div class="nav-item">
-                <a class="nav-link dropdown-toggle active" href="#navbarVerticalMenuDashboards" role="button" data-bs-toggle="collapse" data-bs-target="#navbarVerticalMenuDashboards" aria-expanded="true" aria-controls="navbarVerticalMenuDashboards">
-                  <i class="bi-house-door nav-icon"></i>
-                  <span class="nav-link-title">Dashboards</span>
-                </a>
-
-                <div id="navbarVerticalMenuDashboards" class="nav-collapse collapse show" data-bs-parent="#navbarVerticalMenu">
-                  <a class="nav-link active" href="./index.html">Default</a>
-                  <a class="nav-link " href="./dashboard-alternative.html">Alternative</a>
-                </div>
-              </div>
-              <!-- End Collapse -->
-
-              <span class="dropdown-header mt-4">Pages</span>
-              <small class="bi-three-dots nav-subtitle-replacer"></small>
-
-              <!-- Collapse -->
-              <div class="navbar-nav nav-compact">
-
-              </div>
-              <div id="navbarVerticalMenuPagesMenu">
-                <!-- Collapse -->
-                <div class="nav-item">
-                  <a class="nav-link dropdown-toggle " href="#navbarVerticalMenuPagesUsersMenu" role="button" data-bs-toggle="collapse" data-bs-target="#navbarVerticalMenuPagesUsersMenu" aria-expanded="false" aria-controls="navbarVerticalMenuPagesUsersMenu">
-                    <i class="bi-people nav-icon"></i>
-                    <span class="nav-link-title">Home Manger</span>
-                  </a>
-
-                  <div id="navbarVerticalMenuPagesUsersMenu" class="nav-collapse collapse " data-bs-parent="#navbarVerticalMenuPagesMenu">
-                    <a class="nav-link " href="./users.html">Overview</a>
-                    <a class="nav-link " href="./users-leaderboard.html">Leaderboard</a>
-                    <a class="nav-link " href="./users-add-user.html">Add User <span class="badge bg-info rounded-pill ms-1">Hot</span></a>
-                  </div>
-                </div>
-                <!-- End Collapse -->
-
-              </div>
-              <!-- End Collapse -->
-
-            </div>
-
-          </div>
-          <!-- End Content -->
-
-          <!-- Footer -->
-          <div class="navbar-vertical-footer">
-            <ul class="navbar-vertical-footer-list">
-              <li class="navbar-vertical-footer-list-item">
-                <!-- Style Switcher -->
-                <div class="dropdown dropup">
-                  <button type="button" class="btn btn-ghost-secondary btn-icon rounded-circle" id="selectThemeDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-bs-dropdown-animation>
-
-                  </button>
-
-                  <div class="dropdown-menu navbar-dropdown-menu navbar-dropdown-menu-borderless" aria-labelledby="selectThemeDropdown">
-                    <a class="dropdown-item" href="#" data-icon="bi-moon-stars" data-value="auto">
-                      <i class="bi-moon-stars me-2"></i>
-                      <span class="text-truncate" title="Auto (system default)">Auto (system default)</span>
-                    </a>
-                    <a class="dropdown-item" href="#" data-icon="bi-brightness-high" data-value="default">
-                      <i class="bi-brightness-high me-2"></i>
-                      <span class="text-truncate" title="Default (light mode)">Default (light mode)</span>
-                    </a>
-                    <a class="dropdown-item active" href="#" data-icon="bi-moon" data-value="dark">
-                      <i class="bi-moon me-2"></i>
-                      <span class="text-truncate" title="Dark">Dark</span>
-                    </a>
-                  </div>
-                </div>
-
-                <!-- End Style Switcher -->
-              </li>
-              <li class="navbar-vertical-footer-list-item">
-                <!-- Other Links -->
-                <div class="dropdown dropup">
-                  <button type="button" class="btn btn-ghost-secondary btn-icon rounded-circle" id="otherLinksDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-bs-dropdown-animation>
-                    <i class="bi-info-circle"></i>
-                  </button>
-
-                  <div class="dropdown-menu navbar-dropdown-menu-borderless" aria-labelledby="otherLinksDropdown">
-                    <span class="dropdown-header">Help</span>
-                    <a class="dropdown-item" href="#">
-                      <i class="bi-journals dropdown-item-icon"></i>
-                      <span class="text-truncate" title="Resources &amp; tutorials">Resources &amp; tutorials</span>
-                    </a>
-                    <a class="dropdown-item" href="#">
-                      <i class="bi-command dropdown-item-icon"></i>
-                      <span class="text-truncate" title="Keyboard shortcuts">Keyboard shortcuts</span>
-                    </a>
-                    <a class="dropdown-item" href="#">
-                      <i class="bi-alt dropdown-item-icon"></i>
-                      <span class="text-truncate" title="Connect other apps">Connect other apps</span>
-                    </a>
-                    <a class="dropdown-item" href="#">
-                      <i class="bi-gift dropdown-item-icon"></i>
-                      <span class="text-truncate" title="What's new?">What's new?</span>
-                    </a>
-                    <div class="dropdown-divider"></div>
-                    <span class="dropdown-header">Contacts</span>
-                    <a class="dropdown-item" href="#">
-                      <i class="bi-chat-left-dots dropdown-item-icon"></i>
-                      <span class="text-truncate" title="Contact support">Contact support</span>
-                    </a>
-                  </div>
-                </div>
-                <!-- End Other Links -->
-              </li>
-
-              <li class="navbar-vertical-footer-list-item">
-                <!-- Language -->
-                <div class="dropdown dropup">
-                  <button type="button" class="btn btn-ghost-secondary btn-icon rounded-circle" id="selectLanguageDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-bs-dropdown-animation>
-                    <img class="avatar avatar-xss avatar-circle" src="./assets/vendor/flag-icon-css/flags/1x1/us.svg" alt="United States Flag">
-                  </button>
-
-                  <div class="dropdown-menu navbar-dropdown-menu-borderless" aria-labelledby="selectLanguageDropdown">
-                    <span class="dropdown-header">Select language</span>
-                    <a class="dropdown-item" href="#">
-                      <img class="avatar avatar-xss avatar-circle me-2" src="./assets/vendor/flag-icon-css/flags/1x1/us.svg" alt="Flag">
-                      <span class="text-truncate" title="English">English (US)</span>
-                    </a>
-                    <a class="dropdown-item" href="#">
-                      <img class="avatar avatar-xss avatar-circle me-2" src="./assets/vendor/flag-icon-css/flags/1x1/gb.svg" alt="Flag">
-                      <span class="text-truncate" title="English">English (UK)</span>
-                    </a>
-                    <a class="dropdown-item" href="#">
-                      <img class="avatar avatar-xss avatar-circle me-2" src="./assets/vendor/flag-icon-css/flags/1x1/de.svg" alt="Flag">
-                      <span class="text-truncate" title="Deutsch">Deutsch</span>
-                    </a>
-                    <a class="dropdown-item" href="#">
-                      <img class="avatar avatar-xss avatar-circle me-2" src="./assets/vendor/flag-icon-css/flags/1x1/dk.svg" alt="Flag">
-                      <span class="text-truncate" title="Dansk">Dansk</span>
-                    </a>
-                    <a class="dropdown-item" href="#">
-                      <img class="avatar avatar-xss avatar-circle me-2" src="./assets/vendor/flag-icon-css/flags/1x1/it.svg" alt="Flag">
-                      <span class="text-truncate" title="Italiano">Italiano</span>
-                    </a>
-                    <a class="dropdown-item" href="#">
-                      <img class="avatar avatar-xss avatar-circle me-2" src="./assets/vendor/flag-icon-css/flags/1x1/cn.svg" alt="Flag">
-                      <span class="text-truncate" title="中文 (繁體)">中文 (繁體)</span>
-                    </a>
-                  </div>
-                </div>
-
-                <!-- End Language -->
-              </li>
-            </ul>
-          </div>
-          <!-- End Footer -->
-        </div>
-      </div>
-    </aside>
-  {% endblock %}
-<!-- End Navbar Vertical -->
-
-
-<!-- begin content -->
-
-  {% block content %}
-    <div class="content container-fluid">
-      <!-- Page Header -->
-      <div class="page-header">
+	{% block page_header %}
         <div class="row align-items-center">
           <div class="col-sm mb-2 mb-sm-0">
             <h1 class="page-header-title">Dashboard</h1>
           </div>
         </div>
-        <!-- End Row -->
-      </div>
-      <!-- End Page Header -->
 
-      <!-- Stats -->
-      <div class="row">
-        <div class="col-sm-6 col-lg-3 mb-3 mb-lg-5">
-          <!-- Card -->
-          <a class="card card-hover-shadow h-100" href="#">
-            <div class="card-body">
-              <h6 class="card-subtitle">Total Users</h6>
-
-              <div class="row align-items-center gx-2 mb-1">
-                <div class="col-6">
-                  <h2 class="card-title text-inherit">72,540</h2>
-                </div>
-                <!-- End Col -->
-
-                <div class="col-6">
-                  <!-- Chart -->
-                  <div class="chartjs-custom" style="height: 3rem;">
-                    <canvas class="js-chart" data-hs-chartjs-options='{
-                              "type": "line",
-                              "data": {
-                                 "labels": ["1 May","2 May","3 May","4 May","5 May","6 May","7 May","8 May","9 May","10 May","11 May","12 May","13 May","14 May","15 May","16 May","17 May","18 May","19 May","20 May","21 May","22 May","23 May","24 May","25 May","26 May","27 May","28 May","29 May","30 May","31 May"],
-                                 "datasets": [{
-                                  "data": [21,20,24,20,18,17,15,17,18,30,31,30,30,35,25,35,35,40,60,90,90,90,85,70,75,70,30,30,30,50,72],
-                                  "backgroundColor": ["rgba(55, 125, 255, 0)", "rgba(255, 255, 255, 0)"],
-                                  "borderColor": "#377dff",
-                                  "borderWidth": 2,
-                                  "pointRadius": 0,
-                                  "pointHoverRadius": 0
-                                }]
-                              },
-                              "options": {
-                                 "scales": {
-                                   "yAxes": [{
-                                     "display": false
-                                   }],
-                                   "xAxes": [{
-                                     "display": false
-                                   }]
-                                 },
-                                "hover": {
-                                  "mode": "nearest",
-                                  "intersect": false
-                                },
-                                "tooltips": {
-                                  "postfix": "k",
-                                  "hasIndicator": true,
-                                  "intersect": false
-                                }
-                              }
-                            }'>
-                    </canvas>
-                  </div>
-                  <!-- End Chart -->
-                </div>
-                <!-- End Col -->
-              </div>
-              <!-- End Row -->
-
-              <span class="badge bg-soft-success text-success">
-                <i class="bi-graph-up"></i> 12.5%
-              </span>
-              <span class="text-body fs-6 ms-1">from 70,104</span>
-            </div>
-          </a>
-          <!-- End Card -->
-        </div>
-
-        <div class="col-sm-6 col-lg-3 mb-3 mb-lg-5">
-          <!-- Card -->
-          <a class="card card-hover-shadow h-100" href="#">
-            <div class="card-body">
-              <h6 class="card-subtitle">Sessions</h6>
-
-              <div class="row align-items-center gx-2 mb-1">
-                <div class="col-6">
-                  <h2 class="card-title text-inherit">29.4%</h2>
-                </div>
-                <!-- End Col -->
-
-                <div class="col-6">
-                  <!-- Chart -->
-                  <div class="chartjs-custom" style="height: 3rem;">
-                    <canvas class="js-chart" data-hs-chartjs-options='{
-                              "type": "line",
-                              "data": {
-                                 "labels": ["1 May","2 May","3 May","4 May","5 May","6 May","7 May","8 May","9 May","10 May","11 May","12 May","13 May","14 May","15 May","16 May","17 May","18 May","19 May","20 May","21 May","22 May","23 May","24 May","25 May","26 May","27 May","28 May","29 May","30 May","31 May"],
-                                 "datasets": [{
-                                  "data": [21,20,24,20,18,17,15,17,30,30,35,25,18,30,31,35,35,90,90,90,85,100,120,120,120,100,90,75,75,75,90],
-                                  "backgroundColor": ["rgba(55, 125, 255, 0)", "rgba(255, 255, 255, 0)"],
-                                  "borderColor": "#377dff",
-                                  "borderWidth": 2,
-                                  "pointRadius": 0,
-                                  "pointHoverRadius": 0
-                                }]
-                              },
-                              "options": {
-                                 "scales": {
-                                   "yAxes": [{
-                                     "display": false
-                                   }],
-                                   "xAxes": [{
-                                     "display": false
-                                   }]
-                                 },
-                                "hover": {
-                                  "mode": "nearest",
-                                  "intersect": false
-                                },
-                                "tooltips": {
-                                  "postfix": "%",
-                                  "hasIndicator": true,
-                                  "intersect": false
-                                }
-                              }
-                            }'>
-                    </canvas>
-                  </div>
-                  <!-- End Chart -->
-                </div>
-                <!-- End Col -->
-              </div>
-              <!-- End Row -->
-
-              <span class="badge bg-soft-success text-success">
-                <i class="bi-graph-up"></i> 1.7%
-              </span>
-              <span class="text-body fs-6 ms-1">from 29.1%</span>
-            </div>
-          </a>
-          <!-- End Card -->
-        </div>
-
-        <div class="col-sm-6 col-lg-3 mb-3 mb-lg-5">
-          <!-- Card -->
-          <a class="card card-hover-shadow h-100" href="#">
-            <div class="card-body">
-              <h6 class="card-subtitle">Avg. Click Rate</h6>
-
-              <div class="row align-items-center gx-2 mb-1">
-                <div class="col-6">
-                  <h2 class="card-title text-inherit">56.8%</h2>
-                </div>
-                <!-- End Col -->
-
-                <div class="col-6">
-                  <!-- Chart -->
-                  <div class="chartjs-custom" style="height: 3rem;">
-                    <canvas class="js-chart" data-hs-chartjs-options='{
-                              "type": "line",
-                              "data": {
-                                 "labels": ["1 May","2 May","3 May","4 May","5 May","6 May","7 May","8 May","9 May","10 May","11 May","12 May","13 May","14 May","15 May","16 May","17 May","18 May","19 May","20 May","21 May","22 May","23 May","24 May","25 May","26 May","27 May","28 May","29 May","30 May","31 May"],
-                                 "datasets": [{
-                                  "data": [25,18,30,31,35,35,60,60,60,75,21,20,24,20,18,17,15,17,30,120,120,120,100,90,75,90,90,90,75,70,60],
-                                  "backgroundColor": ["rgba(55, 125, 255, 0)", "rgba(255, 255, 255, 0)"],
-                                  "borderColor": "#377dff",
-                                  "borderWidth": 2,
-                                  "pointRadius": 0,
-                                  "pointHoverRadius": 0
-                                }]
-                              },
-                              "options": {
-                                 "scales": {
-                                   "yAxes": [{
-                                     "display": false
-                                   }],
-                                   "xAxes": [{
-                                     "display": false
-                                   }]
-                                 },
-                                "hover": {
-                                  "mode": "nearest",
-                                  "intersect": false
-                                },
-                                "tooltips": {
-                                  "postfix": "%",
-                                  "hasIndicator": true,
-                                  "intersect": false
-                                }
-                              }
-                            }'>
-                    </canvas>
-                  </div>
-                  <!-- End Chart -->
-                </div>
-                <!-- End Col -->
-              </div>
-              <!-- End Row -->
-
-              <span class="badge bg-soft-danger text-danger">
-                <i class="bi-graph-down"></i> 4.4%
-              </span>
-              <span class="text-body fs-6 ms-1">from 61.2%</span>
-            </div>
-          </a>
-          <!-- End Card -->
-        </div>
-
-        <div class="col-sm-6 col-lg-3 mb-3 mb-lg-5">
-          <!-- Card -->
-          <a class="card card-hover-shadow h-100" href="#">
-            <div class="card-body">
-              <h6 class="card-subtitle">Pageviews</h6>
-
-              <div class="row align-items-center gx-2 mb-1">
-                <div class="col-6">
-                  <h2 class="card-title text-inherit">92,913</h2>
-                </div>
-                <!-- End Col -->
-
-                <div class="col-6">
-                  <!-- Chart -->
-                  <div class="chartjs-custom" style="height: 3rem;">
-                    <canvas class="js-chart" data-hs-chartjs-options='{
-                              "type": "line",
-                              "data": {
-                                 "labels": ["1 May","2 May","3 May","4 May","5 May","6 May","7 May","8 May","9 May","10 May","11 May","12 May","13 May","14 May","15 May","16 May","17 May","18 May","19 May","20 May","21 May","22 May","23 May","24 May","25 May","26 May","27 May","28 May","29 May","30 May","31 May"],
-                                 "datasets": [{
-                                  "data": [21,20,24,15,17,30,30,35,35,35,40,60,12,90,90,85,70,75,43,75,90,22,120,120,90,85,100,92,92,92,92],
-                                  "backgroundColor": ["rgba(55, 125, 255, 0)", "rgba(255, 255, 255, 0)"],
-                                  "borderColor": "#377dff",
-                                  "borderWidth": 2,
-                                  "pointRadius": 0,
-                                  "pointHoverRadius": 0
-                                }]
-                              },
-                              "options": {
-                                 "scales": {
-                                   "yAxes": [{
-                                     "display": false
-                                   }],
-                                   "xAxes": [{
-                                     "display": false
-                                   }]
-                                 },
-                                "hover": {
-                                  "mode": "nearest",
-                                  "intersect": false
-                                },
-                                "tooltips": {
-                                  "postfix": "k",
-                                  "hasIndicator": true,
-                                  "intersect": false
-                                }
-                              }
-                            }'>
-                    </canvas>
-                  </div>
-                  <!-- End Chart -->
-                </div>
-                <!-- End Col -->
-              </div>
-              <!-- End Row -->
-
-              <span class="badge bg-soft-secondary text-body">0.0%</span>
-              <span class="text-body fs-6 ms-1">from 2,913</span>
-            </div>
-          </a>
-          <!-- End Card -->
-        </div>
-      </div>
-      <!-- End Stats -->
-
-    </div>
   {% endblock %}
-<!-- end content -->
+
+
+{% block content %}
+	<div class="row">
+		<div class="col-12 col-sm-6 col-xxl-3 d-flex">
+			<div class="card illustration flex-fill">
+				<div class="card-body p-0 d-flex flex-fill">
+					<div class="row g-0 w-100">
+						<div class="col-6">
+							<div class="illustration-text p-3 m-1">
+								<h4 class="illustration-text"></h4>
+								<p class="mb-0">Matromatic Dashboard</p>
+							</div>
+						</div>
+						<div class="col-6 align-self-end text-end">
+							<img src="img/illustrations/customer-support.png" alt="Customer Support" class="img-fluid illustration-img">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-12 col-sm-6 col-xxl-3 d-flex">
+			<div class="card flex-fill">
+				<div class="card-body py-4">
+					<div class="d-flex align-items-start">
+						<div class="flex-grow-1">
+							<h3 class="mb-2">$ 24.300</h3>
+							<p class="mb-2">Total Earnings</p>
+							<div class="mb-0">
+								<span class="badge badge-soft-success me-2"> +5.35% </span>
+								<span class="text-muted">Since last week</span>
+							</div>
+						</div>
+						<div class="d-inline-block ms-3">
+							<div class="stat">
+								<i class="align-middle text-success" data-feather="dollar-sign"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-12 col-sm-6 col-xxl-3 d-flex">
+			<div class="card flex-fill">
+				<div class="card-body py-4">
+					<div class="d-flex align-items-start">
+						<div class="flex-grow-1">
+							<h3 class="mb-2">43</h3>
+							<p class="mb-2">Pending Orders</p>
+							<div class="mb-0">
+								<span class="badge badge-soft-danger me-2"> -4.25% </span>
+								<span class="text-muted">Since last week</span>
+							</div>
+						</div>
+						<div class="d-inline-block ms-3">
+							<div class="stat">
+								<i class="align-middle text-danger" data-feather="shopping-bag"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-12 col-sm-6 col-xxl-3 d-flex">
+			<div class="card flex-fill">
+				<div class="card-body py-4">
+					<div class="d-flex align-items-start">
+						<div class="flex-grow-1">
+							<h3 class="mb-2">$ 18.700</h3>
+							<p class="mb-2">Total Revenue</p>
+							<div class="mb-0">
+								<span class="badge badge-soft-success me-2"> +8.65% </span>
+								<span class="text-muted">Since last week</span>
+							</div>
+						</div>
+						<div class="d-inline-block ms-3">
+							<div class="stat">
+								<i class="align-middle text-info" data-feather="dollar-sign"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
