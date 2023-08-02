@@ -774,42 +774,36 @@
     <aside class="js-navbar-vertical-aside navbar navbar-vertical-aside navbar-vertical navbar-vertical-fixed navbar-expand-xl navbar-light bg-light">
       <div class="navbar-vertical-container">
         <div class="navbar-vertical-footer-offset">
-          <!-- Logo -->
-
+          <!--Matromatic  Logo -->
           <a class="navbar-brand" href="{% url 'dashboard' %}?init=True" aria-label="Front">
             <img class="navbar-brand-logo" src="./assets/svg/logos/logo.svg" alt="Logo" data-hs-theme-appearance="default">
             <img class="navbar-brand-logo" src="./assets/svg/logos-light/logo.svg" alt="Logo" data-hs-theme-appearance="dark">
             <img class="navbar-brand-logo-mini" src="./assets/svg/logos/logo-short.svg" alt="Logo" data-hs-theme-appearance="default">
             <img class="navbar-brand-logo-mini" src="./assets/svg/logos-light/logo-short.svg" alt="Logo" data-hs-theme-appearance="dark">
           </a>
-
-          <!-- End Logo -->
+          <!-- End Matromatic Logo -->
 
           <!-- Navbar Vertical Toggle -->
           <button type="button" class="js-navbar-vertical-aside-toggle-invoker navbar-aside-toggler">
             <i class="bi-arrow-bar-left navbar-toggler-short-align" data-bs-template='<div class="tooltip d-none d-md-block" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>' data-bs-toggle="tooltip" data-bs-placement="right" title="Collapse"></i>
             <i class="bi-arrow-bar-right navbar-toggler-full-align" data-bs-template='<div class="tooltip d-none d-md-block" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>' data-bs-toggle="tooltip" data-bs-placement="right" title="Expand"></i>
           </button>
-
           <!-- End Navbar Vertical Toggle -->
 
           <!-- Content -->
           <div class="navbar-vertical-content">
-          <div id="navbarVerticalMenu" class="nav nav-pills nav-vertical card-navbar-nav">
-            <!-- Admin Home -->
-            <div class="nav-item mb-8">
-                <a class="nav-link  active " href="{% url 'home-manager' 'home' %}?init=True" data-placement="left">
-                  <i class="fa fa-house nav-icon"></i>
-                  <span class="nav-link-title">Home</span>
-                </a>
+            <div id="navbarVerticalMenu" class="nav nav-pills nav-vertical card-navbar-nav">
+              <!-- Admin Home -->
+              <div class="nav-item mb-8">
+                  <a class="nav-link  active " href="{% url 'home-manager' 'home' %}?init=True" data-placement="left">
+                    <i class="fa fa-house nav-icon"></i>
+                    <span class="nav-link-title">Home</span>
+                  </a>
+              </div>
+              <!-- End Admin Home -->
             </div>
-            <!-- End Admin Home -->
           </div>
-          </div>
-
-
           <!-- End Content -->
-
 
           <!-- Footer -->
           <div class="navbar-vertical-footer">
@@ -919,17 +913,26 @@
         </div>
       </div>
     </aside>
-<!-- End Navbar Vertical -->
+  <!-- End Navbar Vertical -->
+  <!----------- Main Content ---------->
 
     <main id="content" role="main" class="main">
+      <div class="content container-fluid">
+        <div class="page-header">
+          {% block page_header %}{% endblock %}
+        </div>
 
+
+      <!-- content -->
       {% block content %}{% endblock %}
+      </div>
+      <!-- end content -->
 
       <!-- Footer -->
       <div class="footer">
         <div class="row justify-content-between align-items-center">
           <div class="col">
-            <p class="fs-6 mb-0">&copy; Front. <span class="d-none d-sm-inline-block">2022 Htmlstream.</span></p>
+            <p class="fs-6 mb-0">Copyright&copy; <span class="d-none d-sm-inline-block">2022 matromatic.</span></p>
           </div>
           <!-- End Col -->
 
@@ -963,7 +966,9 @@
       <!-- End Footer -->
     </main>
 
-  <!-- ========== END MAIN CONTENT ========== -->
+  <!----------- End Main Content ---------->
+
+
 
   <!-- JS Implementing Plugins -->
   <script src="{% static 'manager/assets/js/vendor.min.js' %}"></script>

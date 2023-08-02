@@ -7,12 +7,9 @@
     {% endblock %}
 <!-- end title -->
 
-<!-- begin content -->
 
-  {% block content %}
-    <div class="content container-fluid">
-      <!-- Page Header -->
-      <div class="page-header">
+  {% block header_page %}
+          <!-- Page Header -->
         <div class="row align-items-center">
           <div class="col-sm mb-2 mb-sm-0">
             <h1 class="page-header-title">Home Manager</h1>
@@ -25,10 +22,17 @@
           </div>
           <!-- End Col -->
         </div>
-        <!-- End Row -->
-      </div>
       <!-- End Page Header -->
 
-    </div>
   {% endblock %}
+
+
+
+<!-- begin content -->
+
+  {% block content %}
+
+  {% endblock %}
+
+
 <!-- end content -->
