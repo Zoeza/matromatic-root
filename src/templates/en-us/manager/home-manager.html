@@ -100,109 +100,60 @@
 
                     <div class="col-lg-9">
                       <div class="d-grid gap-3 gap-lg-5">
-                        <!-- Card -->
-                        <div class="card">
-
-                          <!-- Avatar -->
-                          <label class="avatar avatar-xl avatar-circle avatar-uploader profile-cover-avatar" for="editAvatarUploaderModal">
-                            <img id="editAvatarImgModal" class="avatar-img" src="./assets/img/160x160/img6.jpg" alt="Image Description">
-
-                            <input type="file" class="js-file-attach avatar-uploader-input" id="editAvatarUploaderModal" data-hs-file-attach-options='{
-                                        "textTarget": "#editAvatarImgModal",
-                                        "mode": "image",
-                                        "targetAttr": "src",
-                                        "allowTypes": [".png", ".jpeg", ".jpg"]
-                                     }'>
-
-                            <span class="avatar-uploader-trigger">
-                              <i class="bi-pencil-fill avatar-uploader-icon shadow-sm"></i>
-                            </span>
-                          </label>
-                          <!-- End Avatar -->
-
-                          <!-- Body -->
-                          <div class="card-body">
-                            <div class="row">
-                              <div class="col-sm-5">
-                                <span class="d-block fs-5 mb-2">Who can see your profile photo? <i class="bi-question-circle" data-bs-toggle="tooltip" data-bs-placement="top" title="Your visibility setting only applies to your profile photo. Your header image is always visible to anyone."></i></span>
-
-                                <!-- Select -->
-                                <div class="tom-select-custom">
-                                  <select class="js-select form-select" data-hs-tom-select-options='{
-                                            "searchInDropdown": false,
-                                            "dropdownWidth": "auto"
-                                          }'>
-                                    <option value="privacy1" data-option-template='<div class="d-flex align-items-start"><div class="flex-shrink-0"><i class="bi-globe"></i></div><div class="flex-grow-1 ms-2"><span class="d-block fw-semibold">Anyone</span><span class="tom-select-custom-hide small">Visible to anyone who can view your content. Accessible by installed apps.</span></div></div>'>Anyone</option>
-                                    <option value="privacy2" data-option-template='<div class="d-flex align-items-start"><div class="flex-shrink-0"><i class="bi-lock"></i></div><div class="flex-grow-1 ms-2"><span class="d-block fw-semibold">Only you</span><span class="tom-select-custom-hide small">Only visible to you.</span></div></div>'>Only you</option>
-                                  </select>
-                                </div>
-                                <!-- End Select -->
-                              </div>
-                              <!-- End Col -->
-                            </div>
-                            <!-- End Row -->
-                          </div>
-                          <!-- End Body -->
-                        </div>
-                        <!-- End Card -->
-
-                        <!-- Card -->
                         <div class="card">
                           <div class="card-header">
                             <h2 class="card-title h4">Basic information</h2>
                           </div>
-                            <!-- begin main logo -->
-
-                            <div class="col-md-6">
-                              <label class="col-sm-3 col-form-label form-label"> Logo Main</label>
-                              <div class="col-sm-9">
-                                <div class="d-flex align-items-center">
-                                  <!-- Avatar -->
-                                  <label class="avatar avatar-xl  avatar-uploader me-5" for="logomainUploader">
-                                    <img id="logomain" class="avatar-img" src="./assets/img/160x160/img1.jpg" alt="">
-
-                                    <input type="file" class="js-file-attach avatar-uploader-input" id="logomainUploader" data-hs-file-attach-options=' {
-                                              "textTarget": "#avatarImg",
-                                              "mode": "image",
-                                              "targetAttr": "src",
-                                              "resetTarget": ".js-file-attach-reset-img",
-                                              "resetImg":"./assets/img/160x160/img1.jpg",
-                                              "allowTypes": ".png",".jpeg", ".jpg"}'>
-
-                                    <span class="avatar-uploader-trigger">
-                                      <i class="bi-pencil avatar-uploader-icon shadow-sm"></i>
-                                    </span>
-                                  </label>
-                                  <!-- End Avatar -->
-
-                                  <button type="button" class="js-file-attach-reset-img btn btn-white">Delete</button>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- end main logo -->
-
 
                           <!-- Body -->
                           <div class="card-body">
                             <!-- Form -->
                              <form class="row g-3">
 
-                                <div class="col-md-6">
+                              <!-- begin main logo -->
+                              <div class="col-md-6">
+                                  <label class="col-sm-3 col-form-label form-label"> Logo Main</label>
+                                  <div class="col-sm-9">
+                                    <div class="d-flex align-items-center">
+                                      <!-- Avatar -->
+                                      <label class="avatar avatar-xl  avatar-uploader profile-cover-avatar me-5" for="logomainUploader">
+                                        <img id="logomain" class="avatar-img" src="./assets/img/160x160/img1.jpg" alt="">
+
+                                        <input type="file" class="js-file-attach avatar-uploader-input" id="logomainUploader" data-hs-file-attach-options=' {
+                                                  "textTarget": "#avatarImg",
+                                                  "mode": "image",
+                                                  "targetAttr": "src",
+                                                  "resetTarget": ".js-file-attach-reset-img",
+                                                  "resetImg":"./assets/img/160x160/img1.jpg",
+                                                  "allowTypes": ".png",".jpeg", ".jpg"}'>
+
+                                        <span class="avatar-uploader-trigger">
+                                          <i class="bi-pencil avatar-uploader-icon shadow-sm"></i>
+                                        </span>
+                                      </label>
+                                      <!-- End Avatar -->
+
+                                      <button type="button" class="js-file-attach-reset-img btn btn-white">Delete</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              <!-- end main logo -->
+                             <div class="col-md-6">
                                   <label for="headtitle" class="form-label">Head title</label>
                                   <input type="text" class="form-control" id="headtitle">
                                 </div>
-                                <div class="col-md-6">
+                             <div class="col-md-6">
                                   <label for="headtext" class="form-label">Head Text</label>
                                   <input type="text" class="form-control" id="headtext">
                                 </div>
-                                <div class="col-md-6">
+                             <div class="col-md-6">
                                   <label for="companyname" class="form-label">Company Name</label>
                                   <input type="text" class="form-control" id="companyname">
                                 </div>
-                                <div class="col-md-6">
-                                  <label for="companyslogan" class="form-label">Company Slogan</label>
-                                  <input type="text" class="form-control" id="companyslogan">
-                                </div>
+                             <div class="col-md-6">
+                                 <label for="companyslogan" class="form-label">Company Slogan</label>
+                                 <input type="text" class="form-control" id="companyslogan">
+                             </div>
 
                               <div class="d-flex justify-content-end">
                                 <button type="submit" class="btn btn-primary">Save changes</button>
