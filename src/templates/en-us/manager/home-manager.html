@@ -116,6 +116,24 @@
                               <form class="row g-3" action="{% url 'home-manager' 'add_top_page' %}" id="add_htop_page_form" class="js-validate need-validate" novalidate method="post" enctype="multipart/form-data">
                                   {% csrf_token %}
 
+
+                                  <div class="col-md-6">
+                                  <label for="inputGroupMergeLanguageSelect" class="form-label">Language</label>
+
+                                    <div class="input-group input-group-merge">
+                                        <select id="inputGroupMergeLanguageSelect" class="form-select">
+                                          <option>Choose a language</option>
+                                          <option>En</option>
+                                          <option>Fr</option>
+                                          <option>Ar</option>
+                                        </select>
+                                        <span class="invalid-feedback text-start">Field required.</span>
+
+                                    </div>
+
+                                    </div>
+
+
                                  <!-- begin main logo -->
                                 <div class="col-md-6 ">
                                   <label class="col-sm-3 col-form-label form-label"> Logo Main</label>
