@@ -208,25 +208,56 @@
                           <!-- Body -->
                           <div class="card-body">
                               <form class="row g-3">
+                                  <div class="js-add-field row mb-4"
+                                     data-hs-add-field-options='{
+                                        "template": "#addEmailFieldTemplate",
+                                        "container": "#addEmailFieldContainer",
+                                        "defaultCreated": 0
+                                      }'>
 
-                              <div class="col-md-3">
-                                <label for="inputsocialmedianame" class="form-label">Social media name</label>
-                                <input type="text" class="form-control" id="inputsocialmedianame">
-                              </div>
-                              <div class="col-md-6">
-                                <label for="inputsocialmedialink" class="form-label">Link</label>
-                                  <input type="text" class="form-control" id="inputsocialmedialink">
+                                      <div class="col-md-3">
+                                        <label for="inputsocialmedianame" class="form-label">Social media name</label>
+                                        <input type="text" class="form-control" id="inputsocialmedianame">
+                                      </div>
+                                      <div class="col-md-6">
+                                        <label for="inputsocialmedialink" class="form-label">Link</label>
+                                          <input type="text" class="form-control" id="inputsocialmedialink">
 
-                              </div>
-                              <div class="col-md-3">
-                                <label for="inputsocialmediaicon" class="form-label">Zip</label>
-                                <input type="text" class="form-control" id="inputsocialmediaicon">
-                              </div>
+                                      </div>
+                                      <div class="col-md-3">
+                                        <label for="inputsocialmediaicon" class="form-label">Icon</label>
+                                        <input type="text" class="form-control" id="inputsocialmediaicon">
+                                      </div>
 
-                              <div class="d-flex justify-content-end">
-                                <button type="submit" class="btn btn-primary">Save changes</button>
-                              </div>
+                                      <div id="addSocialmediaFieldTemplateContainer"></div>
+
+                                        <a href="javascript:;" class="js-create-field form-link">
+                                          <i class="bi-plus-circle me-1"></i> Add social media
+                                        </a>
+
+                                  </div>
+
+                                    <div class="d-flex justify-content-end">
+                                        <button type="submit" class="btn btn-primary">Save changes</button>
+                                      </div>
+
                               </form>
+
+
+                              <!-- Add Phone Input Field -->
+                                    <div id="addSocialmediaFieldTemplate" style="display: none;">
+                                      <div class="input-group-add-field">
+                                          <input type="text" class="form-control" id="inputsocialmedianame">
+                                          <input type="text" class="form-control" id="inputsocialmedialink">
+                                          <input type="text" class="form-control" id="inputsocialmediaicon">
+                                          
+                                      </div>
+
+                                      <a class="js-delete-field input-group-add-field-delete" href="javascript:;">
+                                        <i class="bi-x-lg"></i>
+                                      </a>
+                                    </div>
+                                    <!-- End Add Phone Input Field -->
 
 
 

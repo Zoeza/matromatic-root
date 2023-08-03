@@ -120,7 +120,7 @@
   }
   return (usePound ? "#" : "") + (g | (b << 8) | (r << 16)).toString(16)
 }
-            </script>
+ </script>
 </head>
 <body class="has-navbar-vertical-aside navbar-vertical-aside-show-xl   footer-offset">
 
@@ -976,6 +976,8 @@
   <script src="{% static 'manager/assets/js/hs.theme-appearance-charts.j' %}s"></script>
   <script src="{% static 'manager/assets/js/hs.theme-appearance.js' %}"></script>
   <script src="{% static 'manager/assets/vendor/hs-navbar-vertical-aside/dist/hs-navbar-vertical-aside-mini-cache.js' %}"></script>
+  <script src="{% static 'manager/assets/vendor/hs-add-field/dist/hs-add-field.min.js' %}"></script>
+
 
 
   <!-- JS Plugins Init. -->
@@ -1225,5 +1227,16 @@
     </script>
 
   <!-- End Style Switcher JS -->
+
+
+  <!-- JS Add filed Init. -->
+
+<script>
+  (function() {
+    // INITIALIZATION OF ADD FIELD
+    // =======================================================
+    new HSAddField('.js-add-field')
+  })();
+</script>
 </body>
 </html>
