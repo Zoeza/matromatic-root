@@ -22,5 +22,7 @@ def home_manager(request, action):
         request.session['tab'] = None
         context = {
             'nav_side': nav_side,
+            'tab': tab,
+
         }
         return render(request, url, context)
