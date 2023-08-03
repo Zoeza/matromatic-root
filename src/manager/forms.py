@@ -1,6 +1,6 @@
 from django.forms import ModelForm
 from django import forms
-from home.models import TopPage
+from .models import TopPage
 
 
 class TopPageForm(ModelForm):
