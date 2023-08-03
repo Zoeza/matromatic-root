@@ -121,7 +121,7 @@
                           <!-- Body -->
                           <div class="card-body">
                             <!-- Form -->
-                              <form class="row g-3" action="{% url 'home-manager' 'create_top_page' %}" id="create_top_page_form" class="js-validate need-validate" novalidate method="post" enctype="multipart/form-data">
+                              <form class="row g-3" action="{% url 'home-manager' 'create_top_page' %}"  class="js-validate need-validate" novalidate method="post" enctype="multipart/form-data">
                                   {% csrf_token %}
 
                                   <div class="mb-3">
@@ -296,7 +296,7 @@
                                   <!-- end macbook img -->
 
                               <div class="d-flex justify-content-end">
-                                <button form="create_top_page_form" class="btn btn-white">Save changes</button>
+                                <button type="submit" class="btn btn-white">Save changes</button>
                               </div>
 
                             </form>
