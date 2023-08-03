@@ -14,7 +14,7 @@ class HeaderPage(models.Model):
     ipad_image = models.FileField(upload_to='ipad_image/', null=True)
 
     class Meta:
-        verbose_name = "header page"
+        verbose_name = "top page"
 
     def __str__(self):
         return self.language
