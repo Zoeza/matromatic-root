@@ -115,27 +115,22 @@
                             <!-- Form -->
                               <form class="row g-3" action="{% url 'home-manager' 'add_top_page' %}" id="add_htop_page_form" class="js-validate need-validate" novalidate method="post" enctype="multipart/form-data">
                                   {% csrf_token %}
-
-
+                                  
                                   <div class="mb-3">
-                                  <label for="inputGroupMergeLanguageSelect" class="form-label">Language</label>
+                                      <label for="LanguageSelect" class="form-label">Language</label>
+                                      <div class="input-group input-group-merge">
+                                            <select id="LanguageSelect" class="form-select">
+                                              <option>Choose a language</option>
+                                              <option>En</option>
+                                              <option>Fr</option>
+                                              <option>Ar</option>
+                                            </select>
+                                            <span class="invalid-feedback text-start">Field required.</span>
+                                      </div>
+                                  </div>
 
-                                    <div class="input-group input-group-merge">
-                                        <select id="inputGroupMergeLanguageSelect" class="form-select">
-                                          <option>Choose a language</option>
-                                          <option>En</option>
-                                          <option>Fr</option>
-                                          <option>Ar</option>
-                                        </select>
-                                        <span class="invalid-feedback text-start">Field required.</span>
-
-                                    </div>
-
-                                    </div>
-
-
-                                 <!-- begin main logo -->
-                                <div class="col-md-6 ">
+                                  <!-- begin main logo -->
+                                  <div class="col-md-6 ">
                                   <label class="col-sm-3 col-form-label form-label"> Logo Main</label>
                                   <div class="col-sm-9">
                                     <div class="d-flex align-items-center">
@@ -162,10 +157,10 @@
                                     </div>
                                   </div>
                                 </div>
-                                <!-- end main logo -->
+                                  <!-- end main logo -->
 
-                                 <!-- begin head logo -->
-                                <div class="col-md-6">
+                                   <!-- begin head logo -->
+                                   <div class="col-md-6">
                                   <label class="col-sm-3 col-form-label form-label"> Logo Head</label>
                                   <div class="col-sm-9">
                                     <div class="d-flex align-items-center">
@@ -190,39 +185,34 @@
                                     </div>
                                   </div>
                                 </div>
-                                <!-- end head logo -->
-
-
-
-                                <div class="col-md-6">
+                                   <!-- end head logo -->
+                                   <div class="col-md-6">
                                   <label for="headtitle" class="form-label">Head title</label>
                                   <input type="text" class="form-control" id="headtitle" required>
                                     <span class="invalid-feedback text-start">Field required.</span>
 
                                 </div>
-                                <div class="col-md-6">
+                                   <div class="col-md-6">
                                   <label for="headtext" class="form-label">Head Text</label>
                                   <input type="text" class="form-control" id="headtext" required>
 
 
                                 </div>
-                                <div class="col-md-6">
+                                   <div class="col-md-6">
                                   <label for="companyname" class="form-label">Company Name</label>
                                   <input type="text" class="form-control" id="companyname" required>
                                   <span class="invalid-feedback text-start">Field required.</span>
 
                                 </div>
-                                <div class="col-md-6">
+                                   <div class="col-md-6">
                                   <label for="companyslogan" class="form-label">Company Slogan</label>
                                   <input type="text" class="form-control" id="companyslogan" required>
                                     <span class="invalid-feedback text-start">Field required.</span>
 
                                 </div>
-
-                                 <hr>
-
+                                  <hr>
                                   <!-- begin iphone image -->
-                                <div class="col-md-4">
+                                  <div class="col-md-4">
                                   <label class="col-sm-3 col-form-label"> iphone img</label>
                                   <div class="col-sm-9">
                                     <div class="d-flex align-items-center">
@@ -246,9 +236,9 @@
                                     </div>
                                   </div>
                                 </div>
-                                <!-- end iphone image -->
-                                 <!-- begin ipad img -->
-                                <div class="col-md-4">
+                                  <!-- end iphone image -->
+                                  <!-- begin ipad img -->
+                                  <div class="col-md-4">
                                   <label class="col-sm-3 col-form-label"> iphone img</label>
                                   <div class="col-sm-9">
                                     <div class="d-flex align-items-center">
@@ -272,9 +262,9 @@
                                     </div>
                                   </div>
                                 </div>
-                                <!-- end ipad img -->
-                                 <!-- begin macbook img -->
-                                <div class="col-md-4">
+                                  <!-- end ipad img -->
+                                  <!-- begin macbook img -->
+                                  <div class="col-md-4">
                                   <label class="col-sm-3 col-form-label"> macbook img</label>
                                   <div class="col-sm-9">
                                     <div class="d-flex align-items-center">
@@ -298,7 +288,7 @@
                                     </div>
                                   </div>
                                 </div>
-                                <!-- end macbook img -->
+                                  <!-- end macbook img -->
 
                               <div class="d-flex justify-content-end">
                                 <button type="submit" class="btn btn-primary">Save changes</button>
