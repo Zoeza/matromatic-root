@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class HeaderPage(models.Model):
+class TopPage(models.Model):
     language = models.CharField(max_length=50, blank=True)
     head_title = models.CharField(max_length=50, blank=True)
     head_text = models.CharField(max_length=80, blank=True)
