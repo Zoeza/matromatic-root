@@ -258,6 +258,41 @@
                               </form>
 
 
+                              <!-- Form -->
+                                <div class="js-add-field row mb-4"
+                                     data-hs-add-field-options='{
+                                        "template": "#addEmailFieldTemplate",
+                                        "container": "#addEmailFieldContainer",
+                                        "defaultCreated": 0
+                                      }'>
+                                  <label for="socialmedialink" class="col-sm-3 col-form-label form-label">Email</label>
+
+                                  <div class="col-sm-9">
+                                    <input type="text" class="js-input-mask form-control" name="email" id="socialmedialink" placeholder="Enter your link" aria-label="Enter your link">
+
+                                    <!-- Container For Input Field -->
+                                    <div id="addsocialmedialinkFieldContainer"></div>
+
+                                    <a href="javascript:;" class="js-create-field form-link">
+                                      <i class="bi-plus-circle me-1"></i> Add field
+                                    </a>
+                                  </div>
+                                </div>
+                                <!-- End Form -->
+
+                                <!-- Add Phone Input Field -->
+                                <div id="addsocialmedialinkFieldTemplate" style="display: none;">
+                                  <div class="input-group-add-field">
+                                    <input type="text" class="js-input-mask form-control" data-name="socialmedialink" placeholder="Enter your link" aria-label="Enter your link">
+                                  </div>
+
+                                  <a class="js-delete-field input-group-add-field-delete" href="javascript:;">
+                                    <i class="bi-x-lg"></i>
+                                  </a>
+                                </div>
+                                <!-- End Add Phone Input Field -->
+
+
                           </div>
                           <!-- End Body -->
                         </div>
