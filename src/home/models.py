@@ -22,7 +22,7 @@ class TopPage(models.Model):
         verbose_name = "top page"
 
     def __str__(self):
-        return self.sku
+        return self.language
 
 
 # ---------------------------------------------------------------------- #
