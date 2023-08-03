@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class TopPage(models.Model):
+class HeaderPage(models.Model):
     language = models.CharField(max_length=50, blank=True)
     head_title = models.CharField(max_length=50, blank=True)
     head_text = models.CharField(max_length=80, blank=True)
@@ -14,7 +14,7 @@ class TopPage(models.Model):
     ipad_image = models.FileField(upload_to='ipad_image/', null=True)
 
     class Meta:
-        verbose_name = "top page"
+        verbose_name = "header page"
 
     def __str__(self):
         return self.language
