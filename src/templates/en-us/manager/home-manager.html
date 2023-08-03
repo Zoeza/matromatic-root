@@ -210,20 +210,14 @@
                               <form class="row g-3">
                                   <div class="js-add-field row mb-4"
                                      data-hs-add-field-options='{
-                                        "template": "#addEmailFieldTemplate",
-                                        "container": "#addEmailFieldContainer",
+                                        "template": "#addSocialmediaFieldTemplate",
+                                        "container": "#addSocialmediaFieldContainer",
                                         "defaultCreated": 0
                                       }'>
 
                                       <div class="col-md-3">
                                         <label for="inputsocialmedianame" class="form-label">Social media name</label>
                                         <input type="text" class="form-control" id="inputsocialmedianame">
-                                          <div id="addSocialmediaFieldTemplateContainer"></div>
-
-                                        <a href="javascript:;" class="js-create-field form-link">
-                                          <i class="bi-plus-circle me-1"></i> Add social media
-                                        </a>
-
                                       </div>
                                       <div class="col-md-6">
                                         <label for="inputsocialmedialink" class="form-label">Link</label>
@@ -235,12 +229,19 @@
                                         <input type="text" class="form-control" id="inputsocialmediaicon">
                                       </div>
 
+                                      <div id="addSocialmediaFieldTemplateContainer"></div>
+
+                                        <a href="javascript:;" class="js-create-field form-link">
+                                          <i class="bi-plus-circle me-1"></i> Add social media
+                                        </a>
 
                                   </div>
 
                                   <!-- Add Phone Input Field -->
                                     <div id="addSocialmediaFieldTemplate" style="display: none;">
                                       <div class="input-group-add-field">
+                                          <input type="text" class="form-control" >
+                                          <input type="text" class="form-control" >
                                           <input type="text" class="form-control" >
 
                                       </div>
@@ -256,41 +257,6 @@
                                       </div>
 
                               </form>
-
-
-                              <!-- Form -->
-                                <div class="js-add-field row mb-4"
-                                     data-hs-add-field-options='{
-                                        "template": "#addsocialmedialinkFieldTemplate",
-                                        "container": "#addsocialmedialinkFieldContainer",
-                                        "defaultCreated": 0
-                                      }'>
-                                  <label for="socialmedialink" class="col-sm-3 col-form-label form-label">Email</label>
-
-                                  <div class="col-sm-9">
-                                    <input type="text" class="js-input-mask form-control" name="email" id="socialmedialink" placeholder="Enter your link" aria-label="Enter your link">
-
-                                    <!-- Container For Input Field -->
-                                    <div id="addsocialmedialinkFieldContainer"></div>
-
-                                    <a href="javascript:;" class="js-create-field form-link">
-                                      <i class="bi-plus-circle me-1"></i> Add field
-                                    </a>
-                                  </div>
-                                </div>
-                                <!-- End Form -->
-
-                                <!-- Add Phone Input Field -->
-                                <div id="addsocialmedialinkFieldTemplate" style="display: none;">
-                                  <div class="input-group-add-field">
-                                    <input type="text" class="js-input-mask form-control" data-name="socialmedialink" placeholder="Enter your link" aria-label="Enter your link">
-                                  </div>
-
-                                  <a class="js-delete-field input-group-add-field-delete" href="javascript:;">
-                                    <i class="bi-x-lg"></i>
-                                  </a>
-                                </div>
-                                <!-- End Add Phone Input Field -->
 
 
                           </div>
