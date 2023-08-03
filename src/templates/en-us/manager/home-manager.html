@@ -123,7 +123,7 @@
                                     <div class="d-flex align-items-center">
                                       <!-- logo -->
                                       <label class="avatar avatar-xl  avatar-uploader " for="logomainUploader">
-                                        <img id="logomain" class="avatar-img" src="{% static 'manager/matromatic/add_image.png' %}" alt="">
+                                        <img id="logomain" class="avatar-img" src="{% static 'manager/matromatic_img/add_image.png' %}" alt="">
 
                                         <input type="file" class="js-file-attach avatar-uploader-input" id="logomainUploader" data-hs-file-attach-options=' {
                                                   "textTarget": "#logomain",
@@ -153,7 +153,7 @@
                                     <div class="d-flex align-items-center">
                                       <!-- Avatar -->
                                       <label class="avatar avatar-sm  avatar-uploader " for="logoheadUploader">
-                                        <img id="logohead" class="avatar-img" class="avatar-img" src="{% static 'manager/matromatic/add_image.png' %}" alt="" >
+                                        <img id="logohead" class="avatar-img" class="avatar-img" src="{% static 'manager/matromatic_img/add_image.png' %}" alt="" >
 
                                         <input type="file" class="js-file-attach avatar-uploader-input" id="logoheadUploader" data-hs-file-attach-options=' {
                                                   "textTarget": "#logohead",
@@ -210,15 +210,13 @@
                                     <div class="d-flex align-items-center">
                                       <!-- Avatar -->
                                       <label class="avatar avatar-xl  avatar-uploader profile-cover-avatar me-5" for="iphoneImgUploader">
-                                        <img id="iphoneImg" class="avatar-img" src="./assets/img/160x160/img1.jpg" alt="">
+                                        <img id="iphoneImg" class="avatar-img" src="{% static 'manager/matromatic_img/add_image.png' %}" alt="">
 
                                         <input type="file" class="js-file-attach avatar-uploader-input" id="iphoneImgUploader" data-hs-file-attach-options=' {
                                                   "textTarget": "#iphoneImg",
                                                   "mode": "image",
                                                   "targetAttr": "src",
-                                                  "resetTarget": ".js-file-attach-reset-img",
-                                                  "resetImg":"./assets/img/160x160/img1.jpg",
-                                                  "allowTypes": [".png",".jpeg", ".jpg"]}'>
+                                                  "allowTypes": [".png",".jpeg", ".jpg"]}'required>
 
                                         <span class="avatar-uploader-trigger">
                                           <i class="bi-pencil avatar-uploader-icon shadow-sm"></i>
@@ -238,13 +236,13 @@
                                     <div class="d-flex align-items-center">
                                       <!-- Avatar -->
                                       <label class="avatar avatar-xl  avatar-uploader " for="ipadImgUploader">
-                                        <img id="ipadImg" class="avatar-img" src= class="avatar-img" src="{% static 'manager/matromatic/add_image.png' %}" alt="">
+                                        <img id="ipadImg" class="avatar-img" src= class="avatar-img" src="{% static 'manager/matromatic_img/add_image.png' %}" alt="">
 
                                         <input type="file" class="js-file-attach avatar-uploader-input" id="ipadImgUploader" data-hs-file-attach-options=' {
                                                   "textTarget": "#ipadImg",
                                                   "mode": "image",
                                                   "targetAttr": "src",
-                                                  "allowTypes": [".png",".jpeg", ".jpg"]}'>
+                                                  "allowTypes": [".png",".jpeg", ".jpg"]}'required>
 
                                         <span class="avatar-uploader-trigger">
                                           <i class="bi-pencil avatar-uploader-icon shadow-sm"></i>
@@ -265,13 +263,13 @@
                                     <div class="d-flex align-items-center">
                                       <!-- Avatar -->
                                       <label class="avatar avatar-xl  avatar-uploader " for="macbookImgUploader">
-                                        <img id="macbookImg" class="avatar-img" src= class="avatar-img" src="{% static 'manager/matromatic/add_image.png' %}" alt="">
+                                        <img id="macbookImg" class="avatar-img" src= class="avatar-img" src="{% static 'manager/matromatic_img/add_image.png' %}" alt="">
 
                                         <input type="file" class="js-file-attach avatar-uploader-input" id="macbookImgUploader" data-hs-file-attach-options=' {
                                                   "textTarget": "#macbookImg",
                                                   "mode": "image",
                                                   "targetAttr": "src",
-                                                  "allowTypes": [".png",".jpeg", ".jpg"]}'>
+                                                  "allowTypes": [".png",".jpeg", ".jpg"]}'required>
 
                                         <span class="avatar-uploader-trigger">
                                           <i class="bi-pencil avatar-uploader-icon shadow-sm"></i>
