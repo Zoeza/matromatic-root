@@ -7,7 +7,7 @@ PERCENTAGE_VALIDATOR = [MinValueValidator(0), MaxValueValidator(100)]
 # ------------------------------ Top page ----------------------------- #
 
 class TopPage(models.Model):
-    sku = models.CharField(max_length=50, blank=True)
+    language = models.CharField(max_length=50, blank=True)
     head_title = models.CharField(max_length=50, blank=True)
     head_text = models.CharField(max_length=80, blank=True)
     company_name = models.CharField(max_length=80, unique=True)
@@ -29,7 +29,7 @@ class TopPage(models.Model):
 # ------------------------------ Content ------------------------------- #
 
 class Content(models.Model):
-    sku = models.CharField(max_length=50, blank=True)
+    language = models.CharField(max_length=50, blank=True)
     company_description = models.TextField(max_length=200, blank=True)
     why_us_raison1 = models.TextField(max_length=300, blank=True)
     why_us_photo = models.ImageField(upload_to='content/why_us_photo', blank=True)
@@ -61,7 +61,7 @@ class Content(models.Model):
 # ------------------------------ Footer -------------------------------- #
 
 class Footer(models.Model):
-    sku = models.CharField(max_length=50, blank=True)
+    language = models.CharField(max_length=50, blank=True)
     copyright = models.CharField(max_length=80, blank=True)
     made_by = models.CharField(max_length=80, blank=True)
     made_by_link = models.CharField(max_length=100, blank=True)

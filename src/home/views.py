@@ -11,17 +11,17 @@ def home(request):
     url = direction + "/home/home.html"
 
     try:
-        top_page = TopPage.objects.get(sku='en')
+        top_page = TopPage.objects.get(language='en')
     except TopPage.DoesNotExist:
         raise Http404("Top page does not exist")
 
     try:
-        content = Content.objects.get(sku='en')
+        content = Content.objects.get(language='en')
     except Content.DoesNotExist:
         raise Http404("Content does not exist")
 
     try:
-        footer = Footer.objects.get(sku='en')
+        footer = Footer.objects.get(language='en')
     except Footer.DoesNotExist:
         raise Http404("Footer informations do not exist")
 
