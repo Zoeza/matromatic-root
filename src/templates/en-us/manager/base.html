@@ -977,19 +977,21 @@
   <script src="{% static 'manager/assets/js/hs.theme-appearance.js' %}"></script>
   <script src="{% static 'manager/assets/vendor/hs-navbar-vertical-aside/dist/hs-navbar-vertical-aside-mini-cache.js' %}"></script>
   <script src="{% static 'manager/assets/vendor/hs-add-field/dist/hs-add-field.min.js' %}"></script>
-  <script src="./node_modules/hs-file-attach/dist/hs-file-attach.min.js"></script>
 
+  <!-- JS Plugins Init. -->
 
-
+<script>
+  (function() {
+    // INITIALIZATION OF FILE ATTACH
+    // =======================================================
+    new HSFileAttach('.js-file-attach')
+  })();
+</script>
 
   <!-- JS Plugins Init. -->
   <script>
     $(document).on('ready', function () {
 
-
-         // INITIALIZATION OF FILE ATTACHMENT
-        // =======================================================
-        new HSFileAttach('.js-file-attach')
 
 
       // INITIALIZATION OF DATERANGEPICKER
