@@ -31,7 +31,7 @@ def home_manager(request, action):
     if action == 'create_top_page':
         if request.method == 'POST':
             language = request.POST.get('language', False)
-            head_title = request.POST.get(' head_title', False)
+            head_title = request.POST.get('head_title', False)
             head_text = request.POST.get('head_text', False)
             company_name = request.POST.get('company_name', False)
             company_slogan = request.POST.get('company_slogan', False)
