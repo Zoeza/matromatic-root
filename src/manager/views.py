@@ -42,13 +42,9 @@ def home_manager(request, action):
                     logo_head=request.FILES.get('logo_head'),
                     iphone_image=request.FILES.get('iphone_image'),
                     macbook_image=request.FILES.get('macbook_image'),
-                    ipad_image= request.FILES.get('ipad_image'), ).save()
+                    ipad_image=request.FILES.get('ipad_image'), ).save()
         request.session['tab'] = 'top-page'
         return redirect('home-manager', 'main')
     # ---------------------- edit top page---------------------- #
     if action == 'edit_top_page':
         pass
-
-
-
-
