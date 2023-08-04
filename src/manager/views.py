@@ -31,6 +31,7 @@ def home_manager(request, action):
         }
         return render(request, url, context)
     # ---------------------- create top page---------------------- #
+
     if action == 'create_top_page':
         if request.method == 'POST':
             TopPage(language=request.POST.get('language', False),
@@ -45,6 +46,21 @@ def home_manager(request, action):
                     ipad_image=request.FILES.get('ipad_image'), ).save()
         request.session['tab'] = 'top-page'
         return redirect('home-manager', 'main')
+
     # ---------------------- edit top page---------------------- #
+    
     if action == 'edit_top_page':
-        pass
+        if request.method == 'POST':
+            top_page_id = request.POST.get('top_page_id', False)
+            top_page_selected = TopPage.objects.get(id=top_page_id)
+            top_page_selected(language=request.POST.get('language', False),
+                              head_title=request.POST.get('head_title', False),
+                              head_text=request.POST.get('head_text', False),
+                              company_name=request.POST.get('company_name', False),
+                              company_slogan=request.POST.get('company_slogan', False),
+                              logo_main=request.FILES.get('logo_main'),
+                              logo_head=request.FILES.get('logo_head'),
+                              iphone_image=request.FILES.get('iphone_image'),
+                              macbook_image=request.FILES.get('macbook_image'),
+                              ipad_image=request.FILES.get('ipad_image'), ).save()
+
