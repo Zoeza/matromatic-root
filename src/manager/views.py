@@ -52,7 +52,7 @@ def home_manager(request, action):
     if action == 'edit_top_page':
         if request.method == 'POST':
             top_page_id = request.POST.get('top_page_id', False)
-            top_page_selected = TopPage.objects.get(id=top_page_id)
+            top_page_selected = TopPage.objects.all().get(id=top_page_id)
             top_page_selected(language=request.POST.get('language', False),
                               head_title=request.POST.get('head_title', False),
                               head_text=request.POST.get('head_text', False),
