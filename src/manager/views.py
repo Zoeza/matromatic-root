@@ -22,12 +22,15 @@ def home_manager(request, action):
         url = direction + "/manager/home-manager.html"
         tab = request.session.get('tab')
         request.session['tab'] = None
+
+        top_pages = TopPage.objects.all()
         context = {
             'nav_side': nav_side,
             'tab': tab,
+            'top_pages': top_pages,
         }
         return render(request, url, context)
-    # ---------------------- top page----------------------
+    # ---------------------- create top page---------------------- #
     if action == 'create_top_page':
         if request.method == 'POST':
             language = request.POST.get('language', False)
@@ -52,3 +55,5 @@ def home_manager(request, action):
                     ipad_image=ipad_image, ).save()
         request.session['tab'] = 'top-page'
         return redirect('home-manager', 'main')
+    # ---------------------- edit top page---------------------- #
+
