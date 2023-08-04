@@ -76,3 +76,6 @@ def home_manager(request, action):
             top_page_selected.ipad_image = ipad_image
             top_page_selected .save()
 
+            request.session['tab'] = 'main'
+            return redirect('home-manager', 'main')
+
