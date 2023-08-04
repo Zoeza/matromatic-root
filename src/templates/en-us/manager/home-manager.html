@@ -52,7 +52,256 @@
     <div class="card">
         <div class="tab-content">
             <div class="tab-pane fade show active" id="nav-one-eg1" role="tabpanel" aria-labelledby="nav-one-eg1-tab">
-                <p>First tab content...</p>
+                <div class="row">
+                <div class="col-lg-3">
+                      <!-- Navbar -->
+                      <div class="navbar-expand-lg navbar-vertical mb-3 mb-lg-5">
+                        <!-- Navbar Toggle -->
+                        <!-- Navbar Toggle -->
+                        <div class="d-grid">
+                          <button type="button" class="navbar-toggler btn btn-white mb-3" data-bs-toggle="collapse" data-bs-target="#navbarVerticalNavMenu" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navbarVerticalNavMenu">
+                            <span class="d-flex justify-content-between align-items-center">
+                              <span class="text-dark">Menu</span>
+
+                              <span class="navbar-toggler-default">
+                                <i class="bi-list"></i>
+                              </span>
+
+                              <span class="navbar-toggler-toggled">
+                                <i class="bi-x"></i>
+                              </span>
+                            </span>
+                          </button>
+                        </div>
+                        <!-- End Navbar Toggle -->
+                        <!-- End Navbar Toggle -->
+
+                        <!-- Navbar Collapse -->
+                        <div id="navbarVerticalNavMenu" class="collapse navbar-collapse">
+                          <ul id="navbarSettings" class="js-sticky-block js-scrollspy card card-navbar-nav nav nav-tabs nav-lg nav-vertical" data-hs-sticky-block-options='{
+                                 "parentSelector": "#navbarVerticalNavMenu",
+                                 "targetSelector": "#header",
+                                 "breakpoint": "lg",
+                                 "startPoint": "#navbarVerticalNavMenu",
+                                 "endPoint": "#stickyBlockEndPoint",
+                                 "stickyOffsetTop": 20
+                               }'>
+                            <li class="nav-item">
+                              <a class="nav-link active" href="#content">
+                                <i class="bi-person nav-icon"></i> Company information
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#SocialMedia">
+                                <i class="bi-trash nav-icon"></i> Social Media information
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                        <!-- End Navbar Collapse -->
+                      </div>
+                      <!-- End Navbar -->
+                    </div>
+                <div class="col-lg-9">
+                      <div class="d-grid gap-3 gap-lg-5">
+
+
+                        <!-- Card -->
+                        <div class="card">
+                          <div class="card-header">
+                            <h2 class="card-title h4">Basic information</h2>
+                          </div>
+                            <br>
+
+                          <!-- Body -->
+                          <div class="card-body">
+                            <!-- Form -->
+                              <form class="row g-3" action="{% url 'home-manager' 'edit_top_page' %}"  novalidate method="post" enctype="multipart/form-data">
+                                  {% csrf_token %}
+
+                                  <div class="mb-3">
+                                      <label for="LanguageSelect" class="form-label">Language</label>
+                                      <div class="input-group input-group-merge">
+                                            <select id="LanguageSelect" class="form-select" name="language">
+                                              <option>Choose a language</option>
+                                              <option>En</option>
+                                              <option>Fr</option>
+                                              <option>Ar</option>
+                                            </select>
+                                      </div>
+                                  </div>
+
+                                  <!-- begin main logo -->
+                                  <div class="col-md-6 ">
+                                      <label class="col-sm-3 col-form-label form-label"> Logo Main</label>
+                                      <div class="col-sm-9">
+                                        <div class="d-flex align-items-center">
+                                          <!-- logo -->
+                                          <label class="avatar avatar-xl  avatar-uploader " for="logomainUploader">
+                                            <img id="logo_main" class="avatar-img" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
+
+                                            <input type="file" class="js-file-attach avatar-uploader-input" name="logo_main" id="logomainUploader" data-hs-file-attach-options=' {
+                                                      "textTarget": "#logo_main",
+                                                      "mode": "image",
+                                                      "targetAttr": "src",
+                                                      "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
+                                                      }'>
+
+                                          </label>
+                                          <!-- End logo -->
+
+                                         </div>
+                                      </div>
+                                  </div>
+                                  <!-- end main logo -->
+                                   <!-- begin head logo -->
+                                  <div class="col-md-6">
+                                  <label class="col-sm-3 col-form-label form-label"> Logo Head</label>
+                                  <div class="col-sm-9">
+                                    <div class="d-flex align-items-center">
+                                      <!-- Avatar -->
+                                      <label class="avatar avatar-sm  avatar-uploader " for="logoheadUploader">
+                                        <img id="logo_head" class="avatar-img"  src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="" >
+
+                                        <input type="file" class="js-file-attach avatar-uploader-input"  name="logo_head" id="logoheadUploader" data-hs-file-attach-options=' {
+                                                  "textTarget": "#logo_head",
+                                                  "mode": "image",
+                                                  "targetAttr": "src",
+                                                  "allowTypes": [".png",".jpeg", ".jpg",".ico"]}'>
+                                      </label>
+                                      <!-- End Avatar -->
+
+                                    </div>
+                                  </div>
+                                </div>
+                                   <!-- end head logo -->
+
+                                  <!-- begin head title -->
+                                  <div class="col-md-6">
+                                      <label for="head_title" class="form-label">Head title</label>
+                                      <input type="text" class="form-control" name="head_title" id="head_title">
+                                   </div>
+                                  <!-- end head title -->
+
+                                  <!-- begin head text -->
+                                  <div class="col-md-6">
+                                      <label for="head_text" class="form-label">Head Text</label>
+                                      <input type="text"  class="form-control" name="head_text" id="head_text" >
+                                   </div>
+                                  <!-- end head text -->
+                                  <!-- begin company name-->
+                                  <div class="col-md-6">
+                                      <label for="companyname" class="form-label">Company Name</label>
+                                        <input type="text" class="form-control" name="company_name" id="companyname">
+                                  </div>
+                                  <!-- end company name-->
+                                  <!-- begin company slogan-->
+                                  <div class="col-md-6">
+                                     <label for="company_name" class="form-label">Company Slogan</label>
+                                     <input type="text" class="form-control" name="company_slogan" id="company_name">
+                                  </div>
+                                  <!-- end company slogan-->
+
+                                  <br>
+                                  <!-- begin iphone image -->
+                                  <div class="col-md-4 ">
+                                      <label class="col-sm-3 col-form-label form-label"> iphone image</label>
+                                      <div class="col-sm-9">
+                                        <div class="d-flex align-items-center">
+                                          <!-- logo -->
+                                          <label class="avatar avatar-xl  avatar-uploader " for="iphoneimgUploader">
+                                            <img id="iphone_image" class="avatar-img" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
+
+                                            <input type="file" class="js-file-attach avatar-uploader-input" name="logo_main" id="iphoneimgUploader" data-hs-file-attach-options=' {
+                                                      "textTarget": "#iphone_image",
+                                                      "mode": "image",
+                                                      "targetAttr": "src",
+                                                      "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
+                                                      }'>
+
+                                          </label>
+                                          <!-- End logo -->
+
+                                         </div>
+                                      </div>
+                                  </div>
+                                  <!-- end iphone image -->
+                                  <!-- begin ipad img -->
+
+                                  <div class="col-md-4 ">
+                                      <label class="col-sm-3 col-form-label form-label"> ipad image</label>
+                                      <div class="col-sm-9">
+                                        <div class="d-flex align-items-center">
+                                          <!-- logo -->
+                                          <label class="avatar avatar-xl  avatar-uploader " for="ipadimgUploader">
+                                            <img id="ipad_image" class="avatar-img" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
+
+                                            <input type="file" class="js-file-attach avatar-uploader-input" name="logo_main" id="ipadimgUploader" data-hs-file-attach-options=' {
+                                                      "textTarget": "#ipad_image",
+                                                      "mode": "image",
+                                                      "targetAttr": "src",
+                                                      "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
+                                                      }'>
+
+                                          </label>
+                                          <!-- End logo -->
+                                         </div>
+                                      </div>
+                                  </div>
+                                  <!-- end ipad img -->
+                                  <!-- begin macbook img -->
+                                  <div class="col-md-4 ">
+                                      <label class="col-sm-3 col-form-label form-label"> ipad image</label>
+                                      <div class="col-sm-9">
+                                        <div class="d-flex align-items-center">
+                                          <!-- logo -->
+                                          <label class="avatar avatar-xl  avatar-uploader " for="macbookimgUploader">
+                                            <img id="macbook_image" class="avatar-img" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
+
+                                            <input type="file" class="js-file-attach avatar-uploader-input" name="logo_main" id="macbookimgUploader" data-hs-file-attach-options=' {
+                                                      "textTarget": "#macbook_image",
+                                                      "mode": "image",
+                                                      "targetAttr": "src",
+                                                      "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
+                                                      }'>
+
+                                          </label>
+                                          <!-- End logo -->
+                                         </div>
+                                      </div>
+                                  </div>
+                                  <!-- end macbook img -->
+
+                              <div class="d-flex justify-content-end">
+                                <button type="submit" class="btn btn-white">Save changes</button>
+                              </div>
+                            </form>
+                            <!-- End Form -->
+                          </div>
+                          <!-- End Body -->
+                        </div>
+                        <!-- End Card -->
+
+                        <!-- Card -->
+                        <div id="SocialMedia" class="card">
+                          <div class="card-header">
+                            <h4 class="card-title">Socials Media</h4>
+                          </div>
+
+                          <!-- Body -->
+                          <div class="card-body">
+
+
+                          </div>
+                          <!-- End Body -->
+                        </div>
+                        <!-- End Card -->
+                      </div>
+
+                      <!-- Sticky Block End Point -->
+                      <div id="stickyBlockEndPoint"></div>
+                    </div>
+            </div>
             </div>
 
 
