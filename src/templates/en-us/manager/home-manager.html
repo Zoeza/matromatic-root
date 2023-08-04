@@ -48,9 +48,10 @@
         <!-- Tab Content -->
     <div class="card">
         <div class="tab-content">
+            <!-- begin main content -->
             <div class="tab-pane fade show active" id="nav-one-eg1" role="tabpanel" aria-labelledby="nav-one-eg1-tab">
                 <div class="row">
-                <div class="col-lg-3">
+                    <div class="col-lg-3">
                       <!-- Navbar -->
                       <div class="navbar-expand-lg navbar-vertical mb-3 mb-lg-5">
                         <!-- Navbar Toggle -->
@@ -100,218 +101,218 @@
                       <!-- End Navbar -->
                     </div>
                     <div class="col-lg-9">
-                      <div class="d-grid gap-3 gap-lg-5">
+                        <div class="d-grid gap-3 gap-lg-5">
 
-                        <!-- Card -->
-                        <div class="card">
-                          <div class="card-header">
-                            <h2 class="card-title h4">Top page information</h2>
-                          </div>
-                            <br>
-
-                          <!-- Body -->
-                          <div class="card-body">
-                            <!-- Form -->
-                              {% for top_page in top_pages %}
-                              <form class="row g-3" action="{% url 'home-manager' 'edit_top_page' %}"  novalidate method="post" enctype="multipart/form-data">
-                                  {% csrf_token %}
-
-                                  <div class="mb-3">
-                                      <label for="LanguageSelect" class="form-label">Language</label>
-                                      <div class="input-group input-group-merge">
-                                            <select id="LanguageSelect_{{top_page.id}}" class="form-select" name="{{top_page.language}}" >
-                                              <option>{{ top_page.language }}</option>
-                                              <option>en</option>
-                                              <option>fr</option>
-                                              <option>ar</option>
-                                            </select>
-                                      </div>
-                                  </div>
-
-                                  <!-- begin main logo -->
-                                  <div class="col-md-6 ">
-                                      <label class="col-sm-3 col-form-label form-label"> Logo Main</label>
-                                      <div class="col-sm-9">
-                                        <div class="d-flex align-items-center">
-                                          <!-- logo -->
-                                          <label class="avatar avatar-xl  " for="logomainUploader_{{top_page.id}}">
-                                            <img id="logo_main_{{top_page.id}}" class="avatar-img" src="{% get_media_prefix %}{{ top_page.logo_main }}" alt="">
-
-                                            <input type="file" class="js-file-attach avatar-uploader-input" name="logo_main" id="logomainUploader_{{top_page.id}}" data-hs-file-attach-options=' {
-                                                      "textTarget": "#logo_main_{{top_page.id}}",
-                                                      "mode": "image",
-                                                      "targetAttr": "src",
-                                                      "allowTypes": [".png", ".jpeg", ".jpg",".svg"] }'>
-
-                                              <span class="avatar-uploader-trigger">
-                                                  <i class="bi-pencil-fill avatar-uploader-icon shadow-sm"></i>
-                                              </span>
-
-                                          </label>
-                                          <!-- End logo -->
-
-                                         </div>
-                                      </div>
-                                  </div>
-                                  <!-- end main logo -->
-                                   <!-- begin head logo -->
-                                  <div class="col-md-6">
-                                  <label class="col-sm-3 col-form-label form-label"> Logo Head</label>
-                                  <div class="col-sm-9">
-                                    <div class="d-flex align-items-center">
-                                      <!-- Avatar -->
-                                      <label class="avatar avatar-sm  avatar-uploader " for="logoheadUploader_{{top_page.id}}">
-                                        <img id="logo_head_{{top_page.id}}" class="avatar-img"  src="{% get_media_prefix %}{{ top_page.logo_head }}" alt="" >
-
-                                        <input type="file" class="js-file-attach avatar-uploader-input"  name="logo_head" id="logoheadUploader_{{top_page.id}}" data-hs-file-attach-options=' {
-                                                  "textTarget": "#logo_head_{{top_page.id}}",
-                                                  "mode": "image",
-                                                  "targetAttr": "src",
-                                                  "allowTypes": [".png",".jpeg", ".jpg",".ico"]}'>
-                                          <span class="avatar-uploader-trigger">
-                                                  <i class="bi-pencil-fill avatar-uploader-icon shadow-sm"></i>
-                                              </span>
-
-                                      </label>
-                                      <!-- End Avatar -->
-
-                                    </div>
-                                  </div>
-                                </div>
-                                   <!-- end head logo -->
-
-                                  <!-- begin head title -->
-                                  <div class="col-md-6">
-                                      <label for="head_title_{{top_page.id}}" class="form-label">Head title</label>
-                                      <input type="text" class="form-control" name="head_title_{{top_page.id}}" id="head_title_{{top_page.id}}" value="{{top_page.head_title}}">
-                                   </div>
-                                  <!-- end head title -->
-
-                                  <!-- begin head text -->
-                                  <div class="col-md-6">
-                                      <label for="head_text_{{top_page.id}}" class="form-label">Head Text</label>
-                                      <input type="text"  class="form-control" name="head_text_{{top_page.id}}" id="head_text_{{top_page.id}}" value="{{top_page.head_text}}" >
-                                   </div>
-                                  <!-- end head text -->
-                                  <!-- begin company name-->
-                                  <div class="col-md-6">
-                                      <label for="companyname_{{top_page.id}}" class="form-label">Company Name</label>
-                                        <input type="text" class="form-control" name="company_name_{{top_page.id}}" id="companyname_{{top_page.id}}" value="{{top_page.company_name}}">
-                                  </div>
-                                  <!-- end company name-->
-                                  <!-- begin company slogan-->
-                                  <div class="col-md-6">
-                                     <label for="company_name_{{top_page.id}}" class="form-label">Company Slogan</label>
-                                     <input type="text" class="form-control" name="company_slogan_{{top_page.id}}" id="company_name_{{top_page.id}}" value="{{top_page.company_slogan}}">
-                                  </div>
-                                  <!-- end company slogan-->
-
-                                  <br>
-                                  <!-- begin iphone image -->
-                                  <div class="col-md-4 ">
-                                      <label class="col-sm-3 col-form-label form-label"> iphone image</label>
-                                      <div class="col-sm-9">
-                                        <div class="d-flex align-items-center">
-                                          <!-- logo -->
-                                          <label class="avatar avatar-xl  avatar-uploader " for="iphoneimgUploader_{{top_page.id}}">
-                                            <img id="iphone_image_{{top_page.id}}" class="avatar-img" src="{% get_media_prefix %}{{ top_page.iphone_image }}"  alt="">
-
-                                            <input type="file" class="js-file-attach avatar-uploader-input" name="iphone_image_{{top_page.id}}" id="iphoneimgUploader_{{top_page.id}}" data-hs-file-attach-options=' {
-                                                      "textTarget": "#iphone_image_{{top_page.id}}",
-                                                      "mode": "image",
-                                                      "targetAttr": "src",
-                                                      "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
-                                                      }'>
-                                              <span class="avatar-uploader-trigger">
-                                                  <i class="bi-pencil-fill avatar-uploader-icon shadow-sm"></i>
-                                              </span>
-                                          </label>
-                                          <!-- End logo -->
-                                         </div>
-                                      </div>
-                                  </div>
-                                  <!-- end iphone image -->
-                                  <!-- begin ipad img -->
-
-                                  <div class="col-md-4 ">
-                                      <label class="col-sm-3 col-form-label form-label"> ipad image</label>
-                                      <div class="col-sm-9">
-                                        <div class="d-flex align-items-center">
-                                          <!-- logo -->
-                                          <label class="avatar avatar-xl  avatar-uploader " for="ipadimgUploader_{{top_page.id}}">
-                                            <img id="ipad_image_{{top_page.id}}" class="avatar-img" src="{% get_media_prefix %}{{ top_page.ipad_image }}"  alt="">
-
-                                            <input type="file" class="js-file-attach avatar-uploader-input" name="ipad_image_{{top_page.id}}" id="ipadimgUploader_{{top_page.id}}" data-hs-file-attach-options=' {
-                                                      "textTarget": "#ipad_image_{{top_page.id}}",
-                                                      "mode": "image",
-                                                      "targetAttr": "src",
-                                                      "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
-                                                      }'>
-                                              <span class="avatar-uploader-trigger">
-                                                  <i class="bi-pencil-fill avatar-uploader-icon shadow-sm"></i>
-                                              </span>
-
-                                          </label>
-                                          <!-- End logo -->
-                                         </div>
-                                      </div>
-                                  </div>
-                                  <!-- end ipad img -->
-                                  <!-- begin macbook img -->
-                                  <div class="col-md-4 ">
-                                      <label class="col-sm-3 col-form-label form-label"> macbook image</label>
-                                      <div class="col-sm-9">
-                                        <div class="d-flex align-items-center">
-                                          <!-- logo -->
-                                          <label class="avatar avatar-xl  avatar-uploader" for="macbookimgUploader_{{top_page.id}}">
-                                            <img id="macbook_image_{{top_page.id}}" class="avatar-img" src="{% get_media_prefix %}{{ top_page.macbook_image }}"  alt="">
-
-                                            <input type="file" class="js-file-attach avatar-uploader-input" name="macbook_image_{{top_page.id}}" id="macbookimgUploader_{{top_page.id}}" data-hs-file-attach-options=' {
-                                                      "textTarget": "#macbook_image_{{top_page.id}}",
-                                                      "mode": "image",
-                                                      "targetAttr": "src",
-                                                      "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
-                                                      }'>
-                                              <span class="avatar-uploader-trigger">
-                                                  <i class="bi-pencil-fill avatar-uploader-icon shadow-sm"></i>
-                                              </span>
-                                          </label>
-                                          <!-- End logo -->
-                                         </div>
-                                      </div>
-                                  </div>
-                                  <!-- end macbook img -->
-
-                              <div class="d-flex justify-content-end">
-                                <button type="submit" class="btn btn-white">Save changes</button>
+                            <!-- Card -->
+                            <div class="card">
+                              <div class="card-header">
+                                <h2 class="card-title h4">Top page information</h2>
                               </div>
-                            </form>
-                              {% endfor %}
-                              <!-- End Form -->
-                          </div>
-                          <!-- End Body -->
-                        </div>
-                        <!-- End Card -->
+                                <br>
 
-                        <!-- Card -->
-                        <div id="SocialMedia_{{top_page.id}}" class="card">
-                          <div class="card-header">
-                            <h4 class="card-title">Socials Media</h4>
-                          </div>
-                          <!-- Body -->
-                          <div class="card-body">
+                              <!-- Body -->
+                              <div class="card-body">
+                                <!-- Form -->
+                                  {% for top_page in top_pages %}
+                                  <form class="row g-3" action="{% url 'home-manager' 'edit_top_page' %}"  novalidate method="post" enctype="multipart/form-data">
+                                      {% csrf_token %}
 
-                          </div>
-                          <!-- End Body -->
-                        </div>
-                        <!-- End Card -->
+                                      <div class="mb-3">
+                                          <label for="LanguageSelect" class="form-label">Language</label>
+                                          <div class="input-group input-group-merge">
+                                                <select id="LanguageSelect_{{top_page.id}}" class="form-select" name="{{top_page.language}}" >
+                                                  <option>{{ top_page.language }}</option>
+                                                  <option>en</option>
+                                                  <option>fr</option>
+                                                  <option>ar</option>
+                                                </select>
+                                          </div>
+                                      </div>
+
+                                      <!-- begin main logo -->
+                                      <div class="col-md-6 ">
+                                          <label class="col-sm-3 col-form-label form-label"> Logo Main</label>
+                                          <div class="col-sm-9">
+                                            <div class="d-flex align-items-center">
+                                              <!-- logo -->
+                                              <label class="avatar avatar-xl  " for="logomainUploader_{{top_page.id}}">
+                                                <img id="logo_main_{{top_page.id}}" class="avatar-img" src="{% get_media_prefix %}{{ top_page.logo_main }}" alt="">
+
+                                                <input type="file" class="js-file-attach avatar-uploader-input" name="logo_main" id="logomainUploader_{{top_page.id}}" data-hs-file-attach-options=' {
+                                                          "textTarget": "#logo_main_{{top_page.id}}",
+                                                          "mode": "image",
+                                                          "targetAttr": "src",
+                                                          "allowTypes": [".png", ".jpeg", ".jpg",".svg"] }'>
+
+                                                  <span class="avatar-uploader-trigger">
+                                                      <i class="bi-pencil-fill avatar-uploader-icon shadow-sm"></i>
+                                                  </span>
+
+                                              </label>
+                                              <!-- End logo -->
+
+                                             </div>
+                                          </div>
+                                      </div>
+                                      <!-- end main logo -->
+                                       <!-- begin head logo -->
+                                      <div class="col-md-6">
+                                          <label class="col-sm-3 col-form-label form-label"> Logo Head</label>
+                                          <div class="col-sm-9">
+                                            <div class="d-flex align-items-center">
+                                              <!-- Avatar -->
+                                              <label class="avatar avatar-sm  avatar-uploader " for="logoheadUploader_{{top_page.id}}">
+                                                <img id="logo_head_{{top_page.id}}" class="avatar-img"  src="{% get_media_prefix %}{{ top_page.logo_head }}" alt="" >
+
+                                                <input type="file" class="js-file-attach avatar-uploader-input"  name="logo_head" id="logoheadUploader_{{top_page.id}}" data-hs-file-attach-options=' {
+                                                          "textTarget": "#logo_head_{{top_page.id}}",
+                                                          "mode": "image",
+                                                          "targetAttr": "src",
+                                                          "allowTypes": [".png",".jpeg", ".jpg",".ico"]}'>
+                                                  <span class="avatar-uploader-trigger">
+                                                          <i class="bi-pencil-fill avatar-uploader-icon shadow-sm"></i>
+                                                      </span>
+
+                                              </label>
+                                              <!-- End Avatar -->
+
+                                            </div>
+                                          </div>
+                                      </div>
+                                       <!-- end head logo -->
+
+                                      <!-- begin head title -->
+                                      <div class="col-md-6">
+                                          <label for="head_title_{{top_page.id}}" class="form-label">Head title</label>
+                                          <input type="text" class="form-control" name="head_title_{{top_page.id}}" id="head_title_{{top_page.id}}" value="{{top_page.head_title}}">
+                                       </div>
+                                      <!-- end head title -->
+
+                                      <!-- begin head text -->
+                                      <div class="col-md-6">
+                                          <label for="head_text_{{top_page.id}}" class="form-label">Head Text</label>
+                                          <input type="text"  class="form-control" name="head_text_{{top_page.id}}" id="head_text_{{top_page.id}}" value="{{top_page.head_text}}" >
+                                       </div>
+                                      <!-- end head text -->
+                                      <!-- begin company name-->
+                                      <div class="col-md-6">
+                                          <label for="companyname_{{top_page.id}}" class="form-label">Company Name</label>
+                                            <input type="text" class="form-control" name="company_name_{{top_page.id}}" id="companyname_{{top_page.id}}" value="{{top_page.company_name}}">
+                                      </div>
+                                      <!-- end company name-->
+                                      <!-- begin company slogan-->
+                                      <div class="col-md-6">
+                                         <label for="company_name_{{top_page.id}}" class="form-label">Company Slogan</label>
+                                         <input type="text" class="form-control" name="company_slogan_{{top_page.id}}" id="company_name_{{top_page.id}}" value="{{top_page.company_slogan}}">
+                                      </div>
+                                      <!-- end company slogan-->
+
+                                      <br>
+                                      <!-- begin iphone image -->
+                                      <div class="col-md-4 ">
+                                          <label class="col-sm-3 col-form-label form-label"> iphone image</label>
+                                          <div class="col-sm-9">
+                                            <div class="d-flex align-items-center">
+                                              <!-- logo -->
+                                              <label class="avatar avatar-xl  avatar-uploader " for="iphoneimgUploader_{{top_page.id}}">
+                                                <img id="iphone_image_{{top_page.id}}" class="avatar-img" src="{% get_media_prefix %}{{ top_page.iphone_image }}"  alt="">
+
+                                                <input type="file" class="js-file-attach avatar-uploader-input" name="iphone_image_{{top_page.id}}" id="iphoneimgUploader_{{top_page.id}}" data-hs-file-attach-options=' {
+                                                          "textTarget": "#iphone_image_{{top_page.id}}",
+                                                          "mode": "image",
+                                                          "targetAttr": "src",
+                                                          "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
+                                                          }'>
+                                                  <span class="avatar-uploader-trigger">
+                                                      <i class="bi-pencil-fill avatar-uploader-icon shadow-sm"></i>
+                                                  </span>
+                                              </label>
+                                              <!-- End logo -->
+                                             </div>
+                                          </div>
+                                      </div>
+                                      <!-- end iphone image -->
+                                      <!-- begin ipad img -->
+
+                                      <div class="col-md-4 ">
+                                          <label class="col-sm-3 col-form-label form-label"> ipad image</label>
+                                          <div class="col-sm-9">
+                                            <div class="d-flex align-items-center">
+                                              <!-- logo -->
+                                              <label class="avatar avatar-xl  avatar-uploader " for="ipadimgUploader_{{top_page.id}}">
+                                                <img id="ipad_image_{{top_page.id}}" class="avatar-img" src="{% get_media_prefix %}{{ top_page.ipad_image }}"  alt="">
+
+                                                <input type="file" class="js-file-attach avatar-uploader-input" name="ipad_image_{{top_page.id}}" id="ipadimgUploader_{{top_page.id}}" data-hs-file-attach-options=' {
+                                                          "textTarget": "#ipad_image_{{top_page.id}}",
+                                                          "mode": "image",
+                                                          "targetAttr": "src",
+                                                          "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
+                                                          }'>
+                                                  <span class="avatar-uploader-trigger">
+                                                      <i class="bi-pencil-fill avatar-uploader-icon shadow-sm"></i>
+                                                  </span>
+
+                                              </label>
+                                              <!-- End logo -->
+                                             </div>
+                                          </div>
+                                      </div>
+                                      <!-- end ipad img -->
+                                      <!-- begin macbook img -->
+                                      <div class="col-md-4 ">
+                                          <label class="col-sm-3 col-form-label form-label"> macbook image</label>
+                                          <div class="col-sm-9">
+                                            <div class="d-flex align-items-center">
+                                              <!-- logo -->
+                                              <label class="avatar avatar-xl  avatar-uploader" for="macbookimgUploader_{{top_page.id}}">
+                                                <img id="macbook_image_{{top_page.id}}" class="avatar-img" src="{% get_media_prefix %}{{ top_page.macbook_image }}"  alt="">
+
+                                                <input type="file" class="js-file-attach avatar-uploader-input" name="macbook_image_{{top_page.id}}" id="macbookimgUploader_{{top_page.id}}" data-hs-file-attach-options=' {
+                                                          "textTarget": "#macbook_image_{{top_page.id}}",
+                                                          "mode": "image",
+                                                          "targetAttr": "src",
+                                                          "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
+                                                          }'>
+                                                  <span class="avatar-uploader-trigger">
+                                                      <i class="bi-pencil-fill avatar-uploader-icon shadow-sm"></i>
+                                                  </span>
+                                              </label>
+                                              <!-- End logo -->
+                                             </div>
+                                          </div>
+                                      </div>
+                                      <!-- end macbook img -->
+
+                                  <div class="d-flex justify-content-end">
+                                    <button type="submit" class="btn btn-white">Save changes</button>
+                                  </div>
+                                </form>
+                                  {% endfor %}
+                                  <!-- End Form -->
+                              </div>
+                              <!-- End Body -->
+                            </div>
+                            <!-- End Card -->
+                            <!-- Card -->
+                            <div id="SocialMedia_{{top_page.id}}" class="card">
+                              <div class="card-header">
+                                <h4 class="card-title">Socials Media</h4>
+                              </div>
+                              <!-- Body -->
+                              <div class="card-body">
+
+                              </div>
+                              <!-- End Body -->
+                            </div>
+                            <!-- End Card -->
                       </div>
-
                       <!-- Sticky Block End Point -->
                       <div id="stickyBlockEndPoint_{{top_page.id}}"></div>
                     </div>
                 </div>
             </div>
+            <!-- end main content -->
+
             <div class="tab-pane fade" id="nav-two-eg1" role="tabpanel" aria-labelledby="nav-two-eg1-tab">
             <div class="row">
                 <div class="col-lg-3">

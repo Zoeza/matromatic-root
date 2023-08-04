@@ -33,27 +33,22 @@ def home_manager(request, action):
     # ---------------------- create top page---------------------- #
     if action == 'create_top_page':
         if request.method == 'POST':
-            language = request.POST.get('language', False)
-            head_title = request.POST.get('head_title', False)
-            head_text = request.POST.get('head_text', False)
-            company_name = request.POST.get('company_name', False)
-            company_slogan = request.POST.get('company_slogan', False)
-            logo_main = request.FILES.get('logo_main')
-            logo_head = request.FILES.get('logo_head')
-            iphone_image = request.FILES.get('iphone_image')
-            macbook_image = request.FILES.get('macbook_image')
-            ipad_image = request.FILES.get('ipad_image')
-            TopPage(language=language,
-                    head_title=head_title,
-                    head_text=head_text,
-                    company_name=company_name,
-                    company_slogan=company_slogan,
-                    logo_main=logo_main,
-                    logo_head=logo_head,
-                    iphone_image=iphone_image,
-                    macbook_image=macbook_image,
-                    ipad_image=ipad_image, ).save()
+            TopPage(language=request.POST.get('language', False),
+                    head_title=request.POST.get('head_title', False),
+                    head_text=request.POST.get('head_text', False),
+                    company_name=request.POST.get('company_name', False),
+                    company_slogan=request.POST.get('company_slogan', False),
+                    logo_main=request.FILES.get('logo_main'),
+                    logo_head=request.FILES.get('logo_head'),
+                    iphone_image=request.FILES.get('iphone_image'),
+                    macbook_image=request.FILES.get('macbook_image'),
+                    ipad_image= request.FILES.get('ipad_image'), ).save()
         request.session['tab'] = 'top-page'
         return redirect('home-manager', 'main')
     # ---------------------- edit top page---------------------- #
+    if action == 'edit_top_page':
+        pass
+
+
+
 
