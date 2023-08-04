@@ -121,7 +121,7 @@
                           <!-- Body -->
                           <div class="card-body">
                             <!-- Form -->
-                              <form class="row g-3" action="{% url 'home-manager' 'create_top_page' %}"  class="js-validate need-validate" novalidate method="post" enctype="multipart/form-data">
+                              <form class="row g-3" action="{% url 'home-manager' 'create_top_page' %}"  novalidate method="post" enctype="multipart/form-data">
                                   {% csrf_token %}
 
                                   <div class="mb-3">
@@ -133,7 +133,6 @@
                                               <option>Fr</option>
                                               <option>Ar</option>
                                             </select>
-                                            <span class="invalid-feedback text-start">Field required.</span>
                                       </div>
                                   </div>
 
@@ -151,17 +150,15 @@
                                                   "mode": "image",
                                                   "targetAttr": "src",
                                                   "allowTypes": [".png", ".jpeg", ".jpg"]
-                                                  }'required>
+                                                  }'>
 
                                         <span class="avatar-uploader-trigger">
                                           <i class="bi-pencil avatar-uploader-icon shadow-sm"></i>
                                         </span>
-                                          <span class="invalid-feedback text-center">Please upload an image.</span>
 
                                       </label>
                                       <!-- End logo -->
 
-                                      <button type="button" class="js-file-attach-reset-img btn btn-white">Delete</button>
                                     </div>
                                   </div>
                                 </div>
@@ -179,40 +176,35 @@
                                                   "textTarget": "#logohead",
                                                   "mode": "image",
                                                   "targetAttr": "src",
-                                                  "allowTypes": [".png",".jpeg", ".jpg"]}'required>
+                                                  "allowTypes": [".png",".jpeg", ".jpg"]}'>
 
                                         <span class="avatar-uploader-trigger">
                                           <i class="bi-pencil avatar-uploader-icon shadow-sm"></i>
                                         </span>
-                                          <span class="invalid-feedback text-start">Field required.</span>
                                       </label>
                                       <!-- End Avatar -->
 
-                                      <button type="button" class="js-file-attach-reset-img btn btn-white">Delete</button>
                                     </div>
                                   </div>
                                 </div>
                                    <!-- end head logo -->
                                    <div class="col-md-6">
                                       <label for="headtitle" class="form-label">Head title</label>
-                                      <input type="text" class="form-control" name="{{ top_page_form.head_title.name }}" id="headtitle" required>
-                                        <span class="invalid-feedback text-start">Field required.</span>
+                                      <input type="text" class="form-control" name="{{ top_page_form.head_title.name }}" id="headtitle">
 
                                    </div>
                                    <div class="col-md-6">
                                       <label for="headtext" class="form-label">Head Text</label>
-                                      <input type="text"  class="form-control" name="{{ top_page_form.head_text.name }}" id="headtext" required>
+                                      <input type="text"  class="form-control" name="{{ top_page_form.head_text.name }}" id="headtext" >
                                    </div>
                                    <div class="col-md-6">
                                       <label for="companyname" class="form-label">Company Name</label>
-                                        <input type="text" class="form-control" name="{{ top_page_form.company_name.name }}" id="companyname" required>
-                                      <span class="invalid-feedback text-start">Field required.</span>
+                                        <input type="text" class="form-control" name="{{ top_page_form.company_name.name }}" id="companyname">
 
                                    </div>
                                    <div class="col-md-6">
                                   <label for="companyslogan" class="form-label">Company Slogan</label>
-                                  <input type="text" class="form-control" name="{{ top_page_form.company_slogan.name }}" id="companyslogan" required>
-                                    <span class="invalid-feedback text-start">Field required.</span>
+                                  <input type="text" class="form-control" name="{{ top_page_form.company_slogan.name }}" id="companyslogan">
 
                                 </div>
                                   <hr>
@@ -229,12 +221,11 @@
                                                   "textTarget": "#iphoneImg",
                                                   "mode": "image",
                                                   "targetAttr": "src",
-                                                  "allowTypes": [".png",".jpeg", ".jpg"]}'required>
+                                                  "allowTypes": [".png",".jpeg", ".jpg"]}'>
 
                                         <span class="avatar-uploader-trigger">
                                           <i class="bi-pencil avatar-uploader-icon shadow-sm"></i>
                                         </span>
-                                          <span class="invalid-feedback text-start">Field required.</span>
 
                                       </label>
                                       <!-- End Avatar -->
@@ -255,12 +246,11 @@
                                                   "textTarget": "#ipadImg",
                                                   "mode": "image",
                                                   "targetAttr": "src",
-                                                  "allowTypes": [".png",".jpeg", ".jpg"]}'required>
+                                                  "allowTypes": [".png",".jpeg", ".jpg"]}'>
 
                                         <span class="avatar-uploader-trigger">
                                           <i class="bi-pencil avatar-uploader-icon shadow-sm"></i>
                                         </span>
-                                          <span class="invalid-feedback text-start">Field required.</span>
 
                                       </label>
                                       <!-- End Avatar -->
@@ -281,12 +271,11 @@
                                                   "textTarget": "#macbookImg",
                                                   "mode": "image",
                                                   "targetAttr": "src",
-                                                  "allowTypes": [".png",".jpeg", ".jpg"]}'required>
+                                                  "allowTypes": [".png",".jpeg", ".jpg"]}'>
 
                                         <span class="avatar-uploader-trigger">
                                           <i class="bi-pencil avatar-uploader-icon shadow-sm"></i>
                                         </span>
-                                          <span class="invalid-feedback text-start">Field required.</span>
 
                                       </label>
                                       <!-- End Avatar -->
