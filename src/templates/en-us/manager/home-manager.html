@@ -184,26 +184,26 @@
                                       <!-- begin head title -->
                                       <div class="col-md-6">
                                           <label for="head_title_{{top_page.id}}" class="form-label">Head title</label>
-                                          <input type="text" class="form-control" name="head_title_{{top_page.id}}" id="head_title_{{top_page.id}}" value="{{top_page.head_title}}">
+                                          <input type="text" class="form-control" name="head_title" id="head_title_{{top_page.id}}" value="{{top_page.head_title}}">
                                        </div>
                                       <!-- end head title -->
 
                                       <!-- begin head text -->
                                       <div class="col-md-6">
                                           <label for="head_text_{{top_page.id}}" class="form-label">Head Text</label>
-                                          <input type="text"  class="form-control" name="head_text_{{top_page.id}}" id="head_text_{{top_page.id}}" value="{{top_page.head_text}}" >
+                                          <input type="text"  class="form-control" name="head_text" id="head_text_{{top_page.id}}" value="{{top_page.head_text}}" >
                                        </div>
                                       <!-- end head text -->
                                       <!-- begin company name-->
                                       <div class="col-md-6">
                                           <label for="companyname_{{top_page.id}}" class="form-label">Company Name</label>
-                                            <input type="text" class="form-control" name="company_name_{{top_page.id}}" id="companyname_{{top_page.id}}" value="{{top_page.company_name}}">
+                                            <input type="text" class="form-control" name="company_name" id="companyname_{{top_page.id}}" value="{{top_page.company_name}}">
                                       </div>
                                       <!-- end company name-->
                                       <!-- begin company slogan-->
                                       <div class="col-md-6">
                                          <label for="company_name_{{top_page.id}}" class="form-label">Company Slogan</label>
-                                         <input type="text" class="form-control" name="company_slogan_{{top_page.id}}" id="company_name_{{top_page.id}}" value="{{top_page.company_slogan}}">
+                                         <input type="text" class="form-control" name="company_slogan" id="company_name_{{top_page.id}}" value="{{top_page.company_slogan}}">
                                       </div>
                                       <!-- end company slogan-->
 
@@ -217,7 +217,7 @@
                                               <label class="avatar avatar-xl  avatar-uploader " for="iphoneimgUploader_{{top_page.id}}">
                                                 <img id="iphone_image_{{top_page.id}}" class="avatar-img" src="{% get_media_prefix %}{{ top_page.iphone_image }}"  alt="">
 
-                                                <input type="file" class="js-file-attach avatar-uploader-input" name="iphone_image_{{top_page.id}}" id="iphoneimgUploader_{{top_page.id}}" data-hs-file-attach-options=' {
+                                                <input type="file" class="js-file-attach avatar-uploader-input" name="iphone_image" id="iphoneimgUploader_{{top_page.id}}" data-hs-file-attach-options=' {
                                                           "textTarget": "#iphone_image_{{top_page.id}}",
                                                           "mode": "image",
                                                           "targetAttr": "src",
@@ -242,7 +242,7 @@
                                               <label class="avatar avatar-xl  avatar-uploader " for="ipadimgUploader_{{top_page.id}}">
                                                 <img id="ipad_image_{{top_page.id}}" class="avatar-img" src="{% get_media_prefix %}{{ top_page.ipad_image }}"  alt="">
 
-                                                <input type="file" class="js-file-attach avatar-uploader-input" name="ipad_image_{{top_page.id}}" id="ipadimgUploader_{{top_page.id}}" data-hs-file-attach-options=' {
+                                                <input type="file" class="js-file-attach avatar-uploader-input" name="ipad_image" id="ipadimgUploader_{{top_page.id}}" data-hs-file-attach-options=' {
                                                           "textTarget": "#ipad_image_{{top_page.id}}",
                                                           "mode": "image",
                                                           "targetAttr": "src",
@@ -267,7 +267,7 @@
                                               <label class="avatar avatar-xl  avatar-uploader" for="macbookimgUploader_{{top_page.id}}">
                                                 <img id="macbook_image_{{top_page.id}}" class="avatar-img" src="{% get_media_prefix %}{{ top_page.macbook_image }}"  alt="">
 
-                                                <input type="file" class="js-file-attach avatar-uploader-input" name="macbook_image_{{top_page.id}}" id="macbookimgUploader_{{top_page.id}}" data-hs-file-attach-options=' {
+                                                <input type="file" class="js-file-attach avatar-uploader-input" name="macbook_image" id="macbookimgUploader_{{top_page.id}}" data-hs-file-attach-options=' {
                                                           "textTarget": "#macbook_image_{{top_page.id}}",
                                                           "mode": "image",
                                                           "targetAttr": "src",
