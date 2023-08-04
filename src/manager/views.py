@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect
 from .forms import TopPageForm
-from home.models import
 
 
 def dashboard(request):
