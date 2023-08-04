@@ -51,31 +51,18 @@ def home_manager(request, action):
 
     if action == 'edit_top_page':
         if request.method == 'POST':
-            top_page_id = request.POST.get('top_page_id', False)
-            top_page_selected = TopPage.objects.get(id=top_page_id)
-            language = request.POST.get('language', False)
-            head_title = request.POST.get('head_title', False)
-            head_text = request.POST.get('head_text', False)
-            company_name = request.POST.get('company_name', False)
-            company_slogan = request.POST.get('company_slogan', False)
-            logo_main = request.FILES.get('logo_main')
-            logo_head = request.FILES.get('logo_head')
-            iphone_image = request.FILES.get('iphone_image')
-            macbook_image = request.FILES.get('macbook_image')
-            ipad_image = request.FILES.get('ipad_image')
-
-            top_page_selected.language = language
-            top_page_selected.head_title = head_title
-            top_page_selected.head_text = head_text
-            top_page_selected.company_name = company_name
-            top_page_selected.company_slogan = company_slogan
-            top_page_selected.logo_main = logo_main
-            top_page_selected.logo_head = logo_head
-            top_page_selected.iphone_image = iphone_image
-            top_page_selected.macbook_image = macbook_image
-            top_page_selected.ipad_image = ipad_image
-            top_page_selected .save()
+            language = request.POST.get('top_page_language', False)
+            selected_top_page = TopPage.objects.all().get(language=language)
+            selected_top_page(language=request.POST.get('language', False),
+                              head_title=request.POST.get('head_title', False),
+                              head_text=request.POST.get('head_text', False),
+                              company_name=request.POST.get('company_name', False),
+                              company_slogan=request.POST.get('company_slogan', False),
+                              logo_main=request.FILES.get('logo_main'),
+                              logo_head=request.FILES.get('logo_head'),
+                              iphone_image=request.FILES.get('iphone_image'),
+                              macbook_image=request.FILES.get('macbook_image'),
+                              ipad_image=request.FILES.get('ipad_image'), ).save()
 
             request.session['tab'] = 'main'
             return redirect('home-manager', 'main')
-

@@ -116,7 +116,7 @@
                                   {% for top_page in top_pages %}
                                   <form class="row g-3" action="{% url 'home-manager' 'edit_top_page' %}"  novalidate method="post" enctype="multipart/form-data">
                                       {% csrf_token %}
-                                      <input type="hidden" name="top_page_id" value={{top_page.id}}>
+                                      <input type="hidden" name="top_page_language" value={{top_page.language}}>
 
                                       <div class="mb-3">
                                           <label for="LanguageSelect" class="form-label">Language</label>
