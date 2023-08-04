@@ -127,7 +127,7 @@
                                   <div class="mb-3">
                                       <label for="LanguageSelect" class="form-label">Language</label>
                                       <div class="input-group input-group-merge">
-                                            <select id="LanguageSelect" class="form-select" name="{{ top_page_form.language.name }}">
+                                            <select id="LanguageSelect" class="form-select" name="language">
                                               <option>Choose a language</option>
                                               <option>En</option>
                                               <option>Fr</option>
@@ -145,7 +145,7 @@
                                       <label class="avatar avatar-xl  avatar-uploader " for="logomainUploader">
                                         <img id="logomain" class="avatar-img" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
 
-                                        <input type="file" class="js-file-attach avatar-uploader-input" name="{{ top_page_form.logo_main.name }}" id="logomainUploader" data-hs-file-attach-options=' {
+                                        <input type="file" class="js-file-attach avatar-uploader-input" name="logo_main" id="logomainUploader" data-hs-file-attach-options=' {
                                                   "textTarget": "#logomain",
                                                   "mode": "image",
                                                   "targetAttr": "src",
@@ -172,7 +172,7 @@
                                       <label class="avatar avatar-sm  avatar-uploader " for="logoheadUploader">
                                         <img id="logohead" class="avatar-img"  src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="" >
 
-                                        <input type="file" class="js-file-attach avatar-uploader-input"  name="{{ top_page_form.logo_head.name }}" id="logoheadUploader" data-hs-file-attach-options=' {
+                                        <input type="file" class="js-file-attach avatar-uploader-input"  name="logo_head" id="logoheadUploader" data-hs-file-attach-options=' {
                                                   "textTarget": "#logohead",
                                                   "mode": "image",
                                                   "targetAttr": "src",
@@ -190,21 +190,21 @@
                                    <!-- end head logo -->
                                    <div class="col-md-6">
                                       <label for="headtitle" class="form-label">Head title</label>
-                                      <input type="text" class="form-control" name="{{ top_page_form.head_title.name }}" id="headtitle">
+                                      <input type="text" class="form-control" name="head_title" id="headtitle">
 
                                    </div>
                                    <div class="col-md-6">
                                       <label for="headtext" class="form-label">Head Text</label>
-                                      <input type="text"  class="form-control" name="{{ top_page_form.head_text.name }}" id="headtext" >
+                                      <input type="text"  class="form-control" name="head_text" id="headtext" >
                                    </div>
                                    <div class="col-md-6">
                                       <label for="companyname" class="form-label">Company Name</label>
-                                        <input type="text" class="form-control" name="{{ top_page_form.company_name.name }}" id="companyname">
+                                        <input type="text" class="form-control" name="company_name" id="companyname">
 
                                    </div>
                                    <div class="col-md-6">
                                   <label for="companyslogan" class="form-label">Company Slogan</label>
-                                  <input type="text" class="form-control" name="{{ top_page_form.company_slogan.name }}" id="companyslogan">
+                                  <input type="text" class="form-control" name="company_slogan" id="companyslogan">
 
                                 </div>
                                   <hr>
@@ -217,7 +217,7 @@
                                       <label class="avatar avatar-xl  avatar-uploader profile-cover-avatar me-5" for="iphoneImgUploader">
                                         <img id="iphoneImg" class="avatar-img" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
 
-                                        <input type="file" class="js-file-attach avatar-uploader-input"  name="{{ top_page_form.iphone_image.name }}"  id="iphoneImgUploader" data-hs-file-attach-options=' {
+                                        <input type="file" class="js-file-attach avatar-uploader-input"  name="iphone-image"  id="iphoneImgUploader" data-hs-file-attach-options=' {
                                                   "textTarget": "#iphoneImg",
                                                   "mode": "image",
                                                   "targetAttr": "src",
@@ -242,7 +242,7 @@
                                       <label class="avatar avatar-xl  avatar-uploader profile-cover-avatar me-5" for="ipadImgUploader">
                                         <img id="ipadImg" class="avatar-img" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
 
-                                        <input type="file" class="js-file-attach avatar-uploader-input" name="{{ top_page_form.ipad_image.name }}" id="ipadImgUploader" data-hs-file-attach-options=' {
+                                        <input type="file" class="js-file-attach avatar-uploader-input" name="ipad_image" id="ipadImgUploader" data-hs-file-attach-options=' {
                                                   "textTarget": "#ipadImg",
                                                   "mode": "image",
                                                   "targetAttr": "src",
@@ -267,7 +267,7 @@
                                       <label class="avatar avatar-xl  avatar-uploader profile-cover-avatar me-5" for="macbookImgUploader">
                                         <img id="macbookImg" class="avatar-img" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
 
-                                        <input type="file" class="js-file-attach avatar-uploader-input" name="{{ top_page_form.macbook_image.name }}" id="macbookImgUploader" data-hs-file-attach-options=' {
+                                        <input type="file" class="js-file-attach avatar-uploader-input" name="macbook_image" id="macbookImgUploader" data-hs-file-attach-options=' {
                                                   "textTarget": "#macbookImg",
                                                   "mode": "image",
                                                   "targetAttr": "src",
