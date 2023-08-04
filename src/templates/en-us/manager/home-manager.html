@@ -145,7 +145,11 @@
                                       <label class="avatar avatar-xl  avatar-uploader " for="logomainUploader">
                                         <img id="logo_main" class="avatar-img" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
 
-                                        <input type="file" class="js-file-attach avatar-uploader-input" name="logo_main" id="logomainUploader">
+                                        <input type="file" class="js-file-attach avatar-uploader-input" name="logo_main" id="logomainUploader" data-hs-file-attach-options=' {
+                                                  "textTarget": "#logo_main",
+                                                  "targetAttr": "src",
+
+                                                  }'>
 
                                         <span class="avatar-uploader-trigger">
                                           <i class="bi-pencil avatar-uploader-icon shadow-sm"></i>
@@ -167,7 +171,11 @@
                                       <label class="avatar avatar-sm  avatar-uploader " for="logoheadUploader">
                                         <img id="logo_head" class="avatar-img"  src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="" >
 
-                                        <input type="file" class="js-file-attach avatar-uploader-input"  name="logo_head" id="logoheadUploader" >
+                                        <input type="file" class="js-file-attach avatar-uploader-input"  name="logo_head" id="logoheadUploader" data-hs-file-attach-options=' {
+                                                  "textTarget": "#logo_head",
+                                                  "targetAttr": "src",
+
+                                                  }'>
 
                                         <span class="avatar-uploader-trigger">
                                           <i class="bi-pencil avatar-uploader-icon shadow-sm"></i>
