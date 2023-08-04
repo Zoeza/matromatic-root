@@ -30,7 +30,7 @@ def home_manager(request, action):
     if action == 'create_top_page':
         if request.method == 'POST':
             top_page_form = TopPageForm(request.POST, request.FILES)
-            if top_page_form.is_valid()
+            if top_page_form.is_valid():
                 top_page_form.save()
         request.session['tab'] = 'top-page'
         return redirect('home-manager', 'main')
