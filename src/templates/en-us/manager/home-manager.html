@@ -143,9 +143,9 @@
                                     <div class="d-flex align-items-center">
                                       <!-- logo -->
                                       <label class="avatar avatar-xl  avatar-uploader " for="logomainUploader">
-                                        <img id="logomain" class="avatar-img" name="{{ top_page_form.logo_main.name }}"src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
+                                        <img id="logomain" class="avatar-img" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
 
-                                        <input type="file" class="js-file-attach avatar-uploader-input" id="logomainUploader" data-hs-file-attach-options=' {
+                                        <input type="file" class="js-file-attach avatar-uploader-input" name="{{ top_page_form.logo_main.name }}" id="logomainUploader" data-hs-file-attach-options=' {
                                                   "textTarget": "#logomain",
                                                   "mode": "image",
                                                   "targetAttr": "src",
@@ -170,9 +170,9 @@
                                     <div class="d-flex align-items-center">
                                       <!-- Avatar -->
                                       <label class="avatar avatar-sm  avatar-uploader " for="logoheadUploader">
-                                        <img id="logohead" class="avatar-img" name="{{ top_page_form.logo_head.name }}" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="" >
+                                        <img id="logohead" class="avatar-img"  src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="" >
 
-                                        <input type="file" class="js-file-attach avatar-uploader-input" id="logoheadUploader" data-hs-file-attach-options=' {
+                                        <input type="file" class="js-file-attach avatar-uploader-input"  name="{{ top_page_form.logo_head.name }}" id="logoheadUploader" data-hs-file-attach-options=' {
                                                   "textTarget": "#logohead",
                                                   "mode": "image",
                                                   "targetAttr": "src",
