@@ -53,16 +53,17 @@ def home_manager(request, action):
         if request.method == 'POST':
             language = request.POST.get('top_page_language', False)
             selected_top_page = TopPage.objects.all().get(language=language)
-            selected_top_page(language=request.POST.get('language', False),
-                              head_title=request.POST.get('head_title', False),
-                              head_text=request.POST.get('head_text', False),
-                              company_name=request.POST.get('company_name', False),
-                              company_slogan=request.POST.get('company_slogan', False),
-                              logo_main=request.FILES.get('logo_main'),
-                              logo_head=request.FILES.get('logo_head'),
-                              iphone_image=request.FILES.get('iphone_image'),
-                              macbook_image=request.FILES.get('macbook_image'),
-                              ipad_image=request.FILES.get('ipad_image'), ).save()
+            selected_top_page.language = request.POST.get('language', False)
+            selected_top_page.head_title = request.POST.get('head_title', False)
+            selected_top_page.head_text = request.POST.get('head_text', False)
+            selected_top_page.company_name = request.POST.get('company_name', False)
+            selected_top_page.company_slogan = request.POST.get('company_slogan', False)
+            selected_top_page.logo_main = request.FILES.get('logo_main')
+            selected_top_page.logo_head = request.FILES.get('logo_head')
+            selected_top_page.iphone_image = request.FILES.get('iphone_image')
+            selected_top_page.macbook_image = request.FILES.get('macbook_image')
+            selected_top_page.ipad_image = request.FILES.get('ipad_image')
+            selected_top_page.save()
 
             request.session['tab'] = 'main'
             return redirect('home-manager', 'main')
