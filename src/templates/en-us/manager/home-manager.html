@@ -807,9 +807,17 @@
               <form>
                   {% csrf_token %}
                   <div class="row">
-                      <label class="col-sm-3 col-form-label">Readonly field</label>
+                      <label class="col-sm-3 col-form-label">Service Title</label>
                       <div class="col-sm-9">
-                        <input type="text" class="form-control" value="Read only" readonly>
+                        <input type="text" class="form-control" name="service_title" value="service title">
+                      </div>
+                  </div>
+
+                  <div class="row">
+                      <label class="col-sm-3 col-form-label">Service Description</label>
+                      <div class="col-sm-9">
+                        <textarea type="text" class="form-control" name="service_description" value="service description" rows="4>
+                        </textarea>
                       </div>
                   </div>
 
