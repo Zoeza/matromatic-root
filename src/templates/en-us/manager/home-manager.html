@@ -806,18 +806,18 @@
           <div class="modal-body">
               <form>
                   {% csrf_token %}
-                  <div class="row">
+                 <div class="mb-3">
                       <label class="col-sm-3 col-form-label">Service Title</label>
                       <div class="col-sm-9">
                         <input type="text" class="form-control" name="service_title" value="service title">
                       </div>
                   </div>
 
-                  <div class="row">
-                      <label class="col-sm-3 col-form-label">Service Description</label>
-                      <div class="col-sm-9">
-                        <input type="text" class="form-control" name="service_des " value="service title">
-                      </div>
+                   <div class="mb-3">
+                      <label class="col-sm-3 col-form-label" for="exampleFormControlTextarea1">Service Description</label>
+                        <textarea id="exampleFormControlTextarea1" type="text" class="form-control" name="service_description " value="service title">
+                        </textarea>
+
                   </div>
 
 
