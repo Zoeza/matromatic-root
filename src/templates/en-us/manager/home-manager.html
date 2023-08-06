@@ -730,8 +730,35 @@
 
                           <!-- Body -->
                           <div class="card-body">
+                               <form>
+                                  {% csrf_token %}
+                                    <div class="row  mb-2">
+                                      <div class="col-6 col-md-4">
+                                          <div class="d-flex align-items-center">
+                                              <!-- logo -->
+                                              <label class="avatar avatar-xl  avatar-uploader " for="photo_editUploader">
+                                                <img id="process_edit_photo" class="avatar-img" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
 
+                                                <input type="file" class="js-file-attach avatar-uploader-input" name="icon" id="photo_editUploader" data-hs-file-attach-options=' {
+                                                          "textTarget": "#process_edit_photo",
+                                                          "mode": "image",
+                                                          "targetAttr": "src",
+                                                          "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
+                                                          }'>
+                                              </label>
+                                              <!-- End logo -->
+                                        </div>
+                                      </div>
 
+                                      <div class="col-md-8">
+                                          <div class="row">
+                                              <input type="text" class="form-control" name="process_title" value="process title">
+                                              <textarea id="processdescriptionedit" type="text" class="form-control" name="process_description "  rows="4" value="service description">
+                                              </textarea>
+                                          </div>
+                                      </div>
+                                  </div>
+                                </form>
                           </div>
                           <!-- End Body -->
                         </div>
