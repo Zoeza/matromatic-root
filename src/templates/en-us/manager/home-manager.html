@@ -888,7 +888,7 @@
     <!-- end add service model Modal -->
 
 
-    <!-- begin add service modal -->
+    <!-- begin add process modal -->
     <div id="add_process_model" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="addProcessModel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -896,12 +896,13 @@
             <h5 class="modal-title" id="addProcessModel">Add Process</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <!-- begin add service form -->
+          <!-- begin add process form -->
             <form>
                 {% csrf_token %}
               <div class="modal-body">
+                  <!-- begin add process photo -->
                   <div class="row justify-content-center">
-                      <label class="form-label"> photo </label>
+                      <label class="form-label"> Photo </label>
                       <div class="col-4">
                           <div class="row justify-content-center">
                                   <div class="d-flex align-items-center">
@@ -923,39 +924,49 @@
                           </div>
                       </div>
                   </div>
+                  <!-- end add process photo -->
                   <hr>
 
-
+                  <!-- begin add process number & title -->
                   <div class="row">
+                      <!-- begin add process number -->
+
                       <div class="col-sm-4">
                         <label class="form-label">Number</label>
                         <input type="number" class="form-control" name="process_number" value=" 00">
                       </div>
+                      <!-- end add process number -->
+
+                     <!-- begin add process title -->
 
                       <div class="col-sm-8">
                         <label class="form-label">Title</label>
                         <input type="text" class="form-control" name="process_title" value="process title">
                       </div>
+                      <!-- end add process title -->
 
                   </div>
-                  <hr>
+                  <!-- end add process number & title -->
 
+                  <hr>
+                  <!-- begin add process description -->
                  <div class="row">
                       <label class="form-label" for="processDescriptionAdd"> Description</label>
                       <textarea id="processDescriptionAdd" type="text" class="form-control" name="process_description "  rows="4" value="process description">
                       </textarea>
                   </div>
+                  <!-- end add process description -->
 
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-primary">Confirm</button>
               </div>
-          </form>
-          <!-- end add service form -->
+            </form>
+          <!-- end add process form -->
         </div>
       </div>
     </div>
-    <!-- end add service model Modal -->
+    <!-- end add process model Modal -->
 
 
 
