@@ -893,7 +893,7 @@
       <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="addProcessModel">Add Service</h5>
+            <h5 class="modal-title" id="addProcessModel">Add Process</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <!-- begin add service form -->
@@ -901,16 +901,16 @@
                 {% csrf_token %}
               <div class="modal-body">
                   <div class="row justify-content-center">
-                      <label class="form-label"> Service icon </label>
+                      <label class="form-label"> Process Photo </label>
                       <div class="col-4">
                           <div class="row justify-content-center">
                                   <div class="d-flex align-items-center">
                                   <!-- logo -->
-                                  <label class="avatar avatar-xxl  avatar-uploader " for="iconUploader">
-                                    <img id="service_icon" class="img-fluid" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
+                                  <label class="avatar avatar-xxl  avatar-uploader " for="processPhotoUploader">
+                                    <img id="process_photo" class="img-fluid" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
 
-                                    <input type="file" class="js-file-attach avatar-uploader-input" name="icon" id="iconUploader" data-hs-file-attach-options=' {
-                                              "textTarget": "#service_icon",
+                                    <input type="file" class="js-file-attach avatar-uploader-input" name="icon" id="processPhotoUploader" data-hs-file-attach-options=' {
+                                              "textTarget": "#process_photo",
                                               "mode": "image",
                                               "targetAttr": "src",
                                               "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
@@ -928,8 +928,8 @@
                  </div>
 
                   <div class="mb-3">
-                      <label class="form-label" for="exampleFormControlTextarea1">Service Description</label>
-                      <textarea id="exampleFormControlTextarea1" type="text" class="form-control" name="service_description "  rows="4" value="service title">
+                      <label class="form-label" for="processDescriptionAdd">Service Description</label>
+                      <textarea id="processDescriptionAdd" type="text" class="form-control" name="service_description "  rows="4" value="service title">
                       </textarea>
                   </div>
 
