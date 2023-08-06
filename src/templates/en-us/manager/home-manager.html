@@ -1066,7 +1066,7 @@
     </div>
     <!-- end add process model Modal -->
 
-    <!-- begin add service modal -->
+    <!-- begin add client modal -->
     <div id="add_client_model" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="addClientModel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -1074,7 +1074,7 @@
             <h5 class="modal-title" id="addClientModel">Add Client</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <!-- begin add service form -->
+          <!-- begin add client form -->
             <form>
                 {% csrf_token %}
               <div class="modal-body">
@@ -1107,7 +1107,7 @@
                  </div>
 
                   <div class="mb-3">
-                      <label class="form-label" for="clientComment">Service Description</label>
+                      <label class="form-label" for="clientComment">Comment</label>
                       <textarea  type="text" id="clientComment" class="form-control" name="client_comment "  rows="4" value="service title">
                       </textarea>
                   </div>
@@ -1117,11 +1117,11 @@
                 <button type="button" class="btn btn-primary">Confirm</button>
               </div>
           </form>
-          <!-- end add service form -->
+          <!-- end add client form -->
         </div>
       </div>
     </div>
-    <!-- end add service model Modal -->
+    <!-- end add client model Modal -->
 
 
 
