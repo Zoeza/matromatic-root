@@ -1019,69 +1019,33 @@
       <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="addPerformanceModel">Add Process</h5>
+            <h5 class="modal-title" id="addPerformanceModel">Add Performance </h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <!-- begin add process form -->
             <form>
                 {% csrf_token %}
               <div class="modal-body">
-                  <!-- begin add process photo -->
-                  <div class="row justify-content-center">
-                      <label class="form-label"> Photo </label>
-                      <div class="col-4">
-                          <div class="row justify-content-center">
-                                  <div class="d-flex align-items-center">
-                                  <!-- logo -->
-                                  <label class="avatar avatar-xxl  avatar-uploader " for="processPhotoUploader">
-                                    <img id="process_photo" class="avatar-img" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
 
-                                    <input type="file" class="js-file-attach avatar-uploader-input" name="icon" id="processPhotoUploader" data-hs-file-attach-options=' {
-                                              "textTarget": "#process_photo",
-                                              "mode": "image",
-                                              "targetAttr": "src",
-                                              "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
-                                              }'>
-                                  </label>
-                                  <!-- End logo -->
-
-                                </div>
-
-                          </div>
-                      </div>
-                  </div>
-                  <!-- end add process photo -->
-                  <hr>
-
-                  <!-- begin add process number & title -->
+                  <!-- begin add performance name & percentage -->
                   <div class="row">
-                      <!-- begin add process number -->
-
+                      <!-- begin add performance name -->
                       <div class="col-sm-4">
-                        <label class="form-label">Number</label>
-                        <input type="number" class="form-control" name="process_number">
+                        <label class="form-label">Domain</label>
+                        <input type="text" class="form-control" name="performance_domain">
                       </div>
-                      <!-- end add process number -->
+                      <!-- end add performance name -->
 
-                     <!-- begin add process title -->
-
+                     <!-- begin add performance percentage -->
                       <div class="col-sm-8">
-                        <label class="form-label">Title</label>
-                        <input type="text" class="form-control" name="process_title" value="process title">
+                        <label class="form-label">Percentage</label>
+                          <label for="performancePercentage" class="form-label">Percentage</label>
+                            <input type="range" class="form-range" min="0" max="100"  name="performance_percentage" id="performancePercentage">
                       </div>
-                      <!-- end add process title -->
+                      <!-- end add performance percentage -->
 
                   </div>
-                  <!-- end add process number & title -->
-
-                  <hr>
-                  <!-- begin add process description -->
-                 <div class="row">
-                      <label class="form-label" for="processDescriptionAdd"> Description</label>
-                      <textarea id="processDescriptionAdd" type="text" class="form-control" name="process_description "  rows="4" value="process description">
-                      </textarea>
-                  </div>
-                  <!-- end add process description -->
+                  <!-- end add performance name & percentage -->
 
               </div>
               <div class="modal-footer">
