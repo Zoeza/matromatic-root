@@ -732,7 +732,7 @@
                           <div class="card-body">
                                <form>
                                   {% csrf_token %}
-                                    <div class="row  row-cols-2">
+                                    <div class="row  mb-2">
                                       <div class="col-6 col-md-4">
                                           <div class="d-flex align-items-center">
                                               <!-- logo -->
@@ -758,14 +758,15 @@
                                               <div class="col-sm-8">
                                                 <input type="text" class="form-control" name="process_title" value="process title">
                                               </div>
+                                              <textarea id="processdescriptionedit" type="text" class="form-control" name="process_description "  rows="4" value="service description">
+                                              </textarea>
 
                                           </div>
                                       </div>
                                         <div class="col-6 col-md-4"></div>
 
                                         <div class="col-md-8">
-                                              <textarea id="processdescriptionedit" type="text" class="form-control" name="process_description "  rows="4" value="service description">
-                                              </textarea>
+
                                            </div>
                                   </div>
                                 </form>
