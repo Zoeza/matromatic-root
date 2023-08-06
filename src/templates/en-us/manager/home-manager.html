@@ -807,24 +807,26 @@
                   {% csrf_token %}
 
                   <div class="row justify-content-center">
-                      <label class="form-label"> Service icon </label>
-                      <div class="col-sm-9">
-                          <div class="row justify-content-center">
-                              <div class="d-flex align-items-center">
-                              <!-- logo -->
-                              <label class="avatar avatar-xl  avatar-uploader " for="iconUploader">
-                                <img id="service_icon" class="avatar-img" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
+                      <div class="col-4">
+                          <label class="form-label"> Service icon </label>
+                          <div class="col-sm-9">
+                              <div class="row justify-content-center">
+                                  <div class="d-flex align-items-center">
+                                  <!-- logo -->
+                                  <label class="avatar avatar-xl  avatar-uploader " for="iconUploader">
+                                    <img id="service_icon" class="avatar-img" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
 
-                                <input type="file" class="js-file-attach avatar-uploader-input" name="icon" id="iconUploader" data-hs-file-attach-options=' {
-                                          "textTarget": "#service_icon",
-                                          "mode": "image",
-                                          "targetAttr": "src",
-                                          "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
-                                          }'>
-                              </label>
-                              <!-- End logo -->
+                                    <input type="file" class="js-file-attach avatar-uploader-input" name="icon" id="iconUploader" data-hs-file-attach-options=' {
+                                              "textTarget": "#service_icon",
+                                              "mode": "image",
+                                              "targetAttr": "src",
+                                              "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
+                                              }'>
+                                  </label>
+                                  <!-- End logo -->
 
-                            </div>
+                                </div>
+                              </div>
                           </div>
                       </div>
                   </div>
