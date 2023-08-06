@@ -901,7 +901,7 @@
                 {% csrf_token %}
               <div class="modal-body">
                   <div class="row justify-content-center">
-                      <label class="form-label"> Process Photo </label>
+                      <label class="form-label"> Process photo </label>
                       <div class="col-4">
                           <div class="row justify-content-center">
                                   <div class="d-flex align-items-center">
@@ -919,14 +919,22 @@
                                   <!-- End logo -->
 
                                 </div>
-                              </div>
+
+                          </div>
                       </div>
                   </div>
-                 <div class="mb-3">
-                      <label class="form-label">Service Title</label>
-                        <input type="text" class="form-control" name="service_title" value="service title">
-                 </div>
 
+                  <div class="row">
+                    <div class="col-sm-8">
+                        <label class="form-label">Process title</label>
+                        <input type="text" class="form-control" name="process_title" value="process title">
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="form-label">Process number</label>
+                        <input type="number" class="form-control" name="process_number" value="process title">
+                    </div>
+                  </div>
+                  
                   <div class="mb-3">
                       <label class="form-label" for="processDescriptionAdd">Service Description</label>
                       <textarea id="processDescriptionAdd" type="text" class="form-control" name="service_description "  rows="4" value="service title">
