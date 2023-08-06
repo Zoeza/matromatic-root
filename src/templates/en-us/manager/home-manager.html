@@ -681,7 +681,7 @@
                           <div class="card-body">
 
                                 <form>
-                                {% csrf_token %}
+                                  {% csrf_token %}
                                   <div class="row  mb-2">
                                       <div class="col-6 col-md-4">
                                           <div class="d-flex align-items-center">
@@ -697,7 +697,6 @@
                                                           }'>
                                               </label>
                                               <!-- End logo -->
-
                                         </div>
                                       </div>
 
@@ -708,7 +707,39 @@
                                           </textarea>
                                       </div>
                                   </div>
+                                    <br>
                               </form>
+
+                               <form>
+                                  {% csrf_token %}
+                                  <div class="row  mb-2">
+                                      <div class="col-6 col-md-4">
+                                          <div class="d-flex align-items-center">
+                                              <!-- logo -->
+                                              <label class="avatar avatar-xl  avatar-uploader " for="icon_editUploader">
+                                                <img id="service_edit_icon" class="avatar-img" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
+
+                                                <input type="file" class="js-file-attach avatar-uploader-input" name="icon" id="icon_editUploader" data-hs-file-attach-options=' {
+                                                          "textTarget": "#service_edit_icon",
+                                                          "mode": "image",
+                                                          "targetAttr": "src",
+                                                          "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
+                                                          }'>
+                                              </label>
+                                              <!-- End logo -->
+                                        </div>
+                                      </div>
+
+                                      <div class="col-md-8">
+                                          <input type="text" class="form-control" name="service_title" value="service title">
+
+                                          <textarea id="servicedescriptionedit" type="text" class="form-control" name="service_description "  rows="4" value="service title">
+                                          </textarea>
+                                      </div>
+                                  </div>
+                                    <br>
+                              </form>
+
 
 
 
