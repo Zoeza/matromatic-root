@@ -715,7 +715,7 @@
                         </div>
                         <!-- end services card -->
 
-                        <!-- Card -->
+                        <!-- begin our process card -->
                         <div id="Process" class="card">
                           <div class="card-header">
                                 <div class="row align-items-start">
@@ -723,7 +723,7 @@
                                         <h4 class="card-title">Our Process</h4>
                                     </div>
                                     <div class="col-sm-auto">
-                                        <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#add_process_model">Add Process</button>
+                                        <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#add_process_model">Add Step</button>
                                     </div>
                                 </div>
                           </div>
@@ -773,8 +773,8 @@
                           </div>
                           <!-- End Body -->
                         </div>
-                        <!-- End Card -->
-                        <!-- Card -->
+                        <!-- end our process card -->
+                        <!-- begin performance card -->
                         <div id="Performances" class="card">
                           <div class="card-header">
                                 <div class="row align-items-start">
@@ -794,12 +794,19 @@
                           </div>
                           <!-- End Body -->
                         </div>
-                        <!-- End Card -->
+                        <!-- end performance card -->
 
-                        <!-- Card -->
+                        <!-- begin clients card -->
                         <div id="Clients" class="card">
                           <div class="card-header">
-                            <h4 class="card-title">Clients</h4>
+                                <div class="row align-items-start">
+                                    <div class="col">
+                                        <h4 class="card-title">Clients</h4>
+                                    </div>
+                                    <div class="col-sm-auto">
+                                        <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#add_client_model">Add Client</button>
+                                    </div>
+                                </div>
                           </div>
 
                           <!-- Body -->
@@ -809,7 +816,8 @@
                           </div>
                           <!-- End Body -->
                         </div>
-                        <!-- End Card -->
+                        <!-- end clients card -->
+
 
                         <!-- Card -->
                         <div id="Partners" class="card">
@@ -938,7 +946,7 @@
       <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="addProcessModel">Add Process</h5>
+            <h5 class="modal-title" id="addProcessModel">Add Step</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <!-- begin add process form -->
@@ -1014,7 +1022,7 @@
     <!-- end add process model Modal -->
 
 
- <!-- begin add performance modal -->
+    <!-- begin add performance modal -->
     <div id="add_performance_model" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="addPerformanceModel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -1057,6 +1065,64 @@
       </div>
     </div>
     <!-- end add process model Modal -->
+
+    <!-- begin add service modal -->
+    <div id="add_client_model" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="addClientModel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="addClientModel">Add Client</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <!-- begin add service form -->
+            <form>
+                {% csrf_token %}
+              <div class="modal-body">
+                  <div class="row justify-content-center">
+                      <label class="form-label"> Logo </label>
+                      <div class="col-4">
+                          <div class="row justify-content-center">
+                                  <div class="d-flex align-items-center">
+                                  <!-- logo -->
+                                  <label class="avatar avatar-xxl  avatar-uploader " for="clientLogoUploader">
+                                    <img id="client_logo" class="img-fluid" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
+
+                                    <input type="file" class="js-file-attach avatar-uploader-input" name="client_logo" id="clientLogoUploader" data-hs-file-attach-options=' {
+                                              "textTarget": "#client_logo",
+                                              "mode": "image",
+                                              "targetAttr": "src",
+                                              "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
+                                              }'>
+                                  </label>
+                                  <!-- End logo -->
+
+                                </div>
+                              </div>
+                      </div>
+                  </div>
+                  <hr>
+                 <div class="mb-3">
+                      <label class="form-label">Name </label>
+                        <input type="text" class="form-control" name="client_name" value="client name">
+                 </div>
+
+                  <div class="mb-3">
+                      <label class="form-label" for="clientComment">Service Description</label>
+                      <textarea  type="text" id="clientComment" class="form-control" name="client_comment "  rows="4" value="service title">
+                      </textarea>
+                  </div>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Confirm</button>
+              </div>
+          </form>
+          <!-- end add service form -->
+        </div>
+      </div>
+    </div>
+    <!-- end add service model Modal -->
+
 
 
 
