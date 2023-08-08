@@ -819,10 +819,17 @@
                         <!-- end clients card -->
 
 
-                        <!-- Card -->
+                        <!-- begin partner card -->
                         <div id="Partners" class="card">
-                          <div class="card-header">
-                            <h4 class="card-title">Partners</h4>
+                           <div class="card-header">
+                                <div class="row align-items-start">
+                                    <div class="col">
+                                        <h4 class="card-title">Partners</h4>
+                                    </div>
+                                    <div class="col-sm-auto">
+                                        <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#add_partner_model">Add Partner</button>
+                                    </div>
+                                </div>
                           </div>
 
                           <!-- Body -->
@@ -832,12 +839,19 @@
                           </div>
                           <!-- End Body -->
                         </div>
-                        <!-- End Card -->
+                        <!--end partner  card -->
 
                         <!-- Card -->
                         <div id="Projects" class="card">
                           <div class="card-header">
-                            <h4 class="card-title">Projects</h4>
+                                <div class="row align-items-start">
+                                    <div class="col">
+                                        <h4 class="card-title">Projects</h4>
+                                    </div>
+                                    <div class="col-sm-auto">
+                                        <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#add_project_model">Add Project</button>
+                                    </div>
+                                </div>
                           </div>
 
                           <!-- Body -->
@@ -939,7 +953,6 @@
       </div>
     </div>
     <!-- end add service model Modal -->
-
 
     <!-- begin add process modal -->
     <div id="add_process_model" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="addProcessModel" aria-hidden="true">
@@ -1122,6 +1135,115 @@
       </div>
     </div>
     <!-- end add client model Modal -->
+
+    <!-- begin add partner modal -->
+    <div id="add_partner_model" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="addPartnerModel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="addPartnerModel">Add Client</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <!-- begin add partner form -->
+            <form>
+                {% csrf_token %}
+              <div class="modal-body">
+                  <div class="row justify-content-center">
+                      <label class="form-label"> Logo </label>
+                      <div class="col-4">
+                          <div class="row justify-content-center">
+                                  <div class="d-flex align-items-center">
+                                  <!-- logo -->
+                                  <label class="avatar avatar-xxl  avatar-uploader " for="partnerLogoUploader">
+                                    <img id="partner_logo" class="img-fluid" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
+
+                                    <input type="file" class="js-file-attach avatar-uploader-input" name="partner_logo" id="partnerLogoUploader" data-hs-file-attach-options=' {
+                                              "textTarget": "#partner_logo",
+                                              "mode": "image",
+                                              "targetAttr": "src",
+                                              "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
+                                              }'>
+                                  </label>
+                                  <!-- End logo -->
+
+                                </div>
+                              </div>
+                      </div>
+                  </div>
+                  <hr>
+                 <div class="mb-3">
+                      <label class="form-label">Name </label>
+                        <input type="text" class="form-control" name="client_name" value="partner name">
+                 </div>
+
+                  <div class="mb-3">
+                      <label class="form-label" for="partnerName">Comment</label>
+                      <input  type="text" id="partnerName" class="form-control" name="partner_name "  value="partner_name">
+                  </div>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Confirm</button>
+              </div>
+          </form>
+          <!-- end add partner form -->
+        </div>
+      </div>
+    </div>
+    <!-- end add partner model Modal -->
+
+    <!-- begin add project modal -->
+    <div id="add_project_model" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="addProjectModel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="addProjectModel">Add Client</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <!-- begin add project form -->
+            <form>
+                {% csrf_token %}
+              <div class="modal-body">
+                  <div class="row justify-content-center">
+                      <label class="form-label"> Photo </label>
+                      <div class="col-4">
+                          <div class="row justify-content-center">
+                                  <div class="d-flex align-items-center">
+                                  <!-- photo -->
+                                  <label class="avatar avatar-xxl  avatar-uploader " for="projectPhotoUploader">
+                                    <img id="project_photo" class="img-fluid" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
+
+                                    <input type="file" class="js-file-attach avatar-uploader-input" name="project_photo" id="projectPhotoUploader" data-hs-file-attach-options=' {
+                                              "textTarget": "#project_photo",
+                                              "mode": "image",
+                                              "targetAttr": "src",
+                                              "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
+                                              }'>
+                                  </label>
+                                  <!-- End photo -->
+
+                                </div>
+                              </div>
+                      </div>
+                  </div>
+                  <hr>
+                 <div class="mb-3">
+                      <label class="form-label">Project </label>
+                        <input type="text" class="form-control" name="project_name" value="partner name">
+                 </div>
+
+
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Confirm</button>
+              </div>
+          </form>
+          <!-- end add project form -->
+        </div>
+      </div>
+    </div>
+    <!-- end add project model Modal -->
 
 
 
