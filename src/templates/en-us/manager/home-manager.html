@@ -1062,8 +1062,10 @@
                           <label class="form-label" for="performancePercentage" >Percentage</label>
                           <br>
                           <div class="range">
-                              <input type="range" class="form-range" min="0" max="100"  name="performance_percentage" id="performancePercentage">
-                              
+                              <input type="range" class="form-range" min="0" max="100"  name="performance_percentage" id="performancePercentage" value="0" oninput="amount.value=rangeInput.value">
+                              <output id="amount" name="amount" for="rangeInput">0</output>
+
+
                           </div>
 
                       </div>
