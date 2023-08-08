@@ -790,6 +790,26 @@
                           <!-- Body -->
                           <div class="card-body">
 
+                               <form>
+                                  {% csrf_token %}
+                                    <div class="row  mb-2">
+                                      <div class="col-6 col-md-4">
+                                          <div class="row">
+                                              <input type="text" class="form-control" name="domain" value="domain">
+                                          </div>
+                                      </div>
+
+                                      <div class="col-md-8">
+                                          <div class="range">
+                                              <input type="range" class="form-range" min="0" max="100"  name="performance_percentage" id="performancePercentageEdit" value="0" oninput="amount.value=performancePercentageEdit.value">
+                                              <output id="amountEdit" name="performance_percentage" for="performancePercentageEdit"></output>
+
+                                          </div>
+                                      </div>
+                                  </div>
+                                </form>
+                              <hr>
+
 
                           </div>
                           <!-- End Body -->
@@ -1146,13 +1166,10 @@
                               <input type="range" class="form-range" min="0" max="100"  name="performance_percentage" id="performancePercentage" value="0" oninput="amount.value=performancePercentage.value">
                               <output id="amount" name="amount" for="performancePercentage"></output>
 
-
                           </div>
 
                       </div>
                       <!-- end add performance percentage -->
-
-
 
                   </div>
                   <!-- end add performance name & percentage -->
