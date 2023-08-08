@@ -892,8 +892,6 @@
                                   </div>
                                 </form>
                               <hr>
-
-
                           </div>
                           <!-- End Body -->
                         </div>
@@ -914,8 +912,33 @@
 
                           <!-- Body -->
                           <div class="card-body">
+                              <form>
+                                  {% csrf_token %}
+                                    <div class="row  mb-2">
+                                      <div class="col-6 col-md-4">
+                                          <div class="d-flex align-items-center">
+                                              <!-- logo -->
+                                              <label class="avatar avatar-xl  avatar-uploader " for="projectPhoto_editUploader">
+                                                <img id="project_edit_photo" class="avatar-img" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
 
+                                                <input type="file" class="js-file-attach avatar-uploader-input" name="icon" id="projectPhoto_editUploader" data-hs-file-attach-options=' {
+                                                          "textTarget": "#project_edit_photo",
+                                                          "mode": "image",
+                                                          "targetAttr": "src",
+                                                          "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
+                                                          }'>
+                                              </label>
+                                              <!-- End logo -->
+                                        </div>
+                                      </div>
 
+                                      <div class="col-md-8">
+                                          <div class="row">
+                                              <input type="text" class="form-control" name="project_name" value="project name">
+                                          </div>
+                                      </div>
+                                  </div>
+                                </form>
                           </div>
                           <!-- End Body -->
                         </div>
@@ -1304,7 +1327,7 @@
               <div class="modal-footer">
                 <button type="button" class="btn btn-primary">Confirm</button>
               </div>
-          </form>
+            </form>
           <!-- end add project form -->
         </div>
       </div>
