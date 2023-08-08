@@ -793,19 +793,23 @@
                                <form>
                                   {% csrf_token %}
                                     <div class="row  mb-2">
-                                      <div class="col-6 col-md-4">
+                                      <div class="col">
                                           <div class="row">
                                               <input type="text" class="form-control" name="domain" value="domain">
                                           </div>
                                       </div>
 
-                                      <div class="col-md-8">
+                                      <div class="col">
                                           <div class="range">
                                               <input type="range" class="form-range" min="0" max="100"  name="performance_percentage" id="performancePercentageEdit" value="0" oninput="amount.value=performancePercentageEdit.value">
                                               <output id="amountEdit" name="amount" for="performancePercentageEdit"></output>
-
                                           </div>
                                       </div>
+                                        <div class="col">
+                                            <button  class="btn btn-white form-control-sm">
+                                                <i class="bi bi-plus-lg" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Add" data-bs-original-title="Add"></i>
+                                              </button>
+                                        </div>
                                   </div>
                                 </form>
                               <hr>
