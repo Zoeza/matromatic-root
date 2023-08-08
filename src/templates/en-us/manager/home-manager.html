@@ -811,7 +811,6 @@
 
                           <!-- Body -->
                           <div class="card-body">
-
                               <form>
                                   {% csrf_token %}
                                     <div class="row  mb-2">
@@ -834,15 +833,14 @@
 
                                       <div class="col-md-8">
                                           <div class="row">
-                                              <input type="text" class="form-control" name="client_name" value="client_name">
-                                              <textarea id="clientCommentEdit" type="text" class="form-control" name="client_comment "    rows="4">
+                                              <input type="text" class="form-control" name="client_name" value="client name">
+                                              <textarea id="clientCommentEdit" type="text" class="form-control" name="client_comment" rows="4">
                                               </textarea>
                                           </div>
                                       </div>
                                   </div>
                                 </form>
                               <hr>
-                              
                           </div>
                           <!-- End Body -->
                         </div>
@@ -864,6 +862,36 @@
 
                           <!-- Body -->
                           <div class="card-body">
+                                <form>
+                                  {% csrf_token %}
+                                    <div class="row  mb-2">
+                                      <div class="col-6 col-md-4">
+                                          <div class="d-flex align-items-center">
+                                              <!-- logo -->
+                                              <label class="avatar avatar-xl  avatar-uploader " for="partnerLogo_editUploader">
+                                                <img id="partner_edit_logo" class="avatar-img" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
+
+                                                <input type="file" class="js-file-attach avatar-uploader-input" name="icon" id="partnerLogo_editUploader" data-hs-file-attach-options=' {
+                                                          "textTarget": "#partner_edit_logo",
+                                                          "mode": "image",
+                                                          "targetAttr": "src",
+                                                          "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
+                                                          }'>
+                                              </label>
+                                              <!-- End logo -->
+                                        </div>
+                                      </div>
+
+                                      <div class="col-md-8">
+                                          <div class="row">
+                                              <input type="text" class="form-control" name="partner_name" value="partner name">
+                                              <input type="text" class="form-control" name="partner_link" value="partner link">
+
+                                          </div>
+                                      </div>
+                                  </div>
+                                </form>
+                              <hr>
 
 
                           </div>
