@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from .forms import TopPageForm
 from home.models import TopPage
-from .forms import ServiceForm
+from .forms import ServiceForm,ProcessForm
 
 
 def dashboard(request):
@@ -77,6 +77,17 @@ def home_manager(request, action):
             service_form = ServiceForm(request.POST, request.FILES)
             if service_form.is_valid():
                 service_form.save()
+
+        request.session['tab'] = 'top-page'
+        return redirect('home-manager', 'main')
+
+    # ---------------------- add process step--------------------- #
+
+    if action == 'add_process_step':
+        if request.method == 'POST':
+            process_form = ProcessForm(request.POST, request.FILES)
+            if process_form.is_valid():
+                process_form.save()
 
         request.session['tab'] = 'top-page'
         return redirect('home-manager', 'main')
