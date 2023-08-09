@@ -86,7 +86,7 @@ class Service(models.Model):
         verbose_name = "service"
 
     def __str__(self):
-        return self.id
+        return self.service_title
 
 
 # ---------------------------------------------------------------------- #
