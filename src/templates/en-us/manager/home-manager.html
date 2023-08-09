@@ -729,10 +729,10 @@
 
                           <!-- Body -->
                           <div class="card-body">
-                               <form>
+                             <form>
                                   {% csrf_token %}
-                                    <div class="row  mb-2">
-                                      <div class="col-6 col-md-4">
+                                    <div class="row">
+                                      <div class="col">
                                           <div class="d-flex align-items-center">
                                               <!-- logo -->
                                               <label class="avatar avatar-xxl  avatar-uploader " for="photo_editUploader">
@@ -749,7 +749,7 @@
                                         </div>
                                       </div>
 
-                                      <div class="col-md-8">
+                                      <div class="col-6">
                                           <div class="row">
                                               <div class="col-sm-4">
                                                 <input type="number" class="form-control" name="process_number" >
@@ -767,14 +767,16 @@
                                           </div>
                                       </div>
 
-                                     <div class="col">
-                                        <button class="btn btn-white form-control-lg">
-                                          <i class="bi bi-trash" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Delete" data-bs-original-title="Delete"></i>
-                                        </button>
-                                        <button class="btn btn-white form-control-lg" type="submit">
-                                          <i class="bi bi-arrow-clockwise" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Refresh" data-bs-original-title="Refresh"></i>
-                                        </button>
-                                    </div>
+                                      <div class="col align-self-center">
+                                            <button class="btn btn-white form-control-lg">
+                                              <i class="bi bi-trash" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Delete" data-bs-original-title="Delete"></i>
+                                            </button>
+                                            <button class="btn btn-white form-control-lg" type="submit">
+                                              <i class="bi bi-arrow-clockwise" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Refresh" data-bs-original-title="Refresh"></i>
+                                            </button>
+                                        </div>
+
+
                                     </div>
                                 </form>
                               <hr>
@@ -801,27 +803,30 @@
 
                                <form>
                                   {% csrf_token %}
-                                    <div class="row  mb-2">
+                                    <div class="row">
                                       <div class="col">
                                           <div class="row">
                                               <input type="text" class="form-control" name="domain" value="domain">
                                           </div>
                                       </div>
 
-                                      <div class="col">
+                                      <div class="col-6">
                                           <div class="range">
                                               <input type="range" class="form-range" min="0" max="100"  name="performance_percentage" id="performancePercentageEdit" value="0" oninput="amount.value=performancePercentageEdit.value">
                                               <output id="amountEdit" name="amount" for="performancePercentageEdit"></output>
                                           </div>
                                       </div>
-                                        <div class="col">
-                                            <button class="btn btn-white form-control-lg">
+
+                                      <div class="col align-self-center">
+                                          <button class="btn btn-white form-control-lg">
                                               <i class="bi bi-trash" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Delete" data-bs-original-title="Delete"></i>
-                                            </button>
-                                            <button class="btn btn-white form-control-lg" type="submit">
+                                          </button>
+
+                                          <button class="btn btn-white form-control-lg" type="submit">
                                               <i class="bi bi-arrow-clockwise" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Refresh" data-bs-original-title="Refresh"></i>
-                                            </button>
-                                        </div>
+                                          </button>
+                                      </div>
+
                                   </div>
                                 </form>
                               <hr>
