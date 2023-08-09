@@ -849,7 +849,7 @@
                           <div class="card-body">
                               <form>
                                   {% csrf_token %}
-                                    <div class="row  mb-2">
+                                    <div class="row ">
                                       <div class="col-6 col-md-4">
                                           <div class="d-flex align-items-center">
                                               <!-- logo -->
@@ -867,13 +867,24 @@
                                         </div>
                                       </div>
 
-                                      <div class="col-md-8">
+                                      <div class="col-6">
                                           <div class="row">
                                               <input type="text" class="form-control" name="client_name" value="client name">
                                               <textarea id="clientCommentEdit" type="text" class="form-control" name="client_comment" rows="4">
                                               </textarea>
                                           </div>
                                       </div>
+
+
+                                      <div class="col align-self-center">
+                                            <button class="btn btn-white form-control-lg">
+                                              <i class="bi bi-trash" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Delete" data-bs-original-title="Delete"></i>
+                                            </button>
+                                            <button class="btn btn-white form-control-lg" type="submit">
+                                              <i class="bi bi-arrow-clockwise" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Refresh" data-bs-original-title="Refresh"></i>
+                                            </button>
+                                        </div>
+
                                   </div>
                                 </form>
                               <hr>
