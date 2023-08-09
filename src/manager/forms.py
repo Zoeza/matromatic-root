@@ -13,4 +13,4 @@ class TopPageForm(ModelForm):
 class ServiceForm(ModelForm):
     class Meta:
         model = Service
-        fields = "__all__"
+        fields = ('icon', 'service_title', 'service_description')
