@@ -1132,7 +1132,7 @@
 
               </div>
               <div class="modal-footer">
-                <button type="submit" class="btn btn-soft-white">Confirm</button>
+                <button type="submit" class="btn btn-white">Confirm</button>
               </div>
           </form>
           <!-- end add service form -->
@@ -1150,7 +1150,48 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <!-- begin add process form -->
-            <form>
+            <form action="{% url 'home-manager' 'add_process_step' %}" class="js-validate need-validate" novalidate method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+              <div class="modal-body">
+                  <div class="row justify-content-center">
+                      <label class="form-label"> Service icon </label>
+                      <div class="col-4">
+                          <div class="row justify-content-center">
+                                  <div class="d-flex align-items-center">
+                                  <!-- logo -->
+                                  <label class="avatar avatar-xxl  avatar-uploader " >
+                                    <img id="service_icon" class="img-fluid" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
+
+                                    <input type="file" class="js-file-attach avatar-uploader-input" name="icon"  data-hs-file-attach-options=' {
+                                              "textTarget": "#service_icon",
+                                              "mode": "image",
+                                              "targetAttr": "src",
+                                              "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
+                                              }'>
+                                  </label>
+                                  <!-- End logo -->
+
+                                </div>
+                              </div>
+                      </div>
+                  </div>
+                 <div class="mb-3">
+                      <label class="form-label" id="service_title">Service Title</label>
+                        <input type="text" class="form-control" name="service_title" value="service title">
+                 </div>
+
+                  <div class="mb-3">
+                      <label class="form-label" for="serviceDescription">Service Description</label>
+                      <textarea  type="text" id="serviceDescription" class="form-control" name="service_description"  rows="4">
+                      </textarea>
+                  </div>
+
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-white">Confirm</button>
+              </div>
+          </form>
+
                 {% csrf_token %}
               <div class="modal-body">
                   <!-- begin add process photo -->
@@ -1160,10 +1201,10 @@
                           <div class="row justify-content-center">
                                   <div class="d-flex align-items-center">
                                   <!-- logo -->
-                                  <label class="avatar avatar-xxl  avatar-uploader " for="processPhotoUploader">
+                                  <label class="avatar avatar-xxl  avatar-uploader " >
                                     <img id="process_photo" class="avatar-img" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
 
-                                    <input type="file" class="js-file-attach avatar-uploader-input" name="icon" id="processPhotoUploader" data-hs-file-attach-options=' {
+                                    <input type="file" class="js-file-attach avatar-uploader-input" name="icon" data-hs-file-attach-options=' {
                                               "textTarget": "#process_photo",
                                               "mode": "image",
                                               "targetAttr": "src",
