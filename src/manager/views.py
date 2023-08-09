@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .forms import TopPageForm
 from home.models import TopPage
+from .forms import ServiceForm
 
 
 def dashboard(request):
@@ -24,10 +25,12 @@ def home_manager(request, action):
         request.session['tab'] = None
 
         top_pages = TopPage.objects.all()
+        service_form = ServiceForm()
         context = {
             'nav_side': nav_side,
             'tab': tab,
             'top_pages': top_pages,
+            'service_form': service_form,
         }
         return render(request, url, context)
     # ---------------------- create top page---------------------- #
@@ -67,3 +70,13 @@ def home_manager(request, action):
 
             request.session['tab'] = 'main'
             return redirect('home-manager', 'main')
+
+    # ---------------------- add service--------------------- #
+    if action == 'add_new_service':
+        if request.method == 'POST':
+            service_form = ServiceForm(request.POST, request.FILES)
+            if service_form.is_valid():
+                service_form.save()
+
+        request.session['tab'] = 'top-page'
+        return redirect('home-manager', 'main')

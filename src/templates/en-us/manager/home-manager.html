@@ -1094,7 +1094,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <!-- begin add service form -->
-            <form>
+            <form action="{% url 'home-manager' 'add_new_service' %}" class="js-validate need-validate" novalidate method="post" enctype="multipart/form-data">
                 {% csrf_token %}
               <div class="modal-body">
                   <div class="row justify-content-center">
@@ -1106,7 +1106,7 @@
                                   <label class="avatar avatar-xxl  avatar-uploader " for="iconUploader">
                                     <img id="service_icon" class="img-fluid" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
 
-                                    <input type="file" class="js-file-attach avatar-uploader-input" name="icon" id="iconUploader" data-hs-file-attach-options=' {
+                                    <input type="file" class="js-file-attach avatar-uploader-input" name="{{service_from.icon.name}}" id="iconUploader" data-hs-file-attach-options=' {
                                               "textTarget": "#service_icon",
                                               "mode": "image",
                                               "targetAttr": "src",
@@ -1120,13 +1120,13 @@
                       </div>
                   </div>
                  <div class="mb-3">
-                      <label class="form-label">Service Title</label>
-                        <input type="text" class="form-control" name="service_title" value="service title">
+                      <label class="form-label" id="service_title">Service Title</label>
+                        <input type="text" class="form-control" name="{{service_from.service_title.name}}" value="service title">
                  </div>
 
                   <div class="mb-3">
-                      <label class="form-label" for="exampleFormControlTextarea1">Service Description</label>
-                      <textarea  type="text" id="exampleFormControlTextarea1" class="form-control" name="service_description "  rows="4" value="service title">
+                      <label class="form-label" for="serviceDescription">Service Description</label>
+                      <textarea  type="text" id="serviceDescription" class="form-control" name="{{service_from.service_description.name}} "  rows="4" value="service title">
                       </textarea>
                   </div>
 
