@@ -531,11 +531,11 @@
                           <!-- Body -->
                           <div class="card-body">
                               {% for service in services %}
-                              <form action="{% url 'home-manager' 'edit_service' %}" class="js-validate need-validate" novalidate method="post" enctype="multipart/form-data">
-                                  {% csrf_token %}
-                                  <input type="hidden" name="service_id" value={{service.id}}>
 
-                                    <div class="row">
+                              <div class="row">
+                                  <form action="{% url 'home-manager' 'edit_service' %}" class="js-validate need-validate" novalidate method="post" enctype="multipart/form-data">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="service_id" value={{service.id}}>
                                       <div class="col">
                                           <div class="d-flex align-items-center">
                                               <!-- logo -->
@@ -568,9 +568,10 @@
                                               <i class="bi bi-arrow-clockwise" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Refresh" data-bs-original-title="Refresh"></i>
                                             </button>
                                       </div>
-                                    </div>
-                                </form>
-                              <hr>
+                                  </form>
+                                    <hr>
+                              </div>
+
                               {% endfor %}
                           </div>
                           <!-- End Body -->
