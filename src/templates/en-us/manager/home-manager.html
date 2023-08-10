@@ -669,7 +669,7 @@
                           <!-- Body -->
                           <div class="card-body">
                               {%  for performance in performances %}
-                                  <form action="{% url 'home-manager' 'edit_performance' %}" class="js-validate need-validate" novalidate method="post">
+                                  <form action="{% url 'home-manager' 'edit_performance' %}"  class="js-validate need-validate" novalidate method="post">
                                       {% csrf_token %}
                                       <input type="hidden" name="performance_id" value={{performance.id}}>
                                         <div class="row">
@@ -681,7 +681,7 @@
 
                                           <div class="col-6">
                                               <div class="range">
-                                                  <input type="range" class="form-range" min="0" max="100"  name="performance_percentage" id="performancePercentageEdit_{{performance.id}}" value="{{performance.percentage}}" oninput="amount.value=performancePercentageEdit_{{performance.id}}.value">
+                                                  <input type="range" class="form-range" min="0" max="100"  name="percentage" id="performancePercentageEdit_{{performance.id}}" value="{{performance.percentage}}" oninput="amount.value=performancePercentageEdit_{{performance.id}}.value">
                                                   <output id="amountEdit_{{performance.id}}" name="amount" for="performancePercentageEdit_{{performance.id}}"></output>
                                               </div>
                                           </div>
