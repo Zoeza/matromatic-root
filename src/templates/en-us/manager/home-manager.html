@@ -604,10 +604,10 @@
                                       <div class="col">
                                           <div class="d-flex align-items-center">
                                               <!-- logo -->
-                                              <label class="avatar avatar-xl  avatar-uploader " for="photo_editUploader_{{process_step.id}}">
+                                              <label class="avatar avatar-xl  avatar-uploader">
                                                 <img id="process_photo_{{process_step.id}}" class="avatar-img" src="{% get_media_prefix %}{{process_step.photo}}" alt="">
 
-                                                <input type="file" class="js-file-attach avatar-uploader-input" name="icon" id="photo_editUploader_{{process_step.id}}" data-hs-file-attach-options=' {
+                                                <input type="file" class="js-file-attach avatar-uploader-input" name="icon"data-hs-file-attach-options=' {
                                                           "textTarget": "#process_photo_{{process_step.id}}",
                                                           "mode": "image",
                                                           "targetAttr": "src",
@@ -621,15 +621,16 @@
                                       <div class="col-6">
                                           <div class="row">
                                               <div class="col-sm-4">
-                                                <input type="number" class="form-control" name="process_number" >
+                                                <input id="process_number_{{process_step.id}" type="number" class="form-control" name="process_number" >
                                               </div>
                                               <div class="col-sm-8">
-                                                <input type="text" class="form-control" name="process_title" value="process title">
+                                                <input id="process_title_{{process_step.id}" type="text" class="form-control" name="process_title" value="process title">
                                               </div>
                                           </div>
                                           <div class="row">
                                               <div class="col-sm-12">
-                                              <textarea id="processdescriptionedit" type="text" class="form-control" name="process_description "  rows="4" value="service description">
+                                              <textarea id="process_description_{{process_step.id}" type="text" class="form-control" name="process_description" rows="4" >
+                                             {{process_description}}
                                               </textarea>
                                               </div>
                                           </div>
