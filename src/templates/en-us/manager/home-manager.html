@@ -1179,7 +1179,6 @@
                   </div>
                   <!-- end add process photo -->
                   <hr>
-
                   <!-- begin add process number & title -->
                   <div class="row">
                       <!-- begin add process number -->
@@ -1190,7 +1189,6 @@
                       <!-- end add process number -->
 
                      <!-- begin add process title -->
-
                       <div class="col-sm-8">
                         <label class="form-label" id="process_title">Title</label>
                         <input type="text" class="form-control" name="process_title" value="process title">
@@ -1219,7 +1217,6 @@
     </div>
     <!-- end add process model Modal -->
 
-
     <!-- begin add performance modal -->
     <div id="add_performance_model" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="addPerformanceModel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
@@ -1229,7 +1226,8 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <!-- begin add process form -->
-            <form>
+            <form action="{% url 'home-manager' 'add_performance' %}" class="js-validate need-validate" novalidate method="post">
+
                 {% csrf_token %}
               <div class="modal-body">
 
@@ -1237,17 +1235,17 @@
                   <div class="row justify-content-start">
                       <!-- begin add performance name -->
                       <div class="col">
-                        <label class="form-label">Domain</label>
+                        <label class="form-label" id="domain" >Domain</label>
                         <input type="text" class="form-control" name="performance_domain">
                       </div>
                       <!-- end add performance name -->
 
                      <!-- begin add performance percentage -->
                       <div class="col">
-                          <label class="form-label" for="performancePercentage" >Percentage</label>
+                          <label class="form-label" for="percentage" >Percentage</label>
                           <br>
                           <div class="range">
-                              <input type="range" class="form-range" min="0" max="100"  name="performance_percentage" id="performancePercentage" value="0" oninput="amount.value=performancePercentage.value">
+                              <input type="range" class="form-range" min="0" max="100"  name="percentage" id="percentage" value="0" oninput="amount.value=performancePercentage.value">
                               <output id="amount" name="amount" for="performancePercentage"></output>
 
                           </div>

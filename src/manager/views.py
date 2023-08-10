@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect
-from .forms import TopPageForm
 from home.models import TopPage
-from .forms import ServiceForm, ProcessForm
+from .forms import ServiceForm, ProcessForm, ClientForm, PartnerForm, ProjectForm, PerformanceForm
 
 
 def dashboard(request):
@@ -89,5 +88,41 @@ def home_manager(request, action):
             if process_form.is_valid():
                 process_form.save()
 
+        request.session['tab'] = 'top-page'
+        return redirect('home-manager', 'main')
+
+    # ---------------------- add performance--------------------- #
+    if action == 'add_performance':
+        if request.method == 'POST':
+            performance_form = PerformanceForm(request.POST)
+            if performance_form.is_valid():
+                performance_form.save()
+
+        request.session['tab'] = 'top-page'
+        return redirect('home-manager', 'main')
+    # ---------------------- add new client--------------------- #
+    if action == 'add_new_client':
+        if request.method == 'POST':
+            client_form = ClientForm(request.POST, request.FILES)
+            if client_form.is_valid():
+                client_form.save()
+
+        request.session['tab'] = 'top-page'
+        return redirect('home-manager', 'main')
+
+    # ---------------------- add new partner--------------------- #
+    if action == 'add_new_partner':
+        if request.method == 'POST':
+            partner_form = PartnerForm(request.POST, request.FILES)
+            if partner_form.is_valid():
+                partner_form.save()
+        request.session['tab'] = 'top-page'
+        return redirect('home-manager', 'main')
+    # ---------------------- add new  project--------------------- #
+    if action == 'add_new_project':
+        if request.method == 'POST':
+            project_form = ProjectForm(request.POST, request.FILES)
+            if project_form.is_valid():
+                project_form.save()
         request.session['tab'] = 'top-page'
         return redirect('home-manager', 'main')
