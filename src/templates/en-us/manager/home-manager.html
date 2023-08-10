@@ -531,16 +531,6 @@
                           <!-- Body -->
                           <div class="card-body">
                               {% for service in services %}
-
-                               <form action="{% url 'home-manager' 'delete_service' %}" class="js-validate need-validate" novalidate method="post" enctype="multipart/form-data">
-                                  {% csrf_token %}
-                                  <input type="hidden" name="service_id" value={{service.id}}>
-                                   <div class="col align-self-center">
-                                            <button class="btn btn-white form-control-lg">
-                                              <i class="bi bi-trash" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Delete" data-bs-original-title="Delete"></i>
-                                            </button>
-                                   </div>
-                              </form>
                               <form action="{% url 'home-manager' 'edit_service' %}" class="js-validate need-validate" novalidate method="post" enctype="multipart/form-data">
                                   {% csrf_token %}
                                   <input type="hidden" name="service_id" value={{service.id}}>
@@ -578,7 +568,16 @@
                                     </div>
                                 </form>
 
-
+                              <form action="{% url 'home-manager' 'edit_service' %}" class="js-validate need-validate" novalidate method="post" enctype="multipart/form-data">
+                                   <div class="col align-self-center">
+                                            <button class="btn btn-white form-control-lg">
+                                              <i class="bi bi-trash" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Delete" data-bs-original-title="Delete"></i>
+                                            </button>
+                                            <button class="btn btn-white form-control-lg" type="submit">
+                                              <i class="bi bi-arrow-clockwise" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Refresh" data-bs-original-title="Refresh"></i>
+                                            </button>
+                                      </div>
+                              </form>
                               <hr>
                               {% endfor %}
                           </div>
