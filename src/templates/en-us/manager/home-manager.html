@@ -685,8 +685,8 @@
 
                                           <div class="col-6">
                                               <div class="range">
-                                                  <input type="range" class="form-range" min="0" max="100"  name="performance_percentage" id="performancePercentageEdit_{{performance.id}}" value="0" oninput="amount.value={{performance.percentage}}.value">
-                                                  <output id="amountEdit_{{performance.id}}" name="amount" for="{{performance.percentage}}"></output>
+                                                  <input type="range" class="form-range" min="0" max="100"  name="performance_percentage" id="performancePercentageEdit_{{performance.id}}" value="{{performance.percentage}}" oninput="amount.value=performancePercentageEdit_{{performance.id}}.value">
+                                                  <output id="amountEdit_{{performance.id}}" name="amount" for="performancePercentageEdit_{{performance.id}}"></output>
                                               </div>
                                           </div>
 
