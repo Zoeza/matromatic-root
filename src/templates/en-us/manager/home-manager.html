@@ -535,13 +535,14 @@
                                   {% csrf_token %}
                                   <input type="hidden" name="service_id" value={{service.id}}>
                                     <div class="row">
+
                                       <div class="col">
                                           <div class="d-flex align-items-center">
                                               <!-- logo -->
                                               <label class="avatar avatar-xl  avatar-uploader " >
-                                                <img id="service_icon_{{service.id}}" class="avatar-img" src="{% get_media_prefix %}{{ service.icon }}" alt="">
+                                                  <img id="service_icon_{{service.id}}" class="avatar-img" src="{% get_media_prefix %}{{service.icon}}" alt="">
 
-                                                <input type="file" class="js-file-attach avatar-uploader-input" name="icon"  data-hs-file-attach-options=' {
+                                                  <input type="file" class="js-file-attach avatar-uploader-input" name="icon"  data-hs-file-attach-options=' {
                                                           "textTarget": "service_icon_{{service.id}}",
                                                           "mode": "image",
                                                           "targetAttr": "src",
@@ -549,8 +550,9 @@
                                                           }'>
                                               </label>
                                               <!-- End logo -->
-                                        </div>
+                                          </div>
                                       </div>
+
                                       <div class="col-6">
                                           <div class="row">
                                               <input id="service_title_{{service.id}}" type="text" class="form-control" name="service_title" value={{service.service_title}}>
@@ -559,6 +561,7 @@
                                               </textarea>
                                           </div>
                                       </div>
+
                                       <div class="col align-self-center">
                                             <button class="btn btn-white form-control-lg">
                                               <i class="bi bi-trash" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Delete" data-bs-original-title="Delete"></i>
@@ -569,7 +572,6 @@
                                       </div>
                                     </div>
                               </form>
-
                               <hr>
                               {% endfor %}
                           </div>
@@ -594,17 +596,19 @@
 
                           <!-- Body -->
                           <div class="card-body">
-                             <form>
+                              {% for process_step in process_steps%}
+                              <form action="{% url 'home-manager' 'edit_process_step' %}" class="js-validate need-validate" novalidate method="post" enctype="multipart/form-data">
                                   {% csrf_token %}
+                                  <input type="hidden" name="process_step_id" value={{process_step.id}}>
                                     <div class="row">
                                       <div class="col">
                                           <div class="d-flex align-items-center">
                                               <!-- logo -->
                                               <label class="avatar avatar-xl  avatar-uploader " for="photo_editUploader">
-                                                <img id="process_edit_photo" class="avatar-img" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
+                                                <img id="process_photo_{{process_step.id}}" class="avatar-img" src="{% get_media_prefix %}{{process_step.photo}}" alt="">
 
                                                 <input type="file" class="js-file-attach avatar-uploader-input" name="icon" id="photo_editUploader" data-hs-file-attach-options=' {
-                                                          "textTarget": "#process_edit_photo",
+                                                          "textTarget": "#process_photo_{{process_step.id}}",
                                                           "mode": "image",
                                                           "targetAttr": "src",
                                                           "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
@@ -644,6 +648,7 @@
                                     </div>
                                 </form>
                               <hr>
+                              {% endfor %}
                           </div>
                           <!-- End Body -->
                         </div>

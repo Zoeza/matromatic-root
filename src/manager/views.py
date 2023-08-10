@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from home.models import TopPage, Service
+from home.models import TopPage, Service, OurProcess
 from .forms import ServiceForm, ProcessForm, ClientForm, PartnerForm, ProjectForm, PerformanceForm
 
 
@@ -26,12 +26,14 @@ def home_manager(request, action):
         top_pages = TopPage.objects.all()
         services_form = ServiceForm()
         services = Service.objects.all()
+        process_steps = OurProcess.objects.all()
         context = {
             'nav_side': nav_side,
             'tab': tab,
             'top_pages': top_pages,
             'services_form': services_form,
             'services': services,
+            'process_steps': process_steps,
         }
         return render(request, url, context)
     # ---------------------- create top page---------------------- #
@@ -71,6 +73,7 @@ def home_manager(request, action):
 
             request.session['tab'] = 'main'
             return redirect('home-manager', 'main')
+    # ------------------- end edit top page------------------ #
 
     # ---------------------- add service--------------------- #
     if action == 'add_new_service':
@@ -81,7 +84,7 @@ def home_manager(request, action):
 
         request.session['tab'] = 'top-page'
         return redirect('home-manager', 'main')
-    # ---------------------- edit service--------------------- #
+    # -------------------- edit service------------------------ #
     if action == 'edit_service':
         if request.method == 'POST':
             service_id = request.POST.get('service_id', False)
@@ -90,8 +93,9 @@ def home_manager(request, action):
             service_form.save()
             request.session['tab'] = 'top-page'
             return redirect('home-manager', 'main')
-    # ---------------------- add process step--------------------- #
+    # ------------------- end edit service--------------------- #
 
+    # ------------------- add process step--------------------- #
     if action == 'add_process_step':
         if request.method == 'POST':
             process_form = ProcessForm(request.POST, request.FILES)
@@ -100,6 +104,17 @@ def home_manager(request, action):
 
         request.session['tab'] = 'top-page'
         return redirect('home-manager', 'main')
+    # -------------------- end add process step---------------- #
+    # -------------------- edit process step------------------ #
+    if action == 'edit_process_step':
+        if request.method == 'POST':
+            process_step_id = request.POST.get('process_step_id', False)
+            selected_process_step = OurProcess.objects.all().get(id=process_step_id)
+            process_form = ProcessForm(request.POST, request.FILES, instance=selected_process_step)
+            process_form.save()
+            request.session['tab'] = 'top-page'
+            return redirect('home-manager', 'main')
+    # ------------------- end edit process step---------------- #
 
     # ---------------------- add performance--------------------- #
     if action == 'add_performance':
