@@ -651,7 +651,7 @@
                         </div>
                         <!-- end our process card -->
 
-                        <!-- begin performance card -->
+                        <!-- begin view & edit performance card -->
                         <div id="Performances" class="card">
                           <div class="card-header">
                                 <div class="row align-items-start">
@@ -704,9 +704,9 @@
                           </div>
                           <!-- End Body -->
                         </div>
-                        <!-- end performance card -->
+                        <!-- end view & edit performance card -->
 
-                        <!-- begin clients card -->
+                        <!-- begin view & edit clients card -->
                         <div id="Clients" class="card">
                           <div class="card-header">
                                 <div class="row align-items-start">
@@ -723,17 +723,20 @@
                           </div>
                           <!-- Body -->
                           <div class="card-body">
-                              <form>
+                              {% for client in clients %}
+                              <form action="{% url 'home-manager' 'edit_client' %}" class="js-validate need-validate" novalidate method="post" enctype="multipart/form-data">
                                   {% csrf_token %}
+                                  <input type="hidden" name="client_id" value={{client.id}}>
+
                                     <div class="row ">
                                       <div class="col">
                                           <div class="d-flex align-items-center">
                                               <!-- logo -->
-                                              <label class="avatar avatar-xl  avatar-uploader " for="logo_editUploader">
-                                                <img id="client_edit_logo" class="avatar-img" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
+                                              <label class="avatar avatar-xl  avatar-uploader">
+                                                <img id="client_edit_logo_{{client.id}}" class="avatar-img" src="{% get_media_prefix %}{{client.client_logo}}" alt="">
 
-                                                <input type="file" class="js-file-attach avatar-uploader-input" name="icon" id="logo_editUploader" data-hs-file-attach-options=' {
-                                                          "textTarget": "#client_edit_logo",
+                                                <input type="file" class="js-file-attach avatar-uploader-input" name="client_logo" data-hs-file-attach-options=' {
+                                                          "textTarget": "#client_edit_logo_{{client.id}}",
                                                           "mode": "image",
                                                           "targetAttr": "src",
                                                           "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
@@ -744,8 +747,9 @@
                                       </div>
                                       <div class="col-6">
                                           <div class="row">
-                                              <input type="text" class="form-control" name="client_name" value="client name">
-                                              <textarea id="clientCommentEdit"  class="form-control" name="client_comment" rows="4">
+                                              <input type="text" id="clientName_{{client.id}}" class="form-control" name="client_name" value={{client.client_name}}>
+                                              <textarea id="clientCommentEdit_{{client.id}}"  class="form-control" name="client_comment" rows="5">
+                                                  {{client.client_comment}}
                                               </textarea>
                                           </div>
                                       </div>
@@ -760,12 +764,13 @@
                                   </div>
                                 </form>
                               <hr>
+                              {% endfor %}
                           </div>
                           <!-- End Body -->
                         </div>
-                        <!-- end clients card -->
+                        <!-- end view & edit clients card -->
 
-                        <!-- begin partner card -->
+                        <!-- begin view & edit partner card -->
                         <div id="Partners" class="card">
                            <div class="card-header">
                                 <div class="row align-items-start">
@@ -825,9 +830,9 @@
                           </div>
                           <!-- End Body -->
                         </div>
-                        <!--end partner  card -->
+                        <!--end view & edit partner card -->
 
-                        <!-- begin project card -->
+                        <!-- begin view & edit  project card -->
                         <div id="Projects" class="card">
                           <div class="card-header">
                                 <div class="row align-items-start">
@@ -882,7 +887,7 @@
                           </div>
                           <!-- End Body -->
                         </div>
-                        <!-- end project card -->
+                        <!-- end view & edit project card -->
                       </div>
 
                       <!-- Sticky Block End Point -->
