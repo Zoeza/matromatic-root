@@ -530,17 +530,20 @@
 
                           <!-- Body -->
                           <div class="card-body">
-                                <form>
+                              {% for service in services_form%}
+                              <form action="{% url 'home-manager' 'edit_service' %}" class="js-validate need-validate" novalidate method="post" enctype="multipart/form-data">
                                   {% csrf_token %}
+                                  <input type="hidden" name="service_id" value={{service.id}}>
+
                                     <div class="row">
                                       <div class="col">
                                           <div class="d-flex align-items-center">
                                               <!-- logo -->
-                                              <label class="avatar avatar-xl  avatar-uploader " for="icon_editUploader">
-                                                <img id="service_edit_icon" class="avatar-img" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
+                                              <label class="avatar avatar-xl  avatar-uploader " >
+                                                <img id="service_icon_{{service.id}}" class="avatar-img" src="{% get_media_prefix %}{{ service.icon }}" alt="">
 
-                                                <input type="file" class="js-file-attach avatar-uploader-input" name="icon" id="icon_editUploader" data-hs-file-attach-options=' {
-                                                          "textTarget": "#service_edit_icon",
+                                                <input type="file" class="js-file-attach avatar-uploader-input" name="{{ service.icon.name }}"  data-hs-file-attach-options=' {
+                                                          "textTarget": "service_icon_{{service.id}}",
                                                           "mode": "image",
                                                           "targetAttr": "src",
                                                           "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
@@ -551,8 +554,8 @@
                                       </div>
                                       <div class="col-6">
                                           <div class="row">
-                                              <input type="text" class="form-control" name="service_title" value="service title">
-                                              <textarea id="serviceDescriptionEdit" type="text" class="form-control" name="service_description "  value="service title"  rows="4">
+                                              <input type="text" class="form-control" name="{{service.service_title.name}}" value="service title">
+                                              <textarea id="serviceDescriptionEdit" type="text" class="form-control" name="{{service.service_description.name}} "  value="service title"  rows="4">
                                               </textarea>
                                           </div>
                                       </div>
@@ -567,6 +570,7 @@
                                     </div>
                                 </form>
                               <hr>
+                              {% endfor %}
                           </div>
                           <!-- End Body -->
                         </div>
@@ -1422,7 +1426,7 @@
                       <label class="form-label" id="project_name">Project </label>
                         <input type="text" class="form-control" name="project_name" value="project name">
                  </div>
-                  
+
               </div>
               <div class="modal-footer">
                 <button type="submit" class="btn btn-white">Confirm</button>

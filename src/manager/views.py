@@ -24,12 +24,12 @@ def home_manager(request, action):
         request.session['tab'] = None
 
         top_pages = TopPage.objects.all()
-        service_form = ServiceForm()
+        services_form = ServiceForm()
         context = {
             'nav_side': nav_side,
             'tab': tab,
             'top_pages': top_pages,
-            'service_form': service_form,
+            'services_form': services_form,
         }
         return render(request, url, context)
     # ---------------------- create top page---------------------- #
@@ -79,7 +79,15 @@ def home_manager(request, action):
 
         request.session['tab'] = 'top-page'
         return redirect('home-manager', 'main')
+    # ---------------------- edit service--------------------- #
+    if action == 'add_edit_service':
+        if request.method == 'POST':
+            service_form = ServiceForm(request.POST, request.FILES)
+            if service_form.is_valid():
+                service_form.save()
 
+        request.session['tab'] = 'top-page'
+        return redirect('home-manager', 'main')
     # ---------------------- add process step--------------------- #
 
     if action == 'add_process_step':
