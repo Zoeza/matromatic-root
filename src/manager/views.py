@@ -25,7 +25,7 @@ def home_manager(request, action):
 
         top_pages = TopPage.objects.all()
         services_form = ServiceForm()
-        services = Service()
+        services = Service.objects.all()
         context = {
             'nav_side': nav_side,
             'tab': tab,
