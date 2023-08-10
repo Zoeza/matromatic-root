@@ -138,7 +138,7 @@ def home_manager(request, action):
     # -------------------- edit process step------------------ #
     if action == 'edit_performance':
         if request.method == 'POST':
-            performance_id = request.POST.get('{performance_id', False)
+            performance_id = request.POST.get('performance_id', False)
             selected_performance = Performance.objects.all().get(id=performance_id)
             performance_form = ProcessForm(request.POST,instance=selected_performance)
             performance_form.save()
