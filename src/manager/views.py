@@ -140,7 +140,7 @@ def home_manager(request, action):
         if request.method == 'POST':
             performance_id = request.POST.get('performance_id', False)
             selected_performance = Performance.objects.all().get(id=performance_id)
-            performance_form = ProcessForm(request.POST,instance=selected_performance)
+            performance_form = PerformanceForm(request.POST, instance=selected_performance)
             performance_form.save()
             request.session['tab'] = 'top-page'
             return redirect('home-manager', 'main')
