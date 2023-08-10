@@ -556,7 +556,7 @@
                                       <div class="col-6">
                                           <div class="row">
                                               <input id="service_title_{{service.id}}" type="text" class="form-control" name="service_title" value={{service.service_title}}>
-                                              <textarea id="service_description_{{service.id}}" type="text" class="form-control" name="service_description"  rows="4">
+                                              <textarea id="service_description_{{service.id}}"  class="form-control" name="service_description"  rows="4">
                                                   {{service.service_description}}
                                               </textarea>
                                           </div>
@@ -629,7 +629,7 @@
                                           </div>
                                           <div class="row">
                                               <div class="col-sm-12">
-                                              <textarea id="process_description_{{process_step.id}}" type="text" class="form-control" name="process_description" rows="4" >
+                                              <textarea  id="process_description_{{process_step.id}}" class="form-control" name="process_description" rows="4" >
                                              {{process_step.process_description}}
                                               </textarea>
                                               </div>
@@ -672,36 +672,38 @@
 
                           <!-- Body -->
                           <div class="card-body">
-
-                               <form>
-                                  {% csrf_token %}
-                                    <div class="row">
-                                      <div class="col">
-                                          <div class="row">
-                                              <input type="text" class="form-control" name="domain" value="domain">
+                              {%  for performance in performances %}
+                                  <form action="{% url 'home-manager' 'edit_performance' %}" class="js-validate need-validate" novalidate method="post" enctype="multipart/form-data">
+                                      {% csrf_token %}
+                                      <input type="hidden" name="performance_id" value={{performance.id}}>
+                                        <div class="row">
+                                          <div class="col">
+                                              <div class="row">
+                                                  <input type="text" id="domain_{{performance.id}}" class="form-control" name="domain" value={{performance.domain}}>
+                                              </div>
                                           </div>
-                                      </div>
 
-                                      <div class="col-6">
-                                          <div class="range">
-                                              <input type="range" class="form-range" min="0" max="100"  name="performance_percentage" id="performancePercentageEdit" value="0" oninput="amount.value=performancePercentageEdit.value">
-                                              <output id="amountEdit" name="amount" for="performancePercentageEdit"></output>
+                                          <div class="col-6">
+                                              <div class="range">
+                                                  <input type="range" class="form-range" min="0" max="100"  name="performance_percentage" id="performancePercentageEdit_{{performance.id}}" value="0" oninput="amount.value=performancePercentageEdit_{{performance.id}}.value">
+                                                  <output id="amountEdit_{{performance.id}}" name="amount" for="performancePercentageEdit_{{performance.id}}"></output>
+                                              </div>
                                           </div>
+
+                                          <div class="col align-self-center">
+                                              <button class="btn btn-white form-control-lg">
+                                                  <i class="bi bi-trash" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Delete" data-bs-original-title="Delete"></i>
+                                              </button>
+
+                                              <button class="btn btn-white form-control-lg" type="submit">
+                                                  <i class="bi bi-arrow-clockwise" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Refresh" data-bs-original-title="Refresh"></i>
+                                              </button>
+                                          </div>
+
                                       </div>
-
-                                      <div class="col align-self-center">
-                                          <button class="btn btn-white form-control-lg">
-                                              <i class="bi bi-trash" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Delete" data-bs-original-title="Delete"></i>
-                                          </button>
-
-                                          <button class="btn btn-white form-control-lg" type="submit">
-                                              <i class="bi bi-arrow-clockwise" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Refresh" data-bs-original-title="Refresh"></i>
-                                          </button>
-                                      </div>
-
-                                  </div>
-                                </form>
-                              <hr>
+                                    </form>
+                                  <hr>
+                              {% endfor %}
 
                           </div>
                           <!-- End Body -->
@@ -747,7 +749,7 @@
                                       <div class="col-6">
                                           <div class="row">
                                               <input type="text" class="form-control" name="client_name" value="client name">
-                                              <textarea id="clientCommentEdit" type="text" class="form-control" name="client_comment" rows="4">
+                                              <textarea id="clientCommentEdit"  class="form-control" name="client_comment" rows="4">
                                               </textarea>
                                           </div>
                                       </div>
@@ -1137,7 +1139,7 @@
 
                   <div class="mb-3">
                       <label class="form-label" for="serviceDescription">Service Description</label>
-                      <textarea  type="text" id="serviceDescription" class="form-control" name="service_description"  rows="4">
+                      <textarea   id="serviceDescription" class="form-control" name="service_description"  rows="4">
                       </textarea>
                   </div>
 
@@ -1180,7 +1182,7 @@
                                               "targetAttr": "src",
                                               "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
                                               }'>
-                                  </label>
+                                    </label>
                                   <!-- End logo -->
 
                                 </div>
@@ -1212,11 +1214,10 @@
                   <!-- begin add process description -->
                  <div class="row">
                       <label class="form-label" for="processDescriptionAdd"> Description</label>
-                      <textarea id="processDescriptionAdd" type="text" class="form-control"name="process_description"  rows="4">
+                      <textarea id="processDescriptionAdd"  class="form-control" name="process_description"  rows="4">
                       </textarea>
                   </div>
                   <!-- end add process description -->
-
               </div>
               <div class="modal-footer">
                 <button type="submit" class="btn btn-soft-secondary ">Confirm</button>
@@ -1321,7 +1322,7 @@
 
                   <div class="mb-3">
                       <label class="form-label" for="client_comment">Comment</label>
-                      <textarea  type="text" id="client_comment" class="form-control" name="client_comment "  rows="4" value="service title">
+                      <textarea  id="client_comment" class="form-control" name="client_comment "  rows="4">
                       </textarea>
                   </div>
 
