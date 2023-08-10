@@ -1276,19 +1276,20 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <!-- begin add client form -->
-            <form>
+            <form action="{% url 'home-manager' 'add_new_client' %}" class="js-validate need-validate" novalidate method="post" enctype="multipart/form-data">
+
                 {% csrf_token %}
               <div class="modal-body">
                   <div class="row justify-content-center">
-                      <label class="form-label"> Logo </label>
+                      <label class="form-label" > Logo </label>
                       <div class="col-4">
                           <div class="row justify-content-center">
                                   <div class="d-flex align-items-center">
                                   <!-- logo -->
-                                  <label class="avatar avatar-xxl  avatar-uploader " for="clientLogoUploader">
+                                  <label class="avatar avatar-xxl  avatar-uploader " >
                                     <img id="client_logo" class="img-fluid" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
 
-                                    <input type="file" class="js-file-attach avatar-uploader-input" name="client_logo" id="clientLogoUploader" data-hs-file-attach-options=' {
+                                    <input type="file" class="js-file-attach avatar-uploader-input" name="client_logo" data-hs-file-attach-options=' {
                                               "textTarget": "#client_logo",
                                               "mode": "image",
                                               "targetAttr": "src",
@@ -1303,19 +1304,19 @@
                   </div>
                   <hr>
                  <div class="mb-3">
-                      <label class="form-label">Name </label>
+                      <label class="form-label" id="client_name">Name </label>
                         <input type="text" class="form-control" name="client_name" value="client name">
                  </div>
 
                   <div class="mb-3">
-                      <label class="form-label" for="clientComment">Comment</label>
-                      <textarea  type="text" id="clientComment" class="form-control" name="client_comment "  rows="4" value="service title">
+                      <label class="form-label" for="client_comment">Comment</label>
+                      <textarea  type="text" id="client_comment" class="form-control" name="client_comment "  rows="4" value="service title">
                       </textarea>
                   </div>
 
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-soft-secondary">Confirm</button>
+                <button type="submit" class="btn btn-white">Confirm</button>
               </div>
           </form>
           <!-- end add client form -->
@@ -1329,11 +1330,12 @@
       <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="addPartnerModel">Add Client</h5>
+            <h5 class="modal-title" id="addPartnerModel">Add Partner</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <!-- begin add partner form -->
-            <form>
+            <form action="{% url 'home-manager' 'add_new_partner' %}" class="js-validate need-validate" novalidate method="post" enctype="multipart/form-data">
+
                 {% csrf_token %}
               <div class="modal-body">
                   <div class="row justify-content-center">
@@ -1342,10 +1344,10 @@
                           <div class="row justify-content-center">
                                   <div class="d-flex align-items-center">
                                   <!-- logo -->
-                                  <label class="avatar avatar-xxl  avatar-uploader " for="partnerLogoUploader">
+                                  <label class="avatar avatar-xxl  avatar-uploader">
                                     <img id="partner_logo" class="img-fluid" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
 
-                                    <input type="file" class="js-file-attach avatar-uploader-input" name="partner_logo" id="partnerLogoUploader" data-hs-file-attach-options=' {
+                                    <input type="file" class="js-file-attach avatar-uploader-input" name="partner_logo" data-hs-file-attach-options=' {
                                               "textTarget": "#partner_logo",
                                               "mode": "image",
                                               "targetAttr": "src",
@@ -1365,13 +1367,13 @@
                  </div>
 
                   <div class="mb-3">
-                      <label class="form-label" for="partnerLink">Link</label>
+                      <label class="form-label" id="partner_link">Link</label>
                       <input  type="text" id="partnerLink" class="form-control" name="partner_link "  value="partner link">
                   </div>
 
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-soft-secondary">Confirm</button>
+                <button type="submit" class="btn btn-soft-secondary">Confirm</button>
               </div>
           </form>
           <!-- end add partner form -->
@@ -1389,7 +1391,8 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <!-- begin add project form -->
-            <form>
+            <form action="{% url 'home-manager' 'add_new_project' %}" class="js-validate need-validate" novalidate method="post" enctype="multipart/form-data">
+
                 {% csrf_token %}
               <div class="modal-body">
                   <div class="row justify-content-center">
@@ -1398,10 +1401,10 @@
                           <div class="row justify-content-center">
                                   <div class="d-flex align-items-center">
                                   <!-- photo -->
-                                  <label class="avatar avatar-xxl  avatar-uploader " for="projectPhotoUploader">
+                                  <label class="avatar avatar-xxl  avatar-uploader ">
                                     <img id="project_photo" class="img-fluid" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
 
-                                    <input type="file" class="js-file-attach avatar-uploader-input" name="project_photo" id="projectPhotoUploader" data-hs-file-attach-options=' {
+                                    <input type="file" class="js-file-attach avatar-uploader-input" name="project_photo"  data-hs-file-attach-options=' {
                                               "textTarget": "#project_photo",
                                               "mode": "image",
                                               "targetAttr": "src",
@@ -1416,15 +1419,13 @@
                   </div>
                   <hr>
                  <div class="mb-3">
-                      <label class="form-label">Project </label>
+                      <label class="form-label" id="project_name">Project </label>
                         <input type="text" class="form-control" name="project_name" value="project name">
                  </div>
-
-
-
+                  
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-soft-secondary">Confirm</button>
+                <button type="submit" class="btn btn-white">Confirm</button>
               </div>
             </form>
           <!-- end add project form -->
