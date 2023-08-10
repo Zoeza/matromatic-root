@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from home.models import TopPage
+from home.models import TopPage, Service
 from .forms import ServiceForm, ProcessForm, ClientForm, PartnerForm, ProjectForm, PerformanceForm
 
 
@@ -25,11 +25,13 @@ def home_manager(request, action):
 
         top_pages = TopPage.objects.all()
         services_form = ServiceForm()
+        services = Service()
         context = {
             'nav_side': nav_side,
             'tab': tab,
             'top_pages': top_pages,
             'services_form': services_form,
+            'services': services,
         }
         return render(request, url, context)
     # ---------------------- create top page---------------------- #

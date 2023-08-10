@@ -530,7 +530,7 @@
 
                           <!-- Body -->
                           <div class="card-body">
-                              {% for service in services_form%}
+                              {% for service in services%}
                               <form action="{% url 'home-manager' 'edit_service' %}" class="js-validate need-validate" novalidate method="post" enctype="multipart/form-data">
                                   {% csrf_token %}
                                   <input type="hidden" name="service_id" value={{service.id}}>
