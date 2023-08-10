@@ -541,7 +541,7 @@
                                               <label class="avatar avatar-xl  avatar-uploader " >
                                                 <img id="service_icon_{{service.id}}" class="avatar-img" src="{% get_media_prefix %}{{ service.icon }}" alt="">
 
-                                                <input type="file" class="js-file-attach avatar-uploader-input" name="{{ service.icon.name }}"  data-hs-file-attach-options=' {
+                                                <input type="file" class="js-file-attach avatar-uploader-input" name="icon"  data-hs-file-attach-options=' {
                                                           "textTarget": "service_icon_{{service.id}}",
                                                           "mode": "image",
                                                           "targetAttr": "src",
@@ -553,8 +553,8 @@
                                       </div>
                                       <div class="col-6">
                                           <div class="row">
-                                              <input id="service_title_{{service.id}}" type="text" class="form-control" name="{{service.service_title.name}}" value={{service.service_title}}>
-                                              <textarea id="service_description_{{service.id}}" type="text" class="form-control" name="{{service.service_description.name}}"  rows="4">
+                                              <input id="service_title_{{service.id}}" type="text" class="form-control" name="service_title" value={{service.service_title}}>
+                                              <textarea id="service_description_{{service.id}}" type="text" class="form-control" name="service_description"  rows="4">
                                                   {{service.service_description}}
                                               </textarea>
                                           </div>
