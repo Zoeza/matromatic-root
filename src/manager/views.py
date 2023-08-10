@@ -80,7 +80,7 @@ def home_manager(request, action):
         request.session['tab'] = 'top-page'
         return redirect('home-manager', 'main')
     # ---------------------- edit service--------------------- #
-    if action == 'add_edit_service':
+    if action == 'edit_service':
         if request.method == 'POST':
             service_form = ServiceForm(request.POST, request.FILES)
             if service_form.is_valid():
