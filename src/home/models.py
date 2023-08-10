@@ -112,6 +112,7 @@ class OurProcess(models.Model):
 class Partner(models.Model):
     partner_name = models.CharField(max_length=50, unique=True)
     partner_logo = models.ImageField(upload_to='partner/', height_field=None, width_field=None, max_length=100)
+    partner_link = models.URLField(max_length=200)
 
     class Meta:
         verbose_name = "partner"

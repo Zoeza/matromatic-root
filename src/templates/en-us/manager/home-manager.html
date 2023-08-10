@@ -787,17 +787,20 @@
 
                           <!-- Body -->
                           <div class="card-body">
-                              <form>
+                              {% for partner in partners %}
+                              <form action="{% url 'home-manager' 'edit_partner' %}" class="js-validate need-validate" novalidate method="post" enctype="multipart/form-data">
                                     {% csrf_token %}
                                     <div class="row">
+                                        <input type="hidden" name="partner_id" value={{partner.id}}>
+
                                         <div class="col">
                                           <div class="d-flex align-items-center">
                                               <!-- logo -->
-                                              <label class="avatar avatar-xl  avatar-uploader " for="partnerLogo_editUploader">
-                                                <img id="partner_edit_logo" class="avatar-img" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
+                                              <label class="avatar avatar-xl  avatar-uploader ">
+                                                <img id="partner_edit_logo_{{partner.id}}" class="avatar-img" src="{% get_media_prefix %}{{partner.partner_logo}}" alt="">
 
-                                                <input type="file" class="js-file-attach avatar-uploader-input" name="icon" id="partnerLogo_editUploader" data-hs-file-attach-options=' {
-                                                          "textTarget": "#partner_edit_logo",
+                                                <input type="file" class="js-file-attach avatar-uploader-input" name="partner_logo"  data-hs-file-attach-options=' {
+                                                          "textTarget": "#partner_edit_logo_{{partner.id}}",
                                                           "mode": "image",
                                                           "targetAttr": "src",
                                                           "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
@@ -809,9 +812,8 @@
 
                                         <div class="col-6">
                                           <div class="row">
-                                              <input type="text" class="form-control" name="partner_name" value="partner name">
-                                              <input type="text" class="form-control" name="partner_link" value="partner link">
-
+                                              <input type="text" class="form-control" id="partnerName_{{partner.id}}" name="partner_name" value={{partner.partner_name}}>
+                                              <input type="text" class="form-control" name="partner_link_{{partner.id}}" value={{partner.partner_link}}>
                                           </div>
                                       </div>
 
@@ -827,12 +829,14 @@
                                    </div>
                               </form>
                               <hr>
+                              {% endfor %}
                           </div>
                           <!-- End Body -->
                         </div>
                         <!--end view & edit partner card -->
 
                         <!-- begin view & edit  project card -->
+
                         <div id="Projects" class="card">
                           <div class="card-header">
                                 <div class="row align-items-start">
@@ -849,17 +853,20 @@
 
                           <!-- Body -->
                           <div class="card-body">
-                              <form>
+                                {% for project in projects %}
+                              <form action="{% url 'home-manager' 'edit_project' %}" class="js-validate need-validate" novalidate method="post" enctype="multipart/form-data">
                                   {% csrf_token %}
+                                  <input type="hidden" name="project_id" value={{project.id}}>
+
                                    <div class="row">
                                         <div class="col">
                                             <div class="d-flex align-items-center">
                                                   <!-- logo -->
-                                                <label class="avatar avatar-xl  avatar-uploader " for="projectPhoto_editUploader">
-                                                    <img id="project_edit_photo" class="avatar-img" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
+                                                <label class="avatar avatar-xl  avatar-uploader">
+                                                    <img id="projectEditPhoto_{{project.id}}" class="avatar-img" src="{% get_media_prefix %}{{project.project_photo}}" alt="">
 
-                                                    <input type="file" class="js-file-attach avatar-uploader-input" name="icon" id="projectPhoto_editUploader" data-hs-file-attach-options=' {
-                                                              "textTarget": "#project_edit_photo",
+                                                    <input type="file" class="js-file-attach avatar-uploader-input" name="project_photo"  data-hs-file-attach-options=' {
+                                                              "textTarget": "#project_edit_photo_{{project.id}}",
                                                               "mode": "image",
                                                               "targetAttr": "src",
                                                               "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
@@ -870,7 +877,7 @@
                                         </div>
                                         <div class="col-6">
                                               <div class="row">
-                                                  <input type="text" class="form-control" name="project_name" value="project name">
+                                                  <input id="projectEditName_{{project.id}}" type="text" class="form-control" name="project_name" value={{project.project_name}}>
                                               </div>
                                           </div>
                                         <div class="col">
@@ -884,6 +891,7 @@
                                   </div>
                               </form>
                               <hr>
+                              {% endfor %}
                           </div>
                           <!-- End Body -->
                         </div>
