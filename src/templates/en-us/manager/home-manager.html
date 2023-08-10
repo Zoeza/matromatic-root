@@ -601,7 +601,7 @@
                                   {% csrf_token %}
                                   <input type="hidden" name="process_step_id" value={{process_step.id}}>
                                     <div class="row">
-                                      <div class="col">
+                                        <div class="col">
                                           <div class="d-flex align-items-center">
                                               <!-- edit photo -->
                                               <label class="avatar avatar-xl  avatar-uploader">
@@ -615,10 +615,9 @@
                                                           }'>
                                               </label>
                                               <!-- end edit photo -->
-                                        </div>
+                                          </div>
                                       </div>
-
-                                      <div class="col-6">
+                                        <div class="col-6">
                                           <div class="row">
                                               <div class="col-sm-4">
                                                 <input id="process_number_{{process_step.id}}" type="number" class="form-control" name="process_number" value={{process_step.process_number}}>
@@ -635,8 +634,7 @@
                                               </div>
                                           </div>
                                       </div>
-
-                                      <div class="col align-self-center">
+                                        <div class="col align-self-center">
                                             <button class="btn btn-white form-control-lg">
                                               <i class="bi bi-trash" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Delete" data-bs-original-title="Delete"></i>
                                             </button>
@@ -644,8 +642,6 @@
                                               <i class="bi bi-arrow-clockwise" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Refresh" data-bs-original-title="Refresh"></i>
                                             </button>
                                       </div>
-
-
                                     </div>
                                 </form>
                               <hr>
@@ -673,7 +669,7 @@
                           <!-- Body -->
                           <div class="card-body">
                               {%  for performance in performances %}
-                                  <form action="{% url 'home-manager' 'edit_performance' %}" class="js-validate need-validate" novalidate method="post" enctype="multipart/form-data">
+                                  <form action="{% url 'home-manager' 'edit_performance' %}" class="js-validate need-validate" novalidate method="post">
                                       {% csrf_token %}
                                       <input type="hidden" name="performance_id" value={{performance.id}}>
                                         <div class="row">
@@ -701,7 +697,7 @@
                                           </div>
 
                                       </div>
-                                    </form>
+                                  </form>
                                   <hr>
                               {% endfor %}
 

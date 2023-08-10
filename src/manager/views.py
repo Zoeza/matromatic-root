@@ -118,7 +118,7 @@ def home_manager(request, action):
     # -------------------- edit process step------------------ #
     if action == 'edit_process_step':
         if request.method == 'POST':
-            process_step_id = request.POST.get('process_step_id', False)
+            process_step_id = request.POST.get('{process_step_id', False)
             selected_process_step = OurProcess.objects.all().get(id=process_step_id)
             process_form = ProcessForm(request.POST, request.FILES, instance=selected_process_step)
             process_form.save()
@@ -135,6 +135,17 @@ def home_manager(request, action):
 
         request.session['tab'] = 'top-page'
         return redirect('home-manager', 'main')
+    # -------------------- edit process step------------------ #
+    if action == 'edit_performance':
+        if request.method == 'POST':
+            performance_id = request.POST.get('{performance_id', False)
+            selected_performance = Performance.objects.all().get(id=performance_id)
+            performance_form = ProcessForm(request.POST,instance=selected_performance)
+            performance_form.save()
+            request.session['tab'] = 'top-page'
+            return redirect('home-manager', 'main')
+    # ------------------- end edit process step---------------- #
+
     # ---------------------- add new client--------------------- #
     if action == 'add_new_client':
         if request.method == 'POST':
