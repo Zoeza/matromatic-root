@@ -84,12 +84,12 @@ def home_manager(request, action):
     # ---------------------- edit service--------------------- #
     if action == 'edit_service':
         if request.method == 'POST':
-            service_form = ServiceForm(request.POST, request.FILES)
-            if service_form.is_valid():
-                service_form.save()
-
-        request.session['tab'] = 'top-page'
-        return redirect('home-manager', 'main')
+            service_id = request.POST.get('service_id', False)
+            selected_service = Service.objects.all().get(id=service_id)
+            service_form = ServiceForm(request.POST, request.FILES, instance=selected_service)
+            service_form.save()
+            request.session['tab'] = 'top-page'
+            return redirect('home-manager', 'main')
     # ---------------------- add process step--------------------- #
 
     if action == 'add_process_step':
