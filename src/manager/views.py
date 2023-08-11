@@ -46,7 +46,7 @@ def home_manager(request, action):
 
         }
         return render(request, url, context)
-    # ---------------------- create top page ----------------- #
+    # ---------------------- create top page -------------------- #
     if action == 'create_top_page':
         if request.method == 'POST':
             top_page_form = TopPageForm(request.POST, request.FILES)
@@ -55,30 +55,30 @@ def home_manager(request, action):
 
         request.session['tab'] = 'top-page'
         return redirect('home-manager', 'main')
+    # -------------------- end create top page ------------------ #
 
-    # ---------------------- edit top page ------------------ #
-
+    # ---------------------- edit top page ---------------------- #
     if action == 'edit_top_page':
         if request.method == 'POST':
-            language = request.POST.get('top_page_language', False)
-            selected_top_page = TopPage.objects.all().get(language=language)
-            selected_top_page.language = request.POST.get('language', False)
-            selected_top_page.head_title = request.POST.get('head_title', False)
-            selected_top_page.head_text = request.POST.get('head_text', False)
-            selected_top_page.company_name = request.POST.get('company_name', False)
-            selected_top_page.company_slogan = request.POST.get('company_slogan', False)
-            selected_top_page.logo_main = request.FILES.get('logo_main')
-            selected_top_page.logo_head = request.FILES.get('logo_head')
-            selected_top_page.iphone_image = request.FILES.get('iphone_image')
-            selected_top_page.macbook_image = request.FILES.get('macbook_image')
-            selected_top_page.ipad_image = request.FILES.get('ipad_image')
-            selected_top_page.save()
-
-            request.session['tab'] = 'main'
+            top_page_id = request.POST.get('top_page_id', False)
+            selected_top_page = Service.objects.all().get(id=top_page_id)
+            top_page_form = ServiceForm(request.POST, request.FILES, instance=selected_top_page)
+            top_page_form.save()
+            request.session['tab'] = 'top-page'
             return redirect('home-manager', 'main')
     # ------------------- end edit top page ---------------- #
 
-    # ---------------------- add service --------------------- #
+    # -------------------- delete service ----------------- #
+        if action == 'delete_top_page':
+            if request.method == 'POST':
+                top_page_id = request.POST.get('top_page_id', False)
+                selected_top_page = Service.objects.all().get(id=top_page_id)
+                selected_top_page.delete()
+                request.session['tab'] = 'top-page'
+                return redirect('home-manager', 'main')
+    # ----------------- end delete service ---------------------- #
+
+    # ---------------------- add service ------------------------ #
     if action == 'add_new_service':
         if request.method == 'POST':
             service_form = ServiceForm(request.POST, request.FILES)
@@ -87,7 +87,9 @@ def home_manager(request, action):
 
         request.session['tab'] = 'top-page'
         return redirect('home-manager', 'main')
-    # -------------------- edit service ------------------------ #
+    # ----------------- end  add service ------------------------ #
+
+    # -------------------- edit service ------------------------- #
     if action == 'edit_service':
         if request.method == 'POST':
             service_id = request.POST.get('service_id', False)
@@ -96,9 +98,9 @@ def home_manager(request, action):
             service_form.save()
             request.session['tab'] = 'top-page'
             return redirect('home-manager', 'main')
-    # ------------------- end edit service --------------------- #
+    # ------------------- end edit service ---------------------- #
 
-    # -------------------- delete service ------------------------ #
+    # -------------------- delete service ----------------------- #
     if action == 'delete_service':
         if request.method == 'POST':
             service_id = request.POST.get('service_id', False)
@@ -106,9 +108,9 @@ def home_manager(request, action):
             selected_service.delete()
             request.session['tab'] = 'top-page'
             return redirect('home-manager', 'main')
-    # ------------------- end delete service --------------------- #
+    # ------------------- end delete service -------------------- #
 
-    # ------------------- add process step --------------------- #
+    # ------------------- add process step ---------------------- #
     if action == 'add_process_step':
         if request.method == 'POST':
             process_form = ProcessForm(request.POST, request.FILES)
@@ -117,9 +119,9 @@ def home_manager(request, action):
 
         request.session['tab'] = 'top-page'
         return redirect('home-manager', 'main')
-    # ---------------- end add process step---------------- #
+    # ---------------- end add process step---------------------- #
 
-    # -------------------- edit process step------------------ #
+    # -------------------- edit process step--------------------- #
     if action == 'edit_process_step':
         if request.method == 'POST':
             process_step_id = request.POST.get('{process_step_id', False)
@@ -128,9 +130,9 @@ def home_manager(request, action):
             process_form.save()
             request.session['tab'] = 'top-page'
             return redirect('home-manager', 'main')
-    # ------------------- end edit process step---------------- #
+    # ------------------- end edit process step------------------ #
 
-    # -------------------- delete process step------------------ #
+    # -------------------- delete process step------------------- #
     if action == 'delete_process_step':
         if request.method == 'POST':
             process_step_id = request.POST.get('process_step_id', False)
@@ -151,7 +153,7 @@ def home_manager(request, action):
         return redirect('home-manager', 'main')
     # ---------------------- end add performance----------------- #
 
-    # ------------------- edit performance --------------------- #
+    # ------------------- edit performance ---------------------- #
     if action == 'edit_performance':
         if request.method == 'POST':
             performance_id = request.POST.get('performance_id', False)
@@ -170,9 +172,9 @@ def home_manager(request, action):
             selected_performance.delete()
             request.session['tab'] = 'top-page'
             return redirect('home-manager', 'main')
-    # ------------------ end delete performance ---------------- #
+    # ------------------ end delete performance ----------------- #
 
-    # ---------------------- add new client--------------------- #
+    # ---------------------- add new client---------------------- #
     if action == 'add_new_client':
         if request.method == 'POST':
             client_form = ClientForm(request.POST, request.FILES)
@@ -181,7 +183,7 @@ def home_manager(request, action):
 
         request.session['tab'] = 'top-page'
         return redirect('home-manager', 'main')
-    # ---------------------- end add new client ---------------- #
+    # ---------------------- end add new client ----------------- #
 
     # -------------------- edit client -------------------------- #
     if action == 'edit_client':
@@ -194,7 +196,7 @@ def home_manager(request, action):
             return redirect('home-manager', 'main')
     # ------------------- end edit client ----------------------- #
 
-    # -------------------- delete client -------------------------- #
+    # -------------------- delete client ------------------------ #
     if action == 'delete_client':
         if request.method == 'POST':
             client_id = request.POST.get('client_id', False)
@@ -202,9 +204,9 @@ def home_manager(request, action):
             selected_client.delete()
             request.session['tab'] = 'top-page'
             return redirect('home-manager', 'main')
-    # ------------------- end delete client ----------------------- #
+    # ------------------- end delete client --------------------- #
 
-    # ---------------------- add new partner---------------------- #
+    # ---------------------- add new partner--------------------- #
     if action == 'add_new_partner':
         if request.method == 'POST':
             partner_form = PartnerForm(request.POST, request.FILES)
@@ -212,9 +214,9 @@ def home_manager(request, action):
                 partner_form.save()
         request.session['tab'] = 'top-page'
         return redirect('home-manager', 'main')
-    # ---------------------- end add new partner------------------ #
+    # ---------------------- end add new partner----------------- #
 
-    # -------------------- edit partner -------------------------- #
+    # -------------------- edit partner ------------------------- #
     if action == 'edit_partner':
         if request.method == 'POST':
             partner_id = request.POST.get('partner_id', False)
@@ -223,9 +225,9 @@ def home_manager(request, action):
             partner_form.save()
             request.session['tab'] = 'top-page'
             return redirect('home-manager', 'main')
-    # ------------------- end edit partner------------------------- #
+    # ------------------- end edit partner----------------------- #
 
-    # -------------------- delete partner -------------------------- #
+    # -------------------- delete partner ----------------------- #
     if action == 'delete_partner':
         if request.method == 'POST':
             partner_id = request.POST.get('partner_id', False)
@@ -233,9 +235,9 @@ def home_manager(request, action):
             selected_partner.delete()
             request.session['tab'] = 'top-page'
             return redirect('home-manager', 'main')
-    # ------------------- end delete partner------------------------- #
+    # ------------------- end delete partner--------------------- #
 
-    # ---------------------- add new  project--------------------- #
+    # ---------------------- add new  project-------------------- #
     if action == 'add_new_project':
         if request.method == 'POST':
             project_form = ProjectForm(request.POST, request.FILES)
@@ -254,9 +256,9 @@ def home_manager(request, action):
             project_form.save()
             request.session['tab'] = 'top-page'
             return redirect('home-manager', 'main')
-    # ------------------- end edit project------------------------ #
+    # ------------------- end edit project----------------------- #
 
-    # -------------------- delete project ------------------------- #
+    # -------------------- delete project ----------------------- #
     if action == 'delete_project':
         if request.method == 'POST':
             project_id = request.POST.get('project_id', False)
@@ -264,4 +266,4 @@ def home_manager(request, action):
             selected_project.delete()
             request.session['tab'] = 'top-page'
             return redirect('home-manager', 'main')
-    # ------------------- end delete project------------------------ #
+    # ------------------- end delete project--------------------- #
