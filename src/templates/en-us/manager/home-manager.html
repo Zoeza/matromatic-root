@@ -638,10 +638,10 @@
                                     {% csrf_token %}
                                       <input type="hidden" name="client_id" value={{client.id}}>
                                </form>
+
                               <form action="{% url 'home-manager' 'edit_client' %}" class="js-validate need-validate" novalidate method="post" enctype="multipart/form-data">
                                   {% csrf_token %}
                                   <input type="hidden" name="client_id" value={{client.id}}>
-
                                     <div class="row ">
                                       <div class="col">
                                           <div class="d-flex align-items-center">
@@ -662,24 +662,24 @@
                                               <!-- End logo -->
                                         </div>
                                       </div>
-                                      <div class="col-6">
-                                          <div class="row">
+                                        <div class="col-6">
+                                            <div class="row">
                                               <input type="text" id="clientName_{{client.id}}" class="form-control" name="client_name" value={{client.client_name}}>
                                               <textarea id="clientCommentEdit_{{client.id}}"  class="form-control" name="client_comment" rows="5">
                                                   {{client.client_comment}}
                                               </textarea>
                                           </div>
-                                      </div>
-                                      <div class="col align-self-center">
-                                          <button class="btn btn-white form-control-lg" form="delete_client_form_{{client.id}}">
+                                        </div>
+                                        <div class="col align-self-center">
+                                            <button class="btn btn-white form-control-lg" form="delete_client_form_{{client.id}}">
                                               <i class="bi bi-trash" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Delete" data-bs-original-title="Delete"></i>
                                           </button>
-                                          <button class="btn btn-white form-control-lg" type="submit">
+                                            <button class="btn btn-white form-control-lg" type="submit">
                                               <i class="bi bi-arrow-clockwise" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Refresh" data-bs-original-title="Refresh"></i>
                                           </button>
-                                      </div>
-                                  </div>
-                                </form>
+                                        </div>
+                                    </div>
+                              </form>
                               <hr>
                               {% endfor %}
                           </div>
@@ -806,17 +806,19 @@
                                                   <!-- End logo -->
                                             </div>
                                         </div>
+
                                         <div class="col-6">
-                                              <div class="row">
-                                                  <input id="projectEditName_{{project.id}}" type="text" class="form-control" name="project_name" value={{project.project_name}}>
-                                              </div>
-                                          </div>
+                                            <div class="row">
+                                                <input id="projectEditName_{{project.id}}" type="text" class="form-control" name="project_name" value={{project.project_name}}>
+                                            </div>
+                                        </div>
+
                                         <div class="col">
                                             <button class="btn btn-white form-control-lg" form="delete_project_form_{{project.id}}">
-                                              <i class="bi bi-trash" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Delete" data-bs-original-title="Delete"></i>
+                                               <i class="bi bi-trash" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Delete" data-bs-original-title="Delete"></i>
                                             </button>
                                             <button class="btn btn-white form-control-lg" type="submit">
-                                              <i class="bi bi-arrow-clockwise" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Refresh" data-bs-original-title="Refresh"></i>
+                                               <i class="bi bi-arrow-clockwise" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Refresh" data-bs-original-title="Refresh"></i>
                                             </button>
                                         </div>
                                   </div>
@@ -1258,7 +1260,7 @@
                           <textarea id="projects_intro" class="form-control" name="projects_intro" rows="6">
                           </textarea>
                       </div>
-                      <br>
+                      <hr>
                       <strong><h4> Other informations :</h4></strong>
                       <div class="modal-footer">
                           <button type="submit" class="btn btn-white">Confirm</button>
