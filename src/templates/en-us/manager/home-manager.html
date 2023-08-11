@@ -524,22 +524,22 @@
                                           </div>
                                       </div>
                                         <div class="col-6">
-                                          <div class="row">
-                                              <div class="col-sm-4">
-                                                <input id="process_number_{{process_step.id}}" type="number" class="form-control" name="process_number" value={{process_step.process_number}}>
+                                            <div class="row">
+                                                  <div class="col-sm-4">
+                                                    <input id="process_number_{{process_step.id}}" type="number" class="form-control" name="process_number" value={{process_step.process_number}}>
+                                                  </div>
+                                                  <div class="col-sm-8">
+                                                      <input id="process_title_{{process_step.id}}"  type="text" class="form-control" name="process_title" value={{process_step.process_title}}>
+                                                  </div>
                                               </div>
-                                              <div class="col-sm-8">
-                                                  <input id="process_title_{{process_step.id}}"  type="text" class="form-control" name="process_title" value={{process_step.process_title}}>
+                                            <div class="row">
+                                                  <div class="col-sm-12">
+                                                  <textarea  id="process_description_{{process_step.id}}" class="form-control" name="process_description" rows="6" >
+                                                 {{process_step.process_description}}
+                                                  </textarea>
+                                                  </div>
                                               </div>
-                                          </div>
-                                          <div class="row">
-                                              <div class="col-sm-12">
-                                              <textarea  id="process_description_{{process_step.id}}" class="form-control" name="process_description" rows="6" >
-                                             {{process_step.process_description}}
-                                              </textarea>
-                                              </div>
-                                          </div>
-                                         </div>
+                                        </div>
                                         <div class="col align-self-center">
                                             <button class="btn btn-white form-control-lg" form="delete_process_step_form_{{process_step.id}}">
                                               <i class="bi bi-trash" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Delete" data-bs-original-title="Delete"></i>
@@ -656,7 +656,7 @@
                                                           "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
                                                           }'>
                                                   <span class="avatar-uploader-trigger">
-                                                      <i class="bi-pencil-fill avatar-uploader-icon shadow-sm "data-bs-toggle="tooltip" data-bs-placement="top"  aria-label="Edit client logo" data-bs-original-title="Edit client logo"></i>
+                                                      <i class="bi-pencil-fill avatar-uploader-icon shadow-sm " data-bs-toggle="tooltip" data-bs-placement="top"  aria-label="Edit client logo" data-bs-original-title="Edit client logo"></i>
                                                   </span>
                                               </label>
                                               <!-- End logo -->
