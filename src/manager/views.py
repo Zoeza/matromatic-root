@@ -62,7 +62,7 @@ def home_manager(request, action):
         if request.method == 'POST':
             top_page_id = request.POST.get('top_page_id', False)
             selected_top_page = TopPage.objects.all().get(id=top_page_id)
-            top_page_form = ServiceForm(request.POST, request.FILES, instance=selected_top_page)
+            top_page_form = TopPageForm(request.POST, request.FILES, instance=selected_top_page)
             top_page_form.save()
             request.session['tab'] = 'top-page'
             return redirect('home-manager', 'main')
