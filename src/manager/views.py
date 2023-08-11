@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from home.models import TopPage, Service, OurProcess, Performance, Client, Partner, Project
-from .forms import TopPageForm, ServiceForm, ProcessForm, ClientForm, PartnerForm, ProjectForm, PerformanceForm
+from .forms import ServiceForm, ProcessForm, ClientForm, PartnerForm, ProjectForm, PerformanceForm
 
 
 def dashboard(request):
@@ -49,9 +49,16 @@ def home_manager(request, action):
     # ---------------------- create top page ----------------- #
     if action == 'create_top_page':
         if request.method == 'POST':
-            top_page_form = TopPageForm(request.POST, request.FILES)
-            if top_page_form.is_valid():
-                top_page_form.save()
+            TopPage(language=request.POST.get('language', False),
+                    head_title=request.POST.get('head_title', False),
+                    head_text=request.POST.get('head_text', False),
+                    company_name=request.POST.get('company_name', False),
+                    company_slogan=request.POST.get('company_slogan', False),
+                    logo_main=request.FILES.get('logo_main'),
+                    logo_head=request.FILES.get('logo_head'),
+                    iphone_image=request.FILES.get('iphone_image'),
+                    macbook_image=request.FILES.get('macbook_image'),
+                    ipad_image=request.FILES.get('ipad_image'), ).save()
         request.session['tab'] = 'top-page'
         return redirect('home-manager', 'main')
 
@@ -73,7 +80,7 @@ def home_manager(request, action):
             selected_top_page.ipad_image = request.FILES.get('ipad_image')
             selected_top_page.save()
 
-            request.session['tab'] = 'top-page'
+            request.session['tab'] = 'main'
             return redirect('home-manager', 'main')
     # ------------------- end edit top page ---------------- #
 
