@@ -853,7 +853,7 @@
               </div>
               <div class="modal-body">
                   <!-- Form -->
-                    <form class="row g-3" action="{% url 'home-manager' 'create_top_page' %}"  class="js-validate need-validate" novalidate method="post" enctype="multipart/form-data">
+                    <form class="row g-3 js-validate need-validate" action="{% url 'home-manager' 'create_top_page' %}"   novalidate method="post" enctype="multipart/form-data">
                           {% csrf_token %}
 
                           <div class="mb-3">
