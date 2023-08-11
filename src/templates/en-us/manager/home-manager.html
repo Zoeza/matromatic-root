@@ -849,7 +849,7 @@
               </div>
               <div class="modal-body">
                   <!-- Form -->
-                    <form class="row g-3" action="{% url 'home-manager' 'create_top_page' %}"  novalidate method="post" enctype="multipart/form-data">
+                    <form class="row g-3" action="{% url 'home-manager' 'create_top_page' %}"  class="js-validate need-validate" novalidate method="post" enctype="multipart/form-data">
                           {% csrf_token %}
 
                           <div class="mb-3">
@@ -892,7 +892,7 @@
                           <div class="col-sm-9">
                             <div class="d-flex align-items-center">
                               <!-- Avatar -->
-                              <label class="avatar avatar-sm  avatar-uploader " >
+                              <label class="avatar avatar-sm  avatar-uploader" >
                                 <img id="logo_head" class="avatar-img"  src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="" >
 
                                 <input type="file" class="js-file-attach avatar-uploader-input"  name="logo_head"  data-hs-file-attach-options=' {
@@ -910,7 +910,7 @@
 
                           <!-- begin head title -->
                           <div class="col-md-6">
-                              <label  class="form-label"  id="head_title">Head title</label>
+                              <label  class="form-label" id="head_title">Head title</label>
                               <input type="text" class="form-control" name="head_title">
                            </div>
                           <!-- end head title -->
@@ -918,19 +918,19 @@
                           <!-- begin head text -->
                           <div class="col-md-6">
                               <label class="form-label" id="head_text">Head Text</label>
-                              <input type="text"  class="form-control" name="head_text"  >
+                              <input type="text"  class="form-control" name="head_text">
                            </div>
                           <!-- end head text -->
                           <!-- begin company name-->
                           <div class="col-md-6">
                               <label class="form-label" id="company_name">Company Name</label>
-                                <input type="text" class="form-control" name="company_name" >
+                                <input type="text" class="form-control" name="company_name">
                           </div>
                           <!-- end company name-->
                           <!-- begin company slogan-->
                           <div class="col-md-6">
                              <label class="form-label" id="company_slogan">Company Slogan</label>
-                             <input type="text" class="form-control" name="company_slogan" >
+                             <input type="text" class="form-control" name="company_slogan">
                           </div>
                           <!-- end company slogan-->
 
