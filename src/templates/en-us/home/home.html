@@ -1,6 +1,6 @@
 {% extends "en-us/home/base.html" %}
 {% load static %}
-{% load static %}
+
 
 
     <!-- ===============================================-->
@@ -45,7 +45,7 @@
                   <li class="fancynav-item" data-one-page="data-one-page"><a class="fancynav-link" href="#defaultProgressbar"><span class="fancynav-link-content">performance</span></a></li>
                   <li class="fancynav-item" data-one-page="data-one-page"><a class="fancynav-link" href="#defaultPartners"><span class="fancynav-link-content">partners</span></a></li>
                   <li class="fancynav-item" data-one-page="data-one-page"><a class="fancynav-link" href="#defaultProjects"><span class="fancynav-link-content">our projects</span></a></li>
-                  <li class="fancynav-item" data-one-page="data-one-page"><a class="fancynav-link" href="./contact.html"><span class="fancynav-link-content">contact</span></a></li>
+                  <li class="fancynav-item" data-one-page="data-one-page"><a class="fancynav-link" href="{% url 'contact-us' %}?init=True"><span class="fancynav-link-content">contact</span></a></li>
                 </ul>
             </div>
           </nav>

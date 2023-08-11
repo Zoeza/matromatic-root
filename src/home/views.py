@@ -1,7 +1,7 @@
 from django.http import Http404
 from django.shortcuts import render
 from .models import TopPage, Content, Service, OurProcess, Partner, SocialMedia, \
- Footer, Client, Project, Performance
+    Footer, Client, Project, Performance
 
 
 def home(request):
@@ -55,8 +55,6 @@ def home(request):
     except SocialMedia.DoesNotExist:
         raise Http404("Socials media do not exist")
 
-
-
     try:
         performances = Performance.objects.all()
     except Performance.DoesNotExist:
@@ -77,3 +75,11 @@ def home(request):
     }
 
     return render(request, url, context)
+
+
+def contact_us(request):
+    if not request.session.get('language', None):
+        request.session['language'] = 'en-us'
+    direction = request.session.get('language')
+    url = direction + "/home/contact_us.html"
+    return render(request, url, {})
