@@ -517,7 +517,7 @@
                                                           "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
                                                           }'>
                                                   <span class="avatar-uploader-trigger">
-                                                      <i class="bi-pencil-fill avatar-uploader-icon shadow-sm"></i>
+                                                      <i class="bi-pencil-fill avatar-uploader-icon shadow-sm " aria-label="Edit photo"></i>
                                                   </span>
                                               </label>
                                               <!-- end edit photo -->
@@ -539,7 +539,7 @@
                                               </textarea>
                                               </div>
                                           </div>
-                                      </div>
+                                         </div>
                                         <div class="col align-self-center">
                                             <button class="btn btn-white form-control-lg" form="delete_process_step_form_{{process_step.id}}">
                                               <i class="bi bi-trash" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Delete" data-bs-original-title="Delete"></i>
@@ -655,6 +655,9 @@
                                                           "targetAttr": "src",
                                                           "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
                                                           }'>
+                                                  <span class="avatar-uploader-trigger">
+                                                      <i class="bi-pencil-fill avatar-uploader-icon shadow-sm " aria-label="Edit client logo"></i>
+                                                  </span>
                                               </label>
                                               <!-- End logo -->
                                         </div>
@@ -715,7 +718,7 @@
                                         <div class="col">
                                           <div class="d-flex align-items-center">
                                               <!-- logo -->
-                                              <label class="avatar avatar-xl  avatar-uploader ">
+                                              <label class="avatar avatar-sm  avatar-uploader ">
                                                 <img id="partner_edit_logo_{{partner.id}}" class="avatar-img" src="{% get_media_prefix %}{{partner.partner_logo}}" alt="">
 
                                                 <input type="file" class="js-file-attach avatar-uploader-input" name="partner_logo"  data-hs-file-attach-options=' {
@@ -724,6 +727,9 @@
                                                           "targetAttr": "src",
                                                           "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
                                                           }'>
+                                                  <span class="avatar-uploader-trigger">
+                                                      <i class="bi-pencil-fill avatar-uploader-icon shadow-sm " aria-label="Edit partner logo"></i>
+                                                  </span>
                                               </label>
                                               <!-- End logo -->
                                           </div>
@@ -794,6 +800,9 @@
                                                               "targetAttr": "src",
                                                               "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
                                                               }'>
+                                                    <span class="avatar-uploader-trigger">
+                                                      <i class="bi-pencil-fill avatar-uploader-icon shadow-sm " aria-label="Edit project photo"></i>
+                                                  </span>
                                                 </label>
                                                   <!-- End logo -->
                                             </div>
