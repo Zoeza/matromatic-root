@@ -1180,78 +1180,66 @@
                           </div>
                       </div>
                       <hr>
+                      <div class="row">
+                          <div class="col-6">
+                              <label class="form-label"> Step Tow</label>
+                              <div class="d-flex align-items-center">
+                                  <!-- edit photo -->
+                                  <label class="avatar avatar-xl  avatar-uploader">
+                                    <img id="step2_photo" class="avatar-img" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
+
+                                    <input type="file" class="js-file-attach avatar-uploader-input" name="photo" data-hs-file-attach-options=' {
+                                              "textTarget": "#step2_photo",
+                                              "mode": "image",
+                                              "targetAttr": "src",
+                                              "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
+                                              }'>
+                                  </label>
+                                  <!-- end edit photo -->
+                              </div>
+                          </div>
+
+                          <div class="col-6">
+                              <div class="row">
+                                  <input id="step_three_title"  type="text" class="form-control" name="step_three_title" value=title>
+                                  <textarea  id="step_three_description" class="form-control" name="step_three_description" rows="6" >
+                                  </textarea>
+                              </div>
+                          </div>
+                      </div>
+                      <hr>
+                      <div class="row">
+                          <div class="col-6">
+                              <label class="form-label"> Step Tow</label>
+                              <div class="d-flex align-items-center">
+                                  <!-- edit photo -->
+                                  <label class="avatar avatar-xl  avatar-uploader">
+                                    <img id="step4_photo" class="avatar-img" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
+
+                                    <input type="file" class="js-file-attach avatar-uploader-input" name="photo" data-hs-file-attach-options=' {
+                                              "textTarget": "#step4_photo",
+                                              "mode": "image",
+                                              "targetAttr": "src",
+                                              "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
+                                              }'>
+                                  </label>
+                                  <!-- end edit photo -->
+                              </div>
+                          </div>
+
+                          <div class="col-6">
+                              <div class="row">
+                                  <input id="step_four_title"  type="text" class="form-control" name="step_four_title" value=title>
+                                  <textarea  id="step_four_description" class="form-control" name="step_four_description" rows="6" >
+                                  </textarea>
+                              </div>
+                          </div>
+                      </div>
+                      <hr>
 
 
 
                           <br>
-                          <!-- begin iphone image -->
-                          <div class="col-md-4 ">
-                              <label class="col-sm-3 col-form-label form-label"> iphone image</label>
-                              <div class="col-sm-9">
-                                <div class="d-flex align-items-center">
-                                  <!-- logo -->
-                                  <label class="avatar avatar-xl  avatar-uploader " >
-                                    <img id="iphone_image" class="avatar-img" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
-
-                                    <input type="file" class="js-file-attach avatar-uploader-input" name="iphone_image" data-hs-file-attach-options=' {
-                                              "textTarget": "#iphone_image",
-                                              "mode": "image",
-                                              "targetAttr": "src",
-                                              "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
-                                              }'>
-
-                                  </label>
-                                  <!-- End logo -->
-
-                                 </div>
-                              </div>
-                          </div>
-                          <!-- end iphone image -->
-                          <!-- begin ipad img -->
-
-                          <div class="col-md-4 ">
-                              <label class="col-sm-3 col-form-label form-label"> ipad image</label>
-                              <div class="col-sm-9">
-                                <div class="d-flex align-items-center">
-                                  <!-- logo -->
-                                  <label class="avatar avatar-xl  avatar-uploader">
-                                    <img id="ipad_image" class="avatar-img" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
-
-                                    <input type="file" class="js-file-attach avatar-uploader-input" name="ipad_image"  data-hs-file-attach-options=' {
-                                              "textTarget": "#ipad_image",
-                                              "mode": "image",
-                                              "targetAttr": "src",
-                                              "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
-                                              }'>
-
-                                  </label>
-                                  <!-- End logo -->
-                                 </div>
-                              </div>
-                          </div>
-                          <!-- end ipad img -->
-                          <!-- begin macbook img -->
-                          <div class="col-md-4 ">
-                              <label class="col-sm-3 col-form-label form-label"> ipad image</label>
-                              <div class="col-sm-9">
-                                <div class="d-flex align-items-center">
-                                  <!-- logo -->
-                                  <label class="avatar avatar-xl  avatar-uploader " >
-                                    <img id="macbook_image" class="avatar-img" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
-
-                                    <input type="file" class="js-file-attach avatar-uploader-input" name="macbook_image" data-hs-file-attach-options=' {
-                                              "textTarget": "#macbook_image",
-                                              "mode": "image",
-                                              "targetAttr": "src",
-                                              "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
-                                              }'>
-
-                                  </label>
-                                  <!-- End logo -->
-                                 </div>
-                              </div>
-                          </div>
-                          <!-- end macbook img -->
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-white">Confirm</button>
                         </div>
