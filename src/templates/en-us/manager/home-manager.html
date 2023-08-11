@@ -1055,15 +1055,15 @@
 
                           <!-- begin main logo -->
                           <div class="col-md-6 ">
-                              <label class="col-sm-3 col-form-label form-label"> Logo Main</label>
+                              <label class="col-sm-3 col-form-label form-label"> Background Image</label>
                               <div class="col-sm-9">
                                 <div class="d-flex align-items-center">
                                   <!-- logo -->
                                   <label class="avatar avatar-xl  avatar-uploader ">
-                                    <img id="logo_main" class="avatar-img" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
+                                    <img id="backgroundImage" class="avatar-img" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
 
-                                    <input type="file" class="js-file-attach avatar-uploader-input" name="logo_main"  data-hs-file-attach-options=' {
-                                              "textTarget": "#logo_main",
+                                    <input type="file" class="js-file-attach avatar-uploader-input" name="main_background_image"  data-hs-file-attach-options=' {
+                                              "textTarget": "#backgroundImage",
                                               "mode": "image",
                                               "targetAttr": "src",
                                               "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
@@ -1077,24 +1077,10 @@
                           <!-- end main logo -->
                            <!-- begin head logo -->
                           <div class="col-md-6">
-                          <label class="col-sm-3 col-form-label form-label"> Logo Head</label>
-                          <div class="col-sm-9">
-                            <div class="d-flex align-items-center">
-                              <!-- Avatar -->
-                              <label class="avatar avatar-sm  avatar-uploader" >
-                                <img id="logo_head" class="avatar-img"  src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="" >
-
-                                <input type="file" class="js-file-attach avatar-uploader-input"  name="logo_head"  data-hs-file-attach-options=' {
-                                          "textTarget": "#logo_head",
-                                          "mode": "image",
-                                          "targetAttr": "src",
-                                          "allowTypes": [".png",".jpeg", ".jpg",".ico"]}'>
-                              </label>
-                              <!-- End Avatar -->
-
-                            </div>
+                          <label class="col-sm-3 col-form-label form-label">Company Description</label>
+                                  <textarea  id="companyDescription" class="form-control" name="company_description"  rows="6">
+                                  </textarea>
                           </div>
-                        </div>
                            <!-- end head logo -->
 
                           <!-- begin head title -->
