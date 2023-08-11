@@ -73,7 +73,7 @@ def home_manager(request, action):
             selected_top_page.ipad_image = request.FILES.get('ipad_image')
             selected_top_page.save()
 
-            request.session['tab'] = 'main'
+            request.session['tab'] = 'top-page'
             return redirect('home-manager', 'main')
     # ------------------- end edit top page ---------------- #
 
