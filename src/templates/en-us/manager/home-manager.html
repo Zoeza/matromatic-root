@@ -468,6 +468,7 @@
                                               <i class="bi bi-arrow-clockwise" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Refresh" data-bs-original-title="Refresh"></i>
                                             </button>
                                       </div>
+
                                     </div>
                               </form>
                               <hr>
@@ -733,14 +734,14 @@
                                               </label>
                                               <!-- End logo -->
                                           </div>
-                                      </div>
+                                        </div>
 
                                         <div class="col-6">
                                           <div class="row">
                                               <input type="text" class="form-control" id="partnerName_{{partner.id}}" name="partner_name" value={{partner.partner_name}}>
                                               <input type="text" class="form-control" id="partnerLink _{{partner.id}}" name="partner_link" value={{partner.partner_link}}>
                                           </div>
-                                      </div>
+                                        </div>
 
                                         <div class="col align-self-center">
                                             <button class="btn btn-white form-control-lg" form="delete_partner_form_{{partner.id}}">
@@ -1262,6 +1263,17 @@
                       </div>
                       <hr>
                       <strong><h4> Other informations :</h4></strong>
+
+                       <div class="col-12">
+                        <label  class="form-label">Performance Record Breaking</label>
+                           <div class="range">
+                              <input type="range" class="form-range" min="0" max="100"  name="performance_record_breaking" id="performance_record_breaking" value="0" oninput="amount.value=performance_record_breaking.value">
+                              <output id="amount_performance_record_breaking" name="amount" for="performance_record_breaking"></output>
+                          </div>
+                      </div>
+
+
+
                       <div class="modal-footer">
                           <button type="submit" class="btn btn-white">Confirm</button>
                       </div>
