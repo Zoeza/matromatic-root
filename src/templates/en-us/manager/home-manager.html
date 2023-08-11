@@ -605,6 +605,7 @@
                                 {% csrf_token %}
                                   <input type="hidden" name="process_step_id" value={{process_step.id}}>
                               </form>
+
                               <form action="{% url 'home-manager' 'edit_process_step' %}" class="js-validate need-validate" novalidate method="post" enctype="multipart/form-data">
                                   {% csrf_token %}
                                   <input type="hidden" name="process_step_id" value={{process_step.id}}>

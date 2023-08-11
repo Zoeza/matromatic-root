@@ -139,7 +139,7 @@ def home_manager(request, action):
     # -------------------- delete process step------------------ #
     if action == 'delete_process_step':
         if request.method == 'POST':
-            process_step_id = request.POST.get('{process_step_id', False)
+            process_step_id = request.POST.get('process_step_id', False)
             selected_process_step = OurProcess.objects.all().get(id=process_step_id)
             selected_process_step.delete()
             request.session['tab'] = 'top-page'
