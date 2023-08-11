@@ -433,7 +433,7 @@
                                       <div class="col">
                                           <div class="d-flex align-items-center">
                                               <!-- logo -->
-                                              <label class="avatar avatar-xl  avatar-uploader">
+                                              <label class="avatar avatar-sm  avatar-uploader">
                                                   <img id="service_icon_{{service.id}}" class="avatar-img" src="{% get_media_prefix %}{{service.icon}}" alt="">
 
                                                   <input type="file" class="js-file-attach avatar-uploader-input" name="icon"  data-hs-file-attach-options=' {
@@ -442,6 +442,10 @@
                                                           "targetAttr": "src",
                                                           "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
                                                           }'>
+
+                                                  <span class="avatar-uploader-trigger">
+                                                         <i class="bi-pencil-fill avatar-uploader-icon shadow-sm"></i>
+                                                    </span>
                                               </label>
                                               <!-- End logo -->
                                           </div>
@@ -503,7 +507,7 @@
                                         <div class="col">
                                           <div class="d-flex align-items-center">
                                               <!-- edit photo -->
-                                              <label class="avatar avatar-xl  avatar-uploader">
+                                              <label class="avatar avatar-xxl  avatar-uploader">
                                                 <img id="process_photo_{{process_step.id}}" class="avatar-img" src="{% get_media_prefix %}{{process_step.photo}}" alt="">
 
                                                 <input type="file" class="js-file-attach avatar-uploader-input" name="photo" data-hs-file-attach-options=' {
@@ -512,6 +516,9 @@
                                                           "targetAttr": "src",
                                                           "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
                                                           }'>
+                                                  <span class="avatar-uploader-trigger">
+                                                      <i class="bi-pencil-fill avatar-uploader-icon shadow-sm"></i>
+                                                  </span>
                                               </label>
                                               <!-- end edit photo -->
                                           </div>
