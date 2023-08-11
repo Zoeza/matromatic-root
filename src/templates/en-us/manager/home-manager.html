@@ -601,6 +601,10 @@
                           <!-- Body -->
                           <div class="card-body">
                               {% for process_step in process_steps%}
+                              <form action="{% url 'home-manager' 'delete_process_step' %}" id="delete_process_step_form_{{process_step.id}}" method="post">
+                                {% csrf_token %}
+                                  <input type="hidden" name="process_step_id" value={{process_step.id}}>
+                              </form>
                               <form action="{% url 'home-manager' 'edit_process_step' %}" class="js-validate need-validate" novalidate method="post" enctype="multipart/form-data">
                                   {% csrf_token %}
                                   <input type="hidden" name="process_step_id" value={{process_step.id}}>
@@ -639,7 +643,7 @@
                                           </div>
                                       </div>
                                         <div class="col align-self-center">
-                                            <button class="btn btn-white form-control-lg">
+                                            <button class="btn btn-white form-control-lg" form="delete_process_step_form_{{process_step.id}}">
                                               <i class="bi bi-trash" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Delete" data-bs-original-title="Delete"></i>
                                             </button>
                                             <button class="btn btn-white form-control-lg" type="submit">
@@ -673,6 +677,10 @@
                           <!-- Body -->
                           <div class="card-body">
                               {%  for performance in performances %}
+                                   <form action="{% url 'home-manager' 'delete_performance' %}" id="delete_performance_form_{{performance.id}}" method="post">
+                                    {% csrf_token %}
+                                      <input type="hidden" name="performance_id" value={{performance.id}}>
+                                  </form>
                                   <form action="{% url 'home-manager' 'edit_performance' %}"  class="js-validate need-validate" novalidate method="post">
                                       {% csrf_token %}
                                       <input type="hidden" name="performance_id" value={{performance.id}}>
@@ -691,7 +699,7 @@
                                           </div>
 
                                           <div class="col align-self-center">
-                                              <button class="btn btn-white form-control-lg">
+                                              <button class="btn btn-white form-control-lg" form="delete_performance_form_{{performance.id}}">
                                                   <i class="bi bi-trash" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Delete" data-bs-original-title="Delete"></i>
                                               </button>
 
@@ -728,6 +736,10 @@
                           <!-- Body -->
                           <div class="card-body">
                               {% for client in clients %}
+                               <form action="{% url 'home-manager' 'delete_client' %}" id="delete_client_form_{{client.id}}" method="post">
+                                    {% csrf_token %}
+                                      <input type="hidden" name="client_id" value={{client.id}}>
+                               </form>
                               <form action="{% url 'home-manager' 'edit_client' %}" class="js-validate need-validate" novalidate method="post" enctype="multipart/form-data">
                                   {% csrf_token %}
                                   <input type="hidden" name="client_id" value={{client.id}}>
@@ -758,7 +770,7 @@
                                           </div>
                                       </div>
                                       <div class="col align-self-center">
-                                          <button class="btn btn-white form-control-lg">
+                                          <button class="btn btn-white form-control-lg" form="delete_client_form_{{client.id}}">
                                               <i class="bi bi-trash" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Delete" data-bs-original-title="Delete"></i>
                                           </button>
                                           <button class="btn btn-white form-control-lg" type="submit">
@@ -792,6 +804,11 @@
                           <!-- Body -->
                           <div class="card-body">
                               {% for partner in partners %}
+                              <form action="{% url 'home-manager' 'delete_partner' %}" id="delete_partner_form_{{partner.id}}" method="post">
+                                    {% csrf_token %}
+                                      <input type="hidden" name="partner_id" value={{partner.id}}>
+                               </form>
+
                               <form action="{% url 'home-manager' 'edit_partner' %}" class="js-validate need-validate" novalidate method="post" enctype="multipart/form-data">
                                     {% csrf_token %}
                                     <div class="row">
@@ -822,7 +839,7 @@
                                       </div>
 
                                         <div class="col align-self-center">
-                                            <button class="btn btn-white form-control-lg">
+                                            <button class="btn btn-white form-control-lg" form="delete_partner_form_{{partner.id}}">
                                               <i class="bi bi-trash" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Delete" data-bs-original-title="Delete"></i>
                                             </button>
                                             <button class="btn btn-white form-control-lg" type="submit">
@@ -858,6 +875,10 @@
                           <!-- Body -->
                           <div class="card-body">
                                 {% for project in projects %}
+                               <form action="{% url 'home-manager' 'delete_project' %}" id="delete_project_form_{{project.id}}" method="post">
+                                    {% csrf_token %}
+                                      <input type="hidden" name="project_id" value={{project.id}}>
+                               </form>
                               <form action="{% url 'home-manager' 'edit_project' %}" class="js-validate need-validate" novalidate method="post" enctype="multipart/form-data">
                                   {% csrf_token %}
                                   <input type="hidden" name="project_id" value={{project.id}}>
@@ -885,7 +906,7 @@
                                               </div>
                                           </div>
                                         <div class="col">
-                                            <button class="btn btn-white form-control-lg">
+                                            <button class="btn btn-white form-control-lg" form="delete_project_form_{{project.id}}">
                                               <i class="bi bi-trash" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Delete" data-bs-original-title="Delete"></i>
                                             </button>
                                             <button class="btn btn-white form-control-lg" type="submit">
