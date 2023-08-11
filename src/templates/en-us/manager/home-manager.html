@@ -531,6 +531,10 @@
                           <!-- Body -->
                           <div class="card-body">
                               {% for service in services %}
+                              <form action="{% url 'home-manager' 'delete_service' %}" id="delete_service_form_{{service.id}}" method="post">
+                                {% csrf_token %}
+                                  <input type="hidden" name="service_id" value={{service.id}}>
+                              </form>
                               <form action="{% url 'home-manager' 'edit_service' %}" class="js-validate need-validate" novalidate method="post" enctype="multipart/form-data">
                                   {% csrf_token %}
                                   <input type="hidden" name="service_id" value={{service.id}}>
@@ -563,7 +567,7 @@
                                       </div>
 
                                       <div class="col align-self-center">
-                                            <button class="btn btn-white form-control-lg">
+                                            <button class="btn btn-white form-control-lg" form="delete_service_form_{{service.id}}">
                                               <i class="bi bi-trash" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Delete" data-bs-original-title="Delete"></i>
                                             </button>
                                             <button class="btn btn-white form-control-lg" type="submit">
