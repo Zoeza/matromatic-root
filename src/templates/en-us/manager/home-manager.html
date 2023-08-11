@@ -1083,7 +1083,7 @@
                           </div>
                            <!-- end head logo -->
                             <hr>
-                                <strong><h4>Why Us:</h4></strong>
+                      <strong><h4>Why Us:</h4></strong>
 
                        <!-- begin why us photo -->
                           <div class="col-md-4 ">
@@ -1116,30 +1116,47 @@
                               <label class="form-label"> Why us video</label>
                               <input id="why_us_video_src" class="form-control" name="why_us_video_src">
                           </div>
+
                         <hr>
+
                        <strong><h4> Our Process:</h4></strong>
-                         <div class="mb-3">
+                      <div class="mb-3">
                              <label class="form-label"> Introduction </label>
                               <textarea id="our_process_intro" class="form-control" name="our_process_intro"  rows="8">
                               </textarea>
+                         </div>
+                      <div class="row">
+                          <div class="col-6">
+                              <label class="form-label"> Step One</label>
+                              <div class="d-flex align-items-center">
+                                  <!-- edit photo -->
+                                  <label class="avatar avatar-xxl  avatar-uploader">
+                                    <img id="step1_photo" class="avatar-img" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
 
-                        </div>
-
-
-
-
-                          <!-- begin company name-->
-                          <div class="col-md-6">
-                              <label class="form-label" id="company_name">Company Name</label>
-                                <input type="text" class="form-control" name="company_name">
+                                    <input type="file" class="js-file-attach avatar-uploader-input" name="photo" data-hs-file-attach-options=' {
+                                              "textTarget": "#step1_photo",
+                                              "mode": "image",
+                                              "targetAttr": "src",
+                                              "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
+                                              }'>
+                                      <span class="avatar-uploader-trigger">
+                                          <i class="bi-pencil-fill avatar-uploader-icon shadow-sm" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Edit photo" data-bs-original-title="Edit photo"></i>
+                                      </span>
+                                  </label>
+                                  <!-- end edit photo -->
+                              </div>
                           </div>
-                          <!-- end company name-->
-                          <!-- begin company slogan-->
-                          <div class="col-md-6">
-                             <label class="form-label" id="company_slogan">Company Slogan</label>
-                             <input type="text" class="form-control" name="company_slogan">
+                          <div class="col-6">
+                              <div class="row">
+                                  <input id="step_one_title"  type="text" class="form-control" name="step_one_title" value={{process_step.process_title}}>
+                                  <textarea  id="step_one_description" class="form-control" name="step_one_description" rows="6" >
+                                  </textarea>
+                              </div>
                           </div>
-                          <!-- end company slogan-->
+                      </div>
+
+
+
 
                           <br>
                           <!-- begin iphone image -->
