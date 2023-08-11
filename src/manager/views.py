@@ -232,7 +232,7 @@ def home_manager(request, action):
     # ------------------- end edit partner------------------------- #
 
     # -------------------- delete partner -------------------------- #
-    if action == 'edit_partner':
+    if action == 'delete_partner':
         if request.method == 'POST':
             partner_id = request.POST.get('partner_id', False)
             selected_partner = Partner.objects.all().get(id=partner_id)
