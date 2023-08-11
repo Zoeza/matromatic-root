@@ -1151,6 +1151,33 @@
                               </div>
                           </div>
                       </div>
+                      <div class="row">
+                          <div class="col-6">
+                              <label class="form-label"> Step Tow</label>
+                              <div class="d-flex align-items-center">
+                                  <!-- edit photo -->
+                                  <label class="avatar avatar-xl  avatar-uploader">
+                                    <img id="step2_photo" class="avatar-img" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
+
+                                    <input type="file" class="js-file-attach avatar-uploader-input" name="photo" data-hs-file-attach-options=' {
+                                              "textTarget": "#step2_photo",
+                                              "mode": "image",
+                                              "targetAttr": "src",
+                                              "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
+                                              }'>
+                                  </label>
+                                  <!-- end edit photo -->
+                              </div>
+                          </div>
+                          <div class="col-6">
+                              <div class="row">
+                                  <input id="step_tow_title"  type="text" class="form-control" name="step_tow_title" value=title>
+                                  <textarea  id="step_tow_description" class="form-control" name="step_tow_description" rows="6" >
+                                  </textarea>
+                              </div>
+                          </div>
+                      </div>
+
 
 
 
