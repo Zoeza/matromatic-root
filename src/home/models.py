@@ -53,7 +53,7 @@ class Content(models.Model):
         verbose_name = "content"
 
     def __str__(self):
-        return self.sku
+        return self.language
 
 
 # ---------------------------------------------------------------------- #
