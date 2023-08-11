@@ -46,7 +46,7 @@ def home_manager(request, action):
 
         }
         return render(request, url, context)
-    # ---------------------- create top page ------------------- #
+    # ---------------------- create top page ----------------- #
     if action == 'create_top_page':
         if request.method == 'POST':
             TopPage(language=request.POST.get('language', False),
@@ -82,7 +82,7 @@ def home_manager(request, action):
 
             request.session['tab'] = 'main'
             return redirect('home-manager', 'main')
-    # ------------------- end edit top page ------------------ #
+    # ------------------- end edit top page ---------------- #
 
     # ---------------------- add service --------------------- #
     if action == 'add_new_service':
@@ -103,6 +103,16 @@ def home_manager(request, action):
             request.session['tab'] = 'top-page'
             return redirect('home-manager', 'main')
     # ------------------- end edit service --------------------- #
+
+    # -------------------- delete service ------------------------ #
+    if action == 'delete_service':
+        if request.method == 'POST':
+            service_id = request.POST.get('service_id', False)
+            selected_service = Service.objects.all().get(id=service_id)
+            selected_service.delete()
+            request.session['tab'] = 'top-page'
+            return redirect('home-manager', 'main')
+    # ------------------- end delete service --------------------- #
 
     # ------------------- add process step --------------------- #
     if action == 'add_process_step':
@@ -126,6 +136,16 @@ def home_manager(request, action):
             return redirect('home-manager', 'main')
     # ------------------- end edit process step---------------- #
 
+    # -------------------- delete process step------------------ #
+    if action == 'delete_process_step':
+        if request.method == 'POST':
+            process_step_id = request.POST.get('{process_step_id', False)
+            selected_process_step = OurProcess.objects.all().get(id=process_step_id)
+            selected_process_step.delete()
+            request.session['tab'] = 'top-page'
+            return redirect('home-manager', 'main')
+    # ------------------- end delete process step---------------- #
+
     # ---------------------- add performance--------------------- #
     if action == 'add_performance':
         if request.method == 'POST':
@@ -147,6 +167,16 @@ def home_manager(request, action):
             request.session['tab'] = 'top-page'
             return redirect('home-manager', 'main')
     # ------------------ end edit performance ---------------- #
+
+    # ------------------- delete performance ------------------ #
+    if action == 'delete_performance':
+        if request.method == 'POST':
+            performance_id = request.POST.get('performance_id', False)
+            selected_performance = Performance.objects.all().get(id=performance_id)
+            selected_performance.delete()
+            request.session['tab'] = 'top-page'
+            return redirect('home-manager', 'main')
+    # ------------------ end delete performance ---------------- #
 
     # ---------------------- add new client--------------------- #
     if action == 'add_new_client':
@@ -170,6 +200,16 @@ def home_manager(request, action):
             return redirect('home-manager', 'main')
     # ------------------- end edit client ----------------------- #
 
+    # -------------------- delete client -------------------------- #
+    if action == 'delete_client':
+        if request.method == 'POST':
+            client_id = request.POST.get('client_id', False)
+            selected_client = Client.objects.all().get(id=client_id)
+            selected_client.delete()
+            request.session['tab'] = 'top-page'
+            return redirect('home-manager', 'main')
+    # ------------------- end delete client ----------------------- #
+
     # ---------------------- add new partner---------------------- #
     if action == 'add_new_partner':
         if request.method == 'POST':
@@ -191,6 +231,16 @@ def home_manager(request, action):
             return redirect('home-manager', 'main')
     # ------------------- end edit partner------------------------- #
 
+    # -------------------- delete partner -------------------------- #
+    if action == 'edit_partner':
+        if request.method == 'POST':
+            partner_id = request.POST.get('partner_id', False)
+            selected_partner = Partner.objects.all().get(id=partner_id)
+            selected_partner.delete()
+            request.session['tab'] = 'top-page'
+            return redirect('home-manager', 'main')
+    # ------------------- end delete partner------------------------- #
+
     # ---------------------- add new  project--------------------- #
     if action == 'add_new_project':
         if request.method == 'POST':
@@ -211,3 +261,13 @@ def home_manager(request, action):
             request.session['tab'] = 'top-page'
             return redirect('home-manager', 'main')
     # ------------------- end edit project------------------------ #
+
+    # -------------------- delete project ------------------------- #
+    if action == 'delete_project':
+        if request.method == 'POST':
+            project_id = request.POST.get('project_id', False)
+            selected_project = Project.objects.all().get(id=project_id)
+            selected_project.delete()
+            request.session['tab'] = 'top-page'
+            return redirect('home-manager', 'main')
+    # ------------------- end delete project------------------------ #
