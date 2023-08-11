@@ -116,13 +116,12 @@
                            <div class="card-body">
                               <!-- Form -->
                               {% for top_page in top_pages %}
+                                <form action="{% url 'home-manager' 'delete_top_page' %}" id="delete_top_page_form_{{top_page.id}}" method="post">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="top_page_id" value={{top_page.id}}>
+                                </form>
 
-                               <form action="{% url 'home-manager' 'delete_top_page' %}" id="delete_top_page_form_{{top_page.id}}" method="post">
-                                {% csrf_token %}
-                                  <input type="hidden" name="top_page_id" value={{top_page.id}}>
-                              </form>
-
-                              <form class="row g-3" action="{% url 'home-manager' 'edit_top_page' %}"  novalidate method="post" enctype="multipart/form-data">
+                                <form class="row g-3" action="{% url 'home-manager' 'edit_top_page' %}"  novalidate method="post" enctype="multipart/form-data">
                                   {% csrf_token %}
                                   <input type="hidden" name="top_page_id" value={{top_page.id}}>
 
@@ -143,23 +142,20 @@
                                       <div class="col-sm-9">
                                         <div class="d-flex align-items-center">
                                           <!-- logo -->
-                                          <label class="avatar avatar-xl" >
-                                            <img id="logo_main_{{top_page.id}}" class="avatar-img" src="{% get_media_prefix %}{{ top_page.logo_main }}" alt="">
-
-                                            <input type="file" class="js-file-attach avatar-uploader-input" name="logo_main" data-hs-file-attach-options=' {
-                                                      "textTarget": "#logo_main_{{top_page.id}}",
-                                                      "mode": "image",
-                                                      "targetAttr": "src",
-                                                      "allowTypes": [".png", ".jpeg", ".jpg",".svg"] }'>
-
-                                              <span class="avatar-uploader-trigger">
-                                                  <i class="bi-pencil-fill avatar-uploader-icon shadow-sm"></i>
-                                              </span>
+                                            <label class="avatar avatar-l" >
+                                                <img id="logo_main_{{top_page.id}}" class="avatar-img" src="{% get_media_prefix %}{{ top_page.logo_main }}" alt="">
+                                                <input type="file" class="js-file-attach avatar-uploader-input" name="logo_main" data-hs-file-attach-options=' {
+                                                          "textTarget": "#logo_main_{{top_page.id}}",
+                                                          "mode": "image",
+                                                          "targetAttr": "src",
+                                                          "allowTypes": [".png", ".jpeg", ".jpg",".svg"] }'>
+                                                <span class="avatar-uploader-trigger">
+                                                    <i class="bi-pencil-fill avatar-uploader-icon shadow-sm"></i>
+                                                </span>
 
                                           </label>
                                           <!-- End logo -->
-
-                                         </div>
+                                        </div>
                                       </div>
                                   </div>
                                   <!-- end main logo -->
@@ -292,7 +288,7 @@
                                 <button type="submit" class="btn btn-white">Save changes</button>
                               </div>
                             </form>
-                              <hr>
+                                <hr>
                               {% endfor %}
                               <!-- End Form -->
 
