@@ -1084,19 +1084,40 @@
                            <!-- end head logo -->
                             <hr>
                                 <h5>Why Us:</h5>
-                          <!-- begin head title -->
-                          <div class="col-md-6">
-                              <label  class="form-label" id="head_title">Head title</label>
-                              <input type="text" class="form-control" name="head_title">
-                           </div>
-                          <!-- end head title -->
+                       <!-- begin why us photo -->
+                          <div class="col-md-4 ">
+                              <label class="col-sm-3 col-form-label form-label"> Photo</label>
+                              <div class="col-sm-9">
+                                <div class="d-flex align-items-center">
+                                  <!-- photo -->
+                                  <label class="avatar avatar-xl  avatar-uploader " >
+                                    <img id="why_us_photo" class="avatar-img" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
 
-                          <!-- begin head text -->
-                          <div class="col-md-6">
-                              <label class="form-label" id="head_text">Head Text</label>
-                              <input type="text"  class="form-control" name="head_text">
-                           </div>
-                          <!-- end head text -->
+                                    <input type="file" class="js-file-attach avatar-uploader-input" name="why_us_photo" data-hs-file-attach-options=' {
+                                              "textTarget": "#why_us_photo",
+                                              "mode": "image",
+                                              "targetAttr": "src",
+                                              "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
+                                              }'>
+                                  </label>
+                                  <!-- End photo -->
+
+                                 </div>
+                              </div>
+                          </div>
+                          <!-- end why us photo -->
+                          <div class="col-md-4 ">
+                              <label class="form-label"> Why us raison</label>
+                              <textarea id="why_us_raison" class="form-control" name="why_us_raison"  rows="6">
+                              </textarea>
+                          </div>
+                          <div class="col-md-4 ">
+                              <label class="form-label"> Why us video</label>
+                              <input id="why_us_video_src" class="form-control" name="why_us_video_src">
+                          </div>
+
+
+
                           <!-- begin company name-->
                           <div class="col-md-6">
                               <label class="form-label" id="company_name">Company Name</label>
