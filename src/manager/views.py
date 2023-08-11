@@ -61,7 +61,7 @@ def home_manager(request, action):
     if action == 'edit_top_page':
         if request.method == 'POST':
             top_page_id = request.POST.get('top_page_id', False)
-            selected_top_page = Service.objects.all().get(id=top_page_id)
+            selected_top_page = TopPage.objects.all().get(id=top_page_id)
             top_page_form = ServiceForm(request.POST, request.FILES, instance=selected_top_page)
             top_page_form.save()
             request.session['tab'] = 'top-page'
@@ -72,7 +72,7 @@ def home_manager(request, action):
         if action == 'delete_top_page':
             if request.method == 'POST':
                 top_page_id = request.POST.get('top_page_id', False)
-                selected_top_page = Service.objects.all().get(id=top_page_id)
+                selected_top_page = TopPage.objects.all().get(id=top_page_id)
                 selected_top_page.delete()
                 request.session['tab'] = 'top-page'
                 return redirect('home-manager', 'main')
