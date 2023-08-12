@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from home.models import TopPage, Service, OurProcess, Performance, Client, Partner, Project
+from home.models import TopPage, Content, Service, OurProcess, Performance, Client, Partner, Project
 from .forms import TopPageForm, ContentForm, ServiceForm, ProcessForm, ClientForm, PartnerForm, \
     ProjectForm, PerformanceForm
 
@@ -89,6 +89,27 @@ def home_manager(request, action):
         request.session['tab'] = 'top-page'
         return redirect('home-manager', 'main')
     # -------------------- end create main content ------------------ #
+
+    # -------------------- edit main content ------------------------- #
+    if action == 'edit_main_content':
+        if request.method == 'POST':
+            main_content_id = request.POST.get('main_content_id', False)
+            selected_main_content = Content.objects.all().get(id=main_content_id)
+            main_content_form = ContentForm(request.POST, request.FILES, instance=selected_main_content)
+            main_content_form.save()
+            request.session['tab'] = 'top-page'
+            return redirect('home-manager', 'main')
+    # ------------------- end edit main content ---------------------- #
+
+    # -------------------- delete main content ----------------------- #
+    if action == 'delete_main_content':
+        if request.method == 'POST':
+            main_content_id = request.POST.get('main_content_id', False)
+            selected_main_content = Content.objects.all().get(id=main_content_id)
+            selected_main_content.delete()
+            request.session['tab'] = 'top-page'
+            return redirect('home-manager', 'main')
+    # ------------------- end delete main content -------------------- #
 
     # ---------------------- add service ------------------------ #
     if action == 'add_new_service':
