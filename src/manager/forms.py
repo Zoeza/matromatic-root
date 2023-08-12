@@ -8,6 +8,12 @@ class TopPageForm(ModelForm):
         fields = "__all__"
 
 
+class ContentForm(ModelForm):
+    class Meta:
+        model = Content
+        fields = "__all__"
+
+
 class ServiceForm(ModelForm):
     class Meta:
         model = Service

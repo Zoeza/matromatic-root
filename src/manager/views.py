@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from home.models import TopPage, Service, OurProcess, Performance, Client, Partner, Project
-from .forms import TopPageForm, ServiceForm, ProcessForm, ClientForm, PartnerForm, ProjectForm, PerformanceForm
+from .forms import TopPageForm, ContentForm, ServiceForm, ProcessForm, ClientForm, PartnerForm, \
+    ProjectForm, PerformanceForm
 
 
 def dashboard(request):
@@ -66,9 +67,9 @@ def home_manager(request, action):
             top_page_form.save()
             request.session['tab'] = 'top-page'
             return redirect('home-manager', 'main')
-    # ------------------- end edit top page ---------------- #
+        # ------------------- end edit top page ---------------- #
 
-    # -------------------- delete service ----------------- #
+        # -------------------- delete top page ----------------- #
         if action == 'delete_top_page':
             if request.method == 'POST':
                 top_page_id = request.POST.get('top_page_id', False)
@@ -76,7 +77,18 @@ def home_manager(request, action):
                 selected_top_page.delete()
                 request.session['tab'] = 'top-page'
                 return redirect('home-manager', 'main')
-    # ----------------- end delete service ---------------------- #
+    # ----------------- end delete top page ---------------------- #
+
+    # ---------------------- create main content -------------------- #
+    if action == 'create_main_content':
+        if request.method == 'POST':
+            main_content_form = ContentForm(request.POST, request.FILES)
+            if main_content_form.is_valid():
+                main_content_form.save()
+
+        request.session['tab'] = 'top-page'
+        return redirect('home-manager', 'main')
+    # -------------------- end create main content ------------------ #
 
     # ---------------------- add service ------------------------ #
     if action == 'add_new_service':
