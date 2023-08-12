@@ -1264,13 +1264,19 @@
                       <hr>
                       <strong><h4> Other informations :</h4></strong>
 
-                       <div class="col-12">
+
+                      <div class="col-md-6">
+                        <label  class="form-label">Performance record description</label>
+                              <input type="text" class="form-control"  name="performance_record_description" id="performance_record_description">
+                       </div>
+
+                       <div class="col-md-6">
                         <label  class="form-label">Performance Record Breaking</label>
                            <div class="range">
                               <input type="range" class="form-range" min="0" max="100"  name="performance_record_breaking" id="performance_record_breaking" value="0" oninput="amount.value=performance_record_breaking.value">
                               <output id="amount_performance_record_breaking" name="amount" for="performance_record_breaking"></output>
                           </div>
-                      </div>
+                       </div>
 
 
 
@@ -1443,9 +1449,7 @@
                           <div class="range">
                               <input type="range" class="form-range" min="0" max="100"  name="percentage" id="percentage" value="0" oninput="amount.value=percentage.value">
                               <output id="amount" name="amount" for="percentage"></output>
-
                           </div>
-
                       </div>
                       <!-- end add performance percentage -->
 
