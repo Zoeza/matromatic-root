@@ -534,8 +534,8 @@
 
                                       <div class="col-6">
                                           <div class="row">
-                                              <input id="step_tow_title_{{main_content.id}}"  type="text" class="form-control" name="step_tow_title" >
-                                              <textarea  id="step_tow_description_{{main_content.id}}" class="form-control" name="step_tow_description"  rows="6" placeholder="description"></textarea>
+                                              <input id="step_tow_title_{{main_content.id}}"  type="text" class="form-control" value={{main_content.step_tow_title}} >
+                                              <textarea  id="step_tow_description_{{main_content.id}}" class="form-control" name="step_tow_description"  rows="6" placeholder="description">{{main_content.step_tow_description}}</textarea>
                                           </div>
                                       </div>
                                   </div>
@@ -562,8 +562,8 @@
 
                                       <div class="col-6">
                                           <div class="row">
-                                              <input id="step_three_title_{{main_content.id}}"  type="text" class="form-control" name="step_three_title" placeholder="title" >
-                                              <textarea  id="step_three_description_{{main_content.id}}" class="form-control" name="step_three_description"  rows="6" placeholder="description"></textarea>
+                                              <input id="step_three_title_{{main_content.id}}"  type="text" class="form-control" name="step_three_title" placeholder="title" value={{main_content.step_three_title}} >
+                                              <textarea  id="step_three_description_{{main_content.id}}" class="form-control" name="step_three_description"  rows="6" placeholder="description">{{main_content.step_three_description}}</textarea>
                                           </div>
                                       </div>
                                   </div>
@@ -590,8 +590,8 @@
 
                                       <div class="col-6">
                                           <div class="row">
-                                              <input id="step_four_title_{{main_content.id}}"  type="text" class="form-control" name="step_four_title" placeholder="title">
-                                              <textarea  id="step_four_description_{{main_content.id}}" class="form-control" name="step_four_description" rows="6" placeholder="description" ></textarea>
+                                              <input id="step_four_title_{{main_content.id}}"  type="text" class="form-control" name="step_four_title" placeholder="title" value={{main_content.step_four_title}}>
+                                              <textarea  id="step_four_description_{{main_content.id}}" class="form-control" name="step_four_description" rows="6" placeholder="description" >{{main_content.step_four_description}}</textarea>
                                           </div>
                                       </div>
                                   </div>
@@ -600,15 +600,15 @@
                                   <strong><h4> Introductions:</h4></strong>
 
                                   <div class="col-md-4 ">
-                                      <textarea id="performance_intro_{{main_content.id}}" class="form-control" name="performance_intro"  rows="6" placeholder="Performance Introduction"></textarea>
+                                      <textarea id="performance_intro_{{main_content.id}}" class="form-control" name="performance_intro"  rows="6" placeholder="Performance Introduction">{{main_content.performance_intro}}</textarea>
                                   </div>
 
                                   <div class="col-md-4 ">
-                                      <textarea id="partners_intro_{{main_content.id}}" class="form-control" name="partners_intro" rows="6" placeholder="Partners Introduction"></textarea>
+                                      <textarea id="partners_intro_{{main_content.id}}" class="form-control" name="partners_intro" rows="6" placeholder="Partners Introduction">{{main_content.partners_intro}}</textarea>
                                   </div>
 
                                   <div class="col-md-4 ">
-                                      <textarea id="projects_intro_{{main_content.id}}" class="form-control" name="projects_intro" rows="6" placeholder="Projects Introduction"></textarea>
+                                      <textarea id="projects_intro_{{main_content.id}}" class="form-control" name="projects_intro" rows="6" placeholder="Projects Introduction">{{main_content.projects_intro}}</textarea>
                                   </div>
                                   <hr>
                                   <strong><h4> Other informations :</h4></strong>
@@ -616,19 +616,19 @@
 
                                   <div class="col-md-6">
                                     <label  class="form-label">Performance record detail</label>
-                                          <input type="text" class="form-control" name="performance_record_detail" id="performance_record_detail_{{main_content.id}}" placeholder="More Power behind every pixel">
+                                          <input type="text" class="form-control" name="performance_record_detail" id="performance_record_detail_{{main_content.id}}" placeholder="More Power behind every pixel" value={{main_content.performance_record_detail}}>
                                   </div>
 
                                   <div class="col-md-6">
                                     <label  class="form-label">Performance Record Breaking</label>
                                        <div class="range">
-                                          <input type="range" class="form-range" min="0" max="100" name="performance_record_breaking" id="performance_record_breaking_{{main_content.id}}" value="0" oninput="amount.value=performance_record_breaking.value">
+                                          <input type="range" class="form-range" min="0" max="100" name="performance_record_breaking" id="performance_record_breaking_{{main_content.id}}" value={{main_content.performance_record_breaking}} oninput="amount.value=performance_record_breaking.value">
                                           <output id="amount_performance_record_breaking_{{main_content.id}}" name="amount" for="performance_record_breaking"></output>
                                       </div>
                                   </div>
                                   <div class="col-12">
                                         <label  class="form-label">Client Number</label>
-                                        <input type="text" class="form-control" id="client_count_{{main_content.id}}" name="client_count" placeholder="4 hundred">
+                                        <input type="text" class="form-control" id="client_count_{{main_content.id}}" name="client_count" placeholder="4 hundred" value={{main_content.client_count}}>
                                    </div>
 
                                   <div class="modal-footer">

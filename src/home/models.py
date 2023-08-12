@@ -58,7 +58,7 @@ class Content(models.Model):
     main_background_image = models.ImageField(upload_to='content/main_background_image', blank=True)
 
     performance_intro = models.TextField(max_length=200, blank=True)
-    performance_record_description = models.TextField(max_length=200, blank=True)
+    performance_record_detail = models.TextField(max_length=200, blank=True)
     performance_record_breaking = models.DecimalField(max_digits=3, decimal_places=0, default=0,
                                                       validators=PERCENTAGE_VALIDATOR)
 
