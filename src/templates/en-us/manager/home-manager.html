@@ -407,6 +407,7 @@
 
                               <form class="row g-3 js-validate need-validate" action="{% url 'home-manager' 'edit_main_content' %}"   novalidate method="post" enctype="multipart/form-data">
                                   {% csrf_token %}
+                                  <input type="hidden" name="main_content_id" value={{main_content.id}}>
 
                                   <div class="mb-3">
                                       <label for="content_language_{{main_content.id}}" class="form-label">Language</label>
