@@ -574,10 +574,10 @@
                                           <div class="d-flex align-items-center">
                                               <!-- edit photo -->
                                               <label class="avatar avatar-xl  avatar-uploader">
-                                                <img id="step4_photo" class="avatar-img" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
+                                                <img id="step4_photo_{{main_content.id}}" class="avatar-img" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
 
                                                 <input type="file" class="js-file-attach avatar-uploader-input" name="step_four_photo" data-hs-file-attach-options=' {
-                                                          "textTarget": "#step4_photo",
+                                                          "textTarget": "#step4_photo_{{main_content.id}}",
                                                           "mode": "image",
                                                           "targetAttr": "src",
                                                           "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
