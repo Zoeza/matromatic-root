@@ -25,6 +25,7 @@ def home_manager(request, action):
         request.session['tab'] = None
 
         top_pages = TopPage.objects.all()
+        main_contents = Content.objects.all()
         services_form = ServiceForm()
         services = Service.objects.all()
         process_steps = OurProcess.objects.all()
@@ -33,10 +34,12 @@ def home_manager(request, action):
         partners = Partner.objects.all()
         projects = Project.objects.all()
 
+
         context = {
             'nav_side': nav_side,
             'tab': tab,
             'top_pages': top_pages,
+            'main_contents':main_contents,
             'services_form': services_form,
             'services': services,
             'process_steps': process_steps,

@@ -398,7 +398,7 @@
                             <br>
                           <!-- Body -->
                           <div class="card-body">
-                              {% for main_content in contents %}
+                              {% for main_content in main_contents %}
 
                               <form action="{% url 'home-manager' 'delete_main_content' %}" id="delete_main_content_{{mai_content.id}}" method="post">
                                 {% csrf_token %}
