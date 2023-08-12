@@ -444,7 +444,7 @@
                                   <!-- end main logo -->
                                    <!-- begin head logo -->
                                   <div class="col-md-6">
-                                      <textarea id="companyDescription_{{main_content.id}}" class="form-control" name="company_description" rows="6" placeholder="Company Description"></textarea>
+                                      <textarea id="companyDescription_{{main_content.id}}" class="form-control" name="company_description" rows="6" placeholder="Company Description">{{main_content.company_description}}</textarea>
                                   </div>
                                    <!-- end head logo -->
                                     <hr>
@@ -474,8 +474,8 @@
                                       <!-- end why us photo -->
                                   <div class="col-6 ">
                                       <div class="row">
-                                          <textarea id="why_us_raison_{{main_content.id}}" class="form-control" name="why_us_raison"  rows="6" placeholder="put why us raison"></textarea>
-                                          <input id="why_us_video_src_{{main_content.id}}" class="form-control" name="why_us_video_src" placeholder="put video Link">
+                                          <textarea id="why_us_raison_{{main_content.id}}" class="form-control" name="why_us_raison"  rows="6" placeholder="put why us raison">{{main_content.why_us_raison}}</textarea>
+                                          <input id="why_us_video_src_{{main_content.id}}" class="form-control" name="why_us_video_src" value={{main_content.why_us_raison}}>
                                       </div>
                                   </div>
 
@@ -483,7 +483,7 @@
                                     <hr>
                                 <strong><h4> Our Process:</h4></strong>
                                   <div class="mb-3">
-                                          <textarea id="our_process_intro_{{main_content.id}}" class="form-control" name="our_process_intro" rows="8" placeholder=" Our Process Introduction"></textarea>
+                                          <textarea id="our_process_intro_{{main_content.id}}" class="form-control" name="our_process_intro" rows="8" placeholder=" Our Process Introduction">{{main_content.our_process_intro}}</textarea>
                                   </div>
                                   <div class="row">
                                       <div class="col-6">
@@ -505,8 +505,8 @@
                                       </div>
                                       <div class="col-6">
                                           <div class="row">
-                                              <input id="step_one_title_{{main_content.id}}"  type="text" class="form-control" name="step_one_title" placeholder=" title">
-                                              <textarea  id="step_one_description_{{main_content.id}}" class="form-control" name="step_one_description"  rows="6" placeholder=" description"></textarea>
+                                              <input id="step_one_title_{{main_content.id}}"  type="text" class="form-control" name="step_one_title" value={{main_content.step_one_title}}>
+                                              <textarea  id="step_one_description_{{main_content.id}}" class="form-control" name="step_one_description"  rows="6" placeholder=" description">{{main_content.step_one_description}}</textarea>
                                           </div>
                                       </div>
                                   </div>
