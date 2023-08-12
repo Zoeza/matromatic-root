@@ -491,7 +491,7 @@
                                           <div class="d-flex align-items-center">
                                               <!-- edit photo -->
                                               <label class="avatar avatar-xl  avatar-uploader">
-                                                <img id="step_one_photo_{{main_content.id}}" class="avatar-img" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
+                                                <img id="step_one_photo_{{main_content.id}}" class="avatar-img" src="{% get_media_prefix %}{{main_content.step_one_photo}}" alt="">
 
                                                 <input type="file" class="js-file-attach avatar-uploader-input" name="step_one_photo" data-hs-file-attach-options=' {
                                                           "textTarget": "#step_one_photo_{{main_content.id}}",
@@ -505,7 +505,7 @@
                                       </div>
                                       <div class="col-6">
                                           <div class="row">
-                                              <input id="step_one_title_{{main_content.id}}"  type="text" class="form-control" name="step_one_title" value="{{main_content.step_one_title}}">
+                                              <input id="step_one_title_{{main_content.id}}"  type="text" class="form-control" name="step_one_title" value={{main_content.step_one_title}}>
                                               <textarea  id="step_one_description_{{main_content.id}}" class="form-control" name="step_one_description"  rows="6">{{main_content.step_one_description}}</textarea>
                                           </div>
                                       </div>
@@ -518,7 +518,7 @@
                                           <div class="d-flex align-items-center">
                                               <!-- edit photo -->
                                               <label class="avatar avatar-xl  avatar-uploader">
-                                                <img id="step2_photo_{{main_content.id}}" class="avatar-img" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
+                                                <img id="step2_photo_{{main_content.id}}" class="avatar-img" src="{% get_media_prefix %}{{main_content.step_tow_photo}}" alt="">
 
                                                 <input type="file" class="js-file-attach avatar-uploader-input" name="step_tow_photo" data-hs-file-attach-options=' {
                                                           "textTarget": "#step2_photo_{{main_content.id}}",
@@ -546,7 +546,7 @@
                                           <div class="d-flex align-items-center">
                                               <!-- edit photo -->
                                               <label class="avatar avatar-xl  avatar-uploader">
-                                                <img id="step3_photo_{{main_content.id}}" class="avatar-img" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
+                                                <img id="step3_photo_{{main_content.id}}" class="avatar-img" src="{% get_media_prefix %}{{main_content.step_three_photo}}" alt="">
 
                                                 <input type="file" class="js-file-attach avatar-uploader-input" name="step_three_photo" data-hs-file-attach-options=' {
                                                           "textTarget": "#step3_photo_{{main_content.id}}",
