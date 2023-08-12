@@ -413,7 +413,7 @@
                                       <label for="content_language_{{main_content.id}}" class="form-label">Language</label>
                                       <div class="input-group input-group-merge">
                                             <select id="content_language_{{main_content.id}}" class="form-select" name="language">
-                                              <option>Choose a language</option>
+                                              <option>{{main_content.language}}</option>
                                               <option>en</option>
                                               <option>fr</option>
                                               <option>ar</option>
@@ -507,7 +507,7 @@
                                       <div class="col-6">
                                           <div class="row">
                                               <input id="step_one_title_{{main_content.id}}" type="text" class="form-control" name="step_one_title" value={{main_content.step_one_title}}>
-                                              <textarea  id="step_one_description_{{main_content.id}}" class="form-control" name="step_one_description" rows="6">{{main_content.our_process_intro}}</textarea>
+                                              <textarea  id="step_one_description_{{main_content.id}}" class="form-control" name="step_one_description" rows="6">{{main_content.step_one_description}}</textarea>
                                           </div>
                                       </div>
                                   </div>
@@ -534,7 +534,7 @@
 
                                       <div class="col-6">
                                           <div class="row">
-                                              <input id="step_tow_title_{{main_content.id}}"  type="text" class="form-control" name="step_tow_title" placeholder="title">
+                                              <input id="step_tow_title_{{main_content.id}}"  type="text" class="form-control" name="step_tow_title" >
                                               <textarea  id="step_tow_description_{{main_content.id}}" class="form-control" name="step_tow_description"  rows="6" placeholder="description"></textarea>
                                           </div>
                                       </div>
