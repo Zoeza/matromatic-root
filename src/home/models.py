@@ -36,6 +36,22 @@ class Content(models.Model):
     why_us_video_src = models.CharField(max_length=50, blank=True)
 
     our_process_intro = models.TextField(max_length=200, blank=True)
+    step_one_photo = models.ImageField(upload_to='content/step_1', blank=True)
+    step_one_title = models.TextField(max_length=100, blank=True)
+    step_one_description = models.TextField(max_length=300, blank=True)
+
+    step_tow_photo = models.ImageField(upload_to='content/step_2', blank=True)
+    step_tow_title = models.TextField(max_length=100, blank=True)
+    step_tow_description = models.TextField(max_length=300, blank=True)
+
+    step_three_photo = models.ImageField(upload_to='content/step_3', blank=True)
+    step_three_title = models.TextField(max_length=100, blank=True)
+    step_three_description = models.TextField(max_length=300, blank=True)
+
+    step_four_photo = models.ImageField(upload_to='content/step_4', blank=True)
+    step_four_title = models.TextField(max_length=100, blank=True)
+    step_four_description = models.TextField(max_length=300, blank=True)
+
     partners_intro = models.TextField(max_length=200, blank=True)
     projects_intro = models.TextField(max_length=200, blank=True)
     client_count = models.CharField(max_length=50, blank=True)
@@ -67,7 +83,7 @@ class Footer(models.Model):
         verbose_name = "footer"
 
     def __str__(self):
-        return self.sku
+        return self.language
 
 
 # ---------------------------------------------------------------------- #
