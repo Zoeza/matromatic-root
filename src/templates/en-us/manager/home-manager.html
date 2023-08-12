@@ -398,100 +398,238 @@
                             <br>
                           <!-- Body -->
                           <div class="card-body">
-                              <!-- Accordion -->
-                                <div class="accordion" id="accordionExample">
-                                  <div class="accordion-item">
-                                    <div class="accordion-header" id="headingOne">
-                                      <a class="accordion-button" role="button" data-bs-toggle="collapse" data-bs-target="#mainInformations" aria-expanded="true" aria-controls="collapseOne">
-                                       Main informations
-                                      </a>
-                                    </div>
-                                    <div id="mainInformations" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                      <div class="accordion-body">
+                            <form class="row g-3 js-validate need-validate" action="{% url 'home-manager' 'create_main_content' %}"   novalidate method="post" enctype="multipart/form-data">
+                          {% csrf_token %}
 
-                                           <div class="mb-3">
-                                              <label for="content_language" class="form-label">Language</label>
-                                              <div class="input-group input-group-merge">
-                                                    <select id="content_language" class="form-select" name="language">
-                                                      <option>Choose a language</option>
-                                                      <option>en</option>
-                                                      <option>fr</option>
-                                                      <option>ar</option>
-                                                    </select>
-                                              </div>
-                                          </div>
-                                          <!-- begin main logo -->
-                                          <div class="col-md-6 ">
-                                              <label class="form-label"> Background Image</label>
-                                              <div class="col-sm-9">
-                                                <div class="d-flex align-items-center">
-                                                  <!-- logo -->
-                                                  <label class="avatar avatar-xl  avatar-uploader ">
-                                                    <img id="main_background_image" class="avatar-img" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
+                          <div class="mb-3">
+                              <label for="content_language" class="form-label">Language</label>
+                              <div class="input-group input-group-merge">
+                                    <select id="content_language" class="form-select" name="language">
+                                      <option>Choose a language</option>
+                                      <option>en</option>
+                                      <option>fr</option>
+                                      <option>ar</option>
+                                    </select>
+                              </div>
+                          </div>
 
-                                                    <input type="file" class="js-file-attach avatar-uploader-input" name="main_background_image"  data-hs-file-attach-options=' {
-                                                              "textTarget": "#main_background_image",
-                                                              "mode": "image",
-                                                              "targetAttr": "src",
-                                                              "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
-                                                              }'>
-                                                  </label>
-                                                  <!-- End logo -->
+                          <!-- begin main logo -->
+                          <div class="col-md-6 ">
+                              <label class="form-label"> Background Image</label>
+                              <div class="col-sm-9">
+                                <div class="d-flex align-items-center">
+                                  <!-- logo -->
+                                  <label class="avatar avatar-xl  avatar-uploader ">
+                                    <img id="main_background_image" class="avatar-img" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
 
-                                                 </div>
-                                              </div>
-                                          </div>
-                                          <!-- end main logo -->
-                                           <!-- begin head logo -->
-                                          <div class="col-md-6">
-                                              <textarea id="companyDescription" class="form-control" name="company_description" rows="6" placeholder="Company Description"></textarea>
-                                          </div>
-                                           <!-- end head logo -->
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="accordion-item">
-                                    <div class="accordion-header" id="headingTwo">
-                                      <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#whyUs" aria-expanded="false" aria-controls="collapseTwo">
-                                        Why us
-                                      </a>
-                                    </div>
-                                    <div id="whyUs" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                      <div class="accordion-body">
-                                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                                      </div>
-                                    </div>
-                                  </div>
+                                    <input type="file" class="js-file-attach avatar-uploader-input" name="main_background_image"  data-hs-file-attach-options=' {
+                                              "textTarget": "#main_background_image",
+                                              "mode": "image",
+                                              "targetAttr": "src",
+                                              "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
+                                              }'>
+                                  </label>
+                                  <!-- End logo -->
 
-                                    <div class="accordion-item">
-                                    <div class="accordion-header" id="headingThree">
-                                      <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#ourProcess" aria-expanded="false" aria-controls="collapseThree">
-                                        Our Process
-                                      </a>
-                                    </div>
-                                    <div id="ourProcess" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                      <div class="accordion-body">
-                                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                                      </div>
-                                    </div>
-                                  </div>
+                                 </div>
+                              </div>
+                          </div>
+                          <!-- end main logo -->
+                           <!-- begin head logo -->
+                          <div class="col-md-6">
+                              <textarea id="companyDescription" class="form-control" name="company_description" rows="6" placeholder="Company Description"></textarea>
+                          </div>
+                           <!-- end head logo -->
+                            <hr>
+                      <strong><h4>Why Us:</h4></strong>
 
-                                  <div class="accordion-item">
-                                    <div class="accordion-header" id="headingFour">
-                                      <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#introductions" aria-expanded="false" aria-controls="collapseThree">
-                                        Introductions
-                                      </a>
-                                    </div>
-                                    <div id="introductions" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                                      <div class="accordion-body">
-                                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                                      </div>
-                                    </div>
-                                  </div>
+                       <!-- begin why us photo -->
+                          <div class="col-6 ">
+                              <label class="col-sm-3 col-form-label form-label"> Photo</label>
+                              <div class="col-sm-9">
+                                <div class="d-flex align-items-center">
+                                  <!-- photo -->
+                                  <label class="avatar avatar-xl  avatar-uploader " >
+                                    <img id="why_us_photo" class="avatar-img" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
+
+                                    <input type="file" class="js-file-attach avatar-uploader-input" name="why_us_photo" data-hs-file-attach-options=' {
+                                              "textTarget": "#why_us_photo",
+                                              "mode": "image",
+                                              "targetAttr": "src",
+                                              "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
+                                              }'>
+                                  </label>
+                                  <!-- End photo -->
+
+                                 </div>
+                              </div>
+                          </div>
+                          <!-- end why us photo -->
+                          <div class="col-6 ">
+                              <div class="row">
+                                  <textarea id="why_us_raison" class="form-control" name="why_us_raison"  rows="6" placeholder="put why us raison"></textarea>
+                                  <input id="why_us_video_src" class="form-control" name="why_us_video_src" placeholder="put video Link">
+                              </div>
+                          </div>
 
 
-                                </div>
-                                <!-- End Accordion -->
+                        <hr>
+
+                       <strong><h4> Our Process:</h4></strong>
+                      <div class="mb-3">
+                              <textarea id="our_process_intro" class="form-control" name="our_process_intro" rows="8" placeholder=" Our Process Introduction"></textarea>
+                         </div>
+                      <div class="row">
+                          <div class="col-6">
+                              <label class="form-label"> Step One</label>
+                              <div class="d-flex align-items-center">
+                                  <!-- edit photo -->
+                                  <label class="avatar avatar-xl  avatar-uploader">
+                                    <img id="step_one_photo" class="avatar-img" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
+
+                                    <input type="file" class="js-file-attach avatar-uploader-input" name="step_one_photo" data-hs-file-attach-options=' {
+                                              "textTarget": "#step_one_photo",
+                                              "mode": "image",
+                                              "targetAttr": "src",
+                                              "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
+                                              }'>
+                                  </label>
+                                  <!-- end edit photo -->
+                              </div>
+                          </div>
+                          <div class="col-6">
+                              <div class="row">
+                                  <input id="step_one_title"  type="text" class="form-control" name="step_one_title" placeholder=" title">
+                                  <textarea  id="step_one_description" class="form-control" name="step_one_description"  rows="6" placeholder=" description"></textarea>
+                              </div>
+                          </div>
+                      </div>
+                      <hr>
+
+                      <div class="row">
+                          <div class="col-6">
+                              <label class="form-label"> Step Tow</label>
+                              <div class="d-flex align-items-center">
+                                  <!-- edit photo -->
+                                  <label class="avatar avatar-xl  avatar-uploader">
+                                    <img id="step2_photo" class="avatar-img" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
+
+                                    <input type="file" class="js-file-attach avatar-uploader-input" name="step_tow_photo" data-hs-file-attach-options=' {
+                                              "textTarget": "#step2_photo",
+                                              "mode": "image",
+                                              "targetAttr": "src",
+                                              "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
+                                              }'>
+                                  </label>
+                                  <!-- end edit photo -->
+                              </div>
+                          </div>
+
+                          <div class="col-6">
+                              <div class="row">
+                                  <input id="step_tow_title"  type="text" class="form-control" name="step_tow_title" placeholder="title">
+                                  <textarea  id="step_tow_description" class="form-control" name="step_tow_description"  rows="6" placeholder="description"></textarea>
+                              </div>
+                          </div>
+                      </div>
+                      <hr>
+
+                      <div class="row">
+                          <div class="col-6">
+                              <label class="form-label"> Step Three</label>
+                              <div class="d-flex align-items-center">
+                                  <!-- edit photo -->
+                                  <label class="avatar avatar-xl  avatar-uploader">
+                                    <img id="step3_photo" class="avatar-img" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
+
+                                    <input type="file" class="js-file-attach avatar-uploader-input" name="step_three_photo" data-hs-file-attach-options=' {
+                                              "textTarget": "#step3_photo",
+                                              "mode": "image",
+                                              "targetAttr": "src",
+                                              "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
+                                              }'>
+                                  </label>
+                                  <!-- end edit photo -->
+                              </div>
+                          </div>
+
+                          <div class="col-6">
+                              <div class="row">
+                                  <input id="step_three_title"  type="text" class="form-control" name="step_three_title" placeholder="title" >
+                                  <textarea  id="step_three_description" class="form-control" name="step_three_description"  rows="6" placeholder="description"></textarea>
+                              </div>
+                          </div>
+                      </div>
+                      <hr>
+
+                      <div class="row">
+                          <div class="col-6">
+                              <label class="form-label"> Step Four</label>
+                              <div class="d-flex align-items-center">
+                                  <!-- edit photo -->
+                                  <label class="avatar avatar-xl  avatar-uploader">
+                                    <img id="step4_photo" class="avatar-img" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
+
+                                    <input type="file" class="js-file-attach avatar-uploader-input" name="step_four_photo" data-hs-file-attach-options=' {
+                                              "textTarget": "#step4_photo",
+                                              "mode": "image",
+                                              "targetAttr": "src",
+                                              "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
+                                              }'>
+                                  </label>
+                                  <!-- end edit photo -->
+                              </div>
+                          </div>
+
+                          <div class="col-6">
+                              <div class="row">
+                                  <input id="step_four_title"  type="text" class="form-control" name="step_four_title" placeholder="title">
+                                  <textarea  id="step_four_description" class="form-control" name="step_four_description" rows="6" placeholder="description" ></textarea>
+                              </div>
+                          </div>
+                      </div>
+                      <hr>
+
+                      <strong><h4> Introductions:</h4></strong>
+
+                      <div class="col-md-4 ">
+                          <textarea id="performance_intro" class="form-control" name="performance_intro"  rows="6" placeholder="Performance Introduction"></textarea>
+                      </div>
+
+                      <div class="col-md-4 ">
+                          <textarea id="partners_intro" class="form-control" name="partners_intro" rows="6" placeholder="Partners Introduction"></textarea>
+                      </div>
+
+                      <div class="col-md-4 ">
+                          <textarea id="projects_intro" class="form-control" name="projects_intro" rows="6" placeholder="Projects Introduction"></textarea>
+                      </div>
+                      <hr>
+                      <strong><h4> Other informations :</h4></strong>
+
+
+                      <div class="col-md-6">
+                        <label  class="form-label">Performance record detail</label>
+                              <input type="text" class="form-control" name="performance_record_detail" id="performance_record_detail" placeholder="More Power behind every pixel">
+                      </div>
+
+                      <div class="col-md-6">
+                        <label  class="form-label">Performance Record Breaking</label>
+                           <div class="range">
+                              <input type="range" class="form-range" min="0" max="100" name="performance_record_breaking" id="performance_record_breaking" value="0" oninput="amount.value=performance_record_breaking.value">
+                              <output id="amount_performance_record_breaking" name="amount" for="performance_record_breaking"></output>
+                          </div>
+                      </div>
+                      <div class="col-12">
+                            <label  class="form-label">Client Number</label>
+                            <input type="text" class="form-control" id="client_count" name="client_count" placeholder="4 hundred">
+                       </div>
+
+                      <div class="modal-footer">
+                          <button type="submit" class="btn btn-white">Confirm</button>
+                      </div>
+                    </form>
+
+
                           </div>
                           <!-- End Body -->
                         </div>
