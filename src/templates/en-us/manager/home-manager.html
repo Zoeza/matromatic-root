@@ -427,7 +427,7 @@
                                         <div class="d-flex align-items-center">
                                           <!-- logo -->
                                           <label class="avatar avatar-xl  avatar-uploader ">
-                                            <img id="main_background_image_{{main_content.id}}" class="avatar-img" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
+                                            <img id="main_background_image_{{main_content.id}}" class="avatar-img" src="{% get_media_prefix %}{{main_content.main_background_image}}" alt="">
 
                                             <input type="file" class="js-file-attach avatar-uploader-input" name="main_background_image"  data-hs-file-attach-options=' {
                                                       "textTarget": "#main_background_image_{{main_content.id}}",
@@ -457,7 +457,7 @@
                                             <div class="d-flex align-items-center">
                                               <!-- photo -->
                                               <label class="avatar avatar-xl  avatar-uploader " >
-                                                <img id="why_us_photo_{{main_content.id}}" class="avatar-img" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
+                                                <img id="why_us_photo_{{main_content.id}}" class="avatar-img" src="{% get_media_prefix %}{{main_content.why_us_photo}}" alt="">
 
                                                 <input type="file" class="js-file-attach avatar-uploader-input" name="why_us_photo" data-hs-file-attach-options=' {
                                                           "textTarget": "#why_us_photo_{{main_content.id}}",
