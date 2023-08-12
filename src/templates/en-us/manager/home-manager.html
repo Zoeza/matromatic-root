@@ -420,8 +420,33 @@
                                                     </select>
                                               </div>
                                           </div>
+                                          <!-- begin main logo -->
+                                          <div class="col-md-6 ">
+                                              <label class="form-label"> Background Image</label>
+                                              <div class="col-sm-9">
+                                                <div class="d-flex align-items-center">
+                                                  <!-- logo -->
+                                                  <label class="avatar avatar-xl  avatar-uploader ">
+                                                    <img id="main_background_image" class="avatar-img" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
 
+                                                    <input type="file" class="js-file-attach avatar-uploader-input" name="main_background_image"  data-hs-file-attach-options=' {
+                                                              "textTarget": "#main_background_image",
+                                                              "mode": "image",
+                                                              "targetAttr": "src",
+                                                              "allowTypes": [".png", ".jpeg", ".jpg",".svg"]
+                                                              }'>
+                                                  </label>
+                                                  <!-- End logo -->
 
+                                                 </div>
+                                              </div>
+                                          </div>
+                                          <!-- end main logo -->
+                                           <!-- begin head logo -->
+                                          <div class="col-md-6">
+                                              <textarea id="companyDescription" class="form-control" name="company_description" rows="6" placeholder="Company Description"></textarea>
+                                          </div>
+                                           <!-- end head logo -->
                                       </div>
                                     </div>
                                   </div>
