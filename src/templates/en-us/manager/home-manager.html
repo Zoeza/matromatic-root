@@ -483,7 +483,7 @@
                                     <hr>
                                 <strong><h4> Our Process:</h4></strong>
                                   <div class="mb-3">
-                                          <textarea id="our_process_intro_{{main_content.id}}" class="form-control" name="our_process_intro" rows="8" placeholder=" Our Process Introduction">{{main_content.our_process_intro}}</textarea>
+                                      <textarea id="our_process_intro_{{main_content.id}}" class="form-control" name="our_process_intro" rows="8" placeholder=" Our Process Introduction">{{main_content.our_process_intro}}</textarea>
                                   </div>
                                   <div class="row">
                                       <div class="col-6">
@@ -574,7 +574,7 @@
                                           <div class="d-flex align-items-center">
                                               <!-- edit photo -->
                                               <label class="avatar avatar-xl  avatar-uploader">
-                                                <img id="step4_photo_{{main_content.id}}" class="avatar-img" src="{% static 'manager/matromatic_img/images/add_image.png' %}" alt="">
+                                                <img id="step4_photo_{{main_content.id}}" class="avatar-img" src="{% get_media_prefix %}{{main_content.step_four_photo}}" alt="">
 
                                                 <input type="file" class="js-file-attach avatar-uploader-input" name="step_four_photo" data-hs-file-attach-options=' {
                                                           "textTarget": "#step4_photo_{{main_content.id}}",
