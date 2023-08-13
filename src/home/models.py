@@ -76,7 +76,7 @@ class Content(models.Model):
 class Footer(models.Model):
     language = models.CharField(max_length=50, blank=True)
     made_by = models.CharField(max_length=80, blank=True)
-    link = models.CharField(max_length=100, blank=True)
+    link = models.CharField(max_length=300, blank=True)
 
     class Meta:
         verbose_name = "footer"
