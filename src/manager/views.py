@@ -131,7 +131,7 @@ def home_manager(request, action):
         if request.method == 'POST':
             footer_id = request.POST.get('footer_id', False)
             selected_footer = Footer.objects.all().get(id=footer_id)
-            footer_form = ContentForm(request.POST, instance=selected_footer)
+            footer_form = FooterForm(request.POST, instance=selected_footer)
             footer_form.save()
             request.session['tab'] = 'top-page'
             return redirect('home-manager', 'main')
