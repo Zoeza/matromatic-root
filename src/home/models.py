@@ -137,6 +137,7 @@ class Partner(models.Model):
 # ---------------------------------------------------------------------- #
 
 # ------------------------------ Clients ----------------------------- #
+
 class Client(models.Model):
     client_name = models.CharField(max_length=50, unique=True)
     client_logo = models.ImageField(upload_to='clients/client_logo', null=True, blank=True)
