@@ -1100,7 +1100,6 @@
                     <div class="col-lg-3">
                           <!-- Navbar -->
                           <div class="navbar-expand-lg navbar-vertical mb-3 mb-lg-5">
-
                             <!-- Navbar Toggle -->
                             <div class="d-grid">
                               <button type="button" class="navbar-toggler btn btn-white mb-3" data-bs-toggle="collapse" data-bs-target="#footer_navbarVerticalNavMenu" aria-label="Toggle navigation" aria-expanded="false" aria-controls="footer_navbarVerticalNavMenu">
@@ -1151,10 +1150,10 @@
                                             <h4 class="card-title">Footer informations </h4>
                                         </div>
                                         <div class="col-sm-auto">
-                                            <button class="btn btn-white form-control-lg" data-bs-toggle="modal" data-bs-target="add_footer_model">
+                                            <button class="btn btn-white form-control-lg" data-bs-toggle="modal" data-bs-target="#add_footer_model">
                                                 <i class="bi bi-plus-lg" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Add" data-bs-original-title="Add"></i>
                                             </button>
-                                        </div>
+                                         </div>
                                     </div>
                                 </div>
 
@@ -1167,7 +1166,7 @@
                                         <input type="hidden" name="footer_id" value={{footer.id}}>
                                     </form>
 
-                                    <form class="row g-3" action="{% url 'home-manager' 'edit_footer' %}"  novalidate method="post" enctype="multipart/form-data">
+                                    <form class="row g-3" action="{% url 'home-manager' 'edit_footer' %}"  novalidate method="post">
                                       {% csrf_token %}
                                       <input type="hidden" name="footer_id" value={{footer.id}}>
 
