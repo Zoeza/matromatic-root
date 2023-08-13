@@ -1193,7 +1193,7 @@
                                       <!-- begin head text -->
                                       <div class="col-md-6">
                                           <label  class="form-label" id="link_{{footer.id}}">Link</label>
-                                          <input type="text"  class="form-control" name="link"  value="{{footer.link}}" >
+                                          <input type="text"  class="form-control" name="link"  value={{footer.link}} >
                                       </div>
                                       <!-- end head text -->
                                   <div class="d-flex justify-content-end">
@@ -1657,9 +1657,8 @@
             <h5 class="modal-title" id="addFooterModel">Add Client</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <!-- begin add client form -->
-
-              <div class="modal-body">
+          <!-- begin add footer form -->
+           <div class="modal-body">
                   <form class="row g-3" action="{% url 'home-manager' 'create_new_footer' %}"  novalidate method="post">
                           {% csrf_token %}
                           <div class="mb-3">
@@ -1691,7 +1690,7 @@
                   </form>
 
               </div>
-          <!-- end add client form -->
+          <!-- end add footer form -->
         </div>
       </div>
     </div>
