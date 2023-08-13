@@ -75,7 +75,6 @@ class Content(models.Model):
 
 class Footer(models.Model):
     language = models.CharField(max_length=50, blank=True)
-    copyright = models.CharField(max_length=80, blank=True)
     made_by = models.CharField(max_length=80, blank=True)
     made_by_link = models.CharField(max_length=100, blank=True)
 
