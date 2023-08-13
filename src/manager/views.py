@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from home.models import TopPage, Content, Service, OurProcess, Performance, Client, Partner, Project
+from home.models import TopPage, Content, Service, OurProcess, Performance, Client, Partner, Project,Footer
 from .forms import TopPageForm, ContentForm, ServiceForm, ProcessForm, ClientForm, PartnerForm, \
     ProjectForm, PerformanceForm
 
@@ -24,6 +24,7 @@ def home_manager(request, action):
         tab = request.session.get('tab')
         request.session['tab'] = None
 
+        footers = Footer.objects.all()
         top_pages = TopPage.objects.all()
         main_contents = Content.objects.all()
         services_form = ServiceForm()
@@ -46,6 +47,7 @@ def home_manager(request, action):
             'clients': clients,
             'partners': partners,
             'projects': projects,
+            'footers': footers,
 
         }
         return render(request, url, context)
