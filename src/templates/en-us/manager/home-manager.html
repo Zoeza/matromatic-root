@@ -1658,7 +1658,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <!-- begin add client form -->
-                {% csrf_token %}
+
               <div class="modal-body">
                   <form class="row g-3" action="{% url 'home-manager' 'create_new_footer' %}"  novalidate method="post">
                           {% csrf_token %}
@@ -1666,7 +1666,7 @@
                               <label for="LanguageSelect" class="form-label">Language</label>
                               <div class="input-group input-group-merge">
                                     <select id="LanguageSelect" class="form-select" name="language" >
-                                      <option>{{ footer.language }}</option>
+                                      <option></option>
                                       <option>en</option>
                                       <option>fr</option>
                                       <option>ar</option>
