@@ -111,8 +111,7 @@
               </div>
 
             </section>
-            <!-- <section> close ============================-->
-            <!-- ============================================-->
+            <!-- <section> close ============================--><!-- ============================================-->
 
             <!-- ============================================-->
             <!-- <section> begin ============================-->
@@ -313,7 +312,7 @@
 
                   <div class="col-md-6 ps-md-7 text-start mt-8 mt-md-0">
                     {% for performance in performances%}
-                    <div class="progress-line me-4 mt-4" data-progress-line='{"progress":{{performance.percentage}},"subText":"{{performance.domain}}"}'></div>
+                    <div class="progress-line me-4 mt-4" data-progress-line='{"progress":{{performance.percentage}},"subText":"{{performance.domain}}:3"}'></div>
                     {% endfor %}
                   </div>
                 </div>
@@ -456,13 +455,9 @@
                   </a>
                 </div>
                 <div class="col-lg-4 text-lg-start mt-4 mt-lg-0">
-                  <p class="fs--1 text-uppercase ls fw-bold mb-0"> {{footer.copyright}}</p>
-                </div>
-                <div class="col-lg-4 text-lg-end order-lg-2 mt-2 mt-lg-0">
-                  <p class="fs--1 text-uppercase ls fw-bold mb-0">Made with
-                    <span class="text-danger fas fa-heart mx-1"></span>
-                    by <a class="text-600" href="{{footer.made_by_link}}">{{footer.made_by}}</a>
-                  </p>
+                  <p class="fs--1 text-uppercase ls fw-bold mb-0">COPYRIGHT©</p>
+                  <a class="text-600" href="{{footer.made_by_link}}">{{footer.made_by}}</a>
+
                 </div>
               </div>
             </div>
