@@ -1141,7 +1141,7 @@
                           </div>
                           <!-- End Navbar -->
                         </div>
-                    <div class="col-lg-9">
+                        <div class="col-lg-9">
                           <div class="d-grid gap-3 gap-lg-5">
                             <!-- begin top page card -->
                             <div id="footerInfo" class="card">
@@ -1200,7 +1200,7 @@
                                   <div class="d-flex justify-content-end">
                                     <button type="submit" class="btn btn-white">Save changes</button>
                                   </div>
-                                </form>
+                               </form>
                                 <hr>
                                   {% endfor %}
                                   <!-- End Form -->
@@ -1650,6 +1650,54 @@
         </div>
     <!-- end create main content model -->
 
+     <!-- begin add footer modal -->
+    <div id="add_footer_model" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="addFooterModel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="addFooterModel">Add Client</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <!-- begin add client form -->
+                {% csrf_token %}
+              <div class="modal-body">
+                  <form class="row g-3" action="{% url 'home-manager' 'create_new_footer' %}"  novalidate method="post">
+                          {% csrf_token %}
+                          <div class="mb-3">
+                              <label for="LanguageSelect" class="form-label">Language</label>
+                              <div class="input-group input-group-merge">
+                                    <select id="LanguageSelect" class="form-select" name="language" >
+                                      <option>{{ footer.language }}</option>
+                                      <option>en</option>
+                                      <option>fr</option>
+                                      <option>ar</option>
+                                    </select>
+                              </div>
+                          </div>
+                          <!-- begin head title -->
+                          <div class="col-md-6">
+                              <label class="form-label" id="made_by">Created by</label>
+                              <input type="text" class="form-control" name="made_by" >
+                           </div>
+                          <!-- end head title -->
+                          <!-- begin head text -->
+                          <div class="col-md-6">
+                              <label  class="form-label" id="link">Link</label>
+                              <input type="text"  class="form-control" name="link">
+                          </div>
+                          <!-- end head text -->
+                      <div class="d-flex justify-content-end">
+                        <button type="submit" class="btn btn-white">Confirm</button>
+                      </div>
+                  </form>
+
+              </div>
+          <!-- end add client form -->
+        </div>
+      </div>
+    </div>
+    <!-- end add footer modal -->
+
     <!-- begin add service modal -->
     <div id="add_service_model" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredScrollableTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
@@ -1993,6 +2041,9 @@
       </div>
     </div>
     <!-- end add project model Modal -->
+
+
+
 
     <!-- End Tab Content -->
     {% endblock %}

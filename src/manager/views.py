@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from home.models import TopPage, Content, Service, OurProcess, Performance, Client, Partner, Project,Footer
-from .forms import TopPageForm, ContentForm, ServiceForm, ProcessForm, ClientForm, PartnerForm, \
+from home.models import TopPage, Content, Service, OurProcess, Performance, Client, Partner, Project, Footer
+from .forms import TopPageForm, ContentForm, FooterForm, ServiceForm, ProcessForm, ClientForm, PartnerForm, \
     ProjectForm, PerformanceForm
 
 
@@ -114,6 +114,38 @@ def home_manager(request, action):
             request.session['tab'] = 'top-page'
             return redirect('home-manager', 'main')
     # ------------------- end delete main content -------------------- #
+
+    # ---------------------- create new footer -------------------- #
+    if action == 'create_new_footer':
+        if request.method == 'POST':
+            footer_form = FooterForm(request.POST, request.FILES)
+            if footer_form.is_valid():
+                footer_form.save()
+
+        request.session['tab'] = 'top-page'
+        return redirect('home-manager', 'main')
+    # -------------------- end create footer ------------------ #
+
+    # -------------------- edit new footer ------------------------- #
+    if action == 'edit_footer':
+        if request.method == 'POST':
+            footer_id = request.POST.get('footer_id', False)
+            selected_footer = Footer.objects.all().get(id=footer_id)
+            footer_form = ContentForm(request.POST, instance=selected_footer)
+            footer_form.save()
+            request.session['tab'] = 'top-page'
+            return redirect('home-manager', 'main')
+    # ------------------- end edit footer ---------------------- #
+
+    # -------------------- delete footer ----------------------- #
+    if action == 'delete_main_content':
+        if request.method == 'POST':
+            footer_id = request.POST.get('footer_id', False)
+            selected_footer = Footer.objects.all().get(id=footer_id)
+            selected_footer.delete()
+            request.session['tab'] = 'top-page'
+            return redirect('home-manager', 'main')
+    # ------------------- end delete footer -------------------- #
 
     # ---------------------- add service ------------------------ #
     if action == 'add_new_service':

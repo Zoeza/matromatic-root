@@ -14,6 +14,12 @@ class ContentForm(ModelForm):
         fields = "__all__"
 
 
+class FooterForm(ModelForm):
+    class Meta:
+        model = Footer
+        fields = "__all__"
+
+
 class ServiceForm(ModelForm):
     class Meta:
         model = Service
