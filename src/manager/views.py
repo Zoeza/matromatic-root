@@ -90,7 +90,7 @@ def home_manager(request, action):
                 main_content_form.save()
 
         request.session['tab'] = 'create_main_content'
-        return redirect('home-manager', 'create_main_content')
+        return redirect('home-manager', 'top-page')
     # -------------------- end create main content ------------------ #
 
     # -------------------- edit main content ------------------------- #
@@ -101,7 +101,7 @@ def home_manager(request, action):
             main_content_form = ContentForm(request.POST, request.FILES, instance=selected_main_content)
             main_content_form.save()
             request.session['tab'] = 'top-page'
-            return redirect('home-manager', 'create_main_content')
+            return redirect('home-manager', 'top-page')
     # ------------------- end edit main content ---------------------- #
 
     # -------------------- delete main content ----------------------- #
@@ -111,7 +111,7 @@ def home_manager(request, action):
             selected_main_content = Content.objects.all().get(id=main_content_id)
             selected_main_content.delete()
             request.session['tab'] = 'top-page'
-            return redirect('home-manager', 'create_main_content')
+            return redirect('home-manager', 'top-page')
     # ------------------- end delete main content -------------------- #
 
     # ---------------------- create new footer -------------------- #
