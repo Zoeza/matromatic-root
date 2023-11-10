@@ -19,7 +19,7 @@ def home_manager(request, action):
     direction = request.session.get('language')
     nav_side = 'home'
     # -- main page show -- #
-    if action == "main":
+    if action == "top_page":
         url = direction + "/manager/home-manager.html"
         tab = request.session.get('tab')
         request.session['tab'] = None
