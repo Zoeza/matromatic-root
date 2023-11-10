@@ -69,7 +69,7 @@ def home_manager(request, action):
             top_page_form = TopPageForm(request.POST, request.FILES, instance=selected_top_page)
             top_page_form.save()
             request.session['tab'] = 'top-page'
-            return redirect('home-manager', 'top_page')
+            return redirect('home-manager', 'top-page')
         # ------------------- end edit top page ---------------- #
 
         # -------------------- delete top page ----------------- #
@@ -79,7 +79,7 @@ def home_manager(request, action):
                 selected_top_page = TopPage.objects.all().get(id=top_page_id)
                 selected_top_page.delete()
                 request.session['tab'] = 'top-page'
-                return redirect('home-manager', 'top_page')
+                return redirect('home-manager', 'top-page')
     # ----------------- end delete top page ---------------------- #
 
     # ---------------------- create main content -------------------- #
@@ -122,7 +122,7 @@ def home_manager(request, action):
                 footer_form.save()
 
         request.session['tab'] = 'top-page'
-        return redirect('home-manager', 'main')
+        return redirect('home-manager', 'top-page')
     # -------------------- end create footer ------------------ #
 
     # -------------------- edit new footer ------------------------- #
@@ -133,7 +133,7 @@ def home_manager(request, action):
             footer_form = FooterForm(request.POST, instance=selected_footer)
             footer_form.save()
             request.session['tab'] = 'top-page'
-            return redirect('home-manager', 'main')
+            return redirect('home-manager', 'top-page')
     # ------------------- end edit footer ---------------------- #
 
     # -------------------- delete footer ----------------------- #
@@ -143,7 +143,7 @@ def home_manager(request, action):
             selected_footer = Footer.objects.all().get(id=footer_id)
             selected_footer.delete()
             request.session['tab'] = 'top-page'
-            return redirect('home-manager', 'main')
+            return redirect('home-manager', 'top-page')
     # ------------------- end delete footer -------------------- #
 
     # ---------------------- add service ------------------------ #
@@ -154,7 +154,7 @@ def home_manager(request, action):
                 service_form.save()
 
         request.session['tab'] = 'top-page'
-        return redirect('home-manager', 'main')
+        return redirect('home-manager', 'top-page')
     # ----------------- end  add service ------------------------ #
 
     # -------------------- edit service ------------------------- #
