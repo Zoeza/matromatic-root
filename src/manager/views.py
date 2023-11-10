@@ -48,7 +48,6 @@ def home_manager(request, action):
             'partners': partners,
             'projects': projects,
             'footers': footers,
-
         }
         return render(request, url, context)
     # ---------------------- create top page -------------------- #
@@ -90,8 +89,8 @@ def home_manager(request, action):
             if main_content_form.is_valid():
                 main_content_form.save()
 
-        request.session['tab'] = 'top-page'
-        return redirect('home-manager', 'main')
+        request.session['tab'] = 'create_main_content'
+        return redirect('home-manager', 'create_main_content')
     # -------------------- end create main content ------------------ #
 
     # -------------------- edit main content ------------------------- #
