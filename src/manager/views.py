@@ -19,7 +19,7 @@ def home_manager(request, action):
     direction = request.session.get('language')
     nav_side = 'home'
     # -- main page show -- #
-    if action == "top_page":
+    if action == "top-page":
         url = direction + "/manager/home-manager.html"
         tab = request.session.get('tab')
         request.session['tab'] = None
@@ -58,7 +58,7 @@ def home_manager(request, action):
                 top_page_form.save()
 
         request.session['tab'] = 'top-page'
-        return redirect('home-manager', 'main')
+        return redirect('home-manager', 'top-page')
     # -------------------- end create top page ------------------ #
 
     # ---------------------- edit top page ---------------------- #
@@ -69,7 +69,7 @@ def home_manager(request, action):
             top_page_form = TopPageForm(request.POST, request.FILES, instance=selected_top_page)
             top_page_form.save()
             request.session['tab'] = 'top-page'
-            return redirect('home-manager', 'main')
+            return redirect('home-manager', 'top_page')
         # ------------------- end edit top page ---------------- #
 
         # -------------------- delete top page ----------------- #
@@ -79,7 +79,7 @@ def home_manager(request, action):
                 selected_top_page = TopPage.objects.all().get(id=top_page_id)
                 selected_top_page.delete()
                 request.session['tab'] = 'top-page'
-                return redirect('home-manager', 'main')
+                return redirect('home-manager', 'top_page')
     # ----------------- end delete top page ---------------------- #
 
     # ---------------------- create main content -------------------- #
