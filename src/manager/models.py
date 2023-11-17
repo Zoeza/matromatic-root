@@ -54,7 +54,7 @@ class Service(models.Model):
 
 # ------------------------------ Processes ------------------------------- #
 class OurProcess(models.Model):
-    process_number = models.IntegerField(blank=True)
+    process_number = models.DecimalField(max_digits=2, decimal_places=0)
     process_title = models.CharField(max_length=100, blank=True)
     process_description = models.TextField(max_length=300, blank=True)
 

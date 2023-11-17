@@ -20,7 +20,7 @@ def home(request):
         raise Http404("Content does not exist")
 
     try:
-        process_steps = OurProcess.objects.all()
+        process_steps = OurProcess.objects.all().order_by('process_number')
     except OurProcess.DoesNotExist:
         raise Http404("Process informations do not exist")
 

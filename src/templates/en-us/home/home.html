@@ -440,15 +440,12 @@
 
         <div id="testimonials" class="testimonials-parallax">
           <div class="bg-overlay">
-
               <!-- Testimonial 1 -->
                <ul class="t-clients clients-slider">
                  {% for client in clients %}
                     <li><a href="{{client.client_website}}"><img src="{% get_media_prefix %}{{client.client_logo}}" alt="{{client.client_name}}"></a></li>
                  {% endfor %}
                </ul>
-
-
           </div><!-- / .bg-overlay -->
         </div><!-- / .testimonials-parallax -->
 
