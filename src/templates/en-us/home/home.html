@@ -435,7 +435,7 @@
                   </div>
               </section>
           </div>
-          
+
         <!-- ========== Testimonials ========== -->
 
         <div id="testimonials" class="testimonials-parallax">
@@ -444,19 +444,18 @@
             <div class="t-wrapper t-slider">
 
               <!-- Testimonial 1 -->
+               {% for client in clients %}
               <blockquote>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
                 <span class="et-quote t-type"></span>
                 <footer>
-                  {% for client in clients %}
+
                   <cite>
                     <a href="{{client.client_website}}"><img src="{% get_media_prefix %}{{client.client_logo}}" alt="{{client.client_name}}"></a>
-
                   </cite>
-                  {% endfor %}
-
                 </footer>
               </blockquote>
+               {% endfor %}
 
             </div><!-- / .t-wrapper -->
 
