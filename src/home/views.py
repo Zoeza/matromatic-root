@@ -77,9 +77,3 @@ def home(request):
     return render(request, url, context)
 
 
-def contact_us(request):
-    if not request.session.get('language', None):
-        request.session['language'] = 'en-us'
-    direction = request.session.get('language')
-    url = direction + "/home/contact_us.html"
-    return render(request, url, {})
