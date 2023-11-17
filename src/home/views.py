@@ -48,7 +48,6 @@ def home(request):
         'home_page': home_page,
         'main_content': main_content,
         'process_steps': process_steps,
-        'partners': partners,
         'clients': clients,
         'projects': projects,
         'socials_media': socials_media,
