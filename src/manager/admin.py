@@ -1,9 +1,9 @@
 from django.contrib import admin
-from .models import Home, AboutUs, Footer, ContactUs, Service, OurProcess, SocialMedia, Client, Project
+from .models import Home, MainContent, Footer, ContactUs, Service, OurProcess, SocialMedia, Client, Project
 
 # Register your models here.
 admin.site.register(Home)
-admin.site.register(AboutUs)
+admin.site.register(MainContent)
 admin.site.register(Service)
 admin.site.register(OurProcess)
 admin.site.register(Project)
