@@ -1,5 +1,5 @@
 from django.db import models
-from phonenumber_field.formfields import PhoneNumberField
+from phonenumber_field.modelfields import PhoneNumberField
 
 
 # ------------------------------ Home ------------------------------- #
@@ -95,8 +95,8 @@ class Client(models.Model):
 class ContactUs(models.Model):
     language = models.CharField(max_length=50, blank=True)
     address = models.CharField(max_length=300)
-    phone = PhoneNumberField(blank=True, help_text='Contact phone number')
-    mobile = PhoneNumberField(blank=True, help_text='Contact phone number')
+    phone = PhoneNumberField()
+    mobile = PhoneNumberField(blank=True)
     email = models.EmailField(max_length=254)
 
     class Meta:
