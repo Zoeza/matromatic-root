@@ -47,8 +47,6 @@ def home(request):
     context = {
         'home_page': home_page,
         'main_content': main_content,
-     
-        'services': services,
         'process_steps': process_steps,
         'partners': partners,
         'clients': clients,
