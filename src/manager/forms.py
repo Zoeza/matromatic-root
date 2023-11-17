@@ -44,7 +44,7 @@ class ProjectForm(ModelForm):
         fields = "__all__"
 
 
-class contactForm(ModelForm):
+class ContactForm(ModelForm):
     class Meta:
         model = ContactUs
         fields = "__all__"
