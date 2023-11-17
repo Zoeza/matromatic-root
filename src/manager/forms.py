@@ -1,16 +1,16 @@
 from django.forms import ModelForm
-from home.models import TopPage, Service, OurProcess, Performance, Partner, Client, Project, Content, Footer
+from .models import Home, MainContent, Footer, ContactUs, Service, OurProcess, SocialMedia, Client, Project
 
 
-class TopPageForm(ModelForm):
+class HomeForm(ModelForm):
     class Meta:
-        model = TopPage
+        model = Home
         fields = "__all__"
 
 
-class ContentForm(ModelForm):
+class MainContentForm(ModelForm):
     class Meta:
-        model = Content
+        model = MainContent
         fields = "__all__"
 
 
@@ -32,18 +32,6 @@ class ProcessForm(ModelForm):
         fields = "__all__"
 
 
-class PerformanceForm(ModelForm):
-    class Meta:
-        model = Performance
-        fields = "__all__"
-
-
-class PartnerForm(ModelForm):
-    class Meta:
-        model = Partner
-        fields = "__all__"
-
-
 class ClientForm(ModelForm):
     class Meta:
         model = Client
@@ -53,4 +41,16 @@ class ClientForm(ModelForm):
 class ProjectForm(ModelForm):
     class Meta:
         model = Project
+        fields = "__all__"
+
+
+class contactForm(ModelForm):
+    class Meta:
+        model = ContactUs
+        fields = "__all__"
+
+
+class SocialMediaForm(ModelForm):
+    class Meta:
+        model = SocialMedia
         fields = "__all__"

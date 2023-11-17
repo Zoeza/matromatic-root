@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
-from home.models import TopPage, Content, Service, OurProcess, Performance, Client, Partner, Project, Footer
-from .forms import TopPageForm, ContentForm, FooterForm, ServiceForm, ProcessForm, ClientForm, PartnerForm, \
-    ProjectForm, PerformanceForm
+from .models import Home, MainContent, Footer, ContactUs, Service, OurProcess, SocialMedia, Client, Project
+from .forms import HomeForm, MainContentForm, FooterForm, ServiceForm, ProcessForm, ClientForm, ContactForm, \
+    ProjectForm, SocialMediaForm
 
 
 def dashboard(request):
@@ -24,38 +24,55 @@ def home_manager(request, action):
         tab = request.session.get('tab')
         request.session['tab'] = None
 
+        homes = Home.objects.all()
+        main_content = MainContent.objects.all()
         footers = Footer.objects.all()
-        top_pages = TopPage.objects.all()
-        main_contents = Content.objects.all()
-        services_form = ServiceForm()
         services = Service.objects.all()
         process_steps = OurProcess.objects.all()
-        performances = Performance.objects.all()
         clients = Client.objects.all()
-        partners = Partner.objects.all()
         projects = Project.objects.all()
+        contact_us = ContactUs.objects.all()
+        social_medias = SocialMedia.objects.all()
+
+        homes_form = HomeForm()
+        main_content_form = MainContentForm()
+        footers_form = FooterForm()
+        services_form = ServiceForm()
+        process_steps_form = ProcessForm()
+        clients_form = ClientForm()
+        contacts_form = ContactForm()
+        projects_form = ProjectForm()
+        social_media_form = SocialMediaForm()
 
         context = {
             'nav_side': nav_side,
             'tab': tab,
-            'top_pages': top_pages,
-            'main_contents': main_contents,
-            'services_form': services_form,
+            'homes': homes,
+            'main_content': main_content,
+            'footers': footers,
             'services': services,
             'process_steps': process_steps,
-            'performances': performances,
             'clients': clients,
-            'partners': partners,
             'projects': projects,
-            'footers': footers,
+            'contact_us': contact_us,
+            'social_medias': social_medias,
+            'services_form': services_form,
+            'homes_form': homes_form,
+            'main_content_form': main_content_form,
+            'footers_form': footers_form,
+            'process_steps_form': process_steps_form,
+            'clients_form': clients_form,
+            'contacts_form': contacts_form,
+            'projects_form': projects_form,
+            'social_media_form': social_media_form,
         }
         return render(request, url, context)
     # ---------------------- create top page -------------------- #
     if action == 'create_top_page':
         if request.method == 'POST':
-            top_page_form = TopPageForm(request.POST, request.FILES)
-            if top_page_form.is_valid():
-                top_page_form.save()
+            home_form = HomeForm(request.POST, request.FILES)
+            if home_form.is_valid():
+                home_form.save()
 
         request.session['tab'] = 'top-page'
         return redirect('home-manager', 'top_page')
