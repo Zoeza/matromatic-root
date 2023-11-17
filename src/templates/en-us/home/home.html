@@ -5,7 +5,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Matrromatic - industrial and semi-industrial machine</title>
+        <title>Matromatic - industrial and semi-industrial machine</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -321,36 +321,95 @@
                 <h2>What we do</h2>
                 <span class="subheading">Lorem ipsum dolor sit amet, consectetur</span>
               </header>
+                      <div class="container-fluid ft-tabs">
+          <div class="row">
 
-              <!-- Item 1 -->
-              <div class="col-lg-4 col-md-6 mb-sm-50">
-                <div class="ft-item wow fadeInUp" data-wow-duration="1s">
-                  <span class="linea-ecommerce-diamond"></span>
-                  <h4>Expert UX/UI Design</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur elit adipisicing , sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minimv</p>
-                  <a href="#">Learn more <span class="linea-arrows-slim-right"></span></a>
-                </div>
-              </div>
+            <!-- Tabs -->
+            <div class="col-lg-4 no-gap">
+              <ul class="tabs-list" role="tablist">
 
-              <!-- Item 2 -->
-              <div class="col-lg-4 col-md-6 mb-sm-50">
-                <div class="ft-item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                  <span class="linea-basic-display"></span>
-                  <h4>Web Development</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur elit adipisicing , sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minimv</p>
-                  <a href="#">Learn more <span class="linea-arrows-slim-right"></span></a>
-                </div>
-              </div>
+                <!-- Tab 1 -->
+                <li role="presentation" class="active">
+                  <a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">
+                    <span class="linea-basic-bolt tab-icon"></span>
+                    <div class="tab-group">
+                      <span class="tab-heading">Lightning Fast</span>
+                      <span class="tab-info">Lorem ipsum dolor sit amet</span>
+                    </div>
+                  </a>
+                </li>
 
-              <!-- Item 3 -->
-              <div class="col-lg-4 col-md-6 mb-sm-50">
-                <div class="ft-item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">
-                  <span class="linea-basic-life-buoy"></span>
-                  <h4>25/7 Support</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur elit adipisicing , sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minimv</p>
-                  <a href="#">Learn more <span class="linea-arrows-slim-right"></span></a>
+                <!-- Tab 2 -->
+                <li role="presentation">
+                  <a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">
+                    <span class="linea-basic-server2 tab-icon"></span>
+                    <div class="tab-group">
+                      <span class="tab-heading">Dedicated Server</span>
+                      <span class="tab-info">Lorem ipsum dolor sit amet</span>
+                    </div>
+                  </a>
+                </li>
+
+                <!-- Tab 3 -->
+                <li role="presentation">
+                  <a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab">
+                    <span class="linea-basic-share tab-icon"></span>
+                    <div class="tab-group">
+                      <span class="tab-heading">Connected 24/7</span>
+                      <span class="tab-info">Lorem ipsum dolor sit amet</span>
+                    </div>
+                  </a>
+                </li>
+
+              </ul>
+            </div><!-- / .col-lg-4 -->
+
+            <!-- Tabs Content -->
+            <div class="col-lg-8 no-gap tab-content">
+
+              <!-- Tab Content 1 -->
+              <div id="tab1" role="tabpanel" class="tab-pane fade in active">
+                <div class="col-md-6 tab-content-text">
+                  <h4>Tab content one</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque cupiditate, accusantium laboriosam aut deleniti excepturi at nesciunt sint dolor earum quae quidem eius nostrum quas sed suscipit eligendi, aperiam cumque. Culpa maxime, cupiditate nemo sint suscipit aperiam.</p>
+
                 </div>
-              </div>
+
+                <div class="col-md-6 tab-content-image">
+                  <img src="assets/images/iMac-pricing.png" alt="Tab Image" class="img-responsive wow fadeInRight" data-wow-duration=".8s">
+                </div>
+              </div><!-- / #tab1 -->
+
+              <!-- Tab Content 2 -->
+              <div id="tab2" role="tabpanel" class="tab-pane fade">
+                <div class="col-md-6 tab-content-text">
+                  <h4>Tab content two</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque cupiditate, accusantium laboriosam aut deleniti excepturi at nesciunt sint dolor earum quae quidem eius nostrum quas sed suscipit eligendi, aperiam cumque. Culpa maxime, cupiditate nemo sint suscipit aperiam.</p>
+
+                </div>
+
+                <div class="col-md-6 tab-content-image">
+                  <img src="assets/images/mac-gold.png" alt="Tab Image" class="img-responsive wow fadeInRight" data-wow-duration=".8s">
+                </div>
+              </div><!-- / #tab1 -->
+
+              <!-- Tab Content 3 -->
+              <div id="tab3" role="tabpanel" class="tab-pane fade">
+                <div class="col-md-6 tab-content-text">
+                  <h4>Tab content three</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque cupiditate, accusantium laboriosam aut deleniti excepturi at nesciunt sint dolor earum quae quidem eius nostrum quas sed suscipit eligendi, aperiam cumque. Culpa maxime, cupiditate nemo sint suscipit aperiam.</p>
+
+                </div>
+
+                <div class="col-md-6 tab-content-image">
+                  <img src="assets/images/iMac-pricing.png" alt="Tab Image" class="img-responsive wow fadeInRight" data-wow-duration=".8s">
+                </div>
+              </div><!-- / #tab1 -->
+            </div><!-- / .col-lg-8 -->
+
+          </div><!-- / .row -->
+        </div><!-- / .container-fluid -->
+
 
             </div><!-- / .row -->
           </section>
@@ -399,96 +458,6 @@
             </div><!-- / .row -->
 
         </section><!-- / .container -->
-
-           <div class="container-fluid ft-tabs">
-          <div class="row">
-
-            <!-- Tabs -->
-            <div class="col-lg-4 no-gap">
-              <ul class="tabs-list" role="tablist">
-
-                <!-- Tab 1 -->
-                <li role="presentation" class="active">
-                  <a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">
-                    <span class="linea-basic-bolt tab-icon"></span>
-                    <div class="tab-group">
-                      <span class="tab-heading">Lightning Fast</span>
-                      <span class="tab-info">Lorem ipsum dolor sit amet</span>
-                    </div>
-                  </a>
-                </li>
-
-                <!-- Tab 2 -->
-                <li role="presentation">
-                  <a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">
-                    <span class="linea-basic-server2 tab-icon"></span>
-                    <div class="tab-group">
-                      <span class="tab-heading">Dedicated Server</span>
-                      <span class="tab-info">Lorem ipsum dolor sit amet</span>
-                    </div>
-                  </a>
-                </li>
-
-                <!-- Tab 3 -->
-                <li role="presentation">
-                  <a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab">
-                    <span class="linea-basic-share tab-icon"></span>
-                    <div class="tab-group">
-                      <span class="tab-heading">Connected 24/7</span>
-                      <span class="tab-info">Lorem ipsum dolor sit amet</span>
-                    </div>
-                  </a>
-                </li>
-
-              </ul>
-            </div><!-- / .col-lg-4 -->
-
-
-            <!-- Tabs Content -->
-            <div class="col-lg-8 no-gap tab-content">
-
-              <!-- Tab Content 1 -->
-              <div id="tab1" role="tabpanel" class="tab-pane fade in active">
-                <div class="col-md-6 tab-content-text">
-                  <h4>Tab content one</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque cupiditate, accusantium laboriosam aut deleniti excepturi at nesciunt sint dolor earum quae quidem eius nostrum quas sed suscipit eligendi, aperiam cumque. Culpa maxime, cupiditate nemo sint suscipit aperiam.</p>
-
-                </div>
-
-                <div class="col-md-6 tab-content-image">
-                  <img src="assets/images/iMac-pricing.png" alt="Tab Image" class="img-responsive wow fadeInRight" data-wow-duration=".8s">
-                </div>
-              </div><!-- / #tab1 -->
-
-              <!-- Tab Content 2 -->
-              <div id="tab2" role="tabpanel" class="tab-pane fade">
-                <div class="col-md-6 tab-content-text">
-                  <h4>Tab content two</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque cupiditate, accusantium laboriosam aut deleniti excepturi at nesciunt sint dolor earum quae quidem eius nostrum quas sed suscipit eligendi, aperiam cumque. Culpa maxime, cupiditate nemo sint suscipit aperiam.</p>
-
-                </div>
-
-                <div class="col-md-6 tab-content-image">
-                  <img src="assets/images/mac-gold.png" alt="Tab Image" class="img-responsive wow fadeInRight" data-wow-duration=".8s">
-                </div>
-              </div><!-- / #tab1 -->
-
-              <!-- Tab Content 3 -->
-              <div id="tab3" role="tabpanel" class="tab-pane fade">
-                <div class="col-md-6 tab-content-text">
-                  <h4>Tab content three</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque cupiditate, accusantium laboriosam aut deleniti excepturi at nesciunt sint dolor earum quae quidem eius nostrum quas sed suscipit eligendi, aperiam cumque. Culpa maxime, cupiditate nemo sint suscipit aperiam.</p>
-
-                </div>
-
-                <div class="col-md-6 tab-content-image">
-                  <img src="assets/images/iMac-pricing.png" alt="Tab Image" class="img-responsive wow fadeInRight" data-wow-duration=".8s">
-                </div>
-              </div><!-- / #tab1 -->
-            </div><!-- / .col-lg-8 -->
-
-          </div><!-- / .row -->
-        </div><!-- / .container-fluid -->
 
 
 
