@@ -40,7 +40,7 @@ def home(request):
         raise Http404("Socials media do not exist")
 
     try:
-        contact_us = ContactUs.objects.all()
+        contact_us = ContactUs.objects.get(language='en')
     except ContactUs.DoesNotExist:
         raise Http404(" performances do not exist")
 
