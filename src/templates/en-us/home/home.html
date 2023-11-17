@@ -445,14 +445,11 @@
 
               <!-- Testimonial 1 -->
                {% for client in clients %}
-              <blockquote>
-                <span class="et-quote t-type"></span>
-                <footer>
-                  <cite>
-                    <a href="{{client.client_website}}"><img src="{% get_media_prefix %}{{client.client_logo}}" alt="{{client.client_name}}"></a>
-                  </cite>
-                </footer>
-              </blockquote>
+               <ul class="t-clients clients-slider">
+                    <li>
+                      <a href="{{client.client_website}}"><img src="{% get_media_prefix %}{{client.client_logo}}" alt="{{client.client_name}}"></a>
+                    </li>
+               </ul>
                {% endfor %}
 
             </div><!-- / .t-wrapper -->
