@@ -24,7 +24,7 @@ def home_manager(request, action):
         tab = request.session.get('tab')
         request.session['tab'] = None
 
-        homes = Home.objects.all()
+        home = Home.objects.all()
         main_content = MainContent.objects.all()
         footers = Footer.objects.all()
         services = Service.objects.all()
@@ -47,7 +47,7 @@ def home_manager(request, action):
         context = {
             'nav_side': nav_side,
             'tab': tab,
-            'homes': homes,
+            'home': home,
             'main_content': main_content,
             'footers': footers,
             'services': services,

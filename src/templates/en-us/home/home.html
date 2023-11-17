@@ -5,12 +5,12 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Matromatic - industrial and semi-industrial machine</title>
+        <title>{{home_page.head_title }}|{{ home_page.head_text }}</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Favicon -->
-        <link rel="shortcut icon" href="{% get_media_prefix %}{{ top_page.logo_head }}">
+        <link rel="shortcut icon" href="{% get_media_prefix %}{{ home_page.logo_head }}">
         <!-- Bootstrap -->
         <link rel="stylesheet" href="{% static 'home/assets/styles/vendor/bootstrap.min.css' %}">
         <!-- Fonts -->
@@ -51,7 +51,7 @@
               <span class="icon-bar"></span>
             </button>
             <!-- Logo -->
-            <a class="navbar-brand" href="index.html"><img src="{% get_media_prefix %}{{ top_page.logo_main}}"  alt="matro - Logo"></a>
+            <a class="navbar-brand" href="index.html"><img src="{% get_media_prefix %}{{ home_page.logo_main}}"  alt="matro - Logo"></a>
 
           </div>
 
@@ -77,15 +77,13 @@
 
             <div id="large-header" class="large-header">
               <canvas id="demo-canvas" class="demo-canvas"></canvas>
-
               <!-- Hero Content -->
               <div class="hero-content-wrapper">
                 <div class="hero-content">
 
-
-                  <h1 class="hero-lead">Matro </h1>
+                  <h1 class="hero-lead">{{home.company_name}} </h1>
                   <br>
-                  <h4 class="h-alt hero-secondary">Most innovative solutions for your industry .</h4>
+                  <h4 class="h-alt hero-secondary">{{ home.company_slogan }}</h4>
                   <a href="#about" class="btn btn-light">Learn More</a>
 
                   <!-- Scroller -->
@@ -114,11 +112,8 @@
               <img src="{% static 'home/assets/images/app-icon.png' %}" alt="matro" class="wow fadeInUp" data-wow-duration=".7s">
 
               <header class="col-md-offset-1 col-md-10 sec-heading-2 sec-heading-top-m ws-s">
-                <h2>Welcome to Matromatic</h2>
-                <span class="subheading">Matromatic is an innovative company specializing in the field of industrial robotics,
-                  encompassing the fields of mechanics, electronics and IT.
-                  <br> Our fundamental mission is to stimulate the development of the industrial sector by offering tailor-made solutions.
-                  Faced with the challenges of unavailability of spare parts and technological dependence, Matromatic stands out for its cutting-edge services.</span>
+                <h2>{{ main_content.about_us_title }}</h2>
+                <span class="subheading">{{ main_content.about_us_description }} </span>
               </header>
 
             </div><!-- / .row -->
@@ -129,7 +124,6 @@
 
 
         <!-- ========== Number Counters - Dark bg ========== -->
-
         <div class="number-counters-dark-bg">
           <div class="container">
             <div id="counters-min" class="row count-wrapper">
@@ -284,25 +278,25 @@
               <!-- Item 1 -->
               <div class="col-sm-6 col-lg-3 circle-item wow zoomIn" data-wow-duration=".6s" data-wow-delay=".3s">
                 <div class="chart" data-percent="75"><span class="circle-icon linea-basic-gear"></span></div>
-                <span class="circle-text">Web Development</span>
+                <span class="circle-text">Design</span>
               </div>
 
               <!-- Item 2 -->
               <div class="col-sm-6 col-lg-3 circle-item wow zoomIn" data-wow-duration=".6s">
                 <div class="chart" data-percent="75"><span class="circle-icon linea-basic-display"></span></div>
-                <span class="circle-text">Web Design</span>
+                <span class="circle-text">Web development</span>
               </div>
 
               <!-- Item 3 -->
               <div class="col-sm-6 col-lg-3 circle-item wow zoomIn" data-wow-duration=".6s">
                 <div class="chart" data-percent="75"><span class="circle-icon linea-basic-photo"></span></div>
-                <span class="circle-text">Photography</span>
+                <span class="circle-text">Renovation of machines</span>
               </div>
 
               <!-- Item 4 -->
               <div class="col-sm-6 col-lg-3 circle-item wow zoomIn" data-wow-duration=".6s" data-wow-delay=".3s">
                 <div class="chart" data-percent="75"><span class="circle-icon linea-basic-star"></span></div>
-                <span class="circle-text">Marketing</span>
+                <span class="circle-text">technical expertise</span>
               </div>
 
             </div><!-- / .row -->
@@ -317,8 +311,8 @@
             <div class="row section">
 
               <header class="sec-heading">
-                <h2>What we do</h2>
-                <span class="subheading">Lorem ipsum dolor sit amet, consectetur</span>
+                <h2>{{main_content.our_service_title}}</h2>
+                <span class="subheading">{{main_content.our_service_description}}</span>
               </header>
                   <!-- Tabs -->
                   <div class="col-lg-4 no-gap">
@@ -414,30 +408,18 @@
             <div class="row section">
 
               <header class="sec-heading ws-s">
-                <h2>Our work process</h2>
-                <span class="subheading">Lorem ipsum dolor sit amet, consectetur</span>
+                <h2>{{main_content.our_process_title}}</h2>
+                <span class="subheading">{{main_content.our_process_description}}</span>
               </header>
 
-              <!-- Step 1 -->
+              {% for process_step  in process_steps %}
+              <!-- our work process steps -->
               <div class="col-lg-4 col-md-6 mb-sm-100 ft-item wow fadeIn" data-wow-duration="1s">
-                <span class="ft-nbr">01</span>
-                <h4>Design</h4>
-                <p>Lariatur, excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est</p>
+                <span class="ft-nbr">{{process_step.process_number}}</span>
+                <h4>{{process_step.process_title}}</h4>
+                <p>{{process_step.process_description}}</p>
               </div>
-
-              <!-- Step 2 -->
-              <div class="col-lg-4 col-md-6 mb-sm-100 ft-item wow fadeIn" data-wow-duration="1s" data-wow-delay=".3s">
-                <span class="ft-nbr">02</span>
-                <h4>Develop</h4>
-                <p>Lariatur, excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est</p>
-              </div>
-
-              <!-- Step 3 -->
-              <div class="col-lg-4 col-md-6 ft-item wow fadeIn" data-wow-duration="1s" data-wow-delay=".6s">
-                <span class="ft-nbr">03</span>
-                <h4>Deploy</h4>
-                <p>Lariatur, excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est</p>
-              </div>
+              {% endfor %}
 
             </div><!-- / .row -->
 
@@ -467,104 +449,35 @@
           <div class="row">
             <ul id="pfolio-filters" class="portfolio-filters">
               <li class="active"><a href="#" data-filter="*">All</a></li>
-              <li><a href="#" data-filter=".webdesing">Webdesign</a></li>
-              <li><a href="#" data-filter=".print">Print</a></li>
-              <li><a href="#" data-filter=".photo">Photography</a></li>
+              <li><a href="#" data-filter=".webdesing">Web Development</a></li>
+              <li><a href="#" data-filter=".print">Design</a></li>
+              <li><a href="#" data-filter=".photo"></a> Renovated Machines</li>
+              <li><a href="#" data-filter=".photo"></a> Realisation</li>
+
             </ul>
           </div>
 
           <div class="row">
             <div id="pfolio">
-
+          {% for project in projects %}
               <!-- Item 1 -->
               <div class="col-md-4 portfolio-item print">
                 <div class="p-wrapper hover-light">
                   <img src="assets/images/project-1.1.jpg" alt="Project Example">
                   <div class="p-hover">
                     <div class="p-content">
-                      <h4>Project Name</h4>
-                      <h6 class="subheading">Sub heading for the project</h6>
+                      <h4>{{project.project_type}}</h4>
+                      <h6 class="subheading">{{project.project_name}}</h6>
                     </div>
                   </div>
-                  <a href="assets/images/project-1.1.jpg" class="open-btn open-gallery"><i class="fa fa-expand"></i></a>
+                  <a href="{% get_media_prefix %}{{project.project_photo }}" class="open-btn open-gallery"><i class="fa fa-expand"></i></a>
                 </div>
               </div><!-- / .portfolio-item -->
-
-              <!-- Item 2 -->
-              <div class="col-md-4 portfolio-item webdesing photo">
-                <div class="p-wrapper hover-light">
-                  <img src="assets/images/project-1.2.jpg" alt="Project Example">
-                  <div class="p-hover">
-                    <div class="p-content">
-                      <h4>Project Name</h4>
-                      <h6 class="subheading">Sub heading for the project</h6>
-                    </div>
-                  </div>
-                  <a href="assets/images/project-1.2.jpg" class="open-btn open-gallery"><i class="fa fa-expand"></i></a>
-                </div>
-              </div><!-- / .portfolio-item -->
-
-              <!-- Item 3 -->
-              <div class="col-md-4 portfolio-item photo print">
-                <div class="p-wrapper hover-light">
-                  <img src="assets/images/project-1.3.jpg" alt="Project Example">
-                  <div class="p-hover">
-                    <div class="p-content">
-                      <h4>Project Name</h4>
-                      <h6 class="subheading">Sub heading for the project</h6>
-                    </div>
-                  </div>
-                  <a href="assets/images/project-1.3.jpg" class="open-btn open-gallery"><i class="fa fa-expand"></i></a>
-                </div>
-              </div><!-- / .portfolio-item -->
-
-              <!-- Item 4 -->
-              <div class="col-md-4 portfolio-item webdesing print">
-                <div class="p-wrapper hover-light">
-                  <img src="assets/images/project-1.7.jpg" alt="Project Example">
-                  <div class="p-hover">
-                    <div class="p-content">
-                      <h4>Project Name</h4>
-                      <h6 class="subheading">Sub heading for the project</h6>
-                    </div>
-                  </div>
-                  <a href="assets/images/project-1.7.jpg" class="open-btn open-gallery"><i class="fa fa-expand"></i></a>
-                </div>
-              </div><!-- / .portfolio-item -->
-
-              <!-- Item 5 -->
-              <div class="col-md-4 portfolio-item webdesing">
-                <div class="p-wrapper hover-light">
-                  <img src="assets/images/project-1.10.jpg" alt="Project Example">
-                  <div class="p-hover">
-                    <div class="p-content">
-                      <h4>Project Name</h4>
-                      <h6 class="subheading">Sub heading for the project</h6>
-                    </div>
-                  </div>
-                  <a href="assets/images/project-1.10.jpg" class="open-btn open-gallery"><i class="fa fa-expand"></i></a>
-                </div>
-              </div><!-- / .portfolio-item -->
-
-              <!-- Item 6 -->
-              <div class="col-md-4 portfolio-item photo print webdesing">
-                <div class="p-wrapper hover-light">
-                  <img src="assets/images/project-1.6.jpg" alt="Project Example">
-                  <div class="p-hover">
-                    <div class="p-content">
-                      <h4>Project Name</h4>
-                      <h6 class="subheading">Sub heading for the project</h6>
-                    </div>
-                  </div>
-                  <a href="assets/images/project-1.6.jpg" class="open-btn open-gallery"><i class="fa fa-expand"></i></a>
-                </div>
-              </div><!-- / .portfolio-item -->
+           {% endfor %}
 
             </div><!-- / #pfolio -->
           </div><!-- / .row -->
         </section><!-- / .portfolio-columns-fw -->
-
-
 
         <!-- ========== CTA - Contact Link ========== -->
 
@@ -639,8 +552,6 @@
           </section><!-- / .container -->
         </div><!-- / .gray-bg -->
 
-
-
         <!-- ========== Clients List - Dark ========== -->
 
         <div class="gray-bg">
@@ -648,19 +559,13 @@
             <div class="row">
               <div class="ws-s"></div>
               <ul class="t-clients clients-slider ws-s">
-                <li><a href="#"><img src="assets/images/brand-1.png" alt="Client"></a></li>
-                <li><a href="#"><img src="assets/images/brand-2.png" alt="Client"></a></li>
-                <li><a href="#"><img src="assets/images/brand-3.png" alt="Client"></a></li>
-                <li><a href="#"><img src="assets/images/brand-4.png" alt="Client"></a></li>
-                <li><a href="#"><img src="assets/images/brand-5.png" alt="Client"></a></li>
-                <li><a href="#"><img src="assets/images/brand-2.png" alt="Client"></a></li>
+                {% for client in clients %}
+                <li><a href="{{client.client_website}}"><img src="{% get_media_prefix %}{{client.client_logo}}" alt="{{client.client_name}}"></a></li>
+                {% endfor %}
               </ul><!-- / .t-clients -->
             </div><!-- / .row -->
           </div><!-- / .container -->
         </div><!-- / .dark-bg -->
-
-
-
 
         <!-- ========== Footer Contact ========== -->
 
@@ -670,34 +575,31 @@
 
               <!-- Map and address -->
               <div class="col-lg-6 no-gap contact-info">
-
                 <!-- Show Info Button -->
-
                 <div id="map-canvas" class="footer-map"></div>
-
                 <address class="contact-info-wrapper">
                   <ul>
                     <!-- Email -->
                     <li class="contact-group">
                       <span class="adr-heading">Email</span>
-                      <span class="adr-info">info@matromatic.com</span>
+                      <span class="adr-info">{{contact_us.email}}</span>
                     </li>
                      <!-- Address -->
                     <li class="contact-group">
                       <span class="adr-heading">Address</span>
-                      <span class="adr-info"> Jolie Vue, 32 Rue Benkahla Mohamed, Bureau N° 47، Kouba, Algiers 16050</span>
+                      <span class="adr-info"> {{contact_us.address}}</span>
                     </li>
                   </ul>
                   <ul>
                     <!-- Phone -->
                     <li class="contact-group">
                       <span class="adr-heading">Phone</span>
-                      <span class="adr-info">+ 213 540 202 621</span>
+                      <span class="adr-info">{{contact_us.phone}}</span>
                     </li>
                     <!-- Mobile -->
                     <li class="contact-group">
                       <span class="adr-heading">Mobile</span>
-                      <span class="adr-info">+ 213 550 40 32 27</span>
+                      <span class="adr-info">{{contact_us.mobile}}</span>
                     </li>
                   </ul>
 
@@ -709,11 +611,11 @@
               <!-- Contact Form -->
               <div class="col-lg-6 no-gap section contact-form">
                 <header class="sec-heading">
-                  <h2>Contact</h2>
-                  <span class="subheading">Lorem ipsum dolor sit amet</span>
+                  <h2>{{main_content.contact_title}}</h2>
+                  <span class="subheading">{{main_content.contact_description}}</span>
                 </header>
 
-                <form action="assets/contact-form/contact-form.php" method="POST" class="form-ajax wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+                <form action="" method="POST" class="form-ajax wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
 
                   <!-- Name -->
                   <div class="form-group">

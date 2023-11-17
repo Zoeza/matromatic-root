@@ -1,7 +1,6 @@
 from django.http import Http404
 from django.shortcuts import render
-from .models import TopPage, Content, Service, OurProcess, Partner, SocialMedia, \
-    Footer, Client, Project, Performance
+from manager.models import Home, MainContent, ContactUs, Service, OurProcess, SocialMedia, Client, Project
 
 
 def home(request):
@@ -11,34 +10,19 @@ def home(request):
     url = direction + "/home/home.html"
 
     try:
-        top_page = TopPage.objects.get(language='en')
-    except TopPage.DoesNotExist:
-        raise Http404("Top page does not exist")
+        home_page = Home.objects.get(language='en')
+    except Home.DoesNotExist:
+        raise Http404("Home does not exist")
 
     try:
-        content = Content.objects.get(language='en')
-    except Content.DoesNotExist:
+        main_content = MainContent.objects.get(language='en')
+    except MainContent.DoesNotExist:
         raise Http404("Content does not exist")
 
     try:
-        footer = Footer.objects.get(language='en')
-    except Footer.DoesNotExist:
-        raise Http404("Footer informations do not exist")
-
-    try:
-        services = Service.objects.all()
-    except Service.DoesNotExist:
-        raise Http404("Services informations do not exist")
-
-    try:
-        processes = OurProcess.objects.all()
+        process_steps = OurProcess.objects.all()
     except OurProcess.DoesNotExist:
         raise Http404("Process informations do not exist")
-
-    try:
-        partners = Partner.objects.all()
-    except Partner.DoesNotExist:
-        raise Http404("Partners informations do not exist")
 
     try:
         clients = Client.objects.all()
@@ -56,24 +40,22 @@ def home(request):
         raise Http404("Socials media do not exist")
 
     try:
-        performances = Performance.objects.all()
-    except Performance.DoesNotExist:
+        contact_us = ContactUs.objects.all()
+    except ContactUs.DoesNotExist:
         raise Http404(" performances do not exist")
 
     context = {
-        'top_page': top_page,
-        'content': content,
-        'footer': footer,
+        'home_page': home_page,
+        'main_content': main_content,
+     
         'services': services,
-        'processes': processes,
+        'process_steps': process_steps,
         'partners': partners,
         'clients': clients,
         'projects': projects,
         'socials_media': socials_media,
-        'performances': performances,
+        'contact_us': contact_us,
 
     }
 
     return render(request, url, context)
-
-

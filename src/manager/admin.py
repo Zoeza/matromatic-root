@@ -4,6 +4,7 @@ from .models import Home, MainContent, Footer, ContactUs, Service, OurProcess, S
 # Register your models here.
 admin.site.register(Home)
 admin.site.register(MainContent)
+admin.site.register(Footer)
 admin.site.register(Service)
 admin.site.register(OurProcess)
 admin.site.register(Project)
