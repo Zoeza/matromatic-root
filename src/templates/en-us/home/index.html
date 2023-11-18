@@ -375,32 +375,18 @@
             <div class="row section">
 
               <header class="sec-heading ws-s">
-                <h2>Our work process</h2>
-                <span class="subheading">Lorem ipsum dolor sit amet, consectetur</span>
+                <h2>{{main_content.our_process_title}}</h2>
+                <span class="subheading">{{main_content.our_process_description}}</span>
               </header>
+                {% for process_step  in process_steps %}
 
-              <!-- Step 1 -->
-              <div class="col-lg-4 col-md-6 mb-sm-100 ft-item wow fadeIn" data-wow-duration="1s">
-                <span class="ft-nbr">01</span>
-                <h4>Design</h4>
-                <p>Lariatur, excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est</p>
-              </div>
+                  <div class="col-lg-4 col-md-6 mb-sm-100 ft-item wow fadeIn" data-wow-duration="{{process_step.process_number}}s">
+                    <span class="ft-nbr">0{{process_step.process_number}}</span>
+                    <h4>{{process_step.process_title}}</h4>
+                    <p>{{process_step.process_description}}</p>
 
-              <!-- Step 2 -->
-              <div class="col-lg-4 col-md-6 mb-sm-100 ft-item wow fadeIn" data-wow-duration="1s" data-wow-delay=".3s">
-                <span class="ft-nbr">02</span>
-                <h4>Develop</h4>
-                <p>Lariatur, excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est</p>
-              </div>
-
-              <!-- Step 3 -->
-              <div class="col-lg-4 col-md-6 ft-item wow fadeIn" data-wow-duration="1s" data-wow-delay=".6s">
-                <span class="ft-nbr">03</span>
-                <h4>Deploy</h4>
-                <p>Lariatur, excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est</p>
-              </div>
-
-            </div><!-- / .row -->
+                  </div><!-- / .row -->
+                {% endfor %}
 
             <!-- CTA Button -->
             <div class="row ws-m">
@@ -408,9 +394,10 @@
                 <a href="#contact" class="btn">Get a free quote</a>
               </div>
             </div><!-- / .row -->
+         </div>
 
         </section><!-- / .container -->
-          
+
         <!-- ========== Featured Projects ========== -->
 
 
@@ -427,31 +414,24 @@
           </div><!-- / .row -->
 
           <!-- Filters -->
-          <div class="row">
-            <ul id="pfolio-filters" class="portfolio-filters">
-              <li class="active"><a href="#" data-filter="*">All</a></li>
-              <li><a href="#" data-filter=".webdesing">Webdesign</a></li>
-              <li><a href="#" data-filter=".print">Print</a></li>
-              <li><a href="#" data-filter=".photo">Photography</a></li>
-            </ul>
-          </div>
 
           <div class="row">
             <div id="pfolio">
-
               <!-- Item 1 -->
-              <div class="col-md-4 portfolio-item print">
-                <div class="p-wrapper hover-light">
-                  <img src="assets/images/project-1.1.jpg" alt="Project Example">
-                  <div class="p-hover">
-                    <div class="p-content">
-                      <h4>Project Name</h4>
-                      <h6 class="subheading">Sub heading for the project</h6>
+                 {% for project in projects %}
+                  <div class="col-md-4 portfolio-item print">
+                    <div class="p-wrapper hover-light">
+                      <img src="assets/images/project-1.1.jpg" alt="Project Example">
+                      <div class="p-hover">
+                        <div class="p-content">
+                          <h4>{{project.project_name}}</h4>
+                          <h6 class="subheading">{{project.project_type}}</h6>
+                        </div>
+                      </div>
+                        <a href="{% get_media_prefix %}{{project.project_photo }}" class="open-btn open-gallery"><i class="fa fa-expand"></i></a>
                     </div>
-                  </div>
-                  <a href="assets/images/project-1.1.jpg" class="open-btn open-gallery"><i class="fa fa-expand"></i></a>
-                </div>
-              </div><!-- / .portfolio-item -->
+                  </div><!-- / .portfolio-item -->
+                {% endfor %}
 
               <!-- Item 2 -->
               <div class="col-md-4 portfolio-item webdesing photo">
@@ -467,61 +447,6 @@
                 </div>
               </div><!-- / .portfolio-item -->
 
-              <!-- Item 3 -->
-              <div class="col-md-4 portfolio-item photo print">
-                <div class="p-wrapper hover-light">
-                  <img src="assets/images/project-1.3.jpg" alt="Project Example">
-                  <div class="p-hover">
-                    <div class="p-content">
-                      <h4>Project Name</h4>
-                      <h6 class="subheading">Sub heading for the project</h6>
-                    </div>
-                  </div>
-                  <a href="assets/images/project-1.3.jpg" class="open-btn open-gallery"><i class="fa fa-expand"></i></a>
-                </div>
-              </div><!-- / .portfolio-item -->
-
-              <!-- Item 4 -->
-              <div class="col-md-4 portfolio-item webdesing print">
-                <div class="p-wrapper hover-light">
-                  <img src="assets/images/project-1.7.jpg" alt="Project Example">
-                  <div class="p-hover">
-                    <div class="p-content">
-                      <h4>Project Name</h4>
-                      <h6 class="subheading">Sub heading for the project</h6>
-                    </div>
-                  </div>
-                  <a href="assets/images/project-1.7.jpg" class="open-btn open-gallery"><i class="fa fa-expand"></i></a>
-                </div>
-              </div><!-- / .portfolio-item -->
-
-              <!-- Item 5 -->
-              <div class="col-md-4 portfolio-item webdesing">
-                <div class="p-wrapper hover-light">
-                  <img src="assets/images/project-1.10.jpg" alt="Project Example">
-                  <div class="p-hover">
-                    <div class="p-content">
-                      <h4>Project Name</h4>
-                      <h6 class="subheading">Sub heading for the project</h6>
-                    </div>
-                  </div>
-                  <a href="assets/images/project-1.10.jpg" class="open-btn open-gallery"><i class="fa fa-expand"></i></a>
-                </div>
-              </div><!-- / .portfolio-item -->
-
-              <!-- Item 6 -->
-              <div class="col-md-4 portfolio-item photo print webdesing">
-                <div class="p-wrapper hover-light">
-                  <img src="assets/images/project-1.6.jpg" alt="Project Example">
-                  <div class="p-hover">
-                    <div class="p-content">
-                      <h4>Project Name</h4>
-                      <h6 class="subheading">Sub heading for the project</h6>
-                    </div>
-                  </div>
-                  <a href="assets/images/project-1.6.jpg" class="open-btn open-gallery"><i class="fa fa-expand"></i></a>
-                </div>
-              </div><!-- / .portfolio-item -->
 
             </div><!-- / #pfolio -->
           </div><!-- / .row -->
