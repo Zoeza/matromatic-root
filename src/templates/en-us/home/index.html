@@ -385,13 +385,14 @@
 
                   </div><!-- / .row -->
                 {% endfor %}
+            </div>
             <!-- CTA Button -->
             <div class="row ws-m">
               <div class="text-center">
                 <a href="#contact" class="btn">Get a free quote</a>
               </div>
             </div><!-- / .row -->
-         </div>
+
         </section><!-- / .container -->
 
         <!-- ========== Featured Projects ========== -->
@@ -417,7 +418,7 @@
                  {% for project in projects %}
                   <div class="col-md-4 portfolio-item print">
                     <div class="p-wrapper hover-light">
-                      <img src="{% get_media_prefix %}{{project.project_photo }}"alt="{{project.project_name}}">
+                      <img src="{% get_media_prefix %}{{project.project_photo }}" alt="{{project.project_name}}">
                       <div class="p-hover">
                         <div class="p-content">
                           <h4>{{project.project_name}}</h4>
@@ -432,22 +433,6 @@
             </div><!-- / #pfolio -->
           </div><!-- / .row -->
         </section><!-- / .portfolio-columns-fw -->
-
-
-
-        <!-- ========== CTA - Contact Link ========== -->
-
-        <div class="cta-link cta-dark">
-          <div class="bg-overlay">
-
-            <div class="cta-wrapper">
-              <h3 class="h-alt wow fadeIn" data-wow-delay=".1s" data-wow-duration="1s">See what we can do for you</h3>
-              <a href="#contact" class="btn btn-light btn-large wow fadeIn" data-wow-delay=".3s" data-wow-duration="1s">Get in touch</a>
-            </div>
-
-          </div>
-        </div><!-- / .dark-bg .cta-link -->
-
 
 
         <!-- ========== Testimonials ========== -->
