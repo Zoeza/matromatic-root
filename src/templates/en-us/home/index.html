@@ -446,17 +446,27 @@
 
 
         <!-- ========== Testimonials ========== -->
+        <section id="testimonials" class="container-fluid portfolio-layout portfolio-columns-fw">
+          <div class="row">
+            <header class="sec-heading">
+              <h2>Our clients</h2>
+              <span class="subheading">Lorem ipsum dolor sit amet consectetur adipisicing</span>
+            </header>
+          </div><!-- / .row -->
 
-        <div id="testimonials" class="testimonials-parallax">
-          <div class="bg-overlay">
-              <!-- Testimonial 1 -->
-               <ul class="t-clients clients-slider">
-                 {% for client in clients %}
+        <div  class="gray-bg">
+          <div class="container">
+            <div class="row">
+              <div class="ws-s"></div>
+              <ul class="t-clients clients-slider ws-s">
+                  {% for client in clients %}
                     <li><a href="{{client.client_website}}"><img src="{% get_media_prefix %}{{client.client_logo}}" alt="{{client.client_name}}"></a></li>
-                 {% endfor %}
-               </ul>
-          </div><!-- / .bg-overlay -->
-        </div><!-- / .testimonials-parallax -->
+                 {% endfor %}              </ul><!-- / .t-clients -->
+            </div><!-- / .row -->
+          </div><!-- / .container -->
+        </div><!-- / .dark-bg -->
+        </section>
+
 
 
 
@@ -483,24 +493,28 @@
                     <!-- Email -->
                     <li class="contact-group">
                       <span class="adr-heading">Email</span>
-                      <span class="adr-info">info@matromatic.com</span>
+                      <span class="adr-info">{{contact_us.email}}</span>
+
                     </li>
                      <!-- Address -->
                     <li class="contact-group">
                       <span class="adr-heading">Address</span>
-                      <span class="adr-info"> Jolie Vue, 32 Rue Benkahla Mohamed, Bureau N° 47، Kouba, Algiers 16050</span>
+                      <span class="adr-info"> {{contact_us.address}}</span>
+
                     </li>
                   </ul>
                   <ul>
                     <!-- Phone -->
                     <li class="contact-group">
                       <span class="adr-heading">Phone</span>
-                      <span class="adr-info">+ 213 540 202 621</span>
+                      <span class="adr-info">{{contact_us.phone}}</span>
+
                     </li>
                     <!-- Mobile -->
                     <li class="contact-group">
                       <span class="adr-heading">Mobile</span>
-                      <span class="adr-info">+ 213 550 40 32 27</span>
+                      <span class="adr-info">{{contact_us.mobile}}</span>
+
                     </li>
                   </ul>
 
@@ -516,7 +530,7 @@
                   <span class="subheading">Lorem ipsum dolor sit amet</span>
                 </header>
 
-                <form action="assets/contact-form/contact-form.php" method="POST" class="form-ajax wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+                <form action="" method="POST" class="form-ajax wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
 
                   <!-- Name -->
                   <div class="form-group">
@@ -555,9 +569,10 @@
               <div class="row">
 
                 <ul>
-                  <li><a href="#">facebook</a></li>
-                  <li><a href="#">Instagram</a></li>
-                  <li><a href="#">Linkedin</a></li>
+                    {% for social_media in socials_media %}
+                        <li><a href="{{social_media.link}}}">{{social_media.name}}</a></li>
+                    {% endfor %}
+                  
                 </ul>
 
               </div>
