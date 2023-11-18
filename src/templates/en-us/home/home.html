@@ -381,10 +381,12 @@
                 <h2>{{main_content.our_process_title}}</h2>
                 <span class="subheading">{{main_content.our_process_description}}</span>
               </header>
+              int i = 0;
 
               {% for process_step  in process_steps %}
+                  i= i++;
               <!-- our work process steps -->
-              <div class="col-lg-4 col-md-6 mb-sm-70 ft-item wow fadeIn" data-wow-duration="1s">
+              <div class="col-lg-4 col-md-6 mb-sm-70 ft-item wow fadeIn" data-wow-duration="1s + i">
                 <span class="ft-nbr">0{{process_step.process_number}}</span>
                 <h4>{{process_step.process_title}}</h4>
                 <p>{{process_step.process_description}}</p>
