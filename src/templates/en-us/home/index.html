@@ -61,7 +61,7 @@
               <li><a href="#home">Home<span class="sr-only"></span></a></li>
               <li><a href="#about">About<span class="sr-only"></span></a></li>
               <li><a href="#services">Services<span class="sr-only"></span></a></li>
-              <li><a href="#projects">Projetcs <span class="sr-only"></span></a></li>
+              <li><a href="#portfolio">Projetcs <span class="sr-only"></span></a></li>
               <li><a href="#testimonials">Testimonials<span class="sr-only"></span></a></li>
               <li><a href="#contact">Contact<span class="sr-only"></span></a></li>
             </ul><!-- / .nav .navbar-nav -->
@@ -77,9 +77,11 @@
 
             <div id="large-header" class="large-header">
               <canvas id="demo-canvas" class="demo-canvas"></canvas>
+
               <!-- Hero Content -->
               <div class="hero-content-wrapper">
                 <div class="hero-content">
+
 
                   <h1 class="hero-lead">{{home_page.company_name}} </h1>
                   <br>
@@ -101,6 +103,7 @@
         </div><!-- / #home -->
 
 
+
         <!-- ========== About - Section ========== -->
         <div id="about" class="gray-bg">
           <section class="container app-welcome">
@@ -108,13 +111,12 @@
 
               <!-- App Icon -->
               <div class="ws-l"></div>
-              <img src="{% get_media_prefix %}{{ main_content.about_us_photo}}" alt="matro" class="wow fadeInUp" data-wow-duration=".7s">
+              <img src="{% get_media_prefix %}{{ home_page.logo_main}}" alt="matro" class="wow fadeInUp" data-wow-duration=".7s">
 
               <header class="col-md-offset-1 col-md-10 sec-heading-2 sec-heading-top-m ws-s">
                 <h2>{{ main_content.about_us_title }}</h2>
                 <span class="subheading">{{ main_content.about_us_description }} </span>
               </header>
-
             </div><!-- / .row -->
 
           </section><!-- / .container -->
@@ -123,6 +125,7 @@
 
 
         <!-- ========== Number Counters - Dark bg ========== -->
+
         <div class="number-counters-dark-bg">
           <div class="container">
             <div id="counters-min" class="row count-wrapper">
@@ -268,11 +271,10 @@
 
 
 
-
-        <!-- ========== CTA - Contact Link ========== -->
+        <!-- ========== Circle Counters Minimal ========== -->
 
         <div class="cta-link cta-dark">
-          <div class="bg-overlay">
+          <div class="container">
 
             <div class="cta-wrapper">
               <h3 class="h-alt wow fadeIn" data-wow-delay=".1s" data-wow-duration="1s">See what we can do for you</h3>
@@ -282,10 +284,7 @@
           </div>
         </div><!-- / .dark-bg .cta-link -->
 
-
-
         <!-- ========== Services ========== -->
-
           <div  id="services"  class="gray-bg">
           <section class="container section ft-boxed-hover">
             <div class="row">
@@ -368,25 +367,38 @@
           </section><!-- / .cotnainer -->
         </div><!-- / .gray-bg -->
 
+
+
         <!-- ========== Feature - Steps Numbers ========== -->
 
         <section class="container ft-steps-numbers">
             <div class="row section">
+
               <header class="sec-heading ws-s">
-                <h2>{{main_content.our_process_title}}</h2>
-                <span class="subheading">{{main_content.our_process_description}}</span>
+                <h2>Our work process</h2>
+                <span class="subheading">Lorem ipsum dolor sit amet, consectetur</span>
               </header>
 
-
-              {% for process_step  in process_steps %}
-              <!-- our work process steps -->
-              <div class="col-lg-4 col-md-6 mb-sm-100 ft-item wow fadeIn" data-wow-duration="{{process_step.process_number}}s ">
-                <span class="ft-nbr">0{{process_step.process_number}}</span>
-                <h4>{{process_step.process_title}}</h4>
-                <p>{{process_step.process_description}}</p>
-
+              <!-- Step 1 -->
+              <div class="col-lg-4 col-md-6 mb-sm-100 ft-item wow fadeIn" data-wow-duration="1s">
+                <span class="ft-nbr">01</span>
+                <h4>Design</h4>
+                <p>Lariatur, excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est</p>
               </div>
-              {% endfor %}
+
+              <!-- Step 2 -->
+              <div class="col-lg-4 col-md-6 mb-sm-100 ft-item wow fadeIn" data-wow-duration="1s" data-wow-delay=".3s">
+                <span class="ft-nbr">02</span>
+                <h4>Develop</h4>
+                <p>Lariatur, excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est</p>
+              </div>
+
+              <!-- Step 3 -->
+              <div class="col-lg-4 col-md-6 ft-item wow fadeIn" data-wow-duration="1s" data-wow-delay=".6s">
+                <span class="ft-nbr">03</span>
+                <h4>Deploy</h4>
+                <p>Lariatur, excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est</p>
+              </div>
 
             </div><!-- / .row -->
 
@@ -399,51 +411,310 @@
 
         </section><!-- / .container -->
 
+           <div class="container-fluid ft-tabs">
+          <div class="row">
+
+            <!-- Tabs -->
+            <div class="col-lg-4 no-gap">
+              <ul class="tabs-list" role="tablist">
+
+                <!-- Tab 1 -->
+                <li role="presentation" class="active">
+                  <a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">
+                    <span class="linea-basic-bolt tab-icon"></span>
+                    <div class="tab-group">
+                      <span class="tab-heading">Lightning Fast</span>
+                      <span class="tab-info">Lorem ipsum dolor sit amet</span>
+                    </div>
+                  </a>
+                </li>
+
+                <!-- Tab 2 -->
+                <li role="presentation">
+                  <a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">
+                    <span class="linea-basic-server2 tab-icon"></span>
+                    <div class="tab-group">
+                      <span class="tab-heading">Dedicated Server</span>
+                      <span class="tab-info">Lorem ipsum dolor sit amet</span>
+                    </div>
+                  </a>
+                </li>
+
+                <!-- Tab 3 -->
+                <li role="presentation">
+                  <a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab">
+                    <span class="linea-basic-share tab-icon"></span>
+                    <div class="tab-group">
+                      <span class="tab-heading">Connected 24/7</span>
+                      <span class="tab-info">Lorem ipsum dolor sit amet</span>
+                    </div>
+                  </a>
+                </li>
+
+              </ul>
+            </div><!-- / .col-lg-4 -->
+
+
+            <!-- Tabs Content -->
+            <div class="col-lg-8 no-gap tab-content">
+
+              <!-- Tab Content 1 -->
+              <div id="tab1" role="tabpanel" class="tab-pane fade in active">
+                <div class="col-md-6 tab-content-text">
+                  <h4>Tab content one</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque cupiditate, accusantium laboriosam aut deleniti excepturi at nesciunt sint dolor earum quae quidem eius nostrum quas sed suscipit eligendi, aperiam cumque. Culpa maxime, cupiditate nemo sint suscipit aperiam.</p>
+
+                </div>
+
+                <div class="col-md-6 tab-content-image">
+                  <img src="assets/images/iMac-pricing.png" alt="Tab Image" class="img-responsive wow fadeInRight" data-wow-duration=".8s">
+                </div>
+              </div><!-- / #tab1 -->
+
+              <!-- Tab Content 2 -->
+              <div id="tab2" role="tabpanel" class="tab-pane fade">
+                <div class="col-md-6 tab-content-text">
+                  <h4>Tab content two</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque cupiditate, accusantium laboriosam aut deleniti excepturi at nesciunt sint dolor earum quae quidem eius nostrum quas sed suscipit eligendi, aperiam cumque. Culpa maxime, cupiditate nemo sint suscipit aperiam.</p>
+
+                </div>
+
+                <div class="col-md-6 tab-content-image">
+                  <img src="assets/images/mac-gold.png" alt="Tab Image" class="img-responsive wow fadeInRight" data-wow-duration=".8s">
+                </div>
+              </div><!-- / #tab1 -->
+
+              <!-- Tab Content 3 -->
+              <div id="tab3" role="tabpanel" class="tab-pane fade">
+                <div class="col-md-6 tab-content-text">
+                  <h4>Tab content three</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque cupiditate, accusantium laboriosam aut deleniti excepturi at nesciunt sint dolor earum quae quidem eius nostrum quas sed suscipit eligendi, aperiam cumque. Culpa maxime, cupiditate nemo sint suscipit aperiam.</p>
+
+                </div>
+
+                <div class="col-md-6 tab-content-image">
+                  <img src="assets/images/iMac-pricing.png" alt="Tab Image" class="img-responsive wow fadeInRight" data-wow-duration=".8s">
+                </div>
+              </div><!-- / #tab1 -->
+            </div><!-- / .col-lg-8 -->
+
+          </div><!-- / .row -->
+        </div><!-- / .container-fluid -->
+
+
+
 
         <!-- ========== Featured Projects ========== -->
 
-        <!-- ========== Portfolio Full Width - 4 Columns ========== -->
-          <div id="projects" class="gray-bg p-s-portfolio">
-              <section class="container portfolio-layout portfolio-columns-boxed">
-                  <div class="row">
-                    <header class="sec-heading">
-                      <h2>Some of our project</h2>
-                      <span class="subheading">Screenshots of the work that was done</span>
-                    </header>
-                  </div><!-- / .row -->
 
-                  <div class="row ws-m wow fadeIn" data-wow-duration="1s">
-                      <!-- Item 1 -->
-                    {% for project in projects %}
-                      <div class="col-md-4 portfolio-item print">
-                        <div class="p-wrapper hover-default">
-                          <img src="{% get_media_prefix %}{{project.project_photo }}" alt="{{project.project_type}}">
-                          <div class="p-hover">
-                            <div class="p-content">
-                              <h4>{{project.project_name}}</h4>
-                              <h6 class="subheading">{{project.project_type}}</h6>
-                            </div>
-                          </div>
-                          <a href="{% get_media_prefix %}{{project.project_photo }}" class="open-btn open-gallery"><i class="fa fa-expand"></i></a>
-                        </div>
-                      </div><!-- / .portfolio-item -->
-                    {% endfor%}
-                  </div>
-              </section>
+
+
+        <!-- ========== Portfolio Full Width - 4 Columns ========== -->
+
+        <section id="portfolio" class="container-fluid portfolio-layout portfolio-columns-fw">
+          <div class="row">
+            <header class="sec-heading">
+              <h2>Some of our project</h2>
+              <span class="subheading">Lorem ipsum dolor sit amet consectetur adipisicing</span>
+            </header>
+          </div><!-- / .row -->
+
+          <!-- Filters -->
+          <div class="row">
+            <ul id="pfolio-filters" class="portfolio-filters">
+              <li class="active"><a href="#" data-filter="*">All</a></li>
+              <li><a href="#" data-filter=".webdesing">Webdesign</a></li>
+              <li><a href="#" data-filter=".print">Print</a></li>
+              <li><a href="#" data-filter=".photo">Photography</a></li>
+            </ul>
           </div>
+
+          <div class="row">
+            <div id="pfolio">
+
+              <!-- Item 1 -->
+              <div class="col-md-4 portfolio-item print">
+                <div class="p-wrapper hover-light">
+                  <img src="assets/images/project-1.1.jpg" alt="Project Example">
+                  <div class="p-hover">
+                    <div class="p-content">
+                      <h4>Project Name</h4>
+                      <h6 class="subheading">Sub heading for the project</h6>
+                    </div>
+                  </div>
+                  <a href="assets/images/project-1.1.jpg" class="open-btn open-gallery"><i class="fa fa-expand"></i></a>
+                </div>
+              </div><!-- / .portfolio-item -->
+
+              <!-- Item 2 -->
+              <div class="col-md-4 portfolio-item webdesing photo">
+                <div class="p-wrapper hover-light">
+                  <img src="assets/images/project-1.2.jpg" alt="Project Example">
+                  <div class="p-hover">
+                    <div class="p-content">
+                      <h4>Project Name</h4>
+                      <h6 class="subheading">Sub heading for the project</h6>
+                    </div>
+                  </div>
+                  <a href="assets/images/project-1.2.jpg" class="open-btn open-gallery"><i class="fa fa-expand"></i></a>
+                </div>
+              </div><!-- / .portfolio-item -->
+
+              <!-- Item 3 -->
+              <div class="col-md-4 portfolio-item photo print">
+                <div class="p-wrapper hover-light">
+                  <img src="assets/images/project-1.3.jpg" alt="Project Example">
+                  <div class="p-hover">
+                    <div class="p-content">
+                      <h4>Project Name</h4>
+                      <h6 class="subheading">Sub heading for the project</h6>
+                    </div>
+                  </div>
+                  <a href="assets/images/project-1.3.jpg" class="open-btn open-gallery"><i class="fa fa-expand"></i></a>
+                </div>
+              </div><!-- / .portfolio-item -->
+
+              <!-- Item 4 -->
+              <div class="col-md-4 portfolio-item webdesing print">
+                <div class="p-wrapper hover-light">
+                  <img src="assets/images/project-1.7.jpg" alt="Project Example">
+                  <div class="p-hover">
+                    <div class="p-content">
+                      <h4>Project Name</h4>
+                      <h6 class="subheading">Sub heading for the project</h6>
+                    </div>
+                  </div>
+                  <a href="assets/images/project-1.7.jpg" class="open-btn open-gallery"><i class="fa fa-expand"></i></a>
+                </div>
+              </div><!-- / .portfolio-item -->
+
+              <!-- Item 5 -->
+              <div class="col-md-4 portfolio-item webdesing">
+                <div class="p-wrapper hover-light">
+                  <img src="assets/images/project-1.10.jpg" alt="Project Example">
+                  <div class="p-hover">
+                    <div class="p-content">
+                      <h4>Project Name</h4>
+                      <h6 class="subheading">Sub heading for the project</h6>
+                    </div>
+                  </div>
+                  <a href="assets/images/project-1.10.jpg" class="open-btn open-gallery"><i class="fa fa-expand"></i></a>
+                </div>
+              </div><!-- / .portfolio-item -->
+
+              <!-- Item 6 -->
+              <div class="col-md-4 portfolio-item photo print webdesing">
+                <div class="p-wrapper hover-light">
+                  <img src="assets/images/project-1.6.jpg" alt="Project Example">
+                  <div class="p-hover">
+                    <div class="p-content">
+                      <h4>Project Name</h4>
+                      <h6 class="subheading">Sub heading for the project</h6>
+                    </div>
+                  </div>
+                  <a href="assets/images/project-1.6.jpg" class="open-btn open-gallery"><i class="fa fa-expand"></i></a>
+                </div>
+              </div><!-- / .portfolio-item -->
+
+            </div><!-- / #pfolio -->
+          </div><!-- / .row -->
+        </section><!-- / .portfolio-columns-fw -->
+
+
+
+        <!-- ========== CTA - Contact Link ========== -->
+
+        <div class="cta-link cta-dark">
+          <div class="bg-overlay">
+
+            <div class="cta-wrapper">
+              <h3 class="h-alt wow fadeIn" data-wow-delay=".1s" data-wow-duration="1s">See what we can do for you</h3>
+              <a href="#contact" class="btn btn-light btn-large wow fadeIn" data-wow-delay=".3s" data-wow-duration="1s">Get in touch</a>
+            </div>
+
+          </div>
+        </div><!-- / .dark-bg .cta-link -->
+
+
 
         <!-- ========== Testimonials ========== -->
 
-        <div id="testimonials" class="testimonials-parallax">
-          <div class="bg-overlay">
-              <!-- Testimonial 1 -->
-               <ul class="t-clients clients-slider">
-                 {% for client in clients %}
-                    <li><a href="{{client.client_website}}"><img src="{% get_media_prefix %}{{client.client_logo}}" alt="{{client.client_name}}"></a></li>
-                 {% endfor %}
-               </ul>
-          </div><!-- / .bg-overlay -->
-        </div><!-- / .testimonials-parallax -->
+        <div id="testimonials" class="gray-bg">
+          <section class="container testimonials-3col">
+
+            <div class="row section">
+
+              <header class="sec-heading">
+                <h2>What people say about us</h2>
+                <span class="subheading">Read some of the testimonials from our amazing clients</span>
+              </header>
+
+              <!-- Item 1 -->
+              <div class="col-md-4 mb-sm-50">
+                <div class="t-item wow fadeIn" data-wow-duration="1s">
+                  <img src="assets/images/avatar-1.png" alt="Testimonial">
+                  <blockquote>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae</p>
+                    <footer>
+                      <cite>by Julian Schmitz<span>Google</span></cite>
+                    </footer>
+                  </blockquote>
+                  <span class="et-quote t-icon"></span>
+                </div><!-- / .t-item -->
+              </div><!-- / .col-md-4 -->
+
+              <!-- Item 2 -->
+              <div class="col-md-4 mb-sm-50">
+                <div class="t-item wow fadeIn"  data-wow-duration="1s" data-wow-delay=".3s">
+                  <img src="assets/images/avatar-2.png" alt="Testimonial">
+                  <blockquote>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae</p>
+                    <footer>
+                      <cite>by Cecilia Acosta<span>Apple</span></cite>
+                    </footer>
+                  </blockquote>
+                  <span class="et-quote t-icon"></span>
+                </div><!-- / .t-item -->
+              </div><!-- / .col-md-4 -->
+
+              <!-- Item 3 -->
+              <div class="col-md-4">
+                <div class="t-item wow fadeIn" data-wow-duration="1s" data-wow-delay=".6s">
+                  <img src="assets/images/avatar-3.png" alt="Testimonial">
+                  <blockquote>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae</p>
+                    <footer>
+                      <cite>by Gerald Pena<span>Facebook</span></cite>
+                    </footer>
+                  </blockquote>
+                  <span class="et-quote t-icon"></span>
+                </div><!-- / .t-item -->
+              </div><!-- / .col-md-4 -->
+
+            </div><!-- / .row -->
+          </section><!-- / .container -->
+        </div><!-- / .gray-bg -->
+
+
+
+        <!-- ========== Clients List - Dark ========== -->
+
+        <div class="gray-bg">
+          <div class="container">
+            <div class="row">
+              <div class="ws-s"></div>
+              <ul class="t-clients clients-slider ws-s">
+                <li><a href="#"><img src="assets/images/brand-1.png" alt="Client"></a></li>
+                <li><a href="#"><img src="assets/images/brand-2.png" alt="Client"></a></li>
+                <li><a href="#"><img src="assets/images/brand-3.png" alt="Client"></a></li>
+                <li><a href="#"><img src="assets/images/brand-4.png" alt="Client"></a></li>
+                <li><a href="#"><img src="assets/images/brand-5.png" alt="Client"></a></li>
+                <li><a href="#"><img src="assets/images/brand-2.png" alt="Client"></a></li>
+              </ul><!-- / .t-clients -->
+            </div><!-- / .row -->
+          </div><!-- / .container -->
+        </div><!-- / .dark-bg -->
+
 
 
 
@@ -455,31 +726,34 @@
 
               <!-- Map and address -->
               <div class="col-lg-6 no-gap contact-info">
+
                 <!-- Show Info Button -->
+
                 <div id="map-canvas" class="footer-map"></div>
+
                 <address class="contact-info-wrapper">
                   <ul>
                     <!-- Email -->
                     <li class="contact-group">
                       <span class="adr-heading">Email</span>
-                      <span class="adr-info">{{contact_us.email}}</span>
+                      <span class="adr-info">info@matromatic.com</span>
                     </li>
                      <!-- Address -->
                     <li class="contact-group">
                       <span class="adr-heading">Address</span>
-                      <span class="adr-info"> {{contact_us.address}}</span>
+                      <span class="adr-info"> Jolie Vue, 32 Rue Benkahla Mohamed, Bureau N° 47، Kouba, Algiers 16050</span>
                     </li>
                   </ul>
                   <ul>
                     <!-- Phone -->
                     <li class="contact-group">
                       <span class="adr-heading">Phone</span>
-                      <span class="adr-info">{{contact_us.phone}}</span>
+                      <span class="adr-info">+ 213 540 202 621</span>
                     </li>
                     <!-- Mobile -->
                     <li class="contact-group">
                       <span class="adr-heading">Mobile</span>
-                      <span class="adr-info">{{contact_us.mobile}}</span>
+                      <span class="adr-info">+ 213 550 40 32 27</span>
                     </li>
                   </ul>
 
@@ -491,11 +765,11 @@
               <!-- Contact Form -->
               <div class="col-lg-6 no-gap section contact-form">
                 <header class="sec-heading">
-                  <h2>{{main_content.contact_title}}</h2>
-                  <span class="subheading">{{main_content.contact_description}}</span>
+                  <h2>Contact</h2>
+                  <span class="subheading">Lorem ipsum dolor sit amet</span>
                 </header>
 
-                <form action="" method="POST" class="form-ajax wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+                <form action="assets/contact-form/contact-form.php" method="POST" class="form-ajax wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
 
                   <!-- Name -->
                   <div class="form-group">

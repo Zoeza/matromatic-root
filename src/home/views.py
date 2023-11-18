@@ -7,7 +7,7 @@ def home(request):
     if not request.session.get('language', None):
         request.session['language'] = 'en-us'
     direction = request.session.get('language')
-    url = direction + "/home/home.html"
+    url = direction + "/home/index.html"
 
     try:
         home_page = Home.objects.get(language='en')
