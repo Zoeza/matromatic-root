@@ -1,6 +1,6 @@
 from django.http import Http404
 from django.shortcuts import render
-from manager.models import Home, MainContent, ContactUs, Service, OurProcess, SocialMedia, Client, Project
+from manager.models import Home, MainContent, ContactUs, Service, OurProcess, SocialMedia, Client, Projectz, TeamMember
 
 
 def home(request):
@@ -18,6 +18,12 @@ def home(request):
         main_content = MainContent.objects.get(language='en')
     except MainContent.DoesNotExist:
         raise Http404("Content does not exist")
+
+
+    try:
+        team_members= TeamMember.objects.all()
+    except Client.DoesNotExist:
+        raise Http404("Clients informations do not exist")
 
     try:
         process_steps = OurProcess.objects.all().order_by('process_number')
@@ -50,6 +56,7 @@ def home(request):
         'process_steps': process_steps,
         'clients': clients,
         'projects': projects,
+        'team_members':team_members,
         'socials_media': socials_media,
         'contact_us': contact_us,
 
