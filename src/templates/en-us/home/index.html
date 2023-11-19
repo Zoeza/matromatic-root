@@ -411,8 +411,8 @@
                     <img src="{% get_media_prefix %}{{project.project_photo }}" alt="{{project.project_type}}">
                     <div class="p-hover">
                       <div class="p-content">
-                        <h4>Project Name</h4>
-                        <h6 class="subheading">Sub heading for the project</h6>
+                        <h4>{{project.project_name }}</h4>
+                        <h6 class="subheading">{{project.project_type }}</h6>
                       </div>
                     </div>
                     <a href="{% get_media_prefix %}{{project.project_photo }}" class="open-btn open-gallery"><i class="fa fa-expand"></i></a>
