@@ -16,7 +16,6 @@
         <!-- Fonts -->
         <link rel="stylesheet" href="{% static 'home/assets/assets/fonts/et-lineicons/css/style.css' %}">
         <link rel="stylesheet" href="{% static 'home/assets/fonts/linea-font/css/linea-font.css' %}">
-        <link rel="stylesheet" href="{% static 'home/assets/fonts/fontawesome/css/font-awesome.min.css' %}">
         <!-- Slider -->
         <link rel="stylesheet" href="{% static 'home/assets/styles/vendor/slick.css' %}">
         <!-- Lightbox -->
@@ -223,7 +222,7 @@
                  {% for service in services %}
                   <li>
                     <span class="{{service.icon}} ft-icon"></span>
-                    <h5>{{service.service_title}}</h5>
+                    <h4>{{service.service_title}}</h4>
 
                     <div class="hover-content">
                       <span class="{{service.icon}} ft-icon"></span>
