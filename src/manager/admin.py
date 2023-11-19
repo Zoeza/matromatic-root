@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Home, MainContent, Footer, ContactUs, Service, OurProcess, SocialMedia, Client, Project,TeamMember
+from .models import Home, MainContent, Footer, ContactUs, Service, OurProcess, SocialMedia, Client, Project, TeamMember
 
 # Register your models here.
 admin.site.register(Home)
