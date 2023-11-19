@@ -4018,7 +4018,6 @@ fieldset[disabled] .form-control:hover {
 
 .video-bg-section {
   height: 365px;
-  background: #ccc url(../images/hero/edge.jpg);
   background-position: 50%;
   background-size: cover;
 }

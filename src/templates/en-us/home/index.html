@@ -386,11 +386,11 @@
         </section><!-- / .container -->
 
 
-          <div class="video-bg-section">
+          <div class="video-bg-section" style="background: #ccc url({% get_media_prefix %}{{ main_content.about_us_photo}})">
 
             <!-- Video Background -->
             <div id="section-video" class="player"
-                 data-property="{videoURL:'https://www.youtube.com/watch?v=XiQkeWOFwmk&ab_channel=Tesla',autoPlay:true, mute:true, startAt:71, stopAt:300, opacity:1}">
+                 data-property="{videoURL:'https://www.youtube.com/watch?v=XiQkeWOFwmk&ab_channel=Tesla',containment:'.video-bg-section',autoPlay:true, mute:true, startAt:71, stopAt:300, opacity:1}">
             </div>
 
             <!-- Video Link -->
