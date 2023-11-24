@@ -320,26 +320,26 @@
 
         <!-- / .row -->
         <div id="testimonials" class="testimonials-dark">
-            <div class="row text-center">
+
             <div class="t-wrapper t-slider">
               {% for client in clients%}
               <!-- Testimonial 1 -->
-              <blockquote>
-                  <img src="{% get_media_prefix %}{{ client.client_logo}}" alt="{{client.client_name }}" class="img-responsive">
-                <span class="et-quote t-type"></span>
-                <footer>
-                  <cite>
-                    <h5 class="h-alt">Patrick Owens</h5>
-                    <h5>CEO - Company Name</h5>
-                  </cite>
-                </footer>
-              </blockquote>
+                  <div class="row text-center">
+                          <img src="{% get_media_prefix %}{{ client.client_logo}}" alt="{{client.client_name }}" class="img-responsive">
+                        <span class="et-quote t-type"></span>
+                        <footer>
+                          <cite>
+                            <h5 class="h-alt">Patrick Owens</h5>
+                            <h5>CEO - Company Name</h5>
+                          </cite>
+                        </footer>
+                  </div>
+
               {% endfor %}
 
 
 
             </div><!-- / .t-wrapper -->
-            </div>
 
         </div><!-- / .testimonials-parallax -->
 
