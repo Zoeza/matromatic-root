@@ -324,16 +324,8 @@
               {% for client in clients%}
               <!-- Testimonial 1 -->
                  <div class="cta-wrapper">
-              <blockquote>
-                <footer>
-                  <cite>
-                      <img src="{% get_media_prefix %}{{ client.client_logo}}" alt="{{client.client_name }}" class="img-responsive">
-
-                    <h5 class="h-alt">Patrick Owens</h5>
-                    <h5>CEO - Company Name</h5>
-                  </cite>
-                </footer>
-              </blockquote>
+                     <img src="{% get_media_prefix %}{{ client.client_logo}}" alt="{{client.client_name }}" class="img-responsive">
+                     
                  </div>
               {% endfor %}
 
