@@ -22,20 +22,13 @@ class Home(models.Model):
 # ------------------------------ About us ------------------------------- #
 class MainContent(models.Model):
     language = models.CharField(max_length=50, blank=True)
-    about_us_title = models.CharField(max_length=150, blank=True)
     about_us_description = models.TextField(max_length=500, blank=True)
     about_us_photo = models.ImageField(upload_to='about_us/about_us_photo', blank=True)
-    team_title = models.CharField(max_length=150, blank=True)
     team_description = models.TextField(max_length=500, blank=True)
-    our_service_title = models.CharField(max_length=150, blank=True)
     our_service_description = models.TextField(max_length=500, blank=True)
-    our_process_title = models.CharField(max_length=150, blank=True)
     our_process_description = models.TextField(max_length=500, blank=True)
-    video_description = models.TextField(max_length=200, blank=True)
     video_link = models.URLField(max_length=250)
-    our_projects_title = models.CharField(max_length=150, blank=True)
     our_projects_description = models.TextField(max_length=500, blank=True)
-    contact_title = models.CharField(max_length=150, blank=True)
     contact_description = models.TextField(max_length=500, blank=True)
 
     class Meta:
