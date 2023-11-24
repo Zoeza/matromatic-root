@@ -323,8 +323,8 @@
             <div class="t-wrapper t-slider">
               {% for client in clients%}
               <!-- Testimonial 1 -->
+                 <div class="cta-wrapper">
               <blockquote>
-                <span class="et-quote t-type"></span>
                 <footer>
                   <cite>
                       <img src="{% get_media_prefix %}{{ client.client_logo}}" alt="{{client.client_name }}" class="img-responsive">
@@ -334,6 +334,7 @@
                   </cite>
                 </footer>
               </blockquote>
+                 </div>
               {% endfor %}
 
 
