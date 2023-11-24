@@ -321,13 +321,11 @@
         <!-- / .row -->
         <div id="testimonials" class="testimonials-dark">
             <div class="t-wrapper t-slider">
-            {% for client in clients %}
+              {% for client in clients%}
               <!-- Testimonial 1 -->
               <blockquote>
-                  <div class="t-image">
-                      <img src="{% get_media_prefix %}{{ client.client_logo}}" alt="{{client.client_name }}" class="img-responsive">
+                  <img src="{% get_media_prefix %}{{ client.client_logo}}" alt="{{client.client_name }}" class="img-responsive">
 
-                  </div>
                 <span class="et-quote t-type"></span>
                 <footer>
                   <cite>
@@ -336,7 +334,7 @@
                   </cite>
                 </footer>
               </blockquote>
-             {% endfor %}
+              {% endfor %}
 
 
 
