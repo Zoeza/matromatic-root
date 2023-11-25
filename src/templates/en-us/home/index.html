@@ -347,27 +347,6 @@
           <section class="section container pfolio-single">
           <div class="row ws-m">
 
-            <!-- Project Info -->
-            <div class="col-md-3 mb-sm-50 project-info">
-              <h5>Cavalier Collective Co</h5>
-              <ul>
-                <li><h6>Date:</h6><span>15/07/15</span></li>
-                <li><h6>Link:</h6><a href="#">http://projectdomain.com</a></li>
-                <li><h6>Type:</h6><span>Branding, Identity, Webdesign, Strategy, Logo design</span></li>
-              </ul>
-            </div>
-
-            <!-- Challenge -->
-            <div class="col-md-offset-1 col-md-4 mb-sm-50">
-              <h5 class="h-alt">The challenge</h5>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in</p>
-            </div>
-
-            <!-- Solution -->
-            <div class="col-md-4">
-              <h5 class="h-alt">The solution</h5>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
 
           </div><!-- / .row -->
 
@@ -377,14 +356,12 @@
               <ul class="single-img-slider slick-initialized slick-slider">
                 <div aria-live="polite" class="slick-list draggable" tabindex="0" style="height: 212px;">
                     <div class="slick-track" style="opacity: 1; width: 2064px; transform: translate3d(-1032px, 0px, 0px);">
+                     {% for client in clients%}
+
                         <li class="slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" style="width: 516px;">
-                            <img src="../../assets/images/project-single-img-2.jpg" alt="Project Image"></li>
-                        <li class="slick-slide" data-slick-index="0" aria-hidden="true" style="width: 516px;">
-                            <img src="../../assets/images/project-single-img-1.jpg" alt="Project Image"></li>
-                        <li class="slick-slide slick-active" data-slick-index="1" aria-hidden="false" style="width: 516px;">
-                            <img src="../../assets/images/project-single-img-2.jpg" alt="Project Image"></li>
-                        <li class="slick-slide slick-cloned" data-slick-index="2" aria-hidden="true" style="width: 516px;">
-                            <img src="../../assets/images/project-single-img-1.jpg" alt="Project Image"></li>
+                          <img src="{% get_media_prefix %}{{ client.client_logo}}" alt="{{client.client_name }}">
+                        </li>
+                        {% endfor %}
                     </div>
                 </div>
 
