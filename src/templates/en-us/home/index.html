@@ -344,38 +344,6 @@
         </div><!-- / .testimonials-parallax -->
 
 
-          <section class="section container pfolio-single">
-          <div class="row ws-m">
-
-
-          </div><!-- / .row -->
-
-          <!-- Slider -->
-          <div class="row">
-            <div class="col-md-12">
-              <ul class="single-img-slider slick-initialized slick-slider">
-                <div aria-live="polite" class="slick-list draggable" tabindex="0" style="height: 212px;">
-                    <div class="slick-track" style="opacity: 1; width: 2064px; transform: translate3d(-1032px, 0px, 0px);">
-                     {% for client in clients%}
-
-                        <li class="slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" style="width: 516px;">
-                          <img src="{% get_media_prefix %}{{ client.client_logo}}" alt="{{client.client_name }}">
-                        </li>
-                        {% endfor %}
-                    </div>
-                </div>
-
-              <button type="button" class="slider-nav sl-prev" style="display: block;">
-                  <span class="linea-arrows-slim-left"></span>
-              </button>
-               <button type="button" class="slider-nav sl-next" style="display: block;">
-                      <span class="linea-arrows-slim-right"></span>
-              </button>
-              </ul>
-            </div>
-          </div><!-- / .row -->
-
-        </section>
 
 
 
