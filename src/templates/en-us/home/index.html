@@ -210,74 +210,31 @@
         <!-- ========== Services ========== -->
 
 
-          <div id="services" class="gray-bg">
-            <section class="container section ft-cards-2">
 
-            <header class="sec-heading">
-              <h2>CE QUE NOUS FAISONS</h2>
-              <span class="subheading">SPÉCIALISÉS DANS LA CRÉATION DE SOLUTIONS ROBOTIQUES INTÉGRALES, ALLIANT L'EXPERTISE EN MÉCANIQUE, ÉLECTRONIQUE ET INFORMATIQUE, NOUS PROPOSONS UNE GAMME DE SERVICES ADAPTÉS À VOS BESOINS SPÉCIFIQUES :</span>
-            </header>
+          <div class="gray-bg">
+          <section id="services" class="container ft-cards">
+            <div class="row section">
 
-            <div class="row">
-
-              <div class="col-md-6">
-
-                <!-- Item 1 -->
-                <div class="ft-card-item wow fadeInUp" data-wow-duration="1.2s" style="visibility: visible; animation-duration: 1.2s; animation-name: fadeInUp;">
-                  <img src="assets/images/ft-card2-img-1.jpg" alt="Feature Image">
-                  <div class="ft-content">
-                    <h5> Etude, Conception et réalisation </h5>
-                    <p> Besoin de solution sur mesure?
-                        Matromatic  conçoit et réalise des machines ou compartiments adaptés à vos besoins spécifiques,
-                        garantissant une efficacité maximale .</p>
-                                          <a href="#" class="link-btn">Learn More <span class="linea-arrows-slim-right"></span></a>
-
-                  </div>
-                </div><!-- / .ft-card-item -->
-
-                <!-- Item 2 -->
-                <div class="ft-card-item wow fadeInUp" data-wow-delay=".2s" data-wow-duration="1.2s" style="visibility: visible; animation-duration: 1.2s; animation-delay: 0.2s; animation-name: fadeInUp;">
-                  <img src="assets/images/ft-card2-img-3.jpg" alt="Feature Image">
-                  <div class="ft-content">
-                    <h5> Informatique et systems embarques </h5>
-                    <p>Surmontez les défis technologiques avec nos solutions personnalisées qui intègrent l'informatique, l'électronique et la mécanique. Vos machines deviendront plus performantes et connectées. Grâce à nos interfaces intuitives et sur mesure,
-                        ayez un contrôle total sur votre industrie en temps réel.</p>
-                    <a href="#" class="link-btn">Learn More <span class="linea-arrows-slim-right"></span></a>
-                  </div>
-                </div><!-- / .ft-card-item -->
-
-              </div><!-- / .col-md-6 -->
-
-              <div class="col-md-6">
-
-                <!-- Item 3 -->
-                <div class="ft-card-item wow fadeInUp" data-wow-duration="1.2s" style="visibility: visible; animation-duration: 1.2s; animation-name: fadeInUp;">
-                  <img src="assets/images/ft-card2-img-2.jpg" alt="Feature Image">
-                  <div class="ft-content">
-                    <h5>Renovation de machine</h5>
-                    <p>Offrez une seconde vie à vos équipements obsolètes avec notre service de rénovation de machines. Matromatic repousse les limites pour prolonger
-                        la durée de vie de vos investissements</p>
-                                          <a href="#" class="link-btn">Learn More <span class="linea-arrows-slim-right"></span></a>
+              <header class="sec-heading">
+                <h2>CE QUE NOUS FAISONS</h2>
+                <span class="subheading">{{main_content.our_service_description}}</span>
+              </header>
+                 {% for service in services %}
+              <!-- Item 1 -->
+              <div class="col-lg-4 col-md-6 mb-sm-50">
+                <div class="ft-item wow fadeInUp" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;">
+                  <span class="linea-ecommerce-diamond"></span>
+                  <h4>{{service.service_description}}</h4>
+                    <p>   {{service.service_description}} </p>
 
 
-                  </div>
-                </div><!-- / .ft-card-item -->
+                </div>
+              </div>
+                {% endfor %}
 
-                <!-- Item 4 -->
-                <div class="ft-card-item wow fadeInUp" data-wow-delay=".2s" data-wow-duration="1.2s" style="visibility: visible; animation-duration: 1.2s; animation-delay: 0.2s; animation-name: fadeInUp;">
-                  <img src="assets/images/ft-card2-img-4.jpg" alt="Feature Image">
-                  <div class="ft-content">
-                    <h5>Expertise technique </h5>
-                    <p> Nous comprenons que chaque défi est unique. C'est pourquoi nous offrons un service d'expertise technique personnalisée, mettant à votre disposition une équipe de professionnels qualifiés pour répondre spécifiquement à vos besoins.</p>
-                                       <a href="#" class="link-btn">Learn More <span class="linea-arrows-slim-right"></span></a>
-
-                  </div>
-                </div><!-- / .ft-card-item -->
-
-              </div><!-- / .col-md-6 -->
 
             </div><!-- / .row -->
-          </section><!-- / .container -->
+          </section>
         </div>
 
         <!-- ========== Feature - Steps Numbers ========== -->
