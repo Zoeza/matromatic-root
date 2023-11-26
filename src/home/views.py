@@ -52,7 +52,7 @@ def home(request):
     try:
         contact_us = ContactUs.objects.get(language='en')
     except ContactUs.DoesNotExist:
-        raise Http404(" performances do not exist")
+        raise Http404(" Contact Us info do not exist")
 
     context = {
         'home_page': home_page,

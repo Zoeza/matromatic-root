@@ -210,29 +210,66 @@
         <!-- ========== Services ========== -->
 
 
-          <div class="gray-bg">
-          <section id="services" class="container ft-cards">
-            <div class="row section">
+          <div id="services" class="gray-bg">
+            <section class="container section ft-cards-2">
 
-              <header class="sec-heading">
-                <h2>CE QUE NOUS FAISONS</h2>
-                <span class="subheading">{{main_content.our_service_description}}</span>
-              </header>
-                 {% for service in services %}
-              <!-- Item 1 -->
-              <div class="col-lg-3 col-md-6 mb-sm-50">
-                <div class="ft-item wow fadeInUp" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;">
-                  <span class="{{service.icon}}"></span>
-                  <h4>{{service.service_title}}</h4>
-                    <p>   {{service.service_description}} </p>
+            <header class="sec-heading">
+              <h2CE QUE NOUS FAISONS</h2>
+              <span class="subheading">SPÉCIALISÉS DANS LA CRÉATION DE SOLUTIONS ROBOTIQUES INTÉGRALES, ALLIANT L'EXPERTISE EN MÉCANIQUE, ÉLECTRONIQUE ET INFORMATIQUE, NOUS PROPOSONS UNE GAMME DE SERVICES ADAPTÉS À VOS BESOINS SPÉCIFIQUES :</span>
+            </header>
 
-                </div>
-              </div>
-                {% endfor %}
+            <div class="row">
 
+              <div class="col-md-6">
+
+                <!-- Item 1 -->
+                <div class="ft-card-item wow fadeInUp" data-wow-duration="1.2s" style="visibility: visible; animation-duration: 1.2s; animation-name: fadeInUp;">
+                  <img src="assets/images/ft-card2-img-1.jpg" alt="Feature Image">
+                  <div class="ft-content">
+                    <h5>Service One</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
+                    <a href="#" class="link-btn">Learn More <span class="linea-arrows-slim-right"></span></a>
+                  </div>
+                </div><!-- / .ft-card-item -->
+
+                <!-- Item 2 -->
+                <div class="ft-card-item wow fadeInUp" data-wow-delay=".2s" data-wow-duration="1.2s" style="visibility: visible; animation-duration: 1.2s; animation-delay: 0.2s; animation-name: fadeInUp;">
+                  <img src="assets/images/ft-card2-img-3.jpg" alt="Feature Image">
+                  <div class="ft-content">
+                    <h5>Service Three</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
+                    <a href="#" class="link-btn">Learn More <span class="linea-arrows-slim-right"></span></a>
+                  </div>
+                </div><!-- / .ft-card-item -->
+
+              </div><!-- / .col-md-6 -->
+
+              <div class="col-md-6">
+
+                <!-- Item 3 -->
+                <div class="ft-card-item wow fadeInUp" data-wow-duration="1.2s" style="visibility: visible; animation-duration: 1.2s; animation-name: fadeInUp;">
+                  <img src="assets/images/ft-card2-img-2.jpg" alt="Feature Image">
+                  <div class="ft-content">
+                    <h5>Service Two</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
+                    <a href="#" class="link-btn">Learn More <span class="linea-arrows-slim-right"></span></a>
+                  </div>
+                </div><!-- / .ft-card-item -->
+
+                <!-- Item 4 -->
+                <div class="ft-card-item wow fadeInUp" data-wow-delay=".2s" data-wow-duration="1.2s" style="visibility: visible; animation-duration: 1.2s; animation-delay: 0.2s; animation-name: fadeInUp;">
+                  <img src="assets/images/ft-card2-img-4.jpg" alt="Feature Image">
+                  <div class="ft-content">
+                    <h5>Service Four</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
+                    <a href="#" class="link-btn">Learn More <span class="linea-arrows-slim-right"></span></a>
+                  </div>
+                </div><!-- / .ft-card-item -->
+
+              </div><!-- / .col-md-6 -->
 
             </div><!-- / .row -->
-          </section>
+          </section><!-- / .container -->
         </div>
 
         <!-- ========== Feature - Steps Numbers ========== -->
