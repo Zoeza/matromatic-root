@@ -4018,13 +4018,13 @@ fieldset[disabled] .form-control:hover {
 
 .video-bg-section {
   height: 365px;
-  background: url(../../assets/images/testimonials-bg-2.jpg);
+  background: url(../../assets/images/mac-coffe-photo.jpg);
   background-position: 50%;
   background-size: cover;
 }
 
 .video-bg-section .video-sec-content {
- background: url(../../assets/images/testimonials-bg-2.jpg);
+  background: rgba(17, 17, 17, 0.5);
   padding-top: 100px;
   width: 100%;
   height: 100%;
@@ -4244,7 +4244,7 @@ fieldset[disabled] .form-control:hover {
 /* ---- 10.2 Counters - Numbers ---- */
 .number-counters, .number-counters-dark-bg {
   position: relative;
-  background: url(../../assets/images/matro_images/background.jpg);
+  background: url(matromatic-root/site/assets/images/mac-coffe-photo.jpg);
   background-size: cover;
   background-position: 50%;
   background-attachment: fixed;
