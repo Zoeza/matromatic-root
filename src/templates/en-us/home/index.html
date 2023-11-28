@@ -320,18 +320,17 @@
                 <span class="subheading">Read some of the testimonials from our amazing clients</span>
               </header>
               {% for client in clients%}
-              <!-- Item 1 -->
-              <div class="col-md-4 mb-sm-50">
-                <div class="t-item wow fadeIn" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeIn;">
+
+
+
+                {% for client in clients %}
+                <!-- Item 1 -->
+                <div class="col-md-3 col-sm-6 mb-sm-50 ft-item ft-square-frame-dark wow zoomIn" data-wow-duration=".6s" data-wow-delay=".3s" style="visibility: visible; animation-duration: 0.6s; animation-delay: 0.3s; animation-name: zoomIn;">
                   <img src="{% get_media_prefix %}{{ client.client_logo}}" alt="{{client.client_name}}">
-                  <blockquote>
-                    <footer>
-                      <cite>{{client.client_name}}<span>{{client.client_name}}</span></cite>
-                    </footer>
-                  </blockquote>
-                </div><!-- / .t-item -->
-              </div><!-- / .col-md-4 -->
-                {% endfor %}
+
+                  <h5>>{{client.client_name}}</h5>
+                </div>
+                  {% endfor %}
 
             </div><!-- / .row -->
           </section><!-- / .container -->
