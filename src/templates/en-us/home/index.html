@@ -208,7 +208,7 @@
         </div><!-- / .dark-bg .cta-link -->
 
         <!-- ========== Services ========== -->
-          
+
 
           <section id="services" class="container section ft-centered">
 
@@ -221,7 +221,7 @@
             {% for service in services %}
             <!-- Item 1 -->
             <div class="col-md-3 col-sm-6 mb-sm-50 ft-item ft-square-frame-dark wow zoomIn" data-wow-duration=".6s" data-wow-delay=".3s" style="visibility: visible; animation-duration: 0.6s; animation-delay: 0.3s; animation-name: zoomIn;">
-              <span class="et-tools"></span>
+              <span class="{{service.service_icon}}"></span>
               <h5>{{service.service_title}}</h5>
               <p>{{service.service_description}}</p>
             </div>
