@@ -4244,7 +4244,7 @@ fieldset[disabled] .form-control:hover {
 /* ---- 10.2 Counters - Numbers ---- */
 .number-counters, .number-counters-dark-bg {
   position: relative;
-  background: url(matromatic-root/site/assets/images/mac-coffe-photo.jpg);
+  background: url(matromatic-root/site/assets/images/matro_images/background.jpg);
   background-size: cover;
   background-position: 50%;
   background-attachment: fixed;
