@@ -323,7 +323,7 @@
                 {% for client in clients %}
                 <!-- Item 1 -->
                 <div class="col-md-3 col-sm-6 mb-sm-50 ft-item ft-square-frame-dark wow zoomIn" data-wow-duration=".6s" data-wow-delay=".3s" style="visibility: visible; animation-duration: 0.6s; animation-delay: 0.3s; animation-name: zoomIn;">
-                  <span class="{{client.client_logo}}"></span>
+                  <span><img src="{% get_media_prefix %}{{ client.client_logo}}" alt="{{client.client_name}}"></span>
                   <h5>{{client.client_name}}</h5>
                 </div>
                   {% endfor %}
