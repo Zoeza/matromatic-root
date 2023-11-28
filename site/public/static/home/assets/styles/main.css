@@ -4024,7 +4024,7 @@ fieldset[disabled] .form-control:hover {
 }
 
 .video-bg-section .video-sec-content {
-  background: rgba(17, 17, 17, 0.5);
+ background: url(../../assets/images/matro_images/background.jpg);
   padding-top: 100px;
   width: 100%;
   height: 100%;
@@ -4244,7 +4244,7 @@ fieldset[disabled] .form-control:hover {
 /* ---- 10.2 Counters - Numbers ---- */
 .number-counters, .number-counters-dark-bg {
   position: relative;
-  background: url(../../assets/images/mac-coffe-photo.jpg);
+  background: url(../../assets/images/matro_images/background.jpg);
   background-size: cover;
   background-position: 50%;
   background-attachment: fixed;
