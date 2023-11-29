@@ -57,23 +57,20 @@
 
           <!-- Navbar Links -->
           <div id="navbar" class="navbar-collapse collapse page-scroll navbar-right" style="max-height: 733px;">
-        <ul class="nav navbar-nav">
-              <li><a href="#home">Accueil<span class="sr-only"></span></a></li>
-              <li><a href="#about">À propos de nous<span class="sr-only"></span></a></li>
-              <li><a href="#services">Services<span class="sr-only"></span></a></li>
-              <li><a href="#projects">Projets <span class="sr-only"></span></a></li>
-              <li><a href="#testimonials">Clients<span class="sr-only"></span></a></li>
-              <li><a href="#contact">Contact<span class="sr-only"></span></a></li>
-            </ul><!-- / .nav .navbar-nav -->
+              <ul class="nav navbar-nav">
+                  <li><a href="#home">Accueil<span class="sr-only"></span></a></li>
+                  <li><a href="#about">À propos de nous<span class="sr-only"></span></a></li>
+                  <li><a href="#services">Services<span class="sr-only"></span></a></li>
+                  <li><a href="#projects">Projets <span class="sr-only"></span></a></li>
+                  <li><a href="#testimonials">Clients<span class="sr-only"></span></a></li>
+                  <li><a href="#contact">Contact<span class="sr-only"></span></a></li>
+              </ul><!-- / .nav .navbar-nav -->
          </div><!--/.navbar-collapse -->
         </nav>
 
         <!-- ========== Hero Cover ========== -->
-
-
-
           <div id="home" class="main-demo-hero">
-          <div class="bg-overlay">
+              <div class="bg-overlay">
 
             <!-- Hero Content -->
             <div class="hero-content-wrapper">
@@ -92,9 +89,7 @@
             </a>
 
           </div><!-- / .bg-overlay -->
-        </div>
-
-
+          </div>
 
         <!-- ========== About - Section ========== -->
         <section id="about" class="container">
@@ -104,17 +99,34 @@
               <h2>bienvenue Chez matromatic</h2>
               <span class="subheading">le partenaire ideal pour votre entreprise</span>
             </header>
-
             <div class="col-md-offset-2 col-md-8 text-center ws-m">
               <p>{{ main_content.about_us_description }} </p>
             </div>
-
-
           </div><!-- / .row -->
         </section>
+          <!-- ========== Services ========== -->
+        <div class="gray-bg">
+            <section id="services" class="container section ft-centered  ">
 
-        <!-- ========== Number Counters - Dark bg ========== -->
-       <div class="number-counters">
+              <header class="sec-heading">
+                <h2>CE QUE NOUS FAISONS</h2>
+                <span class="subheading">{{main_content.our_service_description}}</span>
+              </header>
+
+              <div class="row">
+                {% for service in services %}
+                <!-- Item 1 -->
+                <div class="col-md-3 col-sm-6 mb-sm-50 ft-item ft-circle-frame-dark wow zoomIn" data-wow-duration=".6s" data-wow-delay=".3s" style="visibility: visible; animation-duration: 0.6s; animation-delay: 0.3s; animation-name: zoomIn;">
+                  <span class="{{service.icon}}"></span>
+                  <h5>{{service.service_title}}</h5>
+                  <p> {{service.service_description}} </p>
+                </div>
+                  {% endfor %}
+              </div><!-- / .row -->
+         </section>
+        </div>
+          <!-- ========== Number Counters - Dark bg ========== -->
+        <div class="number-counters">
           <div class="container">
             <div id="counters-min" class="row count-wrapper">
 
@@ -145,35 +157,6 @@
             </div><!-- / .row -->
           </div><!-- / .container -->
         </div>
-        <!-- ========== Team - 3 columns ========== -->
-
-
-
-
-
-        <!-- ========== Services ========== -->
-        <div class="gray-bg">
-            <section id="services" class="container section ft-centered  ">
-
-              <header class="sec-heading">
-                <h2>CE QUE NOUS FAISONS</h2>
-                <span class="subheading">{{main_content.our_service_description}}</span>
-              </header>
-
-              <div class="row">
-                {% for service in services %}
-                <!-- Item 1 -->
-                <div class="col-md-3 col-sm-6 mb-sm-50 ft-item ft-circle-frame-dark wow zoomIn" data-wow-duration=".6s" data-wow-delay=".3s" style="visibility: visible; animation-duration: 0.6s; animation-delay: 0.3s; animation-name: zoomIn;">
-                  <span class="{{service.icon}}"></span>
-                  <h5>{{service.service_title}}</h5>
-                  <p> {{service.service_description}} </p>
-                </div>
-                  {% endfor %}
-              </div><!-- / .row -->
-         </section>
-        </div>
-
-
         <!-- ========== Feature - Steps Numbers ========== -->
 
         <section class="container ft-steps-numbers">
