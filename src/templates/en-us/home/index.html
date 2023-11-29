@@ -72,29 +72,29 @@
 
         <!-- ========== Hero Cover ========== -->
 
-        <div id="home" class="main-demo-hero">
+
+
+          <div id="home" class="main-demo-hero">
           <div class="bg-overlay">
 
-            <div id="large-header" class="large-header">
-              <canvas id="demo-canvas" class="demo-canvas"></canvas>
+            <!-- Hero Content -->
+            <div class="hero-content-wrapper">
+              <div class="hero-content">
 
-              <!-- Hero Content -->
-              <div class="hero-content-wrapper">
-                <div class="hero-content">
+                <h1 class="hero-lead wow fadeInLeft" data-wow-duration="1.5s" style="visibility: visible; animation-duration: 1.5s; animation-name: fadeInLeft;">{{ home_page.company_slogan }}</h1>
+                <h4 class="h-alt hero-subheading wow fadeIn" data-wow-duration="2s" data-wow-delay=".7s" style="visibility: visible; animation-duration: 2s; animation-delay: 0.7s; animation-name: fadeIn;">{{home_page.company_name}</h4>
+                <a href="#about" class="btn wow fadeIn" data-wow-duration="2s" data-wow-delay="1s" style="visibility: visible; animation-duration: 2s; animation-delay: 1s; animation-name: fadeIn;">À propos</a>
 
+              </div>
+            </div>
 
-                  <h1 class="hero-lead">{{home_page.company_name}} </h1>
-                  <br>
-                  <h4 class="h-alt hero-secondary">{{ home_page.company_slogan }}</h4>
-                  <a href="#about" class="btn btn-light">À propos </a>
-
-                </div><!-- / .hero-content -->
-              </div><!-- / .hero-content-wrapper -->
-
-            </div><!-- / #large-header -->
+            <!-- Scroller -->
+            <a href="#welcome" class="scroller scroller-dark">
+              <span class="linea-basic-magic-mouse"></span>
+            </a>
 
           </div><!-- / .bg-overlay -->
-        </div><!-- / #home -->
+        </div>
 
 
 
