@@ -270,7 +270,7 @@
                       <h6 class="subheading">{{project.project_type }}</h6>
                     </div>
                   </div>
-                  <a href="assets/images/project-1.1.jpg" class="open-btn open-gallery"><i class="fa fa-expand"></i></a>
+                  <a href= "{% get_media_prefix %}{{project.project_photo }}" class="open-btn open-gallery"><i class="fa fa-expand"></i></a>
                 </div>
               </div><!-- / .portfolio-item -->
                 {% endfor %}
