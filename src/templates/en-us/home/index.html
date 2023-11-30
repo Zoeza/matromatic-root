@@ -41,16 +41,17 @@
         <!-- ========== Navigation ========== -->
           <nav class="navbar navbar-default navbar-fixed-top trans-helper navbar-fw mobile-nav" role="navigation">
             <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
             <!-- Logo -->
-            <a class="navbar-brand" href="index.html"><img src="{% get_media_prefix %}{{ home_page.logo_main}}"  alt="matro - Logo"></a>
-          </div>
-          <!-- Navbar Links -->
+                <a class="navbar-brand" href="index.html"><img src="{% get_media_prefix %}{{ home_page.logo_main}}"  alt="matro - Logo"></a>
+            </div>
+
+              <!-- Navbar Links -->
             <div id="navbar" class="navbar-collapse collapse page-scroll navbar-right" style="max-height: 733px;">
               <ul class="nav navbar-nav">
                   <li><a href="#home">Accueil<span class="sr-only"></span></a></li>
@@ -60,30 +61,25 @@
                   <li><a href="#testimonials">Clients<span class="sr-only"></span></a></li>
                   <li><a href="#contact">Contact<span class="sr-only"></span></a></li>
               </ul><!-- / .nav .navbar-nav -->
-         </div><!--/.navbar-collapse -->
-        </nav>
+            </div><!--/.navbar-collapse -->
+          </nav>
 
         <!-- ========== Hero Cover ========== -->
           <div id="home" class="main-demo-hero">
               <div class="bg-overlay">
-
             <!-- Hero Content -->
-            <div class="hero-content-wrapper">
+              <div class="hero-content-wrapper">
               <div class="hero-content">
-
                 <h1 class="hero-lead wow fadeInLeft" data-wow-duration="1.5s" style="visibility: visible; animation-duration: 1.5s; animation-name: fadeInLeft;"> {{home_page.company_name}}</h1>
                 <h4 class="h-alt hero-subheading wow fadeIn" data-wow-duration="2s" data-wow-delay=".7s" style="visibility: visible; animation-duration: 2s; animation-delay: 0.7s; animation-name: fadeIn;">{{ home_page.company_slogan }}</h4>
                 <a href="#about" class="btn wow fadeIn" data-wow-duration="2s" data-wow-delay="1s" style="visibility: visible; animation-duration: 2s; animation-delay: 1s; animation-name: fadeIn;">À propos</a>
-
               </div>
             </div>
-
             <!-- Scroller -->
-            <a href="#about" class="scroller scroller-dark">
+                  <a href="#about" class="scroller scroller-dark">
               <span class="linea-basic-magic-mouse"></span>
             </a>
-
-          </div><!-- / .bg-overlay -->
+              </div><!-- / .bg-overlay -->
           </div>
         <!-- ========== About - Section ========== -->
           <section id="about" class="container">
@@ -243,18 +239,17 @@
           </section>
         <!-- ========== Portfolio Full Width - 4 Columns ========== -->
           <div  id="projects" class="gray-bg p-s-portfolio">
-          <section class="container portfolio-layout portfolio-columns-boxed">
-            <div class="row">
+              <section class="container portfolio-layout portfolio-columns-boxed">
+                  <div class="row">
               <header class="sec-heading">
                 <h2>NOS REALISATIONS</h2>
                 <span class="subheading">{{ main_content.our_projects_description }}</span>
               </header>
             </div><!-- / .row -->
-
-            <div class="row ws-m wow fadeIn" data-wow-duration="1s">
-               {% for project in projects %}
-                <!-- Item 1 -->
-                <div class="col-md-4 portfolio-item print">
+                  <div class="row ws-m wow fadeIn" data-wow-duration="1s">
+                      {% for project in projects %}
+                      <!-- Item 1 -->
+                      <div class="col-md-4 portfolio-item print">
                   <div class="p-wrapper hover-default">
                     <img src="{% get_media_prefix %}{{project.project_photo }}" alt="{{project.project_type}}">
                     <div class="p-hover">
@@ -266,10 +261,9 @@
                     <a href="{% get_media_prefix %}{{project.project_photo }}" class="open-btn open-gallery"><i class="bi bi-arrows-angle-expand"></i></a>
                   </div>
                 </div><!-- / .portfolio-item -->
-              {% endfor%}
-
-            </div>
-          </section>
+                      {% endfor%}
+                  </div>
+              </section>
           </div>
           <div class="cta-link cta-dark">
           <div class="container">
@@ -301,7 +295,7 @@
 
         <!-- ========== Footer Contact ========== -->
 
-          <section id="contact" class="section contact-1">
+          <section id="contact" class="container section ft-centered  ">
 
           <header class="sec-heading">
             <h2>Contact </h2>
@@ -402,10 +396,9 @@
             </div><!-- / .container -->
           </div><!-- / .contact-wrapper -->
         </section>
-
           <footer class="footer-widgets">
               <div class="container">
-            <div class="row section">
+                  <div class="row section">
 
               <!-- About Us -->
               <div class="col-md-6 col-sm-6 mb-sm-100">
@@ -443,7 +436,7 @@
               </div><!-- / .col-md-3 -->
 
             </div><!-- / .row -->
-          </div><!-- / .container -->
+              </div><!-- / .container -->
               <!-- Copyright -->
               <div class="copyright">
                   <div class="container">
@@ -461,7 +454,6 @@
           </footer>
 
         <!-- ========== Scripts ========== -->
-
         <script src="{% static 'home/assets/js/vendor/jquery-2.1.4.min.js' %}"></script>
         <script src="{% static 'home/assets/js/vendor/google-fonts.js' %}"></script>
         <script src="{% static 'home/assets/js/vendor/jquery.easing.js' %}"></script>
