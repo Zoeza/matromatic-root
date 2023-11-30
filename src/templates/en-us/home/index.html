@@ -238,33 +238,45 @@
           </div><!-- / .row -->
           </section>
         <!-- ========== Portfolio Full Width - 4 Columns ========== -->
-          <div  id="projects" class="gray-bg p-s-portfolio">
-              <section class="container portfolio-layout portfolio-columns-boxed">
-                  <div class="row">
-              <header class="sec-heading">
-                <h2>NOS REALISATIONS</h2>
-                <span class="subheading">{{ main_content.our_projects_description }}</span>
-              </header>
-            </div><!-- / .row -->
-                  <div class="row ws-m wow fadeIn" data-wow-duration="1s">
-                      {% for project in projects %}
-                      <!-- Item 1 -->
-                      <div class="col-md-4 portfolio-item print">
-                  <div class="p-wrapper hover-default">
-                    <img src="{% get_media_prefix %}{{project.project_photo }}" alt="{{project.project_type}}">
-                    <div class="p-hover">
-                      <div class="p-content">
-                        <h4>{{project.project_name }}</h4>
-                        <h6 class="subheading">{{project.project_type }}</h6>
-                      </div>
-                    </div>
-                    <a href="{% get_media_prefix %}{{project.project_photo }}" class="open-btn open-gallery"><i class="bi bi-arrows-angle-expand"></i></a>
-                  </div>
-                </div><!-- / .portfolio-item -->
-                      {% endfor%}
-                  </div>
-              </section>
+          
+          <section class="container-fluid portfolio-layout portfolio-columns-fw">
+          <div class="row">
+            <header class="sec-heading">
+              <h2>Nos realisations</h2>
+              <span class="subheading">{{ main_content.our_projects_description }}</span>
+            </header>
+          </div><!-- / .row -->
+
+          <!-- Filters -->
+          <div class="row">
+            <ul id="pfolio-filters" class="portfolio-filters">
+              <li class="active"><a href="#" data-filter="*">All</a></li>
+              <li><a href="#" data-filter=".webdesing">Webdesign</a></li>
+              <li><a href="#" data-filter=".print">Print</a></li>
+              <li><a href="#" data-filter=".photo">Photography</a></li>
+            </ul>
           </div>
+
+          <div class="row">
+            <div id="projects" style="position: relative; height: 958.141px;">
+                {% for project in projects %}
+              <!-- Item 1 -->
+              <div class="col-md-4 portfolio-item print" style="position: absolute; left: 0px; top: 0px;">
+                <div class="p-wrapper hover-light">
+                   <img src="{% get_media_prefix %}{{project.project_photo }}" alt="{{project.project_type}}">
+                  <div class="p-hover">
+                    <div class="p-content">
+                      <h4> {{project.project_name }}</h4>
+                      <h6 class="subheading">{{project.project_type }}</h6>
+                    </div>
+                  </div>
+                  <a href="assets/images/project-1.1.jpg" class="open-btn open-gallery"><i class="fa fa-expand"></i></a>
+                </div>
+              </div><!-- / .portfolio-item -->
+                {% endfor %}
+            </div><!-- / #pfolio -->
+          </div><!-- / .row -->
+        </section>
           <div class="cta-link cta-dark">
           <div class="container">
             <div class="cta-wrapper">
@@ -276,7 +288,6 @@
 
         <!-- ========== Clients List - Dark ========== -->
         <!-- / .row -->
-
           <section id="testimonials" class="container section ft-centered ">
               <header class="sec-heading">
                 <h2>Nos clients</h2>
