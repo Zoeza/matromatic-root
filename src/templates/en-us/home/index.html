@@ -33,15 +33,12 @@
         <script src="{% static 'home/assets/js/vendor/modernizr-2.8.3.min.js' %}"></script>
     </head>
     <body id="page-top" data-spy="scroll" data-target=".navbar">
-
           <!-- ========== Preloader ========== -->
-
         <div class="preloader">
           <img src="{% static 'home/assets/images/loader.svg' %}" alt="Loading...">
         </div>
 
         <!-- ========== Navigation ========== -->
-
           <nav class="navbar navbar-default navbar-fixed-top trans-helper navbar-fw mobile-nav" role="navigation">
             <div class="navbar-header page-scroll">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -124,7 +121,6 @@
          </section>
         </div>
           <!-- ========== Number Counters - Dark bg ========== -->
-
           <div class="number-counters">
           <div class="container">
             <div id="counters-min" class="row count-wrapper">
@@ -177,8 +173,6 @@
             </div>
         </section><!-- / .container -->
           </div>
-
-
 
           <section class="container section ft-x">
               <div class="row">
@@ -287,9 +281,7 @@
         </div><!-- / .dark-bg .cta-link -->
 
         <!-- ========== Clients List - Dark ========== -->
-
         <!-- / .row -->
-
 
           <section id="testimonials" class="container section ft-centered">
               <header class="sec-heading">
@@ -307,35 +299,29 @@
               </div><!-- / .row -->
           </section>
 
-
-
         <!-- ========== Footer Contact ========== -->
 
-      <section id="contact" class="section contact-1">
+          <section id="contact" class="section contact-1">
 
           <header class="sec-heading">
-            <h2>Countact </h2>
-            <span class="subheading">We love to hear from you</span>
+            <h2>Contact </h2>
+            <span class="subheading">{{main_content.contact_description}}</span>
           </header>
 
           <div class="contact-wrapper">
             <!-- Map -->
-            <div id="map-canvas" class="gmap map-boxed" style="position: relative; overflow: hidden;">
+              <div id="map-canvas" class="gmap map-boxed" style="position: relative; overflow: hidden;">
                 <div style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(248, 248, 248);">
                 <div class="gm-err-container">
                     <div class="gm-err-content">
                         <div class="gm-err-icon"></div>
                     </div>
                 </div>
-            </div>
-            </div>
-
-            <!-- Show Info Button -->
-
-
-            <div class="container">
+                </div>
+              </div>
+              <!-- Show Info Button -->
+              <div class="container">
               <div class="row ws-m">
-
                 <!-- Address Info -->
                 <div class="col-xs-offset-1 col-xs-11 col-md-offset-2 col-md-6 contact-info-wrapper">
                   <address>
@@ -344,14 +330,14 @@
                       <!-- Phone -->
                       <div class="col-sm-6 address-group">
                         <span>Phone</span>
-                        <a href="#">+ 123 4567 890</a>
-                        <a href="#">+ 123 7654 098</a>
+                        <a href="#">{{contact_us.phone}}</a>
+                        <a href="#">{{contact_us.mobile}}</a>
                       </div>
 
                       <!-- Address -->
                       <div class="col-sm-5 address-group">
                         <span>Address</span>
-                        <p>1200 some street, il, US</p>
+                        <p>{{contact_us.address}}</p>
                       </div>
 
                     </div><!-- / .row -->
@@ -361,21 +347,14 @@
                       <!-- Email -->
                       <div class="col-sm-6 address-group">
                         <span>Email</span>
-                        <a href="mailto:sayhello@email.com">sayhello@email.com</a>
+                        <a href="mailto:sayhello@email.com">{{contact_us.email}}</a>
                       </div>
 
                       <!-- Hours -->
                       <div class="col-sm-5 address-group">
                         <span>Open Hours</span>
-                        <p>Mon-Fri: 9am-5pm</p>
-                        <p>Sat: 10am-1pm</p>
+                        <p>Tous les jours: 9am-8pm</p>
                       </div>
-
-                    </div><!-- / .row -->
-
-                    <!-- Show Map Button -->
-                    <div class="row show-map-link">
-                      <a href="#" class="show-map"><span class="icon-map-pin"></span>Show on map</a>
                     </div><!-- / .row -->
                   </address>
                 </div><!-- / .contact-info-wrapper -->
@@ -388,8 +367,8 @@
 
                     <!-- Name -->
                     <div class="form-group">
-                      <input type="text" name="name" id="name-contact-1" class="form-control validate-locally" placeholder="Enter your name">
-                      <label for="name-contact-1">Name</label>
+                      <input type="text" name="name" id="name-contact-1" class="form-control validate-locally" placeholder="Enterez votre nom ">
+                      <label for="name-contact-1">Nom</label>
                       <span class="pull-right alert-error"></span>
                     </div>
 
@@ -406,11 +385,11 @@
 
                     <!-- Message -->
                     <div class="form-group">
-                      <textarea name="message" id="message-contact-1" class="form-control" rows="5" placeholder="Your Message"></textarea>
+                      <textarea name="message" id="message-contact-1" class="form-control" rows="5" placeholder="Votre Message"></textarea>
                       <label for="message-contact-1">Message</label>
                     </div>
                     <div>
-                      <input type="submit" class="btn pull-right" value="Send Message">
+                      <input type="submit" class="btn pull-right" value="Envoyer">
                     </div>
 
                     <!-- Ajax Message -->
@@ -423,8 +402,9 @@
             </div><!-- / .container -->
           </div><!-- / .contact-wrapper -->
         </section>
-      <footer class="footer-widgets">
-          <div class="container">
+
+          <footer class="footer-widgets">
+              <div class="container">
             <div class="row section">
 
               <!-- About Us -->
@@ -465,26 +445,21 @@
 
             </div><!-- / .row -->
           </div><!-- / .container -->
+              <!-- Copyright -->
+              <div class="copyright">
+                  <div class="container">
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <small>© 2015 Definity. Made by <a class="no-style-link" href="http://themeforest.net/user/octarinethemes" target="_blank">OctarineThemes</a></small>
+                        </div>
 
-
-          <!-- Copyright -->
-          <div class="copyright">
-            <div class="container">
-              <div class="row">
-
-                <div class="col-sm-6">
-                  <small>© 2015 Definity. Made by <a class="no-style-link" href="http://themeforest.net/user/octarinethemes" target="_blank">OctarineThemes</a></small>
-                </div>
-
-                <div class="col-sm-6">
-                  <small><a href="#page-top" class="pull-right to-the-top">To the top<i class="fa fa-angle-up"></i></a></small>
-                </div>
-
-              </div><!-- / .row -->
-            </div><!-- / .container -->
-          </div><!-- / .copyright -->
-
-        </footer>
+                        <div class="col-sm-6">
+                          <small><a href="#page-top" class="pull-right to-the-top">To the top<i class="fa fa-angle-up"></i></a></small>
+                        </div>
+                      </div><!-- / .row -->
+                  </div><!-- / .container -->
+              </div><!-- / .copyright -->
+          </footer>
 
         <!-- ========== Scripts ========== -->
 
