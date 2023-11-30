@@ -48,7 +48,7 @@
               <span class="icon-bar"></span>
             </button>
             <!-- Logo -->
-                <a class="navbar-brand" href="index.html"><img src="{% get_media_prefix %}{{ home_page.logo_main}}"  alt="matro - Logo"></a>
+                <a class="navbar-brand" href="index.html"><img src="{% get_media_prefix %}{{ home_page.logo_main}}"  alt="matro-Logo"></a>
             </div>
 
               <!-- Navbar Links -->
@@ -260,20 +260,22 @@
           <div class="row">
             <div id="projects" style="position: relative; height: 2306.11px;">
 
+                {%for project in projects %}
               <!-- Item 1 -->
-              <div class="col-md-4 portfolio-item print" style="position: absolute; left: 0px; top: 0px;">
+                <div class="col-md-4 portfolio-item print" style="position: absolute; left: 0px; top: 0px;">
                 <div class="p-wrapper hover-light">
-                  <img src="assets/images/project-1.1.jpg" alt="Project Example">
+                  <img src="{% get_media_prefix %}{{ project.project_photo}}"  alt="{{project.project_name}}">
                   <div class="p-hover">
                     <div class="p-content">
-                      <h4>Project Name</h4>
-                      <h6 class="subheading">Sub heading for the project</h6>
+                      <h4>{{project.project_name}}</h4>
+                      <h6 class="subheading">{{project.project_type}}</h6>
                     </div>
                   </div>
-                  <a href="assets/images/project-1.1.jpg" class="open-btn open-gallery"><i class="fa fa-expand"></i></a>
+                  <a href= "{% get_media_prefix %}{{ project.project_photo}}" class="open-btn open-gallery"><i class="fa fa-expand"></i></a>
                 </div>
               </div><!-- / .portfolio-item -->
 
+                {%endfor%}
 
             </div><!-- / #pfolio -->
           </div><!-- / .row -->
