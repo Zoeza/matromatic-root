@@ -308,6 +308,20 @@
                 </div>
                   {% endfor %}
               </div><!-- / .row -->
+
+              <div class="row">
+              <ul class="t-clients clients-slider ws-m slick-initialized slick-slider">
+                  <div aria-live="polite" class="slick-list draggable" tabindex="0">
+                      <div class="slick-track" style="opacity: 1; width: 4688px; transform: translate3d(-1758px, 0px, 0px);">
+                          {% for client in clients %}
+                          <li class="slick-slide slick-cloned" style="width: 586px;" data-slick-index="-1" aria-hidden="true">
+                              <a href="#"><img src="{% get_media_prefix %}{{ client.client_logo}}" alt="{{client.client_name}}"></a>
+                          </li>
+                           {% endfor %}
+                      </div>
+                  </div>
+              </ul><!-- / .t-clients -->
+            </div>
          </section>
           <div class="cta-newsletter cta-dark">
             <div class="bg-overlay">
