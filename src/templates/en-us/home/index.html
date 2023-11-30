@@ -335,120 +335,218 @@
 
         <!-- ========== Footer Contact ========== -->
 
-        <footer id="contact" class="footer-contact">
-          <div class="container-fluid">
-            <div class="row">
-              <!-- Map and address -->
-              <div class="col-lg-6 no-gap contact-info">
-                <!-- Show Info Button -->
-                <div id="map-canvas" class="footer-map"></div>
-                <address class="contact-info-wrapper">
-                  <ul>
-                    <!-- Email -->
-                    <li class="contact-group">
-                      <span class="adr-heading">Email</span>
-                      <span class="adr-info">{{contact_us.email}}</span>
+      <section id="contact" class="section contact-1">
 
-                    </li>
-                     <!-- Address -->
-                    <li class="contact-group">
-                      <span class="adr-heading">Address</span>
-                      <span class="adr-info"> {{contact_us.address}}</span>
+          <header class="sec-heading">
+            <h2>Countact Us</h2>
+            <span class="subheading">We love to hear from you</span>
+          </header>
 
-                    </li>
-                  </ul>
-                  <ul>
-                    <!-- Phone -->
-                    <li class="contact-group">
-                      <span class="adr-heading">Phone</span>
-                      <span class="adr-info">{{contact_us.phone}}</span>
+          <div class="contact-wrapper">
+            <!-- Map -->
+            <div id="map-canvas" class="gmap map-boxed" style="position: relative; overflow: hidden;"><div style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223);"><div class="gm-err-container"><div class="gm-err-content"><div class="gm-err-icon"><img src="https://maps.gstatic.com/mapfiles/api-3/images/icon_error.png" alt="" draggable="false" style="user-select: none;"></div><div class="gm-err-title">Oops! Something went wrong.</div><div class="gm-err-message">This page didn't load Google Maps correctly. See the JavaScript console for technical details.</div></div></div></div></div>
 
-                    </li>
-                    <!-- Mobile -->
-                    <li class="contact-group">
-                      <span class="adr-heading">Mobile</span>
-                      <span class="adr-info">{{contact_us.mobile}}</span>
+            <!-- Show Info Button -->
+            <div class="show-info-link">
+              <a href="#" class="show-info"><i class="fa fa-info"></i><h6>Show info</h6></a>
+            </div>
 
-                    </li>
-                  </ul>
+            <div class="container">
+              <div class="row ws-m">
 
-                </address>
+                <!-- Address Info -->
+                <div class="col-xs-offset-1 col-xs-11 col-md-offset-2 col-md-6 contact-info-wrapper">
+                  <address>
+                    <div class="row">
 
-              </div><!-- / .col-lg-6 -->
+                      <!-- Phone -->
+                      <div class="col-sm-6 address-group">
+                        <span>Phone</span>
+                        <a href="#">+ 123 4567 890</a>
+                        <a href="#">+ 123 7654 098</a>
+                      </div>
 
+                      <!-- Address -->
+                      <div class="col-sm-5 address-group">
+                        <span>Address</span>
+                        <p>1200 some street, il, US</p>
+                      </div>
+
+                    </div><!-- / .row -->
+
+                    <div class="row">
+
+                      <!-- Email -->
+                      <div class="col-sm-6 address-group">
+                        <span>Email</span>
+                        <a href="mailto:sayhello@email.com">sayhello@email.com</a>
+                      </div>
+
+                      <!-- Hours -->
+                      <div class="col-sm-5 address-group">
+                        <span>Open Hours</span>
+                        <p>Mon-Fri: 9am-5pm</p>
+                        <p>Sat: 10am-1pm</p>
+                      </div>
+
+                    </div><!-- / .row -->
+
+                    <!-- Show Map Button -->
+                    <div class="row show-map-link">
+                      <a href="#" class="show-map"><span class="icon-map-pin"></span>Show on map</a>
+                    </div><!-- / .row -->
+                  </address>
+                </div><!-- / .contact-info-wrapper -->
+              </div><!-- / .row -->
 
               <!-- Contact Form -->
-              <div class="col-lg-6 no-gap section contact-form">
-                <header class="sec-heading">
-                  <h2>Contact</h2>
-                  <span class="subheading">Lorem ipsum dolor sit amet</span>
-                </header>
+              <div class="row">
+                <form action="assets/contact-form/contact-form.php" method="POST" id="contact-form-1" class="form-ajax">
+                  <div class="col-md-offset-2 col-md-4 wow fadeInUp" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;">
 
-                <form action="" method="POST" class="form-ajax wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+                    <!-- Name -->
+                    <div class="form-group">
+                      <input type="text" name="name" id="name-contact-1" class="form-control validate-locally" placeholder="Enter your name">
+                      <label for="name-contact-1">Name</label>
+                      <span class="pull-right alert-error"></span>
+                    </div>
 
-                  <!-- Name -->
-                  <div class="form-group">
-                    <input type="text" name="name" id="name-contact-1" class="form-control validate-locally" placeholder="Enter your name">
-                    <label for="name-contact-1">Name</label>
-                    <span class="pull-right alert-error"></span>
+                    <!-- Email -->
+                    <div class="form-group">
+                      <input type="email" name="email" id="email-contact-1" class="form-control validate-locally" placeholder="Enter your email">
+                      <label for="email-contact-1">Email</label>
+                      <span class="pull-right alert-error"></span>
+                    </div>
+
                   </div>
 
-                  <!-- Email -->
-                  <div class="form-group">
-                    <input type="email" name="email" id="email-contact-1" class="form-control validate-locally" placeholder="Enter your email">
-                    <label for="email-contact-1">Email</label>
-                    <span class="pull-right alert-error"></span>
-                  </div>
+                  <div class="col-md-4 wow fadeInUp" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;">
 
-                  <!-- Message -->
-                  <div class="form-group">
-                    <textarea class="form-control" name="message" id="message-contact-1" rows="5" placeholder="Your Message"></textarea>
-                    <label for="message-contact-1">Message</label>
-                  </div>
-                  <input type="submit" class="btn pull-right" value="Send Message">
+                    <!-- Message -->
+                    <div class="form-group">
+                      <textarea name="message" id="message-contact-1" class="form-control" rows="5" placeholder="Your Message"></textarea>
+                      <label for="message-contact-1">Message</label>
+                    </div>
+                    <div>
+                      <input type="submit" class="btn pull-right" value="Send Message">
+                    </div>
 
-                  <!-- Ajax Message -->
-                  <div class="ajax-message col-md-12 no-gap"></div>
+                    <!-- Ajax Message -->
+                    <div class="ajax-message col-md-12 no-gap"></div>
+
+                  </div><!-- / .col-md-4 -->
 
                 </form>
-              </div><!-- / .col-lg-6 -->
+              </div><!-- / .row -->
+            </div><!-- / .container -->
+          </div><!-- / .contact-wrapper -->
+        </section>
+      <footer class="footer-widgets">
+          <div class="container">
+            <div class="row section">
+
+              <!-- About Us -->
+              <div class="col-md-3 col-sm-6 mb-sm-100">
+                <div class="widget about-widget">
+                  <h5 class="header-widget">About Us</h5>
+                  <p>Lorem ipsum dolor sit amet, eiusmod consectetur adipisicing elit, sed do tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.</p>
+
+                  <ul class="social-links">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                    <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+                  </ul>
+                </div><!-- / .widget -->
+              </div><!-- / .col-md-3 -->
+
+              <!-- Instagram Feed -->
+              <div class="col-md-3 col-sm-6 mb-sm-100">
+                <div class="widget gallery-widget">
+                  <h5 class="header-widget">Instagram Feed</h5>
+                  <ul>
+
+                    <li><a href="assets/images/blog-post-1.jpg" class="gallery-widget-lightbox"><img src="assets/images/insta-feed-1.jpg" alt="Instagram Image"><div class="hover-link"><span class="linea-arrows-plus"></span></div></a></li>
+
+                    <li><a href="assets/images/blog-post-2.jpg" class="gallery-widget-lightbox"><img src="assets/images/insta-feed-2.jpg" alt="Instagram Image"><div class="hover-link"><span class="linea-arrows-plus"></span></div></a></li>
+
+                    <li><a href="assets/images/blog-post-3.jpg" class="gallery-widget-lightbox"><img src="assets/images/insta-feed-3.jpg" alt="Instagram Image"><div class="hover-link"><span class="linea-arrows-plus"></span></div></a></li>
+
+                    <li><a href="assets/images/landing-ft-2.jpg" class="gallery-widget-lightbox"><img src="assets/images/insta-feed-4.jpg" alt="Instagram Image"><div class="hover-link"><span class="linea-arrows-plus"></span></div></a></li>
+
+                    <li><a href="assets/images/landing-ft-4.jpg" class="gallery-widget-lightbox"><img src="assets/images/insta-feed-5.jpg" alt="Instagram Image"><div class="hover-link"><span class="linea-arrows-plus"></span></div></a></li>
+
+                    <li><a href="assets/images/landing-ft-1.jpg" class="gallery-widget-lightbox"><img src="assets/images/insta-feed-6.jpg" alt="Instagram Image"><div class="hover-link"><span class="linea-arrows-plus"></span></div></a></li>
+
+                  </ul>
+                </div><!-- / .widget -->
+              </div><!-- / .col-md-3 -->
+
+              <!-- Twitter Feed -->
+              <div class="col-md-3 col-sm-6 mb-sm-100">
+                <div class="widget twitter-widget">
+                  <h5 class="header-widget">Twitter Feed</h5>
+                  <ul>
+
+                    <li>
+                      <a href="#"><i class="fa fa-twitter"></i></a>
+                      <p>5 Reasons You Should Take a Sabbatical from Creative Work <a href="#">http://enva.to/NTa6F</a> by <a href="#">@envato</a> <span>- AUG 10</span></p>
+                    </li>
+
+                    <li>
+                      <a href="#"><i class="fa fa-twitter"></i></a>
+                      <p>What is the enemy of <a href="#">#creativity</a>? <a href="#">http://enva.to/hVl5G</a>  [VIDEO] <br>by <a href="#">@envato</a> <span>- AUG 5</span></p>
+                    </li>
+
+                  </ul>
+                </div><!-- / .widget -->
+              </div><!-- / .col-md-3 -->
+
+              <!-- Newsletter -->
+              <div class="col-md-3 col-sm-6">
+                <div class="widget newsletter-widget">
+                  <h5 class="header-widget">Newsletter</h5>
+
+                  <form class="mc-form subscribe-form" _lpchecked="1">
+                    <div class="form-group">
+
+                      <!-- Email -->
+                      <input type="email" name="EMAIL" placeholder="Join our newsletter">
+
+                      <!-- Send Button -->
+                      <button type="submit" name="subscribe" class="mc-send-btn"><i class="fa fa-send-o"></i></button>
+                    </div>
+
+                    <!-- Ajax message -->
+                    <div class="subscribe-result"></div>
+                  </form>
+
+                </div><!-- / .widget -->
+              </div><!-- / .col-md-3 -->
 
             </div><!-- / .row -->
-          </div><!-- / .container-fluid -->
-
-
-          <!-- Social Links -->
-          <div class="dark-bg">
-            <div class="container footer-social-links">
-              <div class="row">
-
-                <ul>
-                    {% for social_media in socials_media %}
-                        <li><a href="{{social_media.link}}}">{{social_media.name}}</a></li>
-                    {% endfor %}
-
-                </ul>
-
-              </div>
-            </div><!-- / .container -->
-          </div><!-- / .dark-bg -->
+          </div><!-- / .container -->
 
 
           <!-- Copyright -->
           <div class="copyright">
             <div class="container">
               <div class="row">
-                <div class="col-md-6">
-                  <small>&copy; 2023 Matromatic <a class="no-style-link" href="https://matromatic.com/" target="_blank"></a></small>
+
+                <div class="col-sm-6">
+                  <small>© 2015 Definity. Made by <a class="no-style-link" href="http://themeforest.net/user/octarinethemes" target="_blank">OctarineThemes</a></small>
                 </div>
-                <div class="col-md-6">
-                  <small><a href="#page-top" class="pull-right to-the-top"><i class="fa-solid fa-angles-up"></i></a></small>
+
+                <div class="col-sm-6">
+                  <small><a href="#page-top" class="pull-right to-the-top">To the top<i class="fa fa-angle-up"></i></a></small>
                 </div>
 
               </div><!-- / .row -->
             </div><!-- / .container -->
           </div><!-- / .copyright -->
-        </footer><!-- / .footer-contact -->
+
+        </footer>
 
         <!-- ========== Scripts ========== -->
 
