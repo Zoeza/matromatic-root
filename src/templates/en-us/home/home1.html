@@ -1,0 +1,428 @@
+{% extends "en-us/home/base.html" %}
+{% load static %}
+  {% block body %}
+
+        <!-- ========== Navigation ========== -->
+          <nav class="navbar navbar-default navbar-fixed-top trans-helper navbar-fw mobile-nav" role="navigation">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                 <!-- Logo -->
+                <a class="navbar-brand" href="index.html"><img src="{% get_media_prefix %}{{ home_page.logo_main}}"  alt="matro-Logo"></a>
+            </div>
+
+              <!-- Navbar Links -->
+            <div id="navbar" class="navbar-collapse collapse page-scroll navbar-right" style="max-height: 733px;">
+              <ul class="nav navbar-nav">
+                  <li><a href="#home">Accueil<span class="sr-only"></span></a></li>
+                  <li><a href="#about">À propos de nous<span class="sr-only"></span></a></li>
+                  <li><a href="#services">Services<span class="sr-only"></span></a></li>
+                  <li><a href="#projects">Projets <span class="sr-only"></span></a></li>
+                  <li><a href="#testimonials">Clients<span class="sr-only"></span></a></li>
+                  <li><a href="#contact">Contact<span class="sr-only"></span></a></li>
+              </ul><!-- / .nav .navbar-nav -->
+            </div><!--/.navbar-collapse -->
+          </nav>
+
+        <!-- ========== Hero Cover ========== -->
+          <div id="home" class="main-demo-hero">
+              <div class="bg-overlay">
+            <!-- Hero Content -->
+              <div class="hero-content-wrapper">
+              <div class="hero-content">
+                <h1 class="hero-lead wow fadeInLeft" data-wow-duration="1.5s" style="visibility: visible; animation-duration: 1.5s; animation-name: fadeInLeft;"> {{home_page.company_name}}</h1>
+                <h4 class="h-alt hero-subheading wow fadeIn" data-wow-duration="2s" data-wow-delay=".7s" style="visibility: visible; animation-duration: 2s; animation-delay: 0.7s; animation-name: fadeIn;">{{ home_page.company_slogan }}</h4>
+                <a href="#about" class="btn wow fadeIn" data-wow-duration="2s" data-wow-delay="1s" style="visibility: visible; animation-duration: 2s; animation-delay: 1s; animation-name: fadeIn;">À propos</a>
+              </div>
+            </div>
+            <!-- Scroller -->
+                  <a href="#about" class="scroller scroller-dark">
+              <span class="linea-basic-magic-mouse"></span>
+            </a>
+              </div><!-- / .bg-overlay -->
+          </div>
+        <!-- ========== About - Section ========== -->
+          <section id="about" class="container">
+          <div class="row">
+            <div class="ws-l"></div>
+            <header class="sec-heading">
+              <h2>bienvenue Chez matromatic</h2>
+              <span class="subheading">le partenaire ideal pour votre entreprise</span>
+            </header>
+            <div class="col-md-offset-2 col-md-8 text-center ws-m">
+              <p>{{ main_content.about_us_description }} </p>
+            </div>
+          </div><!-- / .row -->
+        </section>
+          <!-- ========== Services ========== -->
+          <div class="gray-bg">
+            <section id="services" class="container section ft-centered  ">
+
+              <header class="sec-heading">
+                <h2>CE QUE NOUS FAISONS</h2>
+                <span class="subheading">{{main_content.our_service_description}}</span>
+              </header>
+
+              <div class="row">
+                {% for service in services %}
+                <!-- Item 1 -->
+                <div class="col-md-3 col-sm-6 mb-sm-50 ft-item ft-circle-frame-dark wow zoomIn" data-wow-duration=".6s" data-wow-delay=".3s" style="visibility: visible; animation-duration: 0.6s; animation-delay: 0.3s; animation-name: zoomIn;">
+                  <span class="{{service.icon}}"></span>
+                  <h5>{{service.service_title}}</h5>
+                  <p> {{service.service_description}} </p>
+                </div>
+                  {% endfor %}
+              </div><!-- / .row -->
+         </section>
+        </div>
+          <!-- ========== Number Counters - Dark bg ========== -->
+          <div class="number-counters">
+              <div class="container">
+                  <div id="counters-min" class="row count-wrapper">
+
+              <!-- Item 1 -->
+              <div class="col-md-3 mb-sm-100 count-item wow fadeIn" data-wow-duration="1s" data-wow-delay=".3s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: fadeIn;">
+                <span id="count-min-1" class="count-nbr">100</span>
+                <span class="count-text">Clients</span>
+              </div>
+
+              <!-- Item 2 -->
+              <div class="col-md-3 mb-sm-100 count-item wow fadeIn" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeIn;">
+                <span id="count-min-2" class="count-nbr">78</span>
+                <span class="count-text">Visiteurs</span>
+              </div>
+
+              <!-- Item 3 -->
+              <div class="col-md-3 mb-sm-100 count-item wow fadeIn" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeIn;">
+                <span id="count-min-3" class="count-nbr">45</span>
+                <span class="count-text">Realisations</span>
+              </div>
+
+              <!-- Item 4 -->
+              <div class="col-md-3 count-item wow fadeIn" data-wow-duration="1s" data-wow-delay=".3s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: fadeIn;">
+                <span id="count-min-4" class="count-nbr">70</span>
+                <span class="count-text">projets en cours</span>
+              </div>
+
+            </div><!-- / .row -->
+              </div><!-- / .container -->
+          </div>
+        <!-- ========== Feature - Steps Numbers ========== -->
+          <div class="gray-bg">
+              <section class="container ft-steps-numbers ">
+            <div class="row section">
+              <header class="sec-heading ws-s">
+                <h2>NOTRE PROCESSUS DE TRAVAIL</h2>
+                <span class="subheading">{{main_content.our_process_description}}</span>
+              </header>
+                {% for process_step  in process_steps %}
+                  <div class="col-lg-4 col-md-6 mb-sm-100 ft-item wow fadeIn" data-wow-duration="{{process_step.process_number}}s">
+                    <span class="ft-nbr">0{{process_step.process_number}}</span>
+                    <h4>{{process_step.process_title}}</h4>
+                    <p>{{process_step.process_description}}</p>
+                      <br>
+                      <br>
+
+                  </div><!-- / .row -->
+                {% endfor %}
+            </div>
+        </section><!-- / .container -->
+          </div>
+          <section class="container section ft-x">
+              <div class="row">
+
+            <header class="sec-heading">
+              <h2>Pourquoi nous choisir ?</h2>
+              <span class="subheading">Created to work on all mobile devices</span>
+            </header>
+
+            <!-- Feature 1 -->
+            <div class="col-lg-4 wow fadeInLeft" data-wow-duration=".8s" style="visibility: visible; animation-duration: 0.8s; animation-name: fadeInLeft;">
+
+              <!-- white space -->
+              <div class="ws-m"></div>
+
+              <!-- Material right aligned - Item 1 -->
+              <div class="col-md-12 no-gap ws-s ft-item ft-material right-align">
+                <div class="ft-content">
+                  <h5>Easily Adjusti</h5>
+                  <p>Lorem ipsum dolor sit amet, ete elit consectetur adipisicing. Omnis quae, ipsam impedit eius.</p>
+                </div>
+                <div class="ft-icon">
+                  <i class="fa fa-hand-peace-o"></i>
+                </div>
+              </div><!-- / .ft-item -->
+
+              <!-- Material right aligned - Item 2 -->
+              <div class="col-md-12 no-gap ws-s ft-item ft-material right-align">
+                <div class="ft-content">
+                  <h5>100% Responsive</h5>
+                  <p>Lorem ipsum dolor sit amet, ete elit consectetur adipisicing. Omnis quae, ipsam impedit eius.</p>
+                </div>
+                <div class="ft-icon">
+                  <i class="fa fa-tv"></i>
+                </div>
+              </div><!-- / .ft-item -->
+
+            </div><!-- / .col-lg-4 -->
+
+            <!-- Center Image -->
+            <div class="col-lg-4">
+              <img src="{% get_media_prefix %}{{ main_content.about_us_photo }}" alt="iPad cover" class="img-responsive center-block wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInUp;">
+            </div>
+
+            <!-- Features Left -->
+            <div class="col-lg-4 wow fadeInRight" data-wow-duration=".8s" style="visibility: visible; animation-duration: 0.8s; animation-name: fadeInRight;">
+
+              <!-- white space -->
+              <div class="ws-m"></div>
+
+              <!-- Item 3 -->
+              <div class="col-md-12 no-gap ws-s ft-item ft-material">
+                <i class="fa fa-cogs"></i>
+                <h5>Modular Design</h5>
+                <p>Lorem ipsum dolor sit amet, ete elit consectetur adipisicing. Omnis quae, ipsam impedit eius, vero.</p>
+              </div><!-- / .ft-item -->
+
+              <!-- Item 4 -->
+              <div class="col-md-12 no-gap ws-s ft-item ft-material">
+                <i class="fa fa-star"></i>
+                <h5>Lots of features</h5>
+                <p>Lorem ipsum dolor sit amet, ete elit consectetur adipisicing. Omnis quae, ipsam impedit eius, vero.</p>
+              </div><!-- / .ft-item -->
+
+            </div><!-- / .col-lg-4 -->
+
+          </div><!-- / .row -->
+          </section>
+        <!-- ========== projects Full Width - 4 Columns ========== -->
+           <section class="container-fluid portfolio-layout portfolio-columns-fw">
+              <div class="row">
+                <header class="sec-heading">
+                  <h2>Nos realisations</h2>
+                  <span class="subheading">Lorem ipsum dolor sit amet consectetur adipisicing</span>
+                </header>
+              </div><!-- / .row -->
+
+          <!-- Filters -->
+              <div class="row">
+                <ul id="pfolio-filters" class="portfolio-filters">
+                  <li class="active"><a href="#" data-filter="*">All</a></li>
+                  <li><a href="#" data-filter=".webdesing">Webdesign</a></li>
+                  <li><a href="#" data-filter=".print">Print</a></li>
+                  <li><a href="#" data-filter=".photo">Photography</a></li>
+                </ul>
+              </div>
+
+               <div class="row">
+                   <div id="pfolio">
+                        {% for project in projects%}
+                      <!-- Item 1 -->
+                      <div class="col-md-4 portfolio-item print">
+                        <div class="p-wrapper hover-light">
+                          <img src="{% get_media_prefix %}{{ project.project_photo}}"  alt="Project Example">
+                          <div class="p-hover">
+                            <div class="p-content">
+                              <h4>{{project.project_name}}</h4>
+                              <h6 class="subheading">{{project.project_type}}</h6>
+                            </div>
+                          </div>
+                          <a href="{% get_media_prefix %}{{ project.project_photo}}"  class="open-btn open-gallery"><i class="fa fa-expand"></i></a>
+                        </div>
+                      </div>
+                        {% endfor %}
+                    </div>
+               </div>
+
+           </section>
+            <div class="cta-link cta-dark">
+          <div class="bg-overlay">
+
+            <div class="cta-wrapper">
+              <h3 class="h-alt wow fadeIn" data-wow-delay=".1s" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeIn;">VOYEZ CE QUE NOUS POUVONS FAIRE POUR VOUS</h3>
+              <a href="#contact" class="btn btn-light btn-large wow fadeIn" data-wow-delay=".3s" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: fadeIn;">Entrerez en contact</a>
+            </div>
+
+          </div>
+        </div>
+        <!-- ========== Clients List - Dark ========== -->
+        <!-- / .row -->
+          <section id="testimonials" class="container section ft-centered ">
+              <header class="sec-heading">
+                <h2>Nos clients</h2>
+                <span class="subheading">Read some of the testimonials from our amazing clients</span>
+              </header>
+
+              <div class="row">
+                {% for client in clients %}
+                <!-- Item 1 -->
+                <div class="col-md-3 col-sm-6 mb-sm-50 ft-item wow zoomIn" data-wow-duration=".6s" data-wow-delay=".3s" style="visibility: visible; animation-duration: 0.6s; animation-delay: 0.3s; animation-name: zoomIn;">
+                  <span><img src="{% get_media_prefix %}{{ client.client_logo}}" alt="{{client.client_name}}"></span>
+                </div>
+                  {% endfor %}
+              </div><!-- / .row -->
+          </section>
+        <!-- ========== Footer Contact ========== -->
+          <section id="contact" class="contact-1  ">
+                <header class="sec-heading">
+                  <h2>Contact </h2>
+                  <span class="subheading"></span>
+              </header>
+
+          <div class="contact-wrapper">
+
+            <!-- Map -->
+              <div id="map-canvas" class="gmap map-boxed" style="position: relative; overflow: hidden;">
+                <div style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(248, 248, 248);">
+                <div class="gm-err-container">
+                    <div class="gm-err-content">
+                        <div class="gm-err-icon"></div>
+                    </div>
+                </div>
+                </div>
+              </div>
+              <!-- Show Info Button -->
+              <div class="container">
+              <div class="row ws-m">
+                <!-- Address Info -->
+                <div class="col-xs-offset-1 col-xs-11 col-md-offset-2 col-md-6 contact-info-wrapper">
+                  <address>
+                    <div class="row">
+
+                      <!-- Phone -->
+                      <div class="col-sm-6 address-group">
+                        <span>Phone</span>
+                        <a href="#">{{contact_us.phone}}</a>
+                        <a href="#">{{contact_us.mobile}}</a>
+                      </div>
+
+                      <!-- Address -->
+                      <div class="col-sm-5 address-group">
+                        <span>Address</span>
+                        <p>{{contact_us.address}}</p>
+                      </div>
+
+                    </div><!-- / .row -->
+
+                    <div class="row">
+
+                      <!-- Email -->
+                      <div class="col-sm-6 address-group">
+                        <span>Email</span>
+                        <a href="mailto:{{contact_us.email}}">{{contact_us.email}}</a>
+                      </div>
+
+                      <!-- Hours -->
+                      <div class="col-sm-5 address-group">
+                        <span>Heures de travail</span>
+                        <p>Tous les jours: 9am-8pm</p>
+                      </div>
+                    </div><!-- / .row -->
+                  </address>
+                </div><!-- / .contact-info-wrapper -->
+              </div><!-- / .row -->
+
+              <!-- Contact Form -->
+              <div class="row">
+                <form action="assets/contact-form/contact-form.php" method="POST" id="contact-form-1" class="form-ajax">
+                  <div class="col-md-offset-2 col-md-4 wow fadeInUp" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;">
+
+                    <!-- Name -->
+                    <div class="form-group">
+                      <input type="text" name="name" id="name-contact-1" class="form-control validate-locally" placeholder="Enterez votre nom ">
+                      <label for="name-contact-1">Nom</label>
+                      <span class="pull-right alert-error"></span>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+                      <input type="email" name="email" id="email-contact-1" class="form-control validate-locally" placeholder="Enterez votre email">
+                      <label for="email-contact-1">Email</label>
+                      <span class="pull-right alert-error"></span>
+                    </div>
+
+                  </div>
+
+                  <div class="col-md-4 wow fadeInUp" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;">
+
+                    <!-- Message -->
+                    <div class="form-group">
+                      <textarea name="message" id="message-contact-1" class="form-control" rows="5" placeholder="Votre Message"></textarea>
+                      <label for="message-contact-1">Message</label>
+                    </div>
+                    <div>
+                      <input type="submit" class="btn pull-right" value="Envoyer">
+                    </div>
+
+                    <!-- Ajax Message -->
+                    <div class="ajax-message col-md-12 no-gap"></div>
+
+                  </div><!-- / .col-md-4 -->
+
+                </form>
+              </div><!-- / .row -->
+            </div><!-- / .container -->
+          </div><!-- / .contact-wrapper -->
+        </section>
+          <footer class="footer-widgets">
+              <div class="container">
+                  <div class="row section">
+
+              <!-- About Us -->
+              <div class="col-md-6 col-sm-6 mb-sm-100">
+                <div class="widget about-widget">
+
+                  <ul class="social-links">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+                  </ul>
+                </div><!-- / .widget -->
+              </div><!-- / .col-md-3 -->
+
+              <!-- Newsletter -->
+              <div class="col-md-6 col-sm-6">
+                <div class="widget newsletter-widget">
+                  <h5 class="header-widget">Newsletter</h5>
+
+                  <form class="mc-form subscribe-form" _lpchecked="1">
+                    <div class="form-group">
+
+                      <!-- Email -->
+                      <input type="email" name="EMAIL" placeholder="Rejoignez notre newsletter">
+
+                      <!-- Send Button -->
+                      <button type="submit" name="subscribe" class="mc-send-btn"><i class="fa fa-send-o"></i></button>
+                    </div>
+
+                    <!-- Ajax message -->
+                    <div class="subscribe-result"></div>
+                  </form>
+
+                </div><!-- / .widget -->
+              </div><!-- / .col-md-3 -->
+
+            </div><!-- / .row -->
+              </div><!-- / .container -->
+              <!-- Copyright -->
+              <div class="copyright">
+                  <div class="container">
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <small>© 2023 <a class="no-style-link" href="https://matromatic.com/" target="_blank">Matromatic</a></small>
+                        </div>
+
+                        <div class="col-sm-6">
+                          <small><a href="#page-top" class="pull-right to-the-top"><i class="fa fa-angle-up"></i></a></small>
+                        </div>
+                      </div><!-- / .row -->
+                  </div><!-- / .container -->
+              </div><!-- / .copyright -->
+          </footer>
+  {% endblock %}
+

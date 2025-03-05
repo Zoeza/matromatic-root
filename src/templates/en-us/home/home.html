@@ -1,428 +1,2839 @@
-{% extends "en-us/home/base.html" %}
+<!DOCTYPE html>
 {% load static %}
-  {% block body %}
 
-        <!-- ========== Navigation ========== -->
-          <nav class="navbar navbar-default navbar-fixed-top trans-helper navbar-fw mobile-nav" role="navigation">
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-                 <!-- Logo -->
-                <a class="navbar-brand" href="index.html"><img src="{% get_media_prefix %}{{ home_page.logo_main}}"  alt="matro-Logo"></a>
-            </div>
+<html lang="en" data-brk-skin="brk-blue.css">
 
-              <!-- Navbar Links -->
-            <div id="navbar" class="navbar-collapse collapse page-scroll navbar-right" style="max-height: 733px;">
-              <ul class="nav navbar-nav">
-                  <li><a href="#home">Accueil<span class="sr-only"></span></a></li>
-                  <li><a href="#about">À propos de nous<span class="sr-only"></span></a></li>
-                  <li><a href="#services">Services<span class="sr-only"></span></a></li>
-                  <li><a href="#projects">Projets <span class="sr-only"></span></a></li>
-                  <li><a href="#testimonials">Clients<span class="sr-only"></span></a></li>
-                  <li><a href="#contact">Contact<span class="sr-only"></span></a></li>
-              </ul><!-- / .nav .navbar-nav -->
-            </div><!--/.navbar-collapse -->
-          </nav>
+<head>
+	<title>Agency Modern - Berserk HTML</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,maximum-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="apple-touch-icon-precomposed" href="favicon.ico">
+	<meta name="theme-color" content="#2775FF">
+	<meta name="keywords" content="themeforest, theme, html, template">
+	<meta name="description" content="themeforest, theme, html, template">
+	<link rel="stylesheet" id="brk-direction-bootstrap" href="{% static 'home/css/assets/bootstrap.css' %}">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link rel="stylesheet" id="brk-skin-color" href="{% static 'home/css/skins/brk-blue.css' %}">
+	<link id="brk-base-color" rel="stylesheet" href="{% static 'home/css/skins/brk-base-color.css' %}">
+	<link rel="stylesheet" id="brk-direction-offsets" href="{% static 'home/css/assets/offsets.css' %}">
+	<link id="brk-css-min" rel="stylesheet" href="{% static 'home/css/assets/styles.min.css' %}">
+	<link rel="stylesheet" href="{% static 'home/vendor/revslider/css/settings.css' %}">
+</head>
 
-        <!-- ========== Hero Cover ========== -->
-          <div id="home" class="main-demo-hero">
-              <div class="bg-overlay">
-            <!-- Hero Content -->
-              <div class="hero-content-wrapper">
-              <div class="hero-content">
-                <h1 class="hero-lead wow fadeInLeft" data-wow-duration="1.5s" style="visibility: visible; animation-duration: 1.5s; animation-name: fadeInLeft;"> {{home_page.company_name}}</h1>
-                <h4 class="h-alt hero-subheading wow fadeIn" data-wow-duration="2s" data-wow-delay=".7s" style="visibility: visible; animation-duration: 2s; animation-delay: 0.7s; animation-name: fadeIn;">{{ home_page.company_slogan }}</h4>
-                <a href="#about" class="btn wow fadeIn" data-wow-duration="2s" data-wow-delay="1s" style="visibility: visible; animation-duration: 2s; animation-delay: 1s; animation-name: fadeIn;">À propos</a>
-              </div>
-            </div>
-            <!-- Scroller -->
-                  <a href="#about" class="scroller scroller-dark">
-              <span class="linea-basic-magic-mouse"></span>
-            </a>
-              </div><!-- / .bg-overlay -->
-          </div>
-        <!-- ========== About - Section ========== -->
-          <section id="about" class="container">
-          <div class="row">
-            <div class="ws-l"></div>
-            <header class="sec-heading">
-              <h2>bienvenue Chez matromatic</h2>
-              <span class="subheading">le partenaire ideal pour votre entreprise</span>
-            </header>
-            <div class="col-md-offset-2 col-md-8 text-center ws-m">
-              <p>{{ main_content.about_us_description }} </p>
-            </div>
-          </div><!-- / .row -->
-        </section>
-          <!-- ========== Services ========== -->
-          <div class="gray-bg">
-            <section id="services" class="container section ft-centered  ">
+<body>
+    <div class="brk-loader">
+		<div class="brk-loader__loader"></div>
+	</div>
 
-              <header class="sec-heading">
-                <h2>CE QUE NOUS FAISONS</h2>
-                <span class="subheading">{{main_content.our_service_description}}</span>
-              </header>
+	<div class="brk-theme-options" data-brk-library="brk-customizer">
+		<div class="brk-theme-options__panel">
+			<a href="#" class="panel-open brk-theme-options__panel-link"><i class="fal fa-cog"></i></a>
+			<a href="https://themeforest.net/item/berserk-creative-multipurpose-commerce-blog-apps-html-template/48569388" target="_blank" class="brk-theme-options__panel-link"><i class="fal fa-shopping-cart"></i></a>
+			<a href="https://www.youtube.com/watch?v=cZM8OoYu4So&feature=youtu.be" target="_blank" class="brk-theme-options__panel-link"><i class="fal fa-play-circle"></i></a>
+			<a href="https://nikadevs.ticksy.com/" target="_blank" class="brk-theme-options__panel-link"><i class="fal fa-comment-alt"></i></a>
+		</div>
+		<div class="brk-theme-options__control">
+			<div class="brk-theme-options__header">
+				<span class="font__family-montserrat font__weight-bold font__size-21 pl-30">Demo Options</span>
+				<div class="brk-theme-options__close panel-close"></div>
+			</div>
+			<div class="accordion accordion-slider-min" role="tablist" aria-multiselectable="true">
+				<div class="card expanded">
+					<a class="card-header" role="tab" id="heading_option_1" data-toggle="collapse" data-parent=".accordion-slider-min" href="#option_1" aria-expanded="true" aria-controls="option_1">
+						<h5 class="mb-0 font__family-montserrat font__weight-medium font__size-21 line__height-22">Layouts</h5>
+						<div class="card-toggle-icon">
+							<span class="before"></span>
+							<span class="after"></span>
+						</div>
+					</a>
+					<div id="option_1" class="collapse show" role="tabpanel" aria-labelledby="heading_option_1">
+						<div class="card-block">
+							<div class="brk-theme-options__wrap">
+								<div class="row">
+									<a href="/demo_creative_agency.html" class="col-6 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_120" data-brk-bg-check="{% static 'home/img/page-intro/demo-creative-agency.jpg' %}">
 
-              <div class="row">
-                {% for service in services %}
-                <!-- Item 1 -->
-                <div class="col-md-3 col-sm-6 mb-sm-50 ft-item ft-circle-frame-dark wow zoomIn" data-wow-duration=".6s" data-wow-delay=".3s" style="visibility: visible; animation-duration: 0.6s; animation-delay: 0.3s; animation-name: zoomIn;">
-                  <span class="{{service.icon}}"></span>
-                  <h5>{{service.service_title}}</h5>
-                  <p> {{service.service_description}} </p>
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+									<a href="/demo_minimalistic_portfolio.html" class="col-6 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_120" data-brk-bg-check="{% static 'home/img/page-intro/demo_minimalistic_portfolio.jpg '%}">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+									<a href="/demo_freelance_blog.html" class="col-6 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_120" data-brk-bg-check="{% static 'home/img/page-intro/demo-freelance-blog.jpg '%}">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+									<a href="/demo_agency_animation.html" class="col-6 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_120" data-brk-bg-check="{% static 'home/img/page-intro/demo-agency-animation.jpg '%}">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+									<a href="/demo_winter_trip_agency.html" class="col-6 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_120" data-brk-bg-check="{% static 'home/img/page-intro/demo_winter_trip.jpg '%}">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+									<a href="/demo_website_agency.html" class="col-6 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_120" data-brk-bg-check="{% static 'home/img/page-intro/demo-website-agency.jpg '%}">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+									<a href="/demo_saas.html" class="col-6 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_120" data-brk-bg-check="{% static 'home/img/page-intro/demo_saas.jpg '%}">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+									<a href="/demo_freelance_portfolio.html" class="col-6 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_120" data-brk-bg-check="{% static 'home/img/page-intro/demo-freelance-portfolio.jpg '%}">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+									<a href="/demo_travel_agency.html" class="col-6 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_120" data-brk-bg-check="{% static 'home/img/page-intro/demo-travel-agency.jpg '%}">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+									<a href="/demo_agency_fluid.html" class="col-6 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_120" data-brk-bg-check="{% static 'home/img/page-intro/demo-agency-fluid.jpg '%}">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+									<a href="/demo_agency_modern.html" class="col-6 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_120" data-brk-bg-check="{% static 'home/img/page-intro/demo-agency-modern.jpg '%}">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+									<a href="/demo_agency_urban.html" class="col-6 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_120" data-brk-bg-check="{% static 'home/img/page-intro/demo-agency-urban.jpg '%}">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+									<a href="/demo_photography.html" class="col-6 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_120" data-brk-bg-check="{% static 'home/img/page-intro/demo-photography.jpg '%}">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+									<a href="/demo_logistic.html" class="col-6 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_120" data-brk-bg-check="{% static 'home/img/page-intro/demo-logistic.jpg '%}">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+									<a href="/demo_art.html" class="col-6 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_120" data-brk-bg-check="{% static 'home/img/page-intro/demo-art.jpg '%}">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+									<a href="/demo_construction.html" class="col-6 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_120" data-brk-bg-check="{% static 'home/img/page-intro/demo-construction.jpg '%}">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+									<a href="/demo_magazine.html" class="col-6 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_120" data-brk-bg-check="{% static 'home/img/page-intro/demo-magazine.jpg '%}">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+									<a href="/demo_spa.html" class="col-6 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_120" data-brk-bg-check="{% static 'home/img/page-intro/demo-spa.jpg '%}">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+									<a href="/demo_shop_drone.html" class="col-6 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_120" data-brk-bg-check="{% static 'home/img/page-intro/demo-shop-drone.jpg '%}">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+									<a href="/demo_shop_video.html" class="col-6 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_120" data-brk-bg-check="{% static 'home/img/page-intro/demo-shop-video.jpg '%}">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+									<a href="/demo_product_landing.html" class="col-6 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_120" data-brk-bg-check="{% static 'home/img/page-intro/demo-product-landing.jpg '%}">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+									<a href="/demo_shop_modern.html" class="col-6 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_120" data-brk-bg-check="{% static 'home/img/page-intro/demo-shop-modern.jpg '%}">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+									<a href="/demo_shop_electronics.html" class="col-6 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_120" data-brk-bg-check="{% static 'home/img/page-intro/demo-shop-electronics.jpg '%}">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+									<a href="/demo_shop_clothes.html" class="col-6 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_120" data-brk-bg-check="{% static 'home/img/page-intro/demo-shop-clothes.jpg '%}">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+									<a href="/demo_shop_trendy.html" class="col-6 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_120" data-brk-bg-check="{% static 'home/img/page-intro/demo-shop-trendy.jpg '%}">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+									<a href="/demo_product_sport.html" class="col-6 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_120" data-brk-bg-check="{% static 'home/img/page-intro/demo-product-sport.jpg '%}">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<a class="card-header collapsed" role="tab" id="heading_option_2" data-toggle="collapse" data-parent=".accordion-slider-min" href="#option_2" aria-expanded="false" aria-controls="option_2">
+						<h5 class="mb-0 font__family-montserrat font__weight-medium font__size-21 line__height-22">
+							Headers
+						</h5>
+						<div class="card-toggle-icon">
+							<span class="before"></span>
+							<span class="after"></span>
+						</div>
+					</a>
+					<div id="option_2" class="collapse" role="tabpanel" aria-labelledby="heading_option_2">
+						<div class="card-block">
+							<div class="brk-theme-options__wrap">
+								<div class="row">
+									<a href="/header-1.html" class="col-12 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_60" data-brk-bg-check="{% static 'home/img/page-intro/thumb-header-01.jpg' %}">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+									<a href="/header-2.html" class="col-12 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_60" data-brk-bg-check="{% static 'home/img/page-intro/thumb-header-02.jpg' %}">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+									<a href="/header-3.html" class="col-12 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_60" data-brk-bg-check="{% static 'home/img/page-intro/thumb-header-03.jpg' %}">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+									<a href="/header-4.html" class="col-12 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_60" data-brk-bg-check="{% static 'home/img/page-intro/thumb-header-04.jpg' %}">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+									<a href="/header-5.html" class="col-12 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_60" data-brk-bg-check="{% static 'home/img/page-intro/thumb-header-05.jpg' %}">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+									<a href="/header-6.html" class="col-12 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_60" data-brk-bg-check="{% static 'home/img/page-intro/thumb-header-06.jpg' %}">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+									<a href="/header-7.html" class="col-12 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_60" data-brk-bg-check="{% static 'home/img/page-intro/thumb-header-07.jpg' %}">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+									<a href="/header-8.html" class="col-12 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_60" data-brk-bg-check="{% static 'home/img/page-intro/thumb-header-08.jpg' %}">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+									<a href="/header-9.html" class="col-12 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_60" data-brk-bg-check="{% static 'home/img/page-intro/thumb-header-09.jpg' %}">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+									<a href="/header-10.html" class="col-12 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_60" data-brk-bg-check="{% static 'home/img/page-intro/thumb-header-10.jpg' %}">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+									<a href="/header-11.html" class="col-12 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_60" data-brk-bg-check="{% static 'home/img/page-intro/thumb-header-11.jpg' %}">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+									<a href="/header-12.html" class="col-12 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_60" data-brk-bg-check="{% static 'home/img/page-intro/thumb-header-12.jpg' %}">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+									<a href="/header-13.html" class="col-12 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_60" data-brk-bg-check="{% static 'home/img/page-intro/thumb-header-13.jpg' %}">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<a class="card-header collapsed" role="tab" id="heading_option_3" data-toggle="collapse" data-parent=".accordion-slider-min" href="#option_3" aria-expanded="false" aria-controls="option_3">
+						<h5 class="mb-0 font__family-montserrat font__weight-medium font__size-21 line__height-22">
+							Footers
+						</h5>
+						<div class="card-toggle-icon">
+							<span class="before"></span>
+							<span class="after"></span>
+						</div>
+					</a>
+					<div id="option_3" class="collapse" role="tabpanel" aria-labelledby="heading_option_3">
+						<div class="card-block">
+							<div class="brk-theme-options__wrap">
+								<div class="row">
+									<a href="/footer.html#footer_1" class="col-12 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_60" data-brk-bg-check="img/page-intro/thumb-footer-01.jpg">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+									<a href="/footer.html#footer_2" class="col-12 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_60" data-brk-bg-check="img/page-intro/thumb-footer-02.jpg">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+									<a href="/footer.html#footer_3" class="col-12 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_60" data-brk-bg-check="img/page-intro/thumb-footer-03.jpg">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+									<a href="/footer.html#footer_4" class="col-12 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_60" data-brk-bg-check="img/page-intro/thumb-footer-04.jpg">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+									<a href="/footer.html#footer_5" class="col-12 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_60" data-brk-bg-check="img/page-intro/thumb-footer-05.jpg">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+									<a href="/footer.html#footer_6" class="col-12 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_60" data-brk-bg-check="img/page-intro/thumb-footer-06.jpg">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+									<a href="/footer.html#footer_7" class="col-12 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_60" data-brk-bg-check="img/page-intro/thumb-footer-07.jpg">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+									<a href="/footer.html#footer_8" class="col-12 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_60" data-brk-bg-check="img/page-intro/thumb-footer-08.jpg">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+									<a href="/footer.html#footer_9" class="col-12 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_60" data-brk-bg-check="img/page-intro/thumb-footer-09.jpg">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+									<a href="/footer.html#footer_10" class="col-12 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_60" data-brk-bg-check="img/page-intro/thumb-footer-10.jpg">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+									<a href="/footer.html#footer_11" class="col-12 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_60" data-brk-bg-check="img/page-intro/thumb-footer-11.jpg">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+									<a href="/footer.html#footer_12" class="col-12 brk-theme-options-pathname nohash-animat">
+										<div class="brk-theme-options__check brk-theme-options__check_60" data-brk-bg-check="img/page-intro/thumb-footer-12.jpg">
+											<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<a class="card-header collapsed" role="tab" id="heading_option_4" data-toggle="collapse" data-parent=".accordion-slider-min" href="#option_4" aria-expanded="false" aria-controls="option_4">
+						<h5 class="mb-0 font__family-montserrat font__weight-medium font__size-21 line__height-22">
+							Skin
+						</h5>
+						<div class="card-toggle-icon">
+							<span class="before"></span>
+							<span class="after"></span>
+						</div>
+					</a>
+					<div id="option_4" class="collapse" role="tabpanel" aria-labelledby="heading_option_4">
+						<div class="card-block">
+							<div class="brk-theme-options__color">
+								<div class="brk-theme-options__color-row">
+									<div class="brk-theme-options__color-radio" data-skin="brk-blue" title="blue" style="--oc: #3f96f7">
+										<span></span>
+										<i class="fal fa-check"></i>
+									</div>
+									<div class="brk-theme-options__color-radio" data-skin="brk-dark-blue" title="dark-blue" style="--oc: #0f5ae0">
+										<span></span>
+										<i class="fal fa-check"></i>
+									</div>
+									<div class="brk-theme-options__color-radio" data-skin="brk-dark-blue-1" title="dark-blue-1" style="--oc: #2067dc">
+										<span></span>
+										<i class="fal fa-check"></i>
+									</div>
+									<div class="brk-theme-options__color-radio" data-skin="brk-green" title="green" style="--oc: #08d75f">
+										<span></span>
+										<i class="fal fa-check"></i>
+									</div>
+									<div class="brk-theme-options__color-radio" data-skin="brk-green-1" title="green-1" style="--oc: #00e0dd">
+										<span></span>
+										<i class="fal fa-check"></i>
+									</div>
+									<div class="brk-theme-options__color-radio" data-skin="brk-purple" title="purple" style="--oc: #9f1dac">
+										<span></span>
+										<i class="fal fa-check"></i>
+									</div>
+									<div class="brk-theme-options__color-radio" data-skin="brk-purple-pink" title="purple-pink" style="--oc: #815ce3">
+										<span></span>
+										<i class="fal fa-check"></i>
+									</div>
+									<div class="brk-theme-options__color-radio" data-skin="brk-pink" title="pink" style="--oc: #f83365">
+										<span></span>
+										<i class="fal fa-check"></i>
+									</div>
+									<div class="brk-theme-options__color-radio" data-skin="brk-red" title="red" style="--oc: #ff2775">
+										<span></span>
+										<i class="fal fa-check"></i>
+									</div>
+									<div class="brk-theme-options__color-radio" data-skin="brk-red-demo" title="red-demo" style="--oc: #ef0000">
+										<span></span>
+										<i class="fal fa-check"></i>
+									</div>
+									<div class="brk-theme-options__color-radio" data-skin="brk-yellow" title="yellow" style="--oc: #fdb415">
+										<span></span>
+										<i class="fal fa-check"></i>
+									</div>
+									<div class="brk-theme-options__color-radio" data-skin="brk-gray-yellow" title="gray-yellow" style="--oc: #d0a05e">
+										<span></span>
+										<i class="fal fa-check"></i>
+									</div>
+									<div class="brk-theme-options__color-radio" data-skin="brk-black" title="black" style="--oc: #121212">
+										<span></span>
+										<i class="fal fa-check"></i>
+									</div>
+									<div class="brk-theme-options__color-radio" data-skin="brk-cold-blue" title="cold-blue" style="--oc: #1d3268">
+										<span></span>
+										<i class="fal fa-check"></i>
+									</div>
+									<div class="brk-theme-options__color-radio" data-skin="brk-cyan" title="cyan" style="--oc: #23dae8">
+										<span></span>
+										<i class="fal fa-check"></i>
+									</div>
+									<div class="brk-theme-options__color-radio" data-skin="brk-orange" title="orange" style="--oc: #ff9a1d">
+										<span></span>
+										<i class="fal fa-check"></i>
+									</div>
+									<div class="brk-theme-options__color-radio" data-skin="brk-pink-purple" title="pink-purple" style="--oc: #cd2556">
+										<span></span>
+										<i class="fal fa-check"></i>
+									</div>
+									<div class="brk-theme-options__color-radio" data-skin="brk-purple-1" title="purple-1" style="--oc: #6d52c2">
+										<span></span>
+										<i class="fal fa-check"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<a class="card-header collapsed" role="tab" id="heading_option_5" data-toggle="collapse" data-parent=".accordion-slider-min" href="#option_5" aria-expanded="false" aria-controls="option_5">
+						<h5 class="mb-0 font__family-montserrat font__weight-medium font__size-21 line__height-22">
+							Page Layout
+						</h5>
+						<div class="card-toggle-icon">
+							<span class="before"></span>
+							<span class="after"></span>
+						</div>
+					</a>
+					<div id="option_5" class="collapse" role="tabpanel" aria-labelledby="heading_option_5">
+						<div class="card-block">
+							<div class="font__size-16 line__height-26 brk-dark-font-color mt-10">Direction</div>
+							<div class="row pt-10">
+								<a href="?dir=ltr" class="col-6" data-brk-direction="ltr">
+									<div class="brk-theme-options__check brk-theme-options__check_45 brk-theme-options__check_title-on brk-theme-options__check_active">
+										<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										<div class="brk-theme-options__check-title">LTR</div>
+									</div>
+								</a>
+								<a href="?dir=rtl" class="col-6" data-brk-direction="rtl">
+									<div class="brk-theme-options__check brk-theme-options__check_45 brk-theme-options__check_title-on">
+										<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										<div class="brk-theme-options__check-title">RTL</div>
+									</div>
+								</a>
+							</div>
+							<div class="font__size-16 line__height-26 brk-dark-font-color mt-15">Corners Style</div>
+							<div class="row pt-10">
+								<a href="#" class="col-6" data-brk-options-border="0">
+									<div class="brk-theme-options__check brk-theme-options__check_45 brk-theme-options__check_title-on brk-theme-options__check_active">
+										<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										<div class="brk-theme-options__check-title">Default</div>
+									</div>
+								</a>
+								<a href="#" class="col-6" data-brk-options-border="30">
+									<div class="brk-theme-options__check brk-theme-options__check_45 brk-theme-options__check_title-on">
+										<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										<div class="brk-theme-options__check-title">Square</div>
+									</div>
+								</a>
+							</div>
+							<div class="font__size-16 line__height-26 brk-dark-font-color mt-15">Layout</div>
+							<div class="row pt-10">
+								<a href="#" class="col-6" data-brk-layout="wide">
+									<div class="brk-theme-options__check brk-theme-options__check_45 brk-theme-options__check_title-on brk-theme-options__check_active">
+										<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										<div class="brk-theme-options__check-title">Wide</div>
+									</div>
+								</a>
+								<a href="#" class="col-6" data-brk-layout="boxed">
+									<div class="brk-theme-options__check brk-theme-options__check_45 brk-theme-options__check_title-on">
+										<div class="brk-theme-options__before"><i class="fal fa-check"></i></div>
+										<div class="brk-theme-options__check-title">Boxed</div>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<style>
+		@media (min-width: 992px) {
+			.brk-mt-minus-280 {
+				margin-top: -280px;
+			}
+		}
+	</style>
+	<style type="text/css">
+		.brk-button-shadow {
+			-webkit-box-shadow: 0 5px 16px rgba(39, 117, 255, .5) !important;
+			-moz-box-shadow: 0 5px 16px rgba(39, 117, 255, .5) !important;
+			box-shadow: 0 5px 16px rgba(39, 117, 255, .5) !important;
+			margin: 20px !important
+		}
+
+		.brk-castom-btn.rev-btn.rev-withicon i {
+			margin-left: 0 !important;
+			margin-right: 20px !important;
+			vertical-align: 0;
+			top: -1px
+		}
+
+		.brk-tp-mask-wrap .tp-mask-wrap {
+			-webkit-border-radius: 8px;
+			-moz-border-radius: 8px;
+			border-radius: 8px;
+			-webkit-box-shadow: 0 20px 40px rgba(39, 117, 255, .1);
+			-moz-box-shadow: 0 20px 40px rgba(39, 117, 255, .1);
+			box-shadow: 0 20px 40px rgba(39, 117, 255, .1);
+			overflow: hidden !important
+		}
+
+		.forcefullwidth_wrapper_tp_banner {
+			z-index: 9
+		}
+	</style>
+	<style type="text/css">
+		#rev_slider_17_1 .zeus .tp-bullet {
+			box-sizing: content-box;
+			-webkit-box-sizing: content-box;
+			border-radius: 50%;
+			background-color: rgba(0, 0, 0, 0);
+			-webkit-transition: opacity 0.3s ease;
+			transition: opacity 0.3s ease;
+			width: 13px;
+			height: 13px;
+			border: 2px solid rgb(255, 255, 255)
+		}
+
+		#rev_slider_17_1 .zeus .tp-bullet:after {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			border-radius: 50%;
+			background-color: rgb(255, 255, 255);
+			-webkit-transform: scale(0);
+			transform: scale(0);
+			-webkit-transform-origin: 50% 50%;
+			transform-origin: 50% 50%;
+			-webkit-transition: -webkit-transform 0.3s ease;
+			transition: transform 0.3s ease
+		}
+
+		#rev_slider_17_1 .zeus .tp-bullet:hover:after,
+		#rev_slider_17_1 .zeus .tp-bullet.selected:after {
+			-webkit-transform: scale(1.2);
+			transform: scale(1.2)
+		}
+
+		#rev_slider_17_1 .zeus .tp-bullet-image,
+		#rev_slider_17_1 .zeus .tp-bullet-imageoverlay {
+			width: 135px;
+			height: 60px;
+			position: absolute;
+			background: #000;
+			background: rgba(0, 0, 0, 0.5);
+			bottom: 13px;
+			margin-bottom: 10px;
+			transform: translateX(-50%);
+			-webkit-transform: translateX(-50%);
+			box-sizing: border-box;
+			background-size: cover;
+			background-position: center center;
+			visibility: hidden;
+			opacity: 0;
+			-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+			-webkit-transform-origin: 50% 50%;
+			transform-origin: 50% 50%;
+			-webkit-transition: all 0.3s ease;
+			transition: all 0.3s ease;
+			border-radius: 4px
+		}
+
+		#rev_slider_17_1 .zeus .tp-bullet-title,
+		#rev_slider_17_1 .zeus .tp-bullet-imageoverlay {
+			z-index: 2;
+			-webkit-transition: all 0.5s ease;
+			transition: all 0.5s ease;
+			transform: translateX(-50%);
+			-webkit-transform: translateX(-50%)
+		}
+
+		#rev_slider_17_1 .zeus .tp-bullet-title {
+			color: rgb(255, 255, 255);
+			text-align: center;
+			line-height: 15px;
+			font-size: 13px;
+			font-weight: 600;
+			z-index: 3;
+			visibility: hidden;
+			opacity: 0;
+			-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+			-webkit-transform-origin: 50% 50%;
+			transform-origin: 50% 50%;
+			-webkit-transition: all 0.3s ease;
+			transition: all 0.3s ease;
+			position: absolute;
+			bottom: 45px;
+			width: 135px;
+			vertical-align: middle
+		}
+
+		#rev_slider_17_1 .zeus .tp-bullet:hover .tp-bullet-title,
+		#rev_slider_17_1 .zeus .tp-bullet:hover .tp-bullet-image,
+		#rev_slider_17_1 .zeus .tp-bullet:hover .tp-bullet-imageoverlay {
+			opacity: 1;
+			visibility: visible;
+			-webkit-transform: translateY(0px) translateX(-50%);
+			transform: translateY(0px) translateX(-50%)
+		}
+
+		#rev_slider_17_1 .zeus.nav-dir-vertical .tp-bullet-image,
+		#rev_slider_17_1 .zeus.nav-dir-vertical .tp-bullet-imageoverlay {
+			bottom: auto;
+			margin-right: 10px;
+			margin-bottom: 0px;
+			right: 13px;
+			transform: translateX(0px) translateY(-50%);
+			-webkit-transform: translateX(0px) translateY(-50%)
+		}
+
+		#rev_slider_17_1 .zeus.nav-dir-vertical .tp-bullet:hover .tp-bullet-image {
+			transform: translateX(0px) translateY(-50%);
+			-webkit-transform: translateX(0px) translateY(-50%)
+		}
+
+		#rev_slider_17_1 .zeus.nav-dir-vertical .tp-bullet-title,
+		#rev_slider_17_1 .zeus.nav-dir-vertical .tp-bullet-imageoverlay {
+			z-index: 2;
+			-webkit-transition: all 0.5s ease;
+			transition: all 0.5s ease;
+			transform: translateX(0px) translateY(-50%);
+			-webkit-transform: translateX(0px) translateY(-50%)
+		}
+
+		#rev_slider_17_1 .zeus.nav-dir-vertical .tp-bullet-title {
+			bottom: auto;
+			right: 100%;
+			margin-right: 10px
+		}
+
+		#rev_slider_17_1 .zeus.nav-dir-vertical .tp-bullet:hover .tp-bullet-title,
+		#rev_slider_17_1 .zeus.nav-dir-vertical .tp-bullet:hover .tp-bullet-image,
+		#rev_slider_17_1 .zeus.nav-dir-vertical .tp-bullet:hover .tp-bullet-imageoverlay {
+			transform: translateX(0px) translateY(-50%);
+			-webkit-transform: translateX(0px) translateY(-50%)
+		}
+
+		#rev_slider_17_1 .zeus.nav-dir-vertical.nav-pos-hor-left .tp-bullet-image,
+		#rev_slider_17_1 .zeus.nav-dir-vertical.nav-pos-hor-left .tp-bullet-imageoverlay {
+			bottom: auto;
+			margin-left: 10px;
+			margin-bottom: 0px;
+			left: 13px;
+			transform: translateX(0px) translateY(-50%);
+			-webkit-transform: translateX(0px) translateY(-50%)
+		}
+
+		#rev_slider_17_1 .zeus.nav-dir-vertical.nav-pos-hor-left .tp-bullet:hover .tp-bullet-image {
+			transform: translateX(0px) translateY(-50%);
+			-webkit-transform: translateX(0px) translateY(-50%)
+		}
+
+		#rev_slider_17_1 .zeus.nav-dir-vertical.nav-pos-hor-left .tp-bullet-title,
+		#rev_slider_17_1 .zeus.nav-dir-vertical.nav-pos-hor-left .tp-bullet-imageoverlay {
+			z-index: 2;
+			-webkit-transition: all 0.5s ease;
+			transition: all 0.5s ease;
+			transform: translateX(0px) translateY(-50%);
+			-webkit-transform: translateX(0px) translateY(-50%)
+		}
+
+		#rev_slider_17_1 .zeus.nav-dir-vertical.nav-pos-hor-left .tp-bullet-title {
+			bottom: auto;
+			left: 100%;
+			margin-left: 10px
+		}
+
+		#rev_slider_17_1 .zeus.nav-dir-horizontal.nav-pos-ver-top .tp-bullet-image,
+		#rev_slider_17_1 .zeus.nav-dir-horizontal.nav-pos-ver-top .tp-bullet-imageoverlay {
+			bottom: auto;
+			top: 13px;
+			margin-top: 10px;
+			margin-bottom: 0px;
+			left: 0px;
+			transform: translateY(0px) translateX(-50%);
+			-webkit-transform: translateX(0px) translateX(-50%)
+		}
+
+		#rev_slider_17_1 .zeus.nav-dir-horizontal.nav-pos-ver-top .tp-bullet:hover .tp-bullet-image {
+			transform: scale(1) translateY(0px) translateX(-50%);
+			-webkit-transform: scale(1) translateY(0px) translateX(-50%)
+		}
+
+		#rev_slider_17_1 .zeus.nav-dir-horizontal.nav-pos-ver-top .tp-bullet-title,
+		#rev_slider_17_1 .zeus.nav-dir-horizontal.nav-pos-ver-top .tp-bullet-imageoverlay {
+			z-index: 2;
+			-webkit-transition: all 0.5s ease;
+			transition: all 0.5s ease;
+			transform: translateY(0px) translateX(-50%);
+			-webkit-transform: translateY(0px) translateX(-50%)
+		}
+
+		#rev_slider_17_1 .zeus.nav-dir-horizontal.nav-pos-ver-top .tp-bullet-title {
+			bottom: auto;
+			top: 13px;
+			margin-top: 20px
+		}
+	</style>
+	<div class="main-page">
+		<div class="brk-header-mobile">
+			<div class="brk-header-mobile__open">
+				<span></span>
+			</div>
+			<div class="brk-header-mobile__logo">
+				<a href="#">
+					<img class="brk-header-mobile__logo-1 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{% static 'home/img/logo-dark-2.png'%}" alt="alt">
+					<img class="brk-header-mobile__logo-2 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{% static 'home/img/logo-dark-2.png'%}" alt="alt">
+				</a>
+			</div>
+		</div>
+		<header class="brk-header brk-header_style-1 brk-header_color-dark brk-header_skin-1 position-fixed d-lg-flex flex-column" style="display: none;" data-logo-src="{% static 'home/img/logo-dark-2.png'%}" data-bg-mobile="{% static 'home/img/brk-bg-mobile-menu.jpg' %}" data-brk-library="component__header">
+			<div class="brk-header__top-bar order-lg-1 order-2 font__family-montserrat brk-header__top-bar_scroll" style="height: 46px;">
+				<div class="brk-header__title font__family-montserrat font__weight-bold">Contact Us</div>
+				<div class="container-fluid">
+					<div class="row align-items-center">
+						<div class="col-lg-6 align-self-lg-stretch text-left">
+							<div class="brk-header__element brk-header__element_skin-2 brk-header__item">
+								<a href="tel:88002003040" class="brk-header__element--wrap">
+									<i class="fa fa-phone"></i>
+									<span class="brk-header__element--label font__weight-semibold">8 800 200 30 40</span>
+								</a>
+							</div>
+							<div class="brk-header__element brk-header__element_skin-2 brk-header__item">
+								<a href="#" class="brk-header__element--wrap">
+									<i class="fa fa-envelope"></i>
+									<span class="brk-header__element--label font__weight-medium">hello@berserk.com</span>
+								</a>
+							</div>
+						</div>
+						<div class="col-lg-6 align-self-lg-stretch text-left text-lg-right">
+							<div class="brk-mini-cart brk-header__item">
+								<a href="cart.html" class="brk-mini-cart__open d-flex text-white">
+									<i class="fa fa-shopping-basket" aria-hidden="true"></i>
+									<span class="brk-mini-cart__label font__family-montserrat font__weight-medium text-uppercase letter-spacing-60 font__size-10 opacity-80">My cart</span>
+									<span class="brk-mini-cart__title">Shopping Cart</span>
+									<span class="brk-mini-cart__count brk-mini-cart__count_skin-1 brk-mini-cart__count_white">4</span>
+								</a>
+								<div class="brk-mini-cart__menu">
+									<div class="brk-mini-cart__header">
+										<span class="font__family-montserrat font__weight-bold font__size-18">Your Cart</span>
+									</div>
+									<div class="brk-mini-cart__products">
+										<div class="brk-mini-cart__product">
+											<div class="brk-mini-cart__product--img">
+												<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/shop/shop-setout-2.png" alt="alt">
+											</div>
+											<div class="brk-mini-cart__product--title-price">
+												<a href="#">
+													<h4 class="font__family-montserrat font__size-16 line__height-21 font__weight-semibold text-truncate">Some shop item</h4>
+												</a>
+												<span class="brk-mini-cart__product--old-price font__family-montserrat">$26.00</span>
+												<span class="brk-mini-cart__product--price font__family-montserrat">$16.00</span>
+											</div>
+											<div class="brk-quantity">
+												<span class="brk-quantity__arrows minus"></span>
+												<input class="brk-quantity__value" name="quantity" type="text" value="2">
+												<span class="brk-quantity__arrows plus"></span>
+											</div>
+											<a href="#" class="brk-mini-cart__product--remove remove"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+										</div>
+										<div class="brk-mini-cart__product">
+											<div class="brk-mini-cart__product--img">
+												<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/shop/shop-setout-2.png" alt="alt">
+											</div>
+											<div class="brk-mini-cart__product--title-price">
+												<a href="#">
+													<h4 class="font__family-montserrat font__size-16 line__height-21 font__weight-semibold text-truncate">Some shop item</h4>
+												</a>
+												<span class="brk-mini-cart__product--old-price font__family-montserrat">$26.00</span>
+												<span class="brk-mini-cart__product--price font__family-montserrat">$16.00</span>
+											</div>
+											<div class="brk-quantity">
+												<span class="brk-quantity__arrows minus"></span>
+												<input class="brk-quantity__value" name="quantity" type="text" value="2">
+												<span class="brk-quantity__arrows plus"></span>
+											</div>
+											<a href="#" class="brk-mini-cart__product--remove remove"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+										</div>
+										<div class="brk-mini-cart__product">
+											<div class="brk-mini-cart__product--img">
+												<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/shop/shop-setout-2.png" alt="alt">
+											</div>
+											<div class="brk-mini-cart__product--title-price">
+												<a href="#">
+													<h4 class="font__family-montserrat font__size-16 line__height-21 font__weight-semibold text-truncate">Some shop item</h4>
+												</a>
+												<span class="brk-mini-cart__product--old-price font__family-montserrat">$26.00</span>
+												<span class="brk-mini-cart__product--price font__family-montserrat">$16.00</span>
+											</div>
+											<div class="brk-quantity">
+												<span class="brk-quantity__arrows minus"></span>
+												<input class="brk-quantity__value" name="quantity" type="text" value="2">
+												<span class="brk-quantity__arrows plus"></span>
+											</div>
+											<a href="#" class="brk-mini-cart__product--remove remove"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+										</div>
+										<div class="brk-mini-cart__product">
+											<div class="brk-mini-cart__product--img">
+												<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/shop/shop-setout-2.png" alt="alt">
+											</div>
+											<div class="brk-mini-cart__product--title-price">
+												<a href="#">
+													<h4 class="font__family-montserrat font__size-16 line__height-21 font__weight-semibold text-truncate">Some shop item</h4>
+												</a>
+												<span class="brk-mini-cart__product--old-price font__family-montserrat">$26.00</span>
+												<span class="brk-mini-cart__product--price font__family-montserrat">$16.00</span>
+											</div>
+											<div class="brk-quantity">
+												<span class="brk-quantity__arrows minus"></span>
+												<input class="brk-quantity__value" name="quantity" type="text" value="2">
+												<span class="brk-quantity__arrows plus"></span>
+											</div>
+											<a href="#" class="brk-mini-cart__product--remove remove"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+										</div>
+									</div>
+									<div class="brk-mini-cart__links">
+										<div class="brk-mini-cart__links--wrap">
+											<a class="brk-mini-cart__links--cart" href="cart.html"><i class="fa fa-shopping-basket"></i> Cart</a>
+											<a class="brk-mini-cart__links--checkout" href="checkout.html">Proceed to checkout <i class="far fa-arrow-right"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="brk-header__element brk-header__element_skin-2 text-white brk-header__item">
+								<a href="#" class="brk-header__element--wrap">
+									<i class="fa fa-heart"></i>
+									<span class="brk-header__element--label font__weight-medium">My wishlist</span>
+									<span class="brk-header__compare brk-header__compare_white brk-header__compare_skin-1">12</span>
+								</a>
+							</div>
+							<div class="brk-lang brk-lang_interactive brk-header__item">
+								<span class="brk-lang__selected text-white">US <i class="fa fa-caret-down" aria-hidden="true"></i></span>
+								<span class="brk-lang__open"><i class="fa fa-language"></i> Language <span class="brk-lang__active-lang text-white brk-bg-primary">US</span></span>
+								<ul class="brk-lang__option">
+									<li><a href="#">UA</a></li>
+									<li><a href="#">US</a></li>
+									<li><a href="#">PL</a></li>
+									<li><a href="#">ES</a></li>
+								</ul>
+							</div>
+							<div class="brk-header__element brk-header__element_skin-2 text-white brk-header__item">
+								<a href="login.html" class="brk-header__element--wrap">
+									<i class="fa fa-user"></i>
+									<span class="brk-header__element--label font__weight-medium">Login</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="brk-header__main-bar brk-header_border-top-dark order-lg-2 order-1" style="height: 72px;">
+				<div class="container-fluid">
+					<div class="row align-items-center">
+						<div class="col-lg-2 align-self-lg-center d-none d-lg-flex ml-10">
+							<div class="brk-open-top-bar brk-header__item">
+								<div class="brk-open-top-bar__circle"></div>
+								<div class="brk-open-top-bar__circle"></div>
+								<div class="brk-open-top-bar__circle"></div>
+							</div>
+							<a href="/" class="brk-header__logo brk-header__item @@modifier">
+								<img class="brk-header__logo-1 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{% static 'home/img/logo-color-1.png' %}" alt="alt">
+								<img class="brk-header__logo-2 lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{% static 'home/img/logo-color-1.png' %}" alt="alt">
+							</a>
+						</div>
+						<div class="col-lg align-self-lg-stretch d-lg-flex">
+							<nav class="brk-nav brk-header__item">
+								<ul class="brk-nav__menu">
+									<li class="brk-nav__drop-down-effect">
+										<a href="#about">
+											<span>About</span>
+										</a>
+									</li>
+									<li class="brk-nav__drop-down-effect">
+										<a href="#prices">
+											<span>Prices</span>
+										</a>
+									</li>
+									<li class="brk-nav__drop-down-effect">
+										<a href="#portfolio">
+											<span>Portfolio</span>
+										</a>
+									</li>
+									<li class="brk-nav__drop-down-effect">
+										<a href="#testimonials">
+											<span>Testimonials</span>
+										</a>
+									</li>
+									<li class="brk-nav__drop-down-effect">
+										<a href="#shop">
+											<span>Shop</span>
+										</a>
+									</li>
+									<li class="brk-nav__drop-down-effect">
+										<a href="#team">
+											<span>Team</span>
+										</a>
+									</li>
+									<li class="brk-nav__drop-down-effect">
+										<a href="#contact">
+											<span>Contact Us</span>
+										</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+						<div class="col-lg-3 align-self-lg-stretch text-lg-right">
+							<div class="brk-header__title font__family-montserrat font__weight-bold">Info</div>
+							<div class="brk-search brk-header__item">
+								<div class="brk-search__open text-white">
+									<i class="fal fa-search" aria-hidden="true"></i>
+									<div class="brk-search__title">Search website</div>
+								</div>
+								<div class="brk-search__block">
+									<div class="brk-search__header">
+										<span class="font__family-montserrat font__weight-bold font__size-18">Search</span>
+									</div>
+									<form class="brk-search__form" role="search" method="get" action="#">
+										<input name="s" maxlength="50" type="search" value="" placeholder="Enter search text">
+										<button type="submit"><i class="fas fa-search"></i></button>
+									</form>
+									<span class="brk-search__close font__family-montserrat font__weight-medium">Close <i class="fas fa-times"></i></span>
+								</div>
+							</div>
+							<a href="#" class="btn btn-inside-out btn- brk-header__item brk-header__btn brk-header__btn_white btn-sm-1 brk-base-box-shadow border-radius-25 font__family-open-sans font__weight-bold pl-30 pr-30" data-brk-library="component__button">
+								<span class="before">Buy now <span class="font__family-times-new-roman text-lowercase font__style-italic">for</span> 39$</span><span class="text">Click Me</span><span class="after">Buy now <span class="font__family-times-new-roman text-lowercase font__style-italic">for</span> 39$</span>
+							</a>
+							<div class="brk-info-menu-open brk-info-menu-open_skin-2 brk-header__item">
+								<span class="brk-lines brk-info-menu-open_white">
+									<span class="brk-center-line"></span>
+								</span>
+								<div class="brk-info-menu-open__title">Side Menu</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="brk-info-menu">
+				<div class="brk-info-menu__bar">
+					<button class="brk-info-menu__close"></button>
+					<h3 class="brk-info-menu__header font__family-montserrat font__weight-bold font__size-21">More info</h3>
+					<div class="brk-categories mb-20" data-brk-library="component__widgets">
+						<div class="brk-categories__list font__family-open-sans font__size-14 font__weight-normal">
+							<a href="#" class="brk-categories__item">
+								<span class="brk-categories__item-name">General</span>
+								<span class="brk-categories__item-count">12</span>
+							</a>
+							<a href="#" class="brk-categories__item active">
+								<span class="brk-categories__item-name">Mockups</span>
+								<span class="brk-categories__item-count">14</span>
+							</a>
+							<a href="#" class="brk-categories__item">
+								<span class="brk-categories__item-name">HTML & CSS</span>
+								<span class="brk-categories__item-count">18</span>
+							</a>
+							<a href="#" class="brk-categories__item">
+								<span class="brk-categories__item-name">Logo</span>
+								<span class="brk-categories__item-count">21</span>
+							</a>
+							<a href="#" class="brk-categories__item">
+								<span class="brk-categories__item-name">Web Design</span>
+								<span class="brk-categories__item-count">6</span>
+							</a>
+						</div>
+					</div>
+					<h3 class="brk-info-menu__header font__family-montserrat font__weight-bold font__size-21">Our instagram</h3>
+					<div class="default-slider dots-base-skin dots-base-color slick-loading mt-15" data-slick='{"slidesToShow": 1, "slidesToScroll": 1, "dots": true, "autoplay": false, "autoplaySpeed": 4000}' data-brk-library="slider__slick">
+						<div>
+							<div class="brk-header-slider">
+								<div class="brk-header-slider__img">
+									<img src="{% static 'home/img/309x206_1.jpg' %}" alt="alt">
+								</div>
+								<div class="brk-header-slider__content">
+									<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{% static 'home/img/head-icon.png' %}" alt="alt">
+									<div class="brk-header-slider__content--title">
+										<h4 class="font__family-montserrat font__weight-bold font__size-16">@berserk</h4>
+										<span class="font__size-14">17 Hours ago</span>
+									</div>
+								</div>
+								<p class="brk-header-slider__text font__size-14 line__height-21">Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+									ante, dapibus in, viverra</p>
+							</div>
+						</div>
+						<div>
+							<div class="brk-header-slider">
+								<div class="brk-header-slider__img">
+									<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{% static 'home/img/309x206_2.jpg' %}" alt="alt">
+								</div>
+								<div class="brk-header-slider__content">
+									<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{% static 'home/img/head-icon.png' %}" alt="alt">
+									<div class="brk-header-slider__content--title">
+										<h4 class="font__family-montserrat font__weight-bold font__size-16' %}">@berserk</h4>
+										<span class="font__size-14">17 Hours ago</span>
+									</div>
+								</div>
+								<p class="brk-header-slider__text font__size-14 line__height-21">Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+									ante, dapibus in, viverra</p>
+							</div>
+						</div>
+						<div>
+							<div class="brk-header-slider">
+								<div class="brk-header-slider__img">
+									<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{% static 'home/img/309x206_3.jpg '%}" alt="alt">
+								</div>
+								<div class="brk-header-slider__content">
+									<img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/head-icon.png" alt="alt">
+									<div class="brk-header-slider__content--title">
+										<h4 class="font__family-montserrat font__weight-bold font__size-16">@berserk</h4>
+										<span class="font__size-14">17 Hours ago</span>
+									</div>
+								</div>
+								<p class="brk-header-slider__text font__size-14 line__height-21">Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+									ante, dapibus in, viverra</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<h1 class="sr-only">Agency Modern</h1>
+		<div id="rev_slider_17_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="demo_agency_modern" data-source="gallery" style="margin:0px auto;background:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
+			<div id="rev_slider_17_1" class="rev_slider fullwidthabanner tp-overflow-hidden" style="display:none;" data-version="5.4.8.1">
+				<ul>
+					<li data-index="rs-40" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-thumb="{% static 'home/img/demo_agency_modern/images/transparent.png'%}" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+						<img src="{% static 'home/img/demo_agency_modern/images/transparent.png'%}" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+						<div class="tp-caption rev_group" id="slide-40-layer-9" data-x="['left','left','left','center']" data-hoffset="['335','15','30','0']" data-y="['middle','middle','middle','middle']" data-voffset="['40','40','40','0']" data-width="['590','590','546','310']" data-height="['365','365','365','350']" data-whitespace="normal" data-type="group" data-responsive_offset="on" data-responsive="off" data-frames='[{"delay":10,"speed":10,"frame":"0","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":10,"frame":"999","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textalign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 6; min-width: 590px; max-width: 590px; max-width: 365px; max-width: 365px; white-space: normal; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;">
+							<h1 class="tp-caption" id="slide-40-layer-4" data-x="['left','left','left','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" data-fontsize="['56','56','42','30']" data-lineheight="['60','60','48','36']" data-width="['405','405','406','261']" data-height="['130','130','none','73']" data-whitespace="normal" data-type="text" data-responsive_offset="off" data-responsive="off" data-frames='[{"delay":"+0","split":"chars","splitdelay":0.05,"speed":1500,"split_direction":"forward","frame":"0","from":"y:[-100%];z:0;rZ:35deg;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"opacity:0;","ease":"Power2.easeIn"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textalign="['inherit','inherit','inherit','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 7; min-width: 405px; max-width: 405px; max-width: 130px; max-width: 130px; white-space: normal; font-size: 56px; line-height: 60px; font-weight: 100; color: #272727; letter-spacing: 0px;font-family:Montserrat;">Marketing for your <span style="font-weight: 500">Business</span> </h1>
+							<span class="tp-caption" id="slide-40-layer-3" data-x="['left','left','left','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['162','162','142','101']" data-fontsize="['16','16','15','14']" data-lineheight="['26','26','24','24']" data-width="['581','581','523','300']" data-height="['none','none','73','none']" data-whitespace="normal" data-type="text" data-responsive_offset="off" data-responsive="off" data-frames='[{"delay":"+790","speed":2000,"frame":"0","from":"x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;","mask":"x:[-100%];y:0;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeOut"},{"delay":"wait","speed":1000,"frame":"999","to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textalign="['inherit','inherit','inherit','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 8; min-width: 581px; max-width: 581px; white-space: normal; font-size: 16px; line-height: 26px; font-weight: 400; color: #9f9f9f; letter-spacing: 0px;font-family:Open Sans;">Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. </span>
+							<div class="tp-caption rev-btn brk-button-shadow brk-castom-btn" id="slide-40-layer-5" data-x="['left','left','left','center']" data-hoffset="['-20','-20','-20','0']" data-y="['top','top','top','top']" data-voffset="['275','275','257','257']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="button" data-responsive_offset="off" data-responsive="off" data-frames='[{"delay":"+1190","speed":1500,"frame":"0","from":"x:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"x:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"300","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(255,255,255);bg:rgb(2,2,2);bs:solid;bw:0 0 0 0;"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textalign="['inherit','inherit','inherit','inherit']" data-paddingtop="[16,16,16,16]" data-paddingright="[55,55,55,55]" data-paddingbottom="[16,16,16,16]" data-paddingleft="[55,55,55,55]" style="z-index: 9; white-space: nowrap; font-size: 16px; line-height: 24px; font-weight: 300; color: rgba(255,255,255,1); letter-spacing: ;font-family:Open Sans;text-transform:uppercase;background-color:rgb(39,117,255);border-color:rgba(0,0,0,1);border-radius:30px 30px 30px 30px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">Read More </div>
+						</div>
+						<div class="tp-caption tp-resizeme" id="slide-40-layer-1" data-x="['right','right','right','right']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" data-width="none" data-height="none" data-whitespace="nowrap" data-visibility="['on','on','off','off']" data-type="image" data-basealign="slide" data-responsive_offset="on" data-frames='[{"delay":10,"speed":1500,"frame":"0","from":"x:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' data-textalign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5;"><img src="{% static 'home/img/demo_agency_modern/images/63502-brk_slide_element-1.png' %}" alt="" data-ww="['780px','700px','700px','700px']" data-hh="['822','738','738','738']" data-no-retina> </div>
+					</li>
+					<li data-index="rs-89" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-thumb="{% static 'home/img/demo_agency_modern/images/transparent.png'%}" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+						<img src="{% static 'home/img/demo_agency_modern/images/transparent.png'%}" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+						<div class="tp-caption rev_group" id="slide-89-layer-9" data-x="['left','left','left','center']" data-hoffset="['335','15','30','0']" data-y="['middle','middle','middle','middle']" data-voffset="['40','40','40','0']" data-width="['590','590','546','310']" data-height="['365','365','365','350']" data-whitespace="normal" data-type="group" data-responsive_offset="on" data-responsive="off" data-frames='[{"delay":10,"speed":10,"frame":"0","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":10,"frame":"999","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textalign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 6; min-width: 590px; max-width: 590px; max-width: 365px; max-width: 365px; white-space: normal; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;">
+							<h1 class="tp-caption" id="slide-89-layer-4" data-x="['left','left','left','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" data-fontsize="['56','56','42','30']" data-lineheight="['60','60','48','36']" data-width="['405','405','406','261']" data-height="['130','130','none','73']" data-whitespace="normal" data-type="text" data-responsive_offset="off" data-responsive="off" data-frames='[{"delay":"+0","split":"chars","splitdelay":0.05,"speed":1500,"split_direction":"forward","frame":"0","from":"y:[-100%];z:0;rZ:35deg;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"opacity:0;","ease":"Power2.easeIn"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textalign="['inherit','inherit','inherit','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 7; min-width: 405px; max-width: 405px; max-width: 130px; max-width: 130px; white-space: normal; font-size: 56px; line-height: 60px; font-weight: 100; color: #272727; letter-spacing: 0px;font-family:Montserrat;">Marketing for your <span style="font-weight: 500">Business</span> </h1>
+							<span class="tp-caption" id="slide-89-layer-3" data-x="['left','left','left','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['162','162','142','101']" data-fontsize="['16','16','15','14']" data-lineheight="['26','26','24','24']" data-width="['581','581','523','300']" data-height="['none','none','73','none']" data-whitespace="normal" data-type="text" data-responsive_offset="off" data-responsive="off" data-frames='[{"delay":"+790","speed":2000,"frame":"0","from":"x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;","mask":"x:[-100%];y:0;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeOut"},{"delay":"wait","speed":1000,"frame":"999","to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textalign="['inherit','inherit','inherit','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 8; min-width: 581px; max-width: 581px; white-space: normal; font-size: 16px; line-height: 26px; font-weight: 400; color: #9f9f9f; letter-spacing: 0px;font-family:Open Sans;">Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. </span>
+							<div class="tp-caption rev-btn brk-button-shadow brk-castom-btn" id="slide-89-layer-5" data-x="['left','left','left','center']" data-hoffset="['-20','-20','-20','0']" data-y="['top','top','top','top']" data-voffset="['275','275','257','257']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="button" data-responsive_offset="off" data-responsive="off" data-frames='[{"delay":"+1190","speed":1500,"frame":"0","from":"x:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"x:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"300","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(255,255,255);bg:rgb(2,2,2);bs:solid;bw:0 0 0 0;"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textalign="['inherit','inherit','inherit','inherit']" data-paddingtop="[16,16,16,16]" data-paddingright="[55,55,55,55]" data-paddingbottom="[16,16,16,16]" data-paddingleft="[55,55,55,55]" style="z-index: 9; white-space: nowrap; font-size: 16px; line-height: 24px; font-weight: 300; color: rgba(255,255,255,1); letter-spacing: ;font-family:Open Sans;text-transform:uppercase;background-color:rgb(39,117,255);border-color:rgba(0,0,0,1);border-radius:30px 30px 30px 30px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">Read More </div>
+						</div>
+						<div class="tp-caption tp-resizeme" id="slide-89-layer-1" data-x="['right','right','right','right']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" data-width="none" data-height="none" data-whitespace="nowrap" data-visibility="['on','on','off','off']" data-type="image" data-basealign="slide" data-responsive_offset="on" data-frames='[{"delay":10,"speed":1500,"frame":"0","from":"x:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]' data-textalign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5;"><img src="{% static 'home/img/demo_agency_modern/images/63502-brk_slide_element-1.png'%}" alt="" data-ww="['780px','700px','700px','700px']" data-hh="['822','738','738','738']" data-no-retina> </div>
+					</li>
+				</ul>
+				<div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
+			</div>
+		</div>
+		<section class="position-relative pt-160 pb-220 pt-xs-50 pb-xs-70 brk-bgi-1 brk-bgi-1 brk-bg-pattern brk-mt-minus-280" id="about">
+			<span class="brk-abs-bg-overlay" style="background-color: rgba(249, 251, 255, 0.96);"></span>
+			<span class="brk-svg-pattern-container brk-svg-pattern-container-7-top brk-svg-pattern-container_top" data-brk-library="component__svg_pattern">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 144">
+					<defs>
+						<path id="svg-pattern-id-1-1" d="M0 657.88s316.8-72.16 689-15.96c256.8 38.77 524.63 105.83 756 116.7 218.56 10.27 420.43-40.37 475-63.95V616H0z" />
+					</defs>
+					<g>
+						<g transform="translate(0 -616)">
+							<use fill="#fff" xlink:href="#svg-pattern-id-1-1" />
+						</g>
+					</g>
+				</svg>
+			</span>
+			<span class="brk-svg-pattern-container brk-svg-pattern-container-7-bottom brk-svg-pattern-container_bottom" data-brk-library="component__svg_pattern">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 144">
+					<defs>
+						<path id="svg-pattern-id-1-2" d="M1920 1489.12s-316.8 72.16-689 15.96c-256.8-38.77-524.63-105.83-756-116.7-218.56-10.27-420.43 40.37-475 63.95V1531h1920z" />
+					</defs>
+					<g>
+						<g transform="translate(0 -1387)">
+							<use fill="#fff" xlink:href="#svg-pattern-id-1-2" />
+						</g>
+					</g>
+				</svg>
+			</span>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3"></div>
+					<div class="col-12 col-md-6">
+						<div class="text-center mb-lg-100 mt-20 mt-lg-0 mb-40">
+							<h2 class="font__family-montserrat font__size-56 font__weight-ultralight line__height-60 mb-25">About Us</h2>
+							<h3 class="brk-dark-font-color font__size-15 font__weight-normal line__height-24 title-lines-solid title-lines-main" data-brk-library="component__title">
+								<span class="line" style="background:rgba(var(--brand-primary-rgb), 0.2)"></span>
+								<span class="text">Lorem ipsum dolor sit amet, consectetuer adipiscing <br> elit. Aenean commodo ligula eget dolor.</span>
+									<span class="line" style="background:rgba(var(--brand-primary-rgb), 0.2)"></span>
+							</h3>
+						</div>
+					</div>
+				</div>
+				<div class="services__wrapper-main services__wrapper-pedestal active__effect-main" data-brk-library="component__services">
+					<div class="row no-gutters align-items-center">
+						<div class="col-lg-4">
+							<div class="services__wrapper active__effect right text-lg-right">
+								<div class="inline-wrap">
+									<button class="icon__btn icon__btn-anim icon__btn-md_1">
+										<span class="after"></span>
+										<span class="spike"></span>
+										<span class="spike"></span>
+										<span class="spike"></span>
+										<span class="spike"></span>
+										<span class="spike"></span>
+										<span class="spike"></span>
+										<span class="spike"></span>
+										<span class="spike"></span>
+										<span class="spike"></span>
+										<span class="before"></span>
+										<i class="fa fa-trophy" aria-hidden="true"></i>
+									</button>
+									<div>
+										<p class="font__family-open-sans font__weight-bold font__size-16 brk-base-font-color">We are Awesome</p>
+										<h4 class="font__family-montserrat font__weight-ultralight font__size-24 text-uppercase mt-10">
+											The North <br> Face
+          </h4>
+									</div>
+								</div>
+								<p class="font__family-open-sans font__size-14 text-gray mt-20">Lorem ipsum dolor sit amet, consectetuer
+									adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
+								<a href="#" class="btn btn-inside-out btn-md btn-icon border-radius-25 font__weight-bold" data-brk-library="component__button">
+									<i class="far fa-comment-alt icon-inside" aria-hidden="true"></i>
+									<span class="before">all info</span><span class="text">Click Me</span><span class="after">all info</span>
+								</a>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="services__wrapper active__effect active current center text-center">
+								<button class="icon__btn icon__btn-anim icon__btn-md_1">
+									<span class="after"></span>
+									<span class="spike"></span>
+									<span class="spike"></span>
+									<span class="spike"></span>
+									<span class="spike"></span>
+									<span class="spike"></span>
+									<span class="spike"></span>
+									<span class="spike"></span>
+									<span class="spike"></span>
+									<span class="spike"></span>
+									<span class="before"></span>
+									<i class="fa fa-trophy" aria-hidden="true"></i>
+								</button>
+								<p class="font__family-open-sans font__weight-bold font__size-16 brk-base-font-color">We are Awesome</p>
+								<h4 class="font__family-montserrat font__weight-ultralight font__size-24 text-uppercase mt-10">
+									Business<br> shoes
+      </h4>
+									<p class="font__family-open-sans font__size-14 text-gray mt-20">Lorem ipsum dolor sit amet, consectetuer
+										adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
+									<a href="#" class="btn btn-inside-out btn-md btn-icon border-radius-25 font__weight-bold" data-brk-library="component__button">
+										<i class="far fa-comment-alt icon-inside" aria-hidden="true"></i>
+										<span class="before">all info</span><span class="text">Click Me</span><span class="after">all info</span>
+									</a>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="services__wrapper active__effect left text-lg-left">
+								<div class="inline-wrap">
+									<button class="icon__btn icon__btn-anim icon__btn-md_1">
+										<span class="after"></span>
+										<span class="spike"></span>
+										<span class="spike"></span>
+										<span class="spike"></span>
+										<span class="spike"></span>
+										<span class="spike"></span>
+										<span class="spike"></span>
+										<span class="spike"></span>
+										<span class="spike"></span>
+										<span class="spike"></span>
+										<span class="before"></span>
+										<i class="fa fa-trophy" aria-hidden="true"></i>
+									</button>
+									<div>
+										<p class="font__family-open-sans font__weight-bold font__size-16 brk-base-font-color">We are Awesome</p>
+										<h4 class="font__family-montserrat font__weight-ultralight font__size-24 text-uppercase mt-10">
+											Ralph<br> Lauren
+                                         </h4>
+									</div>
+								</div>
+								<p class="font__family-open-sans font__size-14 text-gray mt-20">Lorem ipsum dolor sit amet, consectetuer
+									adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque</p>
+								<a href="#" class="btn btn-inside-out btn-md btn-icon border-radius-25 font__weight-bold" data-brk-library="component__button">
+									<i class="far fa-comment-alt icon-inside" aria-hidden="true"></i>
+									<span class="before">all info</span><span class="text">Click Me</span><span class="after">all info</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="pt-70 pt-lg-50 pb-lg-90 pb-70 bg-white">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3"></div>
+					<div class="col-12 col-md-6">
+						<div class="text-center mb-lg-70 mb-40">
+							<h5 class="font__size-21 font__family-montserrat font__weight-light text-gray" data-brk-library="component__title">Flexible & Customizable.</h5>
+							<h3 class="font__family-montserrat font__weight-ultralight title-lines-solid title-lines-main" data-brk-library="component__title">
+								<span class="line" style="background:rgba(var(--brand-primary-rgb), 0.2)"></span>
+								<span class="text">Free support & updates</span>
+								<span class="line" style="background:rgba(var(--brand-primary-rgb), 0.2)"></span>
+							</h3>
+						</div>
+					</div>
+				</div>
+				<div class="brk-tabs brk-tabs-simple-top" data-hash="true" data-brk-library="component__tabs">
+					<ul class="brk-tabs-nav font__family-montserrat">
+						<li class="brk-tab">
+							<i class="far fa-gem"></i>
+							<span>Diamond</span>
+						</li>
+						<li class="brk-tab">
+							<i class="fab fa-delicious" aria-hidden="true"></i>
+							<span>Delicious</span>
+						</li>
+						<li class="brk-tab">
+							<i class="fab fa-gg" aria-hidden="true"></i>
+							<span>G & G</span>
+						</li>
+					</ul>
+					<div class="brk-tabs-content">
+						<div id="tab-1" class="brk-tab-item">
+							<div class="row">
+								<div class="col-lg-9">
+									<span class="font__family-montserrat font__weight-light text-uppercase font__size-28 mt-10">Make business with us</span>
+									<span class="font__family-montserrat font__weight-bold text-uppercase font__size-28 mt-10"> & become beautiful</span>
+									<p class="brk-dark-font-color font__family-open-sans font__size-15 line__height-24 mt-40">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
+										natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
+										eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+									<p class="brk-dark-font-color font__family-open-sans font__size-15 line__height-24 mt-25">Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.
+										Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget
+										dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing
+										sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem.
+									</p>
+									<div class="cfa__wrapper cfa__minimal bg__style overlay__white text-center text-lg-left lazyload mt-20 mb-30" data-bg="img/1170x108_2.jpg" data-brk-library="component__call_to_action">
+										<h4 class="font__family-montserrat font__size-21 font__weight-bold no-wrap">CFA Heading</h4>
+										<p class="font__family-open-sans font__size-14 text-dark text-center text-lg-left">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor nean massa. Cum sociis natoque penatibus et magnis dis parturient mnsectetes.</p>
+									</div>
+								</div>
+								<div class="col-lg-3">
+									<figure class="shape-box shape-box_stripe" data-brk-library="component__shape_box">
+										<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/demo_agency_modern/270x410_1.jpg" class="lazyload" alt="alt">
+										<div class="brk-abs-overlay z-index-0 bg-black opacity-60"></div>
+										<div class="icon">
+											<i class="fas fa-cogs"></i>
+										</div>
+										<figcaption>
+											<div class="show-cont">
+												<h4 class="font__family-montserrat font__weight-bold font__size-24 text-uppercase main-title text-center">Extensive </h4>
+											</div>
+											<p class="font__family-open-sans font__size-14 text-gray text-center">Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor consequat </p>
+											<a href="#" class="btn btn-inside-out btn-lg border-radius-30 font__weight-bold" data-brk-library="component__button">
+												<span class="before">read more</span><span class="text">Click Me</span><span class="after">read more</span>
+											</a>
+										</figcaption>
+										<span class="after"></span>
+									</figure>
+								</div>
+							</div>
+						</div>
+						<div id="tab-2" class="brk-tab-item">
+							<div class="row">
+								<div class="col-lg-9">
+									<span class="font__family-montserrat font__weight-light text-uppercase font__size-28 mt-10">Tons Color Schemes, </span>
+									<span class="font__family-montserrat font__weight-bold text-uppercase font__size-28 mt-10">HTML5 Video</span>
+									<p class="brk-dark-font-color font__family-open-sans font__size-15 line__height-24 mt-40">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
+										natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
+										eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+									<p class="brk-dark-font-color font__family-open-sans font__size-15 line__height-24 mt-25">Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.
+										Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget
+										dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing
+										sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem.
+									</p>
+									<div class="cfa__wrapper cfa__minimal bg__style overlay__white text-center text-lg-left lazyload mt-20 mb-30" data-bg="img/1170x108_2.jpg" data-brk-library="component__call_to_action">
+										<h4 class="font__family-montserrat font__size-21 font__weight-bold no-wrap">CFA Heading</h4>
+										<p class="font__family-open-sans font__size-14 text-dark text-center text-lg-left">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor nean massa. Cum sociis natoque penatibus et magnis dis parturient mnsectetes.</p>
+									</div>
+								</div>
+								<div class="col-lg-3">
+									<figure class="shape-box shape-box_half" data-brk-library="component__shape_box">
+										<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/demo_agency_modern/270x410_1.jpg " alt="alt" class="lazyload">
+										<div class="brk-abs-overlay z-index-0 bg-black opacity-60"></div>
+										<figcaption>
+											<div class="show-cont">
+												<h3 class="font__family-montserrat font__size-36 brk-base-font-color"> 01</h3>
+												<h4 class="font__family-montserrat font__weight-bold font__size-24 text-uppercase main-title">Endless </h4>
+											</div>
+											<p class="font__family-open-sans font__size-14 text-gray">Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor consequat </p>
+											<a href="#" class="btn btn-inside-out btn-lg border-radius-30 font__weight-bold" data-brk-library="component__button">
+												<span class="before">read more</span><span class="text">Click Me</span><span class="after">read more</span>
+											</a>
+										</figcaption>
+										<span class="after"></span>
+									</figure>
+								</div>
+							</div>
+						</div>
+						<div id="tab-3" class="brk-tab-item">
+							<div class="row">
+								<div class="col-lg-9">
+									<span class="font__family-montserrat font__weight-light text-uppercase font__size-28 mt-10">Smartly Coded </span>
+									<span class="font__family-montserrat font__weight-bold text-uppercase font__size-28 mt-10">& Maintained</span>
+									<p class="brk-dark-font-color font__family-open-sans font__size-15 line__height-24 mt-40">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
+										natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
+										eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+									<p class="brk-dark-font-color font__family-open-sans font__size-15 line__height-24 mt-25">Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.
+										Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget
+										dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing
+										sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem.
+									</p>
+									<div class="cfa__wrapper cfa__minimal bg__style overlay__white text-center text-lg-left lazyload mt-20 mb-30" data-bg="img/1170x108_2.jpg" data-brk-library="component__call_to_action">
+										<h4 class="font__family-montserrat font__size-21 font__weight-bold no-wrap">CFA Heading</h4>
+										<p class="font__family-open-sans font__size-14 text-dark text-center text-lg-left">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor nean massa. Cum sociis natoque penatibus et magnis dis parturient mnsectetes.</p>
+									</div>
+								</div>
+								<div class="col-lg-3">
+									<figure class="shape-box shape-box_wave text-center" data-brk-library="component__shape_box">
+										<span class="before"></span>
+										<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/demo_agency_modern/270x410_1.jpg" class="lazyload" alt="alt">
+										<div class="brk-abs-overlay z-index-0 bg-black opacity-60"></div>
+										<figcaption>
+											<span class="wave-circle-1"></span>
+											<div class="icon">
+												<i class="fas fa-cogs"></i>
+											</div>
+											<h4 class="font__family-montserrat font__weight-bold font__size-24 text-uppercase main-title">Maintained</h4>
+											<p class="main-description font__family-open-sans font__size-14 text-gray">
+												Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor consequat
+											</p>
+											<a href="#" class="btn btn-inside-out btn-lg border-radius-30 font__weight-bold" data-brk-library="component__button">
+												<span class="before">Read More</span><span class="text">Click Me</span><span class="after">Read More</span>
+											</a>
+											<span class="wave-circle-2"></span>
+											<span class="after">
+												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 113">
+													<defs>
+														<style>
+															.cls-1 {
+																isolation: isolate;
+															}
+
+															.cls-2 {
+																fill: #fff;
+																fill-rule: evenodd;
+															}
+														</style>
+													</defs>
+													<title>Asset 2</title>
+													<g>
+														<g class="cls-1">
+															<g>
+																<path class="cls-2" d="M0,0V113S11.42,90.78,62,90.78,124.54,113,174,113s71.05-27,96-27V0Z" />
+															</g>
+														</g>
+													</g>
+												</svg>
+											</span>
+										</figcaption>
+									</figure>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="bg-white">
+			<div class="brk-paraxify overflow-hid" style="background-image: url({% static 'home/img/demo_agency_modern/1920x1080_2.jpg' %})" data-brk-library="component__parallax">
+				<span class="brk-abs-overlay brk-base-bg-light-blue"></span>
+				<div class="container">
+					<div class="row round__wrap scroll-show content__side-left">
+						<span class="parallax__bg-shape-lg brk-parallax__bg-color-md">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1787 480" preserveAspectRatio="none">
+								<defs>
+									<style>
+										.a {
+											fill: #fff;
+											fill-rule: evenodd;
+										}
+									</style>
+								</defs>
+								<path class="a" d="M1787,480c-132.55,0-240-107.45-240-240S1654.45,0,1787,0H0V480Z" />
+							</svg>
+						</span>
+						<div class="col-md-5">
+							<div class="pt-sm-120 pb-sm-120 pt-20 pb-20 text-center">
+								<p class="font__family-open-sans font__weight-bold font__size-16 text-blue">We are Awesome</p>
+								<hr class="divider mt-20 mb-10">
+								<h2 class="font__family-montserat font__weight-ultralight font__size-36 line__height-42 text-uppercase mt-20">
+									Engaging, purposeful
+								</h2>
+								<h2 class="font__family-roboto font__weight-light font__size-36 line__height-42 text-uppercase">
+									& creative
+								</h2>
+								<a href="#" class="btn btn-inside-out btn-lg btn-icon btn-shadow border-radius-30 font__weight-normal mt-30 btn-min-width-200" data-brk-library="component__button">
+									<i class="fal fa-comments icon-inside" aria-hidden="true"></i>
+									<span class="before">All info</span><span class="text">Click Me</span><span class="after">All info</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="brk-paraxify overflow-hid mt-30" style="background-image: url({% static 'home/img/demo_agency_modern/1920x1080_1.jpg'%})" data-brk-library="component__parallax">
+				<div class="container">
+					<div class="row round__wrap scroll-show content__side-right">
+						<span class="parallax__bg-shape-lg brk-parallax__bg-gradient-md">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1787 480">
+								<defs>
+									<style>
+										.b {
+											fill-rule: evenodd;
+											fill: url(#a2);
+										}
+									</style>
+									<linearGradient id="a2" y1="240" x2="1787" y2="240" gradientUnits="userSpaceOnUse">
+										<stop offset="0%" stop-color="var(--brand-primary)" />
+										<stop offset="50%" stop-color="var(--secondary)" />
+									</linearGradient>
+								</defs>
+								<path class="b" d="M0,480c132.55,0,240-107.45,240-240S132.55,0,0,0H1787V480Z" />
+							</svg>
+						</span>
+						<div class="col-md-7"></div>
+						<div class="col-md-5">
+							<div class="all-light text-md-left text-center pt-md-140 pb-md-140 pt-40 pb-40 pl-30">
+								<div class="d-flex flex-column flex-md-row align-items-center">
+									<img src="{% static 'home/img/letter-white.png' %}" class="pr-md-30 pb-20 pb-md-0" alt="alt" style="margin-left: -26px;">
+									<p class="font__family-open-sans font__size-15 line__height-24 brk-white-font-color opacity-60">Aenean
+										vulputate eleifend
+										tellus. Aenean leo ula, <br>porttitor eu, consequat vitae, eleifend ac.</p>
+								</div>
+								<div class="ml-md-30">
+									<h4 class="font__family-montserrat font__weight-bold font__size-28 text-uppercase mt-20">
+										Flexible & Customizable
+									</h4>
+									<a href="#" class="btn btn-prime btn-lg border-radius-5 font__weight-normal btn-prime-white ml-0 mr-0 mt-20 pl-50 pr-50 pt-10 pb-10" data-brk-library="component__button">
+										<span class="before"></span><span class="after"></span><span class="border-btn"></span>Button
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="bg-white">
+			<div class="container pt-lg-130 pt-70 pb-90">
+				<div class="row">
+					<div class="col-12 col-lg-5">
+						<h3 class="font__family-montserrat font__size-56 line__height-60 mb-25 text-center text-lg-left">
+							<span class="font__weight-ultralight">Endless</span>
+							<br>
+							<span class="font__weight-bold">Possibilities</span>
+						</h3>
+						<p class="brk-dark-font-color pr-10 font__size-16 font__weight-normal line__height-26 text-center text-lg-left">
+							Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.
+						</p>
+					</div>
+					<div class="col-12 col-lg-7">
+						<div class="progress__wrapper progress__transparent mt-70 mt-lg-15" data-brk-library="component__progress_bar">
+							<h5 class="font__family-montserrat font__size-16 font__weight-bold progress__title">
+								Hard Work
+							</h5>
+							<div class="progress">
+								<div data-valuemax="100" data-valuemin="0" data-valuenow="56" class="progress__bar">
+									<div class="progress__bar-counter_wrap"><span class="before"></span><span class="font__family-open-sans font__size-16 font__weight-bold progress__bar-counter hide">56</span>
+									</div>
+									<span class="circle"></span>
+								</div>
+							</div>
+						</div>
+						<div class="progress__wrapper progress__transparent" data-brk-library="component__progress_bar">
+							<h5 class="font__family-montserrat font__size-16 font__weight-bold progress__title">
+								Projects Delivery
+							</h5>
+							<div class="progress">
+								<div data-valuemax="100" data-valuemin="0" data-valuenow="82" class="progress__bar">
+									<div class="progress__bar-counter_wrap"><span class="before"></span><span class="font__family-open-sans font__size-16 font__weight-bold progress__bar-counter hide">82</span>
+									</div>
+									<span class="circle"></span>
+								</div>
+							</div>
+						</div>
+						<div class="progress__wrapper progress__transparent" data-brk-library="component__progress_bar">
+							<h5 class="font__family-montserrat font__size-16 font__weight-bold progress__title">
+								Customers Love
+							</h5>
+							<div class="progress">
+								<div data-valuemax="100" data-valuemin="0" data-valuenow="36" class="progress__bar">
+									<div class="progress__bar-counter_wrap"><span class="before"></span><span class="font__family-open-sans font__size-16 font__weight-bold progress__bar-counter hide">36</span>
+									</div>
+									<span class="circle"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="position-relative pt-200 pt-xs-80 brk-bgi-1 brk-bgi-1 brk-bg-pattern" id="prices">
+			<span class="brk-abs-bg-overlay" style="background-color: rgba(249, 251, 255, 0.96);"></span>
+			<span class="brk-svg-pattern-container brk-svg-pattern-container-7-top brk-svg-pattern-container_top" data-brk-library="component__svg_pattern">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 144">
+					<defs>
+						<path id="svg-pattern-id-2-1" d="M0 657.88s316.8-72.16 689-15.96c256.8 38.77 524.63 105.83 756 116.7 218.56 10.27 420.43-40.37 475-63.95V616H0z" />
+					</defs>
+					<g>
+						<g transform="translate(0 -616)">
+							<use fill="#fff" xlink:href="#svg-pattern-id-2-1" />
+						</g>
+					</g>
+				</svg>
+			</span>
+			<span class="brk-svg-pattern-container brk-svg-pattern-container-7-bottom brk-svg-pattern-container_bottom" data-brk-library="component__svg_pattern">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 144">
+					<defs>
+						<path id="svg-pattern-id-2-2" d="M1920 1489.12s-316.8 72.16-689 15.96c-256.8-38.77-524.63-105.83-756-116.7-218.56-10.27-420.43 40.37-475 63.95V1531h1920z" />
+					</defs>
+					<g>
+						<g transform="translate(0 -1387)">
+							<use fill="#fff" xlink:href="#svg-pattern-id-2-2" />
+						</g>
+					</g>
+				</svg>
+			</span>
+			<div class="position-relative" style="z-index: 5">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-12 col-xl-8">
+							<div class="pl-xl-5">
+								<div class="row">
+									<div class="col-lg-4">
+										<article class="brk-pricing-rounded text-center mb-50" data-brk-library="component__pricing_table,component__button">
+											<div class="brk-pricing-rounded__icon">
+												<span class="before"></span>
+												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 121.1 121.1">
+													<path d="M121.1,60.55,117.72,64l2.94,3.84-3.77,3L119.35,75l-4.11,2.55L117.18,82l-4.39,2,1.38,4.63-4.6,1.49.81,4.76-4.74.92.23,4.83-4.82.35-.35,4.82-4.83-.23-.92,4.74-4.76-.81-1.49,4.6-4.63-1.38-2,4.38-4.43-1.93L75,119.35l-4.16-2.45-3,3.76L64,117.72l-3.46,3.38-3.46-3.37-3.84,2.94-3-3.76-4.16,2.45-2.55-4.11-4.43,1.93-2-4.38-4.63,1.38-1.49-4.6-4.77.81-.92-4.74-4.83.23L20,101l-4.82-.35.23-4.83-4.74-.92.81-4.76-4.6-1.49,1.38-4.63L3.92,82l1.93-4.43L1.75,75,4.2,70.88l-3.77-3L3.38,64,0,60.55l3.38-3.46L.44,53.25l3.77-3L1.75,46.06,5.85,43.5,3.92,39.07l4.39-2L6.93,32.4l4.6-1.49-.81-4.76,4.74-.93-.23-4.83L20,20l.35-4.82,4.83.23.92-4.74,4.76.81,1.49-4.6L37,8.3l2-4.38L43.5,5.85l2.55-4.11L50.22,4.2l3-3.77,3.84,2.94L60.55,0,64,3.38,67.85.44l3,3.77L75,1.74,77.6,5.85,82,3.92l2,4.39L88.7,6.93l1.49,4.6L95,10.71l.92,4.74,4.83-.23.35,4.82,4.82.35-.23,4.83,4.74.92-.81,4.77,4.6,1.49L112.8,37l4.38,2-1.93,4.43,4.1,2.55-2.46,4.16,3.77,3-2.94,3.84Z" style="fill:var(--brand-primary)" />
+												</svg>
+												<i class="fal fa-rocket font__size-36 center-absolute" aria-hidden="true"></i>
+												<span class="after"></span>
+											</div>
+											<div class="brk-pricing-rounded__content brk-base-box-shadow">
+												<span class="rd-circl-overlay"></span>
+												<div class="rd-view">
+													<div class="rd-view__title font__family-open-sans font__weight-bold font__size-16 line__height-24">Bronze Package</div>
+													<div class="rd-view__price">
+														<span class="font__family-montserrat font__weight-ultralight font__size-56 line__height-56">$124</span>
+														<span class="old-price font__family-montserrat font__size-18">$200</span>
+													</div>
+												</div>
+												<div class="rd-description">
+													<ul class="rd-description__list font__family-open-sans font__size-14 line__height-48">
+														<li>According to schedule</li>
+														<li>Schedule a meeting</li>
+														<li>Give the green light</li>
+														<li>Start from scratch</li>
+														<li>Define the phases</li>
+													</ul>
+													<button class="btn btn-md-2 btn-icon border-radius-25 font__family-open-sans font__weight-bold btn-inside-out">
+														<i class="fal fa-shopping-cart icon-inside" aria-hidden="true"></i>
+														<span class="before">Buy now</span>
+														<span class="text">Buy now</span>
+														<span class="after">Buy now</span>
+													</button>
+												</div>
+											</div>
+										</article>
+									</div>
+									<div class="col-lg-4">
+										<article class="brk-pricing-rounded text-center mb-50" data-brk-library="component__pricing_table,component__button">
+											<div class="brk-pricing-rounded__icon">
+												<span class="before"></span>
+												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 121.1 121.1">
+													<path d="M121.1,60.55,117.72,64l2.94,3.84-3.77,3L119.35,75l-4.11,2.55L117.18,82l-4.39,2,1.38,4.63-4.6,1.49.81,4.76-4.74.92.23,4.83-4.82.35-.35,4.82-4.83-.23-.92,4.74-4.76-.81-1.49,4.6-4.63-1.38-2,4.38-4.43-1.93L75,119.35l-4.16-2.45-3,3.76L64,117.72l-3.46,3.38-3.46-3.37-3.84,2.94-3-3.76-4.16,2.45-2.55-4.11-4.43,1.93-2-4.38-4.63,1.38-1.49-4.6-4.77.81-.92-4.74-4.83.23L20,101l-4.82-.35.23-4.83-4.74-.92.81-4.76-4.6-1.49,1.38-4.63L3.92,82l1.93-4.43L1.75,75,4.2,70.88l-3.77-3L3.38,64,0,60.55l3.38-3.46L.44,53.25l3.77-3L1.75,46.06,5.85,43.5,3.92,39.07l4.39-2L6.93,32.4l4.6-1.49-.81-4.76,4.74-.93-.23-4.83L20,20l.35-4.82,4.83.23.92-4.74,4.76.81,1.49-4.6L37,8.3l2-4.38L43.5,5.85l2.55-4.11L50.22,4.2l3-3.77,3.84,2.94L60.55,0,64,3.38,67.85.44l3,3.77L75,1.74,77.6,5.85,82,3.92l2,4.39L88.7,6.93l1.49,4.6L95,10.71l.92,4.74,4.83-.23.35,4.82,4.82.35-.23,4.83,4.74.92-.81,4.77,4.6,1.49L112.8,37l4.38,2-1.93,4.43,4.1,2.55-2.46,4.16,3.77,3-2.94,3.84Z" style="fill:var(--brand-primary)" />
+												</svg>
+												<i class="fal fa-trophy font__size-36 center-absolute" aria-hidden="true"></i>
+												<span class="after"></span>
+											</div>
+											<div class="brk-pricing-rounded__content brk-base-box-shadow">
+												<span class="rd-circl-overlay"></span>
+												<div class="rd-view">
+													<div class="rd-view__title font__family-open-sans font__weight-bold font__size-16 line__height-24">Gold Package</div>
+													<div class="rd-view__price">
+														<span class="font__family-montserrat font__weight-ultralight font__size-56 line__height-56">$156</span>
+														<span class="old-price font__family-montserrat font__size-18">$240</span>
+													</div>
+												</div>
+												<div class="rd-description">
+													<ul class="rd-description__list font__family-open-sans font__size-14 line__height-48">
+														<li>Achieve the target</li>
+														<li>Stay on budget</li>
+														<li>Wrap up the project</li>
+														<li>Outsource a task</li>
+														<li>Review the plan</li>
+													</ul>
+													<button class="btn btn-md-2 btn-icon border-radius-25 font__family-open-sans font__weight-bold btn-inside-out">
+														<i class="fal fa-shopping-cart icon-inside" aria-hidden="true"></i>
+														<span class="before">Buy now</span>
+														<span class="text">Buy now</span>
+														<span class="after">Buy now</span>
+													</button>
+												</div>
+											</div>
+										</article>
+									</div>
+									<div class="col-lg-4">
+										<article class="brk-pricing-rounded text-center mb-50" data-brk-library="component__pricing_table,component__button">
+											<div class="brk-pricing-rounded__icon">
+												<span class="before"></span>
+												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 121.1 121.1">
+													<path d="M121.1,60.55,117.72,64l2.94,3.84-3.77,3L119.35,75l-4.11,2.55L117.18,82l-4.39,2,1.38,4.63-4.6,1.49.81,4.76-4.74.92.23,4.83-4.82.35-.35,4.82-4.83-.23-.92,4.74-4.76-.81-1.49,4.6-4.63-1.38-2,4.38-4.43-1.93L75,119.35l-4.16-2.45-3,3.76L64,117.72l-3.46,3.38-3.46-3.37-3.84,2.94-3-3.76-4.16,2.45-2.55-4.11-4.43,1.93-2-4.38-4.63,1.38-1.49-4.6-4.77.81-.92-4.74-4.83.23L20,101l-4.82-.35.23-4.83-4.74-.92.81-4.76-4.6-1.49,1.38-4.63L3.92,82l1.93-4.43L1.75,75,4.2,70.88l-3.77-3L3.38,64,0,60.55l3.38-3.46L.44,53.25l3.77-3L1.75,46.06,5.85,43.5,3.92,39.07l4.39-2L6.93,32.4l4.6-1.49-.81-4.76,4.74-.93-.23-4.83L20,20l.35-4.82,4.83.23.92-4.74,4.76.81,1.49-4.6L37,8.3l2-4.38L43.5,5.85l2.55-4.11L50.22,4.2l3-3.77,3.84,2.94L60.55,0,64,3.38,67.85.44l3,3.77L75,1.74,77.6,5.85,82,3.92l2,4.39L88.7,6.93l1.49,4.6L95,10.71l.92,4.74,4.83-.23.35,4.82,4.82.35-.23,4.83,4.74.92-.81,4.77,4.6,1.49L112.8,37l4.38,2-1.93,4.43,4.1,2.55-2.46,4.16,3.77,3-2.94,3.84Z" style="fill:var(--brand-primary)" />
+												</svg>
+												<i class="fal fa-shopping-cart font__size-36 center-absolute" aria-hidden="true"></i>
+												<span class="after"></span>
+											</div>
+											<div class="brk-pricing-rounded__content brk-base-box-shadow">
+												<span class="rd-circl-overlay"></span>
+												<div class="rd-view">
+													<div class="rd-view__title font__family-open-sans font__weight-bold font__size-16 line__height-24">Silver Package</div>
+													<div class="rd-view__price">
+														<span class="font__family-montserrat font__weight-ultralight font__size-56 line__height-56">$132</span>
+														<span class="old-price font__family-montserrat font__size-18">$164</span>
+													</div>
+												</div>
+												<div class="rd-description">
+													<ul class="rd-description__list font__family-open-sans font__size-14 line__height-48">
+														<li>Outsource a task</li>
+														<li>Review the plan</li>
+														<li>According to schedule</li>
+														<li>Schedule a meeting</li>
+														<li>Give the green light</li>
+													</ul>
+													<button class="btn btn-md-2 btn-icon border-radius-25 font__family-open-sans font__weight-bold btn-inside-out">
+														<i class="fal fa-shopping-cart icon-inside" aria-hidden="true"></i>
+														<span class="before">Buy now</span>
+														<span class="text">Buy now</span>
+														<span class="after">Buy now</span>
+													</button>
+												</div>
+											</div>
+										</article>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-xl-4">
+							<div class="pl-xl-80 pr-xl-5 pt-110 pt-xs-30">
+								<h4 class="font__family-montserrat font__size-56 line__height-60 mb-40 text-center text-center text-xl-left">
+									<span class="font__weight-ultralight">Check Prices or</span>
+									<span class="font__weight-ultralight">Make a </span> <span class="font__weight-bold">Request</span>
+								</h4>
+								<p class="brk-dark-font-color font__size-16 font__weight-normal line__height-26 mb-40 text-center text-center text-xl-left">
+									Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.
+								</p>
+								<div class="text-center text-xl-left">
+									<a href="#" class="btn btn-inside-out btn-lg ml-0 mr-0 pl-40 pr-40 font__weight-light border-radius-30 btn-shadow" data-brk-library="component__button">
+										<span class="before">Request a quote</span><span class="text">Request a quote</span><span class="after">Request a quote</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="pt-lg-100 pt-60 pb-lg-100 pb-70 bg-white" id="portfolio">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3"></div>
+					<div class="col-12 col-md-6">
+						<div class="text-center mb-40 mb-lg-100">
+							<h2 class="font__family-montserrat font__size-56 font__weight-ultralight line__height-60 mb-25">Our Portfolio</h2>
+							<h3 class="brk-dark-font-color font__size-15 font__weight-normal line__height-24 title-lines-solid title-lines-main" data-brk-library="component__title">
+								<span class="line" style="background:rgba(var(--brand-primary-rgb), 0.2)"></span>
+								<span class="text">Lorem ipsum dolor sit amet, consectetuer adipiscing <br> elit. Aenean commodo ligula eget dolor.</span>
+									<span class="line" style="background:rgba(var(--brand-primary-rgb), 0.2)"></span>
+							</h3>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-3 col-12">
+						<div class="brk-gallery-card brk-gallery-card_shadow" data-brk-library="component__gallery">
+							<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{% static 'home/img/demo_agency_modern/370x370_1.jpg' %}" alt="alt" class="brk-gallery-card__img lazyload">
+							<a href="{% static 'home/img/demo_agency_modern/370x370_1.jpg' %}" data-fancybox="gallery" class="fancybox brk-gallery-card__overlay-full brk-bg-gradient-40deg-85-28 d-flex align-items-center justify-content-center">
+								<i class="fas fa-plus font__size-36 brk-white-font-color"></i>
+							</a>
+						</div>
+					</div>
+					<div class="col-sm-3 col-12">
+						<div class="brk-gallery-card brk-gallery-card_shadow" data-brk-library="component__gallery">
+							<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{% static 'home/img/demo_agency_modern/370x370_2.jpg' %}" alt="alt" class="brk-gallery-card__img lazyload">
+							<a href="{% static 'home/img/demo_agency_modern/370x370_2.jpg' %}" data-fancybox="gallery" class="fancybox brk-gallery-card__overlay-full brk-bg-gradient-40deg-85-28 d-flex align-items-center justify-content-center">
+								<i class="fas fa-plus font__size-36 brk-white-font-color"></i>
+							</a>
+						</div>
+					</div>
+					<div class="col-sm-3 col-12">
+						<div class="brk-gallery-card brk-gallery-card_shadow" data-brk-library="component__gallery">
+							<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{% static 'home/img/demo_agency_modern/370x370_3.jpg' %}" alt="alt" class="brk-gallery-card__img lazyload">
+							<a href="{% static 'home/img/demo_agency_modern/370x370_3.jpg' %}" data-fancybox="gallery" class="fancybox brk-gallery-card__overlay-full brk-bg-gradient-40deg-85-28 d-flex align-items-center justify-content-center">
+								<i class="fas fa-plus font__size-36 brk-white-font-color"></i>
+							</a>
+						</div>
+					</div>
+					<div class="col-sm-3 col-12">
+						<div class="brk-gallery-card brk-gallery-card_shadow" data-brk-library="component__gallery">
+							<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{% static 'home/img/demo_agency_modern/370x370_4.jpg' %}" alt="alt" class="brk-gallery-card__img lazyload">
+							<a href="{% static 'home/img/demo_agency_modern/370x370_4.jpg' %}" data-fancybox="gallery" class="fancybox brk-gallery-card__overlay-full brk-bg-gradient-40deg-85-28 d-flex align-items-center justify-content-center">
+								<i class="fas fa-plus font__size-36 brk-white-font-color"></i>
+							</a>
+						</div>
+					</div>
+					<div class="col-sm-3 col-12">
+						<div class="brk-gallery-card brk-gallery-card_shadow" data-brk-library="component__gallery">
+							<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{% static 'home/img/demo_agency_modern/370x370_5.jpg' %}" alt="alt" class="brk-gallery-card__img lazyload">
+							<a href="{% static 'home/img/demo_agency_modern/370x370_5.jpg' %}" data-fancybox="gallery" class="fancybox brk-gallery-card__overlay-full brk-bg-gradient-40deg-85-28 d-flex align-items-center justify-content-center">
+								<i class="fas fa-plus font__size-36 brk-white-font-color"></i>
+							</a>
+						</div>
+					</div>
+					<div class="col-sm-3 col-12">
+						<div class="brk-gallery-card brk-gallery-card_shadow" data-brk-library="component__gallery">
+							<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{% static 'home/img/demo_agency_modern/370x370_6.jpg' %}" alt="alt" class="brk-gallery-card__img lazyload">
+							<a href="{% static 'home/img/demo_agency_modern/370x370_6.jpg' %}" data-fancybox="gallery" class="fancybox brk-gallery-card__overlay-full brk-bg-gradient-40deg-85-28 d-flex align-items-center justify-content-center">
+								<i class="fas fa-plus font__size-36 brk-white-font-color"></i>
+							</a>
+						</div>
+					</div>
+					<div class="col-sm-3 col-12">
+						<div class="brk-gallery-card brk-gallery-card_shadow" data-brk-library="component__gallery">
+							<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{% static 'home/img/demo_agency_modern/370x370_7.jpg' %}" alt="alt" class="brk-gallery-card__img lazyload">
+							<a href="{% static 'home/img/demo_agency_modern/370x370_7.jpg' %}" data-fancybox="gallery" class="fancybox brk-gallery-card__overlay-full brk-bg-gradient-40deg-85-28 d-flex align-items-center justify-content-center">
+								<i class="fas fa-plus font__size-36 brk-white-font-color"></i>
+							</a>
+						</div>
+					</div>
+					<div class="col-sm-3 col-12">
+						<div class="brk-gallery-card brk-gallery-card_shadow" data-brk-library="component__gallery">
+							<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{% static 'home/img/demo_agency_modern/370x370_8.jpg'%}" alt="alt" class="brk-gallery-card__img lazyload">
+							<a href="{% static 'home/img/demo_agency_modern/370x370_8.jpg' %}" data-fancybox="gallery" class="fancybox brk-gallery-card__overlay-full brk-bg-gradient-40deg-85-28 d-flex align-items-center justify-content-center">
+								<i class="fas fa-plus font__size-36 brk-white-font-color"></i>
+							</a>
+						</div>
+					</div>
+					<div class="col-sm-3 col-12">
+						<div class="brk-gallery-card brk-gallery-card_shadow" data-brk-library="component__gallery">
+							<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{% static 'home/img/demo_agency_modern/370x370_9.jpg' %}" alt="alt" class="brk-gallery-card__img lazyload">
+							<a href="{% static 'home/img/demo_agency_modern/370x370_9.jpg' %}" data-fancybox="gallery" class="fancybox brk-gallery-card__overlay-full brk-bg-gradient-40deg-85-28 d-flex align-items-center justify-content-center">
+								<i class="fas fa-plus font__size-36 brk-white-font-color"></i>
+							</a>
+						</div>
+					</div>
+					<div class="col-sm-3 col-12">
+						<div class="brk-gallery-card brk-gallery-card_shadow" data-brk-library="component__gallery">
+							<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="i{% static 'home/mg/demo_agency_modern/370x370_10.jpg' %}" alt="alt" class="brk-gallery-card__img lazyload">
+							<a href="{% static 'home/img/demo_agency_modern/370x370_10.jpg' %}" data-fancybox="gallery" class="fancybox brk-gallery-card__overlay-full brk-bg-gradient-40deg-85-28 d-flex align-items-center justify-content-center">
+								<i class="fas fa-plus font__size-36 brk-white-font-color"></i>
+							</a>
+						</div>
+					</div>
+					<div class="col-sm-3 col-12">
+						<div class="brk-gallery-card brk-gallery-card_shadow" data-brk-library="component__gallery">
+							<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{% static 'home/img/demo_agency_modern/370x370_11.jpg' %}" alt="alt" class="brk-gallery-card__img lazyload">
+							<a href="{% static 'home/img/demo_agency_modern/370x370_11.jpg' %}" data-fancybox="gallery" class="fancybox brk-gallery-card__overlay-full brk-bg-gradient-40deg-85-28 d-flex align-items-center justify-content-center">
+								<i class="fas fa-plus font__size-36 brk-white-font-color"></i>
+							</a>
+						</div>
+					</div>
+					<div class="col-sm-3 col-12">
+						<div class="brk-gallery-card brk-gallery-card_shadow" data-brk-library="component__gallery">
+							<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{% static 'home/img/demo_agency_modern/370x370_12.jpg'%}" alt="alt" class="brk-gallery-card__img lazyload">
+							<a href="{% static 'home/img/demo_agency_modern/370x370_12.jpg'%}" data-fancybox="gallery" class="fancybox brk-gallery-card__overlay-full brk-bg-gradient-40deg-85-28 d-flex align-items-center justify-content-center">
+								<i class="fas fa-plus font__size-36 brk-white-font-color"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="position-relative pt-190 pb-220 brk-bg-center-cover pt-xs-80 pb-xs-70" style="background-image: url({% static 'home/img/demo_agency_modern/1920x916_1.jpg' %})" id="testimonials">
+			<span class="brk-svg-pattern-container brk-svg-pattern-container-7-top brk-svg-pattern-container_top" data-brk-library="component__svg_pattern">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 144">
+					<defs>
+						<path id="svg-pattern-id-3-1" d="M0 657.88s316.8-72.16 689-15.96c256.8 38.77 524.63 105.83 756 116.7 218.56 10.27 420.43-40.37 475-63.95V616H0z" />
+					</defs>
+					<g>
+						<g transform="translate(0 -616)">
+							<use fill="#fff" xlink:href="#svg-pattern-id-3-1" />
+						</g>
+					</g>
+				</svg>
+			</span>
+			<span class="brk-svg-pattern-container brk-svg-pattern-container-7-bottom brk-svg-pattern-container_bottom" data-brk-library="component__svg_pattern">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 144">
+					<defs>
+						<path id="svg-pattern-id-3-2" d="M1920 1489.12s-316.8 72.16-689 15.96c-256.8-38.77-524.63-105.83-756-116.7-218.56-10.27-420.43 40.37-475 63.95V1531h1920z" />
+					</defs>
+					<g>
+						<g transform="translate(0 -1387)">
+							<use fill="#fff" xlink:href="#svg-pattern-id-3-2" />
+						</g>
+					</g>
+				</svg>
+			</span>
+			<span class="brk-abs-bg-overlay brk-bg-gradient-40deg-72"></span>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3"></div>
+					<div class="col-12 col-md-6">
+						<div class="text-center mb-60 mb-xs-25">
+							<h5 class="font__size-21 font__family-montserrat font__weight-light text-gray" data-brk-library="component__title">Stay on budget</h5>
+							<h3 class="font__family-montserrat font__weight-ultralight brk-white-font-color title-lines-solid title-lines-main" data-brk-library="component__title">
+								<span class="line" style="background:rgba(var(--white-rgb), 0.2)"></span>
+								<span class="text">Wrap up the project</span>
+								<span class="line" style="background:rgba(var(--white-rgb), 0.2)"></span>
+							</h3>
+						</div>
+					</div>
+				</div>
+				<div class="brk-testimonials-layered-vertical" data-brk-library="component__testimonials,slider__swiper">
+					<div class="brk-testimonials-layered-vertical__container">
+						<div class="overlay-vertical"></div>
+						<div class="layered-vertical-slider swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="brk-testimonials-layered-vertical__item layered-vertical-item">
+										<div class="brk-testimonials-layered-vertical__person">
+											<div class="brk-testimonials-layered-vertical__person-info">
+												<div class="brk-testimonials-layered-vertical__photo" style="background-image: url({% static 'home/img/demo_agency_modern/94x94_1.jpg'%})"></div>
+												<div class="brk-testimonials-layered-vertical__name font__family-montserrat font__weight-bold">Ostin Paterson</div>
+												<div class="brk-testimonials-layered-vertical__job font__family-open-sans letter-spacing-20">Client from Twitter</div>
+											</div>
+											<div class="brk-rating" data-brk-library="component__elements">
+												<div class="brk-rating__layer brk-dark-font-color">
+													<i class="fal fa-star"></i>
+													<i class="fal fa-star"></i>
+													<i class="fal fa-star"></i>
+													<i class="fal fa-star"></i>
+													<i class="fal fa-star"></i>
+												</div>
+												<div class="brk-rating__imposition brk-base-font-color" style="width: 80%">
+													<div class="visible">
+														<i class="fas fa-star"></i>
+														<i class="fas fa-star"></i>
+														<i class="fas fa-star"></i>
+														<i class="fas fa-star"></i>
+														<i class="fas fa-star"></i>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="brk-testimonials-layered-vertical__comment font__family-open-sans">From the war room to the battlefield, the world was continually blowing up around Diana Prince. Yet Diana, aka Wonder Woman, never lost focus on why she left the safety of Themyscira for war-torn Europe: to stop the evil Ares and end the war. No matter what got in her way, no matter how often her path was blocked, she didn't stop.</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="brk-testimonials-layered-vertical__item layered-vertical-item">
+										<div class="brk-testimonials-layered-vertical__person">
+											<div class="brk-testimonials-layered-vertical__person-info">
+												<div class="brk-testimonials-layered-vertical__photo" style="background-image: url({% static 'home/img/demo_agency_modern/94x94_2.jpg'%})"></div>
+												<div class="brk-testimonials-layered-vertical__name font__family-montserrat font__weight-bold">Anna Jonson</div>
+												<div class="brk-testimonials-layered-vertical__job font__family-open-sans letter-spacing-20">Client from Google</div>
+											</div>
+											<div class="brk-rating" data-brk-library="component__elements">
+												<div class="brk-rating__layer brk-dark-font-color">
+													<i class="fal fa-star"></i>
+													<i class="fal fa-star"></i>
+													<i class="fal fa-star"></i>
+													<i class="fal fa-star"></i>
+													<i class="fal fa-star"></i>
+												</div>
+												<div class="brk-rating__imposition brk-base-font-color" style="width: 80%">
+													<div class="visible">
+														<i class="fas fa-star"></i>
+														<i class="fas fa-star"></i>
+														<i class="fas fa-star"></i>
+														<i class="fas fa-star"></i>
+														<i class="fas fa-star"></i>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="brk-testimonials-layered-vertical__comment font__family-open-sans">Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Curabitur ullamcorper ultricies nisi.</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="brk-testimonials-layered-vertical__item layered-vertical-item">
+										<div class="brk-testimonials-layered-vertical__person">
+											<div class="brk-testimonials-layered-vertical__person-info">
+												<div class="brk-testimonials-layered-vertical__photo" style="background-image: url({% static 'home/img/demo_agency_modern/94x94_1.jpg' %})"></div>
+												<div class="brk-testimonials-layered-vertical__name font__family-montserrat font__weight-bold">Mike Paterson</div>
+												<div class="brk-testimonials-layered-vertical__job font__family-open-sans letter-spacing-20">Client from Yahoo</div>
+											</div>
+											<div class="brk-rating" data-brk-library="component__elements">
+												<div class="brk-rating__layer brk-dark-font-color">
+													<i class="fal fa-star"></i>
+													<i class="fal fa-star"></i>
+													<i class="fal fa-star"></i>
+													<i class="fal fa-star"></i>
+													<i class="fal fa-star"></i>
+												</div>
+												<div class="brk-rating__imposition brk-base-font-color" style="width: 80%">
+													<div class="visible">
+														<i class="fas fa-star"></i>
+														<i class="fas fa-star"></i>
+														<i class="fas fa-star"></i>
+														<i class="fas fa-star"></i>
+														<i class="fas fa-star"></i>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="brk-testimonials-layered-vertical__comment font__family-open-sans">For many small business owners and entrepreneurs, popular apps like Uber and Snapchat are sources of inspiration. It's easy to see the appeal of mobile apps: they can provide a direct connection between businesses and their customers, encouraging engagement by providing new services and perks.</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-base-arrow-vertical button-prev"><i class="fas fa-arrow-down brk-white-font-color"></i></div>
+						<div class="swiper-base-arrow-vertical button-next"><i class="fas fa-arrow-up brk-white-font-color"></i></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="pt-50 pb-70 bg-white" id="shop">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3"></div>
+					<div class="col-12 col-md-6">
+						<div class="text-center mb-50">
+							<h2 class="font__family-montserrat font__size-56 font__weight-ultralight line__height-60 mb-25">Our Shop</h2>
+							<h3 class="brk-dark-font-color font__size-15 font__weight-normal line__height-24 title-lines-solid title-lines-main" data-brk-library="component__title">
+								<span class="line" style="background:rgba(var(--brand-primary-rgb), 0.2)"></span>
+								<span class="text">Lorem ipsum dolor sit amet, consectetuer adipiscing <br> elit. Aenean commodo ligula eget dolor.</span>
+									<span class="line" style="background:rgba(var(--brand-primary-rgb), 0.2)"></span>
+							</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-3 col-lg-6">
+						<div class="flip-box brk-sc-flip-two text-center" data-brk-library="component__shop_flip,component__flip_box_css,scrollbar">
+							<div class="flip flip_horizontal">
+								<div class="flip__front brk-sc-flip-two__front">
+									<div class="brk-sc-flip-two__thumb">
+										<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/demo_agency_modern/124x215_1.png" alt="alt" class="lazyload">
+									</div>
+									<div class="brk-sc-flip-two__description">
+										<div class="brk-sc-flip-two__stick font__family-montserrat font__weight-light brk-white-font-color brk-bg-primary">-40%</div>
+										<div class="brk-sc-flip-two__price font__family-montserrat font__weight-medium brk-base-font-color">$24.00</div>
+										<div class="brk-sc-flip-two__front-title font__family-montserrat font__weight-light brk-dark-font-color">Polo shirt</div>
+									</div>
+								</div>
+								<div class="flip__back brk-sc-flip-two__back">
+									<div class="brk-sc-flip-two__back-layer">
+										<div class="brk-sc-flip-two__back-title font__family-montserrat font__weight-medium">Polo shirt</div>
+										<div class="brk-sc-flip-two__list scrollbar-inner">
+											<ul class="pl-15 pr-15">
+												<li><i class="far fa-check brk-base-font-color"></i> Duis arcu tortor</li>
+												<li><i class="far fa-check brk-base-font-color"></i> Quisque rutrmper</li>
+												<li><i class="far fa-check brk-base-font-color"></i> Quisque rutrmper</li>
+												<li><i class="far fa-check brk-base-font-color"></i> Quisque rutrmper</li>
+												<li><i class="far fa-check brk-base-font-color"></i> Etiam ultricies</li>
+												<li><i class="far fa-check brk-base-font-color"></i> Duis arcu tortorsci</li>
+												<li><i class="far fa-check brk-base-font-color"></i> Quisque rutrum</li>
+											</ul>
+										</div>
+										<div class="brk-sc-flip-two__button">
+											<a href="#" class="btn btn-inside-out btn-md btn-icon border-radius-25 font__family-open-sans font__weight-semibold" data-brk-library="component__button">
+												<i class="far fa-shopping-basket icon-inside"></i>
+												<span class="before">$24.00</span><span class="text">buy it</span><span class="after">$24.00</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-6">
+						<div class="flip-box brk-sc-flip-two text-center" data-brk-library="component__shop_flip,component__flip_box_css,scrollbar">
+							<div class="flip flip_vertical">
+								<div class="flip__front brk-sc-flip-two__front">
+									<div class="brk-sc-flip-two__thumb">
+										<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/demo_agency_modern/126x219_1.png" alt="alt" class="lazyload">
+									</div>
+									<div class="brk-sc-flip-two__description">
+										<div class="brk-sc-flip-two__stick font__family-montserrat font__weight-light brk-white-font-color brk-bg-primary">-40%</div>
+										<div class="brk-sc-flip-two__price font__family-montserrat font__weight-medium brk-base-font-color">$24.00</div>
+										<div class="brk-sc-flip-two__front-title font__family-montserrat font__weight-light brk-dark-font-color">Hugo Boss</div>
+									</div>
+								</div>
+								<div class="flip__back brk-sc-flip-two__back">
+									<div class="brk-sc-flip-two__back-layer">
+										<div class="brk-sc-flip-two__back-title font__family-montserrat font__weight-medium">Hugo Boss</div>
+										<div class="brk-sc-flip-two__list scrollbar-inner">
+											<ul class="pl-15 pr-15">
+												<li><i class="far fa-check brk-base-font-color"></i> Duis arcu tortor</li>
+												<li><i class="far fa-check brk-base-font-color"></i> Quisque rutrmper</li>
+												<li><i class="far fa-check brk-base-font-color"></i> Quisque rutrmper</li>
+												<li><i class="far fa-check brk-base-font-color"></i> Quisque rutrmper</li>
+												<li><i class="far fa-check brk-base-font-color"></i> Etiam ultricies</li>
+												<li><i class="far fa-check brk-base-font-color"></i> Duis arcu tortorsci</li>
+												<li><i class="far fa-check brk-base-font-color"></i> Quisque rutrum</li>
+											</ul>
+										</div>
+										<div class="brk-sc-flip-two__button">
+											<a href="#" class="btn btn-inside-out btn-md btn-icon border-radius-25 font__family-open-sans font__weight-semibold" data-brk-library="component__button">
+												<i class="far fa-shopping-basket icon-inside"></i>
+												<span class="before">$24.00</span><span class="text">buy it</span><span class="after">$24.00</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-6">
+						<div class="flip-box brk-sc-flip-two text-center" data-brk-library="component__shop_flip,component__flip_box_css,scrollbar">
+							<div class="flip flip_vertical">
+								<div class="flip__front brk-sc-flip-two__front">
+									<div class="brk-sc-flip-two__thumb">
+										<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/demo_agency_modern/124x215_1.png" alt="alt" class="lazyload">
+									</div>
+									<div class="brk-sc-flip-two__description">
+										<div class="brk-sc-flip-two__price font__family-montserrat font__weight-medium brk-base-font-color">$24.00</div>
+										<div class="brk-sc-flip-two__front-title font__family-montserrat font__weight-light brk-dark-font-color">Tommy Hilfiger</div>
+									</div>
+								</div>
+								<div class="flip__back brk-sc-flip-two__back">
+									<div class="brk-sc-flip-two__back-layer">
+										<div class="brk-sc-flip-two__back-title font__family-montserrat font__weight-medium">Tommy Hilfiger</div>
+										<div class="brk-sc-flip-two__list scrollbar-inner">
+											<ul class="pl-15 pr-15">
+												<li><i class="far fa-check brk-base-font-color"></i> Duis arcu tortor</li>
+												<li><i class="far fa-check brk-base-font-color"></i> Quisque rutrmper</li>
+												<li><i class="far fa-check brk-base-font-color"></i> Quisque rutrmper</li>
+												<li><i class="far fa-check brk-base-font-color"></i> Quisque rutrmper</li>
+												<li><i class="far fa-check brk-base-font-color"></i> Etiam ultricies</li>
+												<li><i class="far fa-check brk-base-font-color"></i> Duis arcu tortorsci</li>
+												<li><i class="far fa-check brk-base-font-color"></i> Quisque rutrum</li>
+											</ul>
+										</div>
+										<div class="brk-sc-flip-two__button">
+											<a href="#" class="btn btn-inside-out btn-md btn-icon border-radius-25 font__family-open-sans font__weight-semibold" data-brk-library="component__button">
+												<i class="far fa-shopping-basket icon-inside"></i>
+												<span class="before">$24.00</span><span class="text">buy it</span><span class="after">$24.00</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-6">
+						<div class="flip-box brk-sc-flip-two text-center" data-brk-library="component__shop_flip,component__flip_box_css,scrollbar">
+							<div class="flip flip_horizontal">
+								<div class="flip__front brk-sc-flip-two__front">
+									<div class="brk-sc-flip-two__thumb">
+										<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/demo_agency_modern/168x215_1.png" alt="alt" class="lazyload">
+									</div>
+									<div class="brk-sc-flip-two__description">
+										<div class="brk-sc-flip-two__price font__family-montserrat font__weight-medium brk-base-font-color">$24.00</div>
+										<div class="brk-sc-flip-two__front-title font__family-montserrat font__weight-light brk-dark-font-color">Long-sleeve top</div>
+									</div>
+								</div>
+								<div class="flip__back brk-sc-flip-two__back">
+									<div class="brk-sc-flip-two__back-layer">
+										<div class="brk-sc-flip-two__back-title font__family-montserrat font__weight-medium">Long-sleeve top</div>
+										<div class="brk-sc-flip-two__list scrollbar-inner">
+											<ul class="pl-15 pr-15">
+												<li><i class="far fa-check brk-base-font-color"></i> Duis arcu tortor</li>
+												<li><i class="far fa-check brk-base-font-color"></i> Quisque rutrmper</li>
+												<li><i class="far fa-check brk-base-font-color"></i> Quisque rutrmper</li>
+												<li><i class="far fa-check brk-base-font-color"></i> Quisque rutrmper</li>
+												<li><i class="far fa-check brk-base-font-color"></i> Etiam ultricies</li>
+												<li><i class="far fa-check brk-base-font-color"></i> Duis arcu tortorsci</li>
+												<li><i class="far fa-check brk-base-font-color"></i> Quisque rutrum</li>
+											</ul>
+										</div>
+										<div class="brk-sc-flip-two__button">
+											<a href="#" class="btn btn-inside-out btn-md btn-icon border-radius-25 font__family-open-sans font__weight-semibold" data-brk-library="component__button">
+												<i class="far fa-shopping-basket icon-inside"></i>
+												<span class="before">$24.00</span><span class="text">buy it</span><span class="after">$24.00</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-6">
+						<div class="flip-box brk-sc-flip-two text-center" data-brk-library="component__shop_flip,component__flip_box_css,scrollbar">
+							<div class="flip flip_horizontal">
+								<div class="flip__front brk-sc-flip-two__front">
+									<div class="brk-sc-flip-two__thumb">
+										<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/demo_agency_modern/124x215_1.png" alt="alt" class="lazyload">
+									</div>
+									<div class="brk-sc-flip-two__description">
+										<div class="brk-sc-flip-two__price font__family-montserrat font__weight-medium brk-base-font-color">$24.00</div>
+										<div class="brk-sc-flip-two__front-title font__family-montserrat font__weight-light brk-dark-font-color">Sleeveless shirt</div>
+									</div>
+								</div>
+								<div class="flip__back brk-sc-flip-two__back">
+									<div class="brk-sc-flip-two__back-layer">
+										<div class="brk-sc-flip-two__back-title font__family-montserrat font__weight-medium">Sleeveless shirt</div>
+										<div class="brk-sc-flip-two__list scrollbar-inner">
+											<ul class="pl-15 pr-15">
+												<li><i class="far fa-check brk-base-font-color"></i> Duis arcu tortor</li>
+												<li><i class="far fa-check brk-base-font-color"></i> Quisque rutrmper</li>
+												<li><i class="far fa-check brk-base-font-color"></i> Quisque rutrmper</li>
+												<li><i class="far fa-check brk-base-font-color"></i> Quisque rutrmper</li>
+												<li><i class="far fa-check brk-base-font-color"></i> Etiam ultricies</li>
+												<li><i class="far fa-check brk-base-font-color"></i> Duis arcu tortorsci</li>
+												<li><i class="far fa-check brk-base-font-color"></i> Quisque rutrum</li>
+											</ul>
+										</div>
+										<div class="brk-sc-flip-two__button">
+											<a href="#" class="btn btn-inside-out btn-md btn-icon border-radius-25 font__family-open-sans font__weight-semibold" data-brk-library="component__button">
+												<i class="far fa-shopping-basket icon-inside"></i>
+												<span class="before">$24.00</span><span class="text">buy it</span><span class="after">$24.00</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-6">
+						<div class="flip-box brk-sc-flip-two text-center" data-brk-library="component__shop_flip,component__flip_box_css,scrollbar">
+							<div class="flip flip_horizontal">
+								<div class="flip__front brk-sc-flip-two__front">
+									<div class="brk-sc-flip-two__thumb">
+										<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/demo_agency_modern/126x219_1.png" alt="alt" class="lazyload">
+									</div>
+									<div class="brk-sc-flip-two__description">
+										<div class="brk-sc-flip-two__price font__family-montserrat font__weight-medium brk-base-font-color">$24.00</div>
+										<div class="brk-sc-flip-two__front-title font__family-montserrat font__weight-light brk-dark-font-color">Sport shoes</div>
+									</div>
+								</div>
+								<div class="flip__back brk-sc-flip-two__back">
+									<div class="brk-sc-flip-two__back-layer">
+										<div class="brk-sc-flip-two__back-title font__family-montserrat font__weight-medium">Sport shoes</div>
+										<div class="brk-sc-flip-two__list scrollbar-inner">
+											<ul class="pl-15 pr-15">
+												<li><i class="far fa-check brk-base-font-color"></i> Duis arcu tortor</li>
+												<li><i class="far fa-check brk-base-font-color"></i> Quisque rutrmper</li>
+												<li><i class="far fa-check brk-base-font-color"></i> Quisque rutrmper</li>
+												<li><i class="far fa-check brk-base-font-color"></i> Quisque rutrmper</li>
+												<li><i class="far fa-check brk-base-font-color"></i> Etiam ultricies</li>
+												<li><i class="far fa-check brk-base-font-color"></i> Duis arcu tortorsci</li>
+												<li><i class="far fa-check brk-base-font-color"></i> Quisque rutrum</li>
+											</ul>
+										</div>
+										<div class="brk-sc-flip-two__button">
+											<a href="#" class="btn btn-inside-out btn-md btn-icon border-radius-25 font__family-open-sans font__weight-semibold" data-brk-library="component__button">
+												<i class="far fa-shopping-basket icon-inside"></i>
+												<span class="before">$24.00</span><span class="text">buy it</span><span class="after">$24.00</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-6">
+						<div class="flip-box brk-sc-flip-two text-center" data-brk-library="component__shop_flip,component__flip_box_css,scrollbar">
+							<div class="flip flip_horizontal">
+								<div class="flip__front brk-sc-flip-two__front">
+									<div class="brk-sc-flip-two__thumb">
+										<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/demo_agency_modern/168x215_1.png" alt="alt" class="lazyload">
+									</div>
+									<div class="brk-sc-flip-two__description">
+										<div class="brk-sc-flip-two__price font__family-montserrat font__weight-medium brk-base-font-color">$24.00</div>
+										<div class="brk-sc-flip-two__front-title font__family-montserrat font__weight-light brk-dark-font-color">The North Face</div>
+									</div>
+								</div>
+								<div class="flip__back brk-sc-flip-two__back">
+									<div class="brk-sc-flip-two__back-layer">
+										<div class="brk-sc-flip-two__back-title font__family-montserrat font__weight-medium">The North Face</div>
+										<div class="brk-sc-flip-two__list scrollbar-inner">
+											<ul class="pl-15 pr-15">
+												<li><i class="far fa-check brk-base-font-color"></i> Duis arcu tortor</li>
+												<li><i class="far fa-check brk-base-font-color"></i> Quisque rutrmper</li>
+												<li><i class="far fa-check brk-base-font-color"></i> Quisque rutrmper</li>
+												<li><i class="far fa-check brk-base-font-color"></i> Quisque rutrmper</li>
+												<li><i class="far fa-check brk-base-font-color"></i> Etiam ultricies</li>
+												<li><i class="far fa-check brk-base-font-color"></i> Duis arcu tortorsci</li>
+												<li><i class="far fa-check brk-base-font-color"></i> Quisque rutrum</li>
+											</ul>
+										</div>
+										<div class="brk-sc-flip-two__button">
+											<a href="#" class="btn btn-inside-out btn-md btn-icon border-radius-25 font__family-open-sans font__weight-semibold" data-brk-library="component__button">
+												<i class="far fa-shopping-basket icon-inside"></i>
+												<span class="before">$24.00</span><span class="text">buy it</span><span class="after">$24.00</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-6">
+						<div class="flip-box brk-sc-flip-two text-center" data-brk-library="component__shop_flip,component__flip_box_css,scrollbar">
+							<div class="flip flip_horizontal">
+								<div class="flip__front brk-sc-flip-two__front">
+									<div class="brk-sc-flip-two__thumb">
+										<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/demo_agency_modern/124x215_1.png" alt="alt" class="lazyload">
+									</div>
+									<div class="brk-sc-flip-two__description">
+										<div class="brk-sc-flip-two__price font__family-montserrat font__weight-medium brk-base-font-color">$24.00</div>
+										<div class="brk-sc-flip-two__front-title font__family-montserrat font__weight-light brk-dark-font-color">Business shoes</div>
+									</div>
+								</div>
+								<div class="flip__back brk-sc-flip-two__back">
+									<div class="brk-sc-flip-two__back-layer">
+										<div class="brk-sc-flip-two__back-title font__family-montserrat font__weight-medium">Business shoes</div>
+										<div class="brk-sc-flip-two__list scrollbar-inner">
+											<ul class="pl-15 pr-15">
+												<li><i class="far fa-check brk-base-font-color"></i> Duis arcu tortor</li>
+												<li><i class="far fa-check brk-base-font-color"></i> Quisque rutrmper</li>
+												<li><i class="far fa-check brk-base-font-color"></i> Quisque rutrmper</li>
+												<li><i class="far fa-check brk-base-font-color"></i> Quisque rutrmper</li>
+												<li><i class="far fa-check brk-base-font-color"></i> Etiam ultricies</li>
+												<li><i class="far fa-check brk-base-font-color"></i> Duis arcu tortorsci</li>
+												<li><i class="far fa-check brk-base-font-color"></i> Quisque rutrum</li>
+											</ul>
+										</div>
+										<div class="brk-sc-flip-two__button">
+											<a href="#" class="btn btn-inside-out btn-md btn-icon border-radius-25 font__family-open-sans font__weight-semibold" data-brk-library="component__button">
+												<i class="far fa-shopping-basket icon-inside"></i>
+												<span class="before">$24.00</span><span class="text">buy it</span><span class="after">$24.00</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cfa__wrapper cfa__minimal bg__style overlay__white text-center text-lg-left lazyload border-radius-25 mt-lg-60 mt-10" data-bg="img/1170x108_2.jpg" data-brk-library="component__call_to_action">
+					<h4 class="font__family-montserrat font__size-21 font__weight-bold no-wrap">CFA Heading</h4>
+					<p class="font__family-open-sans font__size-14 text-dark text-center text-lg-left">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor nean massa. Cum sociis natoque penatibus et magnis dis parturient mnsectetes.</p>
+					<a href="#" class="btn btn-lg border-radius-30 font__family-open-sans font__weight-bold btn-inside-out btn-min-width-200 btn-inside-out-invert">
+						<span class="before">read more</span>
+						<span class="text">read more</span>
+						<span class="after">read more</span>
+					</a>
+				</div>
+			</div>
+		</section>
+		<section class="position-relative pt-lg-220 pt-60 pb-lg-220 pb-60 brk-bgi-1 brk-bgi-1 brk-bg-pattern">
+			<span class="brk-abs-bg-overlay" style="background-color: rgba(249, 251, 255, 0.96);"></span>
+			<span class="brk-svg-pattern-container brk-svg-pattern-container-7-top brk-svg-pattern-container_top" data-brk-library="component__svg_pattern">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 144">
+					<defs>
+						<path id="svg-pattern-id-4-1" d="M0 657.88s316.8-72.16 689-15.96c256.8 38.77 524.63 105.83 756 116.7 218.56 10.27 420.43-40.37 475-63.95V616H0z" />
+					</defs>
+					<g>
+						<g transform="translate(0 -616)">
+							<use fill="#fff" xlink:href="#svg-pattern-id-4-1" />
+						</g>
+					</g>
+				</svg>
+			</span>
+			<span class="brk-svg-pattern-container brk-svg-pattern-container-7-bottom brk-svg-pattern-container_bottom" data-brk-library="component__svg_pattern">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 144">
+					<defs>
+						<path id="svg-pattern-id-4-2" d="M1920 1489.12s-316.8 72.16-689 15.96c-256.8-38.77-524.63-105.83-756-116.7-218.56-10.27-420.43 40.37-475 63.95V1531h1920z" />
+					</defs>
+					<g>
+						<g transform="translate(0 -1387)">
+							<use fill="#fff" xlink:href="#svg-pattern-id-4-2" />
+						</g>
+					</g>
+				</svg>
+			</span>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-12 col-xl-4">
+						<div class="pl-xl-110 pt-50 pt-xs-20 pr-xl-4 text-center text-xl-left mb-50 mb-xl-0">
+							<h3 class="font__family-montserrat font__size-56 line__height-60 mb-50">
+								<span class="font__weight-ultralight">Our Best</span>
+								<br>
+								<span class="font__weight-bold">Results</span>
+							</h3>
+							<p class="brk-dark-font-color font__size-16 line__height-26 font__weight-normal mb-30">
+								Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante,
+								dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.
+							</p>
+							<a href="#" class="btn btn-inside-out btn-lg ml-0 border-radius-30 btn-shadow font__weight-light pl-60 pr-60" data-brk-library="component__button">
+								<span class="before">Contact Us</span><span class="text">Click Me</span><span class="after">Contact Us</span>
+							</a>
+						</div>
+					</div>
+					<div class="col-12 col-xl-8">
+						<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="lazyload" data-src="img/demo_agency_modern/chart.png" class="shadow" alt="chart">
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="pt-lg-40 pt-70 bg-white" id="team">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3"></div>
+					<div class="col-12 col-md-6">
+						<div class="text-center mb-lg-150 mb-100">
+							<h2 class="font__family-montserrat font__size-56 font__weight-ultralight line__height-60 mb-25">Our Team</h2>
+							<h3 class="brk-dark-font-color font__size-15 font__weight-normal line__height-24 title-lines-solid title-lines-main" data-brk-library="component__title">
+								<span class="line" style="background:rgba(var(--brand-primary-rgb), 0.2)"></span>
+								<span class="text">Lorem ipsum dolor sit amet, consectetuer adipiscing <br> elit. Aenean commodo ligula eget dolor.</span>
+									<span class="line" style="background:rgba(var(--brand-primary-rgb), 0.2)"></span>
+							</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="position-relative bg__style pb-60" style="background-image: url({% static 'home/img/demo_agency_modern/1920x1080_3.jpg'%})">
+				<span class="brk-svg-pattern-container brk-svg-pattern-container-7-top brk-svg-pattern-container_top" data-brk-library="component__svg_pattern">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 144">
+						<defs>
+							<path id="svg-pattern-id-5-1" d="M0 657.88s316.8-72.16 689-15.96c256.8 38.77 524.63 105.83 756 116.7 218.56 10.27 420.43-40.37 475-63.95V616H0z" />
+						</defs>
+						<g>
+							<g transform="translate(0 -616)">
+								<use fill="#fff" xlink:href="#svg-pattern-id-5-1" />
+							</g>
+						</g>
+					</svg>
+				</span>
+				<span class="brk-svg-pattern-container brk-svg-pattern-container-7-bottom brk-svg-pattern-container_bottom" data-brk-library="component__svg_pattern">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 144">
+						<defs>
+							<path id="svg-pattern-id-5-2" d="M1920 1489.12s-316.8 72.16-689 15.96c-256.8-38.77-524.63-105.83-756-116.7-218.56-10.27-420.43 40.37-475 63.95V1531h1920z" />
+						</defs>
+						<g>
+							<g transform="translate(0 -1387)">
+								<use fill="#fff" xlink:href="#svg-pattern-id-5-2" />
+							</g>
+						</g>
+					</svg>
+				</span>
+				<span class="brk-abs-bg-overlay brk-bg-gradient-40deg-72"></span>
+				<div class="position-relative" style="top: -70px; z-index: 5">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-3 col-sm-6">
+								<article class="brk-team-persone-circle brk-base-box-shadow text-center" data-brk-library="component__team">
+									<div class="brk-team-persone-circle__name-position">
+										<a href="#">
+											<h4 class="font__family-montserrat font__weight-bold font__size-18">Bernard Show</h4>
+										</a>
+										<span class="font__family-montserrat font__weight-normal font__size-16 line__height-24">Web Developer</span>
+									</div>
+									<div class="brk-team-persone-circle__bg lazyload" data-bg="img/demo_agency_modern/270x350_1.jpg">
+										<span class="brk-team-persone-circle__bg-overlay">
+											<span class="before brk-base-bg-gradient-90deg"></span>
+											<svg viewBox="0 0 270 37">
+												<path d="M270,37H0V0A267.6,267.6,0,0,0,135.53,36.5,267.52,267.52,0,0,0,270,0Z" fill="rgb(255, 255, 255)" />
+											</svg>
+										</span>
+										<ul class="brk-team-persone-circle__contacts">
+											<li>
+												<i class="fas fa-phone" aria-hidden="true"></i>
+												<a href="tel:88001234567">8 800 123 45 67</a>
+											</li>
+											<li>
+												<i class="far fa-envelope" aria-hidden="true"></i>
+												<a href="mailto:admin@gmail.com">admin@gmail.com</a>
+											</li>
+											<li>
+												<i class="fab fa-instagram" aria-hidden="true"></i>
+												<a href="#">bernard.show</a>
+											</li>
+											<li>
+												<i class="fab fa-skype" aria-hidden="true"></i>
+												<a href="#">skype.show</a>
+											</li>
+										</ul>
+									</div>
+									<div class="brk-team-persone-circle__social-links">
+										<ul>
+											<li><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+											<li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+											<li><a href="#"><i class="fab fa-google-plus-g" aria-hidden="true"></i></a></li>
+											<li><a href="#"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
+										</ul>
+									</div>
+								</article>
+							</div>
+							<div class="col-lg-3 col-sm-6">
+								<article class="brk-team-persone-circle brk-base-box-shadow text-center" data-brk-library="component__team">
+									<div class="brk-team-persone-circle__name-position">
+										<a href="#">
+											<h4 class="font__family-montserrat font__weight-bold font__size-18">Bernard Show</h4>
+										</a>
+										<span class="font__family-montserrat font__weight-normal font__size-16 line__height-24">Web Developer</span>
+									</div>
+									<div class="brk-team-persone-circle__bg lazyload" data-bg="img/demo_agency_modern/270x350_2.jpg">
+										<span class="brk-team-persone-circle__bg-overlay">
+											<span class="before brk-base-bg-gradient-90deg"></span>
+											<svg viewBox="0 0 270 37">
+												<path d="M270,37H0V0A267.6,267.6,0,0,0,135.53,36.5,267.52,267.52,0,0,0,270,0Z" fill="rgb(255, 255, 255)" />
+											</svg>
+										</span>
+										<ul class="brk-team-persone-circle__contacts">
+											<li>
+												<i class="fas fa-phone" aria-hidden="true"></i>
+												<a href="tel:88001234567">8 800 123 45 67</a>
+											</li>
+											<li>
+												<i class="far fa-envelope" aria-hidden="true"></i>
+												<a href="mailto:admin@gmail.com">admin@gmail.com</a>
+											</li>
+											<li>
+												<i class="fab fa-instagram" aria-hidden="true"></i>
+												<a href="#">bernard.show</a>
+											</li>
+											<li>
+												<i class="fab fa-skype" aria-hidden="true"></i>
+												<a href="#">skype.show</a>
+											</li>
+										</ul>
+									</div>
+									<div class="brk-team-persone-circle__social-links">
+										<ul>
+											<li><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+											<li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+											<li><a href="#"><i class="fab fa-google-plus-g" aria-hidden="true"></i></a></li>
+											<li><a href="#"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
+										</ul>
+									</div>
+								</article>
+							</div>
+							<div class="col-lg-3 col-sm-6">
+								<article class="brk-team-persone-circle brk-base-box-shadow text-center" data-brk-library="component__team">
+									<div class="brk-team-persone-circle__name-position">
+										<a href="#">
+											<h4 class="font__family-montserrat font__weight-bold font__size-18">Bernard Show</h4>
+										</a>
+										<span class="font__family-montserrat font__weight-normal font__size-16 line__height-24">Web Developer</span>
+									</div>
+									<div class="brk-team-persone-circle__bg lazyload" data-bg="img/demo_agency_modern/270x350_3.jpg">
+										<span class="brk-team-persone-circle__bg-overlay">
+											<span class="before brk-base-bg-gradient-90deg"></span>
+											<svg viewBox="0 0 270 37">
+												<path d="M270,37H0V0A267.6,267.6,0,0,0,135.53,36.5,267.52,267.52,0,0,0,270,0Z" fill="rgb(255, 255, 255)" />
+											</svg>
+										</span>
+										<ul class="brk-team-persone-circle__contacts">
+											<li>
+												<i class="fas fa-phone" aria-hidden="true"></i>
+												<a href="tel:88001234567">8 800 123 45 67</a>
+											</li>
+											<li>
+												<i class="far fa-envelope" aria-hidden="true"></i>
+												<a href="mailto:admin@gmail.com">admin@gmail.com</a>
+											</li>
+											<li>
+												<i class="fab fa-instagram" aria-hidden="true"></i>
+												<a href="#">bernard.show</a>
+											</li>
+											<li>
+												<i class="fab fa-skype" aria-hidden="true"></i>
+												<a href="#">skype.show</a>
+											</li>
+										</ul>
+									</div>
+									<div class="brk-team-persone-circle__social-links">
+										<ul>
+											<li><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+											<li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+											<li><a href="#"><i class="fab fa-google-plus-g" aria-hidden="true"></i></a></li>
+											<li><a href="#"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
+										</ul>
+									</div>
+								</article>
+							</div>
+							<div class="col-lg-3 col-sm-6">
+								<article class="brk-team-persone-circle brk-base-box-shadow text-center" data-brk-library="component__team">
+									<div class="brk-team-persone-circle__name-position">
+										<a href="#">
+											<h4 class="font__family-montserrat font__weight-bold font__size-18">Bernard Show</h4>
+										</a>
+										<span class="font__family-montserrat font__weight-normal font__size-16 line__height-24">Web Developer</span>
+									</div>
+									<div class="brk-team-persone-circle__bg lazyload" data-bg="img/demo_agency_modern/270x350_4.jpg">
+										<span class="brk-team-persone-circle__bg-overlay">
+											<span class="before brk-base-bg-gradient-90deg"></span>
+											<svg viewBox="0 0 270 37">
+												<path d="M270,37H0V0A267.6,267.6,0,0,0,135.53,36.5,267.52,267.52,0,0,0,270,0Z" fill="rgb(255, 255, 255)" />
+											</svg>
+										</span>
+										<ul class="brk-team-persone-circle__contacts">
+											<li>
+												<i class="fas fa-phone" aria-hidden="true"></i>
+												<a href="tel:88001234567">8 800 123 45 67</a>
+											</li>
+											<li>
+												<i class="far fa-envelope" aria-hidden="true"></i>
+												<a href="mailto:admin@gmail.com">admin@gmail.com</a>
+											</li>
+											<li>
+												<i class="fab fa-instagram" aria-hidden="true"></i>
+												<a href="#">bernard.show</a>
+											</li>
+											<li>
+												<i class="fab fa-skype" aria-hidden="true"></i>
+												<a href="#">skype.show</a>
+											</li>
+										</ul>
+									</div>
+									<div class="brk-team-persone-circle__social-links">
+										<ul>
+											<li><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+											<li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+											<li><a href="#"><i class="fab fa-google-plus-g" aria-hidden="true"></i></a></li>
+											<li><a href="#"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
+										</ul>
+									</div>
+								</article>
+							</div>
+						</div>
+						<div class="text-center mt-25">
+							<a href="#" class="btn btn-inside-out btn-lg btn-inside-out-invert border-radius-30 font__weight-light pl-60 pr-60 brk-black-font-color" data-brk-library="component__button">
+								<span class="before">Contact Us</span><span class="text">Click Me</span><span class="after">Contact Us</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="pt-90 pb-70 bg-white" id="contact" data-brk-library="component__form">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-lg-6">
+						<form action="#" class="brk-subscribe-mail brk-subscribe-mail_dark brk-form brk-form-strict pt-20" data-brk-library="recaptcha">
+							<div class="row">
+								<div class="col-12 col-md-6">
+									<input type="text" placeholder="Your Name" name="FNAME">
+								</div>
+								<div class="col-12 col-md-6">
+									<input type="text" placeholder="Your Email" name="EMAIL">
+								</div>
+								<div class="col-12">
+									<textarea name="MESSAGE" placeholder="Your Question" style="min-height: 110px"></textarea>
+								</div>
+								<div class="col-12">
+									<div class="text-center">
+										<button class="btn btn-inside-out btn-md border-radius-25 btn-no-shadow pl-90 pr-90 mt-30" data-brk-library="component__button">
+											<span class="before">Contact Us</span><span class="text">Click Me</span><span class="after">Contact Us</span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="col-lg-1"></div>
+					<div class="col-12 col-lg-5">
+						<h3 class="font__family-montserrat font__size-56 line__height-60 mb-25 text-center text-lg-left">
+							<span class="font__weight-ultralight">Need Help?</span>
+							<br>
+							<span class="font__weight-bold">Contact Us</span>
+						</h3>
+						<p class="brk-dark-font-color font__size-16 line__height-26 mb-40 text-center text-lg-left">
+							Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+						</p>
+						<div class="mb-15 d-flex align-items-center justify-content-center justify-content-lg-start">
+							<i class="far fa-envelope font__size-13 mr-15 brk-base-font-color"></i> <a href="mailto:info@domain.com" class="font__size-14 font__weight-bold">info@domain.com</a>
+						</div>
+						<div class="mb-15 d-flex align-items-center justify-content-center justify-content-lg-start">
+							<i class="far fa-map-marker font__size-13 mr-15 brk-base-font-color"></i>
+							<p class="font__size-14 font__weight-bold">Chicago, USA</p>
+						</div>
+						<div class="mb-15 d-flex align-items-center justify-content-center justify-content-lg-start">
+							<i class="far fa-phone font__size-13 mr-15 brk-base-font-color"></i> <a href="tel:88001234567" class="font__size-14 font__weight-bold">8 800 12 34 567</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="pt-180 pb-80 position-relative bg__style pt-xs-80 pb-xs-40" style="background-image: url({% static 'home/img/demo_agency_modern/1920x916_1.jpg' %})">
+			<span class="brk-svg-pattern-container brk-svg-pattern-container-7-top brk-svg-pattern-container_top" data-brk-library="component__svg_pattern">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 144">
+					<defs>
+						<path id="svg-pattern-id-6-1" d="M0 657.88s316.8-72.16 689-15.96c256.8 38.77 524.63 105.83 756 116.7 218.56 10.27 420.43-40.37 475-63.95V616H0z" />
+					</defs>
+					<g>
+						<g transform="translate(0 -616)">
+							<use fill="#fff" xlink:href="#svg-pattern-id-6-1" />
+						</g>
+					</g>
+				</svg>
+			</span>
+			<span class="brk-abs-bg-overlay brk-bg-light-white-2"></span>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3"></div>
+					<div class="col-12 col-md-6">
+						<div class="text-center mb-50">
+							<h2 class="font__family-montserrat font__size-56 font__weight-ultralight line__height-60 mb-25">Hot Offer</h2>
+							<h3 class="brk-dark-font-color font__size-15 font__weight-normal line__height-24 title-lines-solid title-lines-main" data-brk-library="component__title">
+								<span class="line" style="background:rgba(var(--brand-primary-rgb), 0.2)"></span>
+								<span class="text">Lorem ipsum dolor sit amet, consectetuer adipiscing <br> elit. Aenean commodo ligula eget dolor.</span>
+									<span class="line" style="background:rgba(var(--brand-primary-rgb), 0.2)"></span>
+							</h3>
+						</div>
+					</div>
+				</div>
+				<div class="countdown__wrapper countdown__massive pt-0 pb-40" data-brk-library="component__countdown">
+					<div class="countdown" data-format="
+                <div class='countdown__section'>
+                  <div class='font__family-montserrat font__size-96 font__weight-ultralight countdown__amount'>%D</div>
+                  <span class='font__family-montserrat font__size-18 font__weight-light font__size-14 countdown__period'>Dys</span>
                 </div>
-                  {% endfor %}
-              </div><!-- / .row -->
-         </section>
-        </div>
-          <!-- ========== Number Counters - Dark bg ========== -->
-          <div class="number-counters">
-              <div class="container">
-                  <div id="counters-min" class="row count-wrapper">
-
-              <!-- Item 1 -->
-              <div class="col-md-3 mb-sm-100 count-item wow fadeIn" data-wow-duration="1s" data-wow-delay=".3s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: fadeIn;">
-                <span id="count-min-1" class="count-nbr">100</span>
-                <span class="count-text">Clients</span>
-              </div>
-
-              <!-- Item 2 -->
-              <div class="col-md-3 mb-sm-100 count-item wow fadeIn" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeIn;">
-                <span id="count-min-2" class="count-nbr">78</span>
-                <span class="count-text">Visiteurs</span>
-              </div>
-
-              <!-- Item 3 -->
-              <div class="col-md-3 mb-sm-100 count-item wow fadeIn" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeIn;">
-                <span id="count-min-3" class="count-nbr">45</span>
-                <span class="count-text">Realisations</span>
-              </div>
-
-              <!-- Item 4 -->
-              <div class="col-md-3 count-item wow fadeIn" data-wow-duration="1s" data-wow-delay=".3s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: fadeIn;">
-                <span id="count-min-4" class="count-nbr">70</span>
-                <span class="count-text">projets en cours</span>
-              </div>
-
-            </div><!-- / .row -->
-              </div><!-- / .container -->
-          </div>
-        <!-- ========== Feature - Steps Numbers ========== -->
-          <div class="gray-bg">
-              <section class="container ft-steps-numbers ">
-            <div class="row section">
-              <header class="sec-heading ws-s">
-                <h2>NOTRE PROCESSUS DE TRAVAIL</h2>
-                <span class="subheading">{{main_content.our_process_description}}</span>
-              </header>
-                {% for process_step  in process_steps %}
-                  <div class="col-lg-4 col-md-6 mb-sm-100 ft-item wow fadeIn" data-wow-duration="{{process_step.process_number}}s">
-                    <span class="ft-nbr">0{{process_step.process_number}}</span>
-                    <h4>{{process_step.process_title}}</h4>
-                    <p>{{process_step.process_description}}</p>
-                      <br>
-                      <br>
-
-                  </div><!-- / .row -->
-                {% endfor %}
-            </div>
-        </section><!-- / .container -->
-          </div>
-          <section class="container section ft-x">
-              <div class="row">
-
-            <header class="sec-heading">
-              <h2>Pourquoi nous choisir ?</h2>
-              <span class="subheading">Created to work on all mobile devices</span>
-            </header>
-
-            <!-- Feature 1 -->
-            <div class="col-lg-4 wow fadeInLeft" data-wow-duration=".8s" style="visibility: visible; animation-duration: 0.8s; animation-name: fadeInLeft;">
-
-              <!-- white space -->
-              <div class="ws-m"></div>
-
-              <!-- Material right aligned - Item 1 -->
-              <div class="col-md-12 no-gap ws-s ft-item ft-material right-align">
-                <div class="ft-content">
-                  <h5>Easily Adjusti</h5>
-                  <p>Lorem ipsum dolor sit amet, ete elit consectetur adipisicing. Omnis quae, ipsam impedit eius.</p>
+                <div class='countdown__section'>
+                  <div class='font__family-montserrat font__size-96 font__weight-ultralight countdown__amount'>%H</div>
+                  <span class='font__family-montserrat font__size-18 font__weight-light font__size-14 countdown__period'>Hrs</span>
                 </div>
-                <div class="ft-icon">
-                  <i class="fa fa-hand-peace-o"></i>
+                <div class='countdown__section'>
+                  <div class='font__family-montserrat font__size-96 font__weight-ultralight countdown__amount'>%M</div>
+                  <span class='font__family-montserrat font__size-18 font__weight-light font__size-14 countdown__period'>Min</span>
                 </div>
-              </div><!-- / .ft-item -->
-
-              <!-- Material right aligned - Item 2 -->
-              <div class="col-md-12 no-gap ws-s ft-item ft-material right-align">
-                <div class="ft-content">
-                  <h5>100% Responsive</h5>
-                  <p>Lorem ipsum dolor sit amet, ete elit consectetur adipisicing. Omnis quae, ipsam impedit eius.</p>
+                <div class='countdown__section'>
+                  <div class='font__family-montserrat font__size-96 font__weight-ultralight countdown__amount'>%S</div>
+                  <span class='font__family-montserrat font__size-18 font__weight-light font__size-14 countdown__period'>Sec</span>
                 </div>
-                <div class="ft-icon">
-                  <i class="fa fa-tv"></i>
-                </div>
-              </div><!-- / .ft-item -->
+              " data-type="until" data-time="2019/11/31 00:00:00"></div>
+				</div>
+				<div class="text-center">
+					<a href="#" class="btn btn-inside-out btn-lg border-radius-30 btn-shadow pl-50 pr-50 font__weight-light" data-brk-library="component__button">
+						<span class="before">Request a Free quote</span><span class="text">Request a Free quote</span><span class="after">Request a Free quote</span>
+					</a>
+				</div>
+			</div>
+		</section>
+	</div>
+	<footer class="brk-footer position-relative" data-brk-library="component__footer">
+		<div class="brk-footer__wrapper d-flex flex-column align-items-center border-bottom-3 brk-border-color-primary pt-110">
+			<img src="{% static 'home/img/demo_agency_modern/1920x1080_4.jpg'%}" alt="alt" class="brk-abs-img">
+			<span class="brk-abs-overlay brk-bg-gradient-40deg-72"></span>
+			<a href="#" class="d-inline-block mb-120">
+				<img src="{% static 'home/img/footer/brk-logo-2.png' %}" alt="alt">
+			</a>
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-md-4">
+						<div class="text-center d-flex flex-column mb-50">
+							<div class="icon__cover" data-brk-library="component__services">
+								<a href="#" class="icon__btn icon__btn-sm icon__btn-anim icon__btn_clear" data-brk-library="component__button">
+									<i class="fa fa-phone" aria-hidden="true"></i>
+									<span class="before"></span><span class="after"></span>
+								</a>
+							</div>
+							<p class="brk-white-font-color font__family-montserrat font__size-24 line__height-24 mb-15 font__weight-semibold">
+								Phone
+							</p>
+							<a href="#" class="brk-white-font-color font__family-open-sans font__size-24 line__height-32">8 800 12 34 567</a>
+						</div>
+					</div>
+					<div class="col-12 col-md-4">
+						<div class="text-center d-flex flex-column mb-50">
+							<div class="icon__cover" data-brk-library="component__services">
+								<a href="#" class="icon__btn icon__btn-sm icon__btn-anim icon__btn_clear" data-brk-library="component__button">
+									<i class="fa fa-map-marker" aria-hidden="true"></i>
+									<span class="before"></span><span class="after"></span>
+								</a>
+							</div>
+							<p class="brk-white-font-color font__family-montserrat font__size-24 line__height-24 mb-15 font__weight-semibold">
+								Address
+							</p>
+							<p class="brk-white-font-color font__family-open-sans font__size-24 line__height-32">
+								123 6th St. Melbourne, <br>
+               FL 32904
+            </p>
+						</div>
+					</div>
+					<div class="col-12 col-md-4">
+						<div class="text-center d-flex flex-column mb-50">
+							<div class="icon__cover" data-brk-library="component__services">
+								<a href="#" class="icon__btn icon__btn-sm icon__btn-anim icon__btn_clear" data-brk-library="component__button">
+									<i class="fa fa-envelope" aria-hidden="true"></i>
+									<span class="before"></span><span class="after"></span>
+								</a>
+							</div>
+							<p class="brk-white-font-color font__family-montserrat font__size-24 line__height-24 mb-15 font__weight-semibold">
+								Email
+							</p>
+							<a href="mailto:info@domain.com" class="brk-white-font-color font__family-open-sans font__size-24 line__height-32">info@domain.com</a>
+						</div>
+					</div>
+					<hr class="horiz-line mt-0 mb-20">
+					<div class="text-center mb-25 w-100">
+						<p class="brk-white-font-color font__family-open-sans font__size-14">© 2018 <span class="font__weight-bold">Berserk</span> All rights reserved</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<a href="#top" id="toTop"></a>
+	<script defer="defer" src="{% static 'home/js/scripts.min.js'%}"></script>
+	<script defer="defer" src="{% static 'home/vendor/revslider/js/jquery.themepunch.tools.min.js' %}"></script>
+	<script defer="defer" src="{% static 'home/vendor/revslider/js/jquery.themepunch.revolution.min.js' %}"></script>
+	<script defer="defer" src="{% static 'home/vendor/revslider/js/extensions/revolution.extension.layeranimation.min.js' %}"></script>
+	<script defer="defer" src="{% static 'home/vendor/revslider/js/extensions/revolution.extension.navigation.min.js' %}"></script>
+	<script defer="defer" src="{% static 'home/vendor/revslider/js/extensions/revolution.extension.slideanims.min.js' %}"></script>
 
-            </div><!-- / .col-lg-4 -->
+	<script>
+		var revapi17,
+			tpj;
+		(function() {
+			if (!/loaded|interactive|complete/.test(document.readyState)) document.addEventListener("DOMContentLoaded", onLoad);
+			else onLoad();
 
-            <!-- Center Image -->
-            <div class="col-lg-4">
-              <img src="{% get_media_prefix %}{{ main_content.about_us_photo }}" alt="iPad cover" class="img-responsive center-block wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInUp;">
-            </div>
+			function onLoad() {
+				if (tpj === undefined) {
+					tpj = jQuery;
+					if ("off" == "on") tpj.noConflict();
+				}
+				if (tpj("#rev_slider_17_1").revolution == undefined) {
+					revslider_showDoubleJqueryError("#rev_slider_17_1");
+				} else {
+					revapi17 = tpj("#rev_slider_17_1").show().revolution({
+						sliderType: "standard",
+						jsFileLocation: "{% static 'home/vendor/revslider/js/' %}",
+						sliderLayout: "fullwidth",
+						dottedOverlay: "none",
+						delay: 6000,
+						navigation: {
+							keyboardNavigation: "off",
+							keyboard_direction: "horizontal",
+							mouseScrollNavigation: "off",
+							mouseScrollReverse: "default",
+							onHoverStop: "off",
+							arrows: {
+								style: "gyges",
+								enable: true,
+								hide_onmobile: true,
+								hide_under: 991,
+								hide_onleave: true,
+								hide_delay: 200,
+								hide_delay_mobile: 1200,
+								tmp: '',
+								left: {
+									h_align: "left",
+									v_align: "center",
+									h_offset: 20,
+									v_offset: 0
+								},
+								right: {
+									h_align: "right",
+									v_align: "center",
+									h_offset: 20,
+									v_offset: 0
+								}
+							},
+							bullets: {
+								enable: true,
+								hide_onmobile: false,
+								hide_over: 992,
+								style: "zeus",
+								hide_onleave: false,
+								direction: "horizontal",
+								h_align: "center",
+								v_align: "bottom",
+								h_offset: 0,
+								v_offset: 20,
+								space: 5,
+								tmp: '<span class="tp-bullet-image"></span><span class="tp-bullet-imageoverlay"></span><span class="tp-bullet-title">{{title}}</span>'
+							}
+						},
+						responsiveLevels: [1240, 1024, 778, 480],
+						visibilityLevels: [1240, 1024, 778, 480],
+						gridwidth: [1900, 1366, 800, 576],
+						gridheight: [910, 768, 960, 720],
+						lazyType: "none",
+						minHeight: "720",
+						shadow: 0,
+						spinner: "spinner0",
+						stopLoop: "off",
+						stopAfterLoops: -1,
+						stopAtSlide: -1,
+						shuffle: "off",
+						autoHeight: "off",
+						disableProgressBar: "on",
+						hideThumbsOnMobile: "off",
+						hideSliderAtLimit: 0,
+						hideCaptionAtLimit: 0,
+						hideAllCaptionAtLilmit: 0,
+						debugMode: false,
+						fallbacks: {
+							allowHTML5AutoPlayOnAndroid: false,
+							simplifyAll: "on",
+							nextSlideOnWindowFocus: "off",
+							disableFocusListener: false,
+						}
+					});
+				}; /* END OF revapi call */
+			}; /* END OF ON LOAD FUNCTION */
+		}()); /* END OF WRAPPING FUNCTION */
+	</script>
+</body>
 
-            <!-- Features Left -->
-            <div class="col-lg-4 wow fadeInRight" data-wow-duration=".8s" style="visibility: visible; animation-duration: 0.8s; animation-name: fadeInRight;">
-
-              <!-- white space -->
-              <div class="ws-m"></div>
-
-              <!-- Item 3 -->
-              <div class="col-md-12 no-gap ws-s ft-item ft-material">
-                <i class="fa fa-cogs"></i>
-                <h5>Modular Design</h5>
-                <p>Lorem ipsum dolor sit amet, ete elit consectetur adipisicing. Omnis quae, ipsam impedit eius, vero.</p>
-              </div><!-- / .ft-item -->
-
-              <!-- Item 4 -->
-              <div class="col-md-12 no-gap ws-s ft-item ft-material">
-                <i class="fa fa-star"></i>
-                <h5>Lots of features</h5>
-                <p>Lorem ipsum dolor sit amet, ete elit consectetur adipisicing. Omnis quae, ipsam impedit eius, vero.</p>
-              </div><!-- / .ft-item -->
-
-            </div><!-- / .col-lg-4 -->
-
-          </div><!-- / .row -->
-          </section>
-        <!-- ========== projects Full Width - 4 Columns ========== -->
-           <section class="container-fluid portfolio-layout portfolio-columns-fw">
-              <div class="row">
-                <header class="sec-heading">
-                  <h2>Nos realisations</h2>
-                  <span class="subheading">Lorem ipsum dolor sit amet consectetur adipisicing</span>
-                </header>
-              </div><!-- / .row -->
-
-          <!-- Filters -->
-              <div class="row">
-                <ul id="pfolio-filters" class="portfolio-filters">
-                  <li class="active"><a href="#" data-filter="*">All</a></li>
-                  <li><a href="#" data-filter=".webdesing">Webdesign</a></li>
-                  <li><a href="#" data-filter=".print">Print</a></li>
-                  <li><a href="#" data-filter=".photo">Photography</a></li>
-                </ul>
-              </div>
-
-               <div class="row">
-                   <div id="pfolio">
-                        {% for project in projects%}
-                      <!-- Item 1 -->
-                      <div class="col-md-4 portfolio-item print">
-                        <div class="p-wrapper hover-light">
-                          <img src="{% get_media_prefix %}{{ project.project_photo}}"  alt="Project Example">
-                          <div class="p-hover">
-                            <div class="p-content">
-                              <h4>{{project.project_name}}</h4>
-                              <h6 class="subheading">{{project.project_type}}</h6>
-                            </div>
-                          </div>
-                          <a href="{% get_media_prefix %}{{ project.project_photo}}"  class="open-btn open-gallery"><i class="fa fa-expand"></i></a>
-                        </div>
-                      </div>
-                        {% endfor %}
-                    </div>
-               </div>
-
-           </section>
-            <div class="cta-link cta-dark">
-          <div class="bg-overlay">
-
-            <div class="cta-wrapper">
-              <h3 class="h-alt wow fadeIn" data-wow-delay=".1s" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeIn;">VOYEZ CE QUE NOUS POUVONS FAIRE POUR VOUS</h3>
-              <a href="#contact" class="btn btn-light btn-large wow fadeIn" data-wow-delay=".3s" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: fadeIn;">Entrerez en contact</a>
-            </div>
-
-          </div>
-        </div>
-        <!-- ========== Clients List - Dark ========== -->
-        <!-- / .row -->
-          <section id="testimonials" class="container section ft-centered ">
-              <header class="sec-heading">
-                <h2>Nos clients</h2>
-                <span class="subheading">Read some of the testimonials from our amazing clients</span>
-              </header>
-
-              <div class="row">
-                {% for client in clients %}
-                <!-- Item 1 -->
-                <div class="col-md-3 col-sm-6 mb-sm-50 ft-item wow zoomIn" data-wow-duration=".6s" data-wow-delay=".3s" style="visibility: visible; animation-duration: 0.6s; animation-delay: 0.3s; animation-name: zoomIn;">
-                  <span><img src="{% get_media_prefix %}{{ client.client_logo}}" alt="{{client.client_name}}"></span>
-                </div>
-                  {% endfor %}
-              </div><!-- / .row -->
-          </section>
-        <!-- ========== Footer Contact ========== -->
-          <section id="contact" class="contact-1  ">
-                <header class="sec-heading">
-                  <h2>Contact </h2>
-                  <span class="subheading"></span>
-              </header>
-
-          <div class="contact-wrapper">
-
-            <!-- Map -->
-              <div id="map-canvas" class="gmap map-boxed" style="position: relative; overflow: hidden;">
-                <div style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(248, 248, 248);">
-                <div class="gm-err-container">
-                    <div class="gm-err-content">
-                        <div class="gm-err-icon"></div>
-                    </div>
-                </div>
-                </div>
-              </div>
-              <!-- Show Info Button -->
-              <div class="container">
-              <div class="row ws-m">
-                <!-- Address Info -->
-                <div class="col-xs-offset-1 col-xs-11 col-md-offset-2 col-md-6 contact-info-wrapper">
-                  <address>
-                    <div class="row">
-
-                      <!-- Phone -->
-                      <div class="col-sm-6 address-group">
-                        <span>Phone</span>
-                        <a href="#">{{contact_us.phone}}</a>
-                        <a href="#">{{contact_us.mobile}}</a>
-                      </div>
-
-                      <!-- Address -->
-                      <div class="col-sm-5 address-group">
-                        <span>Address</span>
-                        <p>{{contact_us.address}}</p>
-                      </div>
-
-                    </div><!-- / .row -->
-
-                    <div class="row">
-
-                      <!-- Email -->
-                      <div class="col-sm-6 address-group">
-                        <span>Email</span>
-                        <a href="mailto:{{contact_us.email}}">{{contact_us.email}}</a>
-                      </div>
-
-                      <!-- Hours -->
-                      <div class="col-sm-5 address-group">
-                        <span>Heures de travail</span>
-                        <p>Tous les jours: 9am-8pm</p>
-                      </div>
-                    </div><!-- / .row -->
-                  </address>
-                </div><!-- / .contact-info-wrapper -->
-              </div><!-- / .row -->
-
-              <!-- Contact Form -->
-              <div class="row">
-                <form action="assets/contact-form/contact-form.php" method="POST" id="contact-form-1" class="form-ajax">
-                  <div class="col-md-offset-2 col-md-4 wow fadeInUp" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;">
-
-                    <!-- Name -->
-                    <div class="form-group">
-                      <input type="text" name="name" id="name-contact-1" class="form-control validate-locally" placeholder="Enterez votre nom ">
-                      <label for="name-contact-1">Nom</label>
-                      <span class="pull-right alert-error"></span>
-                    </div>
-
-                    <!-- Email -->
-                    <div class="form-group">
-                      <input type="email" name="email" id="email-contact-1" class="form-control validate-locally" placeholder="Enterez votre email">
-                      <label for="email-contact-1">Email</label>
-                      <span class="pull-right alert-error"></span>
-                    </div>
-
-                  </div>
-
-                  <div class="col-md-4 wow fadeInUp" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;">
-
-                    <!-- Message -->
-                    <div class="form-group">
-                      <textarea name="message" id="message-contact-1" class="form-control" rows="5" placeholder="Votre Message"></textarea>
-                      <label for="message-contact-1">Message</label>
-                    </div>
-                    <div>
-                      <input type="submit" class="btn pull-right" value="Envoyer">
-                    </div>
-
-                    <!-- Ajax Message -->
-                    <div class="ajax-message col-md-12 no-gap"></div>
-
-                  </div><!-- / .col-md-4 -->
-
-                </form>
-              </div><!-- / .row -->
-            </div><!-- / .container -->
-          </div><!-- / .contact-wrapper -->
-        </section>
-          <footer class="footer-widgets">
-              <div class="container">
-                  <div class="row section">
-
-              <!-- About Us -->
-              <div class="col-md-6 col-sm-6 mb-sm-100">
-                <div class="widget about-widget">
-
-                  <ul class="social-links">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                    <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
-                  </ul>
-                </div><!-- / .widget -->
-              </div><!-- / .col-md-3 -->
-
-              <!-- Newsletter -->
-              <div class="col-md-6 col-sm-6">
-                <div class="widget newsletter-widget">
-                  <h5 class="header-widget">Newsletter</h5>
-
-                  <form class="mc-form subscribe-form" _lpchecked="1">
-                    <div class="form-group">
-
-                      <!-- Email -->
-                      <input type="email" name="EMAIL" placeholder="Rejoignez notre newsletter">
-
-                      <!-- Send Button -->
-                      <button type="submit" name="subscribe" class="mc-send-btn"><i class="fa fa-send-o"></i></button>
-                    </div>
-
-                    <!-- Ajax message -->
-                    <div class="subscribe-result"></div>
-                  </form>
-
-                </div><!-- / .widget -->
-              </div><!-- / .col-md-3 -->
-
-            </div><!-- / .row -->
-              </div><!-- / .container -->
-              <!-- Copyright -->
-              <div class="copyright">
-                  <div class="container">
-                      <div class="row">
-                        <div class="col-sm-6">
-                          <small>© 2023 <a class="no-style-link" href="https://matromatic.com/" target="_blank">Matromatic</a></small>
-                        </div>
-
-                        <div class="col-sm-6">
-                          <small><a href="#page-top" class="pull-right to-the-top"><i class="fa fa-angle-up"></i></a></small>
-                        </div>
-                      </div><!-- / .row -->
-                  </div><!-- / .container -->
-              </div><!-- / .copyright -->
-          </footer>
-  {% endblock %}
-
+</html>
