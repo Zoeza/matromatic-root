@@ -9,6 +9,4 @@ def home(request):
     direction = request.session.get('language')
     url = direction + "/home/home.html"
 
-    context = {}
-
-    return render(request, url, context)
+    return render(request, url, {})
