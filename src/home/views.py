@@ -1,6 +1,5 @@
 from django.http import Http404
 from django.shortcuts import render
-from manager.models import Home, MainContent, ContactUs, Service, OurProcess, SocialMedia, Client, Project, TeamMember
 
 
 def home(request):
