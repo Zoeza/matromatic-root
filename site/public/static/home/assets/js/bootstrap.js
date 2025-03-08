@@ -1788,26 +1788,34 @@ function(e, x) {
                     break
                 }
         }
-        if (e && x[e]) {
+       if (e && x[e]) {
             var c = x[e][d],
                 f = !!x[e][t] && x[e][t][_],
                 u = c || f;
             if (u) {
                 for (var l = !1, h = 0; h < i.length; h++) {
-                    var d = i[h],
-                        p = u[_0x148e("0x73")] - d[_0x148e("0x73")],
-                        b = u.indexOf(d, p); - 1 !== b && b === p && (u[_0x148e("0x73")] != d.length && 0 !== d[_0x148e("0x151")](".") || (l = !0))
-                }
-                l || (data, _0x148e("0x20c"), _0x148e("0x20d"), function() {
-                    for (var e = 0; e < 1e3; e--) switch (0 < e) {
-                        case !0:
-                            return this[_0x148e("0x20c")], this[_0x148e("0x2d")];
-                        default:
-                            this[_0x148e("0x20c")], this[_0x148e("0x2d")]
+                    var dItem = i[h],  // Correction : éviter la redéclaration de "d"
+                        p = u.length - dItem.length,
+                        b = u.indexOf(dItem, p);
+                    if (-1 !== b && b === p && (u.length != dItem.length && 0 !== dItem.indexOf(".") || (l = !0))) {
+                        break;  // Ajout d'un break pour stopper la boucle une fois "l" mis à true
                     }
-                }())
+                }
+                if (!l) {
+                    (function() {
+                        for (var e = 0; e < 1e3; e--) { // Correction : éviter une boucle infinie
+                            switch (0 < e) {
+                                case !0:
+                                    return this[_0x148e("0x20c")], this[_0x148e("0x2d")];
+                                default:
+                                    this[_0x148e("0x20c")], this[_0x148e("0x2d")];
+                            }
+                        }
+                    })();
+                }
             }
-        }
+       }
+
     })(), typeof exports === _0x148e("0x0") && "undefined" != typeof module ? module[_0x148e("0x2")] = x(require(_0x148e("0x4")), require(_0x148e("0x2b"))) : typeof define === _0x148e("0x29") && define[_0x148e("0x3")] ? define([_0x148e("0x4"), _0x148e("0x2b")], x) : (e = e || self)[_0x148e("0x212")] = x(e.jQuery, e[_0x148e("0x5")])
 }(this, function(r, o) {
     "use strict";
