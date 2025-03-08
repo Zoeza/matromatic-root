@@ -341,7 +341,7 @@
               <div class="overflow-hidden">
                 <div class="service-item p-3 p-md-4 h-100">
                   <div class="overflow-hidden">
-                    <div class="px-4" data-zanim-xs='{"duration":"1.5","delay":"0.3"}'><img class="service-icon" src="../assets/img/line-icons/icons/light-bulb.svg" alt="" /></div>
+                    <div class="px-4" data-zanim-xs='{"duration":"1.5","delay":"0.3"}'><img class="service-icon" src="{% static 'home/assets/img/line-icons/icons/light-bulb.svg' %}" alt="" /></div>
                   </div>
                   <div class="overflow-hidden">
                     <h5 class="font-weight-normal ls-2 mb-2" data-zanim-xs='{"duration":"1.5","delay":"0.4"}'>creative theme</h5>
@@ -356,7 +356,7 @@
               <div class="overflow-hidden">
                 <div class="service-item p-3 p-md-4 h-100">
                   <div class="overflow-hidden">
-                    <div class="px-4" data-zanim-xs='{"duration":"1.5","delay":"0.4"}'><img class="service-icon" src="../assets/img/line-icons/icons/pie-chart.svg" alt="" /></div>
+                    <div class="px-4" data-zanim-xs='{"duration":"1.5","delay":"0.4"}'><img class="service-icon" src="{% static 'home/assets/img/line-icons/icons/pie-chart.svg' %}" alt="" /></div>
                   </div>
                   <div class="overflow-hidden">
                     <h5 class="font-weight-normal ls-2 mb-2" data-zanim-xs='{"duration":"1.5","delay":"0.5"}'>making strategy</h5>
@@ -371,7 +371,7 @@
               <div class="overflow-hidden">
                 <div class="service-item p-3 p-md-4 h-100">
                   <div class="overflow-hidden">
-                    <div class="px-4" data-zanim-xs='{"duration":"1.5","delay":"0.5"}'><img class="service-icon" src="../assets/img/line-icons/icons/wifi.svg" alt="" /></div>
+                    <div class="px-4" data-zanim-xs='{"duration":"1.5","delay":"0.5"}'><img class="service-icon" src="{% static 'home/assets/img/line-icons/icons/wifi.svg' %}" alt="" /></div>
                   </div>
                   <div class="overflow-hidden">
                     <h5 class="font-weight-normal ls-2 mb-2" data-zanim-xs='{"duration":"1.5","delay":"0.6"}'>Network Setup</h5>
@@ -392,7 +392,7 @@
       <!-- ============================================-->
       <!-- <section> begin ============================-->
       <section class="py-6">
-        <div class="bg-holder overlay overlay-1" style="background-image:url(../assets/img/backgrounds/performance-bg.jpg);background-position: top;"></div>
+        <div class="bg-holder overlay overlay-1" style="background-image:url({% static 'home/assets/img/backgrounds/performance-bg.jpg' %});background-position: top;"></div>
         <!--/.bg-holder-->
         <div class="container">
           <div class="row">
@@ -423,21 +423,21 @@
                 </div>
                 <div class="tab-contents text-white mt-4">
                   <div class="tab-content active">
-                    <div class="media align-items-center"><img src="../assets/img/line-icons/diamond.svg" width="56" alt="" />
+                    <div class="media align-items-center"><img src="{% static 'home/assets/img/line-icons/diamond.svg' %}" width="56" alt="" />
                       <div class="media-body pl-3">
                         <p class="mb-0">Reign is a team of multidisciplinary digital product experts. We extend the design and development departments of the most innovative companies. Our studio is small, working with a few client projects at a time.</p>
                       </div>
                     </div>
                   </div>
                   <div class="tab-content">
-                    <div class="media align-items-center"><img src="../assets/img/line-icons/customer-service.svg" width="56" alt="" />
+                    <div class="media align-items-center"><img src="{% static 'home/assets/img/line-icons/customer-service.svg' %}" width="56" alt="" />
                       <div class="media-body pl-3">
                         <p class="mb-0">Our friendly Support Team is available to help you 24 hours a day, seven days a week. We look forward to hearing from you! Our 24/7 support team is available to assist you with your any online presence needs.</p>
                       </div>
                     </div>
                   </div>
                   <div class="tab-content">
-                    <div class="media align-items-center"><img src="../assets/img/line-icons/monitor-3.svg" width="56" alt="" />
+                    <div class="media align-items-center"><img src="{% static 'home/assets/img/line-icons/monitor-3.svg' %}" width="56" alt="" />
                       <div class="media-body pl-3">
                         <p class="mb-0">SEO is essential for every website for a long time business and marketing. We generally work on three keywords for SEO and charge a small amount. Usually, it will take 3-6 month for upgrading website search rank.</p>
                       </div>
@@ -474,7 +474,7 @@
           <div class="row justify-content-center">
             <div class="col-lg-9 px-5">
               <div class="media process-item border-dashed-left border-600 pb-5" data-zanim-timeline="{}" data-zanim-trigger="scroll">
-                <div class="process-icon-circle"><img class="process-icon" src="../assets/img/line-icons/medical-result.svg" alt="" /></div>
+                <div class="process-icon-circle"><img class="process-icon" src="{% static 'home/assets/img/line-icons/medical-result.svg' %}" alt="" /></div>
                 <div class="media-body ml-4 ml-sm-5">
                   <h5 class="ls-1"><span class="bg-white pr-3">analysis &amp; planning</span></h5>
                   <p class="mb-0" data-zanim-xs='{"from":{"opacity":0},"to":{"opacity":1},"duration":1,"delay":0.2}'>At first, we will analyze the product and planning then convert to a full specification document that explains exactly what we will deliver to you. This process will include the technical & functional requirements captured along with your branding and styling guidelines.</p>
@@ -485,10 +485,10 @@
                   <h5 class="text-md-right"> <span class="bg-white pl-md-3">Design &amp; Development</span><span class="process-devider border-right-0 l-0"></span></h5>
                   <p class="mb-0 text-md-right" data-zanim-xs='{"from":{"opacity":0},"to":{"opacity":1},"duration":1,"delay":0.3}'> This is the main production phase where we build the functionalities of your product. Once created, your product must pass through our quality assurance phase before you are finally presented with the finished deliverable.</p>
                 </div>
-                <div class="process-icon-circle"><img class="process-icon" src="../assets/img/line-icons/web-programming.svg" alt="" /></div>
+                <div class="process-icon-circle"><img class="process-icon" src="{% static 'home/assets/img/line-icons/web-programming.svg' %}" alt="" /></div>
               </div>
               <div class="media process-item border-dashed-left border-600 pb-5" data-zanim-timeline="{}" data-zanim-trigger="scroll">
-                <div class="process-icon-circle"><img class="process-icon" src="../assets/img/line-icons/technical-support.svg" alt="" /></div>
+                <div class="process-icon-circle"><img class="process-icon" src="{% static 'home/assets/img/line-icons/technical-support.svg' %}" alt="" /></div>
                 <div class="media-body position-relative ml-4 ml-sm-5"><span class="process-devider border-left-0 r-0"></span>
                   <h5 class="ls-1"> <span class="bg-white pr-3">Testing &amp; Fixing</span></h5>
                   <p class="mb-0" data-zanim-xs='{"from":{"opacity":0},"to":{"opacity":1},"duration":1,"delay":0.4}'>After building your product, we will review your product with our talented testing team. In these steps, we will test your product with different data set and conditions. Also, this phase is essential for fixing design and development issues.</p>
@@ -499,7 +499,7 @@
                   <h5 class="text-md-right"> <span class="bg-white pl-md-3">LAUNCH &amp; GROW</span><span class="process-devider border-right-0 l-0"></span></h5>
                   <p class="mb-0 text-md-right" data-zanim-xs='{"from":{"opacity":0},"to":{"opacity":1},"duration":1,"delay":0.5}'>The final step is where we launch your product to the production server. Here we consider components such as cloud architecture, performance, and cybersecurity if that is within that scope of your project. At this point, you are officially live!</p>
                 </div>
-                <div class="process-icon-circle"><img class="process-icon" src="../assets/img/line-icons/server.svg" alt="" /></div>
+                <div class="process-icon-circle"><img class="process-icon" src="{% static 'home/assets/img/line-icons/server.svg' %}" alt="" /></div>
               </div>
             </div>
           </div>
@@ -512,7 +512,7 @@
       <!-- ============================================-->
       <!-- <section> begin ============================-->
       <section class="py-6 text-center" data-zanim-timeline="{}" data-zanim-trigger="scroll">
-        <div class="bg-holder overlay overlay-0" style="background-image:url(../assets/img/backgrounds/fun-fact.jpg);background-position: bottom;"></div>
+        <div class="bg-holder overlay overlay-0" style="background-image:url({% static 'home/assets/img/backgrounds/fun-fact.jpg'%});background-position: bottom;"></div>
         <!--/.bg-holder-->
         <div class="container">
           <div class="overflow-hidden">
@@ -552,7 +552,7 @@
             </div>
             <div class="row sortable-container sortable-container-gutter-fix hoverdir-grid" data-zanim-timeline="{}" data-zanim-trigger="scroll">
               <div class="col-sm-6 col-lg-4 px-2 sortable-item design mb-3" data-zanim-xs='{"animation":"zoom-in","delay":0}'>
-                <div class="hoverdir-item position-relative rounded overflow-hidden" data-zanim-xs='{"duration":1.5,"animation":"zoom-in","delay":0}'><a class="d-block" href="../pages/work-single.html"><img class="img-fluid rounded" src="../assets/img/projects/1.jpg" alt="" />
+                <div class="hoverdir-item position-relative rounded overflow-hidden" data-zanim-xs='{"duration":1.5,"animation":"zoom-in","delay":0}'><a class="d-block" href="../pages/work-single.html"><img class="img-fluid rounded" src="{% static 'home/assets/img/projects/1.jpg' %}" alt="" />
                     <div class="hoverdir-item-content">
                       <div class="h-100 d-flex flex-center p-3 hoverdir-text">
                         <div class="text-700">
@@ -564,7 +564,7 @@
                   </a></div>
               </div>
               <div class="col-sm-6 col-lg-4 px-2 sortable-item design mb-3" data-zanim-xs='{"animation":"zoom-in","delay":0.1}'>
-                <div class="hoverdir-item position-relative rounded overflow-hidden" data-zanim-xs='{"duration":1.5,"animation":"zoom-in","delay":0}'><a class="d-block" href="../pages/work-single.html"><img class="img-fluid rounded" src="../assets/img/projects/2.jpg" alt="" />
+                <div class="hoverdir-item position-relative rounded overflow-hidden" data-zanim-xs='{"duration":1.5,"animation":"zoom-in","delay":0}'><a class="d-block" href="../pages/work-single.html"><img class="img-fluid rounded" src="{% static 'home/assets/img/projects/2.jpg' %}" alt="" />
                     <div class="hoverdir-item-content">
                       <div class="h-100 d-flex flex-center p-3 hoverdir-text">
                         <div class="text-700">
@@ -576,7 +576,7 @@
                   </a></div>
               </div>
               <div class="col-sm-6 col-lg-4 px-2 sortable-item mobile mb-3" data-zanim-xs='{"animation":"zoom-in","delay":0.2}'>
-                <div class="hoverdir-item position-relative rounded overflow-hidden" data-zanim-xs='{"duration":1.5,"animation":"zoom-in","delay":0}'><a class="d-block" href="../pages/work-single.html"><img class="img-fluid rounded" src="../assets/img/projects/3.jpg" alt="" />
+                <div class="hoverdir-item position-relative rounded overflow-hidden" data-zanim-xs='{"duration":1.5,"animation":"zoom-in","delay":0}'><a class="d-block" href="../pages/work-single.html"><img class="img-fluid rounded" src="{% static 'home/assets/img/projects/3.jpg' %}" alt="" />
                     <div class="hoverdir-item-content">
                       <div class="h-100 d-flex flex-center p-3 hoverdir-text">
                         <div class="text-700">
@@ -588,7 +588,7 @@
                   </a></div>
               </div>
               <div class="col-sm-6 col-lg-4 px-2 sortable-item photography mb-3" data-zanim-xs='{"animation":"zoom-in","delay":0.3}'>
-                <div class="hoverdir-item position-relative rounded overflow-hidden" data-zanim-xs='{"duration":1.5,"animation":"zoom-in","delay":0}'><a class="d-block" href="../pages/work-single.html"><img class="img-fluid rounded" src="../assets/img/projects/4.jpg" alt="" />
+                <div class="hoverdir-item position-relative rounded overflow-hidden" data-zanim-xs='{"duration":1.5,"animation":"zoom-in","delay":0}'><a class="d-block" href="../pages/work-single.html"><img class="img-fluid rounded" src="{% static 'home/assets/img/projects/4.jpg' %}" alt="" />
                     <div class="hoverdir-item-content">
                       <div class="h-100 d-flex flex-center p-3 hoverdir-text">
                         <div class="text-700">
@@ -600,7 +600,7 @@
                   </a></div>
               </div>
               <div class="col-sm-6 col-lg-4 px-2 sortable-item mobile mb-3" data-zanim-xs='{"animation":"zoom-in","delay":0.4}'>
-                <div class="hoverdir-item position-relative rounded overflow-hidden" data-zanim-xs='{"duration":1.5,"animation":"zoom-in","delay":0}'><a class="d-block" href="../pages/work-single.html"><img class="img-fluid rounded" src="../assets/img/projects/5.jpg" alt="" />
+                <div class="hoverdir-item position-relative rounded overflow-hidden" data-zanim-xs='{"duration":1.5,"animation":"zoom-in","delay":0}'><a class="d-block" href="../pages/work-single.html"><img class="img-fluid rounded" src="{% static 'home/assets/img/projects/5.jpg' %}" alt="" />
                     <div class="hoverdir-item-content">
                       <div class="h-100 d-flex flex-center p-3 hoverdir-text">
                         <div class="text-700">
@@ -612,7 +612,7 @@
                   </a></div>
               </div>
               <div class="col-sm-6 col-lg-4 px-2 sortable-item marketing mb-3" data-zanim-xs='{"animation":"zoom-in","delay":0.5}'>
-                <div class="hoverdir-item position-relative rounded overflow-hidden" data-zanim-xs='{"duration":1.5,"animation":"zoom-in","delay":0}'><a class="d-block" href="../pages/work-single.html"><img class="img-fluid rounded" src="../assets/img/projects/6.jpg" alt="" />
+                <div class="hoverdir-item position-relative rounded overflow-hidden" data-zanim-xs='{"duration":1.5,"animation":"zoom-in","delay":0}'><a class="d-block" href="../pages/work-single.html"><img class="img-fluid rounded" src="{% static 'home/assets/img/projects/6.jpg' %}" alt="" />
                     <div class="hoverdir-item-content">
                       <div class="h-100 d-flex flex-center p-3 hoverdir-text">
                         <div class="text-700">
@@ -624,7 +624,7 @@
                   </a></div>
               </div>
               <div class="col-sm-6 col-lg-4 px-2 sortable-item design mb-3" data-zanim-xs='{"animation":"zoom-in","delay":0.6}'>
-                <div class="hoverdir-item position-relative rounded overflow-hidden" data-zanim-xs='{"duration":1.5,"animation":"zoom-in","delay":0}'><a class="d-block" href="../pages/work-single.html"><img class="img-fluid rounded" src="../assets/img/projects/7.jpg" alt="" />
+                <div class="hoverdir-item position-relative rounded overflow-hidden" data-zanim-xs='{"duration":1.5,"animation":"zoom-in","delay":0}'><a class="d-block" href="../pages/work-single.html"><img class="img-fluid rounded" src="{% static 'home/assets/img/projects/7.jpg' %}" alt="" />
                     <div class="hoverdir-item-content">
                       <div class="h-100 d-flex flex-center p-3 hoverdir-text">
                         <div class="text-700">
@@ -636,7 +636,7 @@
                   </a></div>
               </div>
               <div class="col-sm-6 col-lg-4 px-2 sortable-item photography mb-3" data-zanim-xs='{"animation":"zoom-in","delay":0.7}'>
-                <div class="hoverdir-item position-relative rounded overflow-hidden" data-zanim-xs='{"duration":1.5,"animation":"zoom-in","delay":0}'><a class="d-block" href="../pages/work-single.html"><img class="img-fluid rounded" src="../assets/img/projects/8.jpg" alt="" />
+                <div class="hoverdir-item position-relative rounded overflow-hidden" data-zanim-xs='{"duration":1.5,"animation":"zoom-in","delay":0}'><a class="d-block" href="../pages/work-single.html"><img class="img-fluid rounded" src="{% static 'home/assets/img/projects/8.jpg' %}" alt="" />
                     <div class="hoverdir-item-content">
                       <div class="h-100 d-flex flex-center p-3 hoverdir-text">
                         <div class="text-700">
@@ -648,7 +648,7 @@
                   </a></div>
               </div>
               <div class="col-sm-6 col-lg-4 px-2 sortable-item design mb-3" data-zanim-xs='{"animation":"zoom-in","delay":0.8}'>
-                <div class="hoverdir-item position-relative rounded overflow-hidden" data-zanim-xs='{"duration":1.5,"animation":"zoom-in","delay":0}'><a class="d-block" href="../pages/work-single.html"><img class="img-fluid rounded" src="../assets/img/projects/9.jpg" alt="" />
+                <div class="hoverdir-item position-relative rounded overflow-hidden" data-zanim-xs='{"duration":1.5,"animation":"zoom-in","delay":0}'><a class="d-block" href="../pages/work-single.html"><img class="img-fluid rounded" src="{% static 'home/assets/img/projects/9.jpg' %}" alt="" />
                     <div class="hoverdir-item-content">
                       <div class="h-100 d-flex flex-center p-3 hoverdir-text">
                         <div class="text-700">
