@@ -15,7 +15,7 @@
     <!-- ===============================================-->
     <!--    Favicons-->
     <!-- ===============================================-->
-    <link rel="apple-touch-icon" sizes="180x180" href=assets/img/favicons/apple-touch-icon.png' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href=" {% static 'home/assets/img/favicons/apple-touch-icon.png' %}">
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'home/assets/img/favicons/favicon-32x32.png' %}">
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'home/assets/img/favicons/favicon-16x16.png' %}">
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'home/assets/img/favicons/favicon.ico' %}">
@@ -1333,10 +1333,8 @@
     <!-- ===============================================-->
     <!--    JavaScripts-->
     <!-- ===============================================-->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
-
-
+    <script src="{% static 'home/assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'home/assets/js/popper.min.js' %}"></script>
     <script src="{% static 'home/assets/js/bootstrap.js' %}"></script>
     <script src="{% static 'home/assets/js/plugins.js' %}"></script>
     <script src="{% static 'home/assets/js/stickyfill.min.js' %}"></script>
