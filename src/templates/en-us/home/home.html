@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
+{% load static %}
 
   <head>
     <meta charset="utf-8">
@@ -14,12 +15,12 @@
     <!-- ===============================================-->
     <!--    Favicons-->
     <!-- ===============================================-->
-    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicons/favicon-16x16.png">
-    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicons/favicon.ico">
-    <link rel="manifest" href="../assets/img/favicons/manifest.json">
-    <meta name="msapplication-TileImage" content="../assets/img/favicons/mstile-150x150.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'home/assets/img/favicons/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'home/assets/img/favicons/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'home/assets/img/favicons/favicon-16x16.png' %}">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'home/assets/img/favicons/favicon.ico' %}">
+    <link rel="manifest" href="{% static 'home/assets/img/favicons/manifest.json' %}">
+    <meta name="msapplication-TileImage" content="{% static 'home/assets/img/favicons/mstile-150x150.png' %}">
     <meta name="theme-color" content="#ffffff">
 
     <!-- ===============================================-->
@@ -27,10 +28,10 @@
     <!-- ===============================================-->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,700&amp;#x7c;Trirong:200,200i,300,300i,400,400i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;#x7c" rel="stylesheet">
-    <link href="../assets/lib/owl.carousel/owl.carousel.css" rel="stylesheet">
-    <link href="../assets/lib/remodal/remodal.css" rel="stylesheet">
-    <link href="../assets/lib/remodal/remodal-default-theme.css" rel="stylesheet">
-    <link href="../assets/css/theme.css" rel="stylesheet">
+    <link href="{% static 'home/assets/lib/owl.carousel/owl.carousel.css' %}" rel="stylesheet">
+    <link href="{% static 'home/assets/lib/remodal/remodal.css' %}" rel="stylesheet">
+    <link href="{% static 'home/assets/lib/remodal/remodal-default-theme.css' %}" rel="stylesheet">
+    <link href="{% static 'home/assets/css/theme.css' %}" rel="stylesheet">
   </head>
 
   <body data-spy="scroll" data-target="#navbar-one-page" data-offset="80">
@@ -74,7 +75,7 @@
       <!-- End of Preloader ===========================-->
 
       <section class="text-center overflow-hidden py-0" id="top" data-zanim-timeline="{}" data-zanim-trigger="scroll">
-        <div class="bg-holder overlay overlay-2 parallax" style="background-image:url(../assets/img/headers/header-11.jpg);" data-rellax-percentage="0.5"></div>
+        <div class="bg-holder overlay overlay-2 parallax" style="background-image:url({% static 'home/assets/img/headers/header-11.jpg' %});" data-rellax-percentage="0.5"></div>
         <!--/.bg-holder-->
         <div class="header-overlay"></div>
         <div class="container">
