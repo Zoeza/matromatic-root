@@ -1,0 +1,89 @@
+<!doctype html>
+{% load static %}
+
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>matromatic | industrial and semi-industrial machine</title>
+    <meta name="description" content="">
+    <meta name="google-site-verification" content="oKH8inyHRTvBi1Ms6u7eH1f0sZSSol7k2lsJ7S7Q2rg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% get_media_prefix %}{{ home_page.logo_head }}">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{% static 'home/assets/styles/vendor/bootstrap.min.css' %}">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="{% static 'home/assets/fonts/linea-font/css/linea-font.css' %}">
+    <!-- Slider -->
+    <link rel="stylesheet" href="{% static 'home/assets/styles/vendor/slick.css' %}">
+    <!-- Lightbox -->
+    <link rel="stylesheet" href="{% static 'home/assets/styles/vendor/magnific-popup.css' %}">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="{% static 'home/assets/styles/vendor/animate.css' %}">
+
+
+    <!-- Matromatic CSS -->
+    <link rel="stylesheet" href="{% static 'home/assets/styles/main.css' %}">
+    <link rel="stylesheet" href="{% static 'home/assets/styles/responsive.css' %}">
+    <script src="https://kit.fontawesome.com/32ada5b3d8.js" crossorigin="anonymous"></script>
+
+    <!-- JS -->
+    <script src="{% static 'home/assets/js/vendor/modernizr-2.8.3.min.js' %}"></script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-KG9DB56W');
+
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar">
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KG9DB56W"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- ========== Preloader ========== -->
+<div class="preloader">
+    <img src="{% static 'home/assets/images/loader.svg' %}" alt="Loading...">
+</div>
+{% block body %}{% endblock %}
+
+<!-- ========== Scripts ========== -->
+<script src="{% static 'home/assets/js/vendor/jquery-2.1.4.min.js' %}"></script>
+<script src="{% static 'home/assets/js/vendor/google-fonts.js' %}"></script>
+<script src="{% static 'home/assets/js/vendor/jquery.easing.js' %}"></script>
+<script src="{% static 'home/assets/js/vendor/jquery.waypoints.min.js' %}"></script>
+<script src="{% static 'home/assets/js/vendor/bootstrap.min.js' %}"></script>
+<script src="{% static 'home/assets/js/vendor/bootstrap-hover-dropdown.min.js' %}"></script>
+<script src="{% static 'home/assets/js/vendor/smoothscroll.js' %}"></script>
+<script src="{% static 'home/assets/js/vendor/jquery.localScroll.min.js' %}"></script>
+<script src="{% static 'home/assets/js/vendor/jquery.scrollTo.min.js' %}"></script>
+<script src="{% static 'home/assets/js/vendor/jquery.stellar.min.js' %}"></script>
+<script src="{% static 'home/assets/js/vendor/jquery.parallax.js' %}"></script>
+<script src="{% static 'home/assets/js/vendor/slick.min.js' %}"></script>
+<script src="{% static 'home/assets/js/vendor/jquery.easypiechart.min.js' %}"></script>
+<script src="{% static 'home/assets/js/vendor/countup.min.js' %}"></script>
+<script src="{% static 'home/assets/js/vendor/isotope.min.js' %}"></script>
+<script src="{% static 'home/assets/js/vendor/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'home/assets/js/vendor/wow.min.js' %}"></script>
+<script src="{% static 'home/assets/js/vendor/jquery.ajaxchimp.js' %}"></script>
+<script src="{% static 'home/assets/js/vendor/animDots.js' %}"></script>
+
+<!-- Google Maps -->
+
+<!-- Matromatic JS -->
+<script src="{% static 'home/assets/js/main.js' %}"></script>
+
+<!-- ========== Scripts ========== -->
+
+
+</body>
+</html>
