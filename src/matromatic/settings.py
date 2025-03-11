@@ -71,11 +71,14 @@ WSGI_APPLICATION = 'matromatic.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'matro_db',
+        'USER': 'matro_us',
+        'PASSWORD': 'Bouderbala6931',
+        'HOST': 'Localhost',
+        'PORT': '3306',
     }
 }
 
