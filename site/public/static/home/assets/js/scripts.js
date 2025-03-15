@@ -1,41 +1,35 @@
-/* Scripts pour Matromatic - Neuros Theme */
+/* Scripts extraits du fichier HTML pour le thème Neuros */
 document.addEventListener("DOMContentLoaded", function () {
     console.log("Page chargée avec succès");
 
-    // Animation du texte du hero
-    const heroText = document.querySelector("#hero h1");
-    if (heroText) {
-        heroText.style.opacity = "0";
-        setTimeout(() => {
-            heroText.style.opacity = "1";
-            heroText.style.transition = "opacity 2s ease-in-out";
-        }, 500);
-    }
-
-    // Interaction sur les liens du menu
-    const menuLinks = document.querySelectorAll("nav ul li a");
-    menuLinks.forEach(link => {
-        link.addEventListener("mouseover", function () {
-            this.style.color = "#f14f44";
-        });
-        link.addEventListener("mouseout", function () {
-            this.style.color = "white";
-        });
-    });
-
-    // Intégration d'Owl Carousel
-    if (typeof jQuery !== "undefined") {
-        jQuery(document).ready(function () {
-            jQuery(".owl-carousel").owlCarousel({
-                loop: true,
-                margin: 10,
-                nav: true,
-                responsive: {
-                    0: { items: 1 },
-                    600: { items: 2 },
-                    1000: { items: 3 }
+    // Gestion du lazy load pour Elementor
+    const lazyloadRunObserver = () => {
+        const lazyloadBackgrounds = document.querySelectorAll(".e-con.e-parent:not(.e-lazyloaded)");
+        const lazyloadBackgroundObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    let lazyloadBackground = entry.target;
+                    if (lazyloadBackground) {
+                        lazyloadBackground.classList.add('e-lazyloaded');
+                    }
+                    lazyloadBackgroundObserver.unobserve(entry.target);
                 }
             });
+        }, { rootMargin: '200px 0px 200px 0px' });
+        lazyloadBackgrounds.forEach((lazyloadBackground) => {
+            lazyloadBackgroundObserver.observe(lazyloadBackground);
         });
-    }
+    };
+
+    const events = ['DOMContentLoaded', 'elementor/lazyload/observe'];
+    events.forEach((event) => {
+        document.addEventListener(event, lazyloadRunObserver);
+    });
+
+    // Correction pour WooCommerce
+    (function() {
+        var c = document.body.className;
+        c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+        document.body.className = c;
+    })();
 });
