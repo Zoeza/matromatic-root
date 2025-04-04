@@ -295,7 +295,7 @@
 }
 @media only screen and (min-width: 1365px) {
   #mega-menu-wrap-main #mega-menu-main > li.mega-menu-item > a.mega-menu-link:hover, #mega-menu-wrap-main #mega-menu-main > li.mega-menu-item > a.mega-menu-link:focus {
-    background: rgba(0, 0, 0, 0);
+    background: rgba(241, 241, 241, 0);
     color: #333;
     font-weight: bold;
     text-decoration: none;
