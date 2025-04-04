@@ -54,7 +54,7 @@
 }
 @media only screen and (min-width: 1365px) {
   #mega-menu-wrap-main {
-    background: rgba(1, 1, 1, 1);
+    background: rgba(0, 0, 0, 0);
   }
 }
 #mega-menu-wrap-main.mega-keyboard-navigation .mega-menu-toggle:focus, #mega-menu-wrap-main.mega-keyboard-navigation .mega-toggle-block:focus, #mega-menu-wrap-main.mega-keyboard-navigation .mega-toggle-block a:focus, #mega-menu-wrap-main.mega-keyboard-navigation .mega-toggle-block .mega-search input[type=text]:focus, #mega-menu-wrap-main.mega-keyboard-navigation .mega-toggle-block button.mega-toggle-animated:focus, #mega-menu-wrap-main.mega-keyboard-navigation #mega-menu-main a:focus, #mega-menu-wrap-main.mega-keyboard-navigation #mega-menu-main span:focus, #mega-menu-wrap-main.mega-keyboard-navigation #mega-menu-main input:focus, #mega-menu-wrap-main.mega-keyboard-navigation #mega-menu-main li.mega-menu-item a.mega-menu-link:focus, #mega-menu-wrap-main.mega-keyboard-navigation #mega-menu-main form.mega-search-open:has(input[type=text]:focus) {
@@ -295,7 +295,7 @@
 }
 @media only screen and (min-width: 1365px) {
   #mega-menu-wrap-main #mega-menu-main > li.mega-menu-item > a.mega-menu-link:hover, #mega-menu-wrap-main #mega-menu-main > li.mega-menu-item > a.mega-menu-link:focus {
-    background: rgba(241, 241, 241, 0);
+    background: rgba(0, 0, 0, 0);
     color: #333;
     font-weight: bold;
     text-decoration: none;
