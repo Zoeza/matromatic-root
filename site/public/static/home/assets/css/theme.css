@@ -23404,7 +23404,7 @@ body.admin-bar .slide-extra-wrapper {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #000;
+  background: #fff;
   z-index: 1030;
   -webkit-transition: opacity 0.3s ease;
   -moz-transition: opacity 0.3s ease;
