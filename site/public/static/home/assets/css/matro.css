@@ -417,9 +417,11 @@ body .is-layout-grid {
  font-size: 1.5em;
  line-height: 1.6;
 }
+
 .woocommerce form .form-row .required {
  visibility: visible;
 }
+
 .top-bar {
  color: #f5f5f5;
 }
@@ -10255,25 +10257,10 @@ ul.product_list_widget li .product-title,
   align-items: flex-end;
  }
 }
-@font-face {
- font-family: Inter;
- font-style: normal;
- font-weight: 300 900;
- font-display: fallback;
- src: url("https://demo.artureanec.com/themes/neuros-dark/wp-content/plugins/woocommerce/assets/fonts/Inter-VariableFont_slnt,wght.woff2")
-  format("woff2");
- font-stretch: normal;
-}
 
-@font-face {
- font-family: Cardo;
- font-style: normal;
- font-weight: 400;
- font-display: fallback;
- src: url("https://demo.artureanec.com/themes/neuros-dark/wp-content/plugins/woocommerce/assets/fonts/cardo_normal_400.woff2")
-  format("woff2");
+.woocommerce-product-gallery {
+ opacity: 1 !important;
 }
-
 .e-con.e-parent:nth-of-type(n + 4):not(.e-lazyloaded):not(.e-no-lazyload),
 .e-con.e-parent:nth-of-type(n + 4):not(.e-lazyloaded):not(.e-no-lazyload) * {
  background-image: none !important;
@@ -10307,11 +10294,94 @@ ul.product_list_widget li .product-title,
   transform: scale(1.15);
  }
 }
-.woocommerce-product-gallery {
- opacity: 1 !important;
+
+@font-face {
+ font-family: Inter;
+ font-style: normal;
+ font-weight: 300 900;
+ font-display: fallback;
+ src: url("https://demo.artureanec.com/themes/neuros-dark/wp-content/plugins/woocommerce/assets/fonts/Inter-VariableFont_slnt,wght.woff2")
+  format("woff2");
+ font-stretch: normal;
 }
 
+@font-face {
+ font-family: Cardo;
+ font-style: normal;
+ font-weight: 400;
+ font-display: fallback;
+ src: url("https://demo.artureanec.com/themes/neuros-dark/wp-content/plugins/woocommerce/assets/fonts/cardo_normal_400.woff2")
+  format("woff2");
+}
+
+:base {
+ --wpforms-field-border-radius: 3px;
+ --wpforms-field-border-style: solid;
+ --wpforms-field-border-size: 1px;
+ --wpforms-field-background-color: #ffffff;
+ --wpforms-field-border-color: rgba(0, 0, 0, 0.25);
+ --wpforms-field-border-color-spare: rgba(0, 0, 0, 0.25);
+ --wpforms-field-text-color: rgba(0, 0, 0, 0.7);
+ --wpforms-field-menu-color: #ffffff;
+ --wpforms-label-color: rgba(0, 0, 0, 0.85);
+ --wpforms-label-sublabel-color: rgba(0, 0, 0, 0.55);
+ --wpforms-label-error-color: #d63637;
+ --wpforms-button-border-radius: 3px;
+ --wpforms-button-border-style: none;
+ --wpforms-button-border-size: 1px;
+ --wpforms-button-background-color: #066aab;
+ --wpforms-button-border-color: #066aab;
+ --wpforms-button-text-color: #ffffff;
+ --wpforms-page-break-color: #066aab;
+ --wpforms-background-image: none;
+ --wpforms-background-position: center center;
+ --wpforms-background-repeat: no-repeat;
+ --wpforms-background-size: cover;
+ --wpforms-background-width: 100px;
+ --wpforms-background-height: 100px;
+ --wpforms-background-color: rgba(0, 0, 0, 0);
+ --wpforms-background-url: none;
+ --wpforms-container-padding: 0px;
+ --wpforms-container-border-style: none;
+ --wpforms-container-border-width: 1px;
+ --wpforms-container-border-color: #000000;
+ --wpforms-container-border-radius: 3px;
+ --wpforms-field-size-input-height: 43px;
+ --wpforms-field-size-input-spacing: 15px;
+ --wpforms-field-size-font-size: 16px;
+ --wpforms-field-size-line-height: 19px;
+ --wpforms-field-size-padding-h: 14px;
+ --wpforms-field-size-checkbox-size: 16px;
+ --wpforms-field-size-sublabel-spacing: 5px;
+ --wpforms-field-size-icon-size: 1;
+ --wpforms-label-size-font-size: 16px;
+ --wpforms-label-size-line-height: 19px;
+ --wpforms-label-size-sublabel-font-size: 14px;
+ --wpforms-label-size-sublabel-line-height: 17px;
+ --wpforms-button-size-font-size: 17px;
+ --wpforms-button-size-height: 41px;
+ --wpforms-button-size-padding-h: 15px;
+ --wpforms-button-size-margin-top: 10px;
+ --wpforms-container-shadow-size-box-shadow: none;
+}
 .wp-container-core-group-is-layout-4
  > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
  margin-left: 0 !important;
+}
+
+img:is([sizes="auto"i], [sizes^="auto,"i]) {
+ contain-intrinsic-size: 3000px 1500px;
+}
+
+img.wp-smiley,
+img.emoji {
+ display: inline !important;
+ border: none !important;
+ box-shadow: none !important;
+ height: 1em !important;
+ width: 1em !important;
+ margin: 0 0.07em !important;
+ vertical-align: -0.1em !important;
+ background: none !important;
+ padding: 0 !important;
 }
