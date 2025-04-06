@@ -6913,27 +6913,19 @@
           background-image: none !important;
         }
       }
-      @keyframes fa-beat {
-		  0%, 100% {
-			transform: scale(1);
-		  }
-		  14% {
-			transform: scale(1.3);
-		  }
-		  28% {
-			transform: scale(1);
-		  }
-		  42% {
-			transform: scale(1.3);
-		  }
-		  70% {
-			transform: scale(1);
-		  }
-		}
 
-		.beat-icon {
-		  animation: fa-beat 1s infinite;
-		  transform-origin: center;
+	 .beat-icon {
+		animation: beat 1s infinite ease-in-out;
+		transform-origin: center;
+	  }
+
+	  @keyframes beat {
+		0%, 100% {
+		  transform: scale(1);
+		}
+		50% {
+		  transform: scale(1.2);
+		}
 	  }
     </style>
     <style class='wp-fonts-local' type='text/css'>
