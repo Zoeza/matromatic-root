@@ -6929,6 +6929,25 @@
 		  transform: scale(1.15);
 		}
 	  }
+
+	  .owl-prev, .owl-next {
+    font-size: 40px;  /* Augmentez cette valeur pour rendre les flèches plus grandes */
+    color: #000; /* Couleur des flèches */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    cursor: pointer;
+    }
+
+    .owl-prev {
+        left: 10px; /* Position de la flèche précédente */
+    }
+
+    .owl-next {
+        right: 10px; /* Position de la flèche suivante */
+    }
+
     </style>
     <style class='wp-fonts-local' type='text/css'>
       @font-face {
@@ -7299,7 +7318,6 @@
     &quot;navContainerMobile&quot;:false,
     &quot;animateOut&quot;:&quot;fadeOut&quot;
 }">
-
                                   <div class="content-item slider-item elementor-repeater-item-2ab3cbc neuros-button-border-style-solid neuros-button-background-style-solid">
                                     <div class="elementor-section elementor-top-section elementor-section-full_width">
                                       <div class="elementor-container elementor-column-gap-no">
