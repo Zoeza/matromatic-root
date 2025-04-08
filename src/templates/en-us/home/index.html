@@ -19,7 +19,27 @@
    <meta name="msapplication-TileColor" content="#8b3dff" />
    <meta name="msapplication-config" content="{% static 'home/assets/images/favicon/tile.xml' %}" />
 
+<style>
+   .overlay {
+     position: absolute;
+     bottom: 0;
+     background: rgb(0, 0, 0);
+     background: rgba(0, 0, 0, 0.5); /* Black see-through */
+     color: #f1f1f1;
+     width: 100%;
+     transition: .5s ease;
+     opacity:0;
+     color: white;
+     font-size: 20px;
+     padding: 20px;
+     text-align: center;
+   }
 
+   /* When you mouse over the container, fade in the overlay title */
+   .container:hover .overlay {
+     opacity: 1;
+}
+</style>
    <!-- Color modes -->
    <script src="{% static 'home/assets/js/vendors/color-modes.js' %}"></script>
 
@@ -484,27 +504,23 @@
             </div>
             <div class="row gy-4">
               <div class="col-lg-4 col-md-4 col-12">
-                  <a href="{% static 'home/assets/img/projects/project_01.jpg'%}"
-                      class="glightbox rounded-3">
-                      <div class="rounded-3 card-lift"
-                          style="background-image: url({% static 'home/assets/img/projects/project_01.jpg'%}); background-repeat: no-repeat; height: 350px; background-size: cover">
+                  <a href="{% static 'home/assets/img/projects/project_01.jpg'%}" class="glightbox rounded-3">
+                      <div class="rounded-3 card-lift" style="background-image: url({% static 'home/assets/img/projects/project_01.jpg'%}); background-repeat: no-repeat; height: 350px; background-size: cover">
                       </div>
                   </a>
               </div>
               <div class="col-lg-4 col-md-4 col-12">
-                  <a href="{% static 'home/assets/img/projects/project_01.jpg'%}"
-                      class="glightbox rounded-3">
-                      <div class="rounded-3 card-lift"
-                          style="background-image: url({% static 'home/assets/img/projects/project_01.jpg'%}); background-repeat: no-repeat; height: 350px; background-size: cover">
+                  <a href="{% static 'home/assets/img/projects/project_01.jpg'%}" class="glightbox rounded-3">
+                      <div class="rounded-3 card-lift" style="background-image: url({% static 'home/assets/img/projects/project_01.jpg'%}); background-repeat: no-repeat; height: 350px; background-size: cover">
                       </div>
+                       <div class="overlay">My Name is John</div>
                   </a>
               </div>
               <div class="col-lg-4 col-md-4 col-12">
-                  <a href="{% static 'home/assets/img/projects/project_01.jpg'%}"
-                      class="glightbox rounded-3">
-                      <div class="rounded-3 card-lift"
-                          style="background-image: url({% static 'home/assets/img/projects/project_01.jpg'%}); background-repeat: no-repeat; height: 350px; background-size: cover">
+                  <a href="{% static 'home/assets/img/projects/project_01.jpg'%}" class="glightbox rounded-3">
+                      <div class="rounded-3 card-lift" style="background-image: url({% static 'home/assets/img/projects/project_01.jpg'%}); background-repeat: no-repeat; height: 350px; background-size: cover">
                       </div>
+                       <div class="overlay">My Name is John</div>
                   </a>
               </div>
           </div>
