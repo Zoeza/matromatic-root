@@ -556,96 +556,178 @@
       <!--Testimonial end-->
 
       <!--Form section start-->
-      <section id="contact" class="bg-light py-lg-9 py-5">
-         <div class="container">
-            <div class="row justify-content-center">
-               <div class="col-lg-10">
-                  <div class="card shadow-lg" data-cue="zoomIn">
-                     <div class="row g-0">
-                        <div class="col-md-6 d-none d-md-block rounded-start-3" style="
-                                 background-image: url({% static 'home/assets/images/landings/it-company/it-company-form-img.jpg' %});
-                                 background-size: cover;
-                                 background-repeat: no-repeat;
-                                 background-position: center;
-                              ">
-                           <!-- for mobile img-->
+<!--pageheader-->
+     <section class="bg-info bg-opacity-10 pt-xl-9 pb-xl-0 py-5 pattern-square">
+        <div class="container">
+           <div class="row g-xl-7 gy-5">
+            <div class="col-lg-6 col-12">
+                <div class="me-xl-7">
+                    <div class="mb-5">
+                        <h1 class="mb-3">Contact our sales team</h1>
+                        <p>Connect with us today to learn more about how
+                            Block can help you grow your business.</p>
+                    </div>
+                    <div class="mb-5">
+                        <ul class="list-unstyled">
+                            <li class="mb-2 d-flex">
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        width="20" height="20"
+                                        fill="currentColor"
+                                        class="bi bi-dot"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+                                    </svg>
+                                </span>
+                                <span class="ms-2">Access the world’s
+                                    easiest drag-and-drop design
+                                    tool.</span>
+                            </li>
+                            <li class="mb-2 d-flex">
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        width="20" height="20"
+                                        fill="currentColor"
+                                        class="bi bi-dot"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+                                    </svg>
+                                </span>
+                                <span class="ms-2">Design & collaborate
+                                    together from any device, anywhere in
+                                    the world.</span>
+                            </li>
+                            <li class="mb-2 d-flex">
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        width="20" height="20"
+                                        fill="currentColor"
+                                        class="bi bi-dot"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+                                    </svg>
+                                </span>
+                                <span class="ms-2">Ensure brand consistency
+                                    with built controls and workflows for
+                                    approvals.</span>
+                            </li>
+                            <li class="mb-5 d-flex">
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        width="20" height="20"
+                                        fill="currentColor"
+                                        class="bi bi-dot"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+                                    </svg>
+                                </span>
+                                <span class="ms-2">Discover the perfect
+                                    personalized plan for your needs.</span>
+                            </li>
+                        </ul>
+
+                        <p class="mb-0">
+                            For technical issue or general inquiries, please
+                            <br />
+                            <a href="#" class="text-primary">visit our Help
+                                Centre.</a>
+                        </p>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4 col-4">
+                            <img src="../assets/images/brand-logo/brand-logo-12.svg"
+                                alt="logo" class="mw-100" />
                         </div>
-                        <div class="col-xl-6 col-md-6">
-                           <div class="card-body p-md-5">
-                              <form class="row needs-validation g-3" novalidate>
-                                 <div class="col-lg-12">
-                                    <div>
-                                       <h3>Prêt à transformer votre entreprise ?</h3>
-                                       <p class="mb-0">
-                                         Parlez-nous de votre projet à l’adresse
-                                          <span><a href="#!">info@matromatic.com</a></span>
-                                          ou via le formulaire de contact ci-dessous, et nous vous recontacterons très bientôt.
-                                       </p>
-                                    </div>
-                                 </div>
-                                 <div class="col-lg-6 col-12">
-                                    <label for="companyFirstnameInput" class="form-label">
-                                       First Name
-                                       <span class="text-danger">*</span>
-                                    </label>
-                                    <input type="text" class="form-control" id="companyFirstnameInput" required />
-                                    <div class="invalid-feedback">Please enter firstname.</div>
-                                 </div>
-                                 <div class="col-lg-6 col-12">
-                                    <label for="companyNameInput" class="form-label">
-                                       Company
-                                       <span class="text-danger">*</span>
-                                    </label>
-                                    <input type="text" class="form-control" id="companyNameInput" required />
-                                    <div class="invalid-feedback">Please enter lastname.</div>
-                                 </div>
-                                 <div class="col-md-12">
-                                    <label for="companyEmailInput" class="form-label">
-                                       Work Email
-                                       <span class="text-danger">*</span>
-                                    </label>
-                                    <input type="email" class="form-control" id="companyEmailInput" required />
-                                    <div class="invalid-feedback">Please enter email.</div>
-                                 </div>
-                                 <div class="col-md-12">
-                                    <label for="companyPhoneInput" class="form-label">
-                                       Phone
-                                       <span class="text-danger">*</span>
-                                    </label>
-                                    <input type="tel" class="form-control" id="companyPhoneInput" required />
-                                    <div class="invalid-feedback">Please enter phone.</div>
-                                 </div>
-                                 <div class="col-md-12">
-                                    <label for="companyTextarea" class="form-label">Describe your idea</label>
-                                    <textarea class="form-control" id="companyTextarea" placeholder="Write to us"
-                                       rows="3" required></textarea>
-                                    <div class="invalid-feedback">Please write message.</div>
-                                 </div>
-                                 <div class="col-12">
-                                    <div class="form-check">
-                                       <input class="form-check-input" type="checkbox" value="" id="companyCheckagree"
-                                          required />
-                                       <label class="form-check-label" for="companyCheckagree">
-                                          I agree to the
-                                          <a href="#!">privacy policy</a>
-                                       </label>
-                                       <div class="invalid-feedback">You must agree before submitting.</div>
-                                    </div>
-                                 </div>
-                                 <div class="d-grid">
-                                    <button class="btn btn-primary rounded-pill" type="submit">Let’s work
-                                       together!</button>
-                                 </div>
-                              </form>
-                           </div>
+                        <div class="col-lg-3 col-md-4 col-4">
+                            <img src="../assets/images/brand-logo/brand-logo-11.svg"
+                                alt="logo" class="mw-100" />
                         </div>
-                     </div>
-                  </div>
-               </div>
+                        <div class="col-lg-3 col-md-4 col-4">
+                            <img src="../assets/images/brand-logo/brand-logo-10.svg"
+                                alt="logo" class="mw-100" />
+                        </div>
+                    </div>
+                </div>
             </div>
-         </div>
-      </section>
-      <!--Form section end-->
+            <div class="col-lg-6 col-12 mb-lg-n9">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <form class="row g-3 needs-validation" novalidate>
+                            <div class="col-md-6">
+                                <label for="contactFirstNameInput"
+                                    class="form-label">
+                                    First Name
+                                    <span class="text-danger">*</span>
+                                </label>
+                                <input type="text" class="form-control"
+                                    id="contactFirstNameInput" required />
+                                <div class="invalid-feedback">Please enter
+                                    firstname.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="contactLastNameInput"
+                                    class="form-label">
+                                    Last Name
+                                    <span class="text-danger">*</span>
+                                </label>
+                                <input type="text" class="form-control"
+                                    id="contactLastNameInput" required />
+                                <div class="invalid-feedback">Please enter
+                                    lastname.</div>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="contactEmailInput"
+                                    class="form-label">
+                                    Email
+                                    <span class="text-danger">*</span>
+                                </label>
+                                <input type="email" class="form-control"
+                                    id="contactEmailInput" required />
+                                <div class="invalid-feedback">Please enter
+                                    email.</div>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="contactCompanyNameInput"
+                                    class="form-label">Company Name</label>
+                                <input type="text" class="form-control"
+                                    id="contactCompanyNameInput" required />
+                                <div class="invalid-feedback">Please enter
+                                    company name.</div>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="contactPhoneInput"
+                                    class="form-label">Phone</label>
+                                <input type="tel" class="form-control"
+                                    id="contactPhoneInput" required />
+                                <div class="invalid-feedback">Please enter
+                                    phone.</div>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="contactTextarea"
+                                    class="form-label">Message</label>
+                                <textarea class="form-control"
+                                    id="contactTextarea" rows="4"
+                                    placeholder="Write to us"
+                                    required></textarea>
+                                <div class="invalid-feedback">Please enter a
+                                    message.</div>
+                            </div>
+                            <div class="d-grid">
+                                <button class="btn btn-primary"
+                                    type="submit">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     </section>
+<!--pageheader-->      <!--Form section end-->
    </main>
    <!-- Footer -->
    <footer class="pt-7">
