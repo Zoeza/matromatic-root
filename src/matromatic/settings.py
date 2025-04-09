@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-0y(dj*jiwsr9z_$l@g6)gvx%$@e&)&3u+@(yo)h5!ry2$g&6qw
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['18.206.249.123','192.168.64.18','matromatic.com','www.matromatic.com']
+ALLOWED_HOSTS = ['18.212.162.251','192.168.64.18','matromatic.com','www.matromatic.com']
 
 # Application definition
 
