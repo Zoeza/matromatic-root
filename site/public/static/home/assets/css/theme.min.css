@@ -2209,7 +2209,7 @@ sup {
   top: -0.5em;
 }
 a {
-  color: rgb(142 143 151), var(--bs-link-opacity, 1));
+  color: rgb(142 143 151);
   text-decoration: none;
 }
 a:hover {
