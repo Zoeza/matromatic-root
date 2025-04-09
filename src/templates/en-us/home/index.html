@@ -19,28 +19,6 @@
    <meta name="msapplication-TileColor" content="#8b3dff" />
    <meta name="msapplication-config" content="{% static 'home/assets/images/favicon/tile.xml' %}" />
 
-<style>
-   .overlay {
-     position: absolute;
-     bottom: 0;
-     background: rgb(0, 0, 0);
-     background: rgba(0, 0, 0, 0.5); /* Black see-through */
-     color: #f1f1f1;
-     width: 100%;
-     transition: .5s ease;
-     opacity:0;
-     color: white;
-     font-size: 20px;
-     padding: 20px;
-     text-align: center;
-
-   }
-
-   /* When you mouse over the container, fade in the overlay title */
-   .container:hover .overlay {
-     opacity: 1;
-}
-</style>
    <!-- Color modes -->
    <script src="{% static 'home/assets/js/vendors/color-modes.js' %}"></script>
 
@@ -130,7 +108,7 @@
    <main>
       <!--Hero start-->
       <section class="jarallax py-9 hero-agency" data-jarallax data-speed="0.4">
-           <img class="jarallax-img" src="{% static 'home/assets/images/landings/agency/agency-hero-img.jpg' %}" alt="agency"  />
+           <img class="jarallax-img" src="{% static 'home/assets/img/cover/bg.png' %}" alt="matro"  />
          <div class="position-absolute start-0 end-0">
             <div class="container">
                <div class="row">
