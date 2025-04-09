@@ -10770,7 +10770,7 @@ fieldset:disabled .btn {
 }
 .text-primary {
   --bs-text-opacity: 1;
-  color: rgb(172 176 179), var(--bs-text-opacity)) !important;
+    color: rgb(147 146 148) !important;
 }
 .text-secondary {
   --bs-text-opacity: 1;
