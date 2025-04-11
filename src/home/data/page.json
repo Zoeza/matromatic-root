@@ -24,5 +24,23 @@
         "image": "home/assets/img/service/expertise-tech.jpg"
       }
     ]
+  },
+  "about": {
+        "subtitle": "Aperçu de l'entreprise",
+        "title": "Découvrez l’essence de Matromatic, expert en robotique et systèmes embarqués.",
+        "description_blocks": [
+            {
+              "heading": "Matromatic, une entreprise technologique visionnaire portée par l’innovation",
+              "paragraphs": [
+                "Matromatic est une entreprise pionnière en robotique industrielle, alliant expertise en mécanique, électronique et informatique pour concevoir des solutions innovantes.",
+                "Nous développons des systèmes automatisés visant à optimiser la production et répondre aux défis industriels, avec pour mission d’accélérer la croissance en offrant des solutions durables et rentables."
+              ]
+            }
+    ],
+        "gallery": [
+      "home/assets/img/about/about-1.jpg",
+      "home/assets/img/about/about-2.jpg",
+      "home/assets/img/about/about-3.jpg"
+    ]
   }
 }
