@@ -127,19 +127,19 @@
   "realizations": [
     {
       "img":"home/assets/img/projets/projet-01.jpg",
-      "title": "Coffrage métallique glissant",
+      "title": "Coffrage  glissant",
       "modal": "coffrage_métallique"
     },
 
     {
       "img":"home/assets/img/projets/projet-02.JPG",
-      "title": "Coffrage métallique glissant: portique",
+      "title": "Coffrage  glissant: portique",
       "modal": "broyeur"
     },
 
     {
       "img":"home/assets/img/projets/projet-03.JPG",
-      "title": "Coffrage métallique glissant: peau coffrante",
+      "title": "Coffrage  glissant: peau coffrante",
       "modal": "peau_coffrante"
     }
   ]
