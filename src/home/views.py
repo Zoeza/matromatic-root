@@ -19,15 +19,6 @@ def home(request):
         raise Http404("Erreur de lecture JSON.")
 
     context = {
-        'page': {
-            'menu_list': [
-                ('home', "Accueil"),
-                ('about_us', "À propos de nous"),
-                ('services', "Services"),
-                ('projects', "Projets"),
-                ('contact', "Contact")
-            ]
-        },
         'data': page_data  #
     }
 

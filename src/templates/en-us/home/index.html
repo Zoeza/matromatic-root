@@ -17,7 +17,7 @@
                <!-- Navbar Links -->
                <div class="offcanvas-body pt-0 align-items-center">
                   <ul class="navbar-nav mx-auto align-items-lg-center">
-                     {% for key, item in page.menu_list %}
+                     {% for key, item in data.menu_list %}
                         <li class="nav-item ">
                            <a class="nav-link " href="#_{{key}}" role="button" aria-expanded="false">
                               {{ item }}
@@ -265,7 +265,7 @@
       <!-- Projects end-->
 
      <!--Form section start-->
-      <section id="contact" class="bg-light py-lg-9 py-5">
+      <section id="_contact" class="bg-light py-lg-9 py-5">
          <div class="container">
             <div class="row justify-content-center">
                <div class="col-lg-10">
