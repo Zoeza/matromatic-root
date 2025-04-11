@@ -4,7 +4,7 @@
     {"link":"services","title":"Services"},
     {"link":"projects","title":"Projets"},
     {"link":"contact", "title":"Contact"}
-] ,
+  ],
 
   "services": {
     "subtitle": "Ce que nous faisons",
