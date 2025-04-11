@@ -3,9 +3,7 @@ from django.shortcuts import render
 import json
 import os
 
-
 def home(request):
-
     if not request.session.get('language', None):
         request.session['language'] = 'en-us'
     direction = request.session.get('language')
@@ -30,7 +28,7 @@ def home(request):
                 ('contact', "Contact")
             ]
         },
-        'data': page_data  # 
+        'data': page_data  #
     }
 
     return render(request, url, context)
