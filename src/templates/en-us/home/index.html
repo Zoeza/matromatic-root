@@ -84,7 +84,7 @@
                <div class="offcanvas-body pt-0 align-items-center">
                   <ul class="navbar-nav mx-auto align-items-lg-center">
 
-                     {% for item ,key in page.menu_list.items %}
+                     {% for key,item in page.menu_list.items %}
                         <li class="nav-item ">
                            <a class="nav-link " href="#_{{key}}" role="button" aria-expanded="false">
                               {{item}}
