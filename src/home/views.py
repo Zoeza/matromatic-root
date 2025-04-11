@@ -25,16 +25,13 @@ def home(request):
                 'Contact'
             ],
 
-            'menu_list_2': [{
-                'data': {
+            'menu_list_2': {'data': {
                     "home": "Acceuil",
                     "about_us": "À propos de nous",
                     "services": "Services",
                     "projects": "Projets",
                     "contact": "Contact",
-                },
-            }
-            ]
+                }}
 
         }
     }
