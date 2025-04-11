@@ -118,9 +118,33 @@
         "title": "Robotique",
         "modal": "roboticModalCenter"
       }
+    ],
+
+
+    "projects": {
+      "subtitle": "Nos réalisations",
+      "title": "Explorez nos réalisations",
+      "description": " Chez Matromatic, nous concevons, réalisons et optimisons des machines adaptées aux besoins spécifiques de nos clients.\n  <br> Chaque projet est l'occasion de relever de nouveaux défis et de fournir des solutions efficaces.",
+    "realizations": [
+
+      {
+        "img":"home/assets/img/projets/projet-01.jpg",
+        "title": "Coffrage métallique glissant",
+        "modal": "coffrage_métallique"
+      },
+
+      {
+        "img":"home/assets/img/projets/projet-02.jpg",
+        "title": "Coffrage métallique glissant: portique",
+        "modal": "broyeur"
+      },
+
+      {
+        "img":"home/assets/img/projets/projet-02.jpg",
+        "title": "Coffrage métallique glissant: peau coffrante",
+        "modal": "peau_coffrante"
+      }
     ]
-
-
     }
 
 

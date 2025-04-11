@@ -193,6 +193,7 @@
                   </div>
                </div>
             </div>
+
             <div class="row g-4">
                 {% for domain in data.skills.domains %}
 
@@ -206,22 +207,21 @@
                   </a>
                </div>
                 {% endfor %}
-
-
             </div>
          </div>
       </section>
       <!-- Skills end-->
 
-      <section section id="projets" class="py-xl-9 py-5 bg-gray-900">
+       <!-- Projects start-->
+
+      <section section id="_projects" class="py-xl-9 py-5 bg-gray-900">
          <div class="container">
             <div class="row">
                <div class="col-lg-8 offset-lg-2 col-12">
                   <div class="text-center mb-xl-7 mb-5">
-                     <small class="text-uppercase ls-md fw-semibold text-primary"> Nos réalisations</small>
-                     <h2 class="my-3 text-white-stable">Explorez nos réalisations</h2>
-                     <p class="mb-0 text-body">Chez Matromatic, nous concevons, réalisons et optimisons des machines adaptées aux besoins spécifiques de nos clients.
-                  <br> Chaque projet est l'occasion de relever de nouveaux défis et de fournir des solutions efficaces.</p>
+                     <small class="text-uppercase ls-md fw-semibold text-primary"> {{ data.projects.subtitle }}</small>
+                     <h2 class="my-3 text-white-stable">{{ data.projects.title }}</h2>
+                     <p class="mb-0 text-body"> {{ data.projects.description }}</p>
                   </div>
                </div>
             </div>
@@ -230,15 +230,16 @@
                data-autoplay-delay="3000"
                data-breakpoints='{"480": {"slidesPerView": 1}, "768": {"slidesPerView": 1}, "1024": {"slidesPerView": 2}, "1200": {"slidesPerView": 3}}'>
                <div class="swiper-wrapper pb-lg-8 pb-6 pt-1">
+                 {% for project in data.projects.realizations %}
                   <div class="swiper-slide" data-cue="zoomIn">
                      <div class="card border-0 h-100 card-lift">
-                        <a href="#!"><img src="{% static 'home/assets/img/projets/projet-01.jpg'%}"
+                        <a href="#!"><img src="{% static {{ project.img }} %}"
                               alt="about" class="img-fluid rounded-top-3" /></a>
                         <div class="card-body">
                            <div class="d-flex flex-column gap-2">
                               <div class="d-flex flex-column gap-4">
-                                 <h4><a href="#!" class="text-reset">Coffrage métallique glissant.</a></h4>
-                                 <a href="#!" class="icon-link icon-link-hover">
+                                 <h4><a href="#!" class="text-reset">{{ project.title }}</a></h4>
+                                 <a href="#!" class="icon-link icon-link-hover" data-cue="zoomIn"  data-bs-toggle="modal" data-bs-target="#{{project.modal}}">
                                    Plus de Détails
                                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
                                        class="bi bi-arrow-right" viewBox="0 0 16 16">
@@ -252,57 +253,8 @@
                         </div>
                      </div>
                   </div>
+                   {% endfor %}
 
-                  <div class="swiper-slide" data-cue="zoomIn">
-                     <div class="card border-0 h-100 card-lift">
-                        <a href="#!"><img src="{% static 'home/assets/img/projets/projet-02.JPG'%}"
-                              alt="about" class="img-fluid rounded-top-3" /></a>
-                        <div class="card-body">
-                           <div class="d-flex flex-column gap-2">
-                              <div class="d-flex flex-column gap-4">
-                                 <h4><a href="#!" class="text-reset"> Broyeur de pneus.</a>
-                                 </h4>
-
-                                 <a href="#!" class="icon-link icon-link-hover">
-                                    Plus de Détails
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
-                                       class="bi bi-arrow-right" viewBox="0 0 16 16">
-                                       <path fill-rule="evenodd"
-                                          d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z">
-                                       </path>
-                                    </svg>
-                                 </a>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="swiper-slide" data-cue="zoomIn">
-                     <div class="card border-0 h-100 card-lift">
-                        <a href="#!"><img src="{% static 'home/assets/img/projets/projet-03.JPG'%}"
-                              alt="about" class="img-fluid rounded-top-3" /></a>
-                        <div class="card-body">
-                           <div class="d-flex flex-column gap-2">
-
-                              <div class="d-flex flex-column gap-4">
-                                 <h4><a href="#!" class="text-reset">Portique : coffrage glissant</a></h4>
-
-                                 <a href="#!" class="icon-link icon-link-hover">
-                                   Plus de Détails
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
-                                       class="bi bi-arrow-right" viewBox="0 0 16 16">
-                                       <path fill-rule="evenodd"
-                                          d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z">
-                                       </path>
-                                    </svg>
-                                 </a>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-
-                  <!-- Add more slides as needed -->
                </div>
                <!-- Add Pagination -->
                <div class="swiper-pagination"></div>
@@ -315,8 +267,8 @@
          </div>
       </section>
 
+      <!-- Projects end-->
 
-<!--pageheader-->
    <!--Form section start-->
       <section id="contact" class="bg-light py-lg-9 py-5">
          <div class="container">
