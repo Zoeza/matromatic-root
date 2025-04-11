@@ -8,11 +8,7 @@ def home(request):
     direction = request.session.get('language')
     url = direction + "/home/index.html"
 
-    # Acceuil
-    # À propos de nous
-    # Services
-    # Projets
-    # Contact
+
 
     context = {
         'page': {
@@ -22,7 +18,8 @@ def home(request):
                 "services": "Services",
                 "projects": "Projets",
                 "contact": "Contact",
-            }
+            },
+            'menu_list': ['Acceuil', 'À propos de nous', 'Services', 'Projets', 'Contact']
         }
     }
 
