@@ -17,7 +17,15 @@ def home(request):
                 "projects": "Projets",
                 "contact": "Contact",
             },
-            'menu_list': [{
+            'menu_list': [
+                'Acceuil',
+                'À propos de nous',
+                'Services',
+                'Projets',
+                'Contact'
+            ],
+
+            'menu_list_2': [{
                 "home": "Acceuil",
                 "about_us": "À propos de nous",
                 "services": "Services",
@@ -25,6 +33,9 @@ def home(request):
                 "contact": "Contact",
             }
             ]
+            
+            
+            
         }
     }
 
