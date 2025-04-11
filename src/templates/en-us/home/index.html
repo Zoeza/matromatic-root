@@ -127,11 +127,14 @@
                            <div class="row align-items-center gy-5">
                                <div class="col-xl-4 col-md-6 col-12">
                                  <div class="d-flex flex-column gap-4">
-                                    {{data.about.description_blocks }}
-                                    <div class="d-flex flex-column gap-2">
-                                      <h2></h2>
-                                     
-                                    </div>
+                                    {% for block in data.about.description_blocks %}
+                                 <div class="d-flex flex-column gap-2">
+                                   <h2>{{ block.heading }}</h2>
+                                   {% for paragraph in block.paragraphs %}
+                                     <p class="mb-0">{{ paragraph }}</p>
+                                   {% endfor %}
+                                 </div>
+                               {% endfor %}
                                  </div>
                               </div>
                               <div class="col-xl-6 offset-xl-2 col-md-6 col-12">
