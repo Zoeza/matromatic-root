@@ -85,9 +85,9 @@
                   <ul class="navbar-nav mx-auto align-items-lg-center">
                      {{ page.menu_list}}
 
-                     {% for item in page.menu_list.items %}
+                     {% for key,item in page.menu_list %}
                         <li class="nav-item ">
-                           <a class="nav-link " href="#_{{item.key}}" role="button" aria-expanded="false">
+                           <a class="nav-link " href="#_{{key}}" role="button" aria-expanded="false">
                               {{item}}
                            </a>
                         </li>
