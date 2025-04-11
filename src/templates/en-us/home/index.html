@@ -139,45 +139,26 @@
                               </div>
                               <div class="col-xl-6 offset-xl-2 col-md-6 col-12">
                                   <div class="row g-4">
-                                      <div class="col-lg-6 col-md-6 col-12">
-                                          <a href="#!">
-                                             <div class="mb-4 rounded-3 card-lift" style="
-                                                 background-image: url({% static 'home/assets/img/about/about-1.jpg' %});
-                                                 background-repeat: no-repeat;
-                                                 height: 180px;
-                                                 background-size: cover;">
-
-                                              </div>
-                                          </a>
-                                          <a href="#!">
+                                     <div class="col-xl-6 offset-xl-2 col-md-6 col-12">
+                                         <div class="row g-4">
+                                           {% for image in data.about.gallery %}
+                                           <div class="col-lg-6 col-md-6 col-12">
                                              <div class="rounded-3 card-lift" style="
-                                           background-image: url({% static 'home/assets/img/about/about-3.jpg' %});
-                                           background-repeat: no-repeat;
-                                           height: 180px;
-                                           background-size: cover;">
-                                             </div>
-                                          </a>
-                                      </div>
-                                      <div class="col-lg-6 col-md-6 col-12">
-                                          <a href="#!">
-                                             <div class="rounded-3 card-lift" style="
-                                                background-image: url({% static 'home/assets/img/about/about-2.jpg' %});
-                                                background-repeat: no-repeat;
-                                                height: 386px;
-                                                background-size: cover;">
-
-                                             </div>
-                                          </a>
-                                      </div>
+                                               background-image: url({% static image %});
+                                               background-size: cover;
+                                               background-repeat: no-repeat;
+                                               height: 180px;"></div>
+                                           </div>
+                                           {% endfor %}
+                                         </div>
                                   </div>
                               </div>
                            </div>
                         </div>
-
+                         <!-- Nos engagements-->
                         <div class="tab-pane fade" id="pills-commitments" role="tabpanel"
                            aria-labelledby="pills-commitments-tab" tabindex="0">
                            <div class="row g-4" data-cue="zoomIn">
-
                               <div class="col-lg-4 col-md-6 col-12">
                                  <div class="d-flex flex-column gap-4 text-center text-lg-start mx-4 mx-lg-auto">
                                     <div>
