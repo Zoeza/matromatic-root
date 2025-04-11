@@ -17,10 +17,10 @@
                <!-- Navbar Links -->
                <div class="offcanvas-body pt-0 align-items-center">
                   <ul class="navbar-nav mx-auto align-items-lg-center">
-                     {% for item, key in data.menu_list %}
+                     {% for item, in data.menu_list %}
                         <li class="nav-item ">
-                           <a class="nav-link " href="#_{{key}}" role="button" aria-expanded="false">
-                              {{ item }}
+                           <a class="nav-link " href="#_{{item.link}}" role="button" aria-expanded="false">
+                              {{ item.title}}
                            </a>
                         </li>
                      {% endfor %}
