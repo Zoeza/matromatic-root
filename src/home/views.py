@@ -10,29 +10,13 @@ def home(request):
 
     context = {
         'page': {
-            'menu': {
-                "welcome": "Acceuil",
-                "about_us": "À propos de nous",
-                "services": "Services",
-                "projects": "Projets",
-                "contact": "Contact",
-            },
             'menu_list': [
-                'Acceuil',
-                'À propos de nous',
-                'Services',
-                'Projets',
-                'Contact'
-            ],
-
-            'menu_list_2': [
                 ('home', "Acceuil"),
                 ("about_us", "À propos de nous"),
                 ("services", "Services"),
                 ("projects", "Projets"),
                 ("contact", "Contact")
             ]
-
         }
     }
 
