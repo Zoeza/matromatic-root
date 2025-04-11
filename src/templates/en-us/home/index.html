@@ -58,8 +58,8 @@
       <!--Hero end-->
 
       <!--Service we offer start-->
-      <section id="_services" class="py-xl-9 py-5" data-cue="fadeIn">
-         <div class="container">
+     <section id="{{ page.services.id }}" class="{{ page.services.class }}" data-cue="{{ page.services.data_cue }}">
+   <div class="container">
       <div class="row">
          <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-12">
             <div class="text-center mb-xl-9 mb-5">
@@ -86,7 +86,8 @@
          {% endfor %}
       </div>
    </div>
-      </section>
+</section>
+
       <!--Service we offer end-->
 
       <!--Company overview start-->
