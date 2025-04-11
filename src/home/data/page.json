@@ -1,11 +1,4 @@
-{ "menu": {
-    "home": "Accueil",
-    "about_us": "À propos de nous",
-    "services": "Services",
-    "projects": "Projets",
-    "contact": "Contact"
-  },
-  "services": {
+{"services": {
     "subtitle": "Ce que nous faisons",
     "title": "Nous concevons des solutions robotiques sur mesure, combinant expertise en mécanique, électronique et informatique.",
     "cards": [
