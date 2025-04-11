@@ -235,6 +235,12 @@
                                <div class="d-flex flex-column gap-2">
                                   <div class="d-flex flex-column gap-4">
                                      <h4><a href="#!" class="text-reset">{{ project.title }}</a></h4>
+                                      <p>Nombre de clics : {{ project.click_count }}</p>
+                                        <form method="POST">
+                                           {% csrf_token %}
+                                           <input type="hidden" name="project_id" value="{{ project.id }}">
+                                           <button type="submit" class="btn btn-primary">Cliquez ici</button>
+                                        </form>
                                      <a  class="icon-link icon-link-hover" data-cue="zoomIn"  data-bs-toggle="modal" data-bs-target="#{{project.modal}}">
                                        Plus de Détails
                                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
