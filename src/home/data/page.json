@@ -1,10 +1,8 @@
 {
-  "services": {
+  "section": {
     "id": "services",
-    "class": "py-xl-9 py-5",
-    "data_cue": "fadeIn",
-    "subtitle": "Ce que nous faisons",
     "title": "Nous concevons des solutions robotiques sur mesure, combinant expertise en mécanique, électronique et informatique.",
+    "subtitle": "Ce que nous faisons",
     "cards": [
       {
         "title": "Etude , Conception & Realisation",
