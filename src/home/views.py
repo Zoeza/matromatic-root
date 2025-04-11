@@ -19,26 +19,11 @@ def home(request):
     except json.JSONDecodeError:
         raise Http404("Erreur de lecture JSON.")
 
-        # Initialiser les compteurs de clics pour chaque projet
-    for project_id in range(1, len(page_data['projects']['realizations']) + 1):
-        if f'clickCount_project_{project_id}' not in request.session:
-            request.session[f'clickCount_project_{project_id}'] = 0
+    context = {
+        'data': page_data  #
+    }
 
-        # Gérer le clic sur un projet
-        if request.method == 'POST' and 'project_id' in request.POST:
-            project_id = request.POST['project_id']
-            if f'clickCount_project_{project_id}' in request.session:
-                request.session[f'clickCount_project_{project_id}'] += 1
-                request.session.modified = True  # Assurer que la session soit modifiée
+    return render(request, url, context)
 
-        # Passer les données des projets avec les clics dans le contexte
-        context = {
-            'data': page_data,  # Passer les données JSON
-            'projects': [
-                {'id': project['id'], 'title': project['title'],
-                 'click_count': request.session.get(f'clickCount_project_{project["id"]}', 0)}
-                for project in page_data['projects']['realizations']
-            ]
-        }
 
-        return render(request, url, context)
+

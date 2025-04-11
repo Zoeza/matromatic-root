@@ -208,6 +208,43 @@
       </section>
       <!-- Skills end-->
        <!-- Projects start-->
+<section id="_projects" class="py-xl-9 py-5 bg-gray-900">
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-8 offset-lg-2 col-12">
+            <div class="text-center mb-xl-7 mb-5">
+               <small class="text-uppercase ls-md fw-semibold text-primary">{{ data.projects.subtitle }}</small>
+               <h2 class="my-3 text-white-stable">{{ data.projects.title }}</h2>
+               <p class="mb-0 text-body">{{ data.projects.description | safe }}</p>
+            </div>
+         </div>
+      </div>
+      <div class="swiper-container swiper" id="swiper-1">
+         <div class="swiper-wrapper pb-lg-8 pb-6 pt-1">
+            {% for project in projects %}
+            <div class="swiper-slide" data-cue="zoomIn">
+               <div class="card border-0 h-100 card-lift">
+                  <a href="#!" class="project-link">
+                     <img src="{% static project.img %}" alt="about" class="img-fluid rounded-top-3" />
+                  </a>
+                  <div class="card-body">
+                     <div class="d-flex flex-column gap-2">
+                        <h4><a href="#!" class="text-reset">{{ project.title }}</a></h4>
+                        <p>Nombre de clics : {{ project.click_count }}</p>
+                        <form method="POST">
+                           {% csrf_token %}
+                           <input type="hidden" name="project_id" value="{{ project.id }}">
+                           <button type="submit" class="btn btn-primary">Cliquez ici</button>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            {% endfor %}
+         </div>
+      </div>
+   </div>
+</section>
 
       <!-- Projects end-->
 
