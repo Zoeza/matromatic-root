@@ -1,0 +1,31 @@
+{
+  "services": {
+    "id": "services",
+    "class": "py-xl-9 py-5",
+    "data_cue": "fadeIn",
+    "subtitle": "Ce que nous faisons",
+    "title": "Nous concevons des solutions robotiques sur mesure, combinant expertise en mécanique, électronique et informatique.",
+    "cards": [
+      {
+        "title": "Etude , Conception & Realisation",
+        "description": "Besoin de solution sur mesure? Matromatic conçoit et réalise des machines ou compartiments adaptés à vos besoins spécifiques, garantissant une efficacité maximale.",
+        "image": "home/assets/img/service/etude-con.jpg"
+      },
+      {
+        "title": "Renovation de machines",
+        "description": "Offrez une seconde vie à vos équipements obsolètes avec notre service de rénovation de machines. Matromatic repousse les limites pour prolonger la durée de vie de vos investissements.",
+        "image": "home/assets/img/service/renovation-machine.jpg"
+      },
+      {
+        "title": "Informatique & systemes embarqués",
+        "description": "Surmontez les défis technologiques avec nos solutions personnalisées qui intègrent l'informatique, l'électronique et la mécanique. Grâce à nos interfaces intuitives et sur mesure, ayez un contrôle total sur votre industrie en temps réel.",
+        "image": "home/assets/img/service/es.jpg"
+      },
+      {
+        "title": "Expertise technique",
+        "description": "Nous comprenons que chaque défi est unique. C'est pourquoi nous offrons un service d'expertise technique personnalisée, mettant à votre disposition une équipe de professionnels qualifiés pour répondre spécifiquement à vos besoins.",
+        "image": "home/assets/img/service/expertise-tech.jpg"
+      }
+    ]
+  }
+}
