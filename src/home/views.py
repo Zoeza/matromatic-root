@@ -26,16 +26,16 @@ def home(request):
             ],
 
             'menu_list_2': [{
-                "home": "Acceuil",
-                "about_us": "À propos de nous",
-                "services": "Services",
-                "projects": "Projets",
-                "contact": "Contact",
+                'data': {
+                    "home": "Acceuil",
+                    "about_us": "À propos de nous",
+                    "services": "Services",
+                    "projects": "Projets",
+                    "contact": "Contact",
+                },
             }
             ]
-            
-            
-            
+
         }
     }
 
