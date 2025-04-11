@@ -137,18 +137,17 @@
                                {% endfor %}
                                  </div>
                               </div>
-                              {% for col in data.about.gallery.rows %}
-                                <div class="{{ col.col_class }}">
-                                  {% for block in col.blocks %}
-                                    <div class="rounded-3 card-lift {{ block.class }}" style="
-                                      background-image: url({% static block.image %});
-                                      background-repeat: no-repeat;
-                                      background-size: cover;
-                                      {{ block.style }}">
+                              <div class="{{ data.about.gallery.container_class }}">
+                                <div class="row g-4">
+                                  {% for col in data.about.gallery.rows %}
+                                    <div class="{{ col.col_class }}">
+                                      {% for block in col.blocks %}
+                                        <div class="{{ block.class }}" style="background-image: url({% static block.image %}); {{ block.style }}"></div>
+                                      {% endfor %}
                                     </div>
                                   {% endfor %}
                                 </div>
-                              {% endfor %}
+                              </div>
 
                            </div>
                         </div>
