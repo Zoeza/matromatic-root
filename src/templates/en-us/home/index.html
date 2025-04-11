@@ -30,7 +30,7 @@
    <link rel="stylesheet" href="{% static 'home/assets/libs/scrollcue/scrollCue.css' %}" />
 
    <!-- Box icons -->
-<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
    <!-- Theme CSS -->
    <link rel="stylesheet" href="{% static 'home/assets/css/theme.min.css' %}">
@@ -83,21 +83,14 @@
                <!-- Navbar Links -->
                <div class="offcanvas-body pt-0 align-items-center">
                   <ul class="navbar-nav mx-auto align-items-lg-center">
+                     {% for element in page.menu %}
                      <li class="nav-item ">
-                        <a class="nav-link " href="#" role="button" aria-expanded="false">Acceuil</a>
+                        <a class="nav-link " href="#" role="button" aria-expanded="false">
+                           {{ element }}
+                        </a>
                      </li>
-                     <li class="nav-item ">
-                        <a class="nav-link " href="#about" role="button" aria-expanded="false">À propos de nous</a>
-                     </li>
-                     <li class="nav-item ">
-                        <a class="nav-link "href="#services" role="button" aria-expanded="false">Services</a>
-                     </li>
-                     <li class="nav-item ">
-                        <a class="nav-link "href="#projets" role="button" aria-expanded="false">Projets</a>
-                     </li>
-                      <li class="nav-item ">
-                         <a class="nav-link " href="#contact" role="button"  aria-expanded="false">Contact</a>
-                     </li>
+                     {% endfor %}
+
                   </ul>
 
                </div>
@@ -702,101 +695,100 @@
    </div>
 
 
-    <!-- Modals-->
-      <!-- Electronic Model-->
-      <div class="modal fade" id="electronicModalCenter" tabindex="-1" aria-labelledby="electronicModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="electronic_ModalCenter">Electronique</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal"
-                aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-             <p>Nous concevons et réalisons des systèmes électroniques embarqués sur mesure.</p>
+   <!-- Modals-->
+   <!-- Electronic Model-->
+   <div class="modal fade" id="electronicModalCenter" tabindex="-1" aria-labelledby="electronicModalLabel"
+     aria-hidden="true">
+     <div class="modal-dialog modal-dialog-centered">
+       <div class="modal-content">
+         <div class="modal-header">
+           <h1 class="modal-title fs-5" id="electronic_ModalCenter">Electronique</h1>
+           <button type="button" class="btn-close" data-bs-dismiss="modal"
+             aria-label="Close"></button>
+         </div>
+         <div class="modal-body">
+          <p>Nous concevons et réalisons des systèmes électroniques embarqués sur mesure.</p>
+           <ul>
+             <li>Conception de circuits imprimés (PCB)</li>
+             <li>Programmation de microcontrôleurs (ARM, AVR, ESP32, etc.)</li>
+             <li>Prototypage rapide et tests fonctionnels</li>
+             <li>Maîtrise des normes EMC et sécurité</li>
+           </ul>
+           <p><strong>Niveau technologique :</strong> Intégration de solutions IoT, communication sans fil (LoRa, Zigbee, GSM), capteurs intelligents.</p>
+         </div>
+       </div>
+     </div>
+   </div>
+    <!-- computer science Model-->
+   <div class="modal fade" id="computerSModalCenter" tabindex="-1" aria-labelledby="mechanicalModalLabel"
+     aria-hidden="true">
+     <div class="modal-dialog modal-dialog-centered">
+       <div class="modal-content">
+         <div class="modal-header">
+           <h1 class="modal-title fs-5" id="computerS_ModalCenter">Informatique</h1>
+           <button type="button" class="btn-close" data-bs-dismiss="modal"
+             aria-label="Close"></button>
+         </div>
+         <div class="modal-body">
+            <p>Nous développons des logiciels sur mesure adaptés à vos besoins industriels et scientifiques.</p>
+            <ul>
+             <li>Développement d'applications web (Django, React, API REST)</li>
+             <li>Systèmes embarqués Linux (Raspberry Pi, Yocto, etc.)</li>
+             <li>Automatisation, scripts Python/Bash</li>
+             <li>Traitement de données, visualisation, IA</li>
+           </ul>
+           <p><strong>Niveau technologique :</strong> Architecture microservices, edge computing, DevOps, intégration cloud (AWS, Azure).</p>
+         </div>
+       </div>
+     </div>
+   </div>
+   <!-- Mechanical Model-->
+   <div class="modal fade" id="mechanicalModalCenter" tabindex="-1" aria-labelledby="mechanicalModalLabel"
+     aria-hidden="true">
+     <div class="modal-dialog modal-dialog-centered">
+       <div class="modal-content">
+         <div class="modal-header">
+           <h1 class="modal-title fs-5" id="mechanical_ModalCenter">Mecanique</h1>
+           <button type="button" class="btn-close" data-bs-dismiss="modal"
+             aria-label="Close"></button>
+         </div>
+         <div class="modal-body">
+           <ul>
+             <li>CAO (SolidWorks, Fusion 360)</li>
+             <li>Mécatronique et actionneurs (servo, moteurs pas-à-pas, etc.)</li>
+             <li>Impression 3D et prototypage rapide</li>
+             <li>Analyse des contraintes et cinématique</li>
+           </ul>
+           <p><strong>Niveau technologique :</strong> Systèmes modulaires, structures mécaniques optimisées, intégration multi-domaines.</p>
+         </div>
+       </div>
+     </div>
+   </div>
+   <!-- Robotic Model-->
+   <div class="modal fade" id="roboticModalCenter" tabindex="-1" aria-labelledby="mechanicalModalLabel"
+     aria-hidden="true">
+     <div class="modal-dialog modal-dialog-centered">
+       <div class="modal-content">
+         <div class="modal-header">
+           <h1 class="modal-title fs-5" id="robotic_ModalCenter">Robotique</h1>
+           <button type="button" class="btn-close" data-bs-dismiss="modal"
+             aria-label="Close"></button>
+         </div>
+         <div class="modal-body">
+           <p>Nous développons des robots intelligents pour différents domaines : agriculture, logistique, éducation, etc.</p>
               <ul>
-                <li>Conception de circuits imprimés (PCB)</li>
-                <li>Programmation de microcontrôleurs (ARM, AVR, ESP32, etc.)</li>
-                <li>Prototypage rapide et tests fonctionnels</li>
-                <li>Maîtrise des normes EMC et sécurité</li>
+                <li>Navigation autonome et détection d'obstacles</li>
+                <li>Contrôle PID, SLAM, ROS</li>
+                <li>Communication I2C/SPI/UART entre cartes</li>
+                <li>Conception complète de robots mobiles ou fixes</li>
               </ul>
-              <p><strong>Niveau technologique :</strong> Intégration de solutions IoT, communication sans fil (LoRa, Zigbee, GSM), capteurs intelligents.</p>
+              <p><strong>Niveau technologique :</strong> Capteurs intelligents, robotique collaborative, systèmes cyber-physiques (CPS).</p>
             </div>
-          </div>
-        </div>
-      </div>
-       <!-- computer science Model-->
-      <div class="modal fade" id="computerSModalCenter" tabindex="-1" aria-labelledby="mechanicalModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="computerS_ModalCenter">Informatique</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal"
-                aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-               <p>Nous développons des logiciels sur mesure adaptés à vos besoins industriels et scientifiques.</p>
-               <ul>
-                <li>Développement d'applications web (Django, React, API REST)</li>
-                <li>Systèmes embarqués Linux (Raspberry Pi, Yocto, etc.)</li>
-                <li>Automatisation, scripts Python/Bash</li>
-                <li>Traitement de données, visualisation, IA</li>
-              </ul>
-              <p><strong>Niveau technologique :</strong> Architecture microservices, edge computing, DevOps, intégration cloud (AWS, Azure).</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Mechanical Model-->
-      <div class="modal fade" id="mechanicalModalCenter" tabindex="-1" aria-labelledby="mechanicalModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="mechanical_ModalCenter">Mecanique</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal"
-                aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <ul>
-                <li>CAO (SolidWorks, Fusion 360)</li>
-                <li>Mécatronique et actionneurs (servo, moteurs pas-à-pas, etc.)</li>
-                <li>Impression 3D et prototypage rapide</li>
-                <li>Analyse des contraintes et cinématique</li>
-              </ul>
-              <p><strong>Niveau technologique :</strong> Systèmes modulaires, structures mécaniques optimisées, intégration multi-domaines.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Robotic Model-->
-      <div class="modal fade" id="roboticModalCenter" tabindex="-1" aria-labelledby="mechanicalModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="robotic_ModalCenter">Robotique</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal"
-                aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <p>Nous développons des robots intelligents pour différents domaines : agriculture, logistique, éducation, etc.</p>
-                 <ul>
-                   <li>Navigation autonome et détection d'obstacles</li>
-                   <li>Contrôle PID, SLAM, ROS</li>
-                   <li>Communication I2C/SPI/UART entre cartes</li>
-                   <li>Conception complète de robots mobiles ou fixes</li>
-                 </ul>
-                 <p><strong>Niveau technologique :</strong> Capteurs intelligents, robotique collaborative, systèmes cyber-physiques (CPS).</p>
-               </div>
-            </div>
-          </div>
-        </div>
-      </div>
+         </div>
+       </div>
+     </div>
+   <!-- Modals-->
 
-      <!-- Modals-->
    <!-- Libs JS -->
    <script src="{% static 'home/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
    <script src="{% static 'home/assets/libs/simplebar/dist/simplebar.min.js' %}"></script>

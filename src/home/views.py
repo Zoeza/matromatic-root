@@ -8,4 +8,22 @@ def home(request):
     direction = request.session.get('language')
     url = direction + "/home/index.html"
 
-    return render(request, url, {})
+    # Acceuil
+    # À propos de nous
+    # Services
+    # Projets
+    # Contact
+
+    context = {
+        'page': {
+            'menu': {
+                "welcome": "Acceuil",
+                "about_us": "À propos de nous",
+                "services": "Services",
+                "projects": "Projets",
+                "contact": "Contact",
+            }
+        }
+    }
+
+    return render(request, url, context)
