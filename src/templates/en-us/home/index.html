@@ -58,36 +58,38 @@
       <!--Hero end-->
 
       <!--Service we offer start-->
-      <section id="{{ data.services.id }}" class="{{ data.services.class }}" data-cue="{{ data.services.data_cue }}">
-          <div class="container">
-      <div class="row">
-         <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-12">
+      <section id="services" class="py-xl-9 py-5" data-cue="fadeIn">
+         <div class="container">
+            <div class="row">
+               <div class="row">
+                  <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-12">
             <div class="text-center mb-xl-9 mb-5">
-               <small class="text-uppercase ls-md fw-semibold text-primary">{{ data.services.subtitle }}</small>
-               <h2 class="mb-0 mt-3 px-xxl-8">{{ data.services.title }}</h2>
+               <small class="text-uppercase ls-md fw-semibold text-primary">{{ page.services.subtitle }}</small>
+               <h2 class="mb-0 mt-3 px-xxl-8">{{ page.services.title }}</h2>
             </div>
          </div>
-      </div>
-      <div class="row">
-         {% for card in data.services.cards %}
-         <div class="col-md-6">
-            <div class="card-grid" data-cue="zoomIn">
-               <div class="card-grid-inner">
-                  <h3 class="card-grid-heading">{{ card.title }}</h3>
-                  <div class="card-grid-text">
-                     <p class="mb-0">{{ card.description }}</p>
+               </div>
+               <div class="row">
+                  {% for card in page.services.cards %}
+                  <div class="col-md-6">
+                     <div class="card-grid" data-cue="zoomIn">
+                        <div class="card-grid-inner">
+                           <h3 class="card-grid-heading">{{ card.title }}</h3>
+                           <div class="card-grid-text">
+                              <p class="mb-0">{{ card.description }}</p>
+                           </div>
+                        </div>
+                        <div class="card-grid-image">
+                           <img src="{% static card.image %}" alt="service" class="rounded-3 img-fluid" />
+                        </div>
+                     </div>
                   </div>
-               </div>
-               <div class="card-grid-image">
-                  <img src="{% static card.image %}" alt="service" class="rounded-3 img-fluid" />
+                  {% endfor %}
                </div>
             </div>
          </div>
-         {% endfor %}
-      </div>
-   </div>
       </section>
-        <!--Service we offer end-->
+      <!--Service we offer end-->
 
       <!--Company overview start-->
       <section id="about" class="py-xl-9 py-5" data-cue="fadeIn">
