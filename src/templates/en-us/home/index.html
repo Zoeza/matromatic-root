@@ -126,17 +126,7 @@
                            aria-labelledby="pills-company-tab" tabindex="0">
                            <div class="row align-items-center gy-5">
                               {% for col in data.about.gallery.rows %}
-                                <div class="{{ col.col_class }}">
-                                  {% for block in col.blocks %}
-                                    <div class="rounded-3 card-lift {{ block.class }}" style="
-                                      background-image: url({% static block.image %});
-                                      background-repeat: no-repeat;
-                                      background-size: cover;
-                                      {{ block.style }}">
-                                    </div>
-                                  {% endfor %}
-                                </div>
-                              {% endfor %}
+                             
 
 
                            </div>
