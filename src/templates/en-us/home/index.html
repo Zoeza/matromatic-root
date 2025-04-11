@@ -127,14 +127,12 @@
                            <div class="row align-items-center gy-5">
                                <div class="col-xl-4 col-md-6 col-12">
                                  <div class="d-flex flex-column gap-4">
+                                    {% for block in data.about.description_blocks %}
                                     <div class="d-flex flex-column gap-2">
-                                       <h2>{{data.about.description_blocks.heading}}</h2>
-                                       <p class="mb-0">
-                                          Matromatic est une entreprise pionnière en robotique industrielle, alliant expertise en mécanique, électronique et informatique pour concevoir des solutions innovantes.
-                                         </p>
-                                       <p class="mb-0">
-                                        Nous développons des systèmes automatisés visant à optimiser la production et répondre aux défis industriels, avec pour mission d’accélérer la croissance en offrant des solutions durables et rentables.
-                                       </p>
+                                      <h2>{{ block.heading }}</h2>
+                                      {% for paragraph in block.paragraphs %}
+                                        <p class="mb-0">{{ paragraph }}</p>
+                                       {% endfor %}
                                     </div>
                                  </div>
                               </div>
