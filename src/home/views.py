@@ -10,23 +10,27 @@ def home(request):
         request.session['language'] = 'en-us'
     direction = request.session.get('language')
     url = direction + "/home/index.html"
-    json_path = os.path.join(os.path.dirname(__file__), 'data', 'page.json'
-    with open(json_path, 'r', encoding='utf-8') as file:
-        page_data = json.load(file)
+    json_path = os.path.join(os.path.dirname(__file__), 'data', 'page.json')
 
+    try:
+        with open(json_path, 'r', encoding='utf-8') as file:
+            page_data = json.load(file)
+    except FileNotFoundError:
+        raise Http404("Fichier JSON introuvable.")
+    except json.JSONDecodeError:
+        raise Http404("Erreur de lecture JSON.")
 
     context = {
         'page': {
             'menu_list': [
-                ('home', "Acceuil"),
-                ("about_us", "À propos de nous"),
-                ("services", "Services"),
-                ("projects", "Projets"),
-                ("contact", "Contact")
-            ],
-
+                ('home', "Accueil"),
+                ('about_us', "À propos de nous"),
+                ('services', "Services"),
+                ('projects', "Projets"),
+                ('contact', "Contact")
+            ]
         },
-        'data' : 'page_data',
+        'data': page_data  # 
     }
 
     return render(request, url, context)
