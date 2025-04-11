@@ -18,11 +18,11 @@ def home(request):
                 "contact": "Contact",
             },
             'menu_list': [{
-                'home': 'Acceuil',
-                'about_us': 'À propos de nous',
-                'services': 'Services',
-                'projets': 'Projets',
-                'contact': 'Contact'
+                "home": "Acceuil",
+                "about_us": "À propos de nous",
+                "services": "Services",
+                "projects": "Projets",
+                "contact": "Contact",
             }
             ]
         }
