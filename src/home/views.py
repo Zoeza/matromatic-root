@@ -2,9 +2,10 @@ from django.shortcuts import render
 import json
 import os
 from django.http import Http404
-
+from django.views.decorators.http import require_POST
 
 def home(request):
+    # Choix de langue
     if not request.session.get('language', None):
         request.session['language'] = 'en-us'
 
@@ -21,31 +22,33 @@ def home(request):
     except json.JSONDecodeError:
         raise Http404("Erreur de lecture JSON.")
 
-    # Gestion du clic sur un projet
-    if request.method == 'POST' and 'project_id' in request.POST:
-        project_id = request.POST['project_id']
+    # Récupérer les compteurs de clics stockés en session (ou initialiser)
+    click_counts = request.session.get("click_counts", {})
 
-        # Vérifie si le compteur existe pour ce projet
-        if f'clickCount_project_{project_id}' not in request.session:
-            request.session[f'clickCount_project_{project_id}'] = 0
+    # Injecter le compteur de clics dans chaque projet
+    for project in page_data.get("projects", {}).get("realizations", []):
+        project_id = str(project.get("id"))
+        project["click_count"] = click_counts.get(project_id, 0)
 
-        # Incrémente le compteur
-        request.session[f'clickCount_project_{project_id}'] += 1
-        request.session.modified = True  # Assurer que la session soit modifiée
-
-    # Passer les projets avec les clics dans le contexte
+    # Contexte envoyé au template
     context = {
         'data': page_data,
-        'projects': [
-            {
-                'id': project['id'],
-                'title': project['title'],
-                'img': project['img'],
-                'click_count': request.session.get(f'clickCount_project_{project["id"]}', 0),
-                'modal': project['modal']
-            }
-            for project in page_data.get('projects', {}).get('realizations', [])
-        ]
     }
 
     return render(request, url, context)
+
+
+@require_POST
+def increment_click(request):
+    project_id = request.POST.get("project_id")
+    if not project_id:
+        raise Http404("ID du projet manquant.")
+
+    # Lire les clics existants ou démarrer à 0
+    click_counts = request.session.get("click_counts", {})
+    click_counts[project_id] = click_counts.get(project_id, 0) + 1
+
+    # Sauvegarder dans la session
+    request.session["click_counts"] = click_counts
+
+    return redirect("home")  # Redirige vers la vue d’accueil
