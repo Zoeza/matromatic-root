@@ -227,20 +227,21 @@
                 <div class="swiper-wrapper pb-lg-8 pb-6 pt-1">
                    {% for project in data.projects.realizations %}
                       <div class="swiper-slide">
-    <div class="card">
-      <img src="{% static project.img %}" alt="{{ project.title }}">
-      <div class="card-body">
-        <h4>{{ project.title }}</h4>
-        <p>Nombre de clics : {{ project.click_count }}</p>
+                        <div class="card">
+                          <img src="{% static project.img %}" alt="{{ project.title }}">
+                          <div class="card-body">
+                            <h4>{{ project.title }}</h4>
+                            <p>Nombre de clics : {{ project.click_count }}</p>
 
-        <form method="POST" action="{% url 'increment_click' %}">
-          {% csrf_token %}
-          <input type="hidden" name="project_id" value="{{ project.id }}">
-          <button type="submit" class="btn btn-primary">Cliquez ici</button>
-        </form>
-      </div>
-    </div>
-  </div>
+                              <form action="{% url 'increment_click' %}" method="post" style="display:inline;">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="project_id" value="{{ project.id }}">
+                                    <button type="submit" class="btn btn-link">Cliquez ici</button>
+                              </form>
+
+                          </div>
+                        </div>
+                      </div>
                    {% endfor %}
 
 
@@ -506,8 +507,8 @@
    <!-- Project Modals start -->
    <!-- Modal Dynamique pour chaque projet -->
  <!-- Modal du projet -->
-    {% for project in data.projects.realizations %}
 
+    {% for project in data.projects.realizations %}
       <div class="modal fade" id="projectModal{{ project.id }}" tabindex="-1" aria-labelledby="modalLabel{{ project.id }}" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
@@ -521,15 +522,19 @@
             </div>
           </div>
         </div>
-     {% endfor %}
-{% if open_modal_id %}
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    var modal = new bootstrap.Modal(document.getElementById("projectModal{{ open_modal_id }}"));
-    modal.show();
-  });
-</script>
-{% endif %}
+      </div>
+    {% endfor %}
+
+
+    {% if open_modal_id %}
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var modal = new bootstrap.Modal(document.getElementById("projectModal{{ open_modal_id }}"));
+        modal.show();
+      });
+    </script>
+    {% endif %}
+
 
 
 
