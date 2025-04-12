@@ -233,11 +233,12 @@
                             <h4>{{ project.title }}</h4>
                             <p>Nombre de clics : {{ project.click_count }}</p>
 
-                              <form action="{% url 'increment_click' %}" method="post" style="display:inline;">
-                                    {% csrf_token %}
-                                    <input type="hidden" name="project_id" value="{{ project.id }}">
-                                    <button type="submit" class="btn btn-primary open-modal-btn">Cliquez ici</button>
-                              </form>
+                             <form action="{% url 'increment_click' %}" method="post" style="display:inline;">
+                              {% csrf_token %}
+                              <input type="hidden" name="project_id" value="{{ project.id }}">
+                              <button type="submit" class="btn btn-primary">Cliquez ici</button>
+                            </form>
+
 
                           </div>
                         </div>
@@ -508,39 +509,43 @@
  <!-- Modal du projet -->
 
 
+<div class="modal fade bd-example-modal-lg" id="selectedProjectsModal" tabindex="-1" role="dialog" aria-labelledby="modalLabelproject" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
 
-   <div class="modal fade"  id="projectModal-lg" tabindex="-1" role="dialog" aria-labelledby="modalLabelproject" aria-hidden="true">
-       <div class="modal-dialog modal-lg">
-           <div class="modal-content">
-
-              <div class="modal-header">
-                 <h5 class="modal-title" id="modalLabelprojects}">Liste des projets selectionnes</h5>
-                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
-              </div>
-
-               <div class="modal-body">
-                    {% for project in data.projects.realizations %}
-                      <div class="card">
-                          <img src="{% static project.img %}" alt="{{ project.title }}">
-                              <div class="card-body">
-                                <h4>{{ project.title }}</h4>
-                                <p>Nombre de clics : {{ project.click_count }}</p>
-                              </div>
-                      </div>
-                    {% endfor %}
-                </div>
-            </div>
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalLabelprojects">Liste des projets sélectionnés</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
       </div>
-   </div>
 
-    {% if open_modal_id %}
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var modal = new bootstrap.Modal(document.getElementById("projectModal{{ open_modal_id }}"));
-        modal.show();
-      });
-    </script>
-    {% endif %}
+      <div class="modal-body">
+        {% if selected_projects %}
+          {% for project in selected_projects %}
+            <div class="card mb-3">
+              <img src="{% static project.img %}" alt="{{ project.title }}" class="img-fluid">
+              <div class="card-body">
+                <h4>{{ project.title }}</h4>
+                <p>Nombre de clics : {{ project.click_count }}</p>
+              </div>
+            </div>
+          {% endfor %}
+        {% else %}
+          <p>Aucun projet sélectionné pour le moment.</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+   {% if show_modal %}
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var modal = new bootstrap.Modal(document.getElementById("selectedProjectsModal"));
+    modal.show();
+  });
+</script>
+{% endif %}
 
 
 

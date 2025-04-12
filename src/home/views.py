@@ -21,19 +21,25 @@ def home(request):
     except json.JSONDecodeError:
         raise Http404("Erreur de lecture JSON.")
 
-    # Compteurs
+    # Compteurs de clics
     click_counts = request.session.get("click_counts", {})
     for project in page_data.get("projects", {}).get("realizations", []):
         project_id = str(project.get("id"))
         project["click_count"] = click_counts.get(project_id, 0)
 
-    # Récupération du projet à ouvrir dans un modal
-    open_modal_id = request.GET.get("open_modal_id")
+    # Récupérer les projets sélectionnés
+    selected_ids = request.session.get("selected_projects", [])
+    selected_projects = [p for p in page_data["projects"]["realizations"] if str(p["id"]) in selected_ids]
+
+    # Déclencher le modal si nécessaire
+    show_modal = request.GET.get("show_modal") == "true"
 
     return render(request, url, {
         'data': page_data,
-        'open_modal_id': open_modal_id
+        'selected_projects': selected_projects,
+        'show_modal': show_modal,
     })
+
 
 
 @require_POST
@@ -42,9 +48,16 @@ def increment_click(request):
     if not project_id:
         raise Http404("ID du projet manquant.")
 
+    # Incrémenter le compteur
     click_counts = request.session.get("click_counts", {})
     click_counts[project_id] = click_counts.get(project_id, 0) + 1
     request.session["click_counts"] = click_counts
 
-    # On redirige vers la page d'accueil avec l’ID du projet cliqué
-    return redirect(f"/?open_modal_id={project_id}")
+    # Ajouter à la liste des projets sélectionnés
+    selected_projects = request.session.get("selected_projects", [])
+    if project_id not in selected_projects:
+        selected_projects.append(project_id)
+    request.session["selected_projects"] = selected_projects
+
+    return redirect("/?show_modal=true")
+
