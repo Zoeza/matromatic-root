@@ -87,4 +87,4 @@ def project_modal_content(request, action):
     page_data = request.GET.get("page_data")
 
     if action == 'main':
-        return render(request, url, {'page':page_data})
+        return render(request, url, {'page': request.session})
