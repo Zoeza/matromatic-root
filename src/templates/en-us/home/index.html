@@ -1,4 +1,6 @@
-{% extends "en-us/home/base.html" %} {% load static %} {% block body %}
+{% extends "en-us/home/base.html" %}
+{% load static %}
+{% block body %}
 <!-- Navbar -->
 <header>
     <nav class="navbar navbar-expand-lg transparent navbar-transparent navbar-dark">
@@ -439,7 +441,7 @@
             </div>
             <div class="modal-body" id="projectModalContent">
                 <div hx-target="#projectModalContent" hx-trigger="load delay:4000ms"
-                     hx-get="{% url 'project_modal_content' 'main' %}">
+                     hx-get="{% url 'project_modal_content' 'main' %}?page_data={{ data }}">
 
                 </div>
             </div>

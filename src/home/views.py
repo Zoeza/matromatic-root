@@ -31,18 +31,14 @@ def home(request):
     selected_ids = request.session.get("selected_projects", [])
     selected_projects = [p for p in page_data["projects"]["realizations"] if str(p["id"]) in selected_ids]
 
-    # Déclencher le modal si nécessaire
-    show_modal = request.GET.get("show_modal") == "true"
-
     return render(request, url, {
         'data': page_data,
-        'selected_projects': selected_projects,
-        'show_modal': show_modal,
+        'selected_projects': selected_projects
     })
 
 
 def increment_click(request):
-    project_id = request.GET.get("project_id")
+    project_id = request.GET.get("project_id", '')
     if not project_id:
         raise Http404("ID du projet manquant.")
 
@@ -61,7 +57,7 @@ def increment_click(request):
 
 
 def decrement_click(request):
-    project_id = request.GET.get("project_id")
+    project_id = request.GET.get("project_id", '')
     if not project_id:
         raise Http404("ID du projet manquant.")
 
@@ -88,5 +84,7 @@ def project_modal_content(request, action):
     direction = request.session['language']
     url = direction + "/home/partials/content.html"
 
+    page_data = request.GET.get("page_data")
+
     if action == 'main':
-        return render(request, url, {})
+        return render(request, url, {{'page':page_data})
