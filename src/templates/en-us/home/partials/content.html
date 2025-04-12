@@ -1,6 +1,7 @@
 {% load static %}
 
-{{ session.page.selected_projects }}
+{{ request.session.selected_projects }}
+
 {% if selected_projects %} {% for project in selected_projects %}
     <div class="swiper-slide">
         <div class="card mb-3">
