@@ -1,2 +1,17 @@
+{% load static %}
 
+{% if selected_projects %} {% for project in selected_projects %}
+    <div class="swiper-slide">
+        <div class="card mb-3">
+            <img src="{% static project.img %}" alt="{{ project.title }}" class="img-fluid rounded-top-3">
+            <div class="card-body">
+                <h4>{{ project.title }}</h4>
+                <p>Nombre de clics : {{ project.click_count }}</p>
+                <a href="{% url 'decrement_click' %}?project_id={{ project.id }}" class="btn btn-primary btn-sm"> Retirer</a>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+{% else %}
     <p>Aucun projet sélectionné pour le moment.</p>
+{% endif %}
