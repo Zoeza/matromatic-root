@@ -235,7 +235,9 @@
                             <form method="POST" action="{% url 'increment_click' %}">
                               {% csrf_token %}
                               <input type="hidden" name="project_id" value="{{ project.id }}">
-                              <button type="submit" class="btn btn-primary">Cliquez ici</button>
+                                <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#projectModal{{ project.id }}">
+                                    Cliquez ici
+                                </button>
                             </form>
                           </div>
                         </div>
@@ -501,5 +503,30 @@
          </div>
        </div>
      </div>
-   <!-- Modals-->
+   <!-- Modals end -->
+   <!-- Project Modals start -->
+   <!-- Modal Dynamique pour chaque projet -->
+   {% for project in data.projects.realizations %}
+        <div class="modal fade" id="projectModal{{ project.id }}" tabindex="-1" aria-labelledby="projectModalLabel{{ project.id }}"
+             aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="projectModalLabel{{ project.id }}">{{ project.title }}</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Affichage de l'image et du nombre de clics -->
+                        <img src="{% static project.img %}" alt="{{ project.title }}" class="img-fluid">
+                        <p><strong>Nombre de clics :</strong> {{ project.click_count }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+  {% endfor %}
+
+   <!-- Project Modals  end -->
+
+
+
   {% endblock %}

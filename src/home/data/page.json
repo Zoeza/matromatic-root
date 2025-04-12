@@ -137,7 +137,7 @@
     {  "id": 1,
       "img":"home/assets/img/projets/projet-01.jpg",
       "title": "Coffrage  glissant",
-      "modal": "coffrage_métallique"
+      "modal": "coffrage_métalliqueModalCenter"
     },
 
     {  "id": 2,
