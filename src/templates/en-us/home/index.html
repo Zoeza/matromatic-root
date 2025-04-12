@@ -228,7 +228,7 @@
                    {% for project in data.projects.realizations %}
                       <div class="swiper-slide">
                         <div class="card border-0 h-100 card-lif">
-                          <img src="{% static project.img %}" alt="{{ project.title }}">
+                          <img src="{% static project.img %}" alt="{{ project.title }}" class="img-fluid rounded-top-3">
                           <div class="card-body">
                             <h4>{{ project.title }}</h4>
                             <p>Nombre de clics : {{ project.click_count }}</p>
@@ -526,7 +526,7 @@
                       {% for project in selected_projects %}
                         <div class="swiper-slide">
                           <div class="card mb-3">
-                            <img src="{% static project.img %}" alt="{{ project.title }}" class="img-fluid">
+                            <img src="{% static project.img %}" alt="{{ project.title }}"  class="img-fluid rounded-top-3">
                             <div class="card-body">
                               <h4>{{ project.title }}</h4>
                               <p>Nombre de clics : {{ project.click_count }}</p>
