@@ -127,7 +127,16 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # settings.py
 
 # CSRF settings
-CSRF_COOKIE_SECURE = False  # En développement, tu laisses False, mais tu mets True en production (avec HTTPS)
-CSRF_COOKIE_HTTPONLY = True  # Le cookie est accessible uniquement par le serveur (plus sécurisé)
-SESSION_COOKIE_NAME = 'sessionid'  # Le nom du cookie de session
-SESSION_EXPIRE_AT_BROWSER_CLOSE = False  
+SESSION_COOKIE_NAME = 'sessionid'  # Nom du cookie pour la session
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False  # La session ne doit pas expirer à la fermeture du navigateur
+
+# En environnement de production, assure-toi que CSRF et SESSION_COOKIE sont bien sécurisés
+CSRF_COOKIE_SECURE = True  # Utiliser HTTPS pour CSRF en production
+SESSION_COOKIE_SECURE = True  # Utiliser HTTPS pour les cookies de session
+
+# Dans un environnement HTTPS, tu devrais également activer HttpOnly pour sécuriser les cookies
+CSRF_COOKIE_HTTPONLY = True
+SESSION_COOKIE_HTTPONLY = True
+
+# Pour permettre les cookies dans les environnements Apache2
+CSRF_TRUSTED_ORIGINS = ['https://www.matromatic.com']
