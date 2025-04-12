@@ -507,23 +507,31 @@
    <!-- Modal Dynamique pour chaque projet -->
  <!-- Modal du projet -->
 
-    {% for project in data.projects.realizations %}
-      <div class="modal fade" id="projectModal{{ project.id }}" tabindex="-1" aria-labelledby="modalLabel{{ project.id }}" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="modalLabel{{ project.id }}">{{ project.title }}</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
-            </div>
-            <div class="modal-body">
-              <img src="{% static project.img %}" alt="{{ project.title }}" class="img-fluid mb-3">
-              <p><strong>Nombre de clics :</strong> {{ project.click_count }}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    {% endfor %}
 
+
+   <div class="modal fade"  id="projectModal-lg" tabindex="-1" role="dialog" aria-labelledby="modalLabelproject" aria-hidden="true">
+       <div class="modal-dialog modal-lg">
+           <div class="modal-content">
+
+              <div class="modal-header">
+                 <h5 class="modal-title" id="modalLabelprojects}">Liste des projets selectionnes</h5>
+                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+              </div>
+
+               <div class="modal-body">
+                    {% for project in data.projects.realizations %}
+                      <div class="card">
+                          <img src="{% static project.img %}" alt="{{ project.title }}">
+                              <div class="card-body">
+                                <h4>{{ project.title }}</h4>
+                                <p>Nombre de clics : {{ project.click_count }}</p>
+                              </div>
+                      </div>
+                    {% endfor %}
+                </div>
+            </div>
+      </div>
+   </div>
 
     {% if open_modal_id %}
     <script>
