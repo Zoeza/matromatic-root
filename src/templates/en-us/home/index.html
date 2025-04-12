@@ -236,14 +236,13 @@
                               <form action="{% url 'increment_click' %}" method="post" style="display:inline;">
                                     {% csrf_token %}
                                     <input type="hidden" name="project_id" value="{{ project.id }}">
-                                    <button type="submit" class="btn btn-link">Cliquez ici</button>
+                                    <button type="submit" class="btn btn-primary open-modal-btn">Cliquez ici</button>
                               </form>
 
                           </div>
                         </div>
                       </div>
                    {% endfor %}
-
 
                 </div>
                <!-- Add Pagination -->
