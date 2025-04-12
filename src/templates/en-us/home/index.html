@@ -509,7 +509,7 @@
  <!-- Modal du projet -->
 
 
-<div class="modal fade bd-example-modal-lg" id="selectedProjectsModal" tabindex="-1" role="dialog" aria-labelledby="modalLabelproject" aria-hidden="true">
+ <div class="modal fade bd-example-modal-lg" id="selectedProjectsModal" tabindex="-1" role="dialog" aria-labelledby="modalLabelproject" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
 
@@ -519,19 +519,26 @@
       </div>
 
       <div class="modal-body">
-        {% if selected_projects %}
-          {% for project in selected_projects %}
-            <div class="card mb-3">
-              <img src="{% static project.img %}" alt="{{ project.title }}" class="img-fluid">
-              <div class="card-body">
-                <h4>{{ project.title }}</h4>
-                <p>Nombre de clics : {{ project.click_count }}</p>
-              </div>
-            </div>
-          {% endfor %}
-        {% else %}
-          <p>Aucun projet sélectionné pour le moment.</p>
-        {% endif %}
+          <div class="swiper-container "  data-pagination-type="" data-speed="400"
+               data-space-between="100" data-pagination="false" data-navigation="true" data-autoplay="true"
+               data-autoplay-delay="3000"
+               data-breakpoints='{"480": {"slidesPerView": 1}, "768": {"slidesPerView": 1}, "1024": {"slidesPerView": 2}, "1200": {"slidesPerView": 3}}'>
+                <div class=" pb-lg-8 pb-6 pt-1">
+                    {% if selected_projects %}
+                      {% for project in selected_projects %}
+                        <div class="card mb-3">
+                          <img src="{% static project.img %}" alt="{{ project.title }}" class="img-fluid">
+                          <div class="card-body">
+                            <h4>{{ project.title }}</h4>
+                            <p>Nombre de clics : {{ project.click_count }}</p>
+                          </div>
+                        </div>
+                      {% endfor %}
+                    {% else %}
+                      <p>Aucun projet sélectionné pour le moment.</p>
+                    {% endif %}
+                </div>
+          </div>
       </div>
     </div>
   </div>
