@@ -4,7 +4,7 @@ import os
 from django.http import Http404
 
 
-def home_def(request):
+def home(request):
     if not request.session.get('language', None):
         request.session['language'] = 'en-us'
 
