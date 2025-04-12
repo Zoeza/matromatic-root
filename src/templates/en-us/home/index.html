@@ -208,44 +208,66 @@
       </section>
       <!-- Skills end-->
        <!-- Projects start-->
-<section id="_projects" class="py-xl-9 py-5 bg-gray-900">
-   <div class="container">
-      <div class="row">
-         <div class="col-lg-8 offset-lg-2 col-12">
-            <div class="text-center mb-xl-7 mb-5">
-               <small class="text-uppercase ls-md fw-semibold text-primary">{{ data.projects.subtitle }}</small>
-               <h2 class="my-3 text-white-stable">{{ data.projects.title }}</h2>
-               <p class="mb-0 text-body">{{ data.projects.description | safe }}</p>
-            </div>
-         </div>
-      </div>
-      <div class="swiper-container swiper" id="swiper-1">
-         <div class="swiper-wrapper pb-lg-8 pb-6 pt-1">
-            {% for project in projects %}
-            <div class="swiper-slide" data-cue="zoomIn">
-               <div class="card border-0 h-100 card-lift">
-                  <a href="#!" class="project-link">
-                     <img src="{% static project.img %}" alt="about" class="img-fluid rounded-top-3" />
-                  </a>
-                  <div class="card-body">
-                     <div class="d-flex flex-column gap-2">
-                        <h4><a href="#!" class="text-reset">{{ project.title }}</a></h4>
-                        <p>Nombre de clics : {{ project.click_count }}</p>
-                        <form method="POST">
-                           {% csrf_token %}
-                           <input type="hidden" name="project_id" value="{{ project.id }}">
-                           <button type="submit" class="btn btn-primary">Cliquez ici</button>
-                        </form>
-                     </div>
+
+      <section section id="_projects" class="py-xl-9 py-5 bg-gray-900">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-8 offset-lg-2 col-12">
+                  <div class="text-center mb-xl-7 mb-5">
+                     <small class="text-uppercase ls-md fw-semibold text-primary"> {{ data.projects.subtitle }}</small>
+                     <h2 class="my-3 text-white-stable">{{ data.projects.title }}</h2>
+                     <p class="mb-0 text-body"> {{ data.projects.description }}</p>
                   </div>
                </div>
             </div>
-            {% endfor %}
-         </div>
-      </div>
-   </div>
-</section>
+            <div class="swiper-container swiper" id="swiper-1" data-pagination-type="" data-speed="400"
+               data-space-between="100" data-pagination="false" data-navigation="true" data-autoplay="true"
+               data-autoplay-delay="3000"
+               data-breakpoints='{"480": {"slidesPerView": 1}, "768": {"slidesPerView": 1}, "1024": {"slidesPerView": 2}, "1200": {"slidesPerView": 3}}'>
+               <div class="swiper-wrapper pb-lg-8 pb-6 pt-1">
+                   {% for project in data.projects.realizations %}
+                      <div class="swiper-slide" data-cue="zoomIn">
+                         <div class="card border-0 h-100 card-lift">
+                            <a href="#!">
+                                <img src="{% static project.img %}" alt="about" class="img-fluid rounded-top-3" />
+                            </a>
+                            <div class="card-body">
+                               <div class="d-flex flex-column gap-2">
+                                  <div class="d-flex flex-column gap-4">
+                                     <h4><a href="#!" class="text-reset">{{ project.title }}</a></h4>
+                                      <p>Nombre de clics : {{ project.click_count }}</p>
+                                        <form method="POST">
+                                           {% csrf_token %}
+                                           <input type="hidden" name="project_id" value="{{ project.id }}">
+                                           <button type="submit" class="btn btn-primary">Cliquez ici</button>
+                                        </form>
+                                     <a  class="icon-link icon-link-hover" data-cue="zoomIn"  data-bs-toggle="modal" data-bs-target="#{{project.modal}}">
+                                       Plus de Détails
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
+                                           class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                           <path fill-rule="evenodd"
+                                              d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z">
+                                           </path>
+                                        </svg>
+                                     </a>
+                                  </div>
+                               </div>
+                            </div>
+                         </div>
+                      </div>
+                   {% endfor %}
 
+               </div>
+               <!-- Add Pagination -->
+               <div class="swiper-pagination"></div>
+               <!-- Add Navigation -->
+               <div class="swiper-navigation position-absolute bottom-0 mb-5 start-lg-50">
+                  <div class="swiper-button-prev me-7"></div>
+                  <div class="swiper-button-next ms-7"></div>
+               </div>
+            </div>
+         </div>
+      </section>
       <!-- Projects end-->
 
      <!--Form section start-->
