@@ -41,10 +41,8 @@ def home(request):
     })
 
 
-
-@require_POST
 def increment_click(request):
-    project_id = request.POST.get("project_id")
+    project_id = request.GET.get("project_id")
     if not project_id:
         raise Http404("ID du projet manquant.")
 
@@ -62,9 +60,8 @@ def increment_click(request):
     return redirect("/?show_modal=true")
 
 
-@require_POST
 def decrement_click(request):
-    project_id = request.POST.get("project_id")
+    project_id = request.GEt.get("project_id")
     if not project_id:
         raise Http404("ID du projet manquant.")
 
@@ -85,5 +82,3 @@ def decrement_click(request):
     request.session["selected_projects"] = selected_projects
 
     return redirect("/?show_modal=true")
-
-
