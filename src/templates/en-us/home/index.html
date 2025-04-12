@@ -226,7 +226,7 @@
                data-breakpoints='{"480": {"slidesPerView": 1}, "768": {"slidesPerView": 1}, "1024": {"slidesPerView": 2}, "1200": {"slidesPerView": 3}}'>
                 <div class="swiper-wrapper pb-lg-8 pb-6 pt-1">
                    {% for project in data.projects.realizations %}
-  <div class="swiper-slide">
+                      <div class="swiper-slide">
     <div class="card">
       <img src="{% static project.img %}" alt="{{ project.title }}">
       <div class="card-body">
@@ -241,23 +241,7 @@
       </div>
     </div>
   </div>
-
-  <!-- Modal du projet -->
-  <div class="modal fade" id="projectModal{{ project.id }}" tabindex="-1" aria-labelledby="modalLabel{{ project.id }}" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="modalLabel{{ project.id }}">{{ project.title }}</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
-        </div>
-        <div class="modal-body">
-          <img src="{% static project.img %}" alt="{{ project.title }}" class="img-fluid mb-3">
-          <p><strong>Nombre de clics :</strong> {{ project.click_count }}</p>
-        </div>
-      </div>
-    </div>
-  </div>
-{% endfor %}
+                   {% endfor %}
 
 
                 </div>
@@ -521,7 +505,23 @@
    <!-- Modals end -->
    <!-- Project Modals start -->
    <!-- Modal Dynamique pour chaque projet -->
+ <!-- Modal du projet -->
+    {% for project in data.projects.realizations %}
 
+      <div class="modal fade" id="projectModal{{ project.id }}" tabindex="-1" aria-labelledby="modalLabel{{ project.id }}" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalLabel{{ project.id }}">{{ project.title }}</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+            </div>
+            <div class="modal-body">
+              <img src="{% static project.img %}" alt="{{ project.title }}" class="img-fluid mb-3">
+              <p><strong>Nombre de clics :</strong> {{ project.click_count }}</p>
+            </div>
+          </div>
+        </div>
+     {% enfor %}
 {% if open_modal_id %}
 <script>
   document.addEventListener("DOMContentLoaded", function () {
