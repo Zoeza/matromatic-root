@@ -82,3 +82,11 @@ def decrement_click(request):
     request.session["selected_projects"] = selected_projects
 
     return redirect("/?show_modal=true")
+
+
+def project_modal_content(request, action):
+    direction = request.session['language']
+    url = direction + "/home/partials/content.html"
+
+    if action == 'main':
+        return render(request, url, {})
