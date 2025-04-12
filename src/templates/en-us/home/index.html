@@ -226,23 +226,39 @@
                data-breakpoints='{"480": {"slidesPerView": 1}, "768": {"slidesPerView": 1}, "1024": {"slidesPerView": 2}, "1200": {"slidesPerView": 3}}'>
                 <div class="swiper-wrapper pb-lg-8 pb-6 pt-1">
                    {% for project in data.projects.realizations %}
-                      <div class="swiper-slide">
-                        <div class="card">
-                          <img src="{% static project.img %}" alt="{{ project.title }}">
-                          <div class="card-body">
-                            <h4>{{ project.title }}</h4>
-                            <p>Nombre de clics : {{ project.click_count }}</p>
-                            <form method="POST" action="{% url 'increment_click' %}">
-                              {% csrf_token %}
-                              <input type="hidden" name="project_id" value="{{ project.id }}">
-                                <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#projectModal{{ project.id }}">
-                                    Cliquez ici
-                                </button>
-                            </form>
-                          </div>
-                        </div>
-                      </div>
-                    {% endfor %}
+  <div class="swiper-slide">
+    <div class="card">
+      <img src="{% static project.img %}" alt="{{ project.title }}">
+      <div class="card-body">
+        <h4>{{ project.title }}</h4>
+        <p>Nombre de clics : {{ project.click_count }}</p>
+
+        <form method="POST" action="{% url 'increment_click' %}">
+          {% csrf_token %}
+          <input type="hidden" name="project_id" value="{{ project.id }}">
+          <button type="submit" class="btn btn-primary">Cliquez ici</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal du projet -->
+  <div class="modal fade" id="projectModal{{ project.id }}" tabindex="-1" aria-labelledby="modalLabel{{ project.id }}" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalLabel{{ project.id }}">{{ project.title }}</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+        </div>
+        <div class="modal-body">
+          <img src="{% static project.img %}" alt="{{ project.title }}" class="img-fluid mb-3">
+          <p><strong>Nombre de clics :</strong> {{ project.click_count }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endfor %}
+
 
                 </div>
                <!-- Add Pagination -->
@@ -505,31 +521,16 @@
    <!-- Modals end -->
    <!-- Project Modals start -->
    <!-- Modal Dynamique pour chaque projet -->
- {% for project in data.projects.realizations %}
-  <div class="modal fade" id="projectModal{{ project.id }}" tabindex="-1" aria-labelledby="modalLabel{{ project.id }}" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="modalLabel{{ project.id }}">{{ project.title }}</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
-        </div>
-        <div class="modal-body text-center">
-          <img src="{% static project.img %}" class="img-fluid mb-3" alt="{{ project.title }}">
-          <p>Nombre de clics : {{ project.click_count }}</p>
-        </div>
-      </div>
-    </div>
-  </div>
-{% endfor %}
 
 {% if open_modal_id %}
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    var myModal = new bootstrap.Modal(document.getElementById("projectModal{{ open_modal_id }}"));
-    myModal.show();
+    var modal = new bootstrap.Modal(document.getElementById("projectModal{{ open_modal_id }}"));
+    modal.show();
   });
 </script>
 {% endif %}
+
 
 
 
