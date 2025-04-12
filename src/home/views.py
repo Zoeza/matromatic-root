@@ -61,7 +61,7 @@ def increment_click(request):
 
 
 def decrement_click(request):
-    project_id = request.GEt.get("project_id")
+    project_id = request.GET.get("project_id")
     if not project_id:
         raise Http404("ID du projet manquant.")
 
