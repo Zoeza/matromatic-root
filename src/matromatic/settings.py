@@ -129,3 +129,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # CSRF settings
 CSRF_COOKIE_SECURE = False  # En développement, tu laisses False, mais tu mets True en production (avec HTTPS)
 CSRF_COOKIE_HTTPONLY = True  # Le cookie est accessible uniquement par le serveur (plus sécurisé)
+SESSION_COOKIE_NAME = 'sessionid'  # Le nom du cookie de session
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False  
