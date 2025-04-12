@@ -61,3 +61,29 @@ def increment_click(request):
 
     return redirect("/?show_modal=true")
 
+
+@require_POST
+def decrement_click(request):
+    project_id = request.POST.get("project_id")
+    if not project_id:
+        raise Http404("ID du projet manquant.")
+
+    click_counts = request.session.get("click_counts", {})
+    selected_projects = request.session.get("selected_projects", [])
+
+    current_count = click_counts.get(project_id, 0)
+
+    if current_count > 1:
+        click_counts[project_id] = current_count - 1
+    else:
+        # Si 1 ou moins : suppression du projet de la sélection
+        click_counts.pop(project_id, None)
+        if project_id in selected_projects:
+            selected_projects.remove(project_id)
+
+    request.session["click_counts"] = click_counts
+    request.session["selected_projects"] = selected_projects
+
+    return redirect("/?show_modal=true")
+
+
