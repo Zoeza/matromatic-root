@@ -30,7 +30,7 @@ def home(request):
     # Récupérer les projets sélectionnés
     selected_ids = request.session.get("projects_list", [])
     selected_projects = [p for p in page_data["projects"]["realizations"] if str(p["id"]) in selected_ids]
-    request.session["selected_projects"] = selected_projects
+    request.session["selected_projects"] = page_data["projects"]["realizations"]
 
     return render(request, url, {
         'data': page_data,
