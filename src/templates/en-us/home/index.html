@@ -518,14 +518,15 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
       </div>
 
-      <div class="modal-body">
-          <div class="swiper-container "  data-pagination-type="" data-speed="400"
+
+          <div class="swiper-container swiper"  data-pagination-type="" data-speed="400"
                data-space-between="100" data-pagination="false" data-navigation="true" data-autoplay="true"
                data-autoplay-delay="3000"
                data-breakpoints='{"480": {"slidesPerView": 1}, "768": {"slidesPerView": 1}, "1024": {"slidesPerView": 2}, "1200": {"slidesPerView": 3}}'>
-                <div class=" pb-lg-8 pb-6 pt-1">
+                <div class="swiper-wrapper pb-lg-8 pb-6 pt-1">
                     {% if selected_projects %}
                       {% for project in selected_projects %}
+                     <div class="swiper-slide">
                         <div class="card mb-3">
                           <img src="{% static project.img %}" alt="{{ project.title }}" class="img-fluid">
                           <div class="card-body">
@@ -533,13 +534,14 @@
                             <p>Nombre de clics : {{ project.click_count }}</p>
                           </div>
                         </div>
+                     </div>
                       {% endfor %}
                     {% else %}
                       <p>Aucun projet sélectionné pour le moment.</p>
                     {% endif %}
                 </div>
           </div>
-      </div>
+
     </div>
   </div>
 </div>
