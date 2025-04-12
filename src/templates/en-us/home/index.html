@@ -232,8 +232,7 @@
                           <div class="card-body">
                             <h4>{{ project.title }}</h4>
                             <p>Nombre de clics : {{ project.click_count }}</p>
-                              <a href="#"
-                                 data-toggle="modal" data-target="#selectedProjectsModal"
+                              <a href="#" data-toggle="modal" data-target="#selectedProjectsModal"
                                  class="btn btn-primary">Cliquez ici</a>
                           </div>
                         </div>
@@ -543,15 +542,6 @@
   </div>
 </div>
 
-
-   {% if show_modal %}
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    var modal = new bootstrap.Modal(document.getElementById("selectedProjectsModal"));
-    modal.show();
-  });
-</script>
-{% endif %}
 
 
 
