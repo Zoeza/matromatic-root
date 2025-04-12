@@ -487,8 +487,7 @@
        <div class="modal-content">
          <div class="modal-header">
            <h1 class="modal-title fs-5" id="robotic_ModalCenter">Robotique</h1>
-           <button type="button" class="btn-close" data-bs-dismiss="modal"
-             aria-label="Close"></button>
+           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
          </div>
          <div class="modal-body">
            <p>Nous développons des robots intelligents pour différents domaines : agriculture, logistique, éducation, etc.</p>
@@ -506,24 +505,33 @@
    <!-- Modals end -->
    <!-- Project Modals start -->
    <!-- Modal Dynamique pour chaque projet -->
-   {% for project in data.projects.realizations %}
-        <div class="modal fade" id="projectModal{{ project.id }}" tabindex="-1" aria-labelledby="projectModalLabel{{ project.id }}"
-             aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="projectModalLabel{{ project.id }}">{{ project.title }}</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <!-- Affichage de l'image et du nombre de clics -->
-                        <img src="{% static project.img %}" alt="{{ project.title }}" class="img-fluid">
-                        <p><strong>Nombre de clics :</strong> {{ project.click_count }}</p>
-                    </div>
-                </div>
-            </div>
+ {% for project in data.projects.realizations %}
+  <div class="modal fade" id="projectModal{{ project.id }}" tabindex="-1" aria-labelledby="modalLabel{{ project.id }}" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalLabel{{ project.id }}">{{ project.title }}</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
         </div>
-  {% endfor %}
+        <div class="modal-body text-center">
+          <img src="{% static project.img %}" class="img-fluid mb-3" alt="{{ project.title }}">
+          <p>Nombre de clics : {{ project.click_count }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endfor %}
+
+{% if open_modal_id %}
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var myModal = new bootstrap.Modal(document.getElementById("projectModal{{ open_modal_id }}"));
+    myModal.show();
+  });
+</script>
+{% endif %}
+
+
 
    <!-- Project Modals  end -->
 
