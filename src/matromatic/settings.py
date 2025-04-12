@@ -124,3 +124,8 @@ MEDIA_ROOT = 'matromatic-root/site/public/media'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# settings.py
+
+# CSRF settings
+CSRF_COOKIE_SECURE = False  # En développement, tu laisses False, mais tu mets True en production (avec HTTPS)
+CSRF_COOKIE_HTTPONLY = True  # Le cookie est accessible uniquement par le serveur (plus sécurisé)
