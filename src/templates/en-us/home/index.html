@@ -443,7 +443,7 @@
             </div>
             <div class="modal-body" id="projectModalContent">
                 <div hx-target="#projectModalContent" hx-trigger="load delay:4000ms"
-                     hx-get="{% url 'project_modal_content' 'add' %}?project_id=1">
+                     hx-get="{% url 'project_modal_content' 'add' %}?project_id={{ project.id }}">
 
                 </div>
             </div>
