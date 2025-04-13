@@ -21,8 +21,11 @@ def home(request):
     except json.JSONDecodeError:
         raise Http404("Erreur de lecture JSON.")
 
+
+
     return render(request, url, {
         'data': page_data,
+        'selected_projects': selected_projects
     })
 
 
@@ -68,35 +71,31 @@ def decrement_click(request):
 
 
 def project_modal_content(request, action):
-    direction = request.session.get('language', 'en-us')
-    template_path = direction + "/home/partials/content.html"
-
-    # Charger page_data depuis le fichier JSON
-    json_path = os.path.join(os.path.dirname(__file__), 'data', 'page.json')
-    try:
-        with open(json_path, 'r', encoding='utf-8') as file:
-            page_data = json.load(file)
-    except FileNotFoundError:
-        raise Http404("Fichier JSON introuvable.")
-    except json.JSONDecodeError:
-        raise Http404("Erreur de lecture JSON.")
+    direction = request.session['language']
+    url = direction + "/home/partials/content.html"
+    page_data = request.GET.get("page_data")
+    if action == 'main':
+        url = direction + "/home/index.html"
 
     if action == 'add':
-        project_id = request.GET.get("project_id", '')
+        project_id = request.GET.get("project_id")
         if not project_id:
             raise Http404("ID du projet manquant.")
 
-        selected_projects = request.session.get("selected_projects", [])
+        selected = request.session.get("selected_projects", [])
 
-        # Empêcher les doublons
-        if not any(str(p["id"]) == project_id for p in selected_projects):
+        for p in selected:
+            if str(p.get("id")) == project_id:
+                break
+        else:
             for project in page_data.get("projects", {}).get("realizations", []):
-                if str(project["id"]) == project_id:
-                    selected_projects.append(project)
+                if str(project.get("id")) == project_id:
+                    selected.append(project)
                     break
 
-        request.session["selected_projects"] = selected_projects
+        request.session["selected_projects"] = selected
 
-    return render(request, template_path, {
+    return render(request, url, {
         "selected_projects": request.session.get("selected_projects", [])
     })
+
