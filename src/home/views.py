@@ -23,7 +23,6 @@ def home(request):
 
     return render(request, url, {
         'data': page_data,
-        'selected_projects': selected_projects
     })
 
 
