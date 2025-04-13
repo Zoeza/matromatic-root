@@ -21,8 +21,6 @@ def home(request):
     except json.JSONDecodeError:
         raise Http404("Erreur de lecture JSON.")
 
-
-
     return render(request, url, {
         'data': page_data,
     })
@@ -73,13 +71,14 @@ def project_modal_content(request, action):
     direction = request.session.get('language', 'en')
     url = direction + "/home/partials/content.html"
 
-    if action == 'main':
-        url = direction + "/home/index.html"
+    project_id = request.GET.get("project_id")
 
     if action == 'add':
-        project_id = request.GET.get("project_id")
-        
+        pass
+
+    if action == 'remove':
+        pass
+
     return render(request, url, {
         "project_id": project_id
     })
-
