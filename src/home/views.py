@@ -91,17 +91,12 @@ def project_modal_content(request, action):
         selected_projects = request.session.get("selected_projects", [])
 
         # Chercher et ajouter le projet dans la session
-        for p in page_data["projects"]["realizations"]:
-            if str(p["id"]) == project_id:
+        for project in page_data["projects"]["realizations"]:
+            if str(project["id"]) == project_id:
                 # Ajouter toutes les infos du projet dans la session
-                selected_projects.append(p)
-                break  # Arrêter dès qu'on trouve le projet
+                selected_projects.append(project)
 
         # Sauvegarder la liste des projets sélectionnés dans la session
         request.session["selected_projects"] = selected_projects
 
-    context = {
-        "selected_projects":  request.session["selected_projects"]
-    }
-
-    return render(request, url, context)
+    return render(request, url, {})
