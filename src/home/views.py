@@ -84,7 +84,7 @@ def project_modal_content(request, action):
     url = direction + "/home/partials/content.html"
     page_data = request.GET.get("page_data")
     if action == 'main':
-        url = direction + "/home/index.html"
+        url = direction + "/home/partials/content.html"
 
     return render(request, url, {})
 
