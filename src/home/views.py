@@ -99,4 +99,7 @@ def project_modal_content(request, action):
         # Sauvegarder la liste des projets sélectionnés dans la session
         request.session["selected_projects"] = selected_projects
 
-    return render(request, url, {})
+    return render(request, url,{
+        "selected_projects": request.session.get("selected_projects", [])
+    })
+
