@@ -71,20 +71,21 @@ def decrement_click(request):
 
 
 def project_modal_content(request, action):
-    direction = request.session['language']
+    direction = request.session.get('language', 'en')
     url = direction + "/home/partials/content.html"
-    page_data = request.GET.get("page_data")
+
     if action == 'main':
         url = direction + "/home/index.html"
 
     if action == 'add':
+        page_data = request.GET.get("page_data")
         project_id = request.GET.get("project_id")
         if not project_id:
             raise Http404("ID du projet manquant.")
 
         selected_projects = request.session.get("selected_projects", [])
 
-        for p in selected:
+        for p in selected_projects:
             if str(p.get("id")) == project_id:
                 break
         else:
