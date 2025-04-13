@@ -70,7 +70,15 @@ def decrement_click(request):
 def project_modal_content(request, action):
     direction = request.session['language']
     url = direction + "/home/partials/content.html"
-    page_data = request.GET.get("page_data")
+    json_path = os.path.join(os.path.dirname(__file__), 'data', 'page.json')
+
+    try:
+        with open(json_path, 'r', encoding='utf-8') as file:
+            page_data = json.load(file)
+    except FileNotFoundError:
+        raise Http404("Fichier JSON introuvable.")
+    except json.JSONDecodeError:
+        raise Http404("Erreur de lecture JSON.")
     if action == 'main':
         url = direction + "/home/index.html"
 
