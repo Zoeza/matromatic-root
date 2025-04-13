@@ -189,7 +189,7 @@
                                 <div class="card-body">
                                     <h4>{{ project.title }}</h4>
                                     <p>Nombre de clics : {{ project.click_count }}</p>
-                                    <a href="#" data-bs-toggle="modal" data-bs-target="#ProjectsModal" class="btn btn-primary">Cliquez ici </a>
+                                    <a href="{% url 'project_modal_content' 'increment' %}" data-bs-toggle="modal" data-bs-target="#ProjectsModal" class="btn btn-primary">Cliquez ici </a>
                                 </div>
                             </div>
                         </div>
@@ -432,7 +432,6 @@
 <!-- Modals end -->
 <!-- Project Modals start -->
 <!-- Modal Dynamique pour chaque projet -->
-<!-- Modal du projet -->
 <div class="modal fade bd-example-modal-xl" id="ProjectsModal" tabindex="-1" role="dialog" aria-labelledby="modalLabelproject" aria-hidden="true">
     <div class="modal-dialog modal-xl">
         <div class="modal-content">

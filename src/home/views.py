@@ -38,25 +38,6 @@ def home(request):
     })
 
 
-def increment_click(request):
-    project_id = request.GET.get("project_id", '')
-    if not project_id:
-        raise Http404("ID du projet manquant.")
-
-    # Incrémenter le compteur
-    click_counts = request.session.get("click_counts", {})
-    click_counts[project_id] = click_counts.get(project_id, 0) + 1
-    request.session["click_counts"] = click_counts
-
-    # Ajouter à la liste des projets sélectionnés
-    selected_projects = request.session.get("selected_projects", [])
-    if project_id not in selected_projects:
-        selected_projects.append(project_id)
-    request.session["selected_projects"] = selected_projects
-
-    return redirect("/?show_modal=true")
-
-
 def decrement_click(request):
     project_id = request.GET.get("project_id", '')
     if not project_id:
@@ -84,8 +65,25 @@ def decrement_click(request):
 def project_modal_content(request, action):
     direction = request.session['language']
     url = direction + "/home/partials/content.html"
-
     page_data = request.GET.get("page_data")
-
     if action == 'main':
-        return render(request, url, {})
+        url = direction + "/home/index.html"
+
+    if action == 'increment':
+        project_id = request.GET.get("project_id", '')
+        if not project_id:
+            raise Http404("ID du projet manquant.")
+
+        # Incrémenter le compteur
+        click_counts = request.session.get("click_counts", {})
+        click_counts[project_id] = click_counts.get(project_id, 0) + 1
+        request.session["click_counts"] = click_counts
+
+        # Ajouter à la liste des projets sélectionnés
+        selected_projects = request.session.get("selected_projects", [])
+        if project_id not in selected_projects:
+            selected_projects.append(project_id)
+        request.session["selected_projects"] = selected_projects
+
+    return render(request, url, {})
+
