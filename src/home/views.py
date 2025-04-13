@@ -21,17 +21,6 @@ def home(request):
     except json.JSONDecodeError:
         raise Http404("Erreur de lecture JSON.")
 
-    # Compteurs de clics
-    click_counts = request.session.get("click_counts", {})
-    for project in page_data.get("projects", {}).get("realizations", []):
-        project_id = str(project.get("id"))
-        project["click_count"] = click_counts.get(project_id, 0)
-
-    # Récupérer les projets sélectionnés
-    selected_ids = request.session.get("projects_list", [])
-    selected_projects = [p for p in page_data["projects"]["realizations"] if str(p["id"]) in selected_ids]
-    request.session["selected_projects"] = page_data["projects"]["realizations"]
-
     return render(request, url, {
         'data': page_data,
         'selected_projects': selected_projects
@@ -53,7 +42,7 @@ def increment_click(request):
     if project_id not in selected_projects:
         selected_projects.append(project_id)
     request.session["selected_projects"] = selected_projects
-    
+
 
 def decrement_click(request):
     project_id = request.GET.get("project_id", '')
@@ -84,7 +73,22 @@ def project_modal_content(request, action):
     url = direction + "/home/partials/content.html"
     page_data = request.GET.get("page_data")
     if action == 'main':
-        url = direction + "/home/partials/content.html"
+        url = direction + "/home/index.html"
+
+    if action == 'add':
+        project_id = request.GET.get("project_id", '')
+        if not project_id:
+            raise Http404("ID du projet manquant.")
+
+        # Incrémenter le compteur
+        click_counts = request.session.get("click_counts", {})
+        click_counts[project_id] = click_counts.get(project_id, 0) + 1
+        request.session["click_counts"] = click_counts
+
+        # Ajouter à la liste des projets sélectionnés
+        selected_projects = request.session.get("selected_projects", [])
+        if project_id not in selected_projects:
+            selected_projects.append(project_id)
+        request.session["selected_projects"] = selected_projects
 
     return render(request, url, {})
-
