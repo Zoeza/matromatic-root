@@ -1,5 +1,4 @@
 {% load static %}
-
 <!--Portfolio start-->
 <div class="row">
     <div class="col-xl-6 offset-xl-3 col-md-12">
@@ -20,11 +19,14 @@
                   <div class="col-lg-4 col-md-6">
                 <a href="#!">
                     <div class="card card-lift">
-                        <div class="card-body">
+                        <div class="card-body pb-0">
                             <h4>{{ project.title }}</h4>
                             <p>Nombre de clics : {{ project.click_count }}</p>
                             <a href="{% url 'decrement_click' %}?project_id={{ project.id }}" class="btn btn-primary btn-sm"> Retirer</a>
+                            <img src="{% static project.img %}" alt="{{ project.title }}" class="img-fluid rounded-top shadow-sm" />
+
                         </div>
+
                     </div>
                 </a>
             </div>
@@ -36,4 +38,5 @@
 </div>
 
 <!--Portfolio end-->
+
 
