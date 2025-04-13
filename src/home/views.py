@@ -82,7 +82,7 @@ def project_modal_content(request, action):
         if not project_id:
             raise Http404("ID du projet manquant.")
 
-        selected = request.session.get("selected_projects", [])
+        selected_projects = request.session.get("selected_projects", [])
 
         for p in selected:
             if str(p.get("id")) == project_id:
@@ -90,10 +90,10 @@ def project_modal_content(request, action):
         else:
             for project in page_data.get("projects", {}).get("realizations", []):
                 if str(project.get("id")) == project_id:
-                    selected.append(project)
+                    selected_projects.append(project)
                     break
 
-        request.session["selected_projects"] = selected
+        request.session["selected_projects"] = selected_projects
 
     return render(request, url, {
         "selected_projects": request.session.get("selected_projects", [])
