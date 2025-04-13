@@ -73,20 +73,5 @@ def project_modal_content(request, action):
     if action == 'increment':
         url = direction + "/home/partials/content.html"
 
-        project_id = request.GET.get("project_id", '')
-        if not project_id:
-            raise Http404("ID du projet manquant.")
-
-        # Incrémenter le compteur
-        click_counts = request.session.get("click_counts", {})
-        click_counts[project_id] = click_counts.get(project_id, 0) + 1
-        request.session["click_counts"] = click_counts
-
-        # Ajouter à la liste des projets sélectionnés
-        selected_projects = request.session.get("selected_projects", [])
-        if project_id not in selected_projects:
-            selected_projects.append(project_id)
-        request.session["selected_projects"] = selected_projects
-
     return render(request, url, {})
 
