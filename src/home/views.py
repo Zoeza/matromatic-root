@@ -69,7 +69,7 @@ def decrement_click(request):
 
 def project_modal_content(request, action):
     direction = request.session.get('language', 'en-us')
-    url = direction + "/home/partials/content.html"
+    template_path = direction + "/home/partials/content.html"
 
     # Charger page_data depuis le fichier JSON
     json_path = os.path.join(os.path.dirname(__file__), 'data', 'page.json')
@@ -81,25 +81,22 @@ def project_modal_content(request, action):
     except json.JSONDecodeError:
         raise Http404("Erreur de lecture JSON.")
 
-    # Action 'add' pour ajouter un projet
     if action == 'add':
         project_id = request.GET.get("project_id", '')
         if not project_id:
             raise Http404("ID du projet manquant.")
 
-        # Récupérer les projets sélectionnés dans la session
         selected_projects = request.session.get("selected_projects", [])
 
-        # Chercher et ajouter le projet dans la session
-        for project in page_data["projects"]["realizations"]:
-            if str(project["id"]) == project_id:
-                # Ajouter toutes les infos du projet dans la session
-                selected_projects.append(project)
+        # Empêcher les doublons
+        if not any(str(p["id"]) == project_id for p in selected_projects):
+            for project in page_data.get("projects", {}).get("realizations", []):
+                if str(project["id"]) == project_id:
+                    selected_projects.append(project)
+                    break
 
-        # Sauvegarder la liste des projets sélectionnés dans la session
         request.session["selected_projects"] = selected_projects
 
-    return render(request, url,{
+    return render(request, template_path, {
         "selected_projects": request.session.get("selected_projects", [])
     })
-
