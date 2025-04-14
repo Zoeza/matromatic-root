@@ -84,17 +84,22 @@ def project_modal_content(request, action):
     if not project_id:
         raise Http404("ID du projet manquant.")
 
+    if action == 'main':
+        url = direction + "/home/partials/content.html"
+
     if action == 'add':
         # Chercher le projet correspondant
         for project in all_projects:
             if str(project['id']) == project_id:
                 selected_projects.append(project)
                 request.session["selected_projects"] = selected_projects
+                
     if action == 'remove':
         for project in all_projects:
             if str(project['id']) == project_id:
                 selected_projects.remove(project)
                 request.session["selected_project"] = selected_projects
+                return redirect('main')
 
     # Vérifier si le projet est déjà sélectionné
     # deja_ajoute = False
