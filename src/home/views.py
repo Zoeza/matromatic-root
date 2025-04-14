@@ -22,7 +22,6 @@ def home(request):
     except json.JSONDecodeError:
         raise Http404("Erreur de lecture JSON.")
 
-    request.session.pop("selected_projects")
     if "selected_projects" not in request.session:
         request.session["selected_projects"] = page_data.get('projects', {}).get('realizations', {})
 
