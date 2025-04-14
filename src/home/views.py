@@ -113,11 +113,13 @@ def project_modal_content(request, action):
                     selected_projects.remove(project)
         request.session["selected_projects"] = selected_projects
         request.session.modified = True
+        return render(request, url, {"selected_projects": selected_projects})
+
     if action == 'remove':
         for project in selected_projects:
             if str(project['id']) == project_id:
                 selected_projects.remove(project)
-            
+
         request.session["selected_projects"] = selected_projects
         request.session.modified = True
 
