@@ -90,21 +90,24 @@ def project_modal_content(request, action):
             if str(project['id']) == project_id:
                 selected_projects.append(project)
                 request.session["selected_projects"] = selected_projects
+    if action == 'remove':
+        for project in all_projects:
+            if str(project['id']) == project_id:
+                selected_projects.remove(project)
+                request.session["selected_project"] = selected_projects
 
+    # Vérifier si le projet est déjà sélectionné
+    # deja_ajoute = False
+    # for p in selected_projects:
+    #    if str(p['id']) == project_id:
+    #        deja_ajoute = True
+    #       break
 
-
-        # Vérifier si le projet est déjà sélectionné
-        # deja_ajoute = False
-        #for p in selected_projects:
-        #    if str(p['id']) == project_id:
-        #        deja_ajoute = True
-        #       break
-
-        # Ajouter le projet s'il n'est pas encore sélectionné
-        # if not deja_ajoute:
-        #    selected_projects.append(project)
-        #    request.session["selected_projects"] = selected_projects
-        #    request.session.modified = True  # Pour bien sauvegarder les changements
+    # Ajouter le projet s'il n'est pas encore sélectionné
+    # if not deja_ajoute:
+    #    selected_projects.append(project)
+    #    request.session["selected_projects"] = selected_projects
+    #    request.session.modified = True  # Pour bien sauvegarder les changements
 
     # Retourner le contenu partiel du modal avec les projets sélectionnés
     return render(request, url, {"selected_projects": selected_projects})
