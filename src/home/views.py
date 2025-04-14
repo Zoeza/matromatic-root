@@ -67,6 +67,7 @@ def decrement_click(request):
     return redirect("/?show_modal=true")
 
 
+
 def project_modal_content(request, action):
     direction = request.session['language']
     url = direction + "/home/partials/content.html"
@@ -95,7 +96,6 @@ def project_modal_content(request, action):
             raise Http404("Projet non trouvé.")
 
     if action == 'remove':
-        if "selected_projects" in request.session:
-            del request.session["selected_projects"]
+        pass
 
     return render(request, url, {"selected_projects": request.session.get("selected_projects", {})})
