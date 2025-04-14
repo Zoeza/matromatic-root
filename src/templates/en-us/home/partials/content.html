@@ -16,7 +16,7 @@
 <div class="table-responsive-xl pb-5">
     <div class="row flex-nowrap">
         {% if selected_projects %}
-            {% for project_id, project in selected_projects.items %}
+            {% for project_id, project in request.session.selected_projects.items %}
         {{project}}
                 <div class="col-lg-4 col-md-6">
                     <div class="card card-lift">

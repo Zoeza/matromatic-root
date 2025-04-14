@@ -26,8 +26,7 @@ def home(request):
         request.session["projects_list"] = page_data.get('projects', {}).get('realizations', {})
 
     return render(request, url, {
-        'data': page_data,
-        'projects_list': request.session.get("projects_list", {})
+        'data': page_data
     })
 
 
@@ -63,7 +62,4 @@ def project_modal_content(request, action):
         if project_id in selected_projects:
             del selected_projects[project_id]
 
-    context = {
-        'selected_projects': selected_projects,
-    }
-    return render(request, url, context)
+    return render(request, url)
