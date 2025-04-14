@@ -67,10 +67,9 @@ def decrement_click(request):
     return redirect("/?show_modal=true")
 
 
-
 def project_modal_content(request, action):
-    direction = request.session['language']
-    url = direction + "/home/partials/content.html"
+    direction = request.session.get('language', 'en')
+    url = direction + "/home/index.html"
     json_path = os.path.join(os.path.dirname(__file__), 'data', 'page.json')
 
     try:
@@ -81,21 +80,21 @@ def project_modal_content(request, action):
     except json.JSONDecodeError:
         raise Http404("Erreur de lecture JSON.")
 
-    if action == 'add':
-        url = direction + "/home/partials/content.html"
+    projects = page_data.get('projects', {}).get('realizations', [])
 
+    if action == 'add':
         project_id = request.GET.get("project_id", '')
         if not project_id:
             raise Http404("ID du projet manquant.")
 
-        for project in page_data['projects']['realizations']:
+        for project in projects:
             if project_id == project['id']:
                 request.session["selected_projects"] = project
                 break
         else:
             raise Http404("Projet non trouvé.")
 
-    if action == 'remove':
-        pass
+    elif action == 'remove':
+        request.session.pop("selected_projects", None)
 
     return render(request, url, {"selected_projects": request.session.get("selected_projects", {})})
