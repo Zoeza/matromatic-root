@@ -92,9 +92,7 @@ def project_modal_content(request, action):
                 project = p
                 break
 
-        # Si le projet n'existe pas
-        if project is None:
-            raise Http404("Projet non trouvé.")
+      
 
         # Vérifier si le projet est déjà sélectionné
         deja_ajoute = False
