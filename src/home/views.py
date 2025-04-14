@@ -90,7 +90,12 @@ def project_modal_content(request, action):
         for project in page_data['projects']['realizations']:
             if project_id == project['id']:
                 request.session["selected_projects"] = project
-    if action == 'remove':
-        pass
+                break
+        else:
+            raise Http404("Projet non trouvé.")
 
-    return render(request, url, {request.session["selected_projects"]})
+    if action == 'remove':
+        if "selected_projects" in request.session:
+            del request.session["selected_projects"]
+
+    return render(request, url, {"selected_projects": request.session.get("selected_projects", {})})
