@@ -16,7 +16,7 @@
 <div class="table-responsive-xl pb-5">
     <div class="row flex-nowrap">
         {% if selected_projects %}
-        {% for project in selected_projects %}
+        {% for project_id, project in selected_projects.items %}
         <div class="col-lg-4 col-md-6">
                       <a href="#!">
                           <div class="card card-lift">
