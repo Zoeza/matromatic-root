@@ -19,7 +19,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-0y(dj*jiwsr9z_$l@g6)gvx%$@e&)&3u+@(yo)h5!ry2$g&6qw'
+SECRET_KEY = '(dj*jiwsr9z_$l@g6)gvx%$@e&)&3u+@(yo)h5!ry2$g&6qwsknwoj49io0e222ñplñp'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -127,7 +127,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # settings.py
 
 # CSRF settings
-SESSION_COOKIE_NAME = 'sessionid'  # Nom du cookie pour la session
+SESSION_COOKIE_NAME = '3u+@(yo)h5!ry2$g&6qwsknwoj49io0e222ñplñp'  # Nom du cookie pour la session
 SESSION_EXPIRE_AT_BROWSER_CLOSE = False  # La session ne doit pas expirer à la fermeture du navigateur
 
 # En environnement de production, assure-toi que CSRF et SESSION_COOKIE sont bien sécurisés
