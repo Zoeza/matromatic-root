@@ -47,7 +47,7 @@ def project_modal_content(request, action):
             selected_projects[project_id] = all_projects[project_id]
             all_projects[project_id]['click_counts'] = 1
         else:
-            all_projects[project_id]['click_counts'] += 1
+            all_projects[project_id]['click_counts'] = 10
 
     if action == 'decrement':
         if project_id in selected_projects:
