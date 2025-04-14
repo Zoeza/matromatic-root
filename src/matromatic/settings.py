@@ -140,3 +140,4 @@ SESSION_COOKIE_AGE = 86400
 
 # If True, session expires when the browser is closed
 SESSION_EXPIRE_AT_BROWSER_CLOSE = False
+
