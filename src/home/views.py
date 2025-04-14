@@ -54,44 +54,44 @@ def decrement_click(request):
     return redirect("/?show_modal=true")
 
 
+
+
+
 def project_modal_content(request, action):
-    # Vérifie si la langue est définie dans la session, sinon la définir à 'en-us'
+    # Définir la langue par défaut si elle n'est pas déjà définie
     if not request.session.get('language'):
         request.session['language'] = 'en-us'
 
+    # Initialiser les listes dans la session si elles n'existent pas
     if "selected_projects" not in request.session:
         request.session["selected_projects"] = []
 
     if "click_counts" not in request.session:
-        request.session["click_counts"] = []
+        request.session["click_counts"] = {}
 
     direction = request.session['language']
     url = direction + "/home/partials/content.html"
 
+    # Charger les données depuis le fichier JSON
     json_path = os.path.join(os.path.dirname(__file__), 'data', 'page.json')
-
-    # Charger les données du fichier JSON
     try:
         with open(json_path, 'r', encoding='utf-8') as file:
             page_data = json.load(file)
     except (FileNotFoundError, json.JSONDecodeError):
         raise Http404("Erreur lors du chargement du fichier JSON.")
 
-    # Obtenir tous les projets
     all_projects = page_data.get('projects', {}).get('realizations', [])
     selected_projects = request.session["selected_projects"]
     click_counts = request.session["click_counts"]
 
-    current_count = click_counts.get(project_id, 0)
-
-    # Récupérer l'ID du projet depuis la requête
+    # Obtenir l'ID du projet depuis la requête
     project_id = request.GET.get("project_id", '')
     if not project_id:
         raise Http404("ID du projet manquant.")
 
-    if action == 'add':
-        # Chercher le projet correspondant
+    current_count = click_counts.get(project_id, 0)
 
+    if action == 'add':
         deja_ajoute = False
         for project in selected_projects:
             if str(project['id']) == project_id:
@@ -99,41 +99,31 @@ def project_modal_content(request, action):
                 deja_ajoute = True
                 break
 
-        for project in all_projects:
-            if str(project['id']) == project_id:
-                if not deja_ajoute:
+        if not deja_ajoute:
+            for project in all_projects:
+                if str(project['id']) == project_id:
                     selected_projects.append(project)
                     click_counts[project_id] = current_count + 1
+                    break  # Ajouté un break ici aussi, si besoin
 
-                request.session["click_counts"] = click_counts
-                request.session["selected_projects"] = selected_projects
-                request.session.modified = True
-                context = {
-                    'selected_projects': selected_projects,
-                    'click_counts': click_counts,
+        # Sauvegarder les changements dans la session
+        request.session["click_counts"] = click_counts
+        request.session["selected_projects"] = selected_projects
+        request.session.modified = True
 
-                }
-
-                return render(request, url, context)
+        context = {
+            'selected_projects': selected_projects,
+            'click_counts': click_counts,
+        }
+        return render(request, url, context)
 
     if action == 'remove':
-        for project in all_projects:
+        for project in selected_projects:
             if str(project['id']) == project_id:
                 selected_projects.remove(project)
-                request.session["selected_project"] = selected_projects
-                return render(request, url, {"selected_projects": selected_projects})
+                break  # Sortir de la boucle après suppression
 
-    # Vérifier si le projet est déjà sélectionné
-    # deja_ajoute = False
-    # for p in selected_projects:
-    #    if str(p['id']) == project_id:
-    #        deja_ajoute = True
-    #       break
+        request.session["selected_projects"] = selected_projects
+        request.session.modified = True
 
-    # Ajouter le projet s'il n'est pas encore sélectionné
-    # if not deja_ajoute:
-    #    selected_projects.append(project)
-    #    request.session["selected_projects"] = selected_projects
-    #    request.session.modified = True  # Pour bien sauvegarder les changements
-
-    # Retourner le contenu partiel du modal avec les projets sélectionnés
+        return render(request, url, {"selected_projects": selected_projects})
