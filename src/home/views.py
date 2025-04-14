@@ -67,9 +67,12 @@ def decrement_click(request):
     return redirect("/?show_modal=true")
 
 
+
+
+
 def project_modal_content(request, action):
-    direction = request.session['language']
-    url = direction + "/home/partials/content.html"
+    direction = request.session.get('language', 'en')
+    url = f"{direction}/home/partials/content.html"
     json_path = os.path.join(os.path.dirname(__file__), 'data', 'page.json')
 
     try:
@@ -85,6 +88,9 @@ def project_modal_content(request, action):
 
     # Liste actuelle des projets sélectionnés en session
     selected_projects = request.session.get("selected_projects", [])
+
+    # Debug: afficher les projets dans la session
+    print("Projets sélectionnés : ", selected_projects)  # Debug line
 
     if action == 'add':
         project_id = request.GET.get("project_id", '')
@@ -118,6 +124,7 @@ def project_modal_content(request, action):
                 updated_projects.append(selected_project)
         request.session["selected_projects"] = updated_projects
 
+    # Retourner la réponse avec les projets sélectionnés
     return render(request, url, {
         "selected_projects": request.session.get("selected_projects", [])
     })

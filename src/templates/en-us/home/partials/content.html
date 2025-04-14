@@ -8,13 +8,14 @@
             <h2 class="mt-5 px-lg-10 px-6">
                 Liste des projets selectionnes
             </h2>
-
         </div>
     </div>
 </div>
 <div class="table-responsive-xl pb-5">
     <div class="row flex-nowrap">
-        {{project_id}}
+        <!-- Affichage pour débogage -->
+        <pre>{{ selected_projects }}</pre>
+
         {% if selected_projects %}
                {% for project in selected_projects %}
                   <div class="col-lg-4 col-md-6">
@@ -35,7 +36,4 @@
       {% endif %}
     </div>
 </div>
-
 <!--Portfolio end-->
-
-
