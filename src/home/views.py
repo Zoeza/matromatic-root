@@ -63,9 +63,6 @@ def project_modal_content(request, action):
     if "selected_projects" not in request.session:
         request.session["selected_projects"] = []
 
-    if "click_counts" not in request.session:
-        request.session["click_counts"] = {}
-
     direction = request.session['language']
     url = direction + "/home/partials/content.html"
 
@@ -85,8 +82,6 @@ def project_modal_content(request, action):
     project_id = request.GET.get("project_id", '')
     if not project_id:
         raise Http404("ID du projet manquant.")
-
-    current_count = click_counts.get(project_id, 0)
 
     if action == 'add':
         deja_ajoute = False
