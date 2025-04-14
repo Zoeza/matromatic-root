@@ -39,7 +39,7 @@ def project_modal_content(request, action):
     url = direction + "/home/partials/content.html"
 
     all_projects = request.session.get("projects_list", {})
-    selected_projects = request.session.get("selected_projects", {})
+    selected_projects = request.session["selected_projects"]
     project_id = request.GET.get("project_id", '')
 
     if action == 'add':
