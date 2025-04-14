@@ -71,14 +71,24 @@ def project_modal_content(request, action):
     direction = request.session.get('language', 'en')
     url = direction + "/home/partials/content.html"
 
-    project_id = request.GET.get("project_id")
-
     if action == 'add':
-        pass
+        project_id = request.GET.get("project_id")
+        if not project_id:
+            raise Http404("ID du projet manquant.")
 
-    if action == 'remove':
-        pass
+        selected_projects = request.session.get("selected_projects", [])
+
+        for p in selected_projects:
+            if str(p.get("id")) == project_id:
+                break
+        else:
+            for project in page_data.get("projects", {}).get("realizations", []):
+                if str(project.get("id")) == project_id:
+                    selected_projects.append(project)
+                    break
+
+        request.session["selected_projects"] = selected_projects
 
     return render(request, url, {
-        "project_id": project_id
+        "selected_projects": request.session.get("selected_projects", [])
     })
