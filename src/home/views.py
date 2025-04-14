@@ -91,7 +91,7 @@ def project_modal_content(request, action):
             if str(p['id']) == project_id:
                 selected_projects.append(p)
                 request.session["selected_projects"] = selected_projects
-                request.session.modified = True
+                #request.session.modified = True
 
 
 
