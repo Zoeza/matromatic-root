@@ -45,9 +45,9 @@ def project_modal_content(request, action):
     if action == 'add':
         if project_id not in selected_projects:
             selected_projects[project_id] = all_projects[project_id]
-            all_projects[project_id]['click_counts'] += 1
-        #else:
-            #all_projects[project_id]['click_counts'] += 1
+            selected_projects[project_id]['click_counts'] = 1
+        else:
+            selected_projects[project_id]['click_counts'] += 1
 
     if action == 'decrement':
         if project_id in selected_projects:
@@ -59,8 +59,6 @@ def project_modal_content(request, action):
     if action == 'remove':
         if project_id in selected_projects:
             del selected_projects[project_id]
-
-    request.session["selected_projects"] = selected_projects
 
     context = {
         'selected_projects': selected_projects,
