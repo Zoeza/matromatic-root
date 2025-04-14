@@ -4,15 +4,17 @@ import os
 from django.http import Http404
 from django.views.decorators.http import require_POST
 
-
 def home(request):
+    # Vérifie si la langue est définie dans la session, sinon la définir à 'en-us'
     if not request.session.get('language'):
         request.session['language'] = 'en-us'
 
     direction = request.session['language']
     url = direction + "/home/index.html"
+
     json_path = os.path.join(os.path.dirname(__file__), 'data', 'page.json')
 
+    # Charger les données du fichier JSON
     try:
         with open(json_path, 'r', encoding='utf-8') as file:
             page_data = json.load(file)
@@ -24,23 +26,6 @@ def home(request):
     return render(request, url, {
         'data': page_data,
     })
-
-
-def increment_click(request):
-    project_id = request.GET.get("project_id", '')
-    if not project_id:
-        raise Http404("ID du projet manquant.")
-
-    # Incrémenter le compteur
-    click_counts = request.session.get("click_counts", {})
-    click_counts[project_id] = click_counts.get(project_id, 0) + 1
-    request.session["click_counts"] = click_counts
-
-    # Ajouter à la liste des projets sélectionnés
-    selected_projects = request.session.get("selected_projects", [])
-    if project_id not in selected_projects:
-        selected_projects.append(project_id)
-    request.session["selected_projects"] = selected_projects
 
 
 def decrement_click(request):
@@ -63,6 +48,7 @@ def decrement_click(request):
 
     request.session["click_counts"] = click_counts
     request.session["selected_projects"] = selected_projects
+    request.session.modified = True  # Marquer la session comme modifiée
 
     return redirect("/?show_modal=true")
 
@@ -72,12 +58,12 @@ def project_modal_content(request, action):
     if not request.session.get('language'):
         request.session['language'] = 'en-us'
 
+    direction = request.session['language']
     url = direction + "/home/partials/content.html"
 
-    # Chemin vers le fichier JSON
     json_path = os.path.join(os.path.dirname(__file__), 'data', 'page.json')
 
-    # Charger les données du fichier
+    # Charger les données du fichier JSON
     try:
         with open(json_path, 'r', encoding='utf-8') as file:
             page_data = json.load(file)
@@ -110,7 +96,7 @@ def project_modal_content(request, action):
             selected_projects.append(project)
             # Sauvegarder les projets sélectionnés dans la session
             request.session["selected_projects"] = selected_projects
-            request.session.modified = True  # Important pour HTMX
+            request.session.modified = True  # Important pour garantir la persistance des données
 
     # Retourner le contenu partiel du modal avec les projets sélectionnés
     return render(request, url, {"selected_projects": selected_projects})
