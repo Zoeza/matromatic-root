@@ -59,9 +59,6 @@ def project_modal_content(request, action):
     if not request.session.get('language'):
         request.session['language'] = 'en-us'
 
-    if "selected_projects" not in request.session:
-        request.session["selected_projects"] = []
-
     direction = request.session['language']
     url = direction + "/home/partials/content.html"
 
@@ -75,8 +72,8 @@ def project_modal_content(request, action):
         raise Http404("Erreur lors du chargement du fichier JSON.")
 
     # Obtenir tous les projets
+    request.session["selected_projects"] = []
     all_projects = page_data.get('projects', {}).get('realizations', [])
-
     selected_projects = request.session["selected_projects"]
 
     # Récupérer l'ID du projet depuis la requête
@@ -86,12 +83,10 @@ def project_modal_content(request, action):
 
     if action == 'add':
         # Chercher le projet correspondant
-        project = None
-        for p in all_projects:
-            if str(p['id']) == project_id:
-                selected_projects.append(p)
+        for project in all_projects:
+            if str(project['id']) == project_id:
+                selected_projects.append(project)
                 request.session["selected_projects"] = selected_projects
-                #request.session.modified = True
 
 
 
