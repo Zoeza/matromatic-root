@@ -26,13 +26,13 @@
                             <p>Nombre de clics : {{ project.click_counts }}</p>
                             <div class="btn-group" role="group" aria-label="Basic example">
                                 <button type="button" hx-get="{% url 'project_modal_content' 'add' %}?project_id={{ project_id }}"
-                                        hx-target="#projectModalContent" hx-trigger="click"
+                                        hx-target="#projectModalContent" hx-trigger="click delay:100ms"
                                         class="btn btn-secondary">+</button>
                                 <button type="button" hx-get="{% url 'project_modal_content' 'remove' %}?project_id={{ project_id }}"
                                         hx-target="#projectModalContent" hx-trigger="click"
                                         class="btn btn-secondary">delete</button>
                                 <button type="button" hx-get="{% url 'project_modal_content' 'decrement' %}?project_id={{ project_id }}"
-                                        hx-target="#projectModalContent" hx-trigger="click"
+                                        hx-target="#projectModalContent" hx-trigger="click delay:100ms"
                                         class="btn btn-secondary">-</button>
                             </div>
                         </div>
