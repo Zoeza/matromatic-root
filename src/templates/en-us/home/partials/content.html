@@ -8,14 +8,13 @@
             <h2 class="mt-5 px-lg-10 px-6">
                 Liste des projets selectionnes
             </h2>
+
         </div>
     </div>
 </div>
 <div class="table-responsive-xl pb-5">
     <div class="row flex-nowrap">
-        <!-- Affichage pour débogage -->
-        <pre>{{ selected_projects }}</pre>
-
+<p>Projets en session : {{ selected_projects|length }}</p>
         {% if selected_projects %}
                {% for project in selected_projects %}
                   <div class="col-lg-4 col-md-6">
@@ -24,7 +23,7 @@
                               <div class="card-body pb-0">
                                     <img src="{% static project.img %}" alt="{{ project.title }}" class="img-fluid rounded-top shadow-sm" />
                                     <h4>{{ project.title }}</h4>
-                                    <p>Nombre de clics : {{ project.click_count }}</p>
+                                    <p>Nombre de clics : </p>
                                     <a href="{% url 'decrement_click' %}?project_id={{ project.id }}" class="btn btn-primary btn-sm"> Retirer</a>
                               </div>
                           </div>
@@ -36,4 +35,7 @@
       {% endif %}
     </div>
 </div>
+
 <!--Portfolio end-->
+
+

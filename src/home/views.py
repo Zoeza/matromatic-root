@@ -67,64 +67,54 @@ def decrement_click(request):
     return redirect("/?show_modal=true")
 
 
-
-
-
 def project_modal_content(request, action):
-    direction = request.session.get('language', 'en')
+    if not request.session.get('language'):
+        request.session['language'] = 'en-us'
     url = direction + "/home/partials/content.html"
+
+    # Chemin vers le fichier JSON
     json_path = os.path.join(os.path.dirname(__file__), 'data', 'page.json')
 
+    # Charger les données du fichier
     try:
         with open(json_path, 'r', encoding='utf-8') as file:
             page_data = json.load(file)
-    except FileNotFoundError:
-        raise Http404("Fichier JSON introuvable.")
-    except json.JSONDecodeError:
-        raise Http404("Erreur de lecture JSON.")
+    except (FileNotFoundError, json.JSONDecodeError):
+        raise Http404("Erreur lors du chargement du fichier JSON.")
 
-    # Liste des projets depuis le JSON
+    # Obtenir tous les projets
     all_projects = page_data.get('projects', {}).get('realizations', [])
 
-    # Liste actuelle des projets sélectionnés en session
+    # Récupérer les projets sélectionnés dans la session
     selected_projects = request.session.get("selected_projects", [])
 
-    # Debug: afficher les projets dans la session
-    print("Projets sélectionnés : ", selected_projects)  # Debug line
+    # Récupérer l'ID du projet depuis la requête
+    project_id = str(request.GET.get("project_id", '')).strip()
+    if not project_id:
+        raise Http404("ID du projet manquant.")
 
     if action == 'add':
-        project_id = request.GET.get("project_id", '')
-        if not project_id:
-            raise Http404("ID du projet manquant.")
-
-        for project in all_projects:
-            if project['id'] == project_id:
-                # Vérifier si le projet est déjà sélectionné
-                is_already_selected = False
-                for selected_project in selected_projects:
-                    if selected_project['id'] == project_id:
-                        is_already_selected = True
-                        break
-                if not is_already_selected:
-                    selected_projects.append(project)
-                    request.session["selected_projects"] = selected_projects
-                break
-        else:
+        # Chercher le projet correspondant
+        project = next((p for p in all_projects if str(p['id']) == project_id), None)
+        if not project:
             raise Http404("Projet non trouvé.")
 
+        # Ajouter s'il n'est pas déjà sélectionné
+        if not any(p['id'] == project_id for p in selected_projects):
+            selected_projects.append(project)
+            request.session["selected_projects"] = selected_projects
+            request.session.modified = True  # Important pour HTMX
+
     elif action == 'remove':
-        project_id = request.GET.get("project_id", '')
-        if not project_id:
-            raise Http404("ID du projet à retirer manquant.")
+        # Supprimer le projet de la sélection
+        selected_projects = [p for p in selected_projects if p['id'] != project_id]
+        request.session["selected_projects"] = selected_projects
+        request.session.modified = True
 
-        # Supprimer le projet de la liste sélectionnée
-        updated_projects = []
-        for selected_project in selected_projects:
-            if selected_project['id'] != project_id:
-                updated_projects.append(selected_project)
-        request.session["selected_projects"] = updated_projects
+    else:
+        raise Http404("Action non reconnue.")
 
-    # Retourner la réponse avec les projets sélectionnés
+    # Retourner le contenu partiel du modal avec les projets sélectionnés
     return render(request, url, {
-        "selected_projects": request.session.get("selected_projects", [])
+        "selected_projects": selected_projects
     })
