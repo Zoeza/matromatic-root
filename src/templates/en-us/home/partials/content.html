@@ -22,7 +22,6 @@
                               <div class="card-body pb-0">
                                     <img src="{% static project.img %}" alt="{{ project.title }}" class="img-fluid rounded-top shadow-sm" />
                                     <h4>{{ project.title }}</h4>
-                                    <p>Nombre de clics :{{ click_counts|dict_get:project.id }} </p>
                                     <a href="" hx-get="{% url 'project_modal_content' 'remove' %}?project_id={{ project.id }}"
                                        hx-target="#projectModalContent" hx-trigger="click"
                                        class="btn btn-primary btn-sm"> Retirer</a>
