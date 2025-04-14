@@ -72,7 +72,7 @@ def decrement_click(request):
 
 def project_modal_content(request, action):
     direction = request.session.get('language', 'en')
-    url = f"{direction}/home/partials/content.html"
+    url = direction + "/home/partials/content.html"
     json_path = os.path.join(os.path.dirname(__file__), 'data', 'page.json')
 
     try:
