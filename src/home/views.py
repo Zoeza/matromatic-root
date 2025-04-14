@@ -59,6 +59,9 @@ def project_modal_content(request, action):
     if not request.session.get('language'):
         request.session['language'] = 'en-us'
 
+    if "selected_projects" not in request.session:
+        request.session["selected_projects"] = []
+
     direction = request.session['language']
     url = direction + "/home/partials/content.html"
 
@@ -74,30 +77,38 @@ def project_modal_content(request, action):
     # Obtenir tous les projets
     all_projects = page_data.get('projects', {}).get('realizations', [])
 
-    # Vérifie si 'selected_projects' existe dans la session, sinon créer la clé avec une liste vide
-    if "selected_projects" not in request.session:
-        request.session["selected_projects"] = []
-
-    # Récupérer les projets sélectionnés dans la session
     selected_projects = request.session["selected_projects"]
 
     # Récupérer l'ID du projet depuis la requête
-    project_id = str(request.GET.get("project_id", '')).strip()
+    project_id = request.GET.get("project_id", '')
     if not project_id:
         raise Http404("ID du projet manquant.")
 
     if action == 'add':
         # Chercher le projet correspondant
-        project = next((p for p in all_projects if str(p['id']) == project_id), None)
-        if not project:
+        project = None
+        for p in all_projects:
+            if str(p['id']) == project_id:
+                project = p
+                break
+
+        # Si le projet n'existe pas
+        if project is None:
             raise Http404("Projet non trouvé.")
 
-        # Ajouter le projet dans la liste des projets sélectionnés s'il n'est pas déjà dedans
-        if not any(p['id'] == project_id for p in selected_projects):
+        # Vérifier si le projet est déjà sélectionné
+        deja_ajoute = False
+        for p in selected_projects:
+            if str(p['id']) == project_id:
+                deja_ajoute = True
+                break
+
+        # Ajouter le projet s'il n'est pas encore sélectionné
+        if not deja_ajoute:
             selected_projects.append(project)
-            # Sauvegarder les projets sélectionnés dans la session
             request.session["selected_projects"] = selected_projects
-            request.session.modified = True  # Important pour garantir la persistance des données
+            request.session.modified = True  # Pour bien sauvegarder les changements
 
     # Retourner le contenu partiel du modal avec les projets sélectionnés
     return render(request, url, {"selected_projects": selected_projects})
+
