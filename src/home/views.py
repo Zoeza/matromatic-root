@@ -68,8 +68,10 @@ def decrement_click(request):
 
 
 def project_modal_content(request, action):
+    # Vérifie si la langue est définie dans la session, sinon la définir à 'en-us'
     if not request.session.get('language'):
         request.session['language'] = 'en-us'
+
     url = direction + "/home/partials/content.html"
 
     # Chemin vers le fichier JSON
@@ -85,8 +87,12 @@ def project_modal_content(request, action):
     # Obtenir tous les projets
     all_projects = page_data.get('projects', {}).get('realizations', [])
 
+    # Vérifie si 'selected_projects' existe dans la session, sinon créer la clé avec une liste vide
+    if "selected_projects" not in request.session:
+        request.session["selected_projects"] = []
+
     # Récupérer les projets sélectionnés dans la session
-    selected_projects = request.session.get("selected_projects", [])
+    selected_projects = request.session["selected_projects"]
 
     # Récupérer l'ID du projet depuis la requête
     project_id = str(request.GET.get("project_id", '')).strip()
@@ -99,22 +105,12 @@ def project_modal_content(request, action):
         if not project:
             raise Http404("Projet non trouvé.")
 
-        # Ajouter s'il n'est pas déjà sélectionné
+        # Ajouter le projet dans la liste des projets sélectionnés s'il n'est pas déjà dedans
         if not any(p['id'] == project_id for p in selected_projects):
             selected_projects.append(project)
+            # Sauvegarder les projets sélectionnés dans la session
             request.session["selected_projects"] = selected_projects
             request.session.modified = True  # Important pour HTMX
 
-    elif action == 'remove':
-        # Supprimer le projet de la sélection
-        selected_projects = [p for p in selected_projects if p['id'] != project_id]
-        request.session["selected_projects"] = selected_projects
-        request.session.modified = True
-
-    else:
-        raise Http404("Action non reconnue.")
-
     # Retourner le contenu partiel du modal avec les projets sélectionnés
-    return render(request, url, {
-        "selected_projects": selected_projects
-    })
+    return render(request, url, {"selected_projects": selected_projects})
