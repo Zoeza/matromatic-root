@@ -42,15 +42,11 @@ def project_modal_content(request, action):
     url = direction + "/home/partials/content.html"
 
     all_projects = request.session.get("projects_list", {})
-    selected_projects = request.session["selected_projects"]
+    selected_projects = request.session.get("selected_projects", {})
     project_id = request.GET.get("project_id", '')
 
     if action == 'add':
-        if project_id not in selected_projects:
-            selected_projects[project_id] = all_projects[project_id]
-            all_projects[project_id]['click_counts'] = 1
-        else:
-            all_projects[project_id]['click_counts'] += 1
+        pass
 
     if action == 'decrement':
         if project_id in selected_projects:
