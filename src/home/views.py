@@ -4,6 +4,7 @@ import os
 from django.http import Http404
 from django.views.decorators.http import require_POST
 
+
 def home(request):
     # Vérifie si la langue est définie dans la session, sinon la définir à 'en-us'
     if not request.session.get('language'):
