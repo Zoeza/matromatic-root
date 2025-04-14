@@ -105,16 +105,16 @@ def project_modal_content(request, action):
                     selected_projects.append(project)
                     click_counts[project_id] = current_count + 1
 
-            request.session["click_counts"] = click_counts
-            request.session["selected_projects"] = selected_projects
-            request.session.modified = True
-            context = {
-                'selected_projects': selected_projects,
-                'click_counts': click_counts,
+                request.session["click_counts"] = click_counts
+                request.session["selected_projects"] = selected_projects
+                request.session.modified = True
+                context = {
+                    'selected_projects': selected_projects,
+                    'click_counts': click_counts,
 
-            }
+                }
 
-            return render(request, url, context)
+                return render(request, url, context)
 
     if action == 'remove':
         for project in all_projects:
