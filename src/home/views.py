@@ -37,8 +37,11 @@ def project_modal_content(request, action):
     direction = request.session['language']
     url = direction + "/home/partials/content.html"
 
+    if seleted_projects not in request.session["selected_projects"]:
+        request.session["selected_projects"] = {}
+
     all_projects = request.session.get("projects_list", {})
-    selected_projects = request.session.get("selected_projects", {})
+    selected_projects = request.session["selected_projects"]
     project_id = request.GET.get("project_id", '')
 
     if action == 'add':
@@ -58,7 +61,5 @@ def project_modal_content(request, action):
     if action == 'remove':
         if project_id in selected_projects:
             del selected_projects[project_id]
-
-    request.session["selected_projects"] = selected_projects
 
     return render(request, url)
