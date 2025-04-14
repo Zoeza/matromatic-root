@@ -127,7 +127,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # settings.py
 
 # CSRF settings
-SESSION_COOKIE_NAME = '3u+@(yo)h5!ry2$g&6qwsknwoj49io0e222ñplñp'  # Nom du cookie pour la session
+SESSION_COOKIE_NAME = '4xo98v23p8ok0phrk35y1wpd1rqtajdb'  # Nom du cookie pour la session
 SESSION_EXPIRE_AT_BROWSER_CLOSE = False  # La session ne doit pas expirer à la fermeture du navigateur
 
 # En environnement de production, assure-toi que CSRF et SESSION_COOKIE sont bien sécurisés
