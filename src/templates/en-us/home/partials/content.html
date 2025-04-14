@@ -15,34 +15,29 @@
 </div>
 <div class="table-responsive-xl pb-5">
     <div class="row flex-nowrap">
-        check
-        {{selected_projects}}
         {% if selected_projects %}
-        {% for project_id, project in selected_projects.items %}
-        <div class="col-lg-4 col-md-6">
-                      <a href="#!">
-                          <div class="card card-lift">
-                              <div class="card-body pb-0">
-                                    <img src="{% static project.img %}" alt="{{ project.title }}" class="img-fluid rounded-top shadow-sm" />
-                                    <h4>{{ project.title }}</h4>
-                                    <p>Nombre de clics : {{ project.click_counts }}</p>
-                                    <div class="btn-group" role="group" aria-label="Basic example">
-                                      <button type="button" hx-get="{% url 'project_modal_content' 'add' %}?project_id={{ project.id }}"
-                                              hx-target="#projectModalContent" hx-trigger="click"
-                                              class="btn btn-secondary">+</button>
-                                      <button type="button" hx-get="{% url 'project_modal_content' 'remove' %}?project_id={{ project.id }}"
-                                              hx-target="#projectModalContent" hx-trigger="click"
-                                              class="btn btn-secondary">delete</button>
-                                      <button type="button" hx-get="{% url 'project_modal_content' 'decrement' %}?project_id={{ project_id }}"
-                                              hx-target="#projectModalContent" hx-trigger="click"
-                                              class="btn btn-secondary">-</button>
-                                    </div>
-
-                              </div>
-                          </div>
-                      </a>
-                  </div>
-              {% endfor %}
+            {% for project_id, project in selected_projects.items %}
+                <div class="col-lg-4 col-md-6">
+                    <div class="card card-lift">
+                        <div class="card-body pb-0">
+                            <img src="{% static project.img %}" alt="{{ project.title }}" class="img-fluid rounded-top shadow-sm" />
+                            <h4>{{ project.title }}</h4>
+                            <p>Nombre de clics : {{ project.click_counts }}</p>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" hx-get="{% url 'project_modal_content' 'add' %}?project_id={{ project_id }}"
+                                        hx-target="#projectModalContent" hx-trigger="click"
+                                        class="btn btn-secondary">+</button>
+                                <button type="button" hx-get="{% url 'project_modal_content' 'remove' %}?project_id={{ project_id }}"
+                                        hx-target="#projectModalContent" hx-trigger="click"
+                                        class="btn btn-secondary">delete</button>
+                                <button type="button" hx-get="{% url 'project_modal_content' 'decrement' %}?project_id={{ project_id }}"
+                                        hx-target="#projectModalContent" hx-trigger="click"
+                                        class="btn btn-secondary">-</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
         {% else %}
         <p>Aucun projet sélectionné pour le moment.</p>
       {% endif %}
