@@ -22,34 +22,13 @@ def home(request):
     except json.JSONDecodeError:
         raise Http404("Erreur de lecture JSON.")
 
+    request.session.pop("selected_projects")
+    if "selected_projects" not in request.session:
+        request.session["selected_projects"] = page_data.get("projects", {}).get("realizations", {})
+
     return render(request, url, {
         'data': page_data,
     })
-
-
-def decrement_click(request):
-    project_id = request.GET.get("project_id", '')
-    if not project_id:
-        raise Http404("ID du projet manquant.")
-
-    click_counts = request.session.get("click_counts", {})
-    selected_projects = request.session.get("selected_projects", [])
-
-    current_count = click_counts.get(project_id, 0)
-
-    if current_count > 1:
-        click_counts[project_id] = current_count - 1
-    else:
-        # Si 1 ou moins : suppression du projet de la sélection
-        click_counts.pop(project_id, None)
-        if project_id in selected_projects:
-            selected_projects.remove(project_id)
-
-    request.session["click_counts"] = click_counts
-    request.session["selected_projects"] = selected_projects
-    request.session.modified = True  # Marquer la session comme modifiée
-
-    return redirect("/?show_modal=true")
 
 
 def project_modal_content(request, action):
