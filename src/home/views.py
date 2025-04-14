@@ -25,6 +25,8 @@ def home(request):
     if "projects_list" not in request.session:
         request.session["projects_list"] = page_data.get('projects', {}).get('realizations', {})
 
+    request.session["test_list"] = page_data.get('houda', {})
+
     return render(request, url, {
         'data': page_data
     })
