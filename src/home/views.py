@@ -88,7 +88,7 @@ def project_modal_content(request, action):
         # Chercher le projet correspondant
         project = None
         for p in all_projects:
-            if p['id'] == project_id:
+            if str(p['id']) == project_id:
                 project = p
                 break
 
@@ -99,7 +99,7 @@ def project_modal_content(request, action):
         # Vérifier si le projet est déjà sélectionné
         deja_ajoute = False
         for p in selected_projects:
-            if p['id'] == project_id:
+            if str(p['id']) == project_id:
                 deja_ajoute = True
                 break
 
