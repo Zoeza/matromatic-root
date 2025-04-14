@@ -126,17 +126,17 @@ MEDIA_ROOT = 'matromatic-root/site/public/media'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # settings.py
 
-# CSRF settings
-SESSION_COOKIE_NAME = '4xo98v23p8ok0phrk35y1wpd1rqtajdb'  # Nom du cookie pour la session
-SESSION_EXPIRE_AT_BROWSER_CLOSE = False  # La session ne doit pas expirer à la fermeture du navigateur
+# Use cookie-based session storage (no database storage for sessions)
+SESSION_ENGINE = "django.contrib.sessions.backends.signed_cookies"
 
-# En environnement de production, assure-toi que CSRF et SESSION_COOKIE sont bien sécurisés
-CSRF_COOKIE_SECURE = True  # Utiliser HTTPS pour CSRF en production
-SESSION_COOKIE_SECURE = True  # Utiliser HTTPS pour les cookies de session
-
-# Dans un environnement HTTPS, tu devrais également activer HttpOnly pour sécuriser les cookies
-CSRF_COOKIE_HTTPONLY = True
+# Protect the session cookie from being accessed via JavaScript
 SESSION_COOKIE_HTTPONLY = True
 
-# Pour permettre les cookies dans les environnements Apache2
-CSRF_TRUSTED_ORIGINS = ['https://www.matromatic.com']
+# Uncomment in production to ensure session cookies are only sent over HTTPS
+# SESSION_COOKIE_SECURE = True
+
+# Set session cookie to expire after 1 day (86400 seconds)
+SESSION_COOKIE_AGE = 86400
+
+# If True, session expires when the browser is closed
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False
