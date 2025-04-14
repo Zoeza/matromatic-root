@@ -62,6 +62,9 @@ def project_modal_content(request, action):
     if "selected_projects" not in request.session:
         request.session["selected_projects"] = []
 
+    if "click_counts" not in request.session:
+        request.session["click_counts"] = []
+
     direction = request.session['language']
     url = direction + "/home/partials/content.html"
 
@@ -76,8 +79,10 @@ def project_modal_content(request, action):
 
     # Obtenir tous les projets
     all_projects = page_data.get('projects', {}).get('realizations', [])
-
     selected_projects = request.session["selected_projects"]
+    click_counts = request.session["click_counts"]
+
+    current_count = click_counts.get(project_id, 0)
 
     # Récupérer l'ID du projet depuis la requête
     project_id = request.GET.get("project_id", '')
@@ -86,11 +91,30 @@ def project_modal_content(request, action):
 
     if action == 'add':
         # Chercher le projet correspondant
+
+        deja_ajoute = False
+        for project in selected_projects:
+            if str(project['id']) == project_id:
+                click_counts[project_id] = current_count + 1
+                deja_ajoute = True
+                break
+
         for project in all_projects:
             if str(project['id']) == project_id:
-                selected_projects.append(project)
-                request.session["selected_projects"] = selected_projects
-                return render(request, url, {"selected_projects": selected_projects})
+                if not deja_ajoute:
+                    selected_projects.append(project)
+                    click_counts[project_id] = current_count + 1
+
+            request.session["click_counts"] = click_counts
+            request.session["selected_projects"] = selected_projects
+            request.session.modified = True
+            context = {
+                'selected_projects': selected_projects,
+                'click_counts': click_counts,
+
+            }
+
+            return render(request, url, context)
 
     if action == 'remove':
         for project in all_projects:
