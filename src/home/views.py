@@ -38,6 +38,9 @@ def project_modal_content(request, action):
     direction = request.session['language']
     url = direction + "/home/partials/content.html"
 
+    if "selected_projects" not in request.session:
+        request.session["selected_projects"] = {}
+
     all_projects = request.session.get("projects_list", {})
     selected_projects = request.session["selected_projects"]
     project_id = request.GET.get("project_id", '')
