@@ -6,7 +6,6 @@ from django.views.decorators.http import require_POST
 
 
 def home(request):
-    # Vérifie si la langue est définie dans la session, sinon la définir à 'en-us'
     if not request.session.get('language'):
         request.session['language'] = 'en-us'
 
@@ -15,7 +14,6 @@ def home(request):
 
     json_path = os.path.join(os.path.dirname(__file__), 'data', 'page.json')
 
-    # Charger les données du fichier JSON
     try:
         with open(json_path, 'r', encoding='utf-8') as file:
             page_data = json.load(file)
@@ -55,18 +53,15 @@ def decrement_click(request):
 
 
 def project_modal_content(request, action):
-    # Définir la langue par défaut si elle n'est pas déjà définie
     if not request.session.get('language'):
         request.session['language'] = 'en-us'
 
-    # Initialiser les listes dans la session si elles n'existent pas
     if "selected_projects" not in request.session:
         request.session["selected_projects"] = []
 
     direction = request.session['language']
     url = direction + "/home/partials/content.html"
 
-    # Charger les données depuis le fichier JSON
     json_path = os.path.join(os.path.dirname(__file__), 'data', 'page.json')
     try:
         with open(json_path, 'r', encoding='utf-8') as file:
@@ -76,10 +71,8 @@ def project_modal_content(request, action):
 
     all_projects = page_data.get('projects', {}).get('realizations', [])
     selected_projects = request.session["selected_projects"]
-    click_counts = request.session["click_counts"]
-
-    # Obtenir l'ID du projet depuis la requête
     project_id = request.GET.get("project_id", '')
+
     if not project_id:
         raise Http404("ID du projet manquant.")
 
@@ -89,7 +82,6 @@ def project_modal_content(request, action):
             if str(project['id']) == project_id:
                 project['click_counts'] = project.get('click_counts', 0) + 1
                 deja_ajoute = True
-                break
 
         if not deja_ajoute:
             for project in all_projects:
@@ -109,16 +101,16 @@ def project_modal_content(request, action):
 
         context = {
             'selected_projects': selected_projects,
-            'click_counts': click_counts,
         }
         return render(request, url, context)
 
-    if action == 'remove':
+    if action == 'decrement':
         for project in selected_projects:
             if str(project['id']) == project_id:
-                selected_projects.remove(project)
-                break  # Sortir de la boucle après suppression
-
+                if project['click_counts'] > 1:
+                    project['click_counts'] = project.get('click_counts', 0) - 1
+                else:
+                    selected_projects.remove(project)
         request.session["selected_projects"] = selected_projects
         request.session.modified = True
 
