@@ -68,8 +68,8 @@ def decrement_click(request):
 
 
 def project_modal_content(request, action):
-    direction = request.session.get('language', 'en')
-    url = direction + "/home/index.html"
+    direction = request.session['language']
+    url = direction + "/home/partials/content.html"
     json_path = os.path.join(os.path.dirname(__file__), 'data', 'page.json')
 
     try:
@@ -80,21 +80,44 @@ def project_modal_content(request, action):
     except json.JSONDecodeError:
         raise Http404("Erreur de lecture JSON.")
 
-    projects = page_data.get('projects', {}).get('realizations', [])
+    # Liste des projets depuis le JSON
+    all_projects = page_data.get('projects', {}).get('realizations', [])
+
+    # Liste actuelle des projets sélectionnés en session
+    selected_projects = request.session.get("selected_projects", [])
 
     if action == 'add':
         project_id = request.GET.get("project_id", '')
         if not project_id:
             raise Http404("ID du projet manquant.")
 
-        for project in projects:
-            if project_id == project['id']:
-                request.session["selected_projects"] = project
+        for project in all_projects:
+            if project['id'] == project_id:
+                # Vérifier si le projet est déjà sélectionné
+                is_already_selected = False
+                for selected_project in selected_projects:
+                    if selected_project['id'] == project_id:
+                        is_already_selected = True
+                        break
+                if not is_already_selected:
+                    selected_projects.append(project)
+                    request.session["selected_projects"] = selected_projects
                 break
         else:
             raise Http404("Projet non trouvé.")
 
     elif action == 'remove':
-        request.session.pop("selected_projects", None)
+        project_id = request.GET.get("project_id", '')
+        if not project_id:
+            raise Http404("ID du projet à retirer manquant.")
 
-    return render(request, url, {"selected_projects": request.session.get("selected_projects", {})})
+        # Supprimer le projet de la liste sélectionnée
+        updated_projects = []
+        for selected_project in selected_projects:
+            if selected_project['id'] != project_id:
+                updated_projects.append(selected_project)
+        request.session["selected_projects"] = updated_projects
+
+    return render(request, url, {
+        "selected_projects": request.session.get("selected_projects", [])
+    })
