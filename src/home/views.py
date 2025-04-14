@@ -54,9 +54,6 @@ def decrement_click(request):
     return redirect("/?show_modal=true")
 
 
-
-
-
 def project_modal_content(request, action):
     # Définir la langue par défaut si elle n'est pas déjà définie
     if not request.session.get('language'):
@@ -95,19 +92,23 @@ def project_modal_content(request, action):
         deja_ajoute = False
         for project in selected_projects:
             if str(project['id']) == project_id:
-                click_counts[project_id] = current_count + 1
+                project['click_counts'] = project.get('click_counts', 0) + 1
                 deja_ajoute = True
                 break
 
         if not deja_ajoute:
             for project in all_projects:
                 if str(project['id']) == project_id:
-                    selected_projects.append(project)
-                    click_counts[project_id] = current_count + 1
-                    break  # Ajouté un break ici aussi, si besoin
+                    new_project = {
+                        'id': project.get('id'),
+                        'title': project.get('title'),
+                        'description': project.get('description'),
+                        'img': project.get('img'),
+                        'click_counts': 1
+                    }
+                    selected_projects.append(new_project)
 
         # Sauvegarder les changements dans la session
-        request.session["click_counts"] = click_counts
         request.session["selected_projects"] = selected_projects
         request.session.modified = True
 
