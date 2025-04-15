@@ -479,7 +479,7 @@
 <!-- Modal Dynamique pour chaque projet -->
 
 {% for project_id, project in request.session.projects_list.items %}
-    <div class="modal fade bd-example-modal-xl" id="{{project.modal}}_Modal" tabindex="-1" role="dialog" aria-labelledby="modalLabelproject" inert>
+    <div class="modal fade bd-example-modal-xl" id="{{project.modal}}_Modal" tabindex="-1" role="dialog" aria-labelledby="modalLabelproject" aria-hidden="false">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
                 <div class="modal-header">
