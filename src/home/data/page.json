@@ -1,11 +1,26 @@
-{ "menu_list": [
-    {"link":"#", "title":"Accueil"},
-    {"link":"about_us","title": "À propos de nous"},
-    {"link":"services","title":"Services"},
-    {"link":"projects","title":"Projets"},
-    {"link":"contact", "title":"Contact"}
+{
+  "menu_list": [
+    {
+      "link": "#",
+      "title": "Accueil"
+    },
+    {
+      "link": "about_us",
+      "title": "À propos de nous"
+    },
+    {
+      "link": "services",
+      "title": "Services"
+    },
+    {
+      "link": "projects",
+      "title": "Projets"
+    },
+    {
+      "link": "contact",
+      "title": "Contact"
+    }
   ],
-
   "services": {
     "subtitle": "Ce que nous faisons",
     "title": "Nous concevons des solutions robotiques sur mesure, combinant expertise en mécanique, électronique et informatique.",
@@ -32,7 +47,6 @@
       }
     ]
   },
-
   "about": {
     "subtitle": "Aperçu de l'entreprise",
     "title": "Découvrez l’essence de Matromatic, expert en robotique et systèmes embarqués.",
@@ -62,7 +76,6 @@
             }
           ]
         },
-
         {
           "col_class": "col-lg-6 col-md-6 col-12",
           "blocks": [
@@ -76,28 +89,23 @@
       ]
     }
   },
-
   "commitments": [
     {
-      "icon":"<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" fill=\"currentColor\" class=\"bi bi-rocket-takeoff\" viewBox=\"0 0 16 16\">\n   <path d=\"M9.752 6.193c.599.6 1.73.437 2.528-.362s.96-1.932.362-2.531c-.599-.6-1.73-.438-2.528.361-.798.8-.96 1.933-.362 2.532\"/>\n  <path d=\"M15.811 3.312c-.363 1.534-1.334 3.626-3.64 6.218l-.24 2.408a2.56 2.56 0 0 1-.732 1.526L8.817 15.85a.51.51 0 0 1-.867-.434l.27-1.899c.04-.28-.013-.593-.131-.956a9 9 0 0 0-.249-.657l-.082-.202c-.815-.197-1.578-.662-2.191-1.277-.614-.615-1.079-1.379-1.275-2.195l-.203-.083a10 10 0 0 0-.655-.248c-.363-.119-.675-.172-.955-.132l-1.896.27A.51.51 0 0 1 .15 7.17l2.382-2.386c.41-.41.947-.67 1.524-.734h.006l2.4-.238C9.005 1.55 11.087.582 12.623.208c.89-.217 1.59-.232 2.08-.188.244.023.435.06.57.093q.1.026.16.045c.184.06.279.13.351.295l.029.073a3.5 3.5 0 0 1 .157.721c.055.485.051 1.178-.159 2.065m-4.828 7.475.04-.04-.107 1.081a1.54 1.54 0 0 1-.44.913l-1.298 1.3.054-.38c.072-.506-.034-.993-.172-1.418a9 9 0 0 0-.164-.45c.738-.065 1.462-.38 2.087-1.006M5.205 5c-.625.626-.94 1.351-1.004 2.09a9 9 0 0 0-.45-.164c-.424-.138-.91-.244-1.416-.172l-.38.054 1.3-1.3c.245-.246.566-.401.91-.44l1.08-.107zm9.406-3.961c-.38-.034-.967-.027-1.746.163-1.558.38-3.917 1.496-6.937 4.521-.62.62-.799 1.34-.687 2.051.107.676.483 1.362 1.048 1.928.564.565 1.25.941 1.924 1.049.71.112 1.429-.067 2.048-.688 3.079-3.083 4.192-5.444 4.556-6.987.183-.771.18-1.345.138-1.713a3 3 0 0 0-.045-.283 3 3 0 0 0-.3-.041Z\"/>\n                                               <path d=\"M7.009 12.139a7.6 7.6 0 0 1-1.804-1.352A7.6 7.6 0 0 1 3.794 8.86c-1.102.992-1.965 5.054-1.839 5.18.125.126 3.936-.896 5.054-1.902Z\"/>\n                                             </svg>",
+      "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" fill=\"currentColor\" class=\"bi bi-rocket-takeoff\" viewBox=\"0 0 16 16\">\n   <path d=\"M9.752 6.193c.599.6 1.73.437 2.528-.362s.96-1.932.362-2.531c-.599-.6-1.73-.438-2.528.361-.798.8-.96 1.933-.362 2.532\"/>\n  <path d=\"M15.811 3.312c-.363 1.534-1.334 3.626-3.64 6.218l-.24 2.408a2.56 2.56 0 0 1-.732 1.526L8.817 15.85a.51.51 0 0 1-.867-.434l.27-1.899c.04-.28-.013-.593-.131-.956a9 9 0 0 0-.249-.657l-.082-.202c-.815-.197-1.578-.662-2.191-1.277-.614-.615-1.079-1.379-1.275-2.195l-.203-.083a10 10 0 0 0-.655-.248c-.363-.119-.675-.172-.955-.132l-1.896.27A.51.51 0 0 1 .15 7.17l2.382-2.386c.41-.41.947-.67 1.524-.734h.006l2.4-.238C9.005 1.55 11.087.582 12.623.208c.89-.217 1.59-.232 2.08-.188.244.023.435.06.57.093q.1.026.16.045c.184.06.279.13.351.295l.029.073a3.5 3.5 0 0 1 .157.721c.055.485.051 1.178-.159 2.065m-4.828 7.475.04-.04-.107 1.081a1.54 1.54 0 0 1-.44.913l-1.298 1.3.054-.38c.072-.506-.034-.993-.172-1.418a9 9 0 0 0-.164-.45c.738-.065 1.462-.38 2.087-1.006M5.205 5c-.625.626-.94 1.351-1.004 2.09a9 9 0 0 0-.45-.164c-.424-.138-.91-.244-1.416-.172l-.38.054 1.3-1.3c.245-.246.566-.401.91-.44l1.08-.107zm9.406-3.961c-.38-.034-.967-.027-1.746.163-1.558.38-3.917 1.496-6.937 4.521-.62.62-.799 1.34-.687 2.051.107.676.483 1.362 1.048 1.928.564.565 1.25.941 1.924 1.049.71.112 1.429-.067 2.048-.688 3.079-3.083 4.192-5.444 4.556-6.987.183-.771.18-1.345.138-1.713a3 3 0 0 0-.045-.283 3 3 0 0 0-.3-.041Z\"/>\n                                               <path d=\"M7.009 12.139a7.6 7.6 0 0 1-1.804-1.352A7.6 7.6 0 0 1 3.794 8.86c-1.102.992-1.965 5.054-1.839 5.18.125.126 3.936-.896 5.054-1.902Z\"/>\n                                             </svg>",
       "title": "Innovation continue",
       "description": "Nous investissons dans la recherche et le développement pour concevoir des solutions toujours plus performantes et intelligentes."
     },
-
     {
-      "icon":"<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" fill=\"currentColor\" class=\"bi bi-shield-check\" viewBox=\"0 0 16 16\">\n    <path d=\"M5.338 1.59a61 61 0 0 0-2.837.856.48.48 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.7 10.7 0 0 0 2.287 2.233c.346.244.652.42.893.533q.18.085.293.118a1 1 0 0 0 .101.025 1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56\"/>\n  <path d=\"M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0\"/>\n  </svg>",
+      "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" fill=\"currentColor\" class=\"bi bi-shield-check\" viewBox=\"0 0 16 16\">\n    <path d=\"M5.338 1.59a61 61 0 0 0-2.837.856.48.48 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.7 10.7 0 0 0 2.287 2.233c.346.244.652.42.893.533q.18.085.293.118a1 1 0 0 0 .101.025 1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56\"/>\n  <path d=\"M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0\"/>\n  </svg>",
       "title": "Qualité & Fiabilité",
       "description": "Nous concevons chaque système avec une précision rigoureuse, dans le respect des standards les plus exigeants de l'industrie."
     },
-
     {
-      "icon":"<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" fill=\"currentColor\" class=\"bi bi-people\" viewBox=\"0 0 16 16\">\n  <path d=\"M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4\"/>\n /svg>",
+      "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"32\" fill=\"currentColor\" class=\"bi bi-people\" viewBox=\"0 0 16 16\">\n  <path d=\"M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4\"/>\n /svg>",
       "title": "Partenariat durable",
       "description": "Nous plaçons la satisfaction client au cœur de nos priorités, en offrant un accompagnement sur mesure à chaque étape du projet."
     }
-
   ],
-
   "skills": {
     "subtitle": "Nos compétences clés",
     "title": "Une expertise pluridisciplinaire au service de l’innovation .",
@@ -125,57 +133,51 @@
       }
     ]
   },
-
-
-
   "projects": {
-
     "subtitle": "Nos réalisations",
     "title": "Explorez nos réalisations",
     "description": " Chez Matromatic, nous concevons, réalisons et optimisons des machines adaptées aux besoins spécifiques de nos clients.\n  Chaque projet est l'occasion de relever de nouveaux défis et de fournir des solutions efficaces.",
-    "realizations":{
-      "1":{
-        "img":"home/assets/img/projets/projet-01.jpg",
+    "realizations": {
+      "1": {
+        "img": "home/assets/img/projets/projet-01.jpg",
         "title": "Coffrage  glissant",
         "modal": "coffrage_métalliqueModalCenter",
-        "description":"Le coffrage glissant HyF 211 HEA 235 60 est un équipement mobile conçu spécifiquement\npour le revêtement intérieur des tunnels. Avec un rayon de 5,88 m et une longueur de 10m,",
+        "description": "Le coffrage glissant HyF 211 HEA 235 60 est un équipement mobile conçu spécifiquement\npour le revêtement intérieur des tunnels. Avec un rayon de 5,88 m et une longueur de 10m,",
         "steps": {
           "introduction": "Ce projet est composé de deux éléments principaux :\nle portique (structure de support) et la peau coffrante (surface de moulage).\nSa réalisation s’est déroulée en trois grandes étapes, chacune illustrée ci-dessous :\n\n",
           "step one": {
-            "title":" Conception 3D",
+            "title": " Conception 3D",
             "description": "Nous avons commencé par la modélisation complète en 3D, intégrant à la fois le portique et la peau coffrante. Cette étape a permis de valider l’assemblage, les dimensions et les contraintes mécaniques."
           }
-
         }
       },
-      "2":{
-        "img":"home/assets/img/projets/projet-02.JPG",
+      "2": {
+        "img": "home/assets/img/projets/projet-02.JPG",
         "title": "Coffrage  glissant: portique",
         "modal": "broyeur",
-        "description":"Le coffrage glissant HyF 211 HEA 235 60 est un équipement mobile conçu spécifiquement\npour le revêtement intérieur des tunnels. Avec un rayon de 5,88 m et une longueur de 10m,",
-         "steps": {
+        "description": "Le coffrage glissant HyF 211 HEA 235 60 est un équipement mobile conçu spécifiquement\npour le revêtement intérieur des tunnels. Avec un rayon de 5,88 m et une longueur de 10m,",
+        "steps": {
           "introduction": "Ce projet est composé de deux éléments principaux :\nle portique (structure de support) et la peau coffrante (surface de moulage).\nSa réalisation s’est déroulée en trois grandes étapes, chacune illustrée ci-dessous :\n\n",
           "step one": {
-            "title":" Conception 3D",
+            "title": " Conception 3D",
             "description": "Nous avons commencé par la modélisation complète en 3D, intégrant à la fois le portique et la peau coffrante. Cette étape a permis de valider l’assemblage, les dimensions et les contraintes mécaniques."
           }
-
+        }
       },
-      "3":{
+      "3": {
         "img": "home/assets/img/projets/projet-03.JPG",
         "title": "Coffrage  glissant: peau coffrante",
         "modal": "peau_coffrante",
-        "description":"Le coffrage glissant HyF 211 HEA 235 60 est un équipement mobile conçu spécifiquement\npour le revêtement intérieur des tunnels. Avec un rayon de 5,88 m et une longueur de 10m,",
-         "steps": {
+        "description": "Le coffrage glissant HyF 211 HEA 235 60 est un équipement mobile conçu spécifiquement\npour le revêtement intérieur des tunnels. Avec un rayon de 5,88 m et une longueur de 10m,",
+        "steps": {
           "introduction": "Ce projet est composé de deux éléments principaux :\nle portique (structure de support) et la peau coffrante (surface de moulage).\nSa réalisation s’est déroulée en trois grandes étapes, chacune illustrée ci-dessous :\n\n",
           "step one": {
-            "title":" Conception 3D",
+            "title": " Conception 3D",
             "description": "Nous avons commencé par la modélisation complète en 3D, intégrant à la fois le portique et la peau coffrante. Cette étape a permis de valider l’assemblage, les dimensions et les contraintes mécaniques."
           }
-
+        }
       }
     }
   }
-
 }
 
