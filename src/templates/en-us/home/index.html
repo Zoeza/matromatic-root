@@ -169,7 +169,6 @@
     </section>
     <!-- Skills end-->
     <!-- Projects start-->
-{{ request.session.click_counts}}
 
     <section id="_projects" class="py-xl-9 py-5 bg-gray-900">
         <div class="container">
@@ -190,7 +189,7 @@
                                 <img src="{% static project.img %}" alt="{{ project.title }}" class="img-fluid rounded-top-3">
                                 <div class="card-body">
                                     <h4>{{ project.title }}</h4>
-                                    <a href="#" data-bs-toggle="modal" data-bs-target="#ProjectsModal"
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#{{project_id}}Modal"
                                        class="btn btn-primary">plus de details </a>
                                 </div>
                             </div>
@@ -434,17 +433,23 @@
 <!-- Modals end -->
 <!-- Project Modals start -->
 <!-- Modal Dynamique pour chaque projet -->
-<div class="modal fade bd-example-modal-xl" id="ProjectsModal" tabindex="-1" role="dialog" aria-labelledby="modalLabelproject" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modalLabelprojects">Liste des projets sélectionnés</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
-            </div>
-            <div class="modal-body" id="projectModalContent">
+{% for project_id, project in request.session.projects_list.items %}
 
+    <div class="modal fade bd-example-modal-xl" id="{{project_id}}Modal" tabindex="-1" role="dialog" aria-labelledby="modalLabelproject" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabelprojects">{{project.title}}</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                </div>
+                <div class="modal-body" id="projectModalContent">
+
+                </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Project Modals  end --> {% endblock %}
+
+
+{% endfor %}
+<!-- Project Modals  end -->
+{% endblock %}
