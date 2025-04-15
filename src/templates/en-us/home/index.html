@@ -564,8 +564,8 @@
                                         </p>
                                        <div class="mb-3">
                                             <h4>Etapes :</h4>
-                                            {% for step in project.steps %}
-                                                <div class="mb-4">
+                                           {% for step in project.steps.steps_list %}
+                                           <div class="mb-4">
                                                     <h5>{{ step.title }}</h5>
                                                     <p>{{ step.description }}</p>
                                                 </div>
