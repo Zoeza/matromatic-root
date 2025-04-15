@@ -143,13 +143,15 @@
         "title": "Coffrage  glissant",
         "modal": "coffrage_métalliqueModalCenter",
         "description": "Le coffrage glissant HyF 211 HEA 235 60 est un équipement mobile conçu spécifiquement\npour le revêtement intérieur des tunnels. Avec un rayon de 5,88 m et une longueur de 10m,",
-        "steps": {
-          "introduction": "Ce projet est composé de deux éléments principaux :\nle portique (structure de support) et la peau coffrante (surface de moulage).\nSa réalisation s’est déroulée en trois grandes étapes, chacune illustrée ci-dessous :\n\n",
-          "step one": {
-            "title": " Conception 3D",
-            "description": "Nous avons commencé par la modélisation complète en 3D, intégrant à la fois le portique et la peau coffrante. Cette étape a permis de valider l’assemblage, les dimensions et les contraintes mécaniques."
+        "steps": [
+          {
+            "introduction": "Ce projet est composé de deux éléments principaux :\nle portique (structure de support) et la peau coffrante (surface de moulage).\nSa réalisation s’est déroulée en trois grandes étapes, chacune illustrée ci-dessous :\n\n",
+            "step one": {
+              "title": " Conception 3D",
+              "description": "Nous avons commencé par la modélisation complète en 3D, intégrant à la fois le portique et la peau coffrante. Cette étape a permis de valider l’assemblage, les dimensions et les contraintes mécaniques."
+            }
           }
-        }
+        ]
       },
       "2": {
         "img": "home/assets/img/projets/projet-02.JPG",
