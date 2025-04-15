@@ -138,55 +138,76 @@
     "title": "Explorez nos réalisations",
     "description": " Chez Matromatic, nous concevons, réalisons et optimisons des machines adaptées aux besoins spécifiques de nos clients.\n  Chaque projet est l'occasion de relever de nouveaux défis et de fournir des solutions efficaces.",
     "realizations": {
-    "1": {
-      "img": "home/assets/img/projets/projet-01.jpg",
-      "title": "Coffrage glissant",
-      "modal": "coffrage_métalliqueModalCenter",
-      "description": "Le coffrage glissant HyF 211 HEA 235 60 est un équipement mobile conçu spécifiquement pour le revêtement intérieur des tunnels. Avec un rayon de 5,88 m et une longueur de 10 m.",
-
-      "steps": {
-        "introduction": "Ce projet est composé de deux éléments principaux : le portique (structure de support) et la peau coffrante (surface de moulage). Sa réalisation s’est déroulée en trois grandes étapes, chacune illustrée ci-dessous :",
-         "steps_list": [
-           {
-           "title": "Conception 3D",
-          "description": "Nous avons commencé par la modélisation complète en 3D, intégrant à la fois le portique et la peau coffrante. Cette étape a permis de valider l’assemblage, les dimensions et les contraintes mécaniques."
-           }
-         ]
-      }
-    },
-    "2": {
-      "img": "home/assets/img/projets/projet-02.JPG",
-      "title": "Coffrage glissant : portique",
-      "modal": "broyeur",
-      "description": "Le coffrage glissant HyF 211 HEA 235 60 est un équipement mobile conçu spécifiquement pour le revêtement intérieur des tunnels. Avec un rayon de 5,88 m et une longueur de 10 m.",
-      "steps": {
-        "introduction": "Ce projet est composé de deux éléments principaux : le portique (structure de support) et la peau coffrante (surface de moulage). Sa réalisation s’est déroulée en trois grandes étapes, chacune illustrée ci-dessous :",
-         "steps_list": [
-           {
-           "title": "Conception 3D",
-          "description": "Nous avons commencé par la modélisation complète en 3D, intégrant à la fois le portique et la peau coffrante. Cette étape a permis de valider l’assemblage, les dimensions et les contraintes mécaniques."
-           }
-         ]
-      }
-    },
-    "3": {
-      "img": "home/assets/img/projets/projet-03.JPG",
-      "title": "Coffrage glissant : peau coffrante",
-      "modal": "peau_coffrante",
-      "description": "Le coffrage glissant HyF 211 HEA 235 60 est un équipement mobile conçu spécifiquement pour le revêtement intérieur des tunnels. Avec un rayon de 5,88 m et une longueur de 10 m.",
-
+      "1": {
+        "img": "home/assets/img/projets/projet-01.jpg",
+        "title": "Coffrage glissant",
+        "modal": "coffrage_métalliqueModalCenter",
+        "description": "Le coffrage glissant HyF 211 HEA 235 60 est un équipement mobile conçu spécifiquement pour le revêtement intérieur des tunnels. Avec un rayon de 5,88 m et une longueur de 10 m.",
         "steps": {
-        "introduction": "Ce projet est composé de deux éléments principaux : le portique (structure de support) et la peau coffrante (surface de moulage). Sa réalisation s’est déroulée en trois grandes étapes, chacune illustrée ci-dessous :",
-         "steps_list": [
-           {
-           "title": "Conception 3D",
-          "description": "Nous avons commencé par la modélisation complète en 3D, intégrant à la fois le portique et la peau coffrante. Cette étape a permis de valider l’assemblage, les dimensions et les contraintes mécaniques."
-           }
-         ]
+          "introduction": "Ce projet est composé de deux éléments principaux : le portique (structure de support) et la peau coffrante (surface de moulage). Sa réalisation s’est déroulée en trois grandes étapes, chacune illustrée ci-dessous :",
+          "steps_list": [
+            {
+              "title": "Conception 3D",
+              "description": "Nous avons commencé par la modélisation complète en 3D, intégrant à la fois le portique et la peau coffrante. Cette étape a permis de valider l’assemblage, les dimensions et les contraintes mécaniques."
+            },
+            {
+              "title": "Méthodologie & Suivi",
+              "description": "Une méthodologie agile et rigoureuse a été adoptée pour assurer le suivi technique. Chaque composant a été fabriqué en atelier, puis contrôlé selon les plans validés."
+            },
+            {
+              "title": "Réalisation finale",
+              "description": "Le portique et la peau coffrante ont été assemblés sur site. Le montage final a été effectué dans le respect des exigences techniques et de sécurité."
+            }
+          ]
+        }
+      },
+      "2": {
+        "img": "home/assets/img/projets/projet-02.JPG",
+        "title": "Coffrage glissant : portique",
+        "modal": "broyeur",
+        "description": "Le coffrage glissant HyF 211 HEA 235 60 est un équipement mobile conçu spécifiquement pour le revêtement intérieur des tunnels. Avec un rayon de 5,88 m et une longueur de 10 m.",
+        "steps": {
+          "introduction": "Ce projet est composé de deux éléments principaux : le portique (structure de support) et la peau coffrante (surface de moulage). Sa réalisation s’est déroulée en trois grandes étapes, chacune illustrée ci-dessous :",
+          "steps_list": [
+            {
+              "title": "Conception 3D",
+              "description": "Nous avons commencé par la modélisation complète en 3D, intégrant à la fois le portique et la peau coffrante. Cette étape a permis de valider l’assemblage, les dimensions et les contraintes mécaniques."
+            },
+            {
+              "title": "Méthodologie & Suivi",
+              "description": "Une méthodologie agile et rigoureuse a été adoptée pour assurer le suivi technique. Chaque composant a été fabriqué en atelier, puis contrôlé selon les plans validés."
+            },
+            {
+              "title": "Réalisation finale",
+              "description": "Le portique et la peau coffrante ont été assemblés sur site. Le montage final a été effectué dans le respect des exigences techniques et de sécurité."
+            }
+          ]
+        }
+      },
+      "3": {
+        "img": "home/assets/img/projets/projet-03.JPG",
+        "title": "Coffrage glissant : peau coffrante",
+        "modal": "peau_coffrante",
+        "description": "Le coffrage glissant HyF 211 HEA 235 60 est un équipement mobile conçu spécifiquement pour le revêtement intérieur des tunnels. Avec un rayon de 5,88 m et une longueur de 10 m.",
+        "steps": {
+          "introduction": "Ce projet est composé de deux éléments principaux : le portique (structure de support) et la peau coffrante (surface de moulage). Sa réalisation s’est déroulée en trois grandes étapes, chacune illustrée ci-dessous :",
+          "steps_list": [
+            {
+              "title": "Conception 3D",
+              "description": "Nous avons commencé par la modélisation complète en 3D, intégrant à la fois le portique et la peau coffrante. Cette étape a permis de valider l’assemblage, les dimensions et les contraintes mécaniques."
+            },
+            {
+              "title": "Méthodologie & Suivi",
+              "description": "Une méthodologie agile et rigoureuse a été adoptée pour assurer le suivi technique. Chaque composant a été fabriqué en atelier, puis contrôlé selon les plans validés."
+            },
+            {
+              "title": "Réalisation finale",
+              "description": "Le portique et la peau coffrante ont été assemblés sur site. Le montage final a été effectué dans le respect des exigences techniques et de sécurité."
+            }
+          ]
+        }
       }
     }
- }
-
   }
 }
 
