@@ -190,8 +190,11 @@
                                 <img src="{% static project.img %}" alt="{{ project.title }}" class="img-fluid rounded-top-3">
                                 <div class="card-body">
                                     <h4>{{ project.title }}</h4>
+                                    <p>Nombre de clics : {{ project.click_count }}</p>
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#ProjectsModal"
-                                       class="btn btn-primary">plus de details </a>
+                                       hx-target="#projectModalContent" hx-trigger="click delay:100ms"
+                                       hx-get="{% url 'project_modal_content' 'add' %}?project_id={{ project_id }}"
+                                       class="btn btn-primary">Cliquez ici </a>
                                 </div>
                             </div>
                         </div>
