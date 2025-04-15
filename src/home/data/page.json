@@ -143,12 +143,16 @@
       "2":{
         "img":"home/assets/img/projets/projet-02.JPG",
         "title": "Coffrage  glissant: portique",
-        "modal": "broyeur"
+        "modal": "broyeur",
+        "description":"Le coffrage glissant HyF 211 HEA 235 60 est un équipement mobile conçu spécifiquement\npour le revêtement intérieur des tunnels. Avec un rayon de 5,88 m et une longueur de 10m,"
+
       },
       "3":{
         "img": "home/assets/img/projets/projet-03.JPG",
         "title": "Coffrage  glissant: peau coffrante",
-        "modal": "peau_coffrante"
+        "modal": "peau_coffrante",
+        "description":"Le coffrage glissant HyF 211 HEA 235 60 est un équipement mobile conçu spécifiquement\npour le revêtement intérieur des tunnels. Avec un rayon de 5,88 m et une longueur de 10m,"
+
       }
     }
   }
