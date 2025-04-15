@@ -63,19 +63,23 @@
                     </div>
                 </div>
             </div>
-            <div class="row"> {% for card in data.services.cards %} <div class="col-md-6">
-                    <div class="card-grid" data-cue="zoomIn">
-                        <div class="card-grid-inner">
-                            <h3 class="card-grid-heading">{{ card.title }}</h3>
-                            <div class="card-grid-text">
-                                <p class="mb-0">{{ card.description }}</p>
+            <div class="row">
+                {% for card in data.services.cards %}
+                    <div class="col-md-6">
+                        <div class="card-grid" data-cue="zoomIn">
+                            <div class="card-grid-inner">
+                                <h3 class="card-grid-heading">{{ card.title }}</h3>
+                                <div class="card-grid-text">
+                                    <p class="mb-0">{{ card.description }}</p>
+                                </div>
+                            </div>
+                            <div class="card-grid-image">
+                                <img src="{% static card.image %}" alt="service" class="rounded-3 img-fluid" />
                             </div>
                         </div>
-                        <div class="card-grid-image">
-                            <img src="{% static card.image %}" alt="service" class="rounded-3 img-fluid" />
-                        </div>
                     </div>
-                </div> {% endfor %} </div>
+                {% endfor %}
+            </div>
         </div>
     </section>
     <!--Service we offer end-->
@@ -96,41 +100,70 @@
                         <div class="nav-wrapper mx-md-10 mb-lg-8 mb-5">
                             <ul class="nav nav-fill d-none d-lg-flex nav-line-bottom nav-pills" id="pills-tab" role="tablist">
                                 <li class="nav-item" role="presentation">
-                                    <a class="nav-link active" id="pills-company-tab" data-bs-toggle="pill" href="#pills-company" role="tab" aria-controls="pills-company" aria-selected="true"> Qui sommes-nous ? </a>
+                                    <a class="nav-link active" id="pills-company-tab"
+                                       data-bs-toggle="pill" href="#pills-company"
+                                       role="tab" aria-controls="pills-company"
+                                       aria-selected="true"> Qui sommes-nous ? </a>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <a class="nav-link" id="pills-commitments-tab" data-bs-toggle="pill" href="#pills-commitments" type="button" role="tab" aria-controls="pills-commitments" aria-selected="false"> Nos engagements </a>
+                                    <a class="nav-link" id="pills-commitments-tab"
+                                       data-bs-toggle="pill" href="#pills-commitments"
+                                       type="button" role="tab" aria-controls="pills-commitments"
+                                       aria-selected="false"> Nos engagements </a>
                                 </li>
                             </ul>
                         </div>
+
                         <div class="tab-content" id="pills-tabContentOne">
-                            <div class="tab-pane fade show active" id="pills-company" role="tabpanel" aria-labelledby="pills-company-tab" tabindex="0">
+                            <div class="tab-pane fade show active" id="pills-company"
+                                 role="tabpanel" aria-labelledby="pills-company-tab" tabindex="0">
                                 <div class="row align-items-center gy-5">
                                     <div class="col-xl-4 col-md-6 col-12">
-                                        <div class="d-flex flex-column gap-4"> {% for block in data.about.description_blocks %} <div class="d-flex flex-column gap-2">
-                                                <h2>{{ block.heading }}</h2> {% for paragraph in block.paragraphs %} <p class="mb-0">{{ paragraph }}</p> {% endfor %}
-                                            </div> {% endfor %} </div>
+                                        <div class="d-flex flex-column gap-4">
+                                            {% for block in data.about.description_blocks %}
+                                                <div class="d-flex flex-column gap-2">
+                                                    <h2>{{ block.heading }}</h2>
+                                                    {% for paragraph in block.paragraphs %}
+                                                        <p class="mb-0">{{ paragraph }}</p>
+                                                    {% endfor %}
+                                                </div>
+                                            {% endfor %}
+                                        </div>
                                     </div>
                                     <div class="col-xl-6 offset-xl-2 col-md-6 col-12">
-                                        <div class="row g-4"> {% for col in data.about.gallery.rows %} <div class="{{ col.col_class }}"> {% for block in col.blocks %} <div class="{{ block.class }}" style="background-image: url({% static block.image %}); {{ block.style }}"></div> {% endfor %} </div> {% endfor %} </div>
+                                        <div class="row g-4">
+                                            {% for col in data.about.gallery.rows %}
+                                                <div class="{{ col.col_class }}">
+                                                    {% for block in col.blocks %}
+                                                        <div class="{{ block.class }}" style="background-image: url({% static block.image %}); {{ block.style }}">
+
+                                                        </div>
+                                                   {% endfor %}
+                                                </div>
+                                            {% endfor %}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <!-- Nos engagements-->
                             <div class="tab-pane fade" id="pills-commitments" role="tabpanel" aria-labelledby="pills-commitments-tab" tabindex="0">
-                                <div class="row g-4" data-cue="zoomIn"> {% for commitment in data.commitments %} <div class="col-lg-4 col-md-6 col-12">
-                                        <div class="d-flex flex-column gap-4 text-center text-lg-start mx-4 mx-lg-auto">
-                                            <div>
-                                                <span class="bg-primary bg-opacity-10 rounded icon-shape icon-xl">
-                                                    {{ commitment.icon|safe }}
-                                                </span>
-                                            </div>
-                                            <div>
-                                                <h3>{{ commitment.title }}</h3>
-                                                <p class="mb-0">{{ commitment.description }}</p>
+                                <div class="row g-4" data-cue="zoomIn">
+                                    {% for commitment in data.commitments %}
+                                        <div class="col-lg-4 col-md-6 col-12">
+                                            <div class="d-flex flex-column gap-4 text-center text-lg-start mx-4 mx-lg-auto">
+                                                <div>
+                                                    <span class="bg-primary bg-opacity-10 rounded icon-shape icon-xl">
+                                                        {{ commitment.icon|safe }}
+                                                    </span>
+                                                </div>
+                                                <div>
+                                                    <h3>{{ commitment.title }}</h3>
+                                                    <p class="mb-0">{{ commitment.description }}</p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div> {% endfor %} </div>
+                                    {% endfor %}
+                                </div>
                             </div>
                         </div>
                     </div>
