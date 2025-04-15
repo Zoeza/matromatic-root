@@ -189,7 +189,7 @@
                                 <img src="{% static project.img %}" alt="{{ project.title }}" class="img-fluid rounded-top-3">
                                 <div class="card-body">
                                     <h4>{{ project.title }}</h4>
-                                    <a href="" data-bs-toggle="modal" data-bs-target="#p_Modal"
+                                    <a href="" data-bs-toggle="modal" data-bs-target="#{{project.modal}}_Modal"
                                        class="btn btn-primary">plus de details </a>
                                 </div>
                             </div>
@@ -434,21 +434,22 @@
 <!-- Project Modals start -->
 <!-- Modal Dynamique pour chaque projet -->
 
+    {% for project_id, project in request.session.projects_list.items %}
 
-    <div class="modal fade bd-example-modal-xl" id="p_Modal" tabindex="-1" role="dialog" aria-labelledby="modalLabelproject" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id= "modalLabel">ju</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
-                </div>
-                <div class="modal-body" id="pModalContent">
+        <div class="modal fade bd-example-modal-xl" id="{{project.modal}}_Modal" tabindex="-1" role="dialog" aria-labelledby="modalLabelproject" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id= "modalLabel">ju</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                    </div>
+                    <div class="modal-body" id="pModalContent">
 
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
+    {%endfor%}
 
 <!-- Project Modals  end -->
 {% endblock %}
