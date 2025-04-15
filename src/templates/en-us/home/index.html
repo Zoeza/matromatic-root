@@ -230,10 +230,11 @@
                             <div class="card border-0 h-100 card-lift">
                                 <img src="{% static project.img %}" alt="{{ project.title }}" class="img-fluid rounded-top-3">
                                 <div class="card-body">
-                                    <h4>{{ project.title }}</h4>
-                                     
-                                    <a href="" data-bs-toggle="modal" data-bs-target="#{{project.modal}}_Modal"
-                                       class="btn btn-primary">plus de details </a>
+                                    <div>
+                                        <h4>{{ project.title }}</h4>
+                                        <a href="" data-bs-toggle="modal" data-bs-target="#{{project.modal}}_Modal"
+                                           class="btn btn-primary">plus de details </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
