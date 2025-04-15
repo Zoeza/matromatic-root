@@ -189,7 +189,7 @@
                                 <img src="{% static project.img %}" alt="{{ project.title }}" class="img-fluid rounded-top-3">
                                 <div class="card-body">
                                     <h4>{{ project.title }}</h4>
-                                    <a href="" data-bs-toggle="modal" data-bs-target="#pModal"
+                                    <a href="" data-bs-toggle="modal" data-bs-target="#{{project_id}}_Modal"
                                        class="btn btn-primary">plus de details </a>
                                 </div>
                             </div>
@@ -435,11 +435,11 @@
 <!-- Modal Dynamique pour chaque projet -->
 
 
-    <div class="modal fade bd-example-modal-xl" id="pModal" tabindex="-1" role="dialog" aria-labelledby="modalLabelproject" aria-hidden="true">
+    <div class="modal fade bd-example-modal-xl" id="1_Modal" tabindex="-1" role="dialog" aria-labelledby="modalLabelproject" aria-hidden="true">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id= "1modalLabel">ju</h5>
+                    <h5 class="modal-title" id= "modalLabel">ju</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
                 </div>
                 <div class="modal-body" id="pModalContent">
