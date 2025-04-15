@@ -434,12 +434,13 @@
 <!-- Project Modals start -->
 <!-- Modal Dynamique pour chaque projet -->
 {% for project_id, project in request.session.projects_list.items %}
+{{project_id}}
 
     <div class="modal fade bd-example-modal-xl" id="{{project_id}}Modal" tabindex="-1" role="dialog" aria-labelledby="modalLabelproject" aria-hidden="true">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalLabelprojects">{{project.title}}</h5>
+                    <h5 class="modal-title" id={{project_id}}"modalLabel">{{project.title}}</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
                 </div>
                 <div class="modal-body" id="projectModalContent">
