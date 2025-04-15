@@ -500,7 +500,6 @@
                             </div>
                          </div>
                       </section>
-
                        <section>
                          <div class="container">
                             <div class="row">
@@ -556,7 +555,8 @@
                                      <div class="col-lg-8 col-md-8 col-12">
                                         <h2 class="mb-3">Comment ce projet a été réalisé ?</h2>
                                         <p class="mb-3">
-                                            {{ project.steps.introduction }}
+                                            {{ project.steps.introduction|default:"Étape non définie" }}
+
                                         </p>
                                         <p class="mb-0">
 
@@ -611,7 +611,6 @@
                             </div>
                          </div>
                       </section>
-
                     <!--Product designer end-->
                 </div>
             </div>
