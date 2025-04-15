@@ -184,14 +184,12 @@
             <div class="swiper-container swiper" id="swiper-1" data-pagination-type="" data-speed="400" data-space-between="100" data-pagination="false" data-navigation="true" data-autoplay="true" data-autoplay-delay="3000" data-breakpoints='{"480": {"slidesPerView": 1}, "768": {"slidesPerView": 1}, "1024": {"slidesPerView": 2}, "1200": {"slidesPerView": 3}}'>
                 <div class="swiper-wrapper pb-lg-8 pb-6 pt-1">
                     {% for project_id, project in request.session.projects_list.items %}
-                    {{project_id}}
-
                         <div class="swiper-slide">
                             <div class="card border-0 h-100 card-lif">
                                 <img src="{% static project.img %}" alt="{{ project.title }}" class="img-fluid rounded-top-3">
                                 <div class="card-body">
                                     <h4>{{ project.title }}</h4>
-                                    <a href="" data-bs-toggle="modal" data-bs-target="#{{project_id}}Modal"
+                                    <a href="" data-bs-toggle="modal" data-bs-target="#pModal"
                                        class="btn btn-primary">plus de details </a>
                                 </div>
                             </div>
@@ -437,14 +435,14 @@
 <!-- Modal Dynamique pour chaque projet -->
 
 
-    <div class="modal fade bd-example-modal-xl" id="1Modal" tabindex="-1" role="dialog" aria-labelledby="modalLabelproject" aria-hidden="true">
+    <div class="modal fade bd-example-modal-xl" id="pModal" tabindex="-1" role="dialog" aria-labelledby="modalLabelproject" aria-hidden="true">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id= "1modalLabel">ju</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
                 </div>
-                <div class="modal-body" id="1ModalContent">
+                <div class="modal-body" id="pModalContent">
 
                 </div>
             </div>
