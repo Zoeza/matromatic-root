@@ -172,6 +172,7 @@
         </div>
     </section>
     <!--Company overview end-->
+
     <!--Skills start-->
     <section class="py-xl-9 py-5 bg-light" data-cue="fadeIn">
         <div class="container">
@@ -201,8 +202,8 @@
         </div>
     </section>
     <!-- Skills end-->
-    <!-- Projects start-->
 
+    <!-- Projects start-->
     <section id="_projects" class="py-xl-9 py-5 bg-gray-900">
         <div class="container">
             <div class="row">
@@ -214,6 +215,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="swiper-container swiper"
                  id="swiper-1"
                  data-pagination-type=""
@@ -226,9 +228,9 @@
                  data-breakpoints='{"480": {"slidesPerView": 1}, "768": {"slidesPerView": 1}, "1024": {"slidesPerView": 2}, "1200": {"slidesPerView": 3}}'>
                 <div class="swiper-wrapper pb-lg-8 pb-6 pt-1">
                     {% for project_id, project in request.session.projects_list.items %}
-                        <div class="swiper-slide">
+                        <div class="swiper-slide" data-cue="zoomIn">
                             <div class="card border-0 h-100 card-lift">
-                                <img src="{% static project.img %}" alt="{{ project.title }}" class="img-fluid rounded-top-3">
+                                <img src="{% static project.img %}" alt="{{ project.title }}" class="img-fluid rounded-top-3"/>
                                 <div class="card-body">
                                     <div>
                                         <h4>{{ project.title }}</h4>
