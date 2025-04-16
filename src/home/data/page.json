@@ -5,19 +5,19 @@
       "title": "Accueil"
     },
     {
-      "link": "about_us",
+      "link": "#about_us",
       "title": "À propos de nous"
     },
     {
-      "link": "services",
+      "link": "#services",
       "title": "Services"
     },
     {
-      "link": "projects",
+      "link": "#projects",
       "title": "Projets"
     },
     {
-      "link": "contact",
+      "link": "#contact",
       "title": "Contact"
     }
   ],
